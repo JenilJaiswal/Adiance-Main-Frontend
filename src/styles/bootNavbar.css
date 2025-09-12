@@ -1,0 +1,22 @@
+.no-hover,
+.no-hover:hover,
+.no-hover:focus {
+  /* pointer-events: none; Disable pointer events */
+  background-color: inherit !important; /* Set background color to inherit */
+  color: inherit !important; /* Set text color to inherit */
+}
+
+.link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    font-size: small;
+  }
+  
+  td ul {
+    list-style-type: none; /* Remove bullet points from all lists */
+  }
+
+
+  .doubleArrow{
+    font-size: small;
+  }

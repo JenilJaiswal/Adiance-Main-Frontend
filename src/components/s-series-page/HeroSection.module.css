@@ -1,0 +1,276 @@
+.heroSection {
+    background-color: #1a1e23;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding: 0 80px;
+    max-height: 600px;
+  }
+  
+  @media (max-width: 991px) {
+    .heroSection {
+      padding: 0 20px;
+      max-height: 500px;
+    }
+  }
+  
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 749px;
+    width: 100%;
+    max-width: 1724px;
+    align-items: center;
+    padding: 0 70px 8px;
+  }
+  
+  @media (max-width: 991px) {
+    .heroContent {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+  
+  .backgroundImage {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .contentWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1433px;
+  }
+  
+  @media (max-width: 991px) {
+    .contentWrapper {
+      max-width: 100%;
+    }
+  }
+  
+  .twoColumnLayout {
+    gap: 20px;
+    display: flex;
+  }
+  
+  @media (max-width: 991px) {
+    .twoColumnLayout {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  
+  .leftColumn {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    line-height: normal;
+    width: 50%; 
+    margin-left: 0;
+    margin-block: 50px;
+  }
+  
+  @media (max-width: 991px) {
+    .leftColumn {
+      width: 100%;
+      margin-block: 20px;
+
+    }
+  }
+  
+  
+  
+  
+  .textContent {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: center;
+    /* margin: auto -462px auto 0; */
+    margin-top: 50px;
+  }
+  
+  @media (max-width: 991px) {
+    .textContent {
+      max-width: 100%;
+      margin-top: 0px;
+    }
+  }
+  
+  .textWrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    font-family: DM Sans, sans-serif;
+    justify-content: start;
+  }
+  
+  @media (max-width: 991px) {
+    .textWrapper {
+      max-width: 100%;
+    }
+  }
+  
+  .headingWrapper {
+    display: flex;
+    width: 833px;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .mainHeading {
+    width: 100%;
+    font-size: 45px;
+    color: #fff;
+    font-weight: 700;
+    /* line-height: 86px; */
+  }
+  
+  @media (max-width: 991px) {
+    .mainHeading {
+      max-width: 100%;
+      font-size: 30px;
+      line-height: 40px;
+      /* padding-right: 20px; */
+      padding-top: 20px;
+    }
+  }
+  
+  .subHeading {
+    color: #aac4bf;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+    margin-top: 30px;
+  }
+  
+  @media (max-width: 991px) {
+    .subHeading {
+      max-width: 100%;
+    }
+  }
+  
+  .ctaWrapper {
+    display: flex;
+    margin-top: 50px;
+    align-items: start;
+    gap: 30px;
+    font-size: 18px;
+    justify-content: start;
+  }
+  
+  @media (max-width: 991px) {
+    .ctaWrapper {
+      max-width: 100%;
+      margin-top: 40px;
+      gap: 10px;
+      font-size: 10px;
+    }
+  }
+  
+  .primaryButton {
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 12px 25px 48px rgba(107, 135, 123, 0.26);
+    display: flex;
+    min-height: 56px;
+    align-items: center;
+    gap: 8px;
+    color: #082b33;
+    font-weight: 500;
+    justify-content: center;
+    padding: 16px 20px;
+  }
+  
+  .buttonText {
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .buttonIcon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+    align-self: stretch;
+    margin: auto 0;
+  }
+  
+  .secondaryButton {
+    border-radius: 12px;
+    box-shadow: 12px 25px 48px rgba(107, 135, 123, 0.26);
+    display: flex;
+    min-height: 56px;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-weight: 400;
+    justify-content: center;
+    padding: 16px 20px;
+  }
+  
+  .paginationDots {
+    align-self: start;
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    gap: 8px;
+    justify-content: start;
+  }
+  
+  .activeDot {
+    border-radius: 40px;
+    background-color: #ee1713;
+    align-self: stretch;
+    display: flex;
+    width: 37px;
+    height: 10px;
+    margin: auto 0;
+  }
+  
+  .inactiveDot {
+    border-radius: 40px;
+    background-color: #ffd1d0;
+    align-self: stretch;
+    display: flex;
+    width: 10px;
+    height: 10px;
+    margin: auto 0;
+  }
+  
+  .productImage {
+    aspect-ratio: 1.34;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  @media (max-width: 991px) {
+    .productImage {
+      display: none;
+    }
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }

@@ -1,0 +1,36 @@
+/* MidBar.css */
+
+/* MidBar.css */
+
+@media screen and (min-width: 1225px) and (max-width: 1424px) {
+    .midbar-subtitle1 {
+      font-size: 6px; /* Adjust font size for subtitle1 */
+    }
+    
+    .midbar-subtitle2 {
+      font-size: 6px; /* Adjust font size for subtitle2 */
+    }
+  }
+  
+  @media screen and (min-width: 1025px) and (max-width: 1224px) {
+    .midbar-subtitle1 {
+      font-size: 1px; /* Adjust font size for subtitle1 */
+    }
+    
+    .midbar-subtitle2 {
+      font-size: 1px; /* Adjust font size for subtitle2 */
+    }
+  }
+  
+  @media screen and (min-width: 825px) and (max-width: 1024px) {
+    .midbar-subtitle1 {
+      font-size: 4px; /* Adjust font size for subtitle1 */
+    }
+    
+    .midbar-subtitle2 {
+      font-size: 4px; /* Adjust font size for subtitle2 */
+    }
+  }
+  
+  /* Add more media queries as needed */
+    

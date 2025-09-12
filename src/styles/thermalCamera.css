@@ -1,0 +1,56 @@
+.thermal-camera-container {
+    margin: 5% 10%;
+  }
+  .features-list {
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+  .product-image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+  }
+  .product-image-container img {
+    width: 100%;
+    height: 100%;
+    margin: 10%; /* Adjusted margin to reduce space between images */
+  }
+  .product-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Grey background with opacity */
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s; /* Added transition for opacity and transform */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: bold;
+    text-decoration: none; /* Remove underline */
+  }
+  .product-image-container:hover .product-title {
+    opacity: 1;
+    transform: translateY(0); /* Smooth transition for transform property */
+  }
+  .alice-carousel__prev-btn,
+  .alice-carousel__next-btn {
+    display: none;
+  }
+  .alice-carousel__dots {
+    transform: translateX(-60px); /* Move dots 20px to the left */
+  }
+  @media screen and (min-width: 450px) and (max-width: 750px) {
+    .product-slider-container {
+      margin-top: 40%;
+      margin-left: 30%;
+    }
+  }
+  

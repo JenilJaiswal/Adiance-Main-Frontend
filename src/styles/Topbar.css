@@ -1,0 +1,9 @@
+/* Topbar.css */
+
+/* Hide the Topbar on tablets and mobile phones */
+@media (max-width: 1023px) {
+    .topbar-container {
+      display: none;
+    }
+  }
+  

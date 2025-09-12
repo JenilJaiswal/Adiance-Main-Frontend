@@ -1,0 +1,28 @@
+/* styles.css */
+
+/* Hide toolbar items and display menu icon */
+.toolbar-items {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: block;
+  }
+  
+  /* Show toolbar items when menu is open */
+  .menu-open .toolbar-items {
+    display: flex;
+  }
+  
+  /* Hide submenus by default */
+  .subMenu,
+  .superSubMenu {
+    display: none;
+  }
+  
+  /* Show submenus and super submenus on hover */
+  .menu-open .menuItem:hover .subMenu,
+  .menu-open .subMenuItem:hover .superSubMenu {
+    display: block;
+  }
+  
