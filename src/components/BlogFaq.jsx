@@ -1,6 +1,6 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Link as MuiLink } from "@mui/material";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
@@ -113,9 +113,33 @@ const BlogFaq = ({ faqdata }) => {
                         lg: "0.9rem",
                       },
                       lineHeight: { xs: "1.3", sm: "1.5", md: "1.6" },
+                      whiteSpace: 'pre-wrap',
                     }}
                   >
-                    {faqItem.answer}
+                    {/* Render rich FAQ answers created with Slate */}
+                    {Array.isArray(faqItem.answer)
+                      ? faqItem.answer.map((node, i) => (
+                          <React.Fragment key={i}>
+                            {node.type === 'paragraph' && Array.isArray(node.children)
+                              ? node.children.map((leaf, li) => {
+                                  const style = { color: leaf.color };
+                                  let content = leaf.text || '';
+                                  let el = <span style={style}>{content}</span>;
+                                  if (leaf.code) el = <code key={`c-${li}`}>{el}</code>;
+                                  if (leaf.bold) el = <strong key={`b-${li}`}>{el}</strong>;
+                                  if (leaf.italic) el = <em key={`i-${li}`}>{el}</em>;
+                                  if (leaf.underline) el = <u key={`u-${li}`}>{el}</u>;
+                                  return <React.Fragment key={li}>{el}</React.Fragment>;
+                                })
+                              : typeof node === 'string'
+                              ? node
+                              : null}
+                            {i < faqItem.answer.length - 1 ? <br /> : null}
+                          </React.Fragment>
+                        ))
+                      : typeof faqItem.answer === 'string'
+                      ? faqItem.answer
+                      : ''}
                   </Typography>
                 </AccordionDetails>
               </Accordion>

@@ -1,5 +1,8 @@
+import LoginDash from "../AdianceAdmin/pages/LoginDash";
+import Reset from "../AdianceAdmin/pages/ForgotPassword/Reset";
+import Dashboard from "../AdianceAdmin/pages/Dashboard/Dashboard";
+import OtpVerification from "../AdianceAdmin/pages/OTP/OtpVerification";
 import AboutUs from "./AboutUs";
-import AddBlogs from "./AddBlogs";
 import ANPRCamera from "./ANPRCamera";
 import AutoplayCarousel from "./AutoplayCarousel";
 import BankFinance from "./BankFinance";
@@ -21,7 +24,6 @@ import Home from "./Home";
 import Hospital from "./Hospital";
 import Innovation from "./Innovation";
 import Manufacturing from "./Manufacturing";
-import OtpGenerator from "./OtpGenerator";
 import PartnersPage from "./PartnersPage";
 import PartnerWithUsPage from "./PartnerWithUsPage";
 import PrivacyPolicy from "./PrivacyPolicy";
@@ -41,22 +43,24 @@ import TermsOfService from "./TermsOfService";
 import ThankYouPage from "./ThankYouPage";
 import ThermalCamera from "./ThermalCamera";
 import Trafic from "./Trafic";
-import ViewBlogs from "./ViewBlogs";
 import WarrantyPolicy from "./WarrantyPolicy";
 import WarrantyService from "./WarrantyService";
 import WifiCameraPdf from "./WifiCameraPdf";
+import Firmware from "./Firmware";
+import Tools from "./Tools";
 import EdgeAICamera from "./EdgeAICamera";
 import _4KCamera from "./_4KCamera";
 import _4GCamera from "./_4GCamera";
 import _360Approach from "./_360Approach";
 import NotFound from "./NotFound";
+import CareerHome from "./career/CareerHome";
 
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/about", element: <AboutUs /> },
   { path: "/innovation", element: <Innovation /> },
   { path: "/contact", element: <ContactUs /> },
-  { path: "/partner-with-us", element: <PartnerWithUsPage /> },
+  // { path: "/partner-with-us", element: <PartnerWithUsPage /> },
   { path: "/thank-you", element: <ThankYouPage /> },
   // { path: "/buyback-cctv-camera-offer", element: <BuyBackOfferPage /> },
 
@@ -125,7 +129,7 @@ const routes = [
     ),
   },
   {
-    path: "/5g-edge-ai-camera-s-series-surveillance",
+    path: "/s-series-ai-cctv-cameras",
     element: (
       <SSeries productTitle="The World's First 5G Enabled Edge AI Camera" />
     ),
@@ -146,16 +150,24 @@ const routes = [
   // Other pages
   { path: "/downloads", element: <Downloads /> },
   { path: "/datasheet", element: <Datasheet /> },
-  { path: "/feedback", element: <Feedback /> },
+  // { path: "/feedback", element: <Feedback /> },
+  { path: "/firmware", element: <Firmware /> },
+  { path: "/tools", element: <Tools /> },
   { path: "/terms-of-service", element: <TermsOfService /> },
   { path: "/privacy-policy", element: <PrivacyPolicy /> },
   { path: "/warranty-service", element: <WarrantyService /> },
   { path: "/warranty-policy", element: <WarrantyPolicy /> },
   { path: "/blog", element: <Blogs /> },
   { path: "/blog/:urlTitle", element: <Blog1 /> },
-  { path: "/view-blogs", element: <ViewBlogs /> },
-  { path: "/otp-generator", element: <OtpGenerator /> },
-  { path: "/add-blogs", element: <AddBlogs /> },
+  // { path: "/careers", element: <CareerHome /> },
+  // ----------ADMIN STARTS------------
+  { path: "/admin", element: <LoginDash /> },
+  { path: "/admin/reset", element: <Reset /> },
+  { path: "/admin/dashboard", element: <Dashboard /> },
+  { path: "/admin/verify", element: <OtpVerification /> },
+  // { path: "/admin/blogs", element: <LoginDash /> },
+  // { path: "/admin/blog/:urlWords", element: <BlogNewPage /> },
+  // ----------ADMIN ENDS------------
   { path: "/robotics", element: <Robotics /> },
 
   // Industry applications
@@ -184,7 +196,7 @@ const routes = [
   { path: "/cloud-application", element: <CloudApplication /> },
 
   { path: "/partners", element: <PartnersPage /> },
-  { path: "/thanks", element: <ThankYouPage /> },
+  // { path: "/thanks", element: <ThankYouPage /> },
   { path: "/wifi-ptz-camera", element: <WifiCameraPdf /> },
 
   // Catch-all route

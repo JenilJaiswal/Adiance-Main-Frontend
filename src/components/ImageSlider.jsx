@@ -20,7 +20,7 @@ const ImageSlider = () => {
           background: linear-gradient(1deg, rgba(43,48,53,0.8) 10%, rgba(0,0,0,0) 100%);
         }
         
-        .carousel-item h2 {
+        .carousel-item p {
           position: absolute;
           top: 90%;
           left: 50%;
@@ -31,7 +31,7 @@ const ImageSlider = () => {
           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         @media (max-width: 768px) {
-          .carousel-item h2 {
+          .carousel-item p {
             font-size: 9px;
             top: 75%;
             
@@ -86,7 +86,10 @@ const ImageSlider = () => {
           />
           <div className="overlay"></div> {/* Overlay for gradient */}
           <div>
-            <h2>One stop solution for all your security needs</h2>
+            <p>One stop solution for all your security needs</p>
+            <p>
+            One stop solution for all your security needs
+            </p>
           </div>
         </Carousel.Item>
         <Carousel.Item>
@@ -98,7 +101,7 @@ const ImageSlider = () => {
           />
           <div className="overlay"></div> {/* Overlay for gradient */}
           <div>
-            <h2>From Concept to Completion</h2>
+            <p>From Concept to Completion</p>
           </div>
         </Carousel.Item>
 
@@ -124,7 +127,7 @@ const ImageSlider = () => {
           />
           <div className="overlay"></div> {/* Overlay for gradient */}
           <div>
-            <h2>Integrated innovation, Limitless potential</h2>
+            <p>Integrated innovation, Limitless potential</p>
           </div>
         </Carousel.Item>
         <Carousel.Item>
@@ -136,7 +139,7 @@ const ImageSlider = () => {
           />
           <div className="overlay"></div> {/* Overlay for gradient */}
           <div>
-            <h2>Make in India Initiative</h2>
+            <p>Make in India Initiative</p>
           </div>
         </Carousel.Item>
 

@@ -1,382 +1,386 @@
-import React, { useEffect } from "react";
-import "./contact-zoho/css/form.css";
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const ZohoForm = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "./contact-zoho/js/validation.js"; // Ensure this path matches your file location
-    script.async = true;
-    document.body.appendChild(script);
+// MUI Components
+import {
+  Box,
+  Container,
+  Paper,
+  Button,
+  FormControl,
+  InputLabel,
+  TextField,
+  Select,
+  MenuItem,
+  Typography,
+  Stack,
+  Checkbox,
+  FormControlLabel,
+  Grid,
+  Snackbar,
+  Alert,
+} from "@mui/material";
 
-    return () => {
-      // Cleanup script when component unmounts
-      document.body.removeChild(script);
-    };
-  }, []);
+const ContactZoho = () => {
+  const navigate = useNavigate();
+
+  // State for Snackbar (MUI's equivalent of Chakra Toast)
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: "",
+    severity: "info",
+  });
+
+  // The core form state remains the same
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    location: "",
+    message: "",
+    businessType: "",
+    enquiryFor: "",
+    customerType: "",
+    camerasFor: "",
+    customerQuantity: "",
+    updates: false,
+    leadType: "Adiance Website",
+    businessUnit: "Adiance Technologies Pvt Ltd",
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  // API URLs remain the same
+  const EMS_API_URL =
+    "https://c-r-m-icr7b.ondigitalocean.app/backend/api/crmSales/createLead";
+
+  // const ADIANCE_EMAIL_URL = "http://localhost:5000/api/send-email-adiance";
+  const ADIANCE_EMAIL_URL = "https://backend.adiance.com:443/api/send-email-adiance"
+
+  // handleChange logic remains identical
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    if (name === "phone") {
+      const digitsOnly = value.replace(/\D/g, "").slice(0, 10);
+      setFormData((prev) => ({ ...prev, [name]: digitsOnly }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: type === "checkbox" ? checked : value,
+      }));
+    }
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar((prev) => ({ ...prev, open: false }));
+  };
+
+  // handleSubmit logic is the same, just with Snackbar instead of Toast
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.company ||
+      !formData.location ||
+      !formData.businessType ||
+      !formData.enquiryFor ||
+      !formData.customerType ||
+      !formData.camerasFor
+    ) {
+      setSnackbar({
+        open: true,
+        message: "Please fill in all required fields marked with *",
+        severity: "error",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const emailPromise = fetch(ADIANCE_EMAIL_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+        // body: JSON.stringify({
+        //     ...formData,
+        //     formType: "Contact",
+        //   }),
+      });
+
+      const crmPayload = {
+        name: formData.name,
+        mobile: formData.phone,
+        email: formData.email,
+        company: formData.company,
+        location: formData.location,
+        clientCategory: formData.customerType,
+        industryType: formData.camerasFor,
+        leadType: "Adiance website",
+        customerType: formData.customerType,
+        requirement: [],
+        customerQuantity: formData.customerQuantity,
+      };
+      const crmPromise = axios.post(EMS_API_URL, crmPayload);
+
+      const [emailRes, crmRes] = await Promise.all([emailPromise, crmPromise]);
+
+      if (!emailRes.ok) throw new Error("Email API failed");
+      if (!(crmRes.status === 200 || crmRes.status === 201))
+        throw new Error("CRM API failed");
+
+      // setSnackbar({
+      //   open: true,
+      //   message: "Your enquiry has been submitted successfully.",
+      //   severity: "success",
+      // });
+
+      setTimeout(() => navigate("/thank-you"), 1500); // Navigate after a short delay
+    } catch (error) {
+      console.error("Submission Error:", error);
+      setSnackbar({
+        open: true,
+        message: error.message || "An unexpected error occurred.",
+        severity: "error",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `
-          <div id="zoho-form-container">
-           <body class="zf-backgroundBg">
-    <!-- Change or deletion of the name attributes in the input tag will lead to empty values on record submission-->
-    <div class="zf-templateWidth">
-      <form
-        action="https://forms.zohopublic.in/vmukti1/form/AdianceContactForm/formperma/8t92GFm1RxWC5U_35QhFuYTpyT9m-LZ5c0l_1Fl6jiY/htmlRecords/submit"
-        name="form"
-        method="POST"
-        onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
-        accept-charset="UTF-8"
-        enctype="multipart/form-data"
-        id="form"
+    <Box sx={{ py: { xs: 4, md: 8 }, bgcolor: "grey.100" }}>
+      <Container maxWidth="full">
+        <Paper elevation={3} sx={{ borderRadius: "20px", p: { xs: 2, sm: 4 } }}>
+          <Typography
+            variant="h4"
+            component="h1"
+            gutterBottom
+            textAlign="center"
+            fontWeight="bold"
+          >
+            Share us your Requirements
+          </Typography>
+          <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
+            <Grid container spacing={2}>
+              {/* Row 1 */}
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  fullWidth
+                  required
+                  label="Name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  fullWidth
+                  required
+                  label="Company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                />
+              </Grid>
+              {/* Row 2 */}
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  fullWidth
+                  required
+                  label="Phone number"
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="10-digit number"
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  fullWidth
+                  required
+                  label="Email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </Grid>
+              {/* Row 3 */}
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  fullWidth
+                  required
+                  label="City"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  fullWidth
+                  required
+                  label="Number of Cameras Needed"
+                  name="customerQuantity"
+                  type="number"
+                  value={formData.customerQuantity}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (/^\d*$/.test(value) && Number(value) >= 0) {
+                      handleChange(e);
+                    } else if (value === "") {
+                      handleChange(e); // allow clearing field
+                    }
+                  }}
+                  placeholder="e.g., 10"
+                  inputProps={{ min: 0 }}
+                />
+
+              </Grid>
+              {/* Row 4 */}
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  fullWidth
+                  required
+                  select
+                  label="Business Type"
+                  name="businessType"
+                  value={formData.businessType}
+                  onChange={handleChange}
+                >
+                  <MenuItem value="End User">End User</MenuItem>
+                  <MenuItem value="Government">Government</MenuItem>
+                  <MenuItem value="Enterprise">Enterprise</MenuItem>
+                  <MenuItem value="Distributor">Distributor</MenuItem>
+                  <MenuItem value="Dealer">Dealer</MenuItem>
+                  <MenuItem value="Consultant">Consultant</MenuItem>
+                  <MenuItem value="OEM">OEM</MenuItem>
+                  <MenuItem value="Reseller">Reseller</MenuItem>
+                  <MenuItem value="System Integrator">
+                    System Integrator
+                  </MenuItem>
+                </TextField>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  fullWidth
+                  required
+                  select
+                  label="Enquiry For"
+                  name="enquiryFor"
+                  value={formData.enquiryFor}
+                  onChange={handleChange}
+                >
+                  <MenuItem value="WiFi Camera">WiFi Camera</MenuItem>
+                  <MenuItem value="4G Camera">4G Camera</MenuItem>
+                  <MenuItem value="Thermal Camera">Thermal Camera</MenuItem>
+                  <MenuItem value="Edge AI Camera">Edge AI Camera</MenuItem>
+                  <MenuItem value="VMS VAS">VMS VAS</MenuItem>
+                  <MenuItem value="Media Server">Media Server</MenuItem>
+                  <MenuItem value="Government Projects">
+                    Government Projects
+                  </MenuItem>
+                  <MenuItem value="Solutions">Solutions</MenuItem>
+                  <MenuItem value="Others">Others</MenuItem>
+                </TextField>
+              </Grid>
+              {/* Row 5 */}
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  fullWidth
+                  required
+                  select
+                  label="I am a:"
+                  name="customerType"
+                  value={formData.customerType}
+                  onChange={handleChange}
+                >
+                  <MenuItem value="Government">Government</MenuItem>
+                  <MenuItem value="Stockist">Stockist</MenuItem>
+                  <MenuItem value="Distributor">Distributor</MenuItem>
+                  <MenuItem value="Dealer">Dealer</MenuItem>
+                  <MenuItem value="Customer">Customer</MenuItem>
+                  <MenuItem value="New Customer">New Customer</MenuItem>
+                  <MenuItem value="Other">Other</MenuItem>
+                </TextField>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  fullWidth
+                  required
+                  select
+                  label="I want cameras for:"
+                  name="camerasFor"
+                  value={formData.camerasFor}
+                  onChange={handleChange}
+                >
+                  <MenuItem value="Office">Office</MenuItem>
+                  <MenuItem value="Factory">Factory</MenuItem>
+                  <MenuItem value="Home">Home</MenuItem>
+                  <MenuItem value="Other">Other</MenuItem>
+                </TextField>
+              </Grid>
+              {/* Full-width fields */}
+              <Grid item xs={12}>
+                <TextField
+                  fullWidth
+                  multiline
+                  rows={4}
+                  label="Description / Message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      name="updates"
+                      checked={formData.updates}
+                      onChange={handleChange}
+                    />
+                  }
+                  label="I’d like to receive updates and offers."
+                />
+              </Grid>
+            </Grid>
+            <Button
+              type="submit"
+              variant="contained"
+              loading={isLoading}
+              fullWidth
+              sx={{ mt: 3, py: 1.5, fontSize: "1rem" }}
+            >
+              Submit
+            </Button>
+          </Box>
+        </Paper>
+      </Container>
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
       >
-        <input
-          type="hidden"
-          name="zf_referrer_name"
-          value=""
-        /><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
-        <input
-          type="hidden"
-          name="zf_redirect_url"
-          value=""
-        /><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
-        <input
-          type="hidden"
-          name="zc_gad"
-          value=""
-        /><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
-        <div class="zf-templateWrapper">
-          <!---------template Header Starts Here---------->
-          <ul class="zf-tempHeadBdr">
-            <li class="zf-tempHeadContBdr">
-              <h2 class="zf-frmTitle"><em>Share us your Requirements</em></h2>
-              <p class="zf-frmDesc"></p>
-              <div class="zf-clearBoth"></div>
-            </li>
-          </ul>
-          <!---------template Header Ends Here---------->
-          <!---------template Container Starts Here---------->
-          <div class="zf-subContWrap zf-topAlign">
-            <ul>
-              <!---------Single Line Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-medium">
-                <label class="zf-labelName">
-                  Name
-                  <em class="zf-important">*</em>
-                </label>
-                <div class="zf-tempContDiv">
-                  <span>
-                    <input
-                      type="text"
-                      name="SingleLine"
-                      checktype="c1"
-                      value=""
-                      maxlength="255"
-                      fieldType="1"
-                      placeholder=""
-                  /></span>
-                  <p
-                    id="SingleLine_error"
-                    class="zf-errorMessage"
-                    style="display: none"
-                  >
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Single Line Ends Here---------->
-              <!---------Single Line Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-medium">
-                <label class="zf-labelName">
-                  Company
-                  <em class="zf-important">*</em>
-                </label>
-                <div class="zf-tempContDiv">
-                  <span>
-                    <input
-                      type="text"
-                      name="SingleLine1"
-                      checktype="c1"
-                      value=""
-                      maxlength="255"
-                      fieldType="1"
-                      placeholder=""
-                  /></span>
-                  <p
-                    id="SingleLine1_error"
-                    class="zf-errorMessage"
-                    style="display: none"
-                  >
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Single Line Ends Here---------->
-              <!---------Phone Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-medium">
-                <label class="zf-labelName">
-                  Phone
-                  <em class="zf-important">*</em>
-                </label>
-                <div class="zf-tempContDiv zf-phonefld">
-                  <div class="zf-phwrapper zf-phNumber">
-                    <span>
-                      <input
-                        type="text"
-                        compname="PhoneNumber"
-                        name="PhoneNumber_countrycode"
-                        maxlength="20"
-                        checktype="c7"
-                        value=""
-                        phoneFormat="1"
-                        isCountryCodeEnabled="false"
-                        fieldType="11"
-                        id="international_PhoneNumber_countrycode"
-                        valType="number"
-                        phoneFormatType="1"
-                        placeholder=""
-                      />
-                      <label>Number</label>
-                    </span>
-                    <div class="zf-clearBoth"></div>
-                  </div>
-                  <p
-                    id="PhoneNumber_error"
-                    class="zf-errorMessage"
-                    style="display: none"
-                  >
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Phone Ends Here---------->
-              <!---------Email Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-medium">
-                <label class="zf-labelName">
-                  Email
-                  <em class="zf-important">*</em>
-                </label>
-                <div class="zf-tempContDiv">
-                  <span>
-                    <input
-                      fieldType="9"
-                      type="text"
-                      maxlength="255"
-                      name="Email"
-                      checktype="c5"
-                      value=""
-                      placeholder=""
-                  /></span>
-                  <p
-                    id="Email_error"
-                    class="zf-errorMessage"
-                    style="display: none"
-                  >
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Email Ends Here---------->
-              <!---------Single Line Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-medium">
-                <label class="zf-labelName">
-                  City
-                  <em class="zf-important">*</em>
-                </label>
-                <div class="zf-tempContDiv">
-                  <span>
-                    <input
-                      type="text"
-                      name="SingleLine2"
-                      checktype="c1"
-                      value=""
-                      maxlength="255"
-                      fieldType="1"
-                      placeholder=""
-                  /></span>
-                  <p
-                    id="SingleLine2_error"
-                    class="zf-errorMessage"
-                    style="display: none"
-                  >
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Single Line Ends Here---------->
-              <!---------Dropdown Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-medium">
-                <label class="zf-labelName">
-                  Business Type
-                  <em class="zf-important">*</em>
-                </label>
-                <div class="zf-tempContDiv">
-                  <select class="zf-form-sBox" name="Dropdown" checktype="c1">
-                    <option selected="true" value="-Select-">-Select-</option>
-                    <option value="End&#x20;User">End User</option>
-                    <option value="Government">Government</option>
-                    <option value="Enterprise">Enterprise</option>
-                    <option value="Distributor">Distributor</option>
-                    <option value="Dealer">Dealer</option>
-                    <option value="Consultant">Consultant</option>
-                    <option value="OEM">OEM</option>
-                    <option value="Reseller">Reseller</option>
-                    <option value="System&#x20;Integrator">
-                      System Integrator
-                    </option>
-                  </select>
-                  <p
-                    id="Dropdown_error"
-                    class="zf-errorMessage"
-                    style="display: none"
-                  >
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Dropdown Ends Here---------->
-              <!---------Dropdown Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-medium">
-                <label class="zf-labelName">
-                  Enquiry For
-                  <em class="zf-important">*</em>
-                </label>
-                <div class="zf-tempContDiv">
-                  <select class="zf-form-sBox" name="Dropdown1" checktype="c1">
-                    <option selected="true" value="-Select-">-Select-</option>
-                    <option value="WiFi&#x20;Camera">WiFi Camera</option>
-                    <option value="4G&#x20;Camera">4G Camera</option>
-                    <option value="Thermal&#x20;Camera">Thermal Camera</option>
-                    <option value="Edge&#x20;AI&#x20;Camera">
-                      Edge AI Camera
-                    </option>
-                    <option value="VMS&#x20;VAS">VMS VAS</option>
-                    <option value="Media&#x20;Server">Media Server</option>
-                    <option value="Government&#x20;Projects">
-                      Government Projects
-                    </option>
-                    <option value="Solutions">Solutions</option>
-                    <option value="Others">Others</option>
-                  </select>
-                  <p
-                    id="Dropdown1_error"
-                    class="zf-errorMessage"
-                    style="display: none"
-                  >
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Dropdown Ends Here---------->
-              <!---------Multiple Line Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-large">
-                <label class="zf-labelName"> Description </label>
-                <div class="zf-tempContDiv">
-                  <span>
-                    <textarea
-                      name="MultiLine"
-                      checktype="c1"
-                      maxlength="65535"
-                      placeholder=""
-                    ></textarea>
-                  </span>
-                  <p
-                    id="MultiLine_error"
-                    class="zf-errorMessage"
-                    style="display: none"
-                  >
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Multiple Line Ends Here---------->
-              <!---------Single Line Starts Here---------->
-              <li class="zf-tempFrmWrapper zf-large">
-                <label class="zf-labelName">
-                  Business Unit
-                  <em class="zf-important">*</em>
-                </label>
-                <div class="zf-tempContDiv">
-                  <span>
-                    <input
-                      type="text"
-                      name="SingleLine3"
-                      checktype="c1"
-                      value="Adiance Technologies Pvt Ltd"
-                      maxlength="255"
-                      fieldType="1"
-                      placeholder=""
-                  /></span>
-                  <p
-                    id="SingleLine3_error"
-                    class="zf-errorMessage"
-                    style="display: none"
-                  >
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </li>
-              <!---------Single Line Ends Here---------->
-            </ul>
-          </div>
-          <!---------template Container Starts Here---------->
-          <ul>
-            <li class="zf-fmFooter">
-              <button class="zf-submitColor">Submit</button>
-            </li>
-          </ul>
-        </div>
-        <!-- 'zf-templateWrapper' ends -->
-      </form>
-    </div>
-    <!-- 'zf-templateWidth' ends -->
-    <script type="text/javascript">
-      var zf_DateRegex = new RegExp(
-        "^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$"
-      );
-      var zf_MonthYearRegex = new RegExp(
-        "^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$"
-      );
-      var zf_MandArray = [
-        "SingleLine",
-        "SingleLine1",
-        "PhoneNumber_countrycode",
-        "Email",
-        "SingleLine2",
-        "Dropdown",
-        "Dropdown1",
-        "SingleLine3",
-      ];
-      var zf_FieldArray = [
-        "SingleLine",
-        "SingleLine1",
-        "PhoneNumber_countrycode",
-        "Email",
-        "SingleLine2",
-        "Dropdown",
-        "Dropdown1",
-        "MultiLine",
-        "SingleLine3",
-      ];
-      var isSalesIQIntegrationEnabled = false;
-      var salesIQFieldsArray = [];
-    </script>
-  </body>
-          </div>
-        `,
-      }}
-    />
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
+          sx={{ width: "100%" }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
+    </Box>
   );
 };
 
-export default ZohoForm;
+export default ContactZoho;

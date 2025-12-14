@@ -51,6 +51,7 @@ const MidSection = () => {
         </Grid>
       </div> */}
       <WhatWeDo />
+      <AutoplayCarousel/>
       <InnovationHome />
       <AboutSlider />
       <Adv />

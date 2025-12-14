@@ -14,3 +14,17 @@
 /* code {
   font-family: 'Inknut Antiqua', serif; /* Apply Inknut Antiqua font to code elements */
 /* } */  
+
+/* Fixed navbar styles */
+body {
+  padding-top: 80px; /* Add padding to account for fixed navbar height */
+}
+
+/* Ensure navbar stays on top */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+}

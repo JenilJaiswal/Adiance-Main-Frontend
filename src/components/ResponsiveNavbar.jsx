@@ -3,20 +3,23 @@ import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import "../styles/bootNavbar.css";
 import { Link as RouterLink } from "react-router-dom";
-import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+// import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { Box, Button } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import MenuOpenIcon from "@mui/icons-material/MenuOpen";
+// import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import MenuIcon from "@mui/icons-material/Menu";
-import { MdLocalOffer } from "react-icons/md";
-import { FaShoppingCart } from "react-icons/fa";
-import { HiShoppingBag } from "react-icons/hi2";
+// import { MdLocalOffer } from "react-icons/md";
+// import { FaShoppingCart } from "react-icons/fa";
+// import { HiShoppingBag } from "react-icons/hi2";
 
-import { BiSolidOffer } from "react-icons/bi";
+// import { BiSolidOffer } from "react-icons/bi";
 
 const ResponsiveNavbar = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [showProducts, setShowProducts] = useState(false);
+  const [showSolutions, setShowSolutions] = useState(false);
+  const [showSupport, setShowSupport] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -53,7 +56,6 @@ const ResponsiveNavbar = () => {
   const isSmallScreen = screenWidth <= 993; // Adjust the threshold as needed
 
   const handleGetQuote = () => {
-    // Redirect to the Contact Us page
     window.location.href = "/partner-with-us";
   };
 
@@ -65,9 +67,7 @@ const ResponsiveNavbar = () => {
   return (
     <Navbar
       expand="lg"
-      // fixed="top"
-      // sticky="top"
-
+      fixed="top"
       className="navbar-light bg-light transition "
       data-bs-theme="dark"
       style={{
@@ -75,6 +75,7 @@ const ResponsiveNavbar = () => {
         boxShadow: scrolled ? "0px 4px 20px rgba(0, 0, 0, 0.1)" : "none", // Softer red shadow effect
         background: scrolled ? "rgba(255, 255, 255, 0.98)" : "white", // Keep it light
         transition: "all 0.3s ease-in-out",
+        zIndex: 1050, // Ensure navbar stays above other content
         // marginBottom: "600px"
       }}
     >
@@ -251,23 +252,32 @@ const ResponsiveNavbar = () => {
             <NavDropdown
               title={
                 <span
-                  className="nav-dropdown-item dropdown-toggle"
+                  className="nav-dropdown-item"
                   style={{
                     color: "#444444",
                     fontSize: screenWidth > 993 ? "18px" : "inherit",
                     fontWeight: "normal",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
                   }}
-                  // style={{
-                  //   fontSize: screenWidth > 993 ? "18px" : "inherit",
-                  //   color: "#444444",
-                  //   fontWeight: "normal",
-                  // }}
                 >
                   Products
+                  <ChevronRightIcon
+                    style={{
+                      transition: "transform 200ms ease",
+                      transform:
+                        !isSmallScreen && showProducts
+                          ? "rotate(-90deg)"
+                          : "rotate(90deg)",
+                    }}
+                  />
                 </span>
               }
               // title="Products"
-
+              onMouseEnter={() => !isSmallScreen && setShowProducts(true)}
+              onMouseLeave={() => !isSmallScreen && setShowProducts(false)}
+              show={!isSmallScreen ? showProducts : undefined}
               // style={{
               //   fontSize: screenWidth > 993 ? "18px" : "inherit",
               //   color: "#444444"
@@ -280,14 +290,13 @@ const ResponsiveNavbar = () => {
                 >
                   <table style={{ marginRight: "40px" }}>
                     <tbody>
-                      <tr>
+                      {/* <tr>
                         <td>
                           <ul>
                             <li>
                               <RouterLink
                                 to="/3mp-4g-bullet-all-time-color-camera-a-series"
                                 className="link h6"
-                                // style={{ margin: "20%" }}
                               >
                                 A Series
                               </RouterLink>
@@ -301,20 +310,19 @@ const ResponsiveNavbar = () => {
                               <RouterLink
                                 to="/h-series"
                                 className="link h6"
-                                // style={{ margin: "20%" }}
                               >
                                 H Series
                               </RouterLink>
                             </li>
                           </ul>
                         </td>
-                      </tr>
+                      </tr> */}
                       <tr>
                         <td>
                           <ul>
                             <li>
                               <RouterLink
-                                to="/5g-edge-ai-camera-s-series-surveillance"
+                                to="/s-series-ai-cctv-cameras"
                                 className="link h6"
                                 // style={{ margin: "20%" }}
                               >
@@ -323,277 +331,23 @@ const ResponsiveNavbar = () => {
                             </li>
                           </ul>
                         </td>
-
-                        <td>
+                        {/* <td>
                           <ul>
                             <li>
-                              <RouterLink
-                                to="/r-series"
-                                className="link h6"
-                                // style={{ margin: "20%" }}
-                              >
+                              <RouterLink to="/r-series" className="link h6">
                                 R Series
                               </RouterLink>
                             </li>
                           </ul>
-                        </td>
+                        </td> */}
                       </tr>
-                      <tr>
-                        <td>
-                          <ul>
-                            <li>
-                              <RouterLink
-                                to="/thermal-camera"
-                                className="link h6"
-                                // style={{ margin: "20%" }}
-                              >
-                                Thermal Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              {/* <DoubleArrowIcon className="doubleArrow" /> */}
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/adiance-thermal-camera-f"
-                                className="link"
-                              >
-                                Adiance Thermal Camera - F
-                              </RouterLink>
-                            </li>
-                            <li>
-                              {/* <DoubleArrowIcon className="doubleArrow" /> */}
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/adiance-thermal-camera-n"
-                                className="link"
-                              >
-                                Adiance Thermal Camera - N
-                              </RouterLink>
-                            </li>
-                            <li>
-                              {/* <DoubleArrowIcon className="doubleArrow" /> */}
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/adiance-thermal-camera-l"
-                                className="link"
-                              >
-                                Adiance Thermal Camera - L
-                              </RouterLink>
-                            </li>
-                          </ul>
-                        </td>
-
-                        <td>
-                          <ul>
-                            <li>
-                              <RouterLink
-                                to="/cloudxvr"
-                                className="link h6"
-                                // style={{ margin: "20%" }}
-                              >
-                                Cloud XVR
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink to="/cloudxvr" className="link">
-                                Adiance 8-16Channel XVR
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <br />
-                            </li>
-                            <li>
-                              <br />
-                            </li>
-                          </ul>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <ul>
-                            <li>
-                              <RouterLink
-                                to="/anpr-camera"
-                                className="link h6"
-                                // style={{ margin: "20%" }}
-                              >
-                                ANPR Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/edge-ai-based-ptz-anpr-bullet-camera"
-                                className="link"
-                              >
-                                Edge Ai based PTZ ANPR Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <br />
-                            </li>
-                            <li>
-                              <br />
-                            </li>
-                          </ul>
-                        </td>
-                        <td>
-                          <ul>
-                            <li>
-                              <RouterLink
-                                to="/4kcamera"
-                                className="link h6"
-                                // style={{ margin: "20%" }}
-                              >
-                                4K Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/4k-bullet-anpr-ptz-camera"
-                                className="link"
-                              >
-                                4K Bullet ANPR PTZ Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/4k-face-recognition-camera"
-                                className="link"
-                              >
-                                4K Face Recognition Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/edge-ai-based-object-n-face-detection-cameras"
-                                className="link"
-                              >
-                                4K Object & Face Detection Cameras
-                              </RouterLink>
-                            </li>
-                          </ul>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <ul>
-                            <li>
-                              <RouterLink
-                                to="/edgeaicamera"
-                                className="link h6"
-                                // style={{ margin: "20%" }}
-                              >
-                                Edge-Ai Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/edge-ai-based-ptz-anpr-bullet-camera-3"
-                                className="link"
-                              >
-                                Edge AI Based PTZ ANPR Bullet Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/edge-ai-based-recognition-camera"
-                                className="link"
-                              >
-                                Edge AI Based Face Recognition Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/edge-ai-based-object-n-face-detection-camera"
-                                className="link"
-                              >
-                                Edge AI Based Object & Face Detection Cameras
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <br />
-                            </li>
-                          </ul>
-                        </td>
-
-                        <td>
-                          <ul>
-                            <li>
-                              <RouterLink
-                                to="/4gcamera"
-                                className="link h6"
-                                // style={{ margin: "20%" }}
-                              >
-                                4G Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/4g-dome-ptz-camera"
-                                className="link"
-                              >
-                                4G Dome PTZ Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/4g-mini-bullet-camera"
-                                className="link"
-                              >
-                                4G Mini Bullet Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink to="/4g-dome-camera" className="link">
-                                4G Dome Camera
-                              </RouterLink>
-                            </li>
-                            <li>
-                              <ArrowRightIcon />
-                              <RouterLink
-                                to="/h265-4g-dome-ptz-camera"
-                                className="link"
-                              >
-                                H.265+ 4G Dome PTZ Camera
-                              </RouterLink>
-                            </li>
-                          </ul>
-                        </td>
-                      </tr>
+                      {/* Remaining product links hidden as requested */}
                     </tbody>
                   </table>
                 </NavDropdown.Item>
               ) : (
                 <>
-                  <NavDropdown.Item
-                    as={Link}
-                    to="/3mp-4g-bullet-all-time-color-camera-a-series"
-                    style={{
-                      fontSize: screenWidth > 993 ? "20px" : "inherit",
-                    }}
-                  >
-                    A Series
-                  </NavDropdown.Item>
-                  <NavDropdown.Item
-                    as={Link}
-                    to="/h-series"
-                    style={{
-                      fontSize: screenWidth > 993 ? "20px" : "inherit",
-                    }}
-                  >
-                    H Series
-                  </NavDropdown.Item>
+                  {/* Other product links hidden on mobile as requested */}
                   <NavDropdown.Item
                     as={Link}
                     to="/5g-edge-ai-camera-s-series-surveillance"
@@ -603,225 +357,6 @@ const ResponsiveNavbar = () => {
                   >
                     S Series
                   </NavDropdown.Item>
-                  <NavDropdown.Item
-                    as={Link}
-                    to="/r-series"
-                    style={{
-                      fontSize: screenWidth > 993 ? "20px" : "inherit",
-                    }}
-                  >
-                    R Series
-                  </NavDropdown.Item>
-                  <NavDropdown
-                    title="Thermal Camera"
-                    id="basic-nav-dropdown"
-                    style={{
-                      paddingLeft: "5px",
-                      fontSize: screenWidth > 993 ? "20px" : "inherit",
-                    }}
-                  >
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/adiance-thermal-camera-f"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      Adiance Thermal Camera - F
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/adiance-thermal-camera-n"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      Adiance Thermal Camera - N
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/adiance-thermal-camera-l"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      Adiance Thermal Camera - L
-                    </NavDropdown.Item>
-                  </NavDropdown>
-
-                  <NavDropdown
-                    title="Cloud XVR"
-                    id="basic-nav-dropdown"
-                    style={{
-                      paddingLeft: "5px",
-                      fontSize: screenWidth > 993 ? "20px" : "inherit",
-                    }}
-                  >
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/cloudxvr"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      Adiance 8-16Channel XVR
-                    </NavDropdown.Item>
-                  </NavDropdown>
-
-                  <NavDropdown
-                    title="ANPR Camera"
-                    id="basic-nav-dropdown"
-                    style={{
-                      paddingLeft: "5px",
-                      fontSize: screenWidth > 993 ? "20px" : "inherit",
-                    }}
-                  >
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/edge-ai-based-ptz-anpr-bullet-camera"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      Edge AI Based PTZ ANPR Bullet Camera
-                    </NavDropdown.Item>
-                  </NavDropdown>
-
-                  <NavDropdown
-                    title="4K Camera"
-                    id="basic-nav-dropdown"
-                    style={{
-                      paddingLeft: "5px",
-                      fontSize: screenWidth > 993 ? "20px" : "inherit",
-                    }}
-                  >
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/4k-bullet-anpr-ptz-camera"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      4K Bullet ANPR PTZ Camera
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/4k-face-recognition-camera"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      4K Face Recognition Camera
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/edge-ai-based-object-n-face-detection-cameras"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      4K Object & Face Detection Cameras
-                    </NavDropdown.Item>
-                  </NavDropdown>
-
-                  <NavDropdown
-                    title="Edge-Ai Camera"
-                    id="basic-nav-dropdown"
-                    style={{
-                      paddingLeft: "5px",
-                      fontSize: screenWidth > 993 ? "20px" : "inherit",
-                    }}
-                  >
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/edge-ai-based-ptz-anpr-bullet-camera-3"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      Edge AI Based PTZ ANPR Bullet Camera
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/edge-ai-based-recognition-camera"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      Edge AI Based Face Recognition Camera
-                    </NavDropdown.Item>
-                    <Nav.Item style={{ width: "100%" }}>
-                      <NavDropdown.Item
-                        as={Link}
-                        to="/edge-ai-based-object-n-face-detection-camera"
-                        style={{
-                          fontSize: screenWidth > 993 ? "20px" : "inherit",
-                        }}
-                      >
-                        {window.innerWidth < 466 ? (
-                          <>
-                            Edge AI Based Object & Face
-                            <br />
-                            Detection Cameras
-                          </>
-                        ) : (
-                          "Edge AI Based Object & Face Detection Cameras"
-                        )}
-                      </NavDropdown.Item>
-                    </Nav.Item>
-                  </NavDropdown>
-
-                  <NavDropdown
-                    title="4G Camera"
-                    id="basic-nav-dropdown"
-                    style={{
-                      paddingLeft: "5px",
-                      fontSize: screenWidth > 993 ? "20px" : "inherit",
-                    }}
-                  >
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/4g-dome-ptz-camera"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      4G Dome PTZ Camera
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/4g-mini-bullet-camera"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      4G Mini Bullet Camera
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/4g-dome-camera"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      4G Dome Camera
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/h265-4g-dome-ptz-camera"
-                      style={{
-                        fontSize: screenWidth > 993 ? "20px" : "inherit",
-                      }}
-                    >
-                      H.265+ 4G Dome PTZ Camera
-                    </NavDropdown.Item>
-                  </NavDropdown>
                 </> // Empty fragment when screenWidth <= 992
               )}
             </NavDropdown>
@@ -829,14 +364,26 @@ const ResponsiveNavbar = () => {
             <NavDropdown
               title={
                 <span
-                  className="nav-dropdown-item dropdown-toggle"
+                  className="nav-dropdown-item"
                   style={{
                     fontSize: screenWidth > 993 ? "18px" : "inherit",
                     color: "#444444",
                     fontWeight: "normal",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
                   }}
                 >
                   Solutions
+                  <ChevronRightIcon
+                    style={{
+                      transition: "transform 200ms ease",
+                      transform:
+                        !isSmallScreen && showSolutions
+                          ? "rotate(-90deg)"
+                          : "rotate(90deg)",
+                    }}
+                  />
                 </span>
               }
               // title="Solutions"
@@ -844,6 +391,9 @@ const ResponsiveNavbar = () => {
               // style={{
               //   fontSize: screenWidth > 993 ? "18px" : "inherit",
               // }}
+              onMouseEnter={() => !isSmallScreen && setShowSolutions(true)}
+              onMouseLeave={() => !isSmallScreen && setShowSolutions(false)}
+              show={!isSmallScreen ? showSolutions : undefined}
             >
               {screenWidth > 992 ? (
                 <NavDropdown.Item
@@ -853,16 +403,21 @@ const ResponsiveNavbar = () => {
                   <table style={{ marginRight: "40px" }}>
                     <tbody>
                       <tr>
-                        <td>
+                        <td
+                          style={{ verticalAlign: "top", paddingRight: "40px" }}
+                        >
                           <ul>
                             <li>
-                              <RouterLink
-                                to="#"
-                                className="link h6"
-                                // style={{ margin: "20%" }}
+                              <span
+                                className="h6"
+                                style={{
+                                  fontWeight: 700,
+                                  color: "#fff",
+                                  textDecoration: "none",
+                                }}
                               >
                                 Scenario Based
-                              </RouterLink>
+                              </span>
                             </li>
                             <li>
                               {/* <DoubleArrowIcon className="doubleArrow" /> */}
@@ -915,12 +470,19 @@ const ResponsiveNavbar = () => {
                           </ul>
                         </td>
 
-                        <td>
+                        <td style={{ verticalAlign: "top" }}>
                           <ul>
                             <li>
-                              <RouterLink to="#" className="link h6">
+                              <span
+                                className="h6"
+                                style={{
+                                  fontWeight: 700,
+                                  color: "#fff",
+                                  textDecoration: "none",
+                                }}
+                              >
                                 Industry based
-                              </RouterLink>
+                              </span>
                             </li>
                             <li>
                               <ArrowRightIcon />
@@ -1109,14 +671,26 @@ const ResponsiveNavbar = () => {
             <NavDropdown
               title={
                 <span
-                  className="nav-dropdown-item dropdown-toggle"
+                  className="nav-dropdown-item"
                   style={{
                     fontSize: screenWidth > 993 ? "18px" : "inherit",
                     color: "#444444",
                     fontWeight: "normal",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
                   }}
                 >
                   Support
+                  <ChevronRightIcon
+                    style={{
+                      transition: "transform 200ms ease",
+                      transform:
+                        !isSmallScreen && showSupport
+                          ? "rotate(-90deg)"
+                          : "rotate(90deg)",
+                    }}
+                  />
                 </span>
               }
               // title="Support"
@@ -1124,6 +698,9 @@ const ResponsiveNavbar = () => {
               // style={{
               //   fontSize: screenWidth > 993 ? "18px" : "inherit",
               // }}
+              onMouseEnter={() => !isSmallScreen && setShowSupport(true)}
+              onMouseLeave={() => !isSmallScreen && setShowSupport(false)}
+              show={!isSmallScreen ? showSupport : undefined}
             >
               {screenWidth > 992 ? (
                 <NavDropdown.Item
@@ -1133,20 +710,23 @@ const ResponsiveNavbar = () => {
                   <table style={{ marginRight: "40px" }}>
                     <tbody>
                       <tr>
-                        <td>
+                        <td
+                          style={{ verticalAlign: "top", paddingRight: "40px" }}
+                        >
                           <ul>
                             <li>
-                              {/* <RouterLink to="/support" className="link h6">
-                               Contact Support
-                              </RouterLink> */}
-                              <RouterLink
-                                to="#"
-                                className="link h6"
-                                onClick={handleExternalLink}
+                              <span
+                                className="h6"
+                                style={{
+                                  fontWeight: 700,
+                                  color: "#fff",
+                                  textDecoration: "none",
+                                }}
                               >
                                 Help Center
-                              </RouterLink>
+                              </span>
                             </li>
+
                             <li>
                               <ArrowRightIcon />
                               <RouterLink
@@ -1176,10 +756,38 @@ const ResponsiveNavbar = () => {
                               </RouterLink>
                             </li>
 
-                            <li>
+                            {/* <li>
                               <ArrowRightIcon />
                               <RouterLink to="/feedback" className="link">
                                 Feedback
+                              </RouterLink>
+                            </li> */}
+                          </ul>
+                        </td>
+                        <td style={{ verticalAlign: "top" }}>
+                          <ul>
+                            <li>
+                              <span
+                                className="h6"
+                                style={{
+                                  fontWeight: 700,
+                                  color: "#fff",
+                                  textDecoration: "none",
+                                }}
+                              >
+                                Download Center
+                              </span>
+                            </li>
+                            <li>
+                              <ArrowRightIcon />
+                              <RouterLink to="/firmware" className="link">
+                                Firmware
+                              </RouterLink>
+                            </li>
+                            <li>
+                              <ArrowRightIcon />
+                              <RouterLink to="/tools" className="link">
+                                Tools
                               </RouterLink>
                             </li>
                           </ul>
@@ -1190,16 +798,15 @@ const ResponsiveNavbar = () => {
                 </NavDropdown.Item>
               ) : (
                 <>
-                  {/* <NavDropdown.Item
-                    as={Link}
-                    href="https://adiance1.zohodesk.in/portal/en/home"
-                    to="/support"
+                  <NavDropdown.Header
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
+                      fontWeight: 700,
+                      color: "#fff",
                     }}
                   >
-                     Contact Support 
-                  </NavDropdown.Item> */}
+                    Help Center
+                  </NavDropdown.Header>
 
                   <NavDropdown.Item
                     as="a"
@@ -1210,7 +817,7 @@ const ResponsiveNavbar = () => {
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
                     }}
                   >
-                    Help Center
+                    Open Help Center
                   </NavDropdown.Item>
 
                   <NavDropdown.Item
@@ -1241,7 +848,7 @@ const ResponsiveNavbar = () => {
                     Terms of Service
                   </NavDropdown.Item>
 
-                  <NavDropdown.Item
+                  {/* <NavDropdown.Item
                     as={Link}
                     to="/feedback"
                     style={{
@@ -1249,6 +856,37 @@ const ResponsiveNavbar = () => {
                     }}
                   >
                     Feedback
+                  </NavDropdown.Item> */}
+
+                  <NavDropdown.Divider />
+
+                  <NavDropdown.Header
+                    style={{
+                      fontSize: screenWidth > 993 ? "20px" : "inherit",
+                      fontWeight: 700,
+                      color: "#fff",
+                    }}
+                  >
+                    Download Center
+                  </NavDropdown.Header>
+
+                  <NavDropdown.Item
+                    as={Link}
+                    to="/firmware"
+                    style={{
+                      fontSize: screenWidth > 993 ? "20px" : "inherit",
+                    }}
+                  >
+                    Firmware
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    as={Link}
+                    to="/tools"
+                    style={{
+                      fontSize: screenWidth > 993 ? "20px" : "inherit",
+                    }}
+                  >
+                    Tools
                   </NavDropdown.Item>
                 </> // Empty fragment when screenWidth <= 992
               )}
@@ -1279,6 +917,20 @@ const ResponsiveNavbar = () => {
             >
               Partner
             </Nav.Link>
+
+            {/* <Nav.Link
+              as={Link}
+              to="/careers"
+              style={{
+                fontSize: screenWidth > 993 ? "18px" : "inherit",
+                color:
+                  location.pathname === "/partners" ? "#444444" : "#000000",
+                fontWeight:
+                  location.pathname === "/partners" ? "bolder" : "normal",
+              }}
+            >
+              Career
+            </Nav.Link> */}
 
             <Nav.Link
               as={Link}
@@ -1338,7 +990,7 @@ const ResponsiveNavbar = () => {
                 fontSize: screenWidth > 993 ? "18px" : "inherit",
               }}
             >
-              <Button
+              {/* <Button
                 variant="contained"
                 onClick={handleGetQuote}
                 style={{
@@ -1349,7 +1001,7 @@ const ResponsiveNavbar = () => {
                 // endIcon={<ChevronRightIcon />}
               >
                 Partner With us
-              </Button>
+              </Button> */}
             </Nav.Link>
             {/* </nav> */}
           </Nav>

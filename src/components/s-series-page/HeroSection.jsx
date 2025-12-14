@@ -22,12 +22,14 @@ function HeroSection() {
                   <div className={styles.textWrapper}>
                     <div className={styles.headingWrapper}>
                       <h1 className={styles.mainHeading}>
-                        The World's First 5G Enabled Edge{" "}
-                        <span style={{ color: "#bf0603" }}>AI Camera</span>
+                        S-Series: India’s Most Advanced{" "}
+                        <span style={{ color: "#bf0603" }}>
+                          EdgeAI CCTV Cameras
+                        </span>
                       </h1>
                       <p className={styles.subHeading}>
-                        S series AI surveillance camera—enhancing security,
-                        object detection, and more in seconds.
+                        A new era of CCTV built around your safety: The S-Series
+                        adapts to your world and protects you every second.
                       </p>
                     </div>
                     <div className={styles.ctaWrapper}>
@@ -35,30 +37,59 @@ function HeroSection() {
                         variant="contained"
                         endIcon={<ChevronRightIcon />}
                         href="https://calendly.com/book-a-demo-with-adiance/60min"
-                        target="_blank" 
-                        sx={{backgroundColor: "#ffffff", color: "#081B33", cursor:"pointer", fontSize: {
-                            xs: "12px",  // Extra-small devices (e.g., mobile phones)
-                            sm: "14px",  // Small devices (e.g., tablets)
-                            md: "16px",  // Medium devices (e.g., small laptops)
-                            lg: "18px",  // Large devices (e.g., desktops)
-                          },}}
+                        target="_blank"
+                        sx={{
+                          backgroundColor: "#ffffff",
+                          color: "#081B33",
+                          cursor: "pointer",
+                          fontSize: {
+                            xs: "12px", // Extra-small devices (e.g., mobile phones)
+                            sm: "14px", // Small devices (e.g., tablets)
+                            md: "16px", // Medium devices (e.g., small laptops)
+                            lg: "18px", // Large devices (e.g., desktops)
+                          },
+                        }}
                       >
-                        Schedule a Call
+                        Book Demo
                       </Button>
                       <Button
+                        variant="contained"
+                        endIcon={<ChevronRightIcon />}
+                        href="/contact"
+                        target="_blank"
+                        sx={{
+                          backgroundColor: "#ffffff",
+                          color: "#081B33",
+                          cursor: "pointer",
+                          fontSize: {
+                            xs: "12px", // Extra-small devices (e.g., mobile phones)
+                            sm: "14px", // Small devices (e.g., tablets)
+                            md: "16px", // Medium devices (e.g., small laptops)
+                            lg: "18px", // Large devices (e.g., desktops)
+                          },
+                        }}
+                      >
+                        Let's Talk
+                      </Button>
+                      {/* <Button
                         variant="text"
                         endIcon={<ChevronRightIcon />}
                         href="/pdfs/Adiance-S-Series-Camera.pdf"
                         target="_blank"
-                        sx={{backgroundColor:"transparent", color: "#ffffff", cursor:"pointer", fontSize: {
-                            xs: "12px",  // Extra-small devices (e.g., mobile phones)
-                            sm: "14px",  // Small devices (e.g., tablets)
-                            md: "16px",  // Medium devices (e.g., small laptops)
-                            lg: "18px",  // Large devices (e.g., desktops)
-                          },}}
+                        sx={{
+                          backgroundColor: "transparent",
+                          color: "#ffffff",
+                          cursor: "pointer",
+                          fontSize: {
+                            xs: "12px", // Extra-small devices (e.g., mobile phones)
+                            sm: "14px", // Small devices (e.g., tablets)
+                            md: "16px", // Medium devices (e.g., small laptops)
+                            lg: "18px", // Large devices (e.g., desktops)
+                          },
+                        }}
                       >
                         Explore S Series
-                      </Button>
+                      </Button> */}
                     </div>
                   </div>
                   <PaginationDots total={5} active={0} />

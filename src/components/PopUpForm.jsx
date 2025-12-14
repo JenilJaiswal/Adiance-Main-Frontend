@@ -587,7 +587,7 @@ const PopUpForm = () => {
             variant="h6"
             sx={{ fontWeight: "bold", mb: 1 }}
           >
-            Thank you, {name || "Guest"}!
+            Thank you, {name || "Guest"}! {/* eslint-disable-line no-restricted-globals */}
           </Typography>
 
           <Divider

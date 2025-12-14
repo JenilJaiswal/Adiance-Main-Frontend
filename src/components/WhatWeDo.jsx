@@ -11,7 +11,7 @@ const WhatWeDo = () => {
       description:
         "Adiance is transitioning from an Original Equipment Manufacturer (OEM) to a hybrid OEM & Original Design Manufacturer (ODM), focusing on customized Printed Circuit Boards for surveillance cameras and electronic devices, enhancing efficiency and reducing lead times.",
       imageUrl: "/images/wwd1.png",
-      url:"/product-engineering"
+      url: "/product-engineering"
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ const WhatWeDo = () => {
       description:
         "Adiance's NVR-free approach and cloud storage offer cost-effective, scalable, and secure solutions for modern surveillance environments. This eliminates on-premises hardware, simplifies setup, and enhances data security, allowing seamless integration with other services.",
       imageUrl: "/images/wwd2.png",
-      url:"/manufacturing"
+      url: "/manufacturing"
     },
     {
       id: 4,
@@ -27,7 +27,7 @@ const WhatWeDo = () => {
       description:
         "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
       imageUrl: "/images/wwd3.png",
-      url:"//cloud-application"
+      url: "https://www.adiance.com/cloud-application"
     },
     // {
     //   id: 5,
@@ -70,7 +70,7 @@ const WhatWeDo = () => {
 
   return (
     <>
-      
+
 
       <Grid
         container
@@ -86,36 +86,36 @@ const WhatWeDo = () => {
       >
         {/* First paragraph */}
         <Grid item xs={12} sm={12}>
-        <h2
-        style={{
-          textAlign: "center",
-          fontSize: "36px",
-          marginTop: "5%",
-          marginBottom: "5%",
-        }}
-      >
-        What We Do
-      </h2>  
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "36px",
+              marginTop: "5%",
+              marginBottom: "5%",
+            }}
+          >
+            Adiance Technologies’ OEM-ODM Manufacturing Services Expertise
+          </h2>
           <Typography variant="body1" align="justify">
-          Adiance is a leading security company known for its excellence in product engineering, manufacturing, and cloud and application services. Their product engineering process is characterized by innovation and precision, focusing on CCTV cameras and surveillance systems. Adiance's manufacturing process is characterized by state-of-the-art facilities equipped with advanced machinery and technology, ensuring the highest quality of products. Adiance also provides cloud and application services, offering remote monitoring capabilities and enhanced security features. Their commitment to innovation, quality, and customer satisfaction drives them to constantly explore new technologies and methodologies to stay ahead of industry trends. Their dedication to customer satisfaction sets the standard for excellence in electronic and surveillance solutions.
+            At Adiance Technologies, we take pride in being an Indian OEM-ODM manufacturer with over 22+ years of experience in the field of security and automation. Along with advanced AI CCTV cameras and robotic arms, we also provide in-house PCB manufacturing for CCTV systems and robotics, ensuring end-to-end quality and reliability. Powered by world-class SMT manufacturing lines and a passionate R&D team, we deliver solutions that meet global standards while carrying the trust of “Made in India” excellence. With a growing family of 2500+ happy clients across India and worldwide, Adiance continues to empower businesses with smart, scalable and future-ready technologies. Our commitment to innovation, precision and customer satisfaction drives us to shape a safer and smarter tomorrow.
           </Typography>
         </Grid>
       </Grid>
       <div className="innovation-container wave-animation">
         {displayItems.map((item) => (
           <Link to={item.url}>
-          <div key={item.id} className="innovation-item">
-            <img
-              src={item.imageUrl}
-              alt={item.title}
-              className="innovation-image"
-            />
-            {/* <div className="item-details">
+            <div key={item.id} className="innovation-item">
+              <img
+                src={item.imageUrl}
+                alt={item.title}
+                className="innovation-image"
+              />
+              {/* <div className="item-details">
               <div className="item-title">{item.title}</div>
               <div className="item-description1">{item.description}</div>
             </div> */}
-            <div className="item-title-overlay">{item.title}</div>
-          </div>
+              <h3 className="item-title-overlay">{item.title}</h3>
+            </div>
           </Link>
         ))}
         <style jsx>{`

@@ -13,7 +13,7 @@ const Innovation = () => {
   const innovationItems = [
     {
       id: 1,
-      title: "OEM & ODM",
+      title: "OEM-ODM Manufacturing Services Expertise",
       description:
         "Adiance is transitioning from an Original Equipment Manufacturer (OEM) to a hybrid OEM & Original Design Manufacturer (ODM), focusing on customized Printed Circuit Boards for surveillance cameras and electronic devices, enhancing efficiency and reducing lead times.",
       imageUrl: "/images/oemodm.png",
@@ -165,6 +165,7 @@ const Innovation = () => {
           border-radius: 10px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           transition: transform 0.3s ease, z-index 0.3s ease;
+          min-height: 360px;
         }
 
         .innovation-item:hover {

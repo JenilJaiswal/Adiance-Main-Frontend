@@ -1,14 +1,13 @@
 import React from "react";
-import { Box, Button, Typography } from "@mui/material";
-import { Container } from "react-bootstrap";
+import { Box, Button, Typography, Container } from "@mui/material"; // Changed Container import
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
+import { useNavigate } from "react-router-dom";
 
-const Globalnetwork = () => {
-  const navigate = useNavigate(); // Initialize useNavigate hook
+const Globalnetwork = ({ data }) => {
+  const navigate = useNavigate();
 
   const handleContactClick = () => {
-    navigate("/contact"); // Redirect to the contact page
+    navigate("/contact");
   };
 
   return (
@@ -31,8 +30,8 @@ const Globalnetwork = () => {
             <img src="/images/Group.svg" alt="groupsvg" width="100%" />
           </Box>
         </Box>
-        <Container
-          fluid="xl"
+        <Container // Use MUI Container
+          maxWidth="xl"
           style={{
             display: "flex",
             flexDirection: "column",
@@ -49,7 +48,8 @@ const Globalnetwork = () => {
                 fontSize: { xs: "2.5rem", sm: "3.5rem", lg: "3.5rem" },
               }}
             >
-              Be part of the{" "}
+              {/* Use dynamic title */}
+              {data.title}{" "}
               <Typography
                 variant="h2"
                 component="span"
@@ -60,15 +60,16 @@ const Globalnetwork = () => {
                   fontSize: { xs: "2.5rem", sm: "3.5rem", lg: "4.5rem" },
                 }}
               >
-                Global Network.
+                {/* Use dynamic highlight */}
+                {data.highlight}
               </Typography>
             </Typography>
             <Typography
               variant="h6"
-              sx={{ marginTop: "1rem", textAlign: "center" }} // Adjust the margin as needed
+              sx={{ marginTop: "1rem", textAlign: "center" }}
             >
-              Become a partner of Adiance and access exclusive benefits,
-              rewards, and support anytime through our dedicated partner portal.{" "}
+              {/* Use dynamic description */}
+              {data.description}
             </Typography>
           </Box>
 
@@ -81,7 +82,7 @@ const Globalnetwork = () => {
               gap: "1rem",
             }}
           >
-            <Button
+            {/* <Button
               variant="contained"
               endIcon={<ChevronRightIcon />}
               sx={{
@@ -90,10 +91,10 @@ const Globalnetwork = () => {
                 textTransform: "none",
                 padding: "0.7rem",
               }}
-              onClick={handleContactClick} // Attach the onClick handler to the button
+              onClick={handleContactClick}
             >
               Contact Us
-            </Button>
+            </Button> */}
           </Box>
         </Container>
         <Box

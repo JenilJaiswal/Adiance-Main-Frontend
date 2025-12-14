@@ -170,21 +170,16 @@ const AboutMidSection = () => {
       >
         {/* First paragraph */}
         <Grid item xs={12} sm={12}>
-          <Typography
-            variant={screenWidth > 888 ? "h1" : "h3"}
-            gutterBottom
-            fontWeight="bold"
+          <h1
+            style={{
+              textAlign: "center",
+              fontWeight: "bolder",
+              fontSize: screenWidth > 888 ? "60px" : screenWidth > 600 ? "40px" : "28px",
+              margin: 0,
+            }}
           >
-            <h1
-              style={{
-                textAlign: "center",
-                fontWeight: "bolder",
-                fontSize: "60px",
-              }}
-            >
-              WE ARE ADIANCE
-            </h1>
-          </Typography>
+            WE ARE ADIANCE
+          </h1>
           <Typography variant="body1" align="justify">
             Adiance is a leading technology company specializing in innovative
             solutions for security, surveillance, and connectivity. We design

@@ -11,50 +11,49 @@ const Adv = () => {
         }}
         className="adv"
       >
-        One Stop Solution For all your security needs
+        Why Choose Adiance Technologies
       </h2>
 
       <div className="adv-container">
         <div className="adv-item">
           <center>
             <img
-              src="images/sol1.png"
+              src="images/Happy Clients.png"
               alt="Conveyor Belt"
               className="adv-img"
             />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>
-              Election Security
-              <br /> Partner in 15+ <br />
-              States
+            2500+
+              <br /> Happy Clients <br />
             </center>
           </p>
         </div>
         <div className="adv-item">
           <center>
-            <img src="images/sol2.png" alt="Research" className="adv-img" />
+            <img src="images/Security Partner in 15+ States.png" alt="Research" className="adv-img" />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>
-              360 Degree <br />
-              Approach
+            Security Partner <br />
+            in 15+ States
             </center>
           </p>
         </div>
         <div className="adv-item">
           <center>
-            <img src="images/sol3.png" alt="Employee" className="adv-img" />
+            <img src="images/Trusted by Indian Government.png" alt="Employee" className="adv-img" />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>
-              Trusted by <br /> Indian Govt.
+              Trusted by <br /> Indian Government
             </center>
           </p>
         </div>
         <div className="adv-item">
           <center>
-            <img src="images/sol4.png" alt="Performance" className="adv-img" />
+            <img src="images/Patented Technology.png" alt="Performance" className="adv-img" />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>Patented Technology</center>
@@ -62,23 +61,32 @@ const Adv = () => {
         </div>
         <div className="adv-item">
           <center>
-            <img src="images/sol5.png" alt="Certificate" className="adv-img" />
+            <img src="images/Menufecturing Facility in Gujarat.png" alt="Certificate" className="adv-img" />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>
-              R & D center <br />
-              in Gujarat
+            Menufecturing <br />Facility in Gujarat
             </center>
           </p>
         </div>
         <div className="adv-item">
           <center>
-            <img src="images/sol6.png" alt="Certificate" className="adv-img" />
+            <img src="images/Made in India.png" alt="Certificate" className="adv-img" />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>
-              State-of-the Art <br /> Manufacturing facility <br />
-              in Gujarat
+            Made in India
+            </center>
+          </p>
+        </div>
+        <div className="adv-item">
+          <center>
+            <img src="images/20+ Years of Industry Experience.png" alt="Certificate" className="adv-img" />
+          </center>
+          <p className="adv-text adv-text-bigger">
+            <center>
+            20+ Years of<br />
+            Industry Experience
             </center>
           </p>
         </div>

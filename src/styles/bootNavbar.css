@@ -7,9 +7,22 @@
 }
 
 .link {
-    text-decoration: none; /* Remove underline */
+    text-decoration: none !important; /* Remove underline */
     color: inherit; /* Inherit text color */
     font-size: small;
+  }
+  /* Ensure global a:hover rules don't affect navbar links */
+  .navbar .link,
+  .navbar .dropdown-menu .link,
+  .navbar .dropdown-menu a,
+  .navbar a {
+    text-decoration: none !important;
+  }
+  .navbar .link:hover,
+  .navbar .dropdown-menu .link:hover,
+  .navbar .dropdown-menu a.link:hover {
+    text-decoration: none !important;
+    border-bottom: 2px solid currentColor; /* underline only hovered link */
   }
   
   td ul {

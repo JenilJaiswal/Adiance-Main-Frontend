@@ -17,7 +17,7 @@ const OurOfferings = () => {
       url: "/remote-security",
     },
     {
-      id: 4,
+      id: 3,
       title: "Healthcare",
       description:
         "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
@@ -25,12 +25,28 @@ const OurOfferings = () => {
       url: "/healthcare",
     },
     {
-      id: 15,
+      id: 4,
       title: "Public Safety & Security",
       description:
         "Our CCTV cameras are integrated with our Video Management System (VMS), enhancing efficiency and scalability through centralized management, real-time monitoring, and advanced analytics, enhancing situational awareness and providing valuable insights.",
       imageUrl: "/images/ps3.png",
-      url: "Public-Safety",
+      url: "public-safety",
+    },
+    {
+      id: 5,
+      title: "Traffic Management and Monitoring",
+      description:
+        "Our CCTV cameras are integrated with our Video Management System (VMS), enhancing efficiency and scalability through centralized management, real-time monitoring, and advanced analytics, enhancing situational awareness and providing valuable insights.",
+      imageUrl: "/images/Traffic Management.png",
+      url: "trafic-management",
+    },
+    {
+      id: 6,
+      title: "Education",
+      description:
+        "Our CCTV cameras are integrated with our Video Management System (VMS), enhancing efficiency and scalability through centralized management, real-time monitoring, and advanced analytics, enhancing situational awareness and providing valuable insights.",
+      imageUrl: "/images/Education.png",
+      url: "education",
     },
   ];
 
@@ -63,7 +79,8 @@ const OurOfferings = () => {
           marginBottom: "5%",
         }}
       >
-        Our Offerings
+      Industries We Serve with AI CCTV Solutions
+
       </h2>
       <div className="innovation-container">
         {displayItems.map((item, index) => (
@@ -85,7 +102,7 @@ const OurOfferings = () => {
               <div className="item-title">{item.title}</div>
               <div className="item-description">{item.description}</div>
             </div> */}
-              <div className="item-title-overlay">{item.title}</div>
+              <h3 className="item-title-overlay">{item.title}</h3>
             </div>
           </Link>
         ))}
@@ -165,6 +182,7 @@ const OurOfferings = () => {
             text-align: center;
             font-size: 16px;
             font-weight: bold;
+            margin: 0;
             box-sizing: border-box;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;

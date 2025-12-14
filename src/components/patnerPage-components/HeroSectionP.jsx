@@ -32,9 +32,9 @@ const HeroSectionP = () => {
             Partner With Adiance
           </Typography>
           <Typography variant="h6" component="p">
-            Our programs are built for shared success, fostering <br /> growth
-            and profitability while delivering value to our <br /> mutual
-            customers.
+            Adiance brings together distributors, dealers, and customers <br />
+            in one connected ecosystem; ensuring smart security, <br />{" "}
+            sustainable growth, and shared success.
           </Typography>
         </Box>
       </Box>

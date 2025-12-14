@@ -27,22 +27,17 @@ const IconsRow = () => {
   return (
     <>
       <div>
-        <Typography
-          variant={isSmallScreen || isMediumScreen ? "h5" : "h2"}
-          gutterBottom
-          fontWeight="bold"
-          marginTop="15%"
+        <h1
+          style={{
+            textAlign: "center",
+            fontWeight: "bolder",
+            fontSize: isSmallScreen ? "24px" : isMediumScreen ? "36px" : "60px",
+            marginTop: "15%",
+            marginBottom: "16px",
+          }}
         >
-          <h1
-            style={{
-              textAlign: "center",
-              fontWeight: "bolder",
-              fontSize: "60px",
-            }}
-          >
-            WHERE INNOVATION MEETS VIGILANCE
-          </h1>
-        </Typography>
+          Trusted OEM-ODM Partner for AI CCTV & Robotics
+        </h1>
       </div>
 
       <div

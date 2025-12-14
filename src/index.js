@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import {HelmetProvider} from 'react-helmet-async';
+import {HelmetProvider} from 'react-helmet-async';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <HelmetProvider> */}
+    <HelmetProvider>
     <App />
-    {/* </HelmetProvider> */}
+    </HelmetProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

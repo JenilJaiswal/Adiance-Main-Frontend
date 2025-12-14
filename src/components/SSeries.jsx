@@ -14,6 +14,9 @@ import Industries from "./s-series-page/Industries";
 import SseriesCamera from "./s-series-page/SseriesCamera";
 import Testimonials from "./s-series-page/Testimonials";
 import TechnologyPartner from "./s-series-page/TechnologyPartner";
+import AutoplayCarousel from "./AutoplayCarousel";
+import FaqsSection from "./faqsSection";
+import faqsData from "./faqsData";
 import { useLocation } from "react-router-dom";
 
 function SSeries({ productTitle, imgIdx }) {
@@ -775,10 +778,10 @@ function SSeries({ productTitle, imgIdx }) {
   return (
     <div>
       <Helmet>
-        <title>Explore S Series Cameras | Smart Security Solutions</title>
+        <title>EdgeAI - S-Series AI CCTV Cameras for Smart Protection | Adiance</title>
         <meta
           name="description"
-          content="Discover Adiance S Series Cameras with AI-powered security, ANPR, and real-time monitoring. Stay updated with the latest news & industry innovations."
+          content="Deploy EdgeAI S-Series AI CCTV cameras in minutes. Get clean alerts, reliable night vision and easy multi-site control for safer operations across industries."
         />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
@@ -788,16 +791,18 @@ function SSeries({ productTitle, imgIdx }) {
 
       <div>
         <HeroSection />
-        <ValuedClients />
+        <AutoplayCarousel />
+        {/* <ValuedClients /> */}
         <WhySSeriesComponent />
         <Features />
         <OneStopSolution />
         <SseriesCamera />
-        <Industries />
+        {/* <Industries /> */}
         <Testimonials />
-        <TechnologyPartner />
-
-        <LetestNews />
+        {/* <TechnologyPartner /> */}
+        {/* <LetestNews /> */}
+        <FaqsSection faqsList={faqsData.sSeries} />
+        {/* Faqs section */}
       </div>
 
       <Footer />

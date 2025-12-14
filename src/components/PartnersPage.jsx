@@ -8,6 +8,7 @@ import WhyPartnerwithAdiance from "./patnerPage-components/WhyPartnerwithAdiance
 import Globalnetwork from "./patnerPage-components/Globalnetwork";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
+import DealersLandingPageForm from "./DealersLandingPageForm";
 
 const PartnersPage = () => {
   const location = useLocation(); // Get the current route
@@ -30,8 +31,7 @@ const PartnersPage = () => {
         <div>
           <HeroSectionP />
           <Channelpartner />
-          <WhyPartnerwithAdiance />
-          <Globalnetwork />
+          <DealersLandingPageForm />
         </div>
         <div>
           <Footer />

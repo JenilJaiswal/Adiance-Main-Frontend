@@ -40,7 +40,7 @@ const SseriesCamera = () => {
               fontSize: { xs: "2.5rem", sm: "3.5rem", lg: "3.5rem" },
             }}
           >
-            Explore S Series{" "}
+            Protect What Matters With{" "}
             <Typography
               variant="h2"
               component="span"
@@ -51,14 +51,14 @@ const SseriesCamera = () => {
                 fontSize: { xs: "2.5rem", sm: "3.5rem", lg: "4.5rem" },
               }}
             >
-              Camera
+              S-Series AI CCTV Cameras
             </Typography>
           </Typography>
           <Typography
             variant="h6"
             sx={{ marginTop: "1rem", textAlign: "center" }} // Adjust the margin as needed
           >
-            Know how we can transform your security
+            Designed for modern enterprises: faster response, fewer false alarms, and visibility you can trust.
           </Typography>
         </Box>
 
@@ -71,7 +71,23 @@ const SseriesCamera = () => {
             gap: "1rem",
           }}
         >
+
           <Button
+            variant="contained"
+            endIcon={<ChevronRightIcon />}
+            href="/contact"
+            target="_blank"
+            sx={{
+              backgroundColor: "#1C2025",
+              color: "#ffffff",
+              textTransform: "none",
+              padding: "0.7rem",
+            }}
+          >
+            Book Installation
+          </Button>
+
+          {/* <Button
             variant="contained"
             endIcon={<ChevronRightIcon />}
             href="/pdfs/Adiance-S-Series-Camera.pdf"
@@ -99,8 +115,8 @@ const SseriesCamera = () => {
             }}
           >
             Download Specifications
-          </Button>
-      
+          </Button> */}
+
         </Box>
       </Container>
       <Box

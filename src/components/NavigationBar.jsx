@@ -371,11 +371,11 @@ const NavigationBar = () => {
                     Datasheet
                   </RouterLink> */}
                 </Typography>
-                <Typography variant="body1">
+                {/* <Typography variant="body1">
                   <RouterLink to="/feedback" className={classes.menuLink}>
                     Feedback
                   </RouterLink>
-                </Typography>
+                </Typography> */}
               </div>
             </Typography>
             <Typography variant="h6" className={classes.menuItem}>

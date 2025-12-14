@@ -1,58 +1,65 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
-import NavHeader from "./NavHeader";
 import Footer from "./Footer";
-import {
-  Typography,
-  CardMedia,
-  Chip,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Box,
-  Grid,
-  Container,
-} from "@mui/material";
-import { ExpandMore, Face, Label } from "@mui/icons-material"; // Import icons
-import { Helmet } from "react-helmet";
+import { Typography, Chip, Box, Grid, Container } from "@mui/material";
+import { Label } from "@mui/icons-material"; // Import icons
+import { Helmet } from "react-helmet-async";
 import BlogFaq from "./BlogFaq.jsx";
 import { useLocation } from "react-router-dom";
+import { getBlogByUrlWords } from "../AdianceAdmin/api/blogs";
+import TableOfContents from "./TableOfContents";
+import ContactForm from "./ContactForm";
 
 const Blog1 = () => {
-  const { urlTitle } = useParams();
+  const { urlWords, urlTitle } = useParams();
+  const slug = urlWords || urlTitle;
   const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const location = useLocation();
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
+  const currentUrl = canonicalUrl;
+  const IMAGE_BASE_URL = (
+    "https://backend.adiance.com:443/images" || "http://localhost:5000/uploads"
+  ).replace(/\/$/, "");
+
+  // Generate OG image URL
+  const mainImageOg = blog?.content?.mainImage
+    ? `${IMAGE_BASE_URL}/${String(blog.content.mainImage).replace(
+      /^\/?(images\/)?/,
+      ""
+    )}`
+    : "https://www.adiance.com/images/Logo-241x47-1.png";
 
   useEffect(() => {
-    // if (!id) return; // Prevent making API request if id is undefined
-    if (!urlTitle) return;
-
+    if (!slug) return;
     const fetchBlog = async () => {
       try {
-        const response = await fetch(
-          // `https://backend.adiance.com:443/api/blogs/getBlog/${id}`
-          `https://backend.adiance.com:443/api/blogs/getBlog/${urlTitle}`
-          // `http://localhost:8007/api/blogs/getBlog/${urlTitle}`
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch blog");
+        setLoading(true);
+        setError(null);
+        const response = await getBlogByUrlWords(slug);
+        if (
+          response.status === "success" &&
+          response.data?.metadata?.urlWords
+        ) {
+          setBlog(response.data);
+        } else {
+          setError(response.message || "Blog not found");
         }
-        const data = await response.json();
-        setBlog(data);
-      } catch (error) {
-        console.error("Error fetching blog:", error);
+      } catch (err) {
+        setError(err.message || "Failed to fetch blog");
+      } finally {
+        setLoading(false);
       }
     };
-
     fetchBlog();
-    // }, [id]);
-  }, [urlTitle]);
+  }, [slug]);
 
-  if (!blog) {
-    return <div>Loading...</div>;
-  }
+  if (loading) return <div>Loading...</div>;
+  if (error)
+    return <div style={{ padding: "2rem", color: "red" }}>{error}</div>;
+  if (!blog) return null;
 
   // Function to render bold words in the paragraph
   // Function to render bold words in the paragraph
@@ -79,29 +86,208 @@ const Blog1 = () => {
     });
   };
 
+  // Normalize Slate-style rich text (arrays of nodes) to plain text
+  const slateNodesToText = (nodeOrNodes) => {
+    if (!nodeOrNodes) return "";
+    if (typeof nodeOrNodes === "string") return nodeOrNodes;
+    if (Array.isArray(nodeOrNodes)) {
+      return nodeOrNodes.map(slateNodesToText).join(" ").trim();
+    }
+    if (typeof nodeOrNodes === "object") {
+      if (typeof nodeOrNodes.text === "string") return nodeOrNodes.text;
+      if (Array.isArray(nodeOrNodes.children))
+        return slateNodesToText(nodeOrNodes.children);
+    }
+    return "";
+  };
+
+  // Render Slate nodes preserving basic inline marks (bold/italic/underline/code) and links
+  const renderSlate = (nodes) => {
+    const renderLeaf = (leaf, key) => {
+      const style = {};
+      const colorVal = leaf.color || leaf.fontColor || leaf.textColor;
+      const bgVal = leaf.backgroundColor || leaf.bgColor;
+      if (colorVal) style.color = colorVal;
+      if (bgVal) style.backgroundColor = bgVal;
+
+      if (leaf.text === "") {
+        return <br key={key} />;
+      }
+
+      let el = <span style={style}>{leaf.text || ""}</span>;
+      if (leaf.code) el = <code key={`${key}-code`}>{el}</code>;
+      if (leaf.bold) el = <strong key={`${key}-bold`}>{el}</strong>;
+      if (leaf.italic) el = <em key={`${key}-italic`}>{el}</em>;
+      if (leaf.underline) el = <u key={`${key}-underline`}>{el}</u>;
+      return <React.Fragment key={key}>{el}</React.Fragment>;
+    };
+    const renderChildren = (children) =>
+      Array.isArray(children) ? children.map((n, i) => renderNode(n, i)) : null;
+    const renderNode = (node, idx) => {
+      if (node.text !== undefined) return renderLeaf(node, `leaf-${idx}`);
+      const align = node.align || node.textAlign || undefined;
+      switch (node.type) {
+        case "link":
+          return (
+            <a
+              key={`link-${idx}`}
+              href={node.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {renderChildren(node.children)}
+            </a>
+          );
+        case "bulleted-list":
+        case "unordered-list":
+          return (
+            <ul key={`ul-${idx}`} style={{ margin: "0 0 1rem 1.25rem" }}>
+              {renderChildren(node.children)}
+            </ul>
+          );
+        case "numbered-list":
+        case "ordered-list":
+          return (
+            <ol key={`ol-${idx}`} style={{ margin: "0 0 1rem 1.25rem" }}>
+              {renderChildren(node.children)}
+            </ol>
+          );
+        case "list-item":
+          return <li key={`li-${idx}`}>{renderChildren(node.children)}</li>;
+        case "blockquote":
+          return (
+            <blockquote
+              key={`q-${idx}`}
+              style={{
+                margin: "0 0 1rem",
+                paddingLeft: "1rem",
+                borderLeft: "4px solid #ddd",
+              }}
+            >
+              {renderChildren(node.children)}
+            </blockquote>
+          );
+        case "h2":
+        case "h3":
+        case "h4":
+          const Tag = node.type;
+          return (
+            <Tag
+              key={`h-${idx}`}
+              style={{ whiteSpace: "pre-wrap", textAlign: align }}
+            >
+              {renderChildren(node.children)}
+            </Tag>
+          );
+        case "paragraph":
+        default:
+          // Default paragraphs should take full width so align left/right behaves as extremes
+          return (
+            <div
+              key={`p-${idx}`}
+              style={{
+                whiteSpace: "pre-wrap",
+                textAlign: align,
+                width: "100%",
+                minHeight: "1.5rem",
+              }}
+            >
+              {renderChildren(node.children)}
+            </div>
+          );
+      }
+    };
+    if (typeof nodes === "string") return nodes;
+    if (!Array.isArray(nodes)) return null;
+    return nodes.map((n, i) => renderNode(n, i));
+  };
+
+  // Extract alignment from the first block node if present
+  const getAlign = (nodes) => {
+    if (!Array.isArray(nodes) || nodes.length === 0) return undefined;
+    const n =
+      nodes.find(
+        (x) => x && typeof x === "object" && (x.align || x.textAlign)
+      ) || nodes[0];
+    return (n && (n.align || n.textAlign)) || undefined;
+  };
+
+  const formatDate = (dateString) => {
+    if (!dateString) return "";
+    const date = new Date(dateString);
+    return date.toDateString();
+  };
+
   return (
     <div>
       {" "}
       {/* Prevent horizontal scroll */}
       <Helmet>
-        <title>{blog.metaName || blog.title}</title>
+        <title>
+          {blog.content?.metaTitle ||
+            blog.metadata?.metaTitle ||
+            "Default Title my name is again default title"}
+        </title>
         <meta
           name="description"
-          content={blog.metaDescription || blog.description}
+          content={
+            blog.content?.metaDescription ||
+            blog.metadata?.metaDescription ||
+            "Default Description"
+          }
         />
-        <link rel="canonical" href={canonicalUrl} />
-
-        {/* Inject dynamic Article Schema */}
-        {blog.articleSchema && (
-          <script type="application/ld+json">{blog.articleSchema}</script>
-        )}
-        {/* Inject dynamic FAQ Schema */}
-        {blog.faqSchema && (
-          <script type="application/ld+json">{blog.faqSchema}</script>
-        )}
+        <meta name="robots" content="index, follow" />
+        <meta
+          property="og:title"
+          content={
+            blog.content?.metaTitle ||
+            blog.metadata?.metaTitle ||
+            "Default OG Title"
+          }
+        />
+        <meta
+          property="og:description"
+          content={
+            blog.content?.metaDescription ||
+            blog.metadata?.metaDescription ||
+            "Default OG Description"
+          }
+        />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:type" content="blog" />
+        <meta property="og:site_name" content="Adiance Technology" />
+        <meta property="og:image" content={mainImageOg} />
+        <meta property="og:locale" content="en_US" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiance" />
+        <meta
+          name="twitter:title"
+          content={
+            blog.content?.metaTitle ||
+            blog.metadata?.metaTitle ||
+            "Default Twitter Title"
+          }
+        />
+        <meta
+          name="twitter:description"
+          content={
+            blog.content?.metaDescription ||
+            blog.metadata?.metaDescription ||
+            "Default Twiter Description"
+          }
+        />
+        <meta name="twitter:image" content={mainImageOg} />
+        <link rel="canonical" href={`${currentUrl}`} />
+        {Array.isArray(blog.content?.schemas) &&
+          blog.content.schemas.map((item, index) => (
+            <script
+              key={index}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: item.content?.schemaData }}
+            />
+          ))}
       </Helmet>
       <Header />
-      {/* <NavHeader text={blog.title} /> */}
       <Container maxWidth="xl">
         <Grid
           container
@@ -121,15 +307,27 @@ const Blog1 = () => {
                 // marginBottom: "2.5%",
               }}
             >
-              {blog.title}
+              {blog.content?.title}
             </Typography>
+            <Box mt={2} display="flex" alignItems="center">
+              <Typography variant="body2">
+                {blog.updatedAt && blog.updatedAt !== blog.createdAt
+                  ? `Updated ${formatDate(blog.updatedAt)}`
+                  : `Published ${formatDate(blog.createdAt)}`}
+              </Typography>
+              <Typography variant="body2" sx={{ ml: 2 }}>
+                {blog.content?.blogAuthor}
+              </Typography>
+            </Box>
           </Grid>
 
           {/* Image Section */}
           <Grid item xs={12} md={6} padding={{ xs: "1.5rem", lg: "3rem" }}>
             <img
-              src={`https://backend.adiance.com:443/images/${blog.image}`}
-              alt={blog.title}
+              src={`${IMAGE_BASE_URL}/${String(
+                blog.content?.mainImage || ""
+              ).replace(/^\/?(images\/)?/, "")}`}
+              alt={blog.content?.title}
               style={{
                 width: "100%",
                 maxWidth: "1200px",
@@ -137,7 +335,6 @@ const Blog1 = () => {
                 margin: "auto",
                 display: "block",
                 borderRadius: "8px",
-                // padding: "3rem",
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
               }}
             />
@@ -145,17 +342,20 @@ const Blog1 = () => {
         </Grid>
       </Container>
       <Container maxWidth="xl">
-        <div
-          style={
-            {
-              // width: "100%",
-              // maxWidth: "1200px", // Set a max width to prevent excessive stretching
-              // padding: "5%", // Use padding instead of margin for spacing
-              // margin: "5% 10%", // Center content
-            }
-          }
-        >
-          {/* <Typography
+        <Grid container spacing={4}>
+          {/* Main Content Column */}
+          <Grid item xs={12} md={8}>
+            <div
+              style={
+                {
+                  // width: "100%",
+                  // maxWidth: "1200px", // Set a max width to prevent excessive stretching
+                  // padding: "5%", // Use padding instead of margin for spacing
+                  // margin: "5% 10%", // Center content
+                }
+              }
+            >
+              {/* <Typography
           variant="h5"
           gutterBottom
           sx={{
@@ -166,23 +366,28 @@ const Blog1 = () => {
         >
           {blog.title}
         </Typography> */}
-          <Typography
-            variant="subtitle1"
-            sx={{
-              fontSize: { xs: "1.125rem", md: "1.125rem" },
-              lineHeight: { xs: "1.75rem", md: "2.25rem" },
-              letterSpacing: { xs: "0.0437rem", md: "0.0437rem" },
-            }}
-            paragraph
-          >
-            {blog.description.split("\n").map((line, index) => (
-              <React.Fragment key={index}>
-                {line}
-                <br />
-              </React.Fragment>
-            ))}
-          </Typography>
-          {/* <img
+              {Array.isArray(blog.content?.brief) &&
+                blog.content.brief.length > 0 &&
+                blog.content.brief.map((block, index) => (
+                  <Typography
+                    key={index}
+                    variant="subtitle1"
+                    sx={{
+                      fontSize: { xs: "1.125rem", md: "1.125rem" },
+                      lineHeight: { xs: "1.75rem", md: "2.25rem" },
+                      letterSpacing: { xs: "0.0437rem", md: "0.0437rem" },
+                      minHeight: "1.5rem",
+                    }}
+                    paragraph
+                  >
+                    {block.children?.map((n, i) => (
+                      <React.Fragment key={i}>
+                        {n.text === "" ? <br /> : n.text}
+                      </React.Fragment>
+                    ))}
+                  </Typography>
+                ))}
+              {/* <img
           src={`https://backend.adiance.com:443/images/${blog.image}`}
           alt={blog.title}
           style={{
@@ -194,7 +399,7 @@ const Blog1 = () => {
             marginBlock: "3.5%",
           }}
         /> */}
-          {/* {blog.sections.map((section, index) => (
+              {/* {blog.sections.map((section, index) => (
       <div key={index}>
         <Typography variant="h6" gutterBottom fontWeight={"bold"}>
           {section.heading}
@@ -206,60 +411,203 @@ const Blog1 = () => {
         </Typography>
       </div>
     ))} */}
-          {blog.sections.map((section, index) => (
-            <div key={index}>
-              <Typography
-                variant="h2"
-                gutterBottom
-                sx={{
-                  textAlign: { xs: "center", md: "left" },
-                  fontSize: { xs: "1.5rem", md: "2rem" },
-                  lineHeight: { xs: "2.25rem", md: "2.875rem" },
-                  fontWeight: "500",
-                }}
-              >
-                {section.heading}
-              </Typography>
-              <Typography
-                variant="body1"
-                paragraph
-                sx={{
-                  whiteSpace: "pre-line", // This will preserve newline characters
-                  "& a": {
-                    fontWeight: "bold",
-                  },
-                  fontSize: { xs: "1.125rem", md: "1.125rem" },
-                  lineHeight: { xs: "1.75rem", md: "2.25rem" },
-                  letterSpacing: { xs: "0.0437rem", md: "0.0437rem" },
-                }}
-              >
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: section.para, // No need to replace \n with <br /> now
-                  }}
-                />
-              </Typography>
+              {Array.isArray(blog.content?.headingsAndImages) &&
+                blog.content.headingsAndImages
+                  .filter((c) => c.type !== "faq")
+                  .reduce((groups, component) => {
+                    if (["h2", "h3", "h4"].includes(component.type)) {
+                      groups.push({
+                        id: component.id,
+                        heading: component,
+                        content: [],
+                      });
+                    } else if (component.type === "p" && groups.length > 0) {
+                      groups[groups.length - 1].content.push(component);
+                    } else {
+                      groups.push({ id: component.id, content: [component] });
+                    }
+                    return groups;
+                  }, [])
+                  .map((group) => (
+                    <div key={group.id}>
+                      {group.heading && (
+                        <Typography
+                          id={group.heading.id || `heading-${group.id}`}
+                          variant={
+                            group.heading.type === "h2"
+                              ? "h2"
+                              : group.heading.type === "h3"
+                                ? "h3"
+                                : "h4"
+                          }
+                          gutterBottom
+                          sx={{
+                            width: "100%",
+                            fontSize: {
+                              xs: "1.5rem",
+                              md:
+                                group.heading.type === "h2"
+                                  ? "2.25rem" // 36px for H2 headings
+                                  : group.heading.type === "h3"
+                                    ? "1.5rem"
+                                    : "1.25rem",
+                            },
+                            lineHeight: {
+                              xs: "2.25rem",
+                              md:
+                                group.heading.type === "h2"
+                                  ? "2.875rem"
+                                  : group.heading.type === "h3"
+                                    ? "2.25rem"
+                                    : "2rem",
+                            },
+                            fontWeight: "500",
+                            textAlign: getAlign(group.heading.content?.text),
+                            scrollMarginTop: "80px", // Add offset for fixed header
+                          }}
+                        >
+                          {renderSlate(group.heading.content?.text || [])}
+                        </Typography>
+                      )}
+                      {group.content?.map((component, idx) => {
+                        if (component.type === "p") {
+                          return (
+                            <Typography
+                              key={component.id}
+                              variant="body1"
+                              paragraph
+                              sx={{
+                                width: "100%",
+                                whiteSpace: "pre-wrap",
+                                "& a": { fontWeight: "bold" },
+                                fontSize: { xs: "1.125rem", md: "1.125rem" },
+                                lineHeight: { xs: "1.75rem", md: "2.25rem" },
+                                letterSpacing: {
+                                  xs: "0.0437rem",
+                                  md: "0.0437rem",
+                                },
+                                textAlign: getAlign(component.content?.text),
+                              }}
+                            >
+                              {renderSlate(component.content?.text || [])}
+                            </Typography>
+                          );
+                        }
+                        if (component.type === "cta") {
+                          const noFollow = !!component.content?.noFollow;
+                          const link = component.content?.buttonLink || "#";
+                          const buttonText =
+                            component.content?.buttonText || "Learn more";
+                          return (
+                            <Box
+                              key={component.id}
+                              my={4}
+                              sx={{ p: 2, bgcolor: "#f7f9fc", borderRadius: 2 }}
+                            >
+                              {component.content?.ctaText && (
+                                <Typography variant="subtitle1" sx={{ mb: 2 }}>
+                                  {component.content.ctaText}
+                                </Typography>
+                              )}
+                              <a
+                                href={link}
+                                target="_blank"
+                                rel={
+                                  noFollow
+                                    ? "nofollow noopener noreferrer"
+                                    : "noopener noreferrer"
+                                }
+                                style={{
+                                  display: "inline-block",
+                                  background: "#BF0603",
+                                  color: "#fff",
+                                  padding: "8px 16px",
+                                  borderRadius: 6,
+                                  textDecoration: "none",
+                                }}
+                              >
+                                {buttonText}
+                              </a>
+                            </Box>
+                          );
+                        }
+                        if (component.type === "imageVideo") {
+                          const raw =
+                            component.content?.imagePath ||
+                            component.content?.url ||
+                            component.content?.file;
+                          const str =
+                            typeof raw === "string"
+                              ? raw
+                              : (raw && raw.path) || "";
+                          if (!str) return null;
+                          const normalized = str.startsWith("")
+                            ? str
+                            : `uploads/${str.replace(/^\//, "")}`;
+                          const src = /^https?:\/\//i.test(str)
+                            ? str
+                            : `${IMAGE_BASE_URL}/${normalized.replace(
+                              /^\//,
+                              ""
+                            )}`;
+                          return (
+                            <Box key={component.id || `img-${idx}`} my={4}>
+                              <img
+                                src={src}
+                                alt={component.content?.description || "Image"}
+                                style={{
+                                  width: "100%",
+                                  height: "auto",
+                                  borderRadius: 8,
+                                }}
+                              />
+                            </Box>
+                          );
+                        }
+                        return null;
+                      })}
+                    </div>
+                  ))}
+
+              {/* FAQ Section */}
+              {Array.isArray(blog.content?.faqs?.items) &&
+                blog.content.faqs.items.length > 0 && (
+                  <Box sx={{ padding: "2%", borderRadius: "12px" }}>
+                    <BlogFaq
+                      faqdata={blog.content.faqs.items.map((f) => ({
+                        question: f.question ?? "",
+                        answer: f.answer ?? "",
+                      }))}
+                    />
+                  </Box>
+                )}
+
+              {/* {Array.isArray(blog.content?.tags) &&
+                blog.content.tags.length > 0 && (
+                  <>
+                    <Typography variant="h6" gutterBottom fontWeight={"bold"}>
+                      Tags:
+                    </Typography>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+                      {blog.content.tags.map((tag, index) => (
+                        <Chip key={index} icon={<Label />} label={tag} />
+                      ))}
+                    </div>
+                  </>
+                )} */}
             </div>
-          ))}
+          </Grid>
 
-          {/* FAQ Section */}
-          {blog?.faqs?.some(
-            (faq) => faq.question.trim() && faq.answer.trim()
-          ) && (
-            <Box sx={{ padding: "2%", borderRadius: "12px" }}>
-              <BlogFaq faqdata={blog.faqs} />
+          {/* Sidebar Column */}
+          <Grid item xs={12} md={4}>
+            <Box sx={{ position: "sticky", top: "20px" }}>
+              <TableOfContents
+                headings={blog.content?.headingsAndImages || []}
+              />
+              <ContactForm />
             </Box>
-          )}
-
-          <Typography variant="h6" gutterBottom fontWeight={"bold"}>
-            Tags:
-          </Typography>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-            {blog.tags.map((tag, index) => (
-              <Chip key={index} icon={<Label />} label={tag} />
-            ))}
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       </Container>
       <Footer />
     </div>

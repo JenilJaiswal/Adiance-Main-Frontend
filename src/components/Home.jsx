@@ -74,25 +74,77 @@ function Home() {
     image: "https://www.adiance.com/images/Logo-241x47-1.png",
   };
 
+  const WebpageSchema = {"@context":"https://schema.org","@type":"WebPage","name":"AI CCTV Camera & Robotic Arm OEM-ODM Manufacturer - Adiance","description":"Leading OEM-ODM manufacturer of AI CCTV cameras & robotic arms. Adiance Technologies powers smart security and automation with innovation & precision.","url":"https://www.adiance.com/","datePublished":"2003-01-07","dateModified":"2025-09-15","publisher":{"@type":"Organization","name":"Adiance Technologies","url":"https://www.adiance.com/","logo":{"@type":"ImageObject","url":"https://www.adiance.com/images/Logo-241x47-1.png","width":205,"height":40},"sameAs":["https://www.facebook.com/adiancetechnologies/","https://www.instagram.com/adiancetech/","https://www.linkedin.com/company/adiancetechnologies/","https://x.com/adiancetech","https://www.youtube.com/@AdianceTechnologies"]},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.adiance.com/images/SCameraPageOG.jpg","width":1512,"height":800,"caption":"AI CCTV & Robotic Arm OEM-ODM Manufecturer"},"inLanguage":"en-US"}
+
   const location = useLocation(); // Get the current route
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
 
   return (
     <div>
-      <Helmet>
-        <title>Manufacturing & AI Innovation - Adiance Technologies</title>
+     <Helmet>
+        <title>AI CCTV Camera & Robotic Arm OEM-ODM Manufacturer - Adiance</title>
         <meta
           name="description"
-          content="Advanced solutions in Drone tech,Robotic Arms, AI CCTV, PCB, SMT, OEM & ODM services—innovation for security, automation, and manufacturing excellence."
+          content="Leading OEM-ODM manufacturer of AI CCTV cameras & robotic arms. Adiance Technologies powers smart security and automation with innovation & precision."
         />
         <meta
           name="google-site-verification"
           content="ToZv5ontdwBZWArKbClqliVv4Zzduzs5-CbhZxgxaE4"
         />
         <link rel="canonical" href={canonicalUrl} />
+
+        {/* Robots Meta Variants */}
+        <meta name="robots" content="index, follow" />
+        {/* <meta name="robots" content="index, nofollow" /> */}
+        {/* <meta name="robots" content="noindex, follow" /> */}
+        {/* <meta name="robots" content="noindex, nofollow" /> */}
+
+        {/* Open Graph Tags */}
+        <meta
+          property="og:title"
+          content="AI CCTV Camera & Robotic Arm OEM-ODM Manufacturer - Adiance"
+        />
+        <meta
+          property="og:description"
+          content="Leading OEM-ODM manufacturer of AI CCTV cameras & robotic arms. Adiance Technologies powers smart security and automation with innovation & precision."
+        />
+        <meta
+          property="og:image"
+          content="https://www.adiance.com/images/SCameraPageOG.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
+        <meta
+          name="twitter:title"
+          content="AI CCTV Camera & Robotic Arm OEM-ODM Manufacturer - Adiance"
+        />
+        <meta
+          name="twitter:description"
+          content="Leading OEM-ODM manufacturer of AI CCTV cameras & robotic arms."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.adiance.com/images/SCameraPageOG.jpg"
+        />
+        <meta name="twitter:url" content={canonicalUrl} />
+
+        {/* Other Essentials */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
+
         {/* Organization Schema */}
         <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
+        </script>
+        {/* WebPage Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(WebpageSchema)}
         </script>
         {/* LocalBusiness Schema */}
         <script type="application/ld+json">
@@ -107,7 +159,7 @@ function Home() {
       {/* <ProductSlider /> */}
       <IconsWithTitles />
       <MidSection />
-      <AutoplayCarousel />
+      {/* <AutoplayCarousel /> */}
       <Footer />
     </div>
   );

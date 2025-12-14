@@ -1,167 +1,225 @@
-import React, { useState } from "react";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Snackbar from "@mui/material/Snackbar";
-import MuiAlert from "@mui/material/Alert";
+import React, { useState } from 'react';
+import { 
+  Box, 
+  Typography, 
+  TextField, 
+  Button, 
+  Alert,
+  CircularProgress 
+} from '@mui/material';
+import { sendContactEmail } from '../AdianceAdmin/api/blogs';
 
 const ContactForm = () => {
-  const [company, setCompany] = useState("");
-  const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [userType, setUserType] = useState("");
-  const [country, setCountry] = useState("");
-  const [message, setMessage] = useState("");
-  const [open, setOpen] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleClose = () => {
-    setOpen(false);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
-    const res = await fetch("https://backend.adiance.com:443/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        company,
-        email,
-        mobile,
-        userType,
-        country,
-        message,
-      }),
-    });
-
-    if (res.ok) {
-      setOpen(true);
-      setSuccess(true);
-      setCompany("");
-      setEmail("");
-      setMobile("");
-      setUserType("");
-      setCountry("");
-      setMessage("");
-    } else {
-      setOpen(true);
-      setSuccess(false);
+    try {
+      await sendContactEmail(formData);
+      setSubmitStatus('success');
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <div style={{ margin: "5% 10%" }}>
-      <Typography variant="h4" gutterBottom align="center">
-        Share us your Requirements
-      </Typography>
+    <Box
+      sx={{
+        backgroundColor: '#f8f9fa',
+        borderRadius: '12px',
+        padding: '20px',
+        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+        maxHeight: '320px',
+        overflowY: 'auto',
+        pr: 1,
+        '&::-webkit-scrollbar': { width: '6px' },
+        '&::-webkit-scrollbar-thumb': {
+          backgroundColor: '#c7c7c7',
+          borderRadius: '8px',
+        },
+        '&::-webkit-scrollbar-track': { backgroundColor: 'transparent' },
+      }}
+      justifyContent="center"
+      alignItems="center"
+    >
       <Typography
-        variant="subtitle1"
-        gutterBottom
-        align="center"
-        style={{ marginBottom: "5%" }}
+        variant="h6"
+        sx={{
+          fontWeight: 'bold',
+          fontSize: '18px',
+          color: '#1a1a1a',
+          marginBottom: '20px',
+          fontFamily: 'Arial, sans-serif',
+        }}
       >
-        and we will get back to you.
+        Send Us a{' '}
+        <span style={{ color: '#BF0603' }}>Message</span>
       </Typography>
-      <form onSubmit={handleSubmit}>
-        <Grid container spacing={3} justifyContent="center">
-          <Grid item xs={12} md={6}>
-            <TextField
-              label="Company"
-              variant="outlined"
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
-              fullWidth
-              required
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField
-              label="Email"
-              variant="outlined"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              fullWidth
-              required
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField
-              label="Mobile"
-              variant="outlined"
-              value={mobile}
-              onChange={(e) => setMobile(e.target.value)}
-              fullWidth
-              // required
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField
-              label="Country"
-              variant="outlined"
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-              fullWidth
-              required
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <FormControl fullWidth>
-              <InputLabel>User Type</InputLabel>
-              <Select
-                value={userType}
-                onChange={(e) => setUserType(e.target.value)}
-                label="User Type"
-                required
-              >
-                <MenuItem value="End-User">End-User</MenuItem>
-                <MenuItem value="Consultant">Consultant</MenuItem>
-                <MenuItem value="Distributor">Distributor</MenuItem>
-                <MenuItem value="Installer">Installer</MenuItem>
-                <MenuItem value="Reseller">Reseller</MenuItem>
-                <MenuItem value="System Integrator">System Integrator</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
 
-          <Grid item xs={12} md={6}>
-            <TextField
-              label="What products or service are you looking for?"
-              variant="outlined"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              multiline
-              fullWidth
-              required
-            />
-          </Grid>
-          <Grid item xs={12} align="center">
-            <Button type="submit" variant="contained" color="primary">
-              Submit
-            </Button>
-          </Grid>
-        </Grid>
-      </form>
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <MuiAlert
-          elevation={6}
-          variant="filled"
-          onClose={handleClose}
-          severity={success ? "success" : "error"}
+      {submitStatus === 'success' && (
+        <Alert severity="success" sx={{ marginBottom: '16px' }}>
+          Thank you! Your message has been sent successfully.
+        </Alert>
+      )}
+
+      {submitStatus === 'error' && (
+        <Alert severity="error" sx={{ marginBottom: '16px' }}>
+          Sorry, there was an error sending your message. Please try again.
+        </Alert>
+      )}
+
+      <Box component="form" onSubmit={handleSubmit}>
+        <TextField
+          fullWidth
+          name="fullName"
+          label="Full name"
+          value={formData.fullName}
+          onChange={handleInputChange}
+          required
+          sx={{
+            marginBottom: '16px',
+            '& .MuiOutlinedInput-root': {
+              backgroundColor: '#ffffff',
+              borderRadius: '8px',
+            },
+            '& .MuiInputLabel-root': {
+              fontSize: '14px',
+            },
+            '& .MuiOutlinedInput-input': {
+              fontSize: '14px',
+              padding: '12px 14px',
+            },
+          }}
+        />
+
+        <TextField
+          fullWidth
+          name="email"
+          type="email"
+          label="Email Address"
+          value={formData.email}
+          onChange={handleInputChange}
+          required
+          sx={{
+            marginBottom: '16px',
+            '& .MuiOutlinedInput-root': {
+              backgroundColor: '#ffffff',
+              borderRadius: '8px',
+            },
+            '& .MuiInputLabel-root': {
+              fontSize: '14px',
+            },
+            '& .MuiOutlinedInput-input': {
+              fontSize: '14px',
+              padding: '12px 14px',
+            },
+          }}
+        />
+
+        <TextField
+          fullWidth
+          name="phone"
+          label="Phone Number"
+          value={formData.phone}
+          onChange={handleInputChange}
+          required
+          sx={{
+            marginBottom: '16px',
+            '& .MuiOutlinedInput-root': {
+              backgroundColor: '#ffffff',
+              borderRadius: '8px',
+            },
+            '& .MuiInputLabel-root': {
+              fontSize: '14px',
+            },
+            '& .MuiOutlinedInput-input': {
+              fontSize: '14px',
+              padding: '12px 14px',
+            },
+          }}
+        />
+
+        <TextField
+          fullWidth
+          name="message"
+          label="Write your message"
+          value={formData.message}
+          onChange={handleInputChange}
+          multiline
+          rows={4}
+          sx={{
+            marginBottom: '20px',
+            '& .MuiOutlinedInput-root': {
+              backgroundColor: '#ffffff',
+              borderRadius: '8px',
+            },
+            '& .MuiInputLabel-root': {
+              fontSize: '14px',
+            },
+            '& .MuiOutlinedInput-input': {
+              fontSize: '14px',
+              padding: '12px 14px',
+            },
+          }}
+        />
+
+        <Button
+          type="submit"
+          // fullWidth
+          variant="contained"
+          justifyContent="center"
+          alignItems="center"
+          disabled={isSubmitting}
+          sx={{
+            backgroundColor: '#BF0603',
+            color: '#ffffff',
+            padding: '12px 24px',
+            fontSize: '14px',
+            fontWeight: '600',
+            borderRadius: '8px',
+            textTransform: 'none',
+            '&:hover': {
+              backgroundColor: '#850606ff',
+            },
+            '&:disabled': {
+              backgroundColor: '#cccccc',
+            },
+          }}
         >
-          {success
-            ? "Email sent successfully"
-            : "Failed to send email. Please try again later."}
-        </MuiAlert>
-      </Snackbar>
-    </div>
+          {isSubmitting ? (
+            <CircularProgress size={20} color="inherit" />
+          ) : (
+            'Submit'
+          )}
+        </Button>
+      </Box>
+    </Box>
   );
 };
 

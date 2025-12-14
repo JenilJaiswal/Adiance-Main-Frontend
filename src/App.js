@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import routes from "./components/routes";
 import { useEffect } from "react";
+import EventMainDash from "./components/Events/EventMainDash";
 
 const CombinedRedirect = () => {
   const location = useLocation();
@@ -21,6 +22,12 @@ const CombinedRedirect = () => {
     // Redirect specific path
     if (targetPath === "/anrpcamera") {
       navigate("/anpr-camera", { replace: true });
+      return;
+    }
+
+    // Redirect short S Series path to full slug
+    if (targetPath === "/s-series") {
+      navigate("/5g-edge-ai-camera-s-series-surveillance", { replace: true });
       return;
     }
 
@@ -43,13 +50,16 @@ const CombinedRedirect = () => {
   return null;
 };
 
+
+
 function App() {
   return (
     <Router>
+      {/* <EventMainDash /> */}
       <CombinedRedirect />
       <Routes>
         {routes.map(({ path, element }, index) => {
-          console.log("Checking route:", path);
+          // console.log("Checking route:", path);
           return <Route key={index} path={path} element={element} replace />;
         })}
       </Routes>

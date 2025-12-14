@@ -17,21 +17,21 @@ import { useLocation } from "react-router-dom";
 
 const Feedback = () => {
   const [company, setCompany] = useState("");
-  const [name, setName] = useState("");
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
   // const [skype, setSkype] = useState("NA");
   const [country, setCountry] = useState("");
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
-  const [open, setOpen] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const location = useLocation(); // Get the current route
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
 
   const handleClose = () => {
-    setOpen(false);
+    setSnackbarOpen(false);
   };
 
   const handleSubmit = async (e) => {
@@ -42,8 +42,8 @@ const Feedback = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        name,
+        body: JSON.stringify({
+        name: userName, // eslint-disable-line no-restricted-globals
         company,
         email,
         mobile,
@@ -55,7 +55,7 @@ const Feedback = () => {
     });
 
     if (res.ok) {
-      setOpen(true);
+      setSnackbarOpen(true);
       setSuccess(true);
       setCompany("");
       setEmail("");
@@ -64,9 +64,9 @@ const Feedback = () => {
       setMessage("");
       // setSkype("");
       setSubject("");
-      setName("");
+      setUserName("");
     } else {
-      setOpen(true);
+      setSnackbarOpen(true);
       setSuccess(false);
     }
   };
@@ -131,8 +131,8 @@ const Feedback = () => {
               <TextField
                 label="Name"
                 variant="outlined"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
                 fullWidth
                 required
               />
@@ -220,7 +220,7 @@ const Feedback = () => {
             </Grid>
           </Grid>
         </form>
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleClose}>
           <MuiAlert
             elevation={6}
             variant="filled"

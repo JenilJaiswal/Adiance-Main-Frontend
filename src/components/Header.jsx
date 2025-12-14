@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Topbar from "./Topbar";
-import MidBar from "./MidBar";
+// import Topbar from "./Topbar";
+// import MidBar from "./MidBar";
 import ResponsiveNavbar from "./ResponsiveNavbar";
 
 const Header = () => {
