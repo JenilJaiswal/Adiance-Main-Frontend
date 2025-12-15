@@ -20,8 +20,11 @@ import {
   MenuItem,
 } from "@mui/material";
 import { CheckCircleOutline, ErrorOutline } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
+
 
 const DealersLandingPageForm = () => {
+  const navigate = useNavigate();
   const states = [
     "Andhra Pradesh",
     "Arunachal Pradesh",
@@ -106,19 +109,7 @@ const DealersLandingPageForm = () => {
 
       const data = await response.json();
       if (response.ok) {
-        setPopupMessage(data.message);
-        setFormData({
-          fullName: "",
-          phone: "",
-          interest: "",
-          email: "",
-          city: "",
-          companyName: "",
-          gstNo: "",
-          // address: "",
-          message: "",
-          termsAccepted: false,
-        });
+        navigate("/partner-thank-you");
       } else {
         setPopupMessage(data.error || "Something went wrong.");
       }

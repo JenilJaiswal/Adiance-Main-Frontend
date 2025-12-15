@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { 
-  Box, 
-  Typography, 
-  TextField, 
-  Button, 
+import { useNavigate } from 'react-router-dom';
+import {
+  Box,
+  Typography,
+  TextField,
+  Button,
   Alert,
-  CircularProgress 
+  CircularProgress
 } from '@mui/material';
 import { sendContactEmail } from '../AdianceAdmin/api/blogs';
 
-const ContactForm = () => {
+const ContactForm = ({ redirectUrl = "/thank-you" }) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -34,7 +36,8 @@ const ContactForm = () => {
 
     try {
       await sendContactEmail(formData);
-      setSubmitStatus('success');
+      navigate(redirectUrl);
+      // setSubmitStatus('success');
       setFormData({
         fullName: '',
         email: '',

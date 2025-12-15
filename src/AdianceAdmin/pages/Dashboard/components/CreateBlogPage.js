@@ -22,6 +22,7 @@ import {
   Chip,
   Snackbar,
   Alert,
+  CircularProgress,
 } from "@mui/material";
 import {
   Upload as UploadIcon,
@@ -108,6 +109,7 @@ const createNewComponent = (type) => {
 const CreateBlogPage = () => {
   const [activeView, setActiveView] = useState("create");
   const [editingBlog, setEditingBlog] = useState(null);
+  const [isMinorUpdate, setIsMinorUpdate] = useState(false);
 
   const handleEditBlog = (blog) => {
     setEditingBlog(blog);
@@ -147,6 +149,25 @@ const CreateBlogPage = () => {
                   : "Edit/delete your existing blogs"}
               </Typography>
             </Grid>
+            {editingBlog && activeView === "create" && (
+              <Grid item sx={{ ml: 2 }}>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={isMinorUpdate}
+                      onChange={(e) => setIsMinorUpdate(e.target.checked)}
+                      sx={{
+                        color: "#f61818ff",
+                        "&.Mui-checked": {
+                          color: "#f61818ff",
+                        },
+                      }}
+                    />
+                  }
+                  label="Minor update (keep previous date)"
+                />
+              </Grid>
+            )}
             <Grid item>
               <Box
                 sx={{
@@ -201,7 +222,12 @@ const CreateBlogPage = () => {
           </Grid>
         </Box>
         {activeView === "create" ? (
-          <CreateBlogForm key={editingBlog?._id || "new"} blog={editingBlog} />
+          <CreateBlogForm
+            key={editingBlog?._id || "new"}
+            blog={editingBlog}
+            isMinorUpdate={isMinorUpdate}
+            onBlogSave={handleEditBlog}
+          />
         ) : (
           <BlogListPage onEditBlog={handleEditBlog} />
         )}
@@ -210,7 +236,7 @@ const CreateBlogPage = () => {
   );
 };
 
-const CreateBlogForm = ({ blog }) => {
+const CreateBlogForm = ({ blog, isMinorUpdate, onBlogSave }) => {
   const [headingsAndImages, setHeadingsAndImages] = useState([]);
   const [faqs, setFaqs] = useState([]);
   const [schemas, setSchemas] = useState([]);
@@ -221,6 +247,7 @@ const CreateBlogForm = ({ blog }) => {
   const [isAddComponentModalOpen, setIsAddComponentModalOpen] = useState(false);
   const [addComponentIndex, setAddComponentIndex] = useState(null);
   const [mainImagePath, setMainImagePath] = useState("");
+  const [submittingAction, setSubmittingAction] = useState(null);
 
   // Snackbar state for notifications
   const [snackbar, setSnackbar] = useState({
@@ -450,11 +477,15 @@ const CreateBlogForm = ({ blog }) => {
         })),
       },
       status: newStatus,
+      isMinorUpdate: !!isMinorUpdate, // Pass simple boolean
     };
     // console.log("Submitting payload:", payload);
+    setSubmittingAction(newStatus);
     try {
+      let savedBlog = null;
       if (blog && blog._id) {
-        await apiUpdateBlog(blog._id, payload);
+        const response = await apiUpdateBlog(blog._id, payload);
+        savedBlog = response && response.data ? response.data : response;
         showSnackbar(
           newStatus === "published"
             ? "Blog updated and published successfully!"
@@ -462,7 +493,8 @@ const CreateBlogForm = ({ blog }) => {
           "success"
         );
       } else {
-        await apiCreateBlog(payload);
+        const response = await apiCreateBlog(payload);
+        savedBlog = response && response.data ? response.data : response;
         showSnackbar(
           newStatus === "published"
             ? "Blog created and published successfully!"
@@ -470,8 +502,22 @@ const CreateBlogForm = ({ blog }) => {
           "success"
         );
       }
+
+      if (savedBlog && savedBlog.metadata?.urlWords) {
+        // Redirect to new tab
+        // Assuming relative path works for SPA, otherwise construct full URL
+        window.open(`/blog/${savedBlog.metadata.urlWords}`, "_blank");
+        
+        // Update parent state to prevent duplicate creation
+        if (onBlogSave) {
+          onBlogSave(savedBlog);
+        }
+      }
+
     } catch (err) {
       showSnackbar(`Failed to save: ${err?.message || err}`, "error");
+    } finally {
+      setSubmittingAction(null);
     }
   };
 
@@ -665,8 +711,16 @@ const CreateBlogForm = ({ blog }) => {
             color="success"
             size="large"
             fullWidth
+            disabled={!!submittingAction}
           >
-            Save Draft
+            {submittingAction === "draft" ? (
+              <>
+                <CircularProgress size={20} color="inherit" sx={{ mr: 1 }} />
+                Drafting Blog...
+              </>
+            ) : (
+              "Save Draft"
+            )}
           </Button>
         </Stack>
         <Button
@@ -676,8 +730,18 @@ const CreateBlogForm = ({ blog }) => {
           onClick={() => handleSubmit("published")}
           variant="contained"
           size="large"
+          disabled={!!submittingAction}
         >
-          {blog ? "Publish Updated Blog" : "Publish Blog"}
+          {submittingAction === "published" ? (
+            <>
+              <CircularProgress size={20} color="inherit" sx={{ mr: 1 }} />
+              {blog ? "Updating Blog..." : "Publishing Blog..."}
+            </>
+          ) : blog ? (
+            "Publish Updated Blog"
+          ) : (
+            "Publish Blog"
+          )}
         </Button>
       </Grid>
 

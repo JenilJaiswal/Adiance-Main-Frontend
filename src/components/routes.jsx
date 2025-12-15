@@ -62,6 +62,8 @@ const routes = [
   { path: "/contact", element: <ContactUs /> },
   // { path: "/partner-with-us", element: <PartnerWithUsPage /> },
   { path: "/thank-you", element: <ThankYouPage /> },
+  { path: "/blog-thank-you", element: <ThankYouPage /> },
+  { path: "/partner-thank-you", element: <ThankYouPage /> },
   // { path: "/buyback-cctv-camera-offer", element: <BuyBackOfferPage /> },
 
   // Product routes

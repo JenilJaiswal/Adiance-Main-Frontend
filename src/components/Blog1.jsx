@@ -604,7 +604,7 @@ const Blog1 = () => {
               <TableOfContents
                 headings={blog.content?.headingsAndImages || []}
               />
-              <ContactForm />
+              <ContactForm redirectUrl="/blog-thank-you" />
             </Box>
           </Grid>
         </Grid>

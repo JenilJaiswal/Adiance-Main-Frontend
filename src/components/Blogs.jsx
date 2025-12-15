@@ -130,7 +130,12 @@ const Blogs = () => {
           <p>Loading...</p>
         ) : pageBlogs.length > 0 ? (
           pageBlogs.map((blog) => (
-            <div className="innovation-item" key={blog._id}>
+            <Link
+              to={`/blog/${blog.metadata?.urlWords || "#"}`}
+              className="innovation-item"
+              key={blog._id}
+              style={{ textDecoration: "none", color: "inherit", display: "block" }}
+            >
               <img
                 src={`${IMAGE_BASE_URL}/${String(
                   blog.content?.mainImage || ""
@@ -154,15 +159,12 @@ const Blogs = () => {
                       {blog.content?.blogAuthor}
                     </Typography>
                   </Box>
-                  <Link
-                    to={`/blog/${blog.metadata?.urlWords || "#"}`}
-                    className="read-more-link"
-                  >
+                  <span className="read-more-link">
                     Read More
-                  </Link>
+                  </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))
         ) : (
           <Box justifyContent="center" alignItems="center" display="flex" m={5}>
