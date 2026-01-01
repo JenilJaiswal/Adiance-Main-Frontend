@@ -355,7 +355,17 @@ const CreateBlogForm = ({ blog, isMinorUpdate, onBlogSave }) => {
     );
 
     // Set schemas and tags
-    setSchemas(vmContent.schemas || []);
+    setSchemas(
+      (vmContent.schemas || []).map((s) => ({
+        ...s,
+        content: {
+          schemaData:
+            typeof s.content === "string"
+              ? s.content
+              : s.content?.schemaData || "",
+        },
+      }))
+    );
     setTags(vmContent.tags || []);
   }, [blog]);
 
@@ -1138,9 +1148,10 @@ const CreateBlogForm = ({ blog, isMinorUpdate, onBlogSave }) => {
                 <TextField
                   placeholder="Enter JSON schema"
                   multiline
-                  rows={6}
+                  // rows={13}
+                  height="auto"
                   fullWidth
-                  value={component.content.schemaData || ""}
+                  value={component.content?.schemaData || ""}
                   onChange={(e) =>
                     updateComponentContent(
                       component.id,

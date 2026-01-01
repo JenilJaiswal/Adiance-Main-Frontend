@@ -8,6 +8,7 @@ import AutoplayCarousel from "./AutoplayCarousel";
 import InnovationHome from "./InnovationHome";
 import OurOfferings from "./OurOfferings";
 import WhatWeDo from "./WhatWeDo";
+import Certifications from "./Certifications";
 
 const MidSection = () => {
   return (
@@ -51,11 +52,12 @@ const MidSection = () => {
         </Grid>
       </div> */}
       <WhatWeDo />
-      <AutoplayCarousel/>
+      <AutoplayCarousel />
       <InnovationHome />
-      <AboutSlider />
-      <Adv />
-      <OurOfferings />
+      {/* <AboutSlider /> */}
+      {/* <Adv /> */}
+      {/* <Certifications /> */}
+      {/* <OurOfferings /> */}
       {/* <div>
         <ImageGallery />
       </div> */}

@@ -222,6 +222,7 @@ const Blog1 = () => {
     <div>
       {" "}
       {/* Prevent horizontal scroll */}
+
       <Helmet>
         <title>
           {blog.content?.metaTitle ||
@@ -278,15 +279,25 @@ const Blog1 = () => {
         />
         <meta name="twitter:image" content={mainImageOg} />
         <link rel="canonical" href={`${currentUrl}`} />
-        {Array.isArray(blog.content?.schemas) &&
-          blog.content.schemas.map((item, index) => (
-            <script
-              key={index}
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: item.content?.schemaData }}
-            />
-          ))}
       </Helmet>
+      <script>
+        {Array.isArray(blog.content?.schemas) &&
+          blog.content.schemas.map((item, index) => {
+            if (!item.content) return null;
+            return (
+              <script
+                key={index}
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    typeof item.content === "string"
+                      ? item.content
+                      : item.content?.schemaData || "",
+                }}
+              />
+            );
+          })}
+      </script>
       <Header />
       <Container maxWidth="xl">
         <Grid

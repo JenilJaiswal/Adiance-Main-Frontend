@@ -188,9 +188,9 @@ const routes = [
 
   // Miscellaneous
   { path: "/autoplay", element: <AutoplayCarousel /> },
-  { path: "/sustainability", element: <Sustainability /> },
-  { path: "/360-approach", element: <_360Approach /> },
-  { path: "/future-and-growth", element: <FutureGrowth /> },
+  // { path: "/sustainability", element: <Sustainability /> },
+  // { path: "/360-approach", element: <_360Approach /> },
+  // { path: "/future-and-growth", element: <FutureGrowth /> },
   { path: "/compliance", element: <Compliance /> },
   { path: "/cyber-security", element: <CyberSecurity /> },
   { path: "/manufacturing", element: <Manufacturing /> },

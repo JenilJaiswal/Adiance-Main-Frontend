@@ -256,18 +256,18 @@ const Footer = () => {
             <li>
               <RouterLink to="/compliance">Compliance</RouterLink>
             </li>
-            <li>
+            {/* <li>
               <RouterLink to="/sustainability">Sustainability</RouterLink>
-            </li>
+            </li> */}
             {/* <li>
               <RouterLink to="#">Quality</RouterLink>
             </li> */}
-            <li>
+            {/* <li>
               <RouterLink to="/future-and-growth">Future and Growth</RouterLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <RouterLink to="/360-approach">360 Approach</RouterLink>
-            </li>
+            </li> */}
           </ul>
         </div>
 

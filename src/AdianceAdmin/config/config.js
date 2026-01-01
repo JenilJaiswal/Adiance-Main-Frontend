@@ -1,7 +1,8 @@
 const config = {
   // Change this URL based on your deployment environment
 
-  BACKEND_URL: "https://backend.adiance.com:443/images" || "http://localhost:5000/uploads",
+  BACKEND_URL:
+    "https://backend.adiance.com:443/images" || "http://localhost:5000/uploads",
 };
 
 export const getImageUrl = (imagePath) => {

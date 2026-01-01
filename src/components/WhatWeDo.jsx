@@ -7,7 +7,7 @@ const WhatWeDo = () => {
   const innovationItems = [
     {
       id: 1,
-      title: "Product Engineering",
+      title: "20+ Years Engineering Expertise",
       description:
         "Adiance is transitioning from an Original Equipment Manufacturer (OEM) to a hybrid OEM & Original Design Manufacturer (ODM), focusing on customized Printed Circuit Boards for surveillance cameras and electronic devices, enhancing efficiency and reducing lead times.",
       imageUrl: "/images/wwd1.png",
@@ -15,20 +15,52 @@ const WhatWeDo = () => {
     },
     {
       id: 2,
-      title: "Manufacturing",
+      title: "Non-Chinese SoC CCTV Manufacturer",
       description:
         "Adiance's NVR-free approach and cloud storage offer cost-effective, scalable, and secure solutions for modern surveillance environments. This eliminates on-premises hardware, simplifies setup, and enhances data security, allowing seamless integration with other services.",
       imageUrl: "/images/wwd2.png",
       url: "/manufacturing"
     },
     {
-      id: 4,
-      title: "Cloud and Application",
+      id: 3,
+      title: "STQC, ONVIF, IP Compliant",
       description:
         "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
       imageUrl: "/images/wwd3.png",
       url: "https://www.adiance.com/cloud-application"
     },
+    {
+      id: 4,
+      title: "In-House R&D & Automated Production Lines",
+      description:
+        "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
+      imageUrl: "/images/wwd3.png",
+      url: "https://www.adiance.com/cloud-application"
+    },
+    // {
+    //   id: 1,
+    //   title: "Product Engineering",
+    //   description:
+    //     "Adiance is transitioning from an Original Equipment Manufacturer (OEM) to a hybrid OEM & Original Design Manufacturer (ODM), focusing on customized Printed Circuit Boards for surveillance cameras and electronic devices, enhancing efficiency and reducing lead times.",
+    //   imageUrl: "/images/wwd1.png",
+    //   url: "/product-engineering"
+    // },
+    // {
+    //   id: 2,
+    //   title: "Manufacturing",
+    //   description:
+    //     "Adiance's NVR-free approach and cloud storage offer cost-effective, scalable, and secure solutions for modern surveillance environments. This eliminates on-premises hardware, simplifies setup, and enhances data security, allowing seamless integration with other services.",
+    //   imageUrl: "/images/wwd2.png",
+    //   url: "/manufacturing"
+    // },
+    // {
+    //   id: 4,
+    //   title: "Cloud and Application",
+    //   description:
+    //     "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
+    //   imageUrl: "/images/wwd3.png",
+    //   url: "https://www.adiance.com/cloud-application"
+    // },
     // {
     //   id: 5,
     //   title: " Backward Integration",
@@ -70,8 +102,6 @@ const WhatWeDo = () => {
 
   return (
     <>
-
-
       <Grid
         container
         spacing={3}
@@ -94,14 +124,16 @@ const WhatWeDo = () => {
               marginBottom: "5%",
             }}
           >
-            Adiance Technologies’ OEM-ODM Manufacturing Services Expertise
+            India’s Trusted CCTV Camera Manufacturing Company
           </h2>
           <Typography variant="body1" align="justify">
-            At Adiance Technologies, we take pride in being an Indian OEM-ODM manufacturer with over 22+ years of experience in the field of security and automation. Along with advanced AI CCTV cameras and robotic arms, we also provide in-house PCB manufacturing for CCTV systems and robotics, ensuring end-to-end quality and reliability. Powered by world-class SMT manufacturing lines and a passionate R&D team, we deliver solutions that meet global standards while carrying the trust of “Made in India” excellence. With a growing family of 2500+ happy clients across India and worldwide, Adiance continues to empower businesses with smart, scalable and future-ready technologies. Our commitment to innovation, precision and customer satisfaction drives us to shape a safer and smarter tomorrow.
+            Adiance Technologies is India’s leading AI CCTV manufacturer, delivering fully engineered, designed, and Made-in-India surveillance hardware for OEM, ODM, and JDM partners. <br /><br />
+            With 20+ years of engineering expertise, advanced manufacturing infrastructure, and non-Chinese SoC availability, we build high-performance AI-enabled CCTV cameras trusted by global brands, government bodies, and enterprises.<br /><br />
+            Our in-house R&D, strict quality processes, and STQC-compliant ecosystem ensure world-class reliability for partners across India, the Middle East, Europe, Africa, and Asia-Pacific.
           </Typography>
         </Grid>
       </Grid>
-      <div className="innovation-container wave-animation">
+      {/* <div className="innovation-container wave-animation">
         {displayItems.map((item) => (
           <Link to={item.url}>
             <div key={item.id} className="innovation-item">
@@ -110,10 +142,10 @@ const WhatWeDo = () => {
                 alt={item.title}
                 className="innovation-image"
               />
-              {/* <div className="item-details">
-              <div className="item-title">{item.title}</div>
-              <div className="item-description1">{item.description}</div>
-            </div> */}
+              <div className="item-details">
+                <div className="item-title">{item.title}</div>
+                <div className="item-description1">{item.description}</div>
+              </div>
               <h3 className="item-title-overlay">{item.title}</h3>
             </div>
           </Link>
@@ -228,7 +260,7 @@ const WhatWeDo = () => {
           //   }
           }
         `}</style>
-      </div>
+      </div> */}
     </>
   );
 };

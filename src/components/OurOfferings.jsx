@@ -5,48 +5,75 @@ const OurOfferings = () => {
   const innovationItems = [
     {
       id: 1,
-      title: "Public Transport",
-
-      imageUrl: "/images/our1.jpg",
-      url: "/public-transport",
+      title: "Retail",
+      imageUrl: "/images/r1.png",
+      url: "#",
     },
     {
       id: 2,
-      title: "Remote Security Surveillance",
-      imageUrl: "/images/our3.png",
-      url: "/remote-security",
+      title: "Smart Cities",
+      imageUrl: "/images/sc1.png",
+      url: "#",
     },
     {
       id: 3,
-      title: "Healthcare",
-      description:
-        "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
-      imageUrl: "/images/our2.jpg",
-      url: "/healthcare",
+      title: "Banking",
+      imageUrl: "/images/b1.png",
+      url: "#",
     },
     {
       id: 4,
-      title: "Public Safety & Security",
-      description:
-        "Our CCTV cameras are integrated with our Video Management System (VMS), enhancing efficiency and scalability through centralized management, real-time monitoring, and advanced analytics, enhancing situational awareness and providing valuable insights.",
-      imageUrl: "/images/ps3.png",
-      url: "public-safety",
+      title: "Manufacturing",
+      imageUrl: "/images/adiance-factory-001.jpg",
+      url: "#",
     },
     {
       id: 5,
-      title: "Traffic Management and Monitoring",
-      description:
-        "Our CCTV cameras are integrated with our Video Management System (VMS), enhancing efficiency and scalability through centralized management, real-time monitoring, and advanced analytics, enhancing situational awareness and providing valuable insights.",
+      title: "Warehouse & Logistics",
       imageUrl: "/images/Traffic Management.png",
-      url: "trafic-management",
+      url: "#",
     },
     {
       id: 6,
+      title: "Automotive",
+      imageUrl: "/images/trafic2.jpg",
+      url: "#",
+    },
+    {
+      id: 7,
+      title: "Home Security",
+      imageUrl: "/images/SmartWifi.png",
+      url: "#",
+    },
+    {
+      id: 8,
+      title: "Transportation",
+      imageUrl: "/images/our1.jpg",
+      url: "#",
+    },
+    {
+      id: 9,
       title: "Education",
-      description:
-        "Our CCTV cameras are integrated with our Video Management System (VMS), enhancing efficiency and scalability through centralized management, real-time monitoring, and advanced analytics, enhancing situational awareness and providing valuable insights.",
       imageUrl: "/images/Education.png",
-      url: "education",
+      url: "#",
+    },
+    {
+      id: 10,
+      title: "Healthcare",
+      imageUrl: "/images/our2.jpg",
+      url: "#",
+    },
+    {
+      id: 11,
+      title: "Hospitality",
+      imageUrl: "/images/ht1.png",
+      url: "#",
+    },
+    {
+      id: 12,
+      title: "Construction",
+      imageUrl: "/images/sus1.png",
+      url: "#",
     },
   ];
 
@@ -57,13 +84,8 @@ const OurOfferings = () => {
       setDisplayItems(innovationItems);
     };
 
-    // Initial check
     handleResize();
-
-    // Event listener for window resize
     window.addEventListener("resize", handleResize);
-
-    // Cleanup function
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -71,107 +93,87 @@ const OurOfferings = () => {
 
   return (
     <>
-      <h2
-        style={{
-          textAlign: "center",
-          fontSize: "36px",
-          marginTop: "5%",
-          marginBottom: "5%",
-        }}
-      >
-      Industries We Serve with AI CCTV Solutions
+      <div style={{ textAlign: "center", marginTop: "5%", marginBottom: "3%" }}>
+        <h2
+          style={{
+            fontSize: "36px",
+            marginBottom: "1%",
+            paddingLeft: "2%",
+            paddingRight: "2%",
+          }}
+        >
+          Trusted CCTV & AI Video Surveillance Solutions Across Industries
+        </h2>
+        <p
+          style={{
+            fontSize: "18px",
+            maxWidth: "1200px",
+            margin: "0 auto",
+            paddingLeft: "2%",
+            paddingRight: "2%",
+            lineHeight: "1.6",
+          }}
+        >
+          As a leading AI cctv camera manufacturer in India, We delivers
+          AI-powered and high-performance CCTV camera solutions - including
+          S-series edge AI cameras, Eco-series security cameras, NVRs, STQC
+          Cloud VMS, Arcis bridge device (ABD) and Robotic automation arms to
+          strengthen security and operational efficiency across sectors.
+        </p>
+      </div>
 
-      </h2>
-      <div className="innovation-container">
+      <div className="oo-container">
         {displayItems.map((item, index) => (
-          <Link to={item.url}>
-            <div
-              key={item.id}
-              className="innovation-item"
-              // style={{
-              //   marginTop:
-              //     index === 0 || index === displayItems.length - 1 ? "20px" : "0",
-              // }}
-            >
+          // <Link to={item.url} key={item.id} style={{ textDecoration: "none" }}>
+            <div className="oo-item">
               <img
                 src={item.imageUrl}
                 alt={item.title}
-                className="innovation-image"
+                className="oo-image"
               />
-              {/* <div className="item-details">
-              <div className="item-title">{item.title}</div>
-              <div className="item-description">{item.description}</div>
-            </div> */}
-              <h3 className="item-title-overlay">{item.title}</h3>
+              <h3 className="oo-title-overlay">{item.title}</h3>
             </div>
-          </Link>
+          // </Link>
         ))}
         <style jsx>{`
-          .innovation-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+          .oo-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
           }
 
-          .innovation-item {
+          .oo-item {
             position: relative;
-            max-width: 325px;
+            width: 100%;
+            height: 250px;
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
           }
 
-          .innovation-item:hover {
+          .oo-item:hover {
             transform: translateY(-5px);
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
           }
 
-          .innovation-image {
-            max-width: 100%;
-            height: auto;
+          .oo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
             border-radius: 8px;
             transition: transform 0.3s;
           }
 
-          .innovation-item:hover .innovation-image {
+          .oo-item:hover .oo-image {
             transform: scale(1.1);
           }
 
-          .item-details {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-            transform: translateY(100%);
-          }
-
-          .innovation-item:hover .item-details {
-            opacity: 1;
-            transform: translateY(0);
-          }
-
-          .item-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 10px;
-          }
-
-          .item-description {
-            font-size: 12px;
-            color: #666;
-          }
-
-          .item-title-overlay {
+          .oo-title-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -188,9 +190,21 @@ const OurOfferings = () => {
             border-bottom-right-radius: 8px;
           }
 
-          @media (min-width: 768px) {
-            .innovation-item {
-              flex-basis: 45%;
+          @media (max-width: 1024px) {
+            .oo-container {
+              grid-template-columns: repeat(3, 1fr);
+            }
+          }
+
+          @media (max-width: 768px) {
+            .oo-container {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+
+          @media (max-width: 480px) {
+            .oo-container {
+              grid-template-columns: 1fr;
             }
           }
         `}</style>

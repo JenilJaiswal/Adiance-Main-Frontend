@@ -22,6 +22,22 @@ import {
   Alert,
 } from "@mui/material";
 
+function Spinner() {
+  return (
+    <span
+      style={{
+        width: "14px",
+        height: "14px",
+        border: "2px solid white",
+        borderTop: "2px solid transparent",
+        borderRadius: "50%",
+        animation: "spin 1s linear infinite",
+        display: "inline-block",
+      }}
+    />
+  );
+}
+
 const ContactZoho = () => {
   const navigate = useNavigate();
 
@@ -79,6 +95,7 @@ const ContactZoho = () => {
 
   // handleSubmit logic is the same, just with Snackbar instead of Toast
   const handleSubmit = async (e) => {
+
     e.preventDefault();
 
     if (
@@ -358,9 +375,16 @@ const ContactZoho = () => {
               variant="contained"
               loading={isLoading}
               fullWidth
-              sx={{ mt: 3, py: 1.5, fontSize: "1rem" }}
+              disabled={isLoading}
+              sx={{ mt: 3, py: 1.5, fontSize: "1rem", display: "flex", alignItems: "center", gap: 1 }}
             >
-              Submit
+              {isLoading ? (
+                <>
+                  <Spinner /> Submitting
+                </>
+              ) : (
+                "Submit"
+              )}
             </Button>
           </Box>
         </Paper>

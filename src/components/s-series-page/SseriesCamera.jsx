@@ -3,7 +3,33 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-const SseriesCamera = () => {
+const SseriesCamera = ({ title, subTitle, buttonText, buttonLink }) => {
+  const defaultTitle = (
+    <>
+      Protect What Matters With{" "}
+      <Typography
+        variant="h2"
+        component="span"
+        sx={{
+          fontWeight: "bold",
+          textAlign: "center",
+          color: "#A00A09",
+          fontSize: { xs: "2.5rem", sm: "3.5rem", lg: "4.5rem" },
+        }}
+      >
+        S-Series AI CCTV Cameras
+      </Typography>
+    </>
+  );
+
+  const defaultSubTitle =
+    "Designed for modern enterprises: faster response, fewer false alarms, and visibility you can trust.";
+
+  const contentTitle = title || defaultTitle;
+  const contentSubTitle = subTitle !== undefined ? subTitle : defaultSubTitle;
+  const contentButtonText = buttonText || "Book Installation";
+  const contentButtonLink = buttonLink || "/contact";
+
   return (
     <Box
       sx={{
@@ -40,26 +66,16 @@ const SseriesCamera = () => {
               fontSize: { xs: "2.5rem", sm: "3.5rem", lg: "3.5rem" },
             }}
           >
-            Protect What Matters With{" "}
+            {contentTitle}
+          </Typography>
+          {contentSubTitle && (
             <Typography
-              variant="h2"
-              component="span"
-              sx={{
-                fontWeight: "bold",
-                textAlign: "center",
-                color: "#A00A09",
-                fontSize: { xs: "2.5rem", sm: "3.5rem", lg: "4.5rem" },
-              }}
+              variant="h6"
+              sx={{ marginTop: "1rem", textAlign: "center" }} // Adjust the margin as needed
             >
-              S-Series AI CCTV Cameras
+              {contentSubTitle}
             </Typography>
-          </Typography>
-          <Typography
-            variant="h6"
-            sx={{ marginTop: "1rem", textAlign: "center" }} // Adjust the margin as needed
-          >
-            Designed for modern enterprises: faster response, fewer false alarms, and visibility you can trust.
-          </Typography>
+          )}
         </Box>
 
         {/* buttons part */}
@@ -71,11 +87,10 @@ const SseriesCamera = () => {
             gap: "1rem",
           }}
         >
-
           <Button
             variant="contained"
             endIcon={<ChevronRightIcon />}
-            href="/contact"
+            href={contentButtonLink}
             target="_blank"
             sx={{
               backgroundColor: "#1C2025",
@@ -84,7 +99,7 @@ const SseriesCamera = () => {
               padding: "0.7rem",
             }}
           >
-            Book Installation
+            {contentButtonText}
           </Button>
 
           {/* <Button
@@ -116,7 +131,6 @@ const SseriesCamera = () => {
           >
             Download Specifications
           </Button> */}
-
         </Box>
       </Container>
       <Box

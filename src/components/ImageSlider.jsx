@@ -3,8 +3,50 @@ import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ImageSlider = () => {
+  const slides = [
+    {
+      image: "/images/slider1.png",
+      heading: "India's Top Non-Chinese SoC CCTV Camera Manufacturer",
+      subheading:
+        "Designed, Developed & Manufactured in India for Reliable, Secure Surveillance.",
+      ctaText: "Partner With Adiance",
+      ctaLink: "/contact",
+    },
+    {
+      image: "/images/slider2.png",
+      heading: "Your Trusted OEM, ODM & JDM CCTV Manufacturing Partner",
+      subheading:
+        "From design to production — complete engineering, integration and delivery under one roof.",
+      ctaText: "Explore Manufacturing Services",
+      ctaLink: "/contact",
+    },
+    {
+      image: "/images/slider3.png",
+      heading: "Advanced Edge AI Cameras Built for Performance & Precision",
+      subheading: "S-Series & Eco-Series powered by secure, non-Chinese SoC technology.",
+      ctaText: "View ArcisAI Products",
+      ctaLink: "/contact",
+    },
+    {
+      image: "/images/slider4.png",
+      heading: "Made in India Security Cameras to World",
+      subheading:
+        "Export-ready product engineering with global certifications and world-class standards.",
+      ctaText: "Get in touch Now",
+      ctaLink: "/contact",
+    },
+    {
+      image: "/images/slider5.png",
+      heading: "Edge AI, Cloud AI & Gen AI Powered Video Surveillance Solutions",
+      subheading:
+        "Smart, scalable, and intelligent security solutions built into ArcisAI’s ecosystem of cameras and VMS platforms.",
+      ctaText: "Explore AI Solutions",
+      ctaLink: "/contact",
+    },
+  ];
+
   return (
-    <div style={{ height: "600px", margin: "0 auto" }} className="main">
+    <div style={{ height: "800px", margin: "0 auto" }} className="main">
       <style>{`
         .carousel-item img {
           max-width: 100%;
@@ -19,131 +61,99 @@ const ImageSlider = () => {
           height: 100%;
           background: linear-gradient(1deg, rgba(43,48,53,0.8) 10%, rgba(0,0,0,0) 100%);
         }
-        
-        .carousel-item p {
+
+        .carousel-caption-custom {
           position: absolute;
-          top: 90%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          top: 10%; /* Flex-start / top alignment */
+          left: 5%; /* Left align with some padding */
           color: white;
-          font-weight: bold;
           text-align: left;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          max-width: 65%;
+          z-index: 10;
         }
+          .carousel-caption-custom-para{
+          max-width: 70%;
+          }
+
+        .carousel-caption-custom h1 {
+          font-size: 3rem;
+          font-weight: bold;
+          margin-bottom: 25px;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-caption-custom p {
+          font-size: 1.5rem;
+          margin-bottom: 25px;
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+          background-color: #007bff; /* Example color, adjust as needed */
+          color: white;
+          padding: 10px 20px;
+          text-decoration: none;
+          border-radius: 5px;
+          font-weight: bold;
+          display: inline-block;
+          border: none;
+          transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+          background-color: #0056b3;
+          color: white;
+        }
+
         @media (max-width: 768px) {
-          .carousel-item p {
-            font-size: 9px;
-            top: 75%;
-            
+          .carousel-caption-custom {
+             top: 5%;
+             left: 5%;
+             max-width: 90%;
+          }
+           .carousel-caption-custom h1 {
+             font-size: 1.5rem;
+              margin-bottom: 10px;
+          }
+           .carousel-caption-custom p {
+             font-size: 0.9rem;
+              margin-bottom: 15px;
           }
           .main {
-            height: 200px !important; /* Use !important to ensure the height is applied */
+            height: 400px !important; /* Adjusted for mobile */
           }
-          .carousel-item .d-block.w-100 {
-            height: 200px !important;  
+           .carousel-item {
+             height: 400px !important;
+           }
+          .carousel-item img {
+             height: 400px !important;
+             object-fit: cover;
           }
         }
       `}</style>
       <Carousel>
-        {/* <Carousel.Item style={{ height: "800px" }}>
-          <img
-            className="d-block w-100"
-            src="/images/SCameraPageOG.jpg"
-            alt="First slide"
-            style={{ height: "800px" }}
-          />
-          <div className="overlay"></div>
-          <div> <h2>World’s First 5G-Enabled Edge AI Camera – S Series AI Surveillance</h2> </div>
-        </Carousel.Item> */}
-
-        {/* <Carousel.Item> */}
-          {/* <img
-            className="d-block w-100"
-            src="/images/smart-tech-asia.png"
-            alt="First slide"
-            style={{ height: "800px" }}
-          /> */}
-          {/* <div className="overlay"></div>
-          <div> <h2>World’s First 5G-Enabled Edge AI Camera – S Series AI Surveillance</h2> </div> */}
-        {/* </Carousel.Item> */}
-
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/images/SCameraPageOG.jpg"
-            alt="First slide"
-            style={{ height: "800px" }}
-          />
-          {/* <div className="overlay"></div>
-          <div> <h2>World’s First 5G-Enabled Edge AI Camera – S Series AI Surveillance</h2> </div> */}
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/images/slider1.png"
-            alt="First slide"
-            style={{ height: "800px", objectFit: "cover" }}
-          />
-          <div className="overlay"></div> {/* Overlay for gradient */}
-          <div>
-            <p>One stop solution for all your security needs</p>
-            <p>
-            One stop solution for all your security needs
-            </p>
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/images/slider4.png"
-            alt="First slide"
-            style={{ height: "800px", objectFit: "cover" }}
-          />
-          <div className="overlay"></div> {/* Overlay for gradient */}
-          <div>
-            <p>From Concept to Completion</p>
-          </div>
-        </Carousel.Item>
-
-        {/* <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/images/slider3.png"
-            alt="First slide"
-            style={{ height: "800px", objectFit: "cover" }}
-          />
-          <div className="overlay"></div>
-          <div>
-            <h2>One stop solution for all your security needs</h2>
-          </div>
-        </Carousel.Item> */}
-
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/images/slider5.png"
-            alt="First slide"
-            style={{ height: "800px", objectFit: "cover" }}
-          />
-          <div className="overlay"></div> {/* Overlay for gradient */}
-          <div>
-            <p>Integrated innovation, Limitless potential</p>
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/images/slider2.png"
-            alt="First slide"
-            style={{ height: "800px", objectFit: "cover" }}
-          />
-          <div className="overlay"></div> {/* Overlay for gradient */}
-          <div>
-            <p>Make in India Initiative</p>
-          </div>
-        </Carousel.Item>
-
-        {/* Other carousel items */}
+        {slides.map((slide, index) => (
+          <Carousel.Item key={index} interval={3000}>
+            <img
+              className="d-block w-100"
+              src={slide.image}
+              alt={`Slide ${index + 1}`}
+              style={{ height: "800px", objectFit: "cover" }}
+            />
+            <div className="overlay"></div>
+            <div className="carousel-caption-custom">
+              <h1>{slide.heading}</h1>
+              <div className="carousel-caption-custom-para">
+                <p>{slide.subheading}</p>
+              </div>
+              {slide.ctaText && (
+                <a href={slide.ctaLink} className="cta-button">
+                  {slide.ctaText}
+                </a>
+              )}
+            </div>
+          </Carousel.Item>
+        ))}
       </Carousel>
     </div>
   );

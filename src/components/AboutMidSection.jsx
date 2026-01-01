@@ -6,6 +6,7 @@ import AboutSlider from "./AboutSlider";
 import ProductSlider from "./ProductSlider";
 import AboutImgs from "./AboutImgs";
 import AboutImgs2 from "./AboutImgs2";
+import Certifications from "./Certifications";
 const AboutMidSection = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const hiddenStyle = { display: "none" };
@@ -118,30 +119,7 @@ const AboutMidSection = () => {
   //   "/images/t5-1-150x150.jpg",
   // ];
 
-  const imageSize = screenWidth > 768 ? 100 : 50;
 
-  const images = [
-    "images/certificate1.png",
-    "images/certificate2.png",
-    "images/certificate3.png",
-    "images/certificate4.png",
-    "images/certificate5.png",
-  ];
-
-  const imageStyle = {
-    width: `${imageSize}px`,
-    height: `${imageSize}px`,
-    margin: "2%",
-    // objectFit: "fit",
-  };
-
-  const containerStyle = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexWrap: "wrap",
-    padding: "10px",
-  };
 
   const imagePath3 = [
     "images/adiance-factory-008.jpg",
@@ -639,55 +617,7 @@ const AboutMidSection = () => {
       </Grid>
       <AboutImgs2 />
 
-      <Grid
-        container
-        spacing={3}
-        justifyContent="center"
-        sx={{
-          marginTop: "3%",
-          marginBottom: "5%",
-          marginLeft: "auto",
-          marginRight: "auto",
-          maxWidth: "80%", // Adjust the maximum width as needed
-        }}
-      >
-        <Grid item xs={12} sm={12}>
-          <Typography
-            variant="h5"
-            gutterBottom
-            marginBottom="3%"
-            style={{
-              textAlign: "center",
-              fontSize: "36px",
-              marginTop: "4%",
-              marginBottom: "5%",
-            }}
-          >
-            <center>Certifications</center>
-          </Typography>
-          <Typography variant="body1" align="justify">
-            Adiance is a global leader in electronic products, with
-            certifications in ISO 27001:2022, RoHS, BIS, FCC, and CE. These
-            certifications demonstrate Adiance's commitment to quality, safety,
-            and regulatory compliance. ISO 27001:2022 ensures data
-            confidentiality and integrity, while RoHS certification promotes
-            environmental sustainability. BIS certification validates product
-            conformity to quality and safety standards, while FCC and CE
-            certifications ensure electromagnetic compatibility and safety.
-          </Typography>
-        </Grid>
-      </Grid>
-
-      <div style={containerStyle}>
-        {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Image ${index + 1}`}
-            style={imageStyle}
-          />
-        ))}
-      </div>
+      <Certifications />
 
       <Grid
         container

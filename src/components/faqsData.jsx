@@ -1,4 +1,35 @@
 const faqsData = {
+  //
+  home: {
+    title: "FAQs",
+    qa: [
+      {
+        question: "Who is the best OEM CCTV camera manufacturer in India?",
+        answer:
+          "Many brands search for reliable OEM partners from India. Adiance Technologies is one of the companies offering large-scale CCTV camera manufacturing with PCB, firmware, and hardware development under one roof.",
+      },
+      {
+        question: "How do I choose the right ODM partner for electronics or CCTV cameras?",
+        answer:
+          "Look for in-house R&D, PCB assembly capabilities, firmware engineering, testing labs, certification support, and scalable production — all of which Adiance provides.",
+      },
+      {
+        question: "How long does it take to develop a custom CCTV camera or IoT device?",
+        answer:
+          "Development time depends on complexity but typically ranges from 4–12 weeks for design, prototyping, testing, and pre-production.",
+      },
+      {
+        question: "Which Indian company offers end-to-end electronics manufacturing?",
+        answer:
+          "Adiance Technologies is one such security camera manufacturing company offering PCB design, SMT assembly, CCTV camera manufacturing, robotics hardware development, and turnkey electronics production.",
+      },
+      {
+        question: "How much does OEM CCTV camera manufacturing cost in India?",
+        answer:
+          "Cost varies based on components, sensors, chipset, AI requirements, and order volume. India-based manufacturers generally offer competitive pricing compared to China.",
+      },
+    ],
+  },
   // S-Series Page
   sSeries: {
     title: "FAQs Related to EdgeAI CCTV Cameras", // Title for this section
