@@ -142,7 +142,16 @@ const ImageSlider = () => {
             />
             <div className="overlay"></div>
             <div className="carousel-caption-custom">
-              <h1>{slide.heading}</h1>
+              <div
+                style={{
+                  fontSize: "3rem",
+                  fontWeight: 700,
+                  lineHeight: 1.2,
+                }}
+              >
+                {slide.heading}
+              </div>
+
               <div className="carousel-caption-custom-para">
                 <p>{slide.subheading}</p>
               </div>
