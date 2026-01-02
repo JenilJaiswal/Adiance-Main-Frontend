@@ -21,7 +21,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/oemodm.jpg",
+      imageUrl: "/images/S-Series-Edge-AI-CCTV-Cameras.jpg",
     },
     {
       id: 2,
@@ -43,7 +43,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/NVRFree.png",
+      imageUrl: "/images/Eco-Series-Security-CCTV-Cameras.jpg",
     },
     {
       id: 3,
@@ -65,7 +65,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/customized.png",
+      imageUrl: "/images/STQC-Cloud-VMS—Secure-Video-Management-System.jpg",
     },
     {
       id: 4,
@@ -87,7 +87,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/aftersales.png",
+      imageUrl: "/images/Arcis-Bridge-Device.jpg",
     },
     {
       id: 5,
@@ -116,7 +116,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/VMS.png",
+      imageUrl: "/images/NVRs-ArcisAI.jpg",
     },
     {
       id: 6,
@@ -151,7 +151,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           products quickly without investing in your own factory.
         </p>
       ),
-      imageUrl: "/images/CCTV-Camera-1024x555.jpg",
+      imageUrl: "/images/ODM-CCTV-Camera-Manufacturing.jpg",
     },
     {
       id: 2,
@@ -164,7 +164,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           require.
         </p>
       ),
-      imageUrl: "/images/Surveillance-Camera-1024x555.jpg",
+      imageUrl: "/images/OEM-CCTV-Camera-Development.jpg",
     },
     {
       id: 3,
@@ -190,7 +190,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           firmware loading, and product testing.
         </p>
       ),
-      imageUrl: "/images/PCBAbout.png",
+      imageUrl: "/images/PCB-Assembly-Manufacturing.jpg",
     },
     {
       id: 5,
