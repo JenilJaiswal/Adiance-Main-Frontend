@@ -116,7 +116,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/NVRs-ArcisAI.jpg",
+      imageUrl: "/images/NVRs-Network-Video-Recorders-ArcisAI.jpg",
     },
     {
       id: 6,
@@ -134,7 +134,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/backward.png",
+      imageUrl: "/images/NVRs-ArcisAI-Robotics-arm.jpg",
     },
   ];
 

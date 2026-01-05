@@ -45,7 +45,7 @@ export default function MidBar() {
       >
         <RouterLink to="/">
           <img
-            src="/images/Logo-241x47-1.png"
+            src="/images/Logo.png"
             alt="Logo"
             style={{
               marginTop: "5px",

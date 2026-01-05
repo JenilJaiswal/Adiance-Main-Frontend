@@ -1,6 +1,8 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import { background } from "@chakra-ui/react";
+import { transform } from "framer-motion";
 
 const Certifications = () => {
     const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
@@ -20,11 +22,11 @@ const Certifications = () => {
     const imageSize = screenWidth > 768 ? 100 : 50;
 
     const images = [
-        "images/certificate1.png",
-        "images/certificate2.png",
-        "images/certificate3.png",
-        "images/certificate4.png",
-        "images/certificate5.png",
+        "images/Home_ISO.png",
+        "images/Home_RoHS.png",
+        "images/Home_BIS.png",
+        "images/Home_FCC.png",
+        "images/Home_CE.png",
     ];
 
     const imageStyle = {

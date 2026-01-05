@@ -72,7 +72,7 @@ const OurOfferings = () => {
     {
       id: 12,
       title: "Construction",
-      imageUrl: "/images/sus1.png",
+      imageUrl: "/images/Home_Construction.png",
       url: "#",
     },
   ];

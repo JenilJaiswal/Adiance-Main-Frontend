@@ -73,7 +73,7 @@ const Footer = () => {
         <div className="footer-column centered">
           <center>
             <img
-              src="/images/Logo-241x47-1.png"
+              src="/images/Logo.png"
               alt="Logo"
               className="logo"
               style={{ marginBottom: "10%" }}
@@ -479,8 +479,8 @@ const Footer = () => {
       </div>
       <style jsx>{`
         .footer {
-          background-color: #2b3035; /* White background */
-          color: white; /* Default text color */
+          background-color: #ffffffff; /* White background */
+          color: black; /* Default text color */
           padding: 20px 0 0 0;
           font-size: 13px;
           margin-top: 5%;
@@ -536,7 +536,7 @@ const Footer = () => {
         }
 
         .copyright-container {
-          background-color: #000; /* Black background */
+          background-color: #ffffffff; /* Black background */
           text-align: center;
           padding: 10px 0;
           margin-top: 20px; /* Adjusted margin */
@@ -552,7 +552,7 @@ const Footer = () => {
         }
 
         .copyright-text {
-          color: #666; /* Grey text color */
+          color: black; /* Grey text color */
           margin: 0; /* Remove default margins */
           padding: 0; /* Remove default padding */
         }
