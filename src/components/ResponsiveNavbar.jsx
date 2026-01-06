@@ -87,7 +87,7 @@ const ResponsiveNavbar = () => {
             // style={{ marginLeft: "10%", marginRight: "10%" }}
           >
             <img
-              src="/images/Logo-241x47-1.png"
+              src="/images/Logo.png"
               width="auto"
               height="25"
               className="d-inline-block align-top"
@@ -140,7 +140,7 @@ const ResponsiveNavbar = () => {
             {!isSmallScreen && (
               <Nav.Link as={Link} to={"/"}>
                 <img
-                  src="/images/Logo-241x47-1.png"
+                  src="/images/Logo.png"
                   width="auto"
                   height="40"
                   className="d-inline-block align-top"

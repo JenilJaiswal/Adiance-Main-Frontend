@@ -104,7 +104,7 @@ const Testimonials = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#fff5f5",
+        backgroundColor: "white",
         paddingBlock: "3rem",
       }}
     >

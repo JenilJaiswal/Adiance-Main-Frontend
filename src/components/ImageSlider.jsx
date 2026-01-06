@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/ImageSlider.css";
 
 const ImageSlider = () => {
   const slides = [
@@ -142,15 +143,22 @@ const ImageSlider = () => {
             />
             <div className="overlay"></div>
             <div className="carousel-caption-custom">
-              <div
+              {/* <div
                 style={{
                   fontSize: "3rem",
                   fontWeight: 700,
                   lineHeight: 1.2,
+                  marginBottom: "25px",
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
                 }}
               >
                 {slide.heading}
+              </div> */}
+
+              <div className="slide-heading">
+                {slide.heading}
               </div>
+
 
               <div className="carousel-caption-custom-para">
                 <p>{slide.subheading}</p>
