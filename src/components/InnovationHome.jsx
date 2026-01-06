@@ -250,7 +250,7 @@ const InnovationHome = ({ type = "innovation" }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [items]);
+  }, [type]); // Changed dependency to 'type' since that's what determines which items to show
 
   return (
     <>
