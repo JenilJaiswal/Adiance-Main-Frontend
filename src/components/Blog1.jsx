@@ -20,9 +20,8 @@ const Blog1 = () => {
   const location = useLocation();
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
   const currentUrl = canonicalUrl;
-  const IMAGE_BASE_URL = (
-    "https://backend.adiance.com:443/images" || "http://localhost:5000/uploads"
-  ).replace(/\/$/, "");
+  const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+  const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
 
   // Generate OG image URL
   const mainImageOg = blog?.content?.mainImage

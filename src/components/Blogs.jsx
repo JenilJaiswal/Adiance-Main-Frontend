@@ -25,9 +25,8 @@ const Blogs = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState("latest");
 
-  const IMAGE_BASE_URL = (
-    "https://backend.adiance.com:443/images" || "http://localhost:5000/uploads"
-  ).replace(/\/$/, "");
+  const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+  const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
   const PAGE_SIZE = 6;
 
   const fetchData = useCallback(async () => {

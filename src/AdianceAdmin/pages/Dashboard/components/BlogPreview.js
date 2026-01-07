@@ -25,7 +25,8 @@ import { useEffect, useState } from "react";
 
 // Add URL path constant
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
-const API_IMAGE_URL = "https://backend.adiance.com:443/images" || "http://localhost:5000/uploads";
+const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+const API_IMAGE_URL = `${BACKEND_BASE_URL}/images`;
 // const API_IMAGE_URL = "https://backend.adiance.com";
 
 

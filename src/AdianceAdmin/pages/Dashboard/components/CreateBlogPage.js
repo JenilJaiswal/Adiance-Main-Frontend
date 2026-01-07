@@ -49,7 +49,8 @@ import {
 import { SlateEditor, createEmptyParagraph } from "./SlateEditor";
 
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
-const IMAGE_BASE_URL = "https://backend.adiance.com:443/images" || "http://localhost:5000/uploads";
+const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
 
 const BlogPreview = ({ formData, components, faqTitle, tags }) => (
   <Box p={2}>
@@ -1474,24 +1475,31 @@ const FileUploadBox = ({ onFileUpload, file, onDelete, serverDeleteName }) => {
   };
   const getImageSource = (file) => {
     if (!file) return null;
-    if (typeof file === "string") {
-      if (/^https?:\/\//i.test(file)) return file;
-      const rel = file.includes("/") ? file : `/${file}`;
-      const [dir, ...rest] = String(rel).replace(/^\//, "").split("/");
-      const encoded = [dir, encodeURIComponent(rest.join("/"))]
-        .filter(Boolean)
-        .join("/");
-      return `${IMAGE_BASE_URL}/${encoded}`;
-    }
+    
+    // Handle File objects (for preview during upload)
     if (file instanceof File) return URL.createObjectURL(file);
-    const raw = file.path || "";
-    if (/^https?:\/\//i.test(raw)) return raw;
-    const rel = raw.includes("/") ? raw : `/${raw}`;
-    const [dir, ...rest] = String(rel).replace(/^\//, "").split("/");
-    const encoded = [dir, encodeURIComponent(rest.join("/"))]
-      .filter(Boolean)
-      .join("/");
-    return `${IMAGE_BASE_URL}/${encoded}`;
+    
+    // Handle string paths
+    if (typeof file === "string") {
+      // If it's already a full URL, return as-is
+      if (/^https?:\/\//i.test(file)) return file;
+      // Otherwise, construct the URL with just the filename and encode it properly
+      const filename = file.includes("/") ? file.split("/").pop() : file;
+      const encodedFilename = encodeURIComponent(filename);
+      return `${IMAGE_BASE_URL}/${encodedFilename}`;
+    }
+    
+    // Handle object with path property
+    if (file && file.path) {
+      // If it's already a full URL, return as-is
+      if (/^https?:\/\//i.test(file.path)) return file.path;
+      // Otherwise, construct the URL with just the filename and encode it properly
+      const filename = file.path.includes("/") ? file.path.split("/").pop() : file.path;
+      const encodedFilename = encodeURIComponent(filename);
+      return `${IMAGE_BASE_URL}/${encodedFilename}`;
+    }
+    
+    return null;
   };
   return (
     <Box

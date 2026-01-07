@@ -289,7 +289,8 @@ const BlogsOverviewDash = () => {
     const match = url.match(/^(https?:\/\/[^\/]+\/)/);
     setBaseUrl(match ? match[1] : url);
   }, []);
-  const IMAGE_BASE_URL = "https://backend.adiance.com:443/images" || "http://localhost:5000/uploads";
+  const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+  const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
   useEffect(() => {
     const fetchBlog = async () => {
       try {
