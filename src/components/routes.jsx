@@ -17,6 +17,7 @@ import CyberSecurity from "./CyberSecurity";
 import Datasheet from "./Datasheet";
 import Downloads from "./Downloads";
 import Education from "./Education";
+import Event from "./Event";
 import Feedback from "./Feedback";
 import FutureGrowth from "./FutureGrowth";
 import HighTraffic from "./HighTraffic";
@@ -52,6 +53,7 @@ import EdgeAICamera from "./EdgeAICamera";
 import _4KCamera from "./_4KCamera";
 import _4GCamera from "./_4GCamera";
 import _360Approach from "./_360Approach";
+import IfsecIndia2025 from "./IfsecIndia2025";
 import NotFound from "./NotFound";
 import CareerHome from "./career/CareerHome";
 
@@ -60,6 +62,8 @@ const routes = [
   { path: "/about", element: <AboutUs /> },
   { path: "/innovation", element: <Innovation /> },
   { path: "/contact", element: <ContactUs /> },
+  { path: "/event", element: <Event /> },
+  { path: "/event/ifsec-india-2025", element: <IfsecIndia2025 /> },
   // { path: "/partner-with-us", element: <PartnerWithUsPage /> },
   { path: "/thank-you", element: <ThankYouPage /> },
   { path: "/blog-thank-you", element: <ThankYouPage /> },

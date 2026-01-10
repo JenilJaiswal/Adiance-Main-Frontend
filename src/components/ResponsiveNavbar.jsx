@@ -20,6 +20,7 @@ const ResponsiveNavbar = () => {
   const [showProducts, setShowProducts] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
   const [showSupport, setShowSupport] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -932,19 +933,86 @@ const ResponsiveNavbar = () => {
               Career
             </Nav.Link> */}
 
-            <Nav.Link
-              as={Link}
-              to="/about"
-              style={{
-                fontSize: screenWidth > 993 ? "18px" : "inherit",
-                color: location.pathname === "/about" ? "#444444" : "#000000",
-                fontWeight:
-                  location.pathname === "/about" ? "bolder" : "normal",
-                whiteSpace: "nowrap", // Prevents text wrapping
-              }}
+            <NavDropdown
+              title={
+                <span
+                  className="nav-dropdown-item"
+                  style={{
+                    fontSize: screenWidth > 993 ? "18px" : "inherit",
+                    color: "#444444",
+                    fontWeight: "normal",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
+                  }}
+                >
+                  About Us
+                  <ChevronRightIcon
+                    style={{
+                      transition: "transform 200ms ease",
+                      transform:
+                        !isSmallScreen && showAbout
+                          ? "rotate(-90deg)"
+                          : "rotate(90deg)",
+                    }}
+                  />
+                </span>
+              }
+              onMouseEnter={() => !isSmallScreen && setShowAbout(true)}
+              onMouseLeave={() => !isSmallScreen && setShowAbout(false)}
+              show={!isSmallScreen ? showAbout : undefined}
             >
-              About Us
-            </Nav.Link>
+              {screenWidth > 992 ? (
+                <NavDropdown.Item
+                  style={{ fontSize: screenWidth > 993 ? "18px" : "inherit" }}
+                  className="no-hover"
+                >
+                  <table style={{ marginRight: "40px" }}>
+                    <tbody>
+                      <tr>
+                        <td style={{ verticalAlign: "top" }}>
+                          <ul>
+                            <li>
+                              <ArrowRightIcon />
+                              <RouterLink to="/about" className="link">
+                                About Us
+                              </RouterLink>
+                            </li>
+                            <li>
+                              <ArrowRightIcon />
+                              <RouterLink to="/event" className="link">
+                                Events
+                              </RouterLink>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </NavDropdown.Item>
+              ) : (
+                <>
+                  <NavDropdown.Item
+                    as={Link}
+                    to="/about"
+                    style={{
+                      fontSize: screenWidth > 993 ? "20px" : "inherit",
+                    }}
+                  >
+                    About Us
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    as={Link}
+                    to="/event"
+                    style={{
+                      fontSize: screenWidth > 993 ? "20px" : "inherit",
+                    }}
+                  >
+                    Events
+                  </NavDropdown.Item>
+                </>
+              )}
+            </NavDropdown>
 
             {/* <nav style={{ display: "flex", gap: "1rem" }}> */}
             <Nav.Link

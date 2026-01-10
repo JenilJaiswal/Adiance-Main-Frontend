@@ -1,5 +1,4 @@
-import React from "react";
-import { Box, Button, Typography, Container } from "@mui/material"; // Changed Container import
+import { Box, Button, Typography, Container } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { useNavigate } from "react-router-dom";
 
@@ -9,7 +8,6 @@ const Globalnetwork = ({ data }) => {
   const handleContactClick = () => {
     navigate("/contact");
   };
-
   return (
     <>
       <Box
@@ -30,7 +28,7 @@ const Globalnetwork = ({ data }) => {
             <img src="/images/Group.svg" alt="groupsvg" width="100%" />
           </Box>
         </Box>
-        <Container // Use MUI Container
+        <Container
           maxWidth="xl"
           style={{
             display: "flex",
@@ -82,19 +80,29 @@ const Globalnetwork = ({ data }) => {
               gap: "1rem",
             }}
           >
-            {/* <Button
+            <Button
               variant="contained"
               endIcon={<ChevronRightIcon />}
               sx={{
-                backgroundColor: "#BF0603",
+                backgroundColor: "#dc3545",
                 color: "#ffffff",
                 textTransform: "none",
-                padding: "0.7rem",
+                padding: "0.7rem 2rem",
+                // borderRadius: "25px",
+                fontWeight: "600",
+                fontSize: "1rem",
+                boxShadow: "0 6px 20px rgba(220, 53, 69, 0.3)",
+                "&:hover": {
+                  backgroundColor: "#c82333",
+                  transform: "translateY(-2px)",
+                  boxShadow: "0 10px 30px rgba(220, 53, 69, 0.4)",
+                },
+                transition: "all 0.3s ease",
               }}
               onClick={handleContactClick}
             >
               Contact Us
-            </Button> */}
+            </Button>
           </Box>
         </Container>
         <Box
