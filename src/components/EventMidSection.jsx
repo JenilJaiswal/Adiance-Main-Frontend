@@ -139,20 +139,6 @@ const EventMidSection = () => {
                   </div>
                 ))}
               </div>
-                
-              {/* Carousel Indicators */}
-              <div className="carousel-indicators">
-                {ifsecEventImages.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`indicator ${
-                      index === currentImageIndex ? 'active' : ''
-                    }`}
-                    onClick={() => goToSlide(index)}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
 
               {/* Progress Bar */}
               <div className="progress-bar">
@@ -169,35 +155,31 @@ const EventMidSection = () => {
           {/* Content Directly Below - Full Width */}
           <div className="event-content-full-width">
             <Container>
-              <Row className="align-items-center">
-                <Col lg={2} md={2} sm={3} xs={12} className="logo-col">
-                  <div className="event-logo-container">
+              <Row className="event-content-row">
+                <Col xs={12} className="event-content-wrapper">
+                  <div className="event-logo-section">
                     <img 
                       src="/images/IFSEC_logo.png" 
                       alt="IFSEC India Logo"
-                      className="event-logo-below"
+                      className="event-logo-responsive"
                       onError={(e) => {
                         e.target.src = "/images/Logo.png";
                       }}
                     />
                   </div>
-                </Col>
-                <Col lg={8} md={8} sm={7} xs={12} className="description-col">
-                  <div className="event-description-container">
-                    <p className="event-description-below">
+                  <div className="event-text-section">
+                    <p className="event-description-responsive">
                       At IFSEC India 2025, Adiance Technologies and its flagship brand ArcisAI showcased our Made-in-India OEM-ODM expertise under the ArcisAI × Adiance identity. Our booth highlighted the full AI CCTV range - Dome, Bullet, PTZ - along with OEM/ODM services, PCB assembly, and hardware customization, reflecting our commitment to delivering world-class CCTV solutions.
                     </p>
-                  </div>
-                </Col>
-                <Col lg={2} md={2} sm={2} xs={12} className="button-col">
-                  <div className="event-button-container">
-                    <Button 
-                      variant="primary" 
-                      className="event-btn-below"
-                      href="/event/ifsec-india-2025"
-                    >
-                      More Event Details
-                    </Button>
+                    <div className="event-button-section">
+                      <Button 
+                        variant="primary" 
+                        className="event-btn-responsive"
+                        href="/event/ifsec-india-2025"
+                      >
+                        More Event Details
+                      </Button>
+                    </div>
                   </div>
                 </Col>
               </Row>
@@ -309,6 +291,71 @@ const EventMidSection = () => {
           width: 100%;
         }
 
+        /* Responsive Event Content */
+        .event-content-row {
+          margin: 0;
+        }
+
+        .event-content-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          padding: 0 15px;
+        }
+
+        .event-logo-section {
+          flex-shrink: 0;
+          background: white;
+          padding: 15px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .event-logo-responsive {
+          max-width: 80px;
+          max-height: 50px;
+          object-fit: contain;
+        }
+
+        .event-text-section {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .event-description-responsive {
+          color: white;
+          font-size: 1rem;
+          line-height: 1.5;
+          margin: 0 0 20px 0;
+          text-align: justify;
+        }
+
+        .event-button-section {
+          display: flex;
+          justify-content: flex-start;
+        }
+
+        .event-btn-responsive {
+          background: transparent;
+          border: 2px solid white;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+          font-size: 0.9rem;
+        }
+
+        .event-btn-responsive:hover {
+          background: white;
+          color: #2c3e50;
+          transform: translateY(-2px);
+        }
+
         .past-events-details .row {
           margin: 0;
         }
@@ -389,16 +436,6 @@ const EventMidSection = () => {
           display: block;
           user-select: none;
           -webkit-user-drag: none;
-        }
-
-        .carousel-indicators {
-          position: absolute;
-          bottom: 25px;
-          left: 50%;
-          transform: translateX(-50%);
-          display: flex;
-          gap: 15px;
-          z-index: 10;
         }
 
         .indicator {
@@ -734,10 +771,25 @@ const EventMidSection = () => {
           .carousel-slides-container {
             transition: transform 0.6s ease-in-out;
           }
+            
+          .event-content-wrapper {
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+          }
 
-          .carousel-indicators {
-            bottom: 20px;
-            gap: 10px;
+          .event-logo-responsive {
+            max-width: 70px;
+            max-height: 45px;
+          }
+
+          .event-description-responsive {
+            font-size: 0.95rem;
+          }
+
+          .event-btn-responsive {
+            font-size: 0.85rem;
+            padding: 9px 18px;
           }
 
           .indicator {
@@ -822,9 +874,35 @@ const EventMidSection = () => {
             font-size: 0.85rem;
           }
 
-          .carousel-indicators {
-            bottom: 15px;
-            gap: 8px;
+          .event-content-wrapper {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            padding: 0 10px;
+          }
+
+          .event-logo-section {
+            align-self: center;
+          }
+
+          .event-text-section {
+            width: 100%;
+          }
+
+          .event-description-responsive {
+            text-align: justify;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+          }
+
+          .event-button-section {
+            justify-content: center;
+          }
+
+          .event-btn-responsive {
+            font-size: 0.8rem;
+            padding: 8px 16px;
           }
 
           .indicator {
