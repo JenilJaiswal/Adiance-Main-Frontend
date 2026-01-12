@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
+import { Helmet } from "react-helmet";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -21,6 +22,10 @@ const ThankYouPage = () => {
         // background: "linear-gradient(135deg, #667eea, #764ba2)", // Stylish gradient
       }}
     >
+      <Helmet>
+        <title>Thank You - Adiance Technologies</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <Header />
       <Box
         sx={{

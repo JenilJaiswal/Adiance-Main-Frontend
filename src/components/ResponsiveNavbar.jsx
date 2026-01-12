@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "../styles/bootNavbar.css";
-import { Link as RouterLink } from "react-router-dom";
+import SmartLink from "./SmartLink";
 // import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { Box, Button } from "@mui/material";
@@ -61,7 +61,7 @@ const ResponsiveNavbar = () => {
   };
 
   const handleExternalLink = (e) => {
-    e.preventDefault(); // Prevent default RouterLink behavior
+    e.preventDefault(); // Prevent default SmartLink behavior
     window.open("https://adiance1.zohodesk.in/portal/en/home", "_blank");
   };
 
@@ -83,9 +83,9 @@ const ResponsiveNavbar = () => {
       <Container fluid="xl">
         {isSmallScreen && (
           <Navbar.Brand
-            as={Link}
+            as={SmartLink}
             to="/"
-            // style={{ marginLeft: "10%", marginRight: "10%" }}
+          // style={{ marginLeft: "10%", marginRight: "10%" }}
           >
             <img
               src="/images/Logo.png"
@@ -139,7 +139,7 @@ const ResponsiveNavbar = () => {
             }}
           >
             {!isSmallScreen && (
-              <Nav.Link as={Link} to={"/"}>
+              <Nav.Link as={SmartLink} to={"/"}>
                 <img
                   src="/images/Logo.png"
                   width="auto"
@@ -151,7 +151,7 @@ const ResponsiveNavbar = () => {
             )}
 
             {/* <Nav.Link
-              as={Link}
+              as={SmartLink}
               to="/"
               style={{
                 whiteSpace: "nowrap",
@@ -166,7 +166,7 @@ const ResponsiveNavbar = () => {
             </Nav.Link> */}
 
             {/* <Nav.Link
-              as={Link}
+              as={SmartLink}
               to="/buyback-cctv-camera-offer"
               style={{
                 whiteSpace: "nowrap",
@@ -213,7 +213,7 @@ const ResponsiveNavbar = () => {
               </Box>
 
               <Nav.Link
-                as={Link}
+                as={SmartLink}
                 to="/buyback-cctv-camera-offer"
                 style={{
                   position: "relative",
@@ -235,7 +235,7 @@ const ResponsiveNavbar = () => {
             </Box> */}
 
             <Nav.Link
-              as={Link}
+              as={SmartLink}
               to="/innovation"
               style={{
                 fontSize: screenWidth > 993 ? "18px" : "inherit",
@@ -279,10 +279,10 @@ const ResponsiveNavbar = () => {
               onMouseEnter={() => !isSmallScreen && setShowProducts(true)}
               onMouseLeave={() => !isSmallScreen && setShowProducts(false)}
               show={!isSmallScreen ? showProducts : undefined}
-              // style={{
-              //   fontSize: screenWidth > 993 ? "18px" : "inherit",
-              //   color: "#444444"
-              // }}
+            // style={{
+            //   fontSize: screenWidth > 993 ? "18px" : "inherit",
+            //   color: "#444444"
+            // }}
             >
               {screenWidth > 992 ? (
                 <NavDropdown.Item
@@ -295,12 +295,12 @@ const ResponsiveNavbar = () => {
                         <td>
                           <ul>
                             <li>
-                              <RouterLink
+                              <SmartLink
                                 to="/3mp-4g-bullet-all-time-color-camera-a-series"
                                 className="link h6"
                               >
                                 A Series
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                           </ul>
                         </td>
@@ -308,12 +308,12 @@ const ResponsiveNavbar = () => {
                         <td>
                           <ul>
                             <li>
-                              <RouterLink
+                              <SmartLink
                                 to="/h-series"
                                 className="link h6"
                               >
                                 H Series
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                           </ul>
                         </td>
@@ -322,22 +322,22 @@ const ResponsiveNavbar = () => {
                         <td>
                           <ul>
                             <li>
-                              <RouterLink
+                              <SmartLink
                                 to="/s-series-ai-cctv-cameras"
                                 className="link h6"
-                                // style={{ margin: "20%" }}
+                              // style={{ margin: "20%" }}
                               >
                                 S Series
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                           </ul>
                         </td>
                         {/* <td>
                           <ul>
                             <li>
-                              <RouterLink to="/r-series" className="link h6">
+                              <SmartLink to="/r-series" className="link h6">
                                 R Series
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                           </ul>
                         </td> */}
@@ -350,7 +350,7 @@ const ResponsiveNavbar = () => {
                 <>
                   {/* Other product links hidden on mobile as requested */}
                   <NavDropdown.Item
-                    as={Link}
+                    as={SmartLink}
                     to="/5g-edge-ai-camera-s-series-surveillance"
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -423,50 +423,50 @@ const ResponsiveNavbar = () => {
                             <li>
                               {/* <DoubleArrowIcon className="doubleArrow" /> */}
                               <ArrowRightIcon />
-                              <RouterLink to="/public-safety" className="link">
+                              <SmartLink to="/public-safety" className="link">
                                 Public Safety and Security
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               {/* <DoubleArrowIcon className="doubleArrow" /> */}
                               <ArrowRightIcon />
-                              <RouterLink
+                              <SmartLink
                                 to="/trafic-management"
                                 className="link"
                               >
                                 Traffic Management & Monitoring
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               {/* <DoubleArrowIcon className="doubleArrow" /> */}
                               <ArrowRightIcon />
-                              <RouterLink to="/crowd-control" className="link">
+                              <SmartLink to="/crowd-control" className="link">
                                 Crowd Control
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               {/* <DoubleArrowIcon className="doubleArrow" /> */}
                               <ArrowRightIcon />
-                              <RouterLink to="/smart-cities" className="link">
+                              <SmartLink to="/smart-cities" className="link">
                                 Smart Cities & Infrastructure
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               {/* <DoubleArrowIcon className="doubleArrow" /> */}
                               <ArrowRightIcon />
-                              <RouterLink
+                              <SmartLink
                                 to="/remote-security"
                                 className="link"
                               >
                                 Remote-Security
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               {/* <DoubleArrowIcon className="doubleArrow" /> */}
                               <ArrowRightIcon />
-                              <RouterLink to="/high-traffic" className="link">
+                              <SmartLink to="/high-traffic" className="link">
                                 High-Traffic Infrastructure
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                           </ul>
                         </td>
@@ -487,46 +487,46 @@ const ResponsiveNavbar = () => {
                             </li>
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink to="/education" className="link">
+                              <SmartLink to="/education" className="link">
                                 Education
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink to="/healthcare" className="link">
+                              <SmartLink to="/healthcare" className="link">
                                 Healthcare
-                              </RouterLink>
+                              </SmartLink>
                             </li>
 
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink
+                              <SmartLink
                                 to="/public-transport"
                                 className="link"
                               >
                                 Public Transport
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink to="/retail" className="link">
+                              <SmartLink to="/retail" className="link">
                                 Retail
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink
+                              <SmartLink
                                 to="/smart-safe-city"
                                 className="link"
                               >
                                 Smart & Safe city
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink to="/bank-finance" className="link">
+                              <SmartLink to="/bank-finance" className="link">
                                 Banking & Finance
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                           </ul>
                         </td>
@@ -545,7 +545,7 @@ const ResponsiveNavbar = () => {
                     }}
                   >
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/public-safety"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -554,7 +554,7 @@ const ResponsiveNavbar = () => {
                       Public Safety and Security
                     </NavDropdown.Item>
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/trafic-management"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -563,7 +563,7 @@ const ResponsiveNavbar = () => {
                       Traffic Management & Monitoring
                     </NavDropdown.Item>
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/crowd-control"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -572,7 +572,7 @@ const ResponsiveNavbar = () => {
                       Crowd Control
                     </NavDropdown.Item>
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/smart-cities"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -581,7 +581,7 @@ const ResponsiveNavbar = () => {
                       Smart Cities & Infrastructure
                     </NavDropdown.Item>
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/remote-security"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -590,7 +590,7 @@ const ResponsiveNavbar = () => {
                       Remote Security Surveillance
                     </NavDropdown.Item>
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/high-traffic"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -609,7 +609,7 @@ const ResponsiveNavbar = () => {
                     }}
                   >
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/education"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -619,7 +619,7 @@ const ResponsiveNavbar = () => {
                     </NavDropdown.Item>
 
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/healthcare"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -629,7 +629,7 @@ const ResponsiveNavbar = () => {
                     </NavDropdown.Item>
 
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/public-transport"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -638,7 +638,7 @@ const ResponsiveNavbar = () => {
                       Public Transport
                     </NavDropdown.Item>
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/retail"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -647,7 +647,7 @@ const ResponsiveNavbar = () => {
                       Retail
                     </NavDropdown.Item>
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/smart-safe-city"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -656,7 +656,7 @@ const ResponsiveNavbar = () => {
                       Smart & Safe city
                     </NavDropdown.Item>
                     <NavDropdown.Item
-                      as={Link}
+                      as={SmartLink}
                       to="/bank-finance"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -730,38 +730,38 @@ const ResponsiveNavbar = () => {
 
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink
+                              <SmartLink
                                 to="/warranty-service"
                                 className="link"
                               >
                                 Warranty Service
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink
+                              <SmartLink
                                 to="/warranty-policy"
                                 className="link"
                               >
                                 Warranty Policy
-                              </RouterLink>
+                              </SmartLink>
                             </li>
 
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink
+                              <SmartLink
                                 to="/terms-of-service"
                                 className="link"
                               >
                                 Terms of Service
-                              </RouterLink>
+                              </SmartLink>
                             </li>
 
                             {/* <li>
                               <ArrowRightIcon />
-                              <RouterLink to="/feedback" className="link">
+                              <SmartLink to="/feedback" className="link">
                                 Feedback
-                              </RouterLink>
+                              </SmartLink>
                             </li> */}
                           </ul>
                         </td>
@@ -781,15 +781,15 @@ const ResponsiveNavbar = () => {
                             </li>
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink to="/firmware" className="link">
+                              <SmartLink to="/firmware" className="link">
                                 Firmware
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink to="/tools" className="link">
+                              <SmartLink to="/tools" className="link">
                                 Tools
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                           </ul>
                         </td>
@@ -822,7 +822,7 @@ const ResponsiveNavbar = () => {
                   </NavDropdown.Item>
 
                   <NavDropdown.Item
-                    as={Link}
+                    as={SmartLink}
                     to="/warranty-service"
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -831,7 +831,7 @@ const ResponsiveNavbar = () => {
                     Warranty Service
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    as={Link}
+                    as={SmartLink}
                     to="/warranty-service"
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -840,7 +840,7 @@ const ResponsiveNavbar = () => {
                     Warranty Policy
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    as={Link}
+                    as={SmartLink}
                     to="/terms-of-service"
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -850,7 +850,7 @@ const ResponsiveNavbar = () => {
                   </NavDropdown.Item>
 
                   {/* <NavDropdown.Item
-                    as={Link}
+                    as={SmartLink}
                     to="/feedback"
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -872,7 +872,7 @@ const ResponsiveNavbar = () => {
                   </NavDropdown.Header>
 
                   <NavDropdown.Item
-                    as={Link}
+                    as={SmartLink}
                     to="/firmware"
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -881,7 +881,7 @@ const ResponsiveNavbar = () => {
                     Firmware
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    as={Link}
+                    as={SmartLink}
                     to="/tools"
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -894,7 +894,7 @@ const ResponsiveNavbar = () => {
             </NavDropdown>
 
             <Nav.Link
-              as={Link}
+              as={SmartLink}
               to="/blog"
               style={{
                 fontSize: screenWidth > 993 ? "18px" : "inherit",
@@ -906,7 +906,7 @@ const ResponsiveNavbar = () => {
             </Nav.Link>
 
             <Nav.Link
-              as={Link}
+              as={SmartLink}
               to="/partners"
               style={{
                 fontSize: screenWidth > 993 ? "18px" : "inherit",
@@ -920,7 +920,7 @@ const ResponsiveNavbar = () => {
             </Nav.Link>
 
             {/* <Nav.Link
-              as={Link}
+              as={SmartLink}
               to="/careers"
               style={{
                 fontSize: screenWidth > 993 ? "18px" : "inherit",
@@ -974,15 +974,15 @@ const ResponsiveNavbar = () => {
                           <ul>
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink to="/about" className="link">
+                              <SmartLink to="/about" className="link">
                                 About Us
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                             <li>
                               <ArrowRightIcon />
-                              <RouterLink to="/event" className="link">
+                              <SmartLink to="/event" className="link">
                                 Events
-                              </RouterLink>
+                              </SmartLink>
                             </li>
                           </ul>
                         </td>
@@ -993,7 +993,7 @@ const ResponsiveNavbar = () => {
               ) : (
                 <>
                   <NavDropdown.Item
-                    as={Link}
+                    as={SmartLink}
                     to="/about"
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -1002,7 +1002,7 @@ const ResponsiveNavbar = () => {
                     About Us
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    as={Link}
+                    as={SmartLink}
                     to="/event"
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
@@ -1016,7 +1016,7 @@ const ResponsiveNavbar = () => {
 
             {/* <nav style={{ display: "flex", gap: "1rem" }}> */}
             <Nav.Link
-              as={Link}
+              as={SmartLink}
               to="/contact"
               style={{
                 color: location.pathname === "/contact" ? "#444444" : "#000000",
@@ -1047,7 +1047,7 @@ const ResponsiveNavbar = () => {
             </Nav.Link>
 
             <Nav.Link
-              as={Link}
+              as={SmartLink}
               to="/partner-with-us"
               style={{
                 whiteSpace: "nowrap",

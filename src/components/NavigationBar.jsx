@@ -8,7 +8,7 @@ import {
   ArrowForward,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { Link as RouterLink } from "react-router-dom";
+import SmartLink from "./SmartLink";
 
 // Creating a custom theme
 const theme = createTheme({
@@ -85,20 +85,20 @@ const NavigationBar = () => {
               className={classes.menuItem}
               style={{ marginLeft: "10%" }}
             >
-              <RouterLink to="/" className={classes.menuLink}>
+              <SmartLink to="/" className={classes.menuLink}>
                 Home
-              </RouterLink>
+              </SmartLink>
             </Typography>
 
             <Typography variant="h6" className={classes.menuItem}>
-              <RouterLink to="/innovation" className={classes.menuLink}>
+              <SmartLink to="/innovation" className={classes.menuLink}>
                 Technology
-              </RouterLink>
+              </SmartLink>
               <div className={classes.subMenu}>
                 <Typography variant="body1">
-                  <RouterLink to="/innovation" className={classes.menuLink}>
+                  <SmartLink to="/innovation" className={classes.menuLink}>
                     Innovation
-                  </RouterLink>
+                  </SmartLink>
                 </Typography>
               </div>
             </Typography>
@@ -108,163 +108,163 @@ const NavigationBar = () => {
               </a>
               <div className={classes.subMenu}>
                 <Typography variant="body1" className={classes.subMenuItem}>
-                  <RouterLink to="/thermal-camera" className={classes.menuLink}>
+                  <SmartLink to="/thermal-camera" className={classes.menuLink}>
                     Thermal Camera
-                  </RouterLink>
+                  </SmartLink>
                   <div className={classes.superSubMenu}>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/adiance-thermal-camera-f"
                         className={classes.menuLink}
                       >
                         Adiance Thermal Camera - F
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/adiance-thermal-camera-n"
                         className={classes.menuLink}
                       >
                         Adiance Thermal Camera - N
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/adiance-thermal-camera-l"
                         className={classes.menuLink}
                       >
                         Adiance Thermal Camera - L
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                   </div>
                 </Typography>
                 <Typography variant="body1" className={classes.subMenuItem}>
-                  <RouterLink to="/cloudxvr" className={classes.menuLink}>
+                  <SmartLink to="/cloudxvr" className={classes.menuLink}>
                     Cloud XVR
-                  </RouterLink>
+                  </SmartLink>
                   <div className={classes.superSubMenu}>
                     <Typography variant="body1">
-                      <RouterLink to="/cloudxvr" className={classes.menuLink}>
+                      <SmartLink to="/cloudxvr" className={classes.menuLink}>
                         Adiance 8-16Channel XVR
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                   </div>
                 </Typography>
                 <Typography variant="body1" className={classes.subMenuItem}>
-                  <RouterLink to="/anpr-camera" className={classes.menuLink}>
+                  <SmartLink to="/anpr-camera" className={classes.menuLink}>
                     ANPR Camera
-                  </RouterLink>
+                  </SmartLink>
                   <div className={classes.superSubMenu}>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/edge-ai-based-ptz-anpr-bullet-camera"
                         className={classes.menuLink}
                       >
                         Edge Ai based PTZ ANPR Camera
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                   </div>
                 </Typography>
 
                 <Typography variant="body1" className={classes.subMenuItem}>
-                  <RouterLink to="/4kcamera" className={classes.menuLink}>
+                  <SmartLink to="/4kcamera" className={classes.menuLink}>
                     4K Camera
-                  </RouterLink>
+                  </SmartLink>
                   <div className={classes.superSubMenu}>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/4k-bullet-anpr-ptz-camera"
                         className={classes.menuLink}
                       >
                         4K Bullet ANPR PTZ Camera
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/4k-face-recognition-camera"
                         className={classes.menuLink}
                       >
                         4K Face Recognition Camera
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/edge-ai-based-object-n-face-detection-cameras"
                         className={classes.menuLink}
                       >
                         4K Object & Face Detection Cameras
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                   </div>
                 </Typography>
 
                 <Typography variant="body1" className={classes.subMenuItem}>
-                  <RouterLink to="/edgeaicamera" className={classes.menuLink}>
+                  <SmartLink to="/edgeaicamera" className={classes.menuLink}>
                     Edge-Ai Camera
-                  </RouterLink>
+                  </SmartLink>
                   <div className={classes.superSubMenu}>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/edge-ai-based-ptz-anpr-bullet-camera-3"
                         className={classes.menuLink}
                       >
                         Edge AI Based PTZ ANPR Bullet Camera
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/edge-ai-based-recognition-camera"
                         className={classes.menuLink}
                       >
                         Edge AI Based Face Recognition Camera
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/edge-ai-based-object-n-face-detection-camera"
                         className={classes.menuLink}
                       >
                         Edge AI Based Object & Face Detection Cameras
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                   </div>
                 </Typography>
                 <Typography variant="body1" className={classes.subMenuItem}>
-                  <RouterLink to="/4gcamera" className={classes.menuLink}>
+                  <SmartLink to="/4gcamera" className={classes.menuLink}>
                     4G Camera
-                  </RouterLink>
+                  </SmartLink>
                   <div className={classes.superSubMenu}>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/4g-dome-ptz-camera"
                         className={classes.menuLink}
                       >
                         4G Dome PTZ Camera
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/4g-mini-bullet-camera"
                         className={classes.menuLink}
                       >
                         4G Mini Bullet Camera
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/4g-dome-camera"
                         className={classes.menuLink}
                       >
                         4G Dome Camera
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/h265-4g-dome-ptz-camera"
                         className={classes.menuLink}
                       >
                         H.265+ 4G Dome PTZ Camera
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                   </div>
                 </Typography>
@@ -276,122 +276,122 @@ const NavigationBar = () => {
               </a>
               <div className={classes.subMenu}>
                 <Typography variant="body1" className={classes.subMenuItem}>
-                  <RouterLink to="/thermal-camera" className={classes.menuLink}>
+                  <SmartLink to="/thermal-camera" className={classes.menuLink}>
                     Scenario Based
-                  </RouterLink>
+                  </SmartLink>
                   <div className={classes.superSubMenu}>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/public-safety"
                         className={classes.menuLink}
                       >
                         Public Safety and Security
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/adiance-thermal-camera-n"
                         className={classes.menuLink}
                       >
                         Traffic management & monitoring
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/adiance-thermal-camera-l"
                         className={classes.menuLink}
                       >
                         Crowd Control
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/adiance-thermal-camera-l"
                         className={classes.menuLink}
                       >
                         Smart Cities & Infrastructure
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink
+                      <SmartLink
                         to="/adiance-thermal-camera-l"
                         className={classes.menuLink}
                       >
                         Remote Security Surveillance
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                   </div>
                 </Typography>
                 <Typography variant="body1" className={classes.subMenuItem}>
-                  <RouterLink to="/cloudxvr" className={classes.menuLink}>
+                  <SmartLink to="/cloudxvr" className={classes.menuLink}>
                     Industry based
-                  </RouterLink>
+                  </SmartLink>
                   <div className={classes.superSubMenu}>
                     <Typography variant="body1">
-                      <RouterLink to="/cloudxvr" className={classes.menuLink}>
+                      <SmartLink to="/cloudxvr" className={classes.menuLink}>
                         Education
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink to="/cloudxvr" className={classes.menuLink}>
+                      <SmartLink to="/cloudxvr" className={classes.menuLink}>
                         Healthcare
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink to="/cloudxvr" className={classes.menuLink}>
+                      <SmartLink to="/cloudxvr" className={classes.menuLink}>
                         Public Transport
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink to="/cloudxvr" className={classes.menuLink}>
+                      <SmartLink to="/cloudxvr" className={classes.menuLink}>
                         Retail
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                     <Typography variant="body1">
-                      <RouterLink to="/cloudxvr" className={classes.menuLink}>
+                      <SmartLink to="/cloudxvr" className={classes.menuLink}>
                         Smart & Safe city
-                      </RouterLink>
+                      </SmartLink>
                     </Typography>
                   </div>
                 </Typography>
               </div>
             </Typography>
             <Typography variant="h6" className={classes.menuItem}>
-              <RouterLink to="/support" className={classes.menuLink}>
+              <SmartLink to="/support" className={classes.menuLink}>
                 Support
-              </RouterLink>
+              </SmartLink>
               <div className={classes.subMenu}>
                 <Typography variant="body1">
-                  {/* <RouterLink to="/downloads" className={classes.menuLink}>
+                  {/* <SmartLink to="/downloads" className={classes.menuLink}>
                     Download Center
-                  </RouterLink>
+                  </SmartLink>
                 </Typography>
                 <Typography variant="body1">
-                  <RouterLink to="/datasheet" className={classes.menuLink}>
+                  <SmartLink to="/datasheet" className={classes.menuLink}>
                     Datasheet
-                  </RouterLink> */}
+                  </SmartLink> */}
                 </Typography>
                 {/* <Typography variant="body1">
-                  <RouterLink to="/feedback" className={classes.menuLink}>
+                  <SmartLink to="/feedback" className={classes.menuLink}>
                     Feedback
-                  </RouterLink>
+                  </SmartLink>
                 </Typography> */}
               </div>
             </Typography>
             <Typography variant="h6" className={classes.menuItem}>
-              <RouterLink to="/blog" className={classes.menuLink}>
+              <SmartLink to="/blog" className={classes.menuLink}>
                 Blog
-              </RouterLink>
+              </SmartLink>
             </Typography>
             <Typography variant="h6" className={classes.menuItem}>
-              <RouterLink to="/contact" className={classes.menuLink}>
+              <SmartLink to="/contact" className={classes.menuLink}>
                 Contact Us
-              </RouterLink>
+              </SmartLink>
             </Typography>
             <Typography variant="h6" className={classes.menuItem}>
-              <RouterLink to="/about" className={classes.menuLink}>
+              <SmartLink to="/about" className={classes.menuLink}>
                 About Us
-              </RouterLink>
+              </SmartLink>
             </Typography>
           </Toolbar>
         </AppBar>

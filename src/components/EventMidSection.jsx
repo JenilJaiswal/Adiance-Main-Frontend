@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Globalnetwork from "./patnerPage-components/Globalnetwork";
+import { color } from "@chakra-ui/react";
 
 const EventMidSection = () => {
   const pastEventLogos = [
@@ -22,11 +23,11 @@ const EventMidSection = () => {
       src: "/images/event_carousel_1.png",
       alt: "IFSEC India 2025 - Adiance booth showcase"
     },
-    {
-      id: 2,
-      src: "/images/event_carousel_2.png", 
-      alt: "IFSEC India 2025 - Product demonstration"
-    },
+    // {
+    //   id: 2,
+    //   src: "/images/event_carousel_2.png", 
+    //   alt: "IFSEC India 2025 - Product demonstration"
+    // },
     {
       id: 3,
       src: "/images/event_carousel_3.png",
@@ -44,7 +45,7 @@ const EventMidSection = () => {
   // Auto-scroll functionality
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
+      setCurrentImageIndex((prevIndex) =>
         prevIndex === ifsecEventImages.length - 1 ? 0 : prevIndex + 1
       );
     }, 4000); // Change image every 4 seconds
@@ -67,10 +68,10 @@ const EventMidSection = () => {
                 Collaborating Better, Stronger and Across Industries
               </h1>
               <p className="hero-description">
-                We actively participate in major OEM/ODM, CCTV manufacturing, and security 
-                technology exhibitions to connect with brands, system integrators, distributors, 
-                and global hardware partners. These platforms help us demonstrate our Made-in-India 
-                manufacturing strength, showcase our OEM/ODM capabilities, and build long-term 
+                We actively participate in major OEM/ODM, CCTV manufacturing, and security
+                technology exhibitions to connect with brands, system integrators, distributors,
+                and global hardware partners. These platforms help us demonstrate our Made-in-India
+                manufacturing strength, showcase our OEM/ODM capabilities, and build long-term
                 partnerships with businesses across industries.
               </p>
             </Col>
@@ -86,8 +87,8 @@ const EventMidSection = () => {
               <div className="logos-grid">
                 {pastEventLogos.map((event, idx) => (
                   <div key={idx} className="logo-item">
-                    <img 
-                      src={event.logo} 
+                    <img
+                      src={event.logo}
                       alt={`${event.name} logo`}
                       className="event-logo"
                       onError={(e) => {
@@ -107,17 +108,17 @@ const EventMidSection = () => {
         <Container>
           <Row>
             <Col lg={12} className="text-center">
-              <h2 className="section-title">A Glimpse into Past Events</h2>
+              <p className="section-title">A Glimpse into Past Events</p>
             </Col>
           </Row>
         </Container>
-        
+
         {/* Full Screen Width Container */}
         <div className="full-screen-event-container">
           {/* Image Carousel */}
           <div className="full-width-carousel-container">
             <div className="carousel-wrapper">
-              <div 
+              <div
                 className="carousel-slides-container"
                 style={{
                   transform: `translateX(-${currentImageIndex * 25}%)`
@@ -128,8 +129,8 @@ const EventMidSection = () => {
                     key={image.id}
                     className="carousel-slide"
                   >
-                    <img 
-                      src={image.src} 
+                    <img
+                      src={image.src}
                       alt={image.alt}
                       className="carousel-image"
                       onError={(e) => {
@@ -142,7 +143,7 @@ const EventMidSection = () => {
 
               {/* Progress Bar */}
               <div className="progress-bar">
-                <div 
+                <div
                   className="progress-fill"
                   style={{
                     width: `${((currentImageIndex + 1) / ifsecEventImages.length) * 100}%`
@@ -158,8 +159,8 @@ const EventMidSection = () => {
               <Row className="event-content-row">
                 <Col xs={12} className="event-content-wrapper">
                   <div className="event-logo-section">
-                    <img 
-                      src="/images/IFSEC_logo.png" 
+                    <img
+                      src="/images/IFSEC_logo.png"
                       alt="IFSEC India Logo"
                       className="event-logo-responsive"
                       onError={(e) => {
@@ -168,12 +169,13 @@ const EventMidSection = () => {
                     />
                   </div>
                   <div className="event-text-section">
+                    <h3 className="event-title-responsive">IFSEC India 2025</h3>
                     <p className="event-description-responsive">
                       At IFSEC India 2025, Adiance Technologies and its flagship brand ArcisAI showcased our Made-in-India OEM-ODM expertise under the ArcisAI × Adiance identity. Our booth highlighted the full AI CCTV range - Dome, Bullet, PTZ - along with OEM/ODM services, PCB assembly, and hardware customization, reflecting our commitment to delivering world-class CCTV solutions.
                     </p>
                     <div className="event-button-section">
-                      <Button 
-                        variant="primary" 
+                      <Button
+                        variant="primary"
                         className="event-btn-responsive"
                         href="/event/ifsec-india-2025"
                       >
@@ -186,10 +188,10 @@ const EventMidSection = () => {
             </Container>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* CTA Section */}
-      <Globalnetwork data={ctaData} />
+      < Globalnetwork data={ctaData} />
 
       <style jsx>{`
         .event-page {
@@ -306,11 +308,13 @@ const EventMidSection = () => {
         .event-logo-section {
           flex-shrink: 0;
           background: white;
+          margin: 15px;
           padding: 15px;
           border-radius: 8px;
           display: flex;
           align-items: center;
           justify-content: center;
+          transform: scale(1.4);
         }
 
         .event-logo-responsive {
@@ -324,7 +328,12 @@ const EventMidSection = () => {
           display: flex;
           flex-direction: column;
         }
-
+        .event-title-responsive{
+          color: white;
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
         .event-description-responsive {
           color: white;
           font-size: 1rem;
@@ -981,7 +990,7 @@ const EventMidSection = () => {
           }
         }
       `}</style>
-    </div>
+    </div >
   );
 };
 

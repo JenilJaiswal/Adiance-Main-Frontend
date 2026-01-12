@@ -15,7 +15,7 @@ import {
     Center,
     ChakraProvider,
 } from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
+import SmartLink from "./SmartLink";
 import { getBlogs } from "../AdianceAdmin/pages/Dashboard/components/blog"; // Updated path
 
 // The base URL for your images.
@@ -121,8 +121,8 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
     });
 
     return (
-        // The entire card is now wrapped in a RouterLink
-        <Link as={RouterLink} to={url} _hover={{ textDecoration: "none" }}>
+        // The entire card is now wrapped in a SmartLink
+        <Link as={SmartLink} to={url} _hover={{ textDecoration: "none" }}>
             <Flex
                 w="100%"
                 borderRadius={{ base: "16px", md: "24px" }}
@@ -305,7 +305,7 @@ const BlogViewContent = () => {
                         </Text>
                     </Flex>
                     <Link
-                        as={RouterLink}
+                        as={SmartLink}
                         to="/blog"
                         _hover={{ textDecoration: "none" }}
                         display={{ base: "none", md: "block" }}
@@ -420,7 +420,7 @@ const BlogViewContent = () => {
                     )}
                 </Stack>
                 <Link
-                    as={RouterLink}
+                    as={SmartLink}
                     to="/blog"
                     _hover={{ textDecoration: "none" }}
                     display={{ base: "block", md: "none" }}

@@ -3,7 +3,7 @@ import { TextField, Grid } from "@mui/material";
 import axios from "axios";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Typography from "@mui/material/Typography";
-import { Link as RouterLink } from "react-router-dom";
+import SmartLink from "./SmartLink";
 import Button from "react-bootstrap/Button";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ForwardToInboxIcon from "@mui/icons-material/ForwardToInbox";
@@ -242,143 +242,146 @@ const Footer = () => {
         </div>
 
         <div className="footer-column">
-          <Typography variant="h6" className="column-title">
+          <Typography variant="body1" component="p" className="column-title">
             About Us
           </Typography>
           <ul className="menu">
             <li>
-              <RouterLink to="/about">Company Profile</RouterLink>
+              <SmartLink to="/about">Company Profile</SmartLink>
             </li>
             <li>
-              <RouterLink to="/cyber-security">Cyber Security</RouterLink>
+              <SmartLink to="/cyber-security">Cyber Security</SmartLink>
             </li>
             {/* <li> <a href="#">Support</a> </li> */}{" "}
             <li>
-              <RouterLink to="/compliance">Compliance</RouterLink>
+              <SmartLink to="/compliance">Compliance</SmartLink>
+            </li>
+            <li>
+              <SmartLink to="/event">Events</SmartLink>
             </li>
             {/* <li>
-              <RouterLink to="/sustainability">Sustainability</RouterLink>
+              <SmartLink to="/sustainability">Sustainability</SmartLink>
             </li> */}
             {/* <li>
-              <RouterLink to="#">Quality</RouterLink>
+              <SmartLink to="#">Quality</SmartLink>
             </li> */}
             {/* <li>
-              <RouterLink to="/future-and-growth">Future and Growth</RouterLink>
+              <SmartLink to="/future-and-growth">Future and Growth</SmartLink>
             </li> */}
             {/* <li>
-              <RouterLink to="/360-approach">360 Approach</RouterLink>
+              <SmartLink to="/360-approach">360 Approach</SmartLink>
             </li> */}
           </ul>
         </div>
 
         <div className="footer-column">
-          <Typography variant="h6" className="column-title">
+          <Typography variant="body1" component="p" className="column-title">
             Scenario Based Solutions
           </Typography>
           <ul className="menu">
             <li>
               {/* <DoubleArrowIcon className="doubleArrow" /> */}
-              <RouterLink to="/public-safety">
+              <SmartLink to="/public-safety">
                 Public Safety and Security
-              </RouterLink>
+              </SmartLink>
             </li>
             <li>
               {/* <DoubleArrowIcon className="doubleArrow" /> */}
-              <RouterLink to="/trafic-management">
+              <SmartLink to="/trafic-management">
                 Traffic Management & Monitoring
-              </RouterLink>
+              </SmartLink>
             </li>
             <li>
               {/* <DoubleArrowIcon className="doubleArrow" /> */}
-              <RouterLink to="/crowd-control">Crowd Control</RouterLink>
+              <SmartLink to="/crowd-control">Crowd Control</SmartLink>
             </li>
             <li>
               {/* <DoubleArrowIcon className="doubleArrow" /> */}
-              <RouterLink to="/smart-cities">
+              <SmartLink to="/smart-cities">
                 Smart Cities & Infrastructure
-              </RouterLink>
+              </SmartLink>
             </li>
             <li>
               {/* <DoubleArrowIcon className="doubleArrow" /> */}
-              <RouterLink to="/remote-security">Remote-Security</RouterLink>
+              <SmartLink to="/remote-security">Remote-Security</SmartLink>
             </li>
             <li>
               {/* <DoubleArrowIcon className="doubleArrow" /> */}
-              <RouterLink to="/high-traffic">
+              <SmartLink to="/high-traffic">
                 High-Traffic Infrastructure
-              </RouterLink>
+              </SmartLink>
             </li>
           </ul>
         </div>
 
         <div className="footer-column">
-          <Typography variant="h6" className="column-title">
+          <Typography variant="body1" component="p" className="column-title">
             Industry Based Solutions
           </Typography>
           <ul className="menu">
             <li>
-              <RouterLink to="/education">Education</RouterLink>
+              <SmartLink to="/education">Education</SmartLink>
             </li>
             <li>
-              <RouterLink to="/healthcare">Healthcare</RouterLink>
+              <SmartLink to="/healthcare">Healthcare</SmartLink>
             </li>
 
             <li>
-              <RouterLink to="/public-transport">Public Transport</RouterLink>
+              <SmartLink to="/public-transport">Public Transport</SmartLink>
             </li>
             <li>
-              <RouterLink to="/retail">Retail</RouterLink>
+              <SmartLink to="/retail">Retail</SmartLink>
             </li>
             <li>
-              <RouterLink to="/smart-safe-city">Smart & Safe city</RouterLink>
+              <SmartLink to="/smart-safe-city">Smart & Safe city</SmartLink>
             </li>
             <li>
-              <RouterLink to="/bank-finance">Banking & Finance</RouterLink>
+              <SmartLink to="/bank-finance">Banking & Finance</SmartLink>
             </li>
           </ul>
         </div>
 
         <div className="footer-column">
-          <Typography variant="h6" className="column-title">
+          <Typography variant="body1" component="p" className="column-title">
             Newsroom
           </Typography>
           <ul className="menu">
             <li>
-              <RouterLink to="/blog">Blogs</RouterLink>
+              <SmartLink to="/blog">Blogs</SmartLink>
             </li>
             {/* <li>
-              <RouterLink to="/#">Success Story</RouterLink>
+              <SmartLink to="/#">Success Story</SmartLink>
             </li> */}
           </ul>
 
-          <Typography variant="h6" className="column-title">
+          <Typography variant="body1" component="p" className="column-title">
             Support
           </Typography>
           <ul className="menu">
             <li>
-              <RouterLink to="/warranty-service">Warranty Service</RouterLink>
+              <SmartLink to="/warranty-service">Warranty Service</SmartLink>
             </li>{" "}
             <li>
-              <RouterLink to="/privacy-policy">Privacy Policy</RouterLink>
+              <SmartLink to="/privacy-policy">Privacy Policy</SmartLink>
             </li>
             <li>
-              <RouterLink to="/warranty-policy">Warranty Policy</RouterLink>
+              <SmartLink to="/warranty-policy">Warranty Policy</SmartLink>
             </li>
             <li>
-              <RouterLink to="/terms-of-service">Terms of Service</RouterLink>
+              <SmartLink to="/terms-of-service">Terms of Service</SmartLink>
             </li>
             <li>
-              <RouterLink to="/feedback">Feedback</RouterLink>
+              <SmartLink to="/feedback">Feedback</SmartLink>
             </li>
           </ul>
         </div>
 
         <div className="footer-column">
-          <RouterLink to="/contact" style={{ textDecoration: "none" }}>
-            <Typography variant="h6" className="column-title">
+          <SmartLink to="/contact" style={{ textDecoration: "none" }}>
+            <Typography variant="body1" component="p" className="column-title">
               Contact Us
             </Typography>
-          </RouterLink>
+          </SmartLink>
           <div
             className="contact-details"
             sx={{
@@ -457,7 +460,7 @@ const Footer = () => {
         <ArrowUpwardIcon />
       </IconButton>
 
-      <RouterLink to="/contact">
+      <SmartLink to="/contact">
         <IconButton
           style={{
             backgroundColor: "#bf0603",
@@ -470,7 +473,7 @@ const Footer = () => {
         >
           <ForwardToInboxIcon />
         </IconButton>
-      </RouterLink>
+      </SmartLink>
 
       <div className="copyright-container">
         <Typography variant="body1" className="copyright-text">

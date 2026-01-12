@@ -63,8 +63,9 @@ const Globalnetwork = ({ data }) => {
               </Typography>
             </Typography>
             <Typography
-              variant="h6"
-              sx={{ marginTop: "1rem", textAlign: "center" }}
+              variant="body1"
+              component="p"
+              sx={{ marginTop: "1rem", textAlign: "center", fontSize: "1rem" }}
             >
               {/* Use dynamic description */}
               {data.description}

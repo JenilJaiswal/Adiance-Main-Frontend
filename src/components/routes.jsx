@@ -202,7 +202,7 @@ const routes = [
   { path: "/cloud-application", element: <CloudApplication /> },
 
   { path: "/partners", element: <PartnersPage /> },
-  // { path: "/thanks", element: <ThankYouPage /> },
+  { path: "/thanks", element: <ThankYouPage /> },
   { path: "/wifi-ptz-camera", element: <WifiCameraPdf /> },
 
   // Catch-all route

@@ -76,6 +76,8 @@ function getLastModTime(url) {
       '/wifi-ptz-camera': 'src/components/WifiCameraPdf.jsx',
       '/robotics': 'src/components/Robotics.jsx',
       '/autoplay': 'src/components/AutoplayCarousel.jsx',
+      '/event': 'src/components/Event.jsx',
+      '/event/ifsec-india-2025': 'src/components/IfsecIndia2025.jsx',
     };
 
     const filePath = urlToFileMap[url];
@@ -86,7 +88,7 @@ function getLastModTime(url) {
         'src/components/routes.jsx',
         'package.json'
       ];
-      
+
       for (const fallbackFile of fallbackFiles) {
         try {
           const stats = statSync(path.join(__dirname, '..', fallbackFile));
@@ -194,6 +196,10 @@ const staticPages = [
 
   // PDF pages
   { url: "/wifi-ptz-camera", changefreq: "monthly", priority: 0.6 },
+
+  // Event pages
+  { url: "/event", changefreq: "monthly", priority: 0.6 },
+  { url: "/event/ifsec-india-2025", changefreq: "monthly", priority: 0.6 },
 
   // Miscellaneous
   { url: "/robotics", changefreq: "weekly", priority: 0.8 },
@@ -354,7 +360,7 @@ async function createSitemap() {
         sitemap.write(url);
       });
 
-sitemap.end();
+      sitemap.end();
 
       // Wait for this sitemap to complete
       await streamToPromise(sitemap);
@@ -372,8 +378,7 @@ sitemap.end();
     console.log("\nSitemap Summary:");
     console.log(`- Homepage: 1 URL (priority: 1.0, changefreq: daily)`);
     console.log(
-      `- Static pages: ${
-        staticPages.length - 1
+      `- Static pages: ${staticPages.length - 1
       } URLs (priority: 0.8, changefreq: weekly)`
     );
     console.log(
