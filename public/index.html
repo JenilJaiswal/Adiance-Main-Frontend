@@ -10,7 +10,7 @@
 
 
 
-  <!-- Google Tag Manager -->
+  <!-- Google Tag Manager - TEMPORARILY DISABLED TO REMOVE CHATBOT -->
   <script>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
@@ -25,11 +25,12 @@
   </script>
   <!-- End Google Tag Manager -->
 
-  <script>
+  <!-- ZOHO SALESIQ CHATBOT - COMPLETELY DISABLED -->
+  <!-- <script>
     window.$zoho = window.$zoho || {};
     $zoho.salesiq = $zoho.salesiq || { ready: function () { } };
   </script>
-  <!-- <script id="zsiqscript"
+  <script id="zsiqscript"
     src="https://salesiq.zohopublic.in/widget?wc=siq4348f6601441f1b7820abeadf26bb6c8cc48c3130ed6378d278e49b7d0861436"
     defer></script> -->
 
@@ -54,6 +55,34 @@
     Manufacturing & AI Innovation - Adiance Technologies
   </title>
 
+  <!-- Force hide any chatbot widgets -->
+  <style>
+    /* Hide Zoho SalesIQ chatbot elements */
+    .zsiq-float,
+    .zsiq-flexM,
+    .zsiq_cnt,
+    #zsiq_float,
+    [id*="zsiq"],
+    [class*="zsiq"],
+    [class*="salesiq"] {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+    
+    /* Hide any other chat widgets */
+    [id*="chat"],
+    [class*="chat-widget"],
+    [class*="chatbot"],
+    [class*="tawk"],
+    [class*="intercom"],
+    [class*="drift"] {
+      display: none !important;
+      visibility: hidden !important;
+    }
+  </style>
+
   <!-- Meta Pixel Code -->
   <script>
     !function (f, b, e, v, n, t, s) {
@@ -77,9 +106,9 @@
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7PMRCM" height="0" width="0"
-      style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- Google Tag Manager (noscript) - TEMPORARILY DISABLED -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7PMRCM" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript> -->
   <!-- End Google Tag Manager (noscript) -->
 
   <div id="root"></div>
@@ -94,7 +123,8 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=0fe5f817"></script>
+  <!-- LUCKY ORANGE ANALYTICS - DISABLED (includes chat widget) -->
+  <!-- <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=0fe5f817"></script> -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

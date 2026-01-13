@@ -71,8 +71,8 @@ function getLastModTime(url) {
       '/terms-of-service': 'src/components/TermsOfService.jsx',
       '/privacy-policy': 'src/components/PrivacyPolicy.jsx',
       '/blog': 'src/components/Blogs.jsx',
-      '/thank-you': 'src/components/ThankYouPage.jsx',
-      '/thanks': 'src/components/ThankYouPage.jsx',
+      // '/thank-you': 'src/components/ThankYouPage.jsx',
+      // '/thanks': 'src/components/ThankYouPage.jsx',
       '/wifi-ptz-camera': 'src/components/WifiCameraPdf.jsx',
       '/robotics': 'src/components/Robotics.jsx',
       '/autoplay': 'src/components/AutoplayCarousel.jsx',
@@ -191,8 +191,8 @@ const staticPages = [
   { url: "/blog", changefreq: "weekly", priority: 0.8 },
 
   // Thank you pages
-  { url: "/thank-you", changefreq: "monthly", priority: 0.3 },
-  { url: "/thanks", changefreq: "monthly", priority: 0.3 },
+  // { url: "/thank-you", changefreq: "monthly", priority: 0.3 },
+  // { url: "/thanks", changefreq: "monthly", priority: 0.3 },
 
   // PDF pages
   { url: "/wifi-ptz-camera", changefreq: "monthly", priority: 0.6 },

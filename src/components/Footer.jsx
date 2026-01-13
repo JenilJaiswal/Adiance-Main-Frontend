@@ -24,7 +24,9 @@ import {
 } from "@mui/icons-material";
 
 const Footer = () => {
+  // CHATBOT REMOVED - All chatbot functionality has been disabled
   useEffect(() => {
+    // TAWK.TO CHATBOT - COMPLETELY DISABLED
     // var Tawk_API = Tawk_API || {},
     //   Tawk_LoadStart = new Date();
     // (function () {
