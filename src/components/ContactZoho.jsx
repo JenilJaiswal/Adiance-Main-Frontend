@@ -99,6 +99,32 @@ const ContactZoho = () => {
     return emailRegex.test(email);
   };
 
+  // Phone validation function
+  const validatePhone = (phone) => {
+    // Must start with 6-9 and be 10 digits
+    if (!/^[6-9]\d{9}$/.test(phone)) {
+      return "Mobile number must be 10 digits and start with 6, 7, 8, or 9";
+    }
+
+    // Prevent all same digits
+    if (/^(\d)\1{9}$/.test(phone)) {
+      return "Mobile number cannot have all same digits";
+    }
+
+    // Prevent sequential numbers
+    const sequentialAsc = "0123456789";
+    const sequentialDesc = "9876543210";
+
+    if (
+      sequentialAsc.includes(phone) ||
+      sequentialDesc.includes(phone)
+    ) {
+      return "Sequential mobile numbers are not allowed";
+    }
+
+    return null; // valid
+  };
+
   // handleSubmit logic with enhanced validation
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -123,11 +149,12 @@ const ContactZoho = () => {
       return;
     }
 
-    // Validate mobile number (exactly 10 digits)
-    if (formData.phone.length !== 10) {
+    // ✅ Phone validation (NOW USED)
+    const phoneError = validatePhone(formData.phone);
+    if (phoneError) {
       setSnackbar({
         open: true,
-        message: "Mobile number must be exactly 10 digits",
+        message: phoneError,
         severity: "error",
       });
       return;
@@ -150,10 +177,6 @@ const ContactZoho = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-        // body: JSON.stringify({
-        //     ...formData,
-        //     formType: "Contact",
-        //   }),
       });
 
       const crmPayload = {
@@ -177,13 +200,7 @@ const ContactZoho = () => {
       if (!(crmRes.status === 200 || crmRes.status === 201))
         throw new Error("CRM API failed");
 
-      // setSnackbar({
-      //   open: true,
-      //   message: "Your enquiry has been submitted successfully.",
-      //   severity: "success",
-      // });
-
-      setTimeout(() => navigate("/thank-you"), 1500); // Navigate after a short delay
+      setTimeout(() => navigate("/thank-you"), 1500);
     } catch (error) {
       console.error("Submission Error:", error);
       setSnackbar({
@@ -195,6 +212,8 @@ const ContactZoho = () => {
       setIsLoading(false);
     }
   };
+
+
 
   return (
     <Box sx={{ py: { xs: 4, md: 8 }, bgcolor: "grey.100" }}>
