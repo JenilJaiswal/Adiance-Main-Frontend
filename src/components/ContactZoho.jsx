@@ -93,11 +93,17 @@ const ContactZoho = () => {
     setSnackbar((prev) => ({ ...prev, open: false }));
   };
 
-  // handleSubmit logic is the same, just with Snackbar instead of Toast
-  const handleSubmit = async (e) => {
+  // Email validation function
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
+  // handleSubmit logic with enhanced validation
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Check for required fields
     if (
       !formData.name ||
       !formData.email ||
@@ -112,6 +118,26 @@ const ContactZoho = () => {
       setSnackbar({
         open: true,
         message: "Please fill in all required fields marked with *",
+        severity: "error",
+      });
+      return;
+    }
+
+    // Validate mobile number (exactly 10 digits)
+    if (formData.phone.length !== 10) {
+      setSnackbar({
+        open: true,
+        message: "Mobile number must be exactly 10 digits",
+        severity: "error",
+      });
+      return;
+    }
+
+    // Validate email format
+    if (!isValidEmail(formData.email)) {
+      setSnackbar({
+        open: true,
+        message: "Please enter a valid email address",
         severity: "error",
       });
       return;
@@ -217,6 +243,8 @@ const ContactZoho = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="10-digit number"
+                  helperText="Enter exactly 10 digits"
+                  error={formData.phone.length > 0 && formData.phone.length !== 10}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -228,6 +256,8 @@ const ContactZoho = () => {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
+                  helperText="Enter a valid email address"
+                  error={formData.email.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)}
                 />
               </Grid>
               {/* Row 3 */}
