@@ -1,9 +1,11 @@
 import React from "react";
-import Header from "./Header";
-import ImageSlider from "./ImageSlider";
+import Header from "../N_Component/Header/Header";
+import Home_Slider from "../Pages/Home/Home_Slider/Home_Slider";
+import What_We_Do from "../Pages/Home/WhatWeDo/WhatWeDo";
+// import ImageSlider from "./ImageSlider";
 import ProductSlider from "./ProductSlider";
 import MidSection from "./MidSection";
-import Footer from "./Footer";
+import Footer from "../N_Component/Footer/Footer";
 import AboutSlider from "./AboutSlider";
 import { Helmet } from "react-helmet";
 import AutoplayCarousel from "./AutoplayCarousel";
@@ -11,15 +13,16 @@ import IconsWithTitles from "./IconsWithTitles";
 import IfsecModal from "./IfsecModal";
 import { useLocation } from "react-router-dom";
 import PopUpForm from "./PopUpForm";
-import Certifications from "./Certifications";
-import OurOfferings from "./OurOfferings";
+// import Certifications from "./Certifications";
+// import OurOfferings from "./OurOfferings";
 import InnovationHome from "./InnovationHome";
 import SseriesCamera from "./s-series-page/SseriesCamera";
 import FaqsSection from "./faqsSection";
 import faqsData from "./faqsData";
-import Achieved from "./Achieved";
+// import Achieved from "./Achieved";
 import BlogView from "./BlogView";
 import Testimonials from "./s-series-page/Testimonials";
+import Home_mid from "../Pages/Home/Home_Mid/Home_mid";
 
 function Home() {
   const organizationSchema = { "@context": "http://schema.org", "@type": "Organization", "name": "Adiance Technologies", "url": "https://www.adiance.com", "logo": "https://www.adiance.com/images/Logo.png", "contactPoint": { "@type": "ContactPoint", "telephone": "+91 9687779999", "email": "contact@adiance.com", "contactType": "Sales", "areaServed": "Global" }, "sameAs": ["https://www.facebook.com/adiancetechnologies", "https://www.linkedin.com/company/adiancetechnologies", "https://x.com/adiancetech", "https://www.instagram.com/adiancetech/", "https://youtube.com/@adiancetechnologies"], "address": { "@type": "PostalAddress", "streetAddress": "7, Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev", "addressLocality": "Ahmedabad", "addressRegion": "Gujarat", "postalCode": "380054", "addressCountry": "IN" }, "foundingDate": "2003", "description": "Searching for for a reliable CCTV camera manufacturing company in India? Adiance Technologies provides CCTV cameras, NVRs, cloud VMS and custom OEM/ODM electronics solutions." };
@@ -107,23 +110,24 @@ function Home() {
       {/* <IfsecModal /> */}
       {/* <PopUpForm /> */}
 
-      <ImageSlider />
+      {/* <ImageSlider /> */}
+      <Home_Slider />
+      <What_We_Do />
       {/* <ProductSlider /> */}
       {/* <IconsWithTitles /> */}
-      <MidSection />
-      <Certifications />
-      <InnovationHome type="service" />
-      <OurOfferings />
-      <Achieved />
-      <BlogView />
+      {/* <MidSection /> */}
+      <Home_mid />
+      {/* <OurOfferings />
+      <Achieved /> */}
+      {/* <BlogView /> */}
       {/*  */}
-      <Testimonials />
-      <SseriesCamera
+      {/* <Testimonials /> */}
+      {/* <SseriesCamera
         title="Start Your OEM/ODM Project With Adiance — Connect With Our Engineering Team"
         buttonText="Start Your Project"
         subTitle={null}
-      />
-      <FaqsSection faqsList={faqsData.home} />
+      /> */}
+      {/* <FaqsSection faqsList={faqsData.home} /> */}
       <Footer />
     </div>
   );

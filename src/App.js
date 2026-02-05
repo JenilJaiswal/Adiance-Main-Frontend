@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./N_Component/Style.css";
 import {
   BrowserRouter as Router,
   Route,
@@ -17,7 +18,7 @@ const CombinedRedirect = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    let targetPath = location.pathname;
+  let targetPath = location.pathname;
 
     // Redirect specific path
     if (targetPath === "/anrpcamera") {

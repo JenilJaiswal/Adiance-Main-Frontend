@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid";
 import AutoplayCarousel from "./AutoplayCarousel";
 import InnovationHome from "./InnovationHome";
 import OurOfferings from "./OurOfferings";
-import WhatWeDo from "./WhatWeDo";
+// import WhatWeDo from "./WhatWeDo";
 import Certifications from "./Certifications";
 
 const MidSection = () => {
@@ -51,7 +51,7 @@ const MidSection = () => {
           </Grid>
         </Grid>
       </div> */}
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
       <AutoplayCarousel />
       <InnovationHome />
       {/* <AboutSlider /> */}

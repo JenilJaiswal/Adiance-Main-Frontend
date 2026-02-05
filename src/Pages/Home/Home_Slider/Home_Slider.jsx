@@ -1,12 +1,12 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/ImageSlider.css";
+import "./Home_Slider.css";
 
-const ImageSlider = () => {
+const Home_Slider = () => {
   const slides = [
     {
-      image: "/images/slider1.png",
+      image: "/N_Images/slider1.png",
       heading: "India's Top Non-Chinese SoC CCTV Camera Manufacturer",
       subheading:
         "Designed, Developed & Manufactured in India for Reliable, Secure Surveillance.",
@@ -14,7 +14,7 @@ const ImageSlider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider2.png",
+      image: "/N_Images/slider2.png",
       heading: "Your Trusted OEM, ODM & JDM CCTV Manufacturing Partner",
       subheading:
         "From design to production — complete engineering, integration and delivery under one roof.",
@@ -22,14 +22,14 @@ const ImageSlider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider3.png",
+      image: "/N_Images/slider3.png",
       heading: "Advanced Edge AI Cameras Built for Performance & Precision",
       subheading: "S-Series & Eco-Series powered by secure, non-Chinese SoC technology.",
       ctaText: "View ArcisAI Products",
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider4.png",
+      image: "/N_Images/slider4.png",
       heading: "Made in India Security Cameras to World",
       subheading:
         "Export-ready product engineering with global certifications and world-class standards.",
@@ -37,7 +37,7 @@ const ImageSlider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider5.png",
+      image: "/N_Images/slider5.png",
       heading: "Edge AI, Cloud AI & Gen AI Powered Video Surveillance Solutions",
       subheading:
         "Smart, scalable, and intelligent security solutions built into ArcisAI’s ecosystem of cameras and VMS platforms.",
@@ -84,7 +84,6 @@ const ImageSlider = () => {
           font-size: 3rem;
           font-weight: 700;
           margin-bottom: 25px;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
           font-family: 'Roboto', sans-serif;
         }
 
@@ -93,28 +92,28 @@ const ImageSlider = () => {
           font-weight: 700;
           line-height: 1.2;
           margin-bottom: 25px;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
           font-family: 'Roboto', sans-serif;
         }
 
         .carousel-caption-custom p {
           font-size: 1.5rem;
           margin-bottom: 25px;
-          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
           font-family: 'Roboto', sans-serif;
           font-weight: 400;
         }
 
         .cta-button {
-          // background-color: #007bff; 
           color: white;
           padding: 10px 20px;
           text-decoration: none;
           font-weight: 500;
           display: inline-block;
-          border: 1px solid #ffffff;
+          border: 1px solid white;
           transition: background-color 0.3s;
           font-family: 'Roboto', sans-serif;
+        }
+        .cta-button:hover{
+          background: #BF0603;
         }
 
         @media (max-width: 768px) {
@@ -191,4 +190,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default Home_Slider;

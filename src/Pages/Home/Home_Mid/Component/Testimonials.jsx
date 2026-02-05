@@ -6,54 +6,54 @@ import {
   Typography,
   Grid,
   Button,
-  Rating, // 1. Import Rating component
+  Rating,
 } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Container } from "react-bootstrap";
 
-// 2. Updated testimonials array with 'star' field
+// Updated testimonials array with 'star' field
 const testimonials = [
   {
     title: "Smart City Program Manager",
     review:
-      "“ArcisAI S-Series AI CCTV Cameras gave us real-time visibility across plazas and transit hubs. We moved from passive footage to instant actions—crowd alerts, incident clips, and clear audit trails. Exactly what a modern city needs.”",
+      "ArcisAI S-Series AI CCTV Cameras gave us real-time visibility across plazas and transit hubs. We moved from passive footage to instant actions—crowd alerts, incident clips, and clear audit trails. Exactly what a modern city needs.",
     star: 5,
   },
   {
     title: "University Security Director",
     review:
-      "“We deployed EdgeAI CCTV Cameras in exam halls and corridors. False alarms dropped, proctoring got easier, and the team finally has one app for live view, alerts, and reports. It’s made campus security calmer and smarter.”",
+      "We deployed EdgeAI CCTV Cameras in exam halls and corridors. False alarms dropped, proctoring got easier, and the team finally has one app for live view, alerts, and reports. It's made campus security calmer and smarter.",
     star: 5,
   },
   {
     title: "Hospital Operations Head",
     review:
-      "“The AI Security Cameras helped us protect ICU entrances and pharmacy counters without adding staff. Access control, clear face captures, and reliable night vision keep compliance simple and patients safer.”",
+      "The AI Security Cameras helped us protect ICU entrances and pharmacy counters without adding staff. Access control, clear face captures, and reliable night vision keep compliance simple and patients safer.",
     star: 5,
   },
   {
     title: "Banking (Branch Network Lead)",
     review:
-      "“With Arc-S-Series AI CCTV Cameras, we standardized security across branches and ATMs. Instant deterrence and clean evidence shortened investigations and improved audit readiness. It’s security we can bank on.”",
+      "With Arc-S-Series AI CCTV Cameras, we standardized security across branches and ATMs. Instant deterrence and clean evidence shortened investigations and improved audit readiness. It's security we can bank on.",
     star: 5,
   },
   {
     title: "Traffic Management Center Supervisor",
     review:
-      "“Our EdgeAI CCTV Cameras now flag incidents and lane violations in seconds. Operators get fewer noise alerts and more actionable ones—signal timing and response units both improved.”",
+      "Our EdgeAI CCTV Cameras now flag incidents and lane violations in seconds. Operators get fewer noise alerts and more actionable ones—signal timing and response units both improved.",
     star: 5,
   },
   {
     title: "Retail Chain Loss Prevention Manager",
     review:
-      "“The AI Security Cameras caught missing-object events in stockrooms and identified repeat patterns. Shrink went down, and the reports helped us adjust staffing and floor layout. Real ROI, not just video.”",
+      "The AI Security Cameras caught missing-object events in stockrooms and identified repeat patterns. Shrink went down, and the reports helped us adjust staffing and floor layout. Real ROI, not just video.",
     star: 5,
   },
   {
     title: "Manufacturing Plant EHS Manager",
     review:
-      "“ArcisAI S-Series AI CCTV Cameras gave us clear coverage on loading bays and restricted zones. Line-crossing and area-intrusion alerts trigger instantly, and the footage is actually usable for training and safety reviews.”",
+      "ArcisAI S-Series AI CCTV Cameras gave us clear coverage on loading bays and restricted zones. Line-crossing and area-intrusion alerts trigger instantly, and the footage is actually usable for training and safety reviews.",
     star: 5,
   },
 ];
@@ -76,9 +76,7 @@ const Testimonials = () => {
   };
 
   const handleBack = () => {
-    setIndex(
-      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
-    );
+    setIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
   };
 
   // Robust function to get visible testimonials and handle array wrap-around
@@ -87,10 +85,10 @@ const Testimonials = () => {
       currentWidth < 600
         ? 1
         : currentWidth < 960
-          ? 2
-          : currentWidth < 1280
-            ? 3
-            : 4;
+        ? 2
+        : currentWidth < 1280
+        ? 3
+        : 4;
 
     const visible = [];
     for (let i = 0; i < numToShow; i++) {
@@ -130,11 +128,9 @@ const Testimonials = () => {
                 <Card
                   sx={{
                     padding: "1rem",
-                    // borderRadius: "20px",
                     height: "100%", // Ensures all cards in a row are same height
                   }}
                 >
-                  {/* 3. Updated CardContent UI */}
                   <CardContent
                     sx={{
                       height: "100%",
@@ -171,7 +167,7 @@ const Testimonials = () => {
           </Grid>
         </Box>
 
-        {/* Buttons below the slider (unchanged) */}
+        {/* Buttons below the slider */}
         <Box
           sx={{
             display: "flex",
@@ -187,7 +183,7 @@ const Testimonials = () => {
             sx={{
               backgroundColor: "#ffffff",
               color: "#BF0603",
-              borderRadius: "100%",
+              // borderRadius: "0", // Changed from "100%" to "0" for square design
               minWidth: "auto",
               width: "50px",
               height: "50px",
@@ -195,20 +191,23 @@ const Testimonials = () => {
               "&:hover": {
                 backgroundColor: "#BF0603",
                 color: "#ffffff",
+                transform: "translateY(-2px)", // Added hover lift effect
               },
-              border: "none",
-              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+              border: "2px solid #BF0603", // Added border for better definition
+              boxShadow: "0px 4px 10px rgba(191, 6, 3, 0.2)",
+              transition: "all 0.3s ease", // Smooth transitions
             }}
           >
             <ArrowBackIosIcon sx={{ fontSize: "1rem", ml: "0.5rem" }} />
           </Button>
+
           <Button
             onClick={handleNext}
             variant="contained"
             sx={{
               backgroundColor: "#ffffff",
               color: "#BF0603",
-              borderRadius: "100%",
+              // borderRadius: "0", // Changed from "100%" to "0" for square design
               minWidth: "auto",
               width: "50px",
               height: "50px",
@@ -216,9 +215,11 @@ const Testimonials = () => {
               "&:hover": {
                 backgroundColor: "#BF0603",
                 color: "#ffffff",
+                transform: "translateY(-2px)", // Added hover lift effect
               },
-              border: "none",
-              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+              border: "2px solid #BF0603", // Added border for better definition
+              boxShadow: "0px 4px 10px rgba(191, 6, 3, 0.2)",
+              transition: "all 0.3s ease", // Smooth transitions
             }}
           >
             <ArrowForwardIosIcon sx={{ fontSize: "1rem" }} />

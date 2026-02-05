@@ -125,7 +125,7 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
         <Link as={SmartLink} to={url} _hover={{ textDecoration: "none" }}>
             <Flex
                 w="100%"
-                borderRadius={{ base: "16px", md: "24px" }}
+                // borderRadius={{ base: "16px", md: "24px" }}
                 overflow="hidden"
                 direction={flexDirection}
                 h={{ base: "auto", sm: "auto", md: "450px", lg: "500px" }}
@@ -190,7 +190,7 @@ const BlogPlaceholderCard = ({ layoutVariant = "textFirst" }) => {
     return (
         <Flex
             w="100%"
-            borderRadius={{ base: "16px", md: "24px" }}
+            // borderRadius={{ base: "16px", md: "24px" }}
             overflow="hidden"
             direction={flexDirection}
             h={{ base: "auto", sm: "auto", md: "450px", lg: "500px" }}
@@ -249,7 +249,7 @@ const BlogViewContent = () => {
     }, [currentIndex, isMobile, isPaused, blogs.length]);
 
     return (
-        <Box bg="white" p="2%" borderRadius="24px">
+        <Box bg="white" p="2%" >
             <Flex
                 direction={{ base: "column", lg: "row" }}
                 align="center"
@@ -269,7 +269,8 @@ const BlogViewContent = () => {
                     <Heading
                         as="h2"
                         fontSize={{ base: "24px", md: "48px" }}
-                        fontWeight="bold"
+                        fontWeight="600"
+                        color="#444444"
                     >
                         Our Latest{" "}
                         <Box as="span" color="#bf0603">
@@ -316,7 +317,7 @@ const BlogViewContent = () => {
                             _hover={{ bg: "gray.300" }}
                             size="lg"
                             px={8}
-                            borderRadius="24px"
+                            // borderRadius="24px"
                         >
                             View all
                             <Box ml="2">
@@ -432,7 +433,7 @@ const BlogViewContent = () => {
                         _hover={{ bg: "gray.300" }}
                         size="lg"
                         px={8}
-                        borderRadius="24px"
+                        // borderRadius="24px"
                     >
                         View all
                         <Box ml="2">
