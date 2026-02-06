@@ -30,7 +30,7 @@ const Innovation = () => {
     },
     {
       id: 3,
-      title: "STQC Cloud VMS — Secure Video Management System",
+      title: "STQC Cloud VMS — Video Management System",
       description: (
         <>
           <p>A government-compliant cloud video management platform that centralizes monitoring across multiple locations with seamless AI integration.</p>
@@ -156,14 +156,12 @@ const Innovation = () => {
         .innovation-card {
           position: relative;
           overflow: hidden;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
-          background: #ffffff;
+          background: #444444;
         }
 
         .innovation-card:hover {
           transform: translateY(-8px);
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .card-image-container {

@@ -31,6 +31,12 @@ const Certificates = () => {
       name: "CE",
       imageUrl: "/N_Images/Home_CE.png",
       alt: "CE Marking"
+    },
+    {
+      id:6,
+      name: "ONVIF",
+      imageUrl: "/N_Images/onvif.svg",
+      alt: "ONVIF Certificate"
     }
   ];
 
@@ -82,20 +88,26 @@ const Certificates = () => {
 
         .certificate-item {
           // padding: 20px;
-          width: 120px;
+          width: auto;
           height: 120px;
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certificate-item:last-child {
+          width: auto;
         }
 
         .certificate-image {
-          max-width: 90px;
-          max-height: 90px;
+          height: 90px;
           width: auto;
-          height: auto;
           object-fit: contain;
+        }
+
+        .certificate-item:last-child .certificate-image {
+          height: 90px;
+          width: auto;
         }
 
         /* Tablet Styles */
@@ -114,14 +126,23 @@ const Certificates = () => {
           }
 
           .certificate-item {
-            width: 100px;
+            width: auto;
             height: 100px;
             padding: 15px;
           }
 
+          .certificate-item:last-child {
+            width: auto;
+          }
+
           .certificate-image {
-            max-width: 70px;
-            max-height: 70px;
+            height: 70px;
+            width: auto;
+          }
+
+          .certificate-item:last-child .certificate-image {
+            height: 70px;
+            width: auto;
           }
         }
 
@@ -144,14 +165,23 @@ const Certificates = () => {
           }
 
           .certificate-item {
-            width: 90px;
+            width: auto;
             height: 90px;
             padding: 12px;
           }
 
+          .certificate-item:last-child {
+            width: auto;
+          }
+
           .certificate-image {
-            max-width: 60px;
-            max-height: 60px;
+            height: 60px;
+            width: auto;
+          }
+
+          .certificate-item:last-child .certificate-image {
+            height: 60px;
+            width: auto;
           }
         }
 
@@ -172,14 +202,23 @@ const Certificates = () => {
           }
 
           .certificate-item {
-            width: 80px;
+            width: auto;
             height: 80px;
             padding: 10px;
           }
 
+          .certificate-item:last-child {
+            width: auto;
+          }
+
           .certificate-image {
-            max-width: 50px;
-            max-height: 50px;
+            height: 50px;
+            width: auto;
+          }
+
+          .certificate-item:last-child .certificate-image {
+            height: 50px;
+            width: auto;
           }
         }
       `}</style>

@@ -65,10 +65,11 @@ const Achievements = ({
     {
       value: "20+",
       label: "Years of Engineering Excellence",
-      bgColor: "#FFF5F5",
+      bgColor: "#ECECEC",
       valueColor: "#bf0603",
       labelColor: "#000000",
       dashColor: "#bf0603",
+      border: "1px solid #bf0603",
     },
     {
       value: "15+",
@@ -77,14 +78,16 @@ const Achievements = ({
       valueColor: "#FFFFFF",
       labelColor: "#FFFFFF",
       dashColor: "#FFFFFF",
+      border: "none",
     },
     {
       value: "24x7",
       label: "Toll-Free Support",
-      bgColor: "#FFF5F5",
+      bgColor: "#ECECEC",
       valueColor: "#bf0603",
       labelColor: "#000000",
       dashColor: "#bf0603",
+      border: "1px solid #bf0603",
     },
     {
       value: "100%",
@@ -93,6 +96,7 @@ const Achievements = ({
       valueColor: "#FFFFFF",
       labelColor: "#FFFFFF",
       dashColor: "#FFFFFF",
+      border: "none",
     },
   ];
 
@@ -111,7 +115,8 @@ const Achievements = ({
               className="achievement-card"
               style={{
                 backgroundColor: item.bgColor,
-                color: item.valueColor
+                color: item.valueColor,
+                border: item.border
               }}
             >
               <div 

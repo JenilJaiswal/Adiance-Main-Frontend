@@ -6,7 +6,7 @@ import "./Home_Slider.css";
 const Home_Slider = () => {
   const slides = [
     {
-      image: "/N_Images/slider1.png",
+      image: "/N_Images/Slider1.jpg",
       heading: "India's Top Non-Chinese SoC CCTV Camera Manufacturer",
       subheading:
         "Designed, Developed & Manufactured in India for Reliable, Secure Surveillance.",
@@ -14,7 +14,7 @@ const Home_Slider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/N_Images/slider2.png",
+      image: "/N_Images/Slider2.jpg",
       heading: "Your Trusted OEM, ODM & JDM CCTV Manufacturing Partner",
       subheading:
         "From design to production — complete engineering, integration and delivery under one roof.",
@@ -22,14 +22,14 @@ const Home_Slider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/N_Images/slider3.png",
+      image: "/N_Images/Slider3.jpg",
       heading: "Advanced Edge AI Cameras Built for Performance & Precision",
       subheading: "S-Series & Eco-Series powered by secure, non-Chinese SoC technology.",
       ctaText: "View ArcisAI Products",
       ctaLink: "/contact",
     },
     {
-      image: "/N_Images/slider4.png",
+      image: "/N_Images/Slider4.jpg",
       heading: "Made in India Security Cameras to World",
       subheading:
         "Export-ready product engineering with global certifications and world-class standards.",
@@ -37,7 +37,7 @@ const Home_Slider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/N_Images/slider5.png",
+      image: "/N_Images/Slider5.jpg",
       heading: "Edge AI, Cloud AI & Gen AI Powered Video Surveillance Solutions",
       subheading:
         "Smart, scalable, and intelligent security solutions built into ArcisAI’s ecosystem of cameras and VMS platforms.",
@@ -108,12 +108,48 @@ const Home_Slider = () => {
           text-decoration: none;
           font-weight: 500;
           display: inline-block;
-          border: 1px solid white;
+          border: 2px solid white;
           transition: background-color 0.3s;
           font-family: 'Roboto', sans-serif;
         }
         .cta-button:hover{
-          background: #BF0603;
+          background: #ffffff;
+          color: #000000;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+          top: 60%;
+          transform: translateY(-50%);
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          background-image: none !important;
+          width: 50px;
+          height: 50px;
+        }
+
+        .carousel-control-prev-icon::before {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 50px;
+          background-image: url('/N_Images/left_direction.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        .carousel-control-next-icon::before {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 50px;
+          background-image: url('/N_Images/right_direction.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
         }
 
         @media (max-width: 768px) {
@@ -143,6 +179,11 @@ const Home_Slider = () => {
           .carousel-item img {
              height: 400px !important;
              object-fit: cover;
+          }
+          .carousel-control-prev-icon::before,
+          .carousel-control-next-icon::before {
+            width: 30px;
+            height: 30px;
           }
         }
       `}</style>

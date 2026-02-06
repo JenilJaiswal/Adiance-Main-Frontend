@@ -1,0 +1,139 @@
+.oem-cctv-container {
+  width: 100%;
+  padding: 0 20px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+/* Centered content like OEM banner */
+.oem-cctv-content {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* LEFT SIDE */
+.oem-cctv-left {
+  position: relative;
+}
+
+.oem-cctv-header {
+  background-color: #BF0603;
+  color: white;
+  padding: 40px;
+  max-width: 600px;
+  height: 250px;
+}
+
+.oem-cctv-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.oem-cctv-subtitle {
+  font-size: 18px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* Image */
+.oem-cctv-image {
+  margin-top: -60px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.oem-cctv-main-image {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+}
+
+/* RIGHT SIDE */
+.oem-cctv-features {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.oem-cctv-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.feature-checkmark {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* ---------------- TABLET ---------------- */
+@media (max-width: 1024px) {
+  .oem-cctv-content {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+
+  .oem-cctv-header {
+    max-width: 100%;
+  }
+
+  .oem-cctv-image {
+    justify-content: center;
+    margin-top: -40px;
+  }
+
+  .oem-cctv-main-image {
+    max-width: 420px;
+    position: relative;
+    top: -80px;
+  }
+
+  .oem-cctv-title {
+    font-size: 28px;
+  }
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 768px) {
+
+  .oem-cctv-header {
+    padding: 28px;
+  }
+
+  .oem-cctv-title {
+    font-size: 24px;
+  }
+
+  .oem-cctv-subtitle {
+    font-size: 16px;
+  }
+
+  .feature-text {
+    font-size: 14px;
+  }
+}
+
+/* ---------------- SMALL MOBILE ---------------- */
+@media (max-width: 480px) {
+  .oem-cctv-main-image {
+    max-width: 320px;
+  }
+
+  .oem-cctv-header {
+    padding: 24px;
+  }
+}

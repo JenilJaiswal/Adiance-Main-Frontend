@@ -23,6 +23,7 @@ import FutureGrowth from "./FutureGrowth";
 import HighTraffic from "./HighTraffic";
 // import Home from "./Home";
 import Home from "../Pages/Home/Home";
+import OEM from "../Pages/Services/OEM/OEM";
 import Hospital from "./Hospital";
 import Innovation from "./Innovation";
 import Manufacturing from "./Manufacturing";
@@ -145,6 +146,7 @@ const routes = [
   // Series pages
   { path: "/r-series", element: <RSeries title="R Series" /> },
   { path: "/h-series", element: <RSeries title="H Series" /> },
+  {path: "/oem-services", element: <OEM />},
 
   // Camera pages
   { path: "/thermal-camera", element: <ThermalCamera /> },

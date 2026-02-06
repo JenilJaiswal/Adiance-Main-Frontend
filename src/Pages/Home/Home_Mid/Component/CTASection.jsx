@@ -1,14 +1,26 @@
-import React from 'react'
+const CTASection = ({ 
+  title = "Start Your OEM/ODM Project With Adiance — Connect With Our Engineering Team",
+  buttonText = "Start Your Project",
+  buttonLink = "#",
+  onButtonClick
+}) => {
+  const handleClick = (e) => {
+    if (onButtonClick) {
+      e.preventDefault();
+      onButtonClick();
+    } else if (buttonLink !== "#") {
+      window.location.href = buttonLink;
+    }
+  };
 
-const CTASection = () => {
   return (
     <div className="cta_Container">
       <div className="cta_Content">
         <h2 className="cta_Title">
-          Start Your OEM/ODM Project With Adiance — Connect With Our Engineering Team
+          {title}
         </h2>
-        <button className="cta_Button">
-          Start Your Project
+        <button className="cta_Button" onClick={handleClick}>
+          {buttonText}
         </button>
       </div>
       
@@ -32,10 +44,9 @@ const CTASection = () => {
           font-family: "Roboto", sans-serif;
           font-weight: 600;
           font-size: 36px;
-          color: #000000;
+          color: #444444;
           margin-bottom: 30px;
           line-height: 1.3;
-          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .cta_Button {
@@ -51,18 +62,15 @@ const CTASection = () => {
           transition: all 0.3s ease;
           text-transform: uppercase;
           letter-spacing: 0.5px;
-          box-shadow: 0 4px 15px rgba(191, 6, 3, 0.3);
         }
 
         .cta_Button:hover {
           background-color: #a00502;
           transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(191, 6, 3, 0.4);
         }
 
         .cta_Button:active {
           transform: translateY(0);
-          box-shadow: 0 2px 10px rgba(191, 6, 3, 0.3);
         }
 
         /* Tablet Styles */

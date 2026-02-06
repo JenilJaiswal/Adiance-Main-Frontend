@@ -7,7 +7,7 @@ import Industries from './Component/Industries'
 import Achievements from './Component/Achievements'
 import CTASection from './Component/CTASection'
 import Testimonials from './Component/Testimonials'
-import Blog_View from './Component/Blog_View'
+import Blog_View from './Blog_View/Blog_View'
 import FAQ_Section from '../Components/FAQ_Section/FAQ_Section'
 import faqsData from '../../../components/faqsData'
 

@@ -75,10 +75,22 @@ const Header = () => {
       name: "Services",
       path: "#",
       dropdownItems: [
-        { name: "OEM Services", path: "/manufacturing" },
+        { name: "OEM Services", path: "/oem-services" },
         { name: "ODM Services", path: "/product-engineering" },
         { name: "JDM Services", path: "/compliance" },
         { name: "PCB Assembly Services", path: "/product-engineering" }
+      ]
+    },
+    {
+      name: "Industry",
+      path: "#",
+      dropdownItems: [
+        { name: "Education", path: "/education" },
+        { name: "Healthcare", path: "/healthcare" },
+        { name: "Public Transport", path: "/public-transport" },
+        { name: "Retail", path: "/retail" },
+        { name: "Smart & Safe City", path: "/smart-safe-city" },
+        { name: "Bank & Finance", path: "/bank-finance" },
       ]
     },
     {
@@ -90,7 +102,7 @@ const Header = () => {
       ]
     },
     {
-      name: "About US",
+      name: "About Us",
       path: "#",
       dropdownItems: [
         { name: "About Company", path: "/about" },
