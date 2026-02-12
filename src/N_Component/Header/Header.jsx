@@ -76,8 +76,8 @@ const Header = () => {
       path: "#",
       dropdownItems: [
         { name: "OEM Services", path: "/oem-services" },
-        { name: "ODM Services", path: "/product-engineering" },
-        { name: "JDM Services", path: "/compliance" },
+        { name: "ODM Services", path: "/odm-services" },
+        { name: "JDM Services", path: "/jdm-services" },
         { name: "PCB Assembly Services", path: "/product-engineering" }
       ]
     },

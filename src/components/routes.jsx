@@ -24,6 +24,7 @@ import HighTraffic from "./HighTraffic";
 // import Home from "./Home";
 import Home from "../Pages/Home/Home";
 import OEM from "../Pages/Services/OEM/OEM";
+import ODM from "../Pages/Services/ODM/ODM";
 import Hospital from "./Hospital";
 import Innovation from "./Innovation";
 import Manufacturing from "./Manufacturing";
@@ -58,6 +59,7 @@ import _360Approach from "./_360Approach";
 import IfsecIndia2025 from "./IfsecIndia2025";
 import NotFound from "./NotFound";
 import CareerHome from "./career/CareerHome";
+import JDM from "../Pages/Services/JDM/JDM";
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -147,6 +149,8 @@ const routes = [
   { path: "/r-series", element: <RSeries title="R Series" /> },
   { path: "/h-series", element: <RSeries title="H Series" /> },
   {path: "/oem-services", element: <OEM />},
+  {path: "/odm-services", element: <ODM />},
+  {path: "/jdm-services", element: <JDM />},
 
   // Camera pages
   { path: "/thermal-camera", element: <ThermalCamera /> },

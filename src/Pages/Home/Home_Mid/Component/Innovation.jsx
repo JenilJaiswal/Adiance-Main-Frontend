@@ -68,7 +68,7 @@ const Innovation = () => {
           <p>Handles up to 16 cameras with enterprise-grade throughput and optimized long-duration recording.</p>
         </>
       ),
-      imageUrl: "/N_Images/NVRs-Network-Video-Recorders-ArcisAI.jpg",
+      imageUrl: "/N_Images/NVRs-Network-Video-Recorders-ArcisAI.png",
     },
     {
       id: 6,
@@ -157,7 +157,7 @@ const Innovation = () => {
           position: relative;
           overflow: hidden;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
-          background: #444444;
+          background: #eeeeee;
         }
 
         .innovation-card:hover {

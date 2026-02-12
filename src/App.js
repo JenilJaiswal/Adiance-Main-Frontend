@@ -12,6 +12,7 @@ import {
 import routes from "./components/routes";
 import { useEffect } from "react";
 import EventMainDash from "./components/Events/EventMainDash";
+import RedirectManager from "./RedirectManager";
 
 const CombinedRedirect = () => {
   const location = useLocation();
@@ -56,6 +57,7 @@ const CombinedRedirect = () => {
 function App() {
   return (
     <Router>
+      <RedirectManager />
       {/* <EventMainDash /> */}
       <CombinedRedirect />
       <Routes>

@@ -1,0 +1,86 @@
+{
+    "home": {
+    "title": "FAQs",
+    "qa": [
+      {
+        "question": "Who is the best OEM CCTV camera manufacturer in India?",
+        "answer": "Many brands search for reliable OEM partners from India. Adiance Technologies is one of the companies offering large-scale CCTV camera manufacturing with PCB, firmware, and hardware development under one roof."
+      },
+      {
+        "question": "How do I choose the right ODM partner for electronics or CCTV cameras?",
+        "answer": "Look for in-house R&D, PCB assembly capabilities, firmware engineering, testing labs, certification support, and scalable production — all of which Adiance provides."
+      },
+      {
+        "question": "How long does it take to develop a custom CCTV camera or IoT device?",
+        "answer": "Development time depends on complexity but typically ranges from 4–12 weeks for design, prototyping, testing, and pre-production."
+      },
+      {
+        "question": "Which Indian company offers end-to-end electronics manufacturing?",
+        "answer": "Adiance Technologies is one such security camera manufacturing company offering PCB design, SMT assembly, CCTV camera manufacturing, robotics hardware development, and turnkey electronics production."
+      },
+      {
+        "question": "How much does OEM CCTV camera manufacturing cost in India?",
+        "answer": "Cost varies based on components, sensors, chipset, AI requirements, and order volume. India-based manufacturers generally offer competitive pricing compared to China."
+      }
+    ]
+  },
+  "oem": {
+    "title": "Have Questions About OEM? We've Got Answers.",
+    "qa": [
+      {
+        "question": "Do you support custom product development or only standard models?",
+        "answer": "Yes, we offer both. You can choose from our proven standard product lines or engage with us for fully customized OEM solutions including design, firmware and packaging aligned with your brand and requirements."
+      },
+      {
+        "question": "What industries do you serve with your OEM manufacturing services?",
+        "answer": "We cater to a wide range of industries including security & surveillance CCTV cameras, industrial automation (robotic arms), IoT, PCBs, smart city solutions and more. Whether you're a startup or an enterprise, our OEM services are designed to scale with your product needs."
+      },
+      {
+        "question": "Is there a minimum order quantity?",
+        "answer": "MOQ varies based on product type and customization needs. However, we're flexible especially for startups and pilot production batches. Connect with us for a tailored quote."
+      },
+      {
+        "question": "Can international clients work with you?",
+        "answer": "Yes, we work with global brands and provide export-ready original equipment manufacturing service. Our infrastructure supports international quality standards, documentation, and delivery protocols."
+      }
+    ]
+  },
+  "odm": {
+    "title": "ODM Manufacturing FAQs for Growing Brands",
+    "qa": [
+      {
+        "question": "What industries can benefit from your ODM services?",
+        "answer": "Our original design manufacturing service caters to electronics, security & surveillance, smart home, automation, IoT and industrial product sectors. We support startups, system integrators, hardware brands and global sourcing teams with white-label-ready solutions."
+      },
+      {
+        "question": "Do you offer white-label products?",
+        "answer": "Yes. As we are the leading original design manufacturer service providers in India, we offer pre-engineered, quality-tested white-label products across CCTV cameras, robotic arms and PCBs all customizable to match your brand identity and market needs."
+      },
+      {
+        "question": "Are your ODM products certified for global markets?",
+        "answer": "Yes. Our ODM manufacturing ensures compliance with major global standards such as CE, FCC, RoHS, BIS and NDAA (based on product type and client requirements)."
+      },
+      {
+        "question": "Can international clients work with your Original Design Manufacturing company?",
+        "answer": "Yes, we are an export-ready ODM company in India serving both domestic and global clients with efficient shipping, international compliance, and multilingual documentation."
+      }
+    ]
+  },
+  "jdm": {
+    "title": "JDM FAQs",
+    "qa": [
+      {
+        "question": "How is JDM different from OEM?",
+        "answer": "OEM = You provide the design → we manufacture. JDM = We co-develop the product — engineering, design and R&D are shared."
+      },
+      {
+        "question": "Is JDM suitable for startups?",
+        "answer": "Yes. Startups use JDM to build prototypes, refine designs, reduce cost and scale manufacturing without setting up a factory."
+      },
+      {
+        "question": "Can you support global product certifications?",
+        "answer": "Yes. We help with CE, FCC, RoHS, NDAA and other industry certifications."
+      }
+    ]
+  }
+}

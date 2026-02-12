@@ -1,0 +1,146 @@
+{
+  "oem": {
+    "heroTitle": "Businesses That Benefit from Our Custom OEM Services",
+    "heroDescription": "We deliver custom OEM manufacturing services to businesses seeking for scalable production, innovation and a reliable EMS OEM service provider in India.",
+    "heroImage": "/N_Images/hand-shack.svg",
+    "heroImageAlt": "Business Partnership",
+    "benefits": [
+      {
+        "title": "Security & Surveillance Brands",
+        "description": "Build your own line of CCTV cameras with custom firmware, branded packaging and STQC compliance without setting up your own factory."
+      },
+      {
+        "title": "Startup Hardware Founders/ Entrepreneurs",
+        "description": "Want to launch your own product but lack manufacturing? We partner from prototype to production while protecting your IP."
+      },
+      {
+        "title": "Automation & Robotics Startups",
+        "description": "Prototype and mass-produce robotic arms and automation modules for manufacturing, logistics, and more applications."
+      },
+      {
+        "title": "Electronic Product Designers",
+        "description": "You bring the circuit or enclosure idea; we bring it to life. Ideal for firms looking to turn product designs into hardware."
+      },
+      {
+        "title": "Global Sourcing & Procurement Teams",
+        "description": "Looking for a cost-effective, scalable OEM manufacturer in India? Our audit-ready facilities meet export standards with NDA-protected processes."
+      },
+      {
+        "title": "System Integrators & VARs (Value-Added Resellers)",
+        "description": "Offer turnkey solutions to your clients using hardware powered by your brand and our OEM engineering capabilities."
+      },
+      {
+        "title": "AI/ML Software Companies Needing Edge Devices",
+        "description": "We manufacture smart hardware like AI cameras and robotics modules to complement your software stack."
+      },
+      {
+        "title": "Tech-Enabled Service Platforms",
+        "description": "Build your own camera or control system tailored to your software and brand identity, no dependency on off-the-shelf devices."
+      },
+      {
+        "title": "Government Contractors & Public Sector Vendors",
+        "description": "Get STQC-ready, Make-in-India-compliant surveillance or automation hardware under your brand for government or PSU projects."
+      },
+      {
+        "title": "Smart City & Infrastructure Solution Providers",
+        "description": "We support integrators with custom surveillance hardware and intelligent PCB systems for public sector and infrastructure projects."
+      }
+    ]
+  },
+  "odm": {
+    "heroTitle": "Businesses That Benefit from Our Custom ODM Services",
+    "heroDescription": "We deliver custom ODM manufacturing services to businesses seeking for scalable production, innovation and a reliable EMS ODM service provider in India.",
+    "heroImage": "/N_Images/hand-shack.svg",
+    "heroImageAlt": "Business Partnership",
+    "benefits": [
+      {
+        "title": "Surveillance Solution Providers",
+        "description": "Offer your own brand of CCTV cameras with ready firmware, STQC compliance and white-label packaging — without R&D investment."
+      },
+      {
+        "title": "E-commerce & Retail Product Launchers",
+        "description": "Scale your catalog with ODM-certified electronics like cameras, robotic automation tools or vms control systems, all branded and shipped under your name."
+      },
+      {
+        "title": "Startup Founders & Entrepreneurs",
+        "description": "Skip costly prototyping and go to market faster with quality-tested, ODM products supported by our branding and delivery framework."
+      },
+      {
+        "title": "AI/ML Software & Platform Companies",
+        "description": "Integrate your EdgeAI software stack into smart surveillance or automation devices powered by our ODM hardware kits."
+      },
+      {
+        "title": "Electronics Importers & Distributors",
+        "description": "Launch globally compliant CCTV, robotic and PCB products in your country through ready ODM infrastructure and certified components."
+      },
+      {
+        "title": "Smart City & Infrastructure Contractors",
+        "description": "Deploy pre-configured surveillance devices, AI security cameras or control boards under your agency's branding for PSU and government contracts."
+      },
+      {
+        "title": "Automation & Manufacturing Solution Providers",
+        "description": "White-label our pre-calibrated robotic arms or automation units as part of your enterprise packages or industrial line offerings."
+      },
+      {
+        "title": "System Integrators & Tech VARs",
+        "description": "Add hardware to your integration stack using plug-and-play ODM products with private-label branding and software hooks."
+      },
+      {
+        "title": "Resellers & Hardware Consultants",
+        "description": "Looking for scalable ODM products to resell with your client's branding? Our catalog offers ready-built products with firmware flexibility and compliance."
+      },
+      {
+        "title": "Educational Robotics & STEM Tech Companies",
+        "description": "Use modular robotic arms and camera units to build branded educational kits for coding, robotics, or AI learning programs in schools and colleges."
+      }
+    ]
+  },
+  "jdm": {
+    "heroTitle": "Businesses That Benefit from JDM Co-Development",
+    "heroDescription": "JDM (Joint Development Manufacturing) is ideal for companies that want to co-create products, share R&D expertise, and scale manufacturing without building their own factory. Below are the types of businesses that gain the most value from collaborative development with Adiance.",
+    "heroImage": "/N_Images/hand-shack.svg",
+    "heroImageAlt": "Business Partnership",
+    "benefits": [
+      {
+        "title": "Security & Surveillance Brands",
+        "description": "Develop next-generation AI CCTV cameras together with shared engineering, custom firmware, exclusive models, and country-specific compliance."
+      },
+      {
+        "title": "Startup Hardware Founders",
+        "description": "Turn early-stage concepts into fully engineered, production-ready products through joint design, prototyping, testing, and refinement."
+      },
+      {
+        "title": "Automation & Robotics Startups",
+        "description": "Co-develop robotic arms, industrial modules, and automation devices with shared mechanical, electronics, and control-system engineering."
+      },
+      {
+        "title": "Electronic Product Developers",
+        "description": "Collaborate on PCB layouts, chipset selection, firmware development, mechanical housing, and system integration for new or upgraded products."
+      },
+      {
+        "title": "Procurement & Global Sourcing Teams",
+        "description": "Get deeper transparency into engineering decisions, component sourcing, costs, and quality checkpoints — all while ensuring scalable manufacturing."
+      },
+      {
+        "title": "Smart City & Infrastructure Companies",
+        "description": "Jointly build surveillance devices, IoT modules, and custom PCB-based systems required for smart city projects and mission-critical deployments."
+      },
+      {
+        "title": "System Integrators & VARs",
+        "description": "Create hardware specifically designed for your industry vertical — retail, manufacturing, logistics, education, or public safety — co-engineered for your solution stack."
+      },
+      {
+        "title": "AI/ML Software Companies",
+        "description": "Develop purpose-built edge devices (AI cameras, robotic modules, IoT controllers) that perfectly integrate with your AI algorithms and software platform."
+      },
+      {
+        "title": "Tech Platforms & SaaS Products",
+        "description": "Convert your software solution into a full hardware+software ecosystem by co-developing custom devices tailored to your platform."
+      },
+      {
+        "title": "Government & Public Sector Contractors",
+        "description": "Jointly design and manufacture Make-in-India compliant surveillance, automation, and electronics hardware aligned with PSU and government tender requirements."
+      }
+    ]
+  }
+}

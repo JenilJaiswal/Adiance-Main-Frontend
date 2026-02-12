@@ -1,0 +1,96 @@
+.about-oem-container {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.about-oem-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-oem-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #444444;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.about-oem-description {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  max-width: 1400px;
+}
+
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+  .about-oem-wrapper {
+    max-width: 90%;
+    padding: 0 20px;
+  }
+
+  .about-oem-title {
+    font-size: 32px;
+    line-height: 110%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+
+  .about-oem-description {
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 3%;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .about-oem-wrapper {
+    max-width: 95%;
+    padding: 0 15px;
+  }
+
+  .about-oem-title {
+    font-size: 28px;
+    line-height: 120%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+  }
+
+  .about-oem-description {
+    font-size: 15px;
+    line-height: 130%;
+    margin-bottom: 6%;
+  }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+  .about-oem-wrapper {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .about-oem-title {
+    font-size: 24px;
+    line-height: 130%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+  }
+
+  .about-oem-description {
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 8%;
+  }
+}
