@@ -16,5 +16,11 @@
     "subtitle": "We begin with deep technical discussions to align your product idea with development feasibility.",
     "diagramImage": "/N_Images/JDM_Gathering.svg",
     "diagramAlt": "ODM Process Flow - Requirement Gathering & Consultation"
+  },
+  "pcbGathering": {
+    "title": "Requirement Project & Analysis",
+    "subtitle": "We begin with a deep understanding of your PCB needs aligned to your hardware systems",
+    "diagramImage": "/N_Images/PCB_Diagram.svg",
+    "diagramAlt": "ODM Process Flow - Requirement Gathering & Consultation"
   }
 }

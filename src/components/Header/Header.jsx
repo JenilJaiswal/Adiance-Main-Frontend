@@ -78,7 +78,7 @@ const Header = () => {
         { name: "OEM Services", path: "/oem-services" },
         { name: "ODM Services", path: "/odm-services" },
         { name: "JDM Services", path: "/jdm-services" },
-        { name: "PCB Assembly Services", path: "/product-engineering" }
+        { name: "PCB Assembly Services", path: "/pcb-assembly-service" }
       ]
     },
     {

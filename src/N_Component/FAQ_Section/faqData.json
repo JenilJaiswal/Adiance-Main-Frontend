@@ -82,5 +82,22 @@
         "answer": "Yes. We help with CE, FCC, RoHS, NDAA and other industry certifications."
       }
     ]
+  },
+  "pcb": {
+    "title": "FAQs About Our PCBA Manufacturing",
+    "qa": [
+      {
+        "question": "Do you only offer PCB assembly services for specific industries?",
+        "answer": "Yes, we specialize in printed circuit board assembly for surveillance and automation industries — particularly for CCTV camera motherboards, robotic control boards, and edge AI applications. Our capabilities are built around these use cases to ensure high performance and system compatibility."
+      },
+      {
+        "question": "Do you offer white-label PCB manufacturing services?",
+        "answer": "Yes. As a trusted printed circuit board assembly service provider, we offer white-label solutions including branded packaging, serial/QR labeling, and firmware preloading — ideal for OEMs and resellers."
+      },
+      {
+        "question": "What quality standards do you follow?",
+        "answer": "We comply with IPC-A-610 Class 2 and Class 3 standards, ensuring high-reliability pcb assembly manufacturing for both consumer-grade and mission-critical applications."
+      }
+    ]
   }
 }

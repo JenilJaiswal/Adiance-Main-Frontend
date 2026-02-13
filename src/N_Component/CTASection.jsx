@@ -16,9 +16,10 @@ const CTASection = ({
   return (
     <div className="cta_Container">
       <div className="cta_Content">
-        <h2 className="cta_Title">
-          {title}
-        </h2>
+        <h2 
+          className="cta_Title"
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
         <button className="cta_Button" onClick={handleClick}>
           {buttonText}
         </button>

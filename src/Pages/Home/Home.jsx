@@ -1,10 +1,10 @@
 import React from 'react'
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
-import Header from '../../N_Component/Header/Header'
+import Header from '../../components/Header/Header'
 import WhatWeDo from './WhatWeDo/WhatWeDo'
 import Home_mid from './Home_Mid/Home_mid'
-import Footer from '../../N_Component/Footer/Footer'
+import Footer from '../../components/Footer/Footer'
 import Home_Slider from './Home_Slider/Home_Slider';
 const organizationSchema = { "@context": "http://schema.org", "@type": "Organization", "name": "Adiance Technologies", "url": "https://www.adiance.com", "logo": "https://www.adiance.com/images/Logo.png", "contactPoint": { "@type": "ContactPoint", "telephone": "+91 9687779999", "email": "contact@adiance.com", "contactType": "Sales", "areaServed": "Global" }, "sameAs": ["https://www.facebook.com/adiancetechnologies", "https://www.linkedin.com/company/adiancetechnologies", "https://x.com/adiancetech", "https://www.instagram.com/adiancetech/", "https://youtube.com/@adiancetechnologies"], "address": { "@type": "PostalAddress", "streetAddress": "7, Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev", "addressLocality": "Ahmedabad", "addressRegion": "Gujarat", "postalCode": "380054", "addressCountry": "IN" }, "foundingDate": "2003", "description": "Searching for for a reliable CCTV camera manufacturing company in India? Adiance Technologies provides CCTV cameras, NVRs, cloud VMS and custom OEM/ODM electronics solutions." };
 

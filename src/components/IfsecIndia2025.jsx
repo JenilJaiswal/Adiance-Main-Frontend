@@ -1,9 +1,9 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 
 const IfsecIndia2025 = () => {
   const location = useLocation();

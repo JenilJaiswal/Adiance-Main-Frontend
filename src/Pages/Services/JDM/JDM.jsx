@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet';
-import Header from '../../../N_Component/Header/Header'
+import Header from '../../../components/Header/Header'
 import Services_Hero from '../../../N_Component/Services_Hero/Services_Hero'
 import heroData from '../../../N_Component/Services_Hero/heroData.json';
 import Services_Details from '../../../N_Component/Services_Details/Services_Details';
@@ -19,7 +19,9 @@ import Services_Benefits from '../../../N_Component/Services_Benefits/Services_B
 import benefitesData from '../../../N_Component/Services_Benefits/benefitsData.json'
 import FAQ_Section from '../../../N_Component/FAQ_Section/FAQ_Section';
 import faqsData from '../../../N_Component/FAQ_Section/faqData.json'
-import Footer from '../../../N_Component/Footer/Footer';
+import Footer from '../../../components/Footer/Footer';
+import Services_GlobalPresence from '../../../N_Component/Services_GlobalPresence/Services_GlobalPresence'
+import globalPresenceData from '../../../N_Component/Services_GlobalPresence/globalPresenceData.json'
 
 const JDM = () => {
   useEffect(() => {
@@ -44,6 +46,8 @@ const JDM = () => {
       <Services_MakeInIndia {...makeInIndiaData.jdm}/>
       <Services_Diagram {...diagramData.jdmGathering} />
       <Services_Benefits {...benefitesData.jdm} />
+      <CTASection title='Ready to Start Your Joint Development Journey?' />
+      <Services_GlobalPresence {...globalPresenceData.jdm} />
       <FAQ_Section faqsList={faqsData.jdm} />
       <Footer />
     </div>

@@ -1,0 +1,170 @@
+{
+  "oem": {
+    "title": "An Original Equipment Manufacturer Company <br /> Committed to Your Innovation",
+    "description": "We don't just manufacture - we partner. Our in-house capabilities, strict quality protocols and deep industry experience make us the trusted OEM choice for growing and global brands alike.",
+    "mapImage": "/N_Images/map.png",
+    "mapImageAlt": "Global presence map showing OEM manufacturing reach",
+    "leftFeatures": [
+      {
+        "title": "20+ Years of Expertise",
+        "description": "Decades of proven experience in electronics, surveillance, robotics, and embedded systems manufacturing."
+      },
+      {
+        "title": "STQC-Compliant CCTV Production",
+        "description": "We meet stringent government standards for safety, reliability and compliance in surveillance devices."
+      },
+      {
+        "title": "In-House Assembly",
+        "description": "Our facilities offer full control over PCB and product assembly — ensuring faster turnarounds and tighter quality control."
+      },
+      {
+        "title": "IP Protection",
+        "description": "All client data, designs and hardware blueprints are securely handled under NDA with a closed development environment."
+      },
+      {
+        "title": "OEM Manufacturing Services",
+        "description": "We manage the full product journey — from PCB design to mechanical housing, software integration, QA and packaging."
+      },
+      {
+        "title": "Global & Indian Markets",
+        "description": "Our OEM infrastructure is export-ready and aligned with Make-in-India, meeting both domestic and international demand."
+      },
+      {
+        "title": "Flexible Product Customization",
+        "description": "We offer tailored features, firmware integration, enclosure design and branded packaging options."
+      }
+    ],
+    "bottomFeatures": [
+      {
+        "title": "End-to-End Logistics & Delivery Support",
+        "description": "We ensure safe, on-time delivery across India and international zones, with packaging optimized for B2B and retail channels."
+      }
+    ]
+  },
+  "odm": {
+    "title": "An ODM Company Empowering Brands <br /> with Custom-Label Manufacturing",
+    "description": "We are an original design manufacturing company trusted by brands across electronics, surveillance and automation. From design-led development to white-label delivery, we help you scale fast with pre-tested, globally compliant ODM products ready for your market.",
+    "mapImage": "/N_Images/map.png",
+    "mapImageAlt": "Global presence map showing ODM manufacturing reach",
+    "leftFeatures": [
+      {
+        "title": "20+ Years of Experience",
+        "description": "Proven track record in electronics, PCB and product development for CCTV, robotics and embedded devices."
+      },
+      {
+        "title": "Design-Led Product Innovation",
+        "description": "We specialize in turnkey ODM solutions from concept design to ready-to-sell product development and packaging."
+      },
+      {
+        "title": "White-Label Ready Infrastructure",
+        "description": "Our systems support fully brandable packaging, custom firmware, app UI, and hardware markings for mass production."
+      },
+      {
+        "title": "In-House R&D",
+        "description": "Our vertically integrated facility handles prototyping, design validation, QA and compliance testing under one roof."
+      },
+      {
+        "title": "Global Standards",
+        "description": "We build ODM products aligned with global certifications such as CE, FCC, RoHS, NDAA, ISO, STQC ready for Indian & international markets."
+      },
+      {
+        "title": "Confidentiality",
+        "description": "Every ODM collaboration is protected under NDA. Your ideas stay yours, and we remain your silent partner."
+      },
+      {
+        "title": "Scalable Manufacturing",
+        "description": "From pilot batches to large-scale ODM production, we support your market growth at every stage with agility."
+      }
+    ],
+    "bottomFeatures": [
+      {
+        "title": "Delivery Support",
+        "description": "From BOM to branding, QC to logistics, we provide full ODM support to get your product on the shelf faster."
+      }
+    ]
+  },
+  "jdm": {
+    "title": "Why Adiance Is the Trusted JDM Partner <br /> for Global Brands",
+    "description": "We bring two decades of hands-on experience in electronics, robotics, video surveillance, and embedded systems — ensuring your product is engineered with proven technical depth.",
+    "mapImage": "/N_Images/map.png",
+    "mapImageAlt": "Global presence map showing JDM manufacturing reach",
+    "leftFeatures": [
+      {
+        "title": "20+ Years of Engineering Expertise",
+        "description": "We bring two decades of hands-on experience in electronics, robotics, video surveillance, and embedded systems — ensuring your product is engineered with proven technical depth."
+      },
+      {
+        "title": "Collaborative Development Model",
+        "description": "Unlike traditional OEM, we work with you as a joint engineering partner. Both teams co-own the design, architecture, and R&D decisions throughout the development cycle."
+      },
+      {
+        "title": "STQC-Compliant CCTV Development",
+        "description": "Our surveillance hardware meets strict government standards, making us ideal for brands building secure, reliable, and certification-ready CCTV systems."
+      },
+      {
+        "title": "Integrated Manufacturing Infrastructure",
+        "description": "From PCB design, SMT/THT assembly, molding, CNC machining to final assembly and QA — everything happens in-house for faster development and better quality control."
+      },
+      {
+        "title": "Confidential & Secure IP Handling",
+        "description": "All concepts, schematics, algorithms, and firmware are protected under NDAs and managed in a closed development environment, keeping your intellectual property fully secure."
+      },
+      {
+        "title": "Export-Ready Global Facilities",
+        "description": "Our manufacturing and documentation processes follow international standards, enabling smooth exports to the US, Europe, Middle East, Africa, and Asia-Pacific."
+      },
+      {
+        "title": "Flexible Customization Options",
+        "description": "Every part of the product — circuits, components, firmware, enclosures, branding, and packaging — can be fully customized to match your market goals."
+      }
+    ],
+    "bottomFeatures": [
+      {
+        "title": "End-to-End Delivery & Support",
+        "description": "We manage global logistics, batch-level testing, warranty documentation, firmware updates, and technical support to ensure a seamless post-production experience."
+      }
+    ]
+  },
+  "pcb": {
+    "title": "Certified PCB Assembly Manufacturer <br /> for Surveillance & Automation Brands",
+    "description": "At Adiance Technologies, we bring together decades of experience and deep specialization in camera and robotics PCBAs. With advanced in-house SMT and THT lines, strict IPC compliance, and full traceability, we ensure every board is reliable, scalable and export-ready.",
+    "mapImage": "/N_Images/map.png",
+    "mapImageAlt": "Global presence map showing PCB manufacturing reach",
+    "leftFeatures": [
+      {
+        "title": "20+ Years of Manufacturing Expertise",
+        "description": "We've been manufacturing PCBs and assemblies for critical industries like surveillance and robotics, trusted by Indian and global brands alike."
+      },
+      {
+        "title": "Specialization in Camera & Robotics PCBAs",
+        "description": "From high-frequency signal boards to AI-ready motor control units — we manufacture printed circuit boards engineered for real-world deployment."
+      },
+      {
+        "title": "In-House Assembly Infrastructure",
+        "description": "Our SMT and through-hole lines handle complex layouts with high component density and support multi-layer PCBs (2–12+ layers)."
+      },
+      {
+        "title": "IPC-A-610 Class 2 & 3 Compliance",
+        "description": "Every PCB assembly meets international standards for commercial and mission-critical applications, verified with detailed testing and documentation."
+      },
+      {
+        "title": "End-to-End Traceability",
+        "description": "From BOM validation to serialized QR/barcode tagging, every board is trackable—critical for regulated and export-grade products."
+      },
+      {
+        "title": "Pre-Tested & Documentation-Ready Assemblies",
+        "description": "Each PCB is tested for functional integrity and shipped with detailed inspection reports, firmware records and compliance documentation."
+      },
+      {
+        "title": "White-Label & OEM Friendly",
+        "description": "We support white-label PCB services with secure branding, private documentation and tamper-proof packaging—ideal for OEM clients and tech brands."
+      }
+    ],
+    "bottomFeatures": [
+      {
+        "title": "Export-Ready PCB Manufacturer in India",
+        "description": "We comply with CE, RoHS, FCC, NDAA, and other global standards—serving Indian and international brands looking for scalable pcb design and manufacturing."
+      }
+    ]
+  }
+}

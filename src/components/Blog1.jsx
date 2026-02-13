@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header/Header.jsx";
+import Footer from "./Footer/Footer.jsx";
 import { Typography, Chip, Box, Grid, Container } from "@mui/material";
 import { Label } from "@mui/icons-material"; // Import icons
 import { Helmet } from "react-helmet-async";

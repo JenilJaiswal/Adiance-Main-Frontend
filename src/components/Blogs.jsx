@@ -10,9 +10,9 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
 import { getBlogs } from "../AdianceAdmin/api/blogs";
 

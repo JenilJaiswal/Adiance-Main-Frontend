@@ -60,6 +60,7 @@ import IfsecIndia2025 from "./IfsecIndia2025";
 import NotFound from "./NotFound";
 import CareerHome from "./career/CareerHome";
 import JDM from "../Pages/Services/JDM/JDM";
+import PCB from "../Pages/Services/PCB/PCB";
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -151,6 +152,7 @@ const routes = [
   {path: "/oem-services", element: <OEM />},
   {path: "/odm-services", element: <ODM />},
   {path: "/jdm-services", element: <JDM />},
+  {path: "/pcb-assembly-service", element: <PCB />},
 
   // Camera pages
   { path: "/thermal-camera", element: <ThermalCamera /> },

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
-import Header from '../../../N_Component/Header/Header'
+import Header from '../../../components/Header/Header'
 import Services_Hero from '../../../N_Component/Services_Hero/Services_Hero'
 import Services_Details from '../../../N_Component/Services_Details/Services_Details'
 import heroData from '../../../N_Component/Services_Hero/heroData.json'
@@ -18,8 +18,10 @@ import benefitesData from '../../../N_Component/Services_Benefits/benefitsData.j
 import CTASection from '../../../N_Component/CTASection'
 import FAQ_Section from '../../../N_Component/FAQ_Section/FAQ_Section'
 import faqsData from '../../../N_Component/FAQ_Section/faqData.json'
-import Footer from '../../../N_Component/Footer/Footer'
+import Footer from '../../../components/Footer/Footer'
 import Clients from '../../../N_Component/Clients'
+import Services_GlobalPresence from '../../../N_Component/Services_GlobalPresence/Services_GlobalPresence'
+import globalPresenceData from '../../../N_Component/Services_GlobalPresence/globalPresenceData.json'
 
 const ODM = () => {
   useEffect(() => {
@@ -48,6 +50,7 @@ const ODM = () => {
         <Services_Diagram {...diagramData.odmGathering} />
         <Services_Benefits {...benefitesData.odm} />
         <CTASection title='Ready to Build Your Brand with White-Label Products?' />
+        <Services_GlobalPresence {...globalPresenceData.odm} />
         <FAQ_Section faqsList={faqsData.odm} />
         <Footer />
       </div>

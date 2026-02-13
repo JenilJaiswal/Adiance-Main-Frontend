@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
 import EdgeAISlider from "./EdgeAISlider";
 import Grid from "@mui/material/Grid";

@@ -43,7 +43,7 @@ const Footer = () => {
             <div className="footer-column">
               <h3>PRODUCTS</h3>
               <ul>
-                <li><a href="/s-series">S-Series</a></li>
+                <li><a href="/s-series-ai-cctv-cameras">S-Series</a></li>
               </ul>
             </div>
 
@@ -52,7 +52,7 @@ const Footer = () => {
               <h3>SOLUTIONS</h3>
               <ul>
                 <li><a href="/public-safety">Public Safety And Security</a></li>
-                <li><a href="/traffic-management">Traffic Management & Monitoring</a></li>
+                <li><a href="/trafic-management">Traffic Management & Monitoring</a></li>
                 <li><a href="/crowd-control">Crowd Control</a></li>
                 <li><a href="/smart-cities">Smart Cities & Infrastructure</a></li>
                 <li><a href="/remote-security">Remote Security</a></li>
@@ -67,7 +67,7 @@ const Footer = () => {
                 <li><a href="/oem-services">OEM Services</a></li>
                 <li><a href="/odm-services">ODM Services</a></li>
                 <li><a href="/jdm-services">JDM Services</a></li>
-                <li><a href="/pcb-assembly">PCB Assembly Services</a></li>
+                <li><a href="/pcb-assembly-service">PCB Assembly Services</a></li>
               </ul>
             </div>
 
@@ -80,7 +80,7 @@ const Footer = () => {
                 <li><a href="/public-transport">Public Transport</a></li>
                 <li><a href="/retail">Retail</a></li>
                 <li><a href="/smart-safe-city">Smart Safe City</a></li>
-                <li><a href="/banking-finance">Banking & Finance</a></li>
+                <li><a href="/bank-finance">Banking & Finance</a></li>
               </ul>
             </div>
 
@@ -88,8 +88,8 @@ const Footer = () => {
             <div className="footer-column">
               <h3>RESOURCES</h3>
               <ul>
-                <li><a href="/blogs">Blogs</a></li>
-                <li><a href="/events">Events</a></li>
+                <li><a href="/blog">Blogs</a></li>
+                <li><a href="/event">Events</a></li>
               </ul>
             </div>
 
@@ -124,7 +124,7 @@ const Footer = () => {
             </div>
             
             <div className="action-buttons">
-              <a href="/partner-with-us" className="action-btn">PARTNER WITH US</a>
+              <a href="/partners" className="action-btn">PARTNER WITH US</a>
               <span className="separator">|</span>
               <a href="/contact" className="action-btn">CONTACT US</a>
             </div>

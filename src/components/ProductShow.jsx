@@ -54,8 +54,8 @@
 
 import React from "react";
 import ProductSinglePage from "./ProductSinglePage";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import NavHeader from "./NavHeader";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";

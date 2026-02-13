@@ -1,0 +1,59 @@
+{
+  "pcbServices": [
+    {
+      "icon": "/N_Images/user.svg",
+      "title": "SMT & THT Assembly",
+      "description": "Surface mount and through-hole lines engineered for high-density layouts, delivering signal integrity in camera and robotic systems."
+    },
+    {
+      "icon": "/N_Images/user.svg",
+      "title": "Application-Specific Assembly",
+      "description": "Camera boards, motor controllers, vision PCBs and AI-ready layouts built for seamless system-level performance and integration."
+    },
+    {
+      "icon": "/N_Images/user.svg",
+      "title": "Firmware Integration & MCU Programming",
+      "description": "Bootloaders, firmware, and controller flashing pre-loaded — ready to sync with your robots or smart camera architecture."
+    },
+    {
+      "icon": "/N_Images/user.svg",
+      "title": "Optical Inspection & Functional Testing",
+      "description": "Every unit undergoes AOI, in-circuit, and power-on testing with simulated loads to detect even minute defects before dispatch."
+    },
+    {
+      "icon": "/N_Images/user.svg",
+      "title": "Conformal Coating & Ultrasonic Cleaning",
+      "description": "Optional protective coating and ultrasonic cleaning for PCBs exposed to dust, vibration, or harsh field conditions — ideal for outdoor cameras or factory floor automation."
+    },
+    {
+      "icon": "/N_Images/user.svg",
+      "title": "Multi-Layer & High-Precision PCBs",
+      "description": "Support for 2–12+ layer boards with precise trace routing, impedance control, and thermal optimization for complex embedded designs."
+    },
+    {
+      "icon": "/N_Images/user.svg",
+      "title": "IPC-A-610 Class 2 & Class 3 Compliance",
+      "description": "Assembly aligned with both commercial-grade (Class 2) and mission-critical (Class 3) standards, depending on product use case."
+    },
+    {
+      "icon": "/N_Images/user.svg",
+      "title": "BOM Validation & Component Traceability",
+      "description": "Every bill of materials (BOM) is reviewed for accuracy, lifecycle risk, and procurement risk. Component traceability is maintained through serialized QR/barcode tagging."
+    },
+    {
+      "icon": "/N_Images/user.svg",
+      "title": "Test Reporting & Documentation Delivery",
+      "description": "Clients receive comprehensive test logs, firmware versions, and assembly reports for compliance audits or project documentation."
+    },
+    {
+      "icon": "/N_Images/user.svg",
+      "title": "Final Packaging & White-Labeling",
+      "description": "Secure packaging for bulk or retail distribution, complete with client branding, labeling, and tamper-proof sealing options."
+    },
+    {
+      "icon": "/N_Images/user.svg",
+      "title": "Export-Ready Infrastructure",
+      "description": "Built in India, optimized for global scalability. Our PCBs meet CE, RoHS, FCC, and NDAA standards based on application type."
+    }
+  ]
+}

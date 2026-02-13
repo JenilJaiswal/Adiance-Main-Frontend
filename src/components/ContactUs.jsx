@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
 import ContactForm from "./ContactForm";
 import ContactMidSection from "./ContactMidSection";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import ContactZoho from "./ContactZoho";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";

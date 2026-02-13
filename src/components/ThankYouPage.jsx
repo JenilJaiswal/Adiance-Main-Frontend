@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { Helmet } from "react-helmet";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
 const ThankYouPage = () => {
   const handleGoBack = () => {

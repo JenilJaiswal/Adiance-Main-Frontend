@@ -14,6 +14,17 @@ import { useEffect } from "react";
 import EventMainDash from "./components/Events/EventMainDash";
 import RedirectManager from "./RedirectManager";
 
+// Scroll to top component
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const CombinedRedirect = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -57,6 +68,7 @@ const CombinedRedirect = () => {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <RedirectManager />
       {/* <EventMainDash /> */}
       <CombinedRedirect />
