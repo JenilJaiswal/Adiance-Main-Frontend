@@ -219,6 +219,7 @@
   border: 1px solid #ffffff;
   transition: all 0.3s ease;
   cursor: pointer;
+  max-width: fit-content;
 }
 
 .blog-read-more:hover {
