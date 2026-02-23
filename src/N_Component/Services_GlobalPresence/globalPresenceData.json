@@ -2,7 +2,7 @@
   "oem": {
     "title": "An Original Equipment Manufacturer Company <br /> Committed to Your Innovation",
     "description": "We don't just manufacture - we partner. Our in-house capabilities, strict quality protocols and deep industry experience make us the trusted OEM choice for growing and global brands alike.",
-    "mapImage": "/N_Images/map.png",
+    "mapImage": "/N_Images/map.webp",
     "mapImageAlt": "Global presence map showing OEM manufacturing reach",
     "leftFeatures": [
       {
@@ -44,7 +44,7 @@
   "odm": {
     "title": "An ODM Company Empowering Brands <br /> with Custom-Label Manufacturing",
     "description": "We are an original design manufacturing company trusted by brands across electronics, surveillance and automation. From design-led development to white-label delivery, we help you scale fast with pre-tested, globally compliant ODM products ready for your market.",
-    "mapImage": "/N_Images/map.png",
+    "mapImage": "/N_Images/map.webp",
     "mapImageAlt": "Global presence map showing ODM manufacturing reach",
     "leftFeatures": [
       {
@@ -86,7 +86,7 @@
   "jdm": {
     "title": "Why Adiance Is the Trusted JDM Partner <br /> for Global Brands",
     "description": "We bring two decades of hands-on experience in electronics, robotics, video surveillance, and embedded systems — ensuring your product is engineered with proven technical depth.",
-    "mapImage": "/N_Images/map.png",
+    "mapImage": "/N_Images/map.webp",
     "mapImageAlt": "Global presence map showing JDM manufacturing reach",
     "leftFeatures": [
       {
@@ -128,7 +128,7 @@
   "pcb": {
     "title": "Certified PCB Assembly Manufacturer <br /> for Surveillance & Automation Brands",
     "description": "At Adiance Technologies, we bring together decades of experience and deep specialization in camera and robotics PCBAs. With advanced in-house SMT and THT lines, strict IPC compliance, and full traceability, we ensure every board is reliable, scalable and export-ready.",
-    "mapImage": "/N_Images/map.png",
+    "mapImage": "/N_Images/map.webp",
     "mapImageAlt": "Global presence map showing PCB manufacturing reach",
     "leftFeatures": [
       {

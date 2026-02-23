@@ -3,7 +3,7 @@ import './Services_GlobalPresence.css';
 const Services_GlobalPresence = ({ 
   title,
   description,
-  mapImage = "/N_Images/map.png",
+  mapImage = "/N_Images/map.webp",
   mapImageAlt = "Global presence map",
   leftFeatures = [],
   bottomFeatures = []

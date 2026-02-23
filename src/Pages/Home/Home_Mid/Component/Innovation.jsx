@@ -13,7 +13,7 @@ const Innovation = () => {
           <p><strong>Connectivity:</strong> 4G, WiFi, PoE</p>
         </>
       ),
-      imageUrl: "/N_Images/S-Series-Edge-AI-CCTV-Cameras.jpg",
+      imageUrl: "/N_Images/S-Series-Edge-AI-CCTV-Cameras.webp",
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const Innovation = () => {
           <p><strong>Connectivity:</strong> 4G, WiFi, PoE</p>
         </>
       ),
-      imageUrl: "/N_Images/Eco-Series-Security-CCTV-Cameras.jpg",
+      imageUrl: "/N_Images/Eco-Series-Security-CCTV-Cameras.webp",
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ const Innovation = () => {
           <p><strong>Compliance:</strong> STQC, ONVIF, IP standards</p>
         </>
       ),
-      imageUrl: "/N_Images/STQC-Cloud-VMS—Secure-Video-Management-System.jpg",
+      imageUrl: "/N_Images/STQC-Cloud-VMS—Secure-Video-Management-System.webp",
     },
     {
       id: 4,
@@ -52,7 +52,7 @@ const Innovation = () => {
           <p><strong>Compatibility:</strong> ONVIF + global camera brands</p>
         </>
       ),
-      imageUrl: "/N_Images/Arcis-Bridge-Device.jpg",
+      imageUrl: "/N_Images/Arcis-Bridge-Device.webp",
     },
     {
       id: 5,
@@ -68,7 +68,7 @@ const Innovation = () => {
           <p>Handles up to 16 cameras with enterprise-grade throughput and optimized long-duration recording.</p>
         </>
       ),
-      imageUrl: "/N_Images/NVRs-Network-Video-Recorders-ArcisAI.png",
+      imageUrl: "/N_Images/NVRs-Network-Video-Recorders-ArcisAI.webp",
     },
     {
       id: 6,
@@ -80,7 +80,7 @@ const Innovation = () => {
           <p><strong>Applications:</strong> Assembly, inspection, industrial automation lines</p>
         </>
       ),
-      imageUrl: "/N_Images/NVRs-ArcisAI-Robotics-arm.jpg",
+      imageUrl: "/N_Images/NVRs-ArcisAI-Robotics-arm.webp",
     },
   ];
   return (

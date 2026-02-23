@@ -5,31 +5,31 @@ const Certificates = () => {
     {
       id: 1,
       name: "ISO",
-      imageUrl: "/N_Images/Home_ISO.png",
+      imageUrl: "/N_Images/Home_ISO.webp",
       alt: "ISO Certification"
     },
     {
       id: 2,
       name: "RoHS",
-      imageUrl: "/N_Images/Home_RoHS.png",
+      imageUrl: "/N_Images/Home_RoHS.webp",
       alt: "RoHS Compliant"
     },
     {
       id: 3,
       name: "BIS",
-      imageUrl: "/N_Images/Home_BIS.png",
+      imageUrl: "/N_Images/Home_BIS.webp",
       alt: "BIS Certification"
     },
     {
       id: 4,
       name: "FCC",
-      imageUrl: "/N_Images/Home_FCC.png",
+      imageUrl: "/N_Images/Home_FCC.webp",
       alt: "FCC Certification"
     },
     {
       id: 5,
       name: "CE",
-      imageUrl: "/N_Images/Home_CE.png",
+      imageUrl: "/N_Images/Home_CE.webp",
       alt: "CE Marking"
     },
     {

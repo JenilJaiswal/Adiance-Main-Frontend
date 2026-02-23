@@ -19,11 +19,11 @@
       "Efficient assembly and field-ready configurations"
     ],
     "certifications": [
-      { "src": "/N_Images/Home_ISO.png", "alt": "ISO" },
-      { "src": "/N_Images/Home_CE.png", "alt": "CE" },
-      { "src": "/N_Images/Home_FCC.png", "alt": "FCC" },
-      { "src": "/N_Images/Home_RoHS.png", "alt": "RoHS" },
-      { "src": "/N_Images/Home_BIS.png", "alt": "BIS" },
+      { "src": "/N_Images/Home_ISO.webp", "alt": "ISO" },
+      { "src": "/N_Images/Home_CE.webp", "alt": "CE" },
+      { "src": "/N_Images/Home_FCC.webp", "alt": "FCC" },
+      { "src": "/N_Images/Home_RoHS.webp", "alt": "RoHS" },
+      { "src": "/N_Images/Home_BIS.webp", "alt": "BIS" },
       { "src": "/N_Images/onvif.svg", "alt": "ONVIF" }
     ],
     "backgroundImage": "/N_Images/ODM_Manufacturing_bg.svg"
@@ -50,7 +50,7 @@
       "Field-tested under simulated industrial conditions for reliability",
       "Used across: Electronics, FMCG, Automotive, Metalworks, and Assembly Lines"
     ],
-    "backgroundImage": "/N_Images/ODM_Robotic_Arm_bg.png",
+    "backgroundImage": "/N_Images/ODM_Robotic_Arm_bg.webp",
     "rightImage": "/N_Images/OEM_Hero_Right_1.svg",
     "rightImageAlt": "Robotic Arm"
   },
@@ -79,11 +79,11 @@
       "IPC-A-610 Class 2 & 3 compliant assembly",
       "Compliance-ready: RoHS, REACH, CE, UL"
     ],
-    "backgroundImage": "/N_Images/ODM_PCB_bg.png",
+    "backgroundImage": "/N_Images/ODM_PCB_bg.webp",
     "rightImages": [
-      { "src": "/N_Images/ODM_pcb1.jpg", "alt": "PCB Manufacturing Facility 1" },
-      { "src": "/N_Images/ODM_pcb2.jpg", "alt": "PCB Manufacturing Facility 2" },
-      { "src": "/N_Images/ODM_pcb3.jpg", "alt": "PCB Manufacturing Facility 3" }
+      { "src": "/N_Images/ODM_pcb1.webp", "alt": "PCB Manufacturing Facility 1" },
+      { "src": "/N_Images/ODM_pcb2.webp", "alt": "PCB Manufacturing Facility 2" },
+      { "src": "/N_Images/ODM_pcb3.webp", "alt": "PCB Manufacturing Facility 3" }
     ]
   },
   "jdmCCTV": {
@@ -103,11 +103,11 @@
       "NDA-compliant production"
     ],
     "certifications": [
-      { "src": "/N_Images/Home_ISO.png", "alt": "ISO" },
-      { "src": "/N_Images/Home_CE.png", "alt": "CE" },
-      { "src": "/N_Images/Home_FCC.png", "alt": "FCC" },
-      { "src": "/N_Images/Home_RoHS.png", "alt": "RoHS" },
-      { "src": "/N_Images/Home_BIS.png", "alt": "BIS" },
+      { "src": "/N_Images/Home_ISO.webp", "alt": "ISO" },
+      { "src": "/N_Images/Home_CE.webp", "alt": "CE" },
+      { "src": "/N_Images/Home_FCC.webp", "alt": "FCC" },
+      { "src": "/N_Images/Home_RoHS.webp", "alt": "RoHS" },
+      { "src": "/N_Images/Home_BIS.webp", "alt": "BIS" },
       { "src": "/N_Images/onvif.svg", "alt": "ONVIF" }
     ],
     "backgroundImage": "/N_Images/ODM_Manufacturing_bg.svg"
@@ -126,7 +126,7 @@
       "Built-in safety systems: Collision detection, Emergency stop, Lockout mechanisms",
       "Compatible with common controllers (PLC, SCADA)"
     ],
-    "rightImage": "/N_Images/OEM_Robotic_Arm.png",
+    "rightImage": "/N_Images/OEM_Robotic_Arm.webp",
     "rightImageAlt": "Robotic Arm"
   },
   "jdmPCB": {
@@ -144,9 +144,9 @@
       "Firmware preloading and motion sequence setup"
     ],
     "rightImages": [
-      { "src": "/N_Images/ODM_pcb1.jpg", "alt": "PCB Manufacturing Facility 1" },
-      { "src": "/N_Images/ODM_pcb2.jpg", "alt": "PCB Manufacturing Facility 2" },
-      { "src": "/N_Images/ODM_pcb3.jpg", "alt": "PCB Manufacturing Facility 3" }
+      { "src": "/N_Images/ODM_pcb1.webp", "alt": "PCB Manufacturing Facility 1" },
+      { "src": "/N_Images/ODM_pcb2.webp", "alt": "PCB Manufacturing Facility 2" },
+      { "src": "/N_Images/ODM_pcb3.webp", "alt": "PCB Manufacturing Facility 3" }
     ]
   }
 }

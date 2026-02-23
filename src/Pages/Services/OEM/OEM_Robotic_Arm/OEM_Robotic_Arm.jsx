@@ -14,7 +14,7 @@ const OEM_Robotic_Arm = () => {
         </div>
 
         <div className='rightside-img item'>
-          <img src="/N_Images/OEM_Robotic_Arm.png" alt="OEM Robotic Arm" />
+          <img src="/N_Images/OEM_Robotic_Arm.webp" alt="OEM Robotic Arm" />
         </div>
       </div>
 

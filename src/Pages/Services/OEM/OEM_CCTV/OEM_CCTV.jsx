@@ -13,7 +13,7 @@ const OEM_CCTV = () => {
           </div>
           <div className="oem-cctv-image">
             <img 
-              src="/N_Images/OEM_CCTV.png" 
+              src="/N_Images/OEM_CCTV.webp" 
               alt="OEM CCTV Camera Equipment" 
               className="oem-cctv-main-image"
             />

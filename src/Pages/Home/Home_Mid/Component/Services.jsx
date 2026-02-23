@@ -8,7 +8,7 @@ const Services = () => {
       description: (
         <p>Adiance acts as your dedicated security camera manufacturing partner, producing ready-to-market IP CCTV cameras under your brand name. We handle the full process - engineering, component sourcing, assembly, testing, certifications, packaging, and shipping - so you can launch products quickly without investing in your own factory.</p>
       ),
-      imageUrl: "/N_Images/ODM-CCTV-Camera-Manufacturing.jpg",
+      imageUrl: "/N_Images/ODM-CCTV-Camera-Manufacturing.webp",
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ const Services = () => {
       description: (
         <p>Our OEM capability allows you to create completely custom CCTV products tailored to your market. We design the hardware, PCB, firmware, enclosures, features, and performance parameters exactly as you require.</p>
       ),
-      imageUrl: "/N_Images/OEM-CCTV-Camera-Development.jpg",
+      imageUrl: "/N_Images/OEM-CCTV-Camera-Development.webp",
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ const Services = () => {
       description: (
         <p>In Joint development manufacturing (JDM), your engineering team and Adiance's R&D team collaborate to co-create your hardware with our intelligent system or our hardware with your system, delivering fully integrated video surveillance solutions from concept to production.</p>
       ),
-      imageUrl: "/N_Images/SmartTech.png",
+      imageUrl: "/N_Images/SmartTech.webp",
     },
     {
       id: 4,
@@ -32,7 +32,7 @@ const Services = () => {
       description: (
         <p>Adiance provides high-precision PCB & Turnkey assembly for CCTV cameras and robotics for industrial automation. We manage the complete PCB lifecycle—SMT assembly, component sourcing, quality inspection, firmware loading, and product testing.</p>
       ),
-      imageUrl: "/N_Images/PCB-Assembly-Manufacturing.jpg",
+      imageUrl: "/N_Images/PCB-Assembly-Manufacturing.webp",
     },
     {
       id: 5,
@@ -40,7 +40,7 @@ const Services = () => {
       description: (
         <p>Secure and scalable cloud storage for ArcisAI cameras, with flexible retention plans of 1, 3, 5, 7, and 30 days. Easily access and retrieve footage from multiple locations with fast, reliable, and safe storage.</p>
       ),
-      imageUrl: "/N_Images/cloudAbout.png",
+      imageUrl: "/N_Images/cloudAbout.webp",
     },
     {
       id: 6,
@@ -48,7 +48,7 @@ const Services = () => {
       description: (
         <p>Brands can customize part of the hardware - including enclosures, lenses, connectivity, firmware, SoC selection, and functional features. We will modify both the design and technical specification to match your brand identity and performance needs.</p>
       ),
-      imageUrl: "/N_Images/customized.png",
+      imageUrl: "/N_Images/customized.webp",
     },
   ];
 
