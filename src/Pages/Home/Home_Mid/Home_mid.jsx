@@ -19,7 +19,7 @@ const Home_mid = () => {
         <Certificates />
         <Services />
         <Industries />
-        <Achievements />x
+        <Achievements />
         <Blog_View />
         <Testimonials />
         <CTASection />
