@@ -70,7 +70,7 @@ const ContactZoho = () => {
 
   // API URLs remain the same
   const EMS_API_URL =
-    "https://c-r-m-icr7b.ondigitalocean.app/backend/api/crmSales/createLead";
+    "https://crm.arcisai.io/backend/api/v1/crmSales/createLead";
 
   // const ADIANCE_EMAIL_URL = "http://localhost:5000/api/send-email-adiance";
   const ADIANCE_EMAIL_URL = "https://backend.adiance.com:443/api/send-email-adiance"
