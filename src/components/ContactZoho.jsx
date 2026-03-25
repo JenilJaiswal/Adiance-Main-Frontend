@@ -62,7 +62,7 @@ const ContactZoho = () => {
     camerasFor: "",
     customerQuantity: "",
     updates: false,
-    leadType: "Adiance Website",
+    source: "Adiance Website",
     businessUnit: "Adiance Technologies Pvt Ltd",
   });
 
@@ -187,7 +187,7 @@ const ContactZoho = () => {
         location: formData.location,
         clientCategory: formData.customerType,
         industryType: formData.camerasFor,
-        leadType: "Adiance website",
+        source: "Adiance website",
         customerType: formData.customerType,
         requirement: [],
         customerQuantity: formData.customerQuantity,
