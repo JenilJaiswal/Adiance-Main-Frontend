@@ -69,7 +69,7 @@ const SSeries = () => {
   const activeFeature = features[activeFeatureIdx];
 
   return (
-    <div style={{ overflowX: "hidden", width: "100%", maxWidth: "1600px", margin: "0 auto" }}>
+    <div className="ss-series-container">
       <Helmet>
         <title>EdgeAI - S-Series AI CCTV Cameras for Smart Protection | Adiance</title>
         <meta name="description" content="Deploy EdgeAI S-Series AI CCTV cameras in minutes. Get clean alerts, reliable night vision and easy multi-site control for safer operations across industries." />

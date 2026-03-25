@@ -72,7 +72,7 @@ const EdgeAICamera = () => {
   const currentTab = tabs.find((t) => t.key === activeTab);
 
   return (
-    <div style={{ overflowX: "hidden", width: "100%", maxWidth: "1600px", margin: "0 auto" }}>
+    <div>
       <Helmet>
         <title>CCTV Camera Products | AI-Powered Surveillance Cameras | Adiance</title>
         <meta

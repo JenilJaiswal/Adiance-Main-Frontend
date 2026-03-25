@@ -35,7 +35,6 @@ const EcoSeries = () => {
   return (
     <div
       className="eco-series-container"
-      style={{ overflowX: "hidden", width: "100%", maxWidth: "1600px", margin: "0 auto" }}
     >
       <Helmet>
         <title>ECO Series CCTV Cameras | 33 SKUs | Adiance</title>

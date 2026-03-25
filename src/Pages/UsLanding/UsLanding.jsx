@@ -43,7 +43,7 @@ const UsLanding = () => {
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
 
   return (
-    <div style={{ overflowX: "hidden", width: "100%", maxWidth: "1600px", margin: "0 auto" }}>
+    <div className="us-landing-container">
       <Helmet>
         <title>NDAA Compliant Security Cameras for the United States | Adiance</title>
         <meta name="description" content="Adiance provides NDAA Section 889 compliant security cameras for US government agencies, schools, hospitals, and enterprises. A trusted Hikvision and Dahua alternative with Edge AI and 4G LTE." />

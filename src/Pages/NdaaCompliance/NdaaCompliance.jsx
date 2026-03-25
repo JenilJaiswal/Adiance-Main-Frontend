@@ -97,7 +97,7 @@ const NdaaCompliance = () => {
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
 
   return (
-    <div style={{ overflowX: "hidden", width: "100%", maxWidth: "1600px", margin: "0 auto" }}>
+    <div className="ndaa-compliance-container">
       <Helmet>
         <title>NDAA Compliant Security Cameras | Section 889 Approved | Adiance</title>
         <meta name="description" content="Adiance manufactures NDAA Section 889 compliant security cameras. Government-approved alternative to Hikvision & Dahua with Edge AI, 4G LTE, and Cloud VMS. Trusted by US federal agencies." />
