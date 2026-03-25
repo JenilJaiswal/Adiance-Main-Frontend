@@ -258,6 +258,12 @@ const Manufacturing = () => {
           name="description"
           content="Adiance Technologies ensures precision in PCB manufacturing, integration, and quality inspection from material selection to packaging for reliable CCTV systems."
         />
+        <meta name="keywords" content="PCB manufacturing, CCTV manufacturing, quality inspection" />
+        <meta property="og:title" content="End-to-End PCB Manufacturing & Quality Inspection" />
+        <meta property="og:description" content="Adiance Technologies ensures precision in PCB manufacturing, integration, and quality inspection from material selection to packaging for reliable CCTV systems." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

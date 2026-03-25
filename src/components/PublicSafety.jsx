@@ -112,6 +112,12 @@ const PublicSafety = () => {
           name="description"
           content="Enhance security with AI-driven CCTV solutions. HD imaging, wide-angle coverage, low-light performance & smart analytics for real-time monitoring & safety."
         />
+        <meta name="keywords" content="public safety CCTV, AI security camera, surveillance monitoring" />
+        <meta property="og:title" content="Public Safety & Security | AI-Powered CCTV Surveillance" />
+        <meta property="og:description" content="Enhance security with AI-driven CCTV solutions. HD imaging, wide-angle coverage, low-light performance & smart analytics for real-time monitoring & safety." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

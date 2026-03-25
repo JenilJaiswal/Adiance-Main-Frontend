@@ -112,6 +112,12 @@ const CrowdControl = () => {
           name="description"
           content="Enhance crowd safety with Adiance CCTV solutions. Get real-time crowd counting, behavior analysis & facial recognition for efficient crowd management"
         />
+        <meta name="keywords" content="crowd control camera, crowd counting, crowd management CCTV" />
+        <meta property="og:title" content="Smart Crowd Counting & Management – Adiance Technologies" />
+        <meta property="og:description" content="Enhance crowd safety with Adiance CCTV solutions. Get real-time crowd counting, behavior analysis & facial recognition for efficient crowd management" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

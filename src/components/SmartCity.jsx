@@ -149,6 +149,12 @@ const SmartCity = () => {
           name="description"
           content="Adiance Technologies offers smart city solutions with high-res cameras and ANPR for crime prevention, traffic monitoring, and real-time congestion management."
         />
+        <meta name="keywords" content="smart city camera, safe city CCTV, ANPR traffic camera" />
+        <meta property="og:title" content="Smart & Safe City Solutions - Crime & Traffic Management" />
+        <meta property="og:description" content="Adiance Technologies offers smart city solutions with high-res cameras and ANPR for crime prevention, traffic monitoring, and real-time congestion management." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

@@ -258,6 +258,12 @@ const CloudApplication = () => {
           name="description"
           content="Adiance Technologies is customizable and efficient cloud solutions with patented technology, empowering enterprises with advanced, reliable cloud services."
         />
+        <meta name="keywords" content="cloud VMS, cloud surveillance, video management system" />
+        <meta property="og:title" content="Cutting-Edge Cloud Services for Modern Enterprises" />
+        <meta property="og:description" content="Adiance Technologies is customizable and efficient cloud solutions with patented technology, empowering enterprises with advanced, reliable cloud services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

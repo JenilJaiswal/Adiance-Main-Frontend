@@ -131,6 +131,12 @@ const PublicTransport = () => {
           name="description"
           content="Adiance Technologies provides advanced CCTV solutions for public transport, ensuring passenger safety and real-time monitoring with HD cameras and AI analytics"
         />
+        <meta name="keywords" content="public transport CCTV, bus security camera, transit surveillance" />
+        <meta property="og:title" content="CCTV Solutions for Public Transport Safety & Efficiency" />
+        <meta property="og:description" content="Adiance Technologies provides advanced CCTV solutions for public transport, ensuring passenger safety and real-time monitoring with HD cameras and AI analytics" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

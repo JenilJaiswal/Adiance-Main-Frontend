@@ -18,6 +18,12 @@ const WarrantyService = () => {
           name="description"
           content="Adiance Technologies Terms & Conditions for products and services—know your rights, warranties, and legal obligations before making a purchase."
         />
+        <meta name="keywords" content="warranty service, Adiance warranty, CCTV warranty" />
+        <meta property="og:title" content="Store Terms & Conditions - Purchase Agreement" />
+        <meta property="og:description" content="Adiance Technologies Terms & Conditions for products and services—know your rights, warranties, and legal obligations before making a purchase." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

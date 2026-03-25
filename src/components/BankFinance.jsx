@@ -112,6 +112,12 @@ const BankFinance = () => {
           name="description"
           content="Adiance CCTV solutions enhance bank security with facial recognition, ATM surveillance & fraud prevention. Ensure customer safety with intelligent monitoring."
         />
+        <meta name="keywords" content="bank security camera, ATM surveillance, finance CCTV" />
+        <meta property="og:title" content="Bank & Finance Security | CCTV & Fraud Prevention" />
+        <meta property="og:description" content="Adiance CCTV solutions enhance bank security with facial recognition, ATM surveillance & fraud prevention. Ensure customer safety with intelligent monitoring." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

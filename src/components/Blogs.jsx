@@ -172,7 +172,7 @@ const Blogs = () => {
         )}
       </div>
       {blogs.length > 0 && totalPages > 1 && (
-        <Box sx={{ mt: 3, display: "flex", justifyContent: "center" }}>
+        <Box sx={{ mt: 3, mb: 4, display: "flex", justifyContent: "center" }}>
           <Pagination
             count={totalPages}
             page={currentPage}

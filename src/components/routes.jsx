@@ -41,7 +41,7 @@ import Robotics from "./Robotics";
 import RSeries from "./RSeries";
 import SmartCities from "./SmartCities";
 import SmartCity from "./SmartCity";
-import SSeries from "./SSeries";
+import SSeries from "../Pages/SSeries/SSeries";
 import Sustainability from "./Sustainability";
 import TermsOfService from "./TermsOfService";
 import ThankYouPage from "./ThankYouPage";
@@ -52,7 +52,9 @@ import WarrantyService from "./WarrantyService";
 import WifiCameraPdf from "./WifiCameraPdf";
 import Firmware from "./Firmware";
 import Tools from "./Tools";
-import EdgeAICamera from "./EdgeAICamera";
+import EdgeAICamera from "../Pages/EdgeAICamera/EdgeAICamera";
+import NdaaCompliance from "../Pages/NdaaCompliance/NdaaCompliance";
+import UsLanding from "../Pages/UsLanding/UsLanding";
 import _4KCamera from "./_4KCamera";
 import _4GCamera from "./_4GCamera";
 import _360Approach from "./_360Approach";
@@ -61,6 +63,7 @@ import NotFound from "./NotFound";
 import CareerHome from "./career/CareerHome";
 import JDM from "../Pages/Services/JDM/JDM";
 import PCB from "../Pages/Services/PCB/PCB";
+import EcoSeries from "../Pages/EcoSeries/EcoSeries";
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -142,17 +145,22 @@ const routes = [
   {
     path: "/s-series-ai-cctv-cameras",
     element: (
-      <SSeries productTitle="The World's First 5G Enabled Edge AI Camera" />
+      <SSeries />
     ),
   },
 
   // Series pages
+  { path: "/eco-series", element: <EcoSeries /> },
   { path: "/r-series", element: <RSeries title="R Series" /> },
   { path: "/h-series", element: <RSeries title="H Series" /> },
   {path: "/oem-services", element: <OEM />},
   {path: "/odm-services", element: <ODM />},
   {path: "/jdm-services", element: <JDM />},
   {path: "/pcb-assembly-service", element: <PCB />},
+
+  // Compliance & Regions
+  { path: "/ndaa-compliance", element: <NdaaCompliance /> },
+  { path: "/us", element: <UsLanding /> },
 
   // Camera pages
   { path: "/thermal-camera", element: <ThermalCamera /> },

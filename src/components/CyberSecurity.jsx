@@ -112,6 +112,12 @@ const CyberSecurity = () => {
           name="description"
           content="Ensure data security with cutting-edge cybersecurity solutions. Protect sensitive information, mitigate risks, and stay compliant with evolving cyber threats"
         />
+        <meta name="keywords" content="cybersecurity, data protection, camera security" />
+        <meta property="og:title" content="Advanced Cybersecurity Solutions for Data Protection" />
+        <meta property="og:description" content="Ensure data security with cutting-edge cybersecurity solutions. Protect sensitive information, mitigate risks, and stay compliant with evolving cyber threats" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

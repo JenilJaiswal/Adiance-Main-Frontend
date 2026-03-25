@@ -44,6 +44,10 @@ const Footer = () => {
               <h3>PRODUCTS</h3>
               <ul>
                 <li><a href="/s-series-ai-cctv-cameras">S-Series</a></li>
+                <li><a href="/eco-series">ECO Series</a></li>
+                <li><a href="/edgeaicamera">Edge AI Camera</a></li>
+                <li><a href="/ndaa-compliance">NDAA Compliance</a></li>
+                <li><a href="/us">US Market</a></li>
               </ul>
             </div>
 
@@ -136,7 +140,7 @@ const Footer = () => {
       </div>
       {/* Copyright */}
       <div className="footer-copyright">
-        <p>Copyright © 2025 Adiance technologies. All rights reserved.</p>
+        <p>Copyright © 2026 Adiance technologies. All rights reserved.</p>
       </div>
     </footer>
   )

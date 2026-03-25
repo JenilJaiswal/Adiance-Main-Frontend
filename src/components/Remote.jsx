@@ -112,6 +112,12 @@ const Remote = () => {
           name="description"
           content="Remote security surveillance for remote sites, temporary installations, and rural areas. Rugged cameras, solar power, and cloud monitoring ensure safety."
         />
+        <meta name="keywords" content="remote security camera, remote surveillance, rural security CCTV" />
+        <meta property="og:title" content="Remote Security Surveillance - Adiance Technologies" />
+        <meta property="og:description" content="Remote security surveillance for remote sites, temporary installations, and rural areas. Rugged cameras, solar power, and cloud monitoring ensure safety." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

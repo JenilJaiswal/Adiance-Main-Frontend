@@ -1,0 +1,125 @@
+/* Stats Bar - Matches Service pages design (GlobalPresence bottom-row + Benefits hero style) */
+.eco-stats-bar {
+  background: #BF0603;
+  padding: 0;
+}
+
+.eco-stats-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.eco-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 36px 20px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.eco-stat-item:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* Vertical divider between items */
+.eco-stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.eco-stat-value {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.eco-stat-label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .eco-stat-item {
+    padding: 30px 16px;
+  }
+
+  .eco-stat-value {
+    font-size: 1.6rem;
+  }
+
+  .eco-stat-label {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .eco-stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .eco-stat-item {
+    padding: 28px 20px;
+  }
+
+  /* Reset dividers for 2-col layout */
+  .eco-stat-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .eco-stat-item:nth-child(odd)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  /* Horizontal divider between rows */
+  .eco-stat-item:nth-child(1),
+  .eco-stat-item:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}
+
+@media (max-width: 575px) {
+  .eco-stat-item {
+    padding: 22px 14px;
+  }
+
+  .eco-stat-value {
+    font-size: 1.3rem;
+  }
+
+  .eco-stat-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .eco-stat-value {
+    font-size: 1.2rem;
+  }
+
+  .eco-stat-label {
+    font-size: 0.85rem;
+  }
+}

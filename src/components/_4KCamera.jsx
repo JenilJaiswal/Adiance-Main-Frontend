@@ -33,6 +33,12 @@ const ThermalCamera = () => {
             name="description"
             content="Adiance 4K UHD Camera with AI, deep learning, ANPR, & real-time alerts. High accuracy surveillance with proactive threat detection & efficient video retrieval."
           />
+          <meta name="keywords" content="4K camera, UHD surveillance, AI 4K CCTV camera" />
+          <meta property="og:title" content="Adiance 4K UHD AI Camera | Advanced Security & ANPR" />
+          <meta property="og:description" content="Adiance 4K UHD Camera with AI, deep learning, ANPR, & real-time alerts. High accuracy surveillance with proactive threat detection & efficient video retrieval." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:site_name" content="Adiance Technologies" />
           <link rel="canonical" href={canonicalUrl} />
         </Helmet>
         <Header />

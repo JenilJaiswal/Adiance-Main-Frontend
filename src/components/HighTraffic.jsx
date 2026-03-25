@@ -112,6 +112,12 @@ const HighTraffic = () => {
           name="description"
           content="Secure dockyards, bus stops, railways, and airports with advanced CCTV, real-time monitoring, and thermal imaging for enhanced safety and threat detection."
         />
+        <meta name="keywords" content="high traffic CCTV, airport security camera, railway surveillance" />
+        <meta property="og:title" content="CCTV Solutions for High-Traffic Infrastructure Security" />
+        <meta property="og:description" content="Secure dockyards, bus stops, railways, and airports with advanced CCTV, real-time monitoring, and thermal imaging for enhanced safety and threat detection." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

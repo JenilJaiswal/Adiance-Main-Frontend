@@ -33,6 +33,12 @@ const ANPRCamera = () => {
             name="description"
             content="Adiance Technologies  ANPR Cameras use AI-powered plate recognition for real-time traffic monitoring & law enforcement. Enhance security & road safety today."
           />
+          <meta name="keywords" content="ANPR camera, number plate recognition, traffic monitoring camera" />
+          <meta property="og:title" content="ANPR Camera for Traffic Monitoring & Crime Prevention" />
+          <meta property="og:description" content="Adiance Technologies  ANPR Cameras use AI-powered plate recognition for real-time traffic monitoring & law enforcement. Enhance security & road safety today." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:site_name" content="Adiance Technologies" />
           <link rel="canonical" href={canonicalUrl} />
         </Helmet>
         <Header />

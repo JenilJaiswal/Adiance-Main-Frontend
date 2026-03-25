@@ -1,5 +1,6 @@
-const CTASection = ({ 
+const CTASection = ({
   title = "Start Your OEM/ODM Project With Adiance — Connect With Our Engineering Team",
+  description,
   buttonText = "Start Your Project",
   buttonLink = "#",
   onButtonClick
@@ -16,10 +17,11 @@ const CTASection = ({
   return (
     <div className="cta_Container">
       <div className="cta_Content">
-        <h2 
+        <h2
           className="cta_Title"
           dangerouslySetInnerHTML={{ __html: title }}
         />
+        {description && <p className="cta_Description">{description}</p>}
         <button className="cta_Button" onClick={handleClick}>
           {buttonText}
         </button>
@@ -48,6 +50,18 @@ const CTASection = ({
           color: #444444;
           margin-bottom: 30px;
           line-height: 1.3;
+        }
+
+        .cta_Description {
+          font-family: "Roboto", sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+          color: #666666;
+          margin-bottom: 30px;
+          line-height: 1.6;
+          max-width: max-content;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .cta_Button {

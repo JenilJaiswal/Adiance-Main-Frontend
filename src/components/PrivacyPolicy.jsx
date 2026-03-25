@@ -18,6 +18,12 @@ const PrivacyPolicy = () => {
           name="description"
           content="Explore cookies, tracking options, and third-party services in Adiance Technologies' Privacy & Cookie Policy. Manage preferences and safeguard your data."
         />
+        <meta name="keywords" content="privacy policy, cookie policy, Adiance data protection" />
+        <meta property="og:title" content="Privacy & Cookie Policy - Adiance Technologies" />
+        <meta property="og:description" content="Explore cookies, tracking options, and third-party services in Adiance Technologies' Privacy & Cookie Policy. Manage preferences and safeguard your data." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

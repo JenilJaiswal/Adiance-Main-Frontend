@@ -783,6 +783,12 @@ function SSeries({ productTitle, imgIdx }) {
           name="description"
           content="Deploy EdgeAI S-Series AI CCTV cameras in minutes. Get clean alerts, reliable night vision and easy multi-site control for safer operations across industries."
         />
+        <meta name="keywords" content="S-Series AI camera, EdgeAI CCTV, smart surveillance camera, Adiance S-Series" />
+        <meta property="og:title" content="EdgeAI - S-Series AI CCTV Cameras for Smart Protection | Adiance" />
+        <meta property="og:description" content="Deploy EdgeAI S-Series AI CCTV cameras in minutes. Get clean alerts, reliable night vision and easy multi-site control for safer operations across industries." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

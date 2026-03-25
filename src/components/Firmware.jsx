@@ -1,4 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
@@ -81,6 +83,8 @@ const downloadFirmwareById = async (id, type) => {
 };
 
 const Firmware = () => {
+  const location = useLocation();
+  const canonicalUrl = `https://www.adiance.com${location.pathname}`;
   const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -155,6 +159,14 @@ const Firmware = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Firmware Downloads | Camera Firmware Updates | Adiance</title>
+        <meta
+          name="description"
+          content="Download the latest firmware updates for Adiance security cameras. Keep your surveillance system secure and up-to-date."
+        />
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
       <Header />
       <div className="container" style={{ paddingTop: "100px", paddingBottom: "60px" }}>
         <h1 style={{ marginBottom: "8px" }}>Firmware</h1>

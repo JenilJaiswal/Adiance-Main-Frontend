@@ -112,6 +112,12 @@ const Compliance = () => {
           name="description"
           content="Adiance Technologies upholds integrity with anti-corruption, data protection, and human rights, ensuring ethical and secure business practices."
         />
+        <meta name="keywords" content="compliance standards, NDAA compliance, ethical surveillance" />
+        <meta property="og:title" content="Compliance & Ethical Standards - Adiance Technologies" />
+        <meta property="og:description" content="Adiance Technologies upholds integrity with anti-corruption, data protection, and human rights, ensuring ethical and secure business practices." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

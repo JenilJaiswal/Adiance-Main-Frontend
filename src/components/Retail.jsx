@@ -131,6 +131,12 @@ const Retail = () => {
           name="description"
           content="Enhance retail security with Adiance’s CCTV systems. Prevent theft, manage queues, gain customer insights, and monitor stores remotely with advanced analytics."
         />
+        <meta name="keywords" content="retail CCTV, store security camera, retail surveillance" />
+        <meta property="og:title" content="Smart Retail CCTV — Protect, Monitor & Analyze." />
+        <meta property="og:description" content="Enhance retail security with Adiance’s CCTV systems. Prevent theft, manage queues, gain customer insights, and monitor stores remotely with advanced analytics." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

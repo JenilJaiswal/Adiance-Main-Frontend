@@ -112,6 +112,12 @@ const Education = () => {
           name="description"
           content="Campus security with real-time monitoring, prevent bullying & misconduct, and improve parental engagement with Adiance Technologies smart solutions"
         />
+        <meta name="keywords" content="campus security camera, school CCTV, education surveillance" />
+        <meta property="og:title" content="Campus Security & Monitoring - Adiance Technologies" />
+        <meta property="og:description" content="Campus security with real-time monitoring, prevent bullying & misconduct, and improve parental engagement with Adiance Technologies smart solutions" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

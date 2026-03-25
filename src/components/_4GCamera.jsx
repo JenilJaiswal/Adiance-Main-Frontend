@@ -34,6 +34,12 @@ const ThermalCamera = () => {
             name="description"
             content="4G FHD Security Camera with seamless connectivity, HD clarity, real-time alerts & easy setup. Ideal for remote locations, parking lots & outdoor security"
           />
+          <meta name="keywords" content="4G camera, LTE security camera, remote surveillance camera" />
+          <meta property="og:title" content="4G FHD Security Camera | Remote Surveillance Solution" />
+          <meta property="og:description" content="4G FHD Security Camera with seamless connectivity, HD clarity, real-time alerts & easy setup. Ideal for remote locations, parking lots & outdoor security" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:site_name" content="Adiance Technologies" />
           <link rel="canonical" href={canonicalUrl} />
         </Helmet>
         <Header />

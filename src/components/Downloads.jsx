@@ -35,6 +35,12 @@ const Downloads = () => {
           name="description"
           content="Access the latest software and datasheets for security solutions. Download firmware, manuals, and technical documents for seamless integration and support."
         />
+        <meta name="keywords" content="CCTV downloads, security camera software, datasheet download" />
+        <meta property="og:title" content="Download Center – Software & Datasheets for Security" />
+        <meta property="og:description" content="Access the latest software and datasheets for security solutions. Download firmware, manuals, and technical documents for seamless integration and support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

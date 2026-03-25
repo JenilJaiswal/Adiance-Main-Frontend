@@ -112,6 +112,12 @@ const SmartCities = () => {
           name="description"
           content="Adiance provides advanced CCTV solutions for smart cities, traffic management, parking efficiency, and infrastructure monitoring with cutting-edge technology."
         />
+        <meta name="keywords" content="smart city surveillance, city CCTV camera, municipal security" />
+        <meta property="og:title" content="Smart City Surveillance Solutions - Adiance Technologies" />
+        <meta property="og:description" content="Adiance provides advanced CCTV solutions for smart cities, traffic management, parking efficiency, and infrastructure monitoring with cutting-edge technology." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

@@ -121,13 +121,15 @@ const Innovation = () => {
   return (
     <div>
       <Helmet>
-        <link rel="canonical" href="https://www.adiance.com/innovation" />
-        <title>Innovative Surveillance Solutions - ANPR, Cloud Systems</title>
+        <title>AI & Innovation in Surveillance | Edge AI Technology | Adiance</title>
         <meta
           name="description"
-          content="Cutting-edge surveillance with Adiance Technologies: AI PTZ cameras, ANPR, cloud security, and custom OEM/ODM solutions for smart security."
+          content="Adiance leads innovation in AI-powered surveillance with edge AI processing, smart video analytics, and next-generation camera technology."
         />
-
+        <meta
+          name="keywords"
+          content="AI surveillance innovation, edge AI camera technology, smart video analytics"
+        />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

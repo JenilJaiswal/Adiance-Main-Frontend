@@ -35,6 +35,12 @@ const Datasheet = () => {
           name="description"
           content="Access and download datasheets for security and surveillance products. Get detailed specifications and features for informed decision-making."
         />
+        <meta name="keywords" content="camera datasheet, CCTV specifications, surveillance product datasheet" />
+        <meta property="og:title" content="Download Datasheets for Security & Surveillance Product" />
+        <meta property="og:description" content="Access and download datasheets for security and surveillance products. Get detailed specifications and features for informed decision-making." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

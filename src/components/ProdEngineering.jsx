@@ -258,6 +258,12 @@ const ProdEngineering = () => {
           name="description"
           content="Adiance Technologies specializes in advanced product engineering, delivering innovative hardware and software solutions for cutting-edge surveillance."
         />
+        <meta name="keywords" content="product engineering, hardware engineering, surveillance R&D" />
+        <meta property="og:title" content="Product Engineering Solutions - Adiance Technologies" />
+        <meta property="og:description" content="Adiance Technologies specializes in advanced product engineering, delivering innovative hardware and software solutions for cutting-edge surveillance." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

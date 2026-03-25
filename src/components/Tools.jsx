@@ -1,4 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
@@ -80,6 +82,8 @@ const downloadAppById = async (id, type) => {
 
 
 const Tools = () => {
+  const location = useLocation();
+  const canonicalUrl = `https://www.adiance.com${location.pathname}`;
   const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -147,6 +151,14 @@ const Tools = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Tools & Software Downloads | Adiance</title>
+        <meta
+          name="description"
+          content="Download tools and software for Adiance security cameras. Configuration utilities, mobile apps, and management software."
+        />
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
       <Header />
       <div className="container" style={{ paddingTop: "100px", paddingBottom: "60px" }}>
         <h1 style={{ marginBottom: "8px" }}>Tools</h1>

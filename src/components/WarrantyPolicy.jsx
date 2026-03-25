@@ -18,6 +18,12 @@ const WarrantyPolicy = () => {
           name="description"
           content="Explore Adiance’s warranty services for reliable support and protection of your surveillance systems. Ensure security and peace of mind with our coverage."
         />
+        <meta name="keywords" content="warranty policy, Adiance warranty coverage" />
+        <meta property="og:title" content="Warranty Policy - Adiance Technologies" />
+        <meta property="og:description" content="Explore Adiance’s warranty services for reliable support and protection of your surveillance systems. Ensure security and peace of mind with our coverage." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

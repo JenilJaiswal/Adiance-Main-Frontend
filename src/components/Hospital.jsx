@@ -131,6 +131,12 @@ const Hospital = () => {
           name="description"
           content="Enhance healthcare security with high-resolution CCTV systems. Monitor patient safety, control access, protect assets, enable emergency response. PTZ cameras."
         />
+        <meta name="keywords" content="healthcare CCTV, hospital security camera, patient safety surveillance" />
+        <meta property="og:title" content="Healthcare CCTV-Patient Safety & Security Surveillance" />
+        <meta property="og:description" content="Enhance healthcare security with high-resolution CCTV systems. Monitor patient safety, control access, protect assets, enable emergency response. PTZ cameras." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

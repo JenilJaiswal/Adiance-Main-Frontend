@@ -18,6 +18,12 @@ const TermsOfService = () => {
           name="description"
           content="Review Adiance Technologies' Terms of Service to understand our policies, responsibilities, and guidelines for using our products and services."
         />
+        <meta name="keywords" content="terms of service, Adiance policies" />
+        <meta property="og:title" content="Terms of Service - Adiance Technologies" />
+        <meta property="og:description" content="Review Adiance Technologies' Terms of Service to understand our policies, responsibilities, and guidelines for using our products and services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

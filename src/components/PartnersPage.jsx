@@ -22,6 +22,12 @@ const PartnersPage = () => {
           name="description"
           content="Partner with Adiance Technologies for cutting-edge surveillance solutions. Expertise in PCB manufacturing, AI,and smart tech for customized, security systems."
         />
+        <meta name="keywords" content="partner with Adiance, CCTV distribution partner, security integrator" />
+        <meta property="og:title" content="Partner With Us - Adiance Technologies" />
+        <meta property="og:description" content="Partner with Adiance Technologies for cutting-edge surveillance solutions. Expertise in PCB manufacturing, AI,and smart tech for customized, security systems." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <div>

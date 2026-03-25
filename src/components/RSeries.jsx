@@ -64,6 +64,12 @@ const RSeries = ({ title }) => {
               name="description"
               content={product.metaDescription || product.description}
             />
+            <meta name="keywords" content="R-Series camera, customizable CCTV, Adiance R-Series" />
+            <meta property="og:title" content={product.metaTitle || product.title} />
+            <meta property="og:description" content={product.metaDescription || product.description} />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={canonicalUrl} />
+            <meta property="og:site_name" content="Adiance Technologies" />
             <link rel="canonical" href={canonicalUrl} />
           </Helmet>
 

@@ -33,6 +33,12 @@ const ThermalCamera = () => {
             name="description"
             content="Thermal cameras with AI analytics detect fever and elevated body temperatures in real-time, ensuring safety in airports, offices, and healthcare facilities."
           />
+          <meta name="keywords" content="thermal camera, fever detection camera, AI thermal screening" />
+          <meta property="og:title" content="Thermal Camera Solutions - AI-Powered Fever Detection" />
+          <meta property="og:description" content="Thermal cameras with AI analytics detect fever and elevated body temperatures in real-time, ensuring safety in airports, offices, and healthcare facilities." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:site_name" content="Adiance Technologies" />
           <link rel="canonical" href={canonicalUrl} />
         </Helmet>
         <Header />

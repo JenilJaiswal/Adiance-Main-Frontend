@@ -17,7 +17,7 @@ const Home = () => {
     const canonicalUrl = `https://www.adiance.com${location.pathname}`;
 
     return (
-        <div className="home-container">
+        <div className="home-container" style={{ overflowX: 'hidden', width: '100%', maxWidth: '1600px', margin: '0 auto' }}>
             <Helmet>
                 <title>Best CCTV Camera Manufacturer In India  - OEM & ODM CCTV Company</title>
                 <meta

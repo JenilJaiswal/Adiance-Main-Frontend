@@ -112,6 +112,12 @@ const Trafic = () => {
           name="description"
           content="Adiance Technologies advanced traffic management, vehicle surveillance, and school bus monitoring solutions to enhance safety and improve urban mobility."
         />
+        <meta name="keywords" content="traffic management CCTV, vehicle surveillance, traffic monitoring" />
+        <meta property="og:title" content="Traffic Management & Monitoring Solutions" />
+        <meta property="og:description" content="Adiance Technologies advanced traffic management, vehicle surveillance, and school bus monitoring solutions to enhance safety and improve urban mobility." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
