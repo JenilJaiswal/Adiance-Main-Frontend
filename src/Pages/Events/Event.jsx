@@ -1,7 +1,5 @@
-import React from "react";
-import Header from "./Header/Header";
-import NavHeader from "./NavHeader";
-import Footer from "./Footer/Footer";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import EventMidSection from "./EventMidSection";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
@@ -80,7 +78,6 @@ export default function Event() {
         </script>
       </Helmet>
       <Header />
-      <NavHeader text={"Events"} />
       <EventMidSection />
       <Footer />
     </div>

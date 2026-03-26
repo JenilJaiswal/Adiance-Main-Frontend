@@ -11,7 +11,6 @@ import {
 } from "react-router-dom";
 import routes from "./components/routes";
 import { useEffect } from "react";
-import EventMainDash from "./components/Events/EventMainDash";
 import RedirectManager from "./RedirectManager";
 
 // Scroll to top component
