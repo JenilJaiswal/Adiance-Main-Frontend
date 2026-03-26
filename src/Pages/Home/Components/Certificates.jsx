@@ -65,7 +65,7 @@ const Certificates = () => {
         }
 
         .certificates-content {
-          max-width: 1200px;
+          max-width: 1565px;
           margin: 0 auto;
         }
 

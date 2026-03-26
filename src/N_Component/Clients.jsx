@@ -64,7 +64,7 @@ const Clients = ({ showTitle = true }) => {
         /* Desktop Styles */
         @media screen and (min-width: 1025px) {
           .clients-content {
-            max-width: 1400px;
+            max-width: 1565px;
           }
         }
 

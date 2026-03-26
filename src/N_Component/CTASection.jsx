@@ -37,7 +37,7 @@ const CTASection = ({
         }
 
         .cta_Content {
-          max-width: 1200px;
+          max-width: 1565px;
           margin: 0 auto;
           position: relative;
           z-index: 1;

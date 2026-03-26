@@ -34,7 +34,7 @@ const EcoSeries = () => {
 
   return (
     <div
-      className="eco-series-container"
+      className="eco-series-page"
     >
       <Helmet>
         <title>ECO Series CCTV Cameras | 33 SKUs | Adiance</title>

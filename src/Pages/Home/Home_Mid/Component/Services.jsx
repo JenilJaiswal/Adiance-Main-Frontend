@@ -87,14 +87,14 @@ const Services = () => {
         .services-container {
           padding: 60px 20px;
           background-color: #ffffff;
-          max-width: 1400px;
+          max-width: 1565px;
           margin: 0 auto;
         }
 
         .services-header {
           text-align: center;
           margin-bottom: 50px;
-        }
+        }₹
 
         .services-title {
           font-family: "Roboto", sans-serif;

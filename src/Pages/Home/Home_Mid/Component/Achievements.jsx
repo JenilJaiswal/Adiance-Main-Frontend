@@ -175,7 +175,7 @@ const Achievements = ({
           margin: 0 auto;
           text-align: center;
           line-height: 1.4;
-          max-width: 90%;
+          max-width: 1565px;
         }
 
         .marquee-container {
