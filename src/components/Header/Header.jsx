@@ -114,7 +114,8 @@ const Header = () => {
         { name: "Privacy Policy", path: "/privacy-policy" },
         { name: "Warranty Policy", path: "/warranty-policy" },
         { name: "Terms of Service", path: "/terms-of-service" },
-        { name: "Feedback", path: "/feedback" }
+        { name: "Firmware", path: "/firmware"},
+        { name: "Tools", path: "/tools" }
       ]
     }
   ];
