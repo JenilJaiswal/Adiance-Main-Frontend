@@ -43,9 +43,9 @@ const Footer = () => {
             <div className="footer-column">
               <h3>PRODUCTS</h3>
               <ul>
-                <li><a href="/s-series-ai-cctv-cameras">S-Series</a></li>
+                <li><a href="/edge-ai-cctv-cameras">Edge AI Cameras</a></li>
                 <li><a href="/eco-series">ECO Series</a></li>
-                <li><a href="/edgeaicamera">Edge AI Camera</a></li>
+                {/* <li><a href="/edgeaicamera">Edge AI Camera</a></li> */}
                 <li><a href="/ndaa-compliance">NDAA Compliance</a></li>
                 <li><a href="/us">US Market</a></li>
               </ul>

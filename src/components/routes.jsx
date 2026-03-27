@@ -143,7 +143,7 @@ const routes = [
     ),
   },
   {
-    path: "/s-series-ai-cctv-cameras",
+    path: "/edge-ai-cctv-cameras",
     element: (
       <SSeries />
     ),

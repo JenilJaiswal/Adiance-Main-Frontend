@@ -56,9 +56,9 @@ const Header = () => {
       name: "Products",
       path: "/s-series-ai-cctv-cameras",
       dropdownItems: [
-        { name: "S-series", path: "/s-series-ai-cctv-cameras" },
+        { name: "Edge AI Camera", path: "/edge-ai-cctv-cameras" },
         { name: "ECO Series", path: "/eco-series" },
-        { name: "Edge AI Camera", path: "/edgeaicamera" },
+        // { name: "Edge AI Camera", path: "/edgeaicamera" },
         { name: "NDAA Compliance", path: "/ndaa-compliance" },
         { name: "US Market", path: "/us" }
       ]

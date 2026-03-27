@@ -99,7 +99,7 @@ const EdgeAICamera = () => {
       {/* Hero */}
       <section className="edgeai-hero">
         <img
-          src="/N_Images/Slider1.webp"
+          src="/N_Images/EdgeAI.png"
           alt="Edge AI Camera"
           className="edgeai-hero-bg"
           loading="lazy"
