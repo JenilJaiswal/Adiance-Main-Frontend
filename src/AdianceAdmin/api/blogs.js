@@ -142,7 +142,7 @@ export const sendContactEmail = async ({ fullName, email, phone, message }) => {
     email,
     phone,
     message,
-    formType: "Blog",
+    formType: "Adiance Website-(Blog)",
   };
   const response = await axios.post(`${API_URL}/send-email-adiance`, payload);
   return response.data;
