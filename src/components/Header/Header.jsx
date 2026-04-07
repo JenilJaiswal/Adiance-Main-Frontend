@@ -68,7 +68,7 @@ const Header = () => {
       path: "#",
       dropdownItems: [
         { name: "Public Safety and Security", path: "/public-safety" },
-        { name: "Traffic Management & Monitoring", path: "/trafic-management" },
+        { name: "Traffic Management & Monitoring", path: "/traffic-management" },
         { name: "Crowd Control", path: "/crowd-control" },
         { name: "Smart Cities & Infrastructure", path: "/smart-cities" },
         { name: "Remote-Security", path: "/remote-security" },

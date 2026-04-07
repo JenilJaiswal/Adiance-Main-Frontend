@@ -56,7 +56,7 @@ const Footer = () => {
               <h3>SOLUTIONS</h3>
               <ul>
                 <li><a href="/public-safety">Public Safety And Security</a></li>
-                <li><a href="/trafic-management">Traffic Management & Monitoring</a></li>
+                <li><a href="/traffic-management">Traffic Management & Monitoring</a></li>
                 <li><a href="/crowd-control">Crowd Control</a></li>
                 <li><a href="/smart-cities">Smart Cities & Infrastructure</a></li>
                 <li><a href="/remote-security">Remote Security</a></li>

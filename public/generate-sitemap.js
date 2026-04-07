@@ -42,7 +42,7 @@ function getLastModTime(url) {
       '/cloudxvr': 'src/components/ProductShow.jsx',
       '/5g-edge-ai-camera-s-series-surveillance': 'src/components/SSeries.jsx',
       '/public-safety': 'src/components/PublicSafety.jsx',
-      '/trafic-management': 'src/components/Trafic.jsx',
+      '/traffic-management': 'src/components/Trafic.jsx',
       '/crowd-control': 'src/components/CrowdControl.jsx',
       '/smart-cities': 'src/components/SmartCities.jsx',
       '/remote-security': 'src/components/Remote.jsx',
@@ -152,7 +152,7 @@ const staticPages = [
 
   // Industry application pages
   { url: "/public-safety", changefreq: "weekly", priority: 0.8 },
-  { url: "/trafic-management", changefreq: "weekly", priority: 0.8 },
+  { url: "/traffic-management", changefreq: "weekly", priority: 0.8 },
   { url: "/crowd-control", changefreq: "weekly", priority: 0.8 },
   { url: "/smart-cities", changefreq: "weekly", priority: 0.8 },
   { url: "/remote-security", changefreq: "weekly", priority: 0.8 },

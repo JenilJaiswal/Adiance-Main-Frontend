@@ -195,7 +195,7 @@ const routes = [
 
   // Industry applications
   { path: "/public-safety", element: <PublicSafety /> },
-  { path: "/trafic-management", element: <Trafic /> },
+  { path: "/traffic-management", element: <Trafic /> },
   { path: "/crowd-control", element: <CrowdControl /> },
   { path: "/smart-cities", element: <SmartCities /> },
   { path: "/remote-security", element: <Remote /> },

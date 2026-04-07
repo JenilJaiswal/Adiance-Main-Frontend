@@ -43,7 +43,7 @@ const industries = [
   { icon: LocationCityIcon, title: "Smart Cities", desc: "Our AI security cameras watch plazas, transit points, and infrastructure in real time - helping your teams prevent incidents, manage crowds, and keep the city moving.", link: "/smart-cities" },
   { icon: SchoolIcon, title: "Education", desc: "With our AI CCTV Cameras, you'll monitor entrances, corridors, and exam halls - reducing vandalism, ensuring fair tests, and keeping students and staff safe all day.", link: "/education" },
   { icon: LocalHospitalIcon, title: "Healthcare", desc: "Our S-series AI security cameras at ICUs, pharmacies and entries to control access, capture clear evidence and support compliance - so your staff can focus on patients.", link: "/healthcare" },
-  { icon: TrafficIcon, title: "Traffic Management", desc: "Use ArcisAI S-series AI CCTV cameras to read flow, spot incidents and flag violations in real time—informing signal timing and keeping roads safer for everyone.", link: "/trafic-management" },
+  { icon: TrafficIcon, title: "Traffic Management", desc: "Use ArcisAI S-series AI CCTV cameras to read flow, spot incidents and flag violations in real time—informing signal timing and keeping roads safer for everyone.", link: "/traffic-management" },
   { icon: AccountBalanceIcon, title: "Banking & Finance", desc: "With our AI security CCTV cameras, you deter threats, support fraud investigations and maintain audit trails that satisfy internal and regulatory checks.", link: "/bank-finance" },
 ];
 

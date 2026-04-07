@@ -431,7 +431,7 @@ const ResponsiveNavbar = () => {
                               {/* <DoubleArrowIcon className="doubleArrow" /> */}
                               <ArrowRightIcon />
                               <SmartLink
-                                to="/trafic-management"
+                                to="/traffic-management"
                                 className="link"
                               >
                                 Traffic Management & Monitoring
@@ -555,7 +555,7 @@ const ResponsiveNavbar = () => {
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       as={SmartLink}
-                      to="/trafic-management"
+                      to="/traffic-management"
                       style={{
                         fontSize: screenWidth > 993 ? "20px" : "inherit",
                       }}
