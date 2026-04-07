@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import { sendContactEmail } from '../AdianceAdmin/api/blogs';
 
-const EMS_API_URL = "https://crm.arcisai.io/backend/api/v1/crmSales/createLead";
+const EMS_API_URL = `${process.env.REACT_APP_API_URL || "https://backend.adiance.com:443/api"}/crm-lead`;
 
 const ContactForm = ({ redirectUrl = "/thank-you" }) => {
   const navigate = useNavigate();
@@ -99,7 +99,6 @@ const ContactForm = ({ redirectUrl = "/thank-you" }) => {
     } catch (error) {
       console.error("Submission Error:", error);
       setSubmitStatus('error');
-    } finally {
       setIsSubmitting(false);
     }
   };
