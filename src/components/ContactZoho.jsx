@@ -69,7 +69,7 @@ const ContactZoho = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   // API URLs remain the same
-  const EMS_API_URL = "https://crm.arcisai.io/backend/api/v1/crmSales/createLead";
+  const EMS_API_URL = "https://backend.adiance.com:443/api/crm-lead";
 
   // const ADIANCE_EMAIL_URL = "http://localhost:5000/api/send-email-adiance";
   const ADIANCE_EMAIL_URL = "https://backend.adiance.com:443/api/send-email-adiance"
