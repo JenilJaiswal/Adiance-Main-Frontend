@@ -7,7 +7,7 @@ const PCB_Services_Grid = ({ services = [] }) => {
         {services.map((service, index) => (
           <div key={index} className="pcb-service-card">
             <div className="pcb-service-icon">
-              <img src={service.icon} alt={service.title} />
+              <img src={service.icon} alt={service.title} loading="lazy" />
             </div>
             <div className="pcb-service-content">
               <h3 className="pcb-service-title">{service.title}</h3>

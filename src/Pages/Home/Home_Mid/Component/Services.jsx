@@ -65,10 +65,11 @@ const Services = () => {
         {serviceItems.map((item) => (
           <div key={item.id} className="service-card">
             <div className="card-image-container">
-              <img 
-                src={item.imageUrl} 
-                alt={item.title} 
+              <img
+                src={item.imageUrl}
+                alt={item.title}
                 className="card-image"
+                loading="lazy"
               />
               <div className="card-overlay">
                 <div className="card-content">

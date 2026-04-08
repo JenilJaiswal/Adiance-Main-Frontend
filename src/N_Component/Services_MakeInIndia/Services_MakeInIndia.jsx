@@ -23,10 +23,11 @@ const Services_MakeInIndia = ({
         </div>
         
         <div className="logo-containers">
-          <img 
-            src={logo} 
-            alt={logoAlt} 
+          <img
+            src={logo}
+            alt={logoAlt}
             className="make-in-india-logo"
+            loading="lazy"
           />
         </div>
       </div>

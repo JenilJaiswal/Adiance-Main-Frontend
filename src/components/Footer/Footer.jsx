@@ -9,28 +9,28 @@ const Footer = () => {
         <div className="footer-left">
           <div className="footer-logo-section">
             <div className="logo-container">
-              <img src="/N_Images/footer_logo.svg" alt="Adiance" className="footer-logo" />
+              <img src="/N_Images/footer_logo.svg" alt="Adiance" className="footer-logo" loading="lazy" />
             </div>
             <div className="made-in-india-badge">
-              <img src="/N_Images/make_in_india.svg" alt="Made in India" className="made-in-india" />
+              <img src="/N_Images/make_in_india.svg" alt="Made in India" className="made-in-india" loading="lazy" />
             </div>
           </div>
           
           <div className="contact-info">
             <div className="contact-item">
-              <img src="/N_Images/website_icon.svg" alt="Website" className="contact-icon-img" />
+              <img src="/N_Images/website_icon.svg" alt="Website" className="contact-icon-img" loading="lazy" />
               <a href="https://www.adiance.com" target="_blank" rel="noopener noreferrer">www.adiance.com</a>
             </div>
             <div className="contact-item">
-              <img src="/N_Images/email_icon.svg" alt="Email" className="contact-icon-img" />
+              <img src="/N_Images/email_icon.svg" alt="Email" className="contact-icon-img" loading="lazy" />
               <a href="mailto:Contact@adiance.com">Contact@adiance.com</a>
             </div>
             <div className="contact-item">
-              <img src="/N_Images/call_icon.svg" alt="Phone" className="contact-icon-img" />
+              <img src="/N_Images/call_icon.svg" alt="Phone" className="contact-icon-img" loading="lazy" />
               <span>(+91) 968 777 9999</span>
             </div>
             <div className="contact-item address">
-              <img src="/N_Images/location_icon.svg" alt="Location" className="contact-icon-img" />
+              <img src="/N_Images/location_icon.svg" alt="Location" className="contact-icon-img" loading="lazy" />
               <span>House No. 7, Arista Eight, Corporate House, Rajpath Rangoli Rd, behind Satyam House, Bodakdev, Ahmedabad, Gujarat 380059</span>
             </div>
           </div>
@@ -116,16 +116,16 @@ const Footer = () => {
           <div className="footer-bottom-right">
             <div className="social-media">
               <a href="https://www.facebook.com/adiancetechnologies" target="_blank" rel="noopener noreferrer" className="social-icon facebook">
-                <img src="/N_Images/facebook.svg" alt="Facebook" />
+                <img src="/N_Images/facebook.svg" alt="Facebook" loading="lazy" />
               </a>
               <a href="https://twitter.com/adiancetech" target="_blank" rel="noopener noreferrer" className="social-icon twitter">
-                <img src="/N_Images/X.svg" alt="Twitter/X" />
+                <img src="/N_Images/X.svg" alt="Twitter/X" loading="lazy" />
               </a>
               <a href="https://www.instagram.com/adiancetech/" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
-                <img src="/N_Images/Instagram.svg" alt="Instagram" />
+                <img src="/N_Images/Instagram.svg" alt="Instagram" loading="lazy" />
               </a>
               <a href="https://www.linkedin.com/company/adiancetechnologies/" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
-                <img src="/N_Images/linkedin.svg" alt="LinkedIn" />
+                <img src="/N_Images/linkedin.svg" alt="LinkedIn" loading="lazy" />
               </a>
             </div>
             

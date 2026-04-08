@@ -7,7 +7,7 @@ const Globalnetwork = ({ data }) => {
     <section className="gn-cta-section">
       {/* Decorative top-right */}
       <div className="gn-deco gn-deco-right">
-        <img src="/images/Group.svg" alt="" aria-hidden="true" />
+        <img src="/images/Group.svg" alt="" aria-hidden="true" loading="lazy" />
       </div>
 
       <div className="gn-cta-content">
@@ -26,7 +26,7 @@ const Globalnetwork = ({ data }) => {
 
       {/* Decorative bottom-left */}
       <div className="gn-deco gn-deco-left">
-        <img src="/images/Group.svg" alt="" aria-hidden="true" />
+        <img src="/images/Group.svg" alt="" aria-hidden="true" loading="lazy" />
       </div>
 
       <style>{`

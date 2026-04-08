@@ -118,6 +118,7 @@ const BuyBackCarousel = () => {
                   <img
                     src={camera.image}
                     alt={camera.name}
+                    loading="lazy"
                     style={{
                       maxWidth: "70%",
                       height: "auto",

@@ -91,10 +91,11 @@ const Industries = () => {
         {industryItems.map((item) => (
           <div key={item.id} className="industry-card">
             <div className="industry-card-image-container">
-              <img 
-                src={item.imageUrl} 
-                alt={item.title} 
+              <img
+                src={item.imageUrl}
+                alt={item.title}
                 className="card-image"
+                loading="lazy"
               />
               <div className="card-title-overlay">
                 <h3 className="overlay-title">{item.title}</h3>

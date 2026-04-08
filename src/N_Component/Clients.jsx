@@ -8,10 +8,11 @@ const Clients = ({ showTitle = true }) => {
         <div className="clients-grid">
           {clientLogos.map((num) => (
             <div key={num} className="client-logo-wrapper">
-              <img 
+              <img
                 src={`/N_Images/client${num}.svg`}
                 alt={`Client ${num}`}
                 className="client-logo"
+                loading="lazy"
               />
             </div>
           ))}

@@ -76,6 +76,7 @@ const EventMidSection = () => {
                 <img
                   src={event.logo}
                   alt={`${event.name} logo`}
+                  loading="lazy"
                   onError={(e) => { e.target.style.display = "none"; }}
                 />
               </div>
@@ -105,6 +106,7 @@ const EventMidSection = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
+                  loading="lazy"
                   onError={(e) => { e.target.src = "/images/ifsec-event.jpg"; }}
                 />
               </div>
@@ -124,10 +126,10 @@ const EventMidSection = () => {
           {/* Bottom-right navigation buttons */}
           <div className="event-mid-nav-btns">
             <button className="event-mid-nav-btn" onClick={prev} aria-label="Previous">
-              <img src="/N_Images/left_direction.svg" alt="Previous" />
+              <img src="/N_Images/left_direction.svg" alt="Previous" loading="lazy" />
             </button>
             <button className="event-mid-nav-btn" onClick={next} aria-label="Next">
-              <img src="/N_Images/right_direction.svg" alt="Next" />
+              <img src="/N_Images/right_direction.svg" alt="Next" loading="lazy" />
             </button>
           </div>
         </div>
@@ -139,6 +141,9 @@ const EventMidSection = () => {
               <img
                 src="/images/IFSEC_logo.png"
                 alt="IFSEC India Logo"
+                loading="lazy"
+                width="600"
+                height="400"
                 onError={(e) => { e.target.src = "/images/Logo.png"; }}
               />
             </div>

@@ -126,7 +126,7 @@ const SSeries = () => {
             </nav>
             <div className="ss-why-panel" key={activeWhy}>
               <div className="ss-why-panel-img">
-                <img src={currentWhy.img} alt={currentWhy.title} />
+                <img src={currentWhy.img} alt={currentWhy.title} loading="lazy" />
               </div>
               <div className="ss-why-panel-info">
                 <h3 className="ss-why-panel-title">{currentWhy.title}</h3>
@@ -156,7 +156,7 @@ const SSeries = () => {
             </div>
             <div className="ss-features-panel" key={activeFeatureIdx}>
               <div className="ss-features-panel-img">
-                <img src={activeFeature.img} alt={activeFeature.title} />
+                <img src={activeFeature.img} alt={activeFeature.title} loading="lazy" />
               </div>
               <div className="ss-features-panel-info">
                 <h3 className="ss-features-panel-title">{activeFeature.title}</h3>

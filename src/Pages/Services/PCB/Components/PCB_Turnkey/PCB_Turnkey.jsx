@@ -20,7 +20,7 @@ const PCB_Turnkey = ({
         <ul className="pcb-turnkey-features">
           {features.map((feature, index) => (
             <li key={index} className="pcb-turnkey-feature">
-              <img src={checkIcon} alt="check" className="pcb-feature-icon" />
+              <img src={checkIcon} alt="check" className="pcb-feature-icon" loading="lazy" />
               {feature}
             </li>
           ))}

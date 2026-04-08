@@ -17,7 +17,7 @@ const ImageGallery = () => {
       <div className="image-grid">
         {imagePaths.map((path, index) => (
           <div className="image-item" key={index}>
-            <img src={path} alt={`Image ${index + 1}`} />
+            <img src={path} alt={`Image ${index + 1}`} loading="lazy" />
           </div>
         ))}
       </div>

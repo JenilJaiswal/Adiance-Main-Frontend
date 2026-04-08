@@ -357,7 +357,7 @@ const PopUpForm = () => {
                 mb: 2,
               }}
             >
-              <img src="/Adiance-Logo.png" alt="adiance" width="30%" />
+              <img src="/Adiance-Logo.png" alt="adiance" width="30%" loading="lazy" />
               {/* <img
                 src="/images/iscWestLogo.png"
                 alt="event"

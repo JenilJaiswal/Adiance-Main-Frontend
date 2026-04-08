@@ -9,9 +9,9 @@ const Services_Hero = ({
 }) => {
   return (
     <section className="services-hero">
-      <img 
-        src={backgroundImage} 
-        alt="Hero Background" 
+      <img
+        src={backgroundImage}
+        alt="Hero Background"
         className="services-hero-bg-image"
       />
       <div className="services-hero-container">

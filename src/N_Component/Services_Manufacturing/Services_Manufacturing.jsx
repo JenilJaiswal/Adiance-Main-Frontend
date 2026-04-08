@@ -26,7 +26,7 @@ const Services_Manufacturing = ({
           <ul className="services-manufacturing-features">
             {topFeatures.map((feature, index) => (
               <li key={index} className="services-manufacturing-feature">
-                <img src={checkIcon} alt="check" className="feature-icon" />
+                <img src={checkIcon} alt="check" className="feature-icon" loading="lazy" />
                 {feature}
               </li>
             ))}
@@ -42,7 +42,7 @@ const Services_Manufacturing = ({
             <ul className="services-manufacturing-features">
               {bottomFeatures.map((feature, index) => (
                 <li key={index} className="services-manufacturing-feature">
-                  <img src={checkIcon} alt="check" className="feature-icon" />
+                  <img src={checkIcon} alt="check" className="feature-icon" loading="lazy" />
                   {feature}
                 </li>
               ))}
@@ -52,11 +52,12 @@ const Services_Manufacturing = ({
           {certifications && certifications.length > 0 && (
             <div className="services-manufacturing-certifications">
               {certifications.map((cert, index) => (
-                <img 
-                  key={index} 
-                  src={cert.src} 
+                <img
+                  key={index}
+                  src={cert.src}
                   alt={cert.alt}
                   className="certification-logo"
+                  loading="lazy"
                 />
               ))}
             </div>
@@ -67,11 +68,12 @@ const Services_Manufacturing = ({
           <div className="services-manufacturing-right">
             <div className="services-manufacturing-images-grid">
               {rightImages.map((img, index) => (
-                <img 
-                  key={index} 
-                  src={img.src} 
+                <img
+                  key={index}
+                  src={img.src}
                   alt={img.alt}
                   className="services-manufacturing-grid-image"
+                  loading="lazy"
                 />
               ))}
             </div>

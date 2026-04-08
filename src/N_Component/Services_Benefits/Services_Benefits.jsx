@@ -18,7 +18,7 @@ const Services_Benefits = ({
           <p className="hero-description">{heroDescription}</p>
         </div>
         <div className="hero-image">
-          <img src={heroImage} alt={heroImageAlt} className="handshake-image"/>
+          <img src={heroImage} alt={heroImageAlt} className="handshake-image" loading="lazy" />
         </div>
       </div>
 
@@ -27,7 +27,7 @@ const Services_Benefits = ({
           {benefits.slice(0, midPoint).map((benefit, index) => (
             <div key={index} className="benefit-item">
               <div className="benefit-icon">
-                <img src={checkIcon} alt="Check" />
+                <img src={checkIcon} alt="Check" loading="lazy" />
               </div>
               <div className="benefit-content">
                 <h3 className="benefit-title">{benefit.title}</h3>
@@ -41,7 +41,7 @@ const Services_Benefits = ({
           {benefits.slice(midPoint).map((benefit, index) => (
             <div key={index} className="benefit-item">
               <div className="benefit-icon">
-                <img src={checkIcon} alt="Check" />
+                <img src={checkIcon} alt="Check" loading="lazy" />
               </div>
               <div className="benefit-content">
                 <h3 className="benefit-title">{benefit.title}</h3>

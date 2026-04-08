@@ -26,7 +26,7 @@ const Services_GlobalPresence = ({
           </header>
 
           <div className="oem-gp-map-wrap">
-            <img src={mapImage} alt={mapImageAlt} />
+            <img src={mapImage} alt={mapImageAlt} loading="lazy" />
             <div className="oem-gp-description">
               <p>{description}</p>
             </div>

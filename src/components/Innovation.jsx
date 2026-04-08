@@ -137,7 +137,7 @@ const Innovation = () => {
       <div className="innovation-container">
         {innovationItems.map((item) => (
           <div key={item.id} className="innovation-item">
-            <img src={item.imageUrl} alt={item.title} className="item-image" />
+            <img src={item.imageUrl} alt={item.title} className="item-image" loading="lazy" />
             <div className="item-details">
               {/* <h3 className="item-title">{item.title}</h3> */}
               <p className="item-description">{item.description}</p>

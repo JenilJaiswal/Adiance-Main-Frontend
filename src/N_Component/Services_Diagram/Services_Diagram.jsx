@@ -13,10 +13,11 @@ const Services_Diagram = ({
         <p className="gathering-subtitle">{subtitle}</p>
       </div>
       <div className="gathering-diagram">
-        <img 
-          src={diagramImage} 
-          alt={diagramAlt} 
+        <img
+          src={diagramImage}
+          alt={diagramAlt}
           className="diagram-image"
+          loading="lazy"
         />
       </div>
     </section>

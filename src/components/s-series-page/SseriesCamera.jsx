@@ -45,7 +45,7 @@ const SseriesCamera = ({ title, subTitle, buttonText, buttonLink }) => {
         }}
       >
         <Box sx={{ maxWidth: { xs: "20%" } }}>
-          <img src="/images/Group.svg" alt="groupsvg" width="100%" />
+          <img src="/images/Group.svg" alt="groupsvg" width="100%" loading="lazy" />
         </Box>
       </Box>
       <Container
@@ -141,7 +141,7 @@ const SseriesCamera = ({ title, subTitle, buttonText, buttonLink }) => {
         }}
       >
         <Box sx={{ maxWidth: { xs: "20%" } }}>
-          <img src="/images/Group.svg" alt="groupsvg" width="100%" />
+          <img src="/images/Group.svg" alt="groupsvg" width="100%" loading="lazy" />
         </Box>
       </Box>
     </Box>

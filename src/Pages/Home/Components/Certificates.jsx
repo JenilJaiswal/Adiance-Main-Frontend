@@ -47,10 +47,11 @@ const Certificates = () => {
         <div className="certificates-grid">
           {certifications.map((cert) => (
             <div key={cert.id} className="certificate-item">
-              <img 
-                src={cert.imageUrl} 
-                alt={cert.alt} 
+              <img
+                src={cert.imageUrl}
+                alt={cert.alt}
                 className="certificate-image"
+                loading="lazy"
               />
             </div>
           ))}

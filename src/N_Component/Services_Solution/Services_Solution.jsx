@@ -16,10 +16,11 @@ const Services_Solution = ({
           <p className="services-solution-description">{description}</p>
         </div>
         <div className="services-solution-image">
-          <img 
-            src={image} 
-            alt={imageAlt} 
+          <img
+            src={image}
+            alt={imageAlt}
             className={wideImage ? 'wide-image' : ''}
+            loading="lazy"
           />
         </div>
       </div>

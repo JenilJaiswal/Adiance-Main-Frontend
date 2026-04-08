@@ -149,10 +149,11 @@ const Header = () => {
                   onClick={() => handleDesktopDropdownClick(item.name)}
                 >
                   <span className="header-nav-text">{item.name}</span>
-                  <img 
-                    src="/N_Images/dropdown.svg" 
-                    alt="dropdown" 
-                    className={`header-dropdown-arrow ${activeDropdown === item.name ? 'header-arrow-rotated' : ''}`} 
+                  <img
+                    src="/N_Images/dropdown.svg"
+                    alt="dropdown"
+                    className={`header-dropdown-arrow ${activeDropdown === item.name ? 'header-arrow-rotated' : ''}`}
+                    loading="lazy"
                   />
                 </div>
 
@@ -212,10 +213,11 @@ const Header = () => {
                 onClick={() => toggleMobileSubmenu(item.name)}
               >
                 <span>{item.name}</span>
-                <img 
-                  src="/N_Images/dropdown.svg" 
-                  alt="dropdown" 
-                  className={`header-mobile-dropdown-arrow ${expandedMobileMenu === item.name ? 'header-mobile-arrow-rotated' : ''}`} 
+                <img
+                  src="/N_Images/dropdown.svg"
+                  alt="dropdown"
+                  className={`header-mobile-dropdown-arrow ${expandedMobileMenu === item.name ? 'header-mobile-arrow-rotated' : ''}`}
+                  loading="lazy"
                 />
               </div>
               <div className={`header-mobile-nav-submenu ${expandedMobileMenu === item.name ? 'header-mobile-submenu-expanded' : ''}`}>
