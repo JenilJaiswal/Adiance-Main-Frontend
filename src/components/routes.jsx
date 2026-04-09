@@ -1,69 +1,73 @@
-import LoginDash from "../AdianceAdmin/pages/LoginDash";
-import Reset from "../AdianceAdmin/pages/ForgotPassword/Reset";
-import Dashboard from "../AdianceAdmin/pages/Dashboard/Dashboard";
-import OtpVerification from "../AdianceAdmin/pages/OTP/OtpVerification";
-import AboutUs from "./AboutUs";
-import ANPRCamera from "./ANPRCamera";
-import AutoplayCarousel from "./AutoplayCarousel";
-import BankFinance from "./BankFinance";
-import Blog1 from "./Blog1";
-import Blogs from "./Blogs";
-import BuyBackOfferPage from "./BuyBackOfferPage";
-import CloudApplication from "./CloudApplication";
-import Compliance from "./Compliance";
-import ContactUs from "./ContactUs";
-import CrowdControl from "./CrowdControl";
-import CyberSecurity from "./CyberSecurity";
-import Datasheet from "./Datasheet";
-import Downloads from "./Downloads";
-import Education from "./Education";
-import Event from "../Pages/Events/Event";
-import Feedback from "./Feedback";
-import FutureGrowth from "./FutureGrowth";
-import HighTraffic from "./HighTraffic";
-// import Home from "./Home";
-import Home from "../Pages/Home/Home";
-import OEM from "../Pages/Services/OEM/OEM";
-import ODM from "../Pages/Services/ODM/ODM";
-import Hospital from "./Hospital";
-import Innovation from "./Innovation";
-import Manufacturing from "./Manufacturing";
-import PartnersPage from "./PartnersPage";
-import PartnerWithUsPage from "./PartnerWithUsPage";
-import PrivacyPolicy from "./PrivacyPolicy";
-import ProdEngineering from "./ProdEngineering";
-import ProductShow from "./ProductShow";
-import PublicSafety from "./PublicSafety";
-import PublicTransport from "./PublicTransport";
-import Remote from "./Remote";
-import Retail from "./Retail";
-import Robotics from "./Robotics";
-import RSeries from "./RSeries";
-import SmartCities from "./SmartCities";
-import SmartCity from "./SmartCity";
-import SSeries from "../Pages/SSeries/SSeries";
-import Sustainability from "./Sustainability";
-import TermsOfService from "./TermsOfService";
-import ThankYouPage from "./ThankYouPage";
-import ThermalCamera from "./ThermalCamera";
-import Trafic from "./Trafic";
-import WarrantyPolicy from "./WarrantyPolicy";
-import WarrantyService from "./WarrantyService";
-import WifiCameraPdf from "./WifiCameraPdf";
-import Firmware from "./Firmware";
-import Tools from "./Tools";
-import EdgeAICamera from "../Pages/EdgeAICamera/EdgeAICamera";
-import NdaaCompliance from "../Pages/NdaaCompliance/NdaaCompliance";
-import UsLanding from "../Pages/UsLanding/UsLanding";
-import _4KCamera from "./_4KCamera";
-import _4GCamera from "./_4GCamera";
-import _360Approach from "./_360Approach";
-import IfsecIndia2025 from "../Pages/Events/IfsecIndia2025";
-import NotFound from "./NotFound";
-import CareerHome from "./career/CareerHome";
-import JDM from "../Pages/Services/JDM/JDM";
-import PCB from "../Pages/Services/PCB/PCB";
-import EcoSeries from "../Pages/EcoSeries/EcoSeries";
+import { lazy } from "react";
+
+// Admin
+const LoginDash = lazy(() => import("../AdianceAdmin/pages/LoginDash"));
+const Reset = lazy(() => import("../AdianceAdmin/pages/ForgotPassword/Reset"));
+const Dashboard = lazy(() => import("../AdianceAdmin/pages/Dashboard/Dashboard"));
+const OtpVerification = lazy(() => import("../AdianceAdmin/pages/OTP/OtpVerification"));
+
+// Pages
+const AboutUs = lazy(() => import("./AboutUs"));
+const ANPRCamera = lazy(() => import("./ANPRCamera"));
+const AutoplayCarousel = lazy(() => import("./AutoplayCarousel"));
+const BankFinance = lazy(() => import("./BankFinance"));
+const Blog1 = lazy(() => import("./Blog1"));
+const Blogs = lazy(() => import("./Blogs"));
+const BuyBackOfferPage = lazy(() => import("./BuyBackOfferPage"));
+const CloudApplication = lazy(() => import("./CloudApplication"));
+const Compliance = lazy(() => import("./Compliance"));
+const ContactUs = lazy(() => import("./ContactUs"));
+const CrowdControl = lazy(() => import("./CrowdControl"));
+const CyberSecurity = lazy(() => import("./CyberSecurity"));
+const Datasheet = lazy(() => import("./Datasheet"));
+const Downloads = lazy(() => import("./Downloads"));
+const Education = lazy(() => import("./Education"));
+const Event = lazy(() => import("../Pages/Events/Event"));
+const Feedback = lazy(() => import("./Feedback"));
+const FutureGrowth = lazy(() => import("./FutureGrowth"));
+const HighTraffic = lazy(() => import("./HighTraffic"));
+const Home = lazy(() => import("../Pages/Home/Home"));
+const OEM = lazy(() => import("../Pages/Services/OEM/OEM"));
+const ODM = lazy(() => import("../Pages/Services/ODM/ODM"));
+const Hospital = lazy(() => import("./Hospital"));
+const Innovation = lazy(() => import("./Innovation"));
+const Manufacturing = lazy(() => import("./Manufacturing"));
+const PartnersPage = lazy(() => import("./PartnersPage"));
+const PartnerWithUsPage = lazy(() => import("./PartnerWithUsPage"));
+const PrivacyPolicy = lazy(() => import("./PrivacyPolicy"));
+const ProdEngineering = lazy(() => import("./ProdEngineering"));
+const ProductShow = lazy(() => import("./ProductShow"));
+const PublicSafety = lazy(() => import("./PublicSafety"));
+const PublicTransport = lazy(() => import("./PublicTransport"));
+const Remote = lazy(() => import("./Remote"));
+const Retail = lazy(() => import("./Retail"));
+const Robotics = lazy(() => import("./Robotics"));
+const RSeries = lazy(() => import("./RSeries"));
+const SmartCities = lazy(() => import("./SmartCities"));
+const SmartCity = lazy(() => import("./SmartCity"));
+const SSeries = lazy(() => import("../Pages/SSeries/SSeries"));
+const Sustainability = lazy(() => import("./Sustainability"));
+const TermsOfService = lazy(() => import("./TermsOfService"));
+const ThankYouPage = lazy(() => import("./ThankYouPage"));
+const ThermalCamera = lazy(() => import("./ThermalCamera"));
+const Trafic = lazy(() => import("./Trafic"));
+const WarrantyPolicy = lazy(() => import("./WarrantyPolicy"));
+const WarrantyService = lazy(() => import("./WarrantyService"));
+const WifiCameraPdf = lazy(() => import("./WifiCameraPdf"));
+const Firmware = lazy(() => import("./Firmware"));
+const Tools = lazy(() => import("./Tools"));
+const EdgeAICamera = lazy(() => import("../Pages/EdgeAICamera/EdgeAICamera"));
+const NdaaCompliance = lazy(() => import("../Pages/NdaaCompliance/NdaaCompliance"));
+const UsLanding = lazy(() => import("../Pages/UsLanding/UsLanding"));
+const _4KCamera = lazy(() => import("./_4KCamera"));
+const _4GCamera = lazy(() => import("./_4GCamera"));
+const _360Approach = lazy(() => import("./_360Approach"));
+const IfsecIndia2025 = lazy(() => import("../Pages/Events/IfsecIndia2025"));
+const NotFound = lazy(() => import("./NotFound"));
+const CareerHome = lazy(() => import("./career/CareerHome"));
+const JDM = lazy(() => import("../Pages/Services/JDM/JDM"));
+const PCB = lazy(() => import("../Pages/Services/PCB/PCB"));
+const EcoSeries = lazy(() => import("../Pages/EcoSeries/EcoSeries"));
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -188,8 +192,6 @@ const routes = [
   { path: "/admin/reset", element: <Reset /> },
   { path: "/admin/dashboard", element: <Dashboard /> },
   { path: "/admin/verify", element: <OtpVerification /> },
-  // { path: "/admin/blogs", element: <LoginDash /> },
-  // { path: "/admin/blog/:urlWords", element: <BlogNewPage /> },
   // ----------ADMIN ENDS------------
   { path: "/robotics", element: <Robotics /> },
 

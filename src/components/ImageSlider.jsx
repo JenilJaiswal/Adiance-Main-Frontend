@@ -49,8 +49,6 @@ const ImageSlider = () => {
   return (
     <div style={{ height: "800px", margin: "0 auto" }} className="main">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-        
         .carousel-item img {
           max-width: 100%;
           height: auto;

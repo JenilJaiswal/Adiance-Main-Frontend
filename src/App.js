@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./N_Component/Style.css";
 import {
@@ -71,12 +71,14 @@ function App() {
       <RedirectManager />
       {/* <EventMainDash /> */}
       <CombinedRedirect />
-      <Routes>
-        {routes.map(({ path, element }, index) => {
-          // console.log("Checking route:", path);
-          return <Route key={index} path={path} element={element} replace />;
-        })}
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          {routes.map(({ path, element }, index) => {
+            // console.log("Checking route:", path);
+            return <Route key={index} path={path} element={element} replace />;
+          })}
+        </Routes>
+      </Suspense>
     </Router>
   );
 }
