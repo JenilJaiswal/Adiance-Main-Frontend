@@ -93,9 +93,9 @@
     }
   </style>
 
-  <!-- Meta Pixel Code - deferred to avoid render-blocking -->
+  <!-- Meta Pixel Code - loaded after page is idle to avoid affecting LCP/FCP -->
   <script>
-    window.addEventListener('DOMContentLoaded', function () {
+    function loadFBPixel() {
       !function (f, b, e, v, n, t, s) {
         if (f.fbq) return; n = f.fbq = function () {
           n.callMethod ?
@@ -109,7 +109,12 @@
         'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1453314838088467');
       fbq('track', 'PageView');
-    });
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadFBPixel, { timeout: 5000 });
+    } else {
+      window.addEventListener('load', function () { setTimeout(loadFBPixel, 3000); });
+    }
   </script>
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1453314838088467&ev=PageView&noscript=1" /></noscript>
