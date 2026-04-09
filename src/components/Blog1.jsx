@@ -29,7 +29,7 @@ const Blog1 = () => {
       /^\/?(images\/)?/,
       ""
     )}`
-    : "https://www.adiance.com/images/Logo.png";
+    : "https://www.adiance.com/images/Logo.webp";
 
   useEffect(() => {
     if (!slug) return;

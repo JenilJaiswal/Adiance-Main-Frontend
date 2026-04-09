@@ -151,7 +151,7 @@ const HighTraffic = () => {
             }}
           >
             <img
-              src="/images/hti1.png"
+              src="/images/hti1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -251,7 +251,7 @@ const HighTraffic = () => {
             }}
           >
             <img
-              src="/images/hti2.png"
+              src="/images/hti2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -290,7 +290,7 @@ const HighTraffic = () => {
             }}
           >
             <img
-              src="/images/hti3.png"
+              src="/images/hti3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -388,7 +388,7 @@ const HighTraffic = () => {
             }}
           >
             <img
-              src="/images/hti4.png"
+              src="/images/hti4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

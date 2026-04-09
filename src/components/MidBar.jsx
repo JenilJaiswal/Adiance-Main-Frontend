@@ -45,7 +45,7 @@ export default function MidBar() {
       >
         <SmartLink to="/">
           <img
-            src="/images/Logo.png"
+            src="/images/Logo.webp"
             alt="Logo"
             style={{
               marginTop: "5px",

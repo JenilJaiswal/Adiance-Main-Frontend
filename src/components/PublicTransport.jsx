@@ -170,7 +170,7 @@ const PublicTransport = () => {
             }}
           >
             <img
-              src="/images/pt1.png"
+              src="/images/pt1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -254,7 +254,7 @@ const PublicTransport = () => {
             }}
           >
             <img
-              src="/images/pt2.png"
+              src="/images/pt2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -293,7 +293,7 @@ const PublicTransport = () => {
             }}
           >
             <img
-              src="/images/pt3.png"
+              src="/images/pt3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -375,7 +375,7 @@ const PublicTransport = () => {
             }}
           >
             <img
-              src="/images/pt4.png"
+              src="/images/pt4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -414,7 +414,7 @@ const PublicTransport = () => {
             }}
           >
             <img
-              src="/images/pt5.png"
+              src="/images/pt5.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

@@ -7,7 +7,7 @@ const HeroSectionP = () => {
       <Box
         sx={{
           position: "relative",
-          backgroundImage: "url(/images/PartnerHeroimg.jpg)", // Replace with your image path
+          backgroundImage: "url(/images/PartnerHeroimg.webp)", // Replace with your image path
           height: "55vh",
           backgroundSize: "cover",
           backgroundPosition: "center",

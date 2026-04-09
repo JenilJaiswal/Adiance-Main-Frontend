@@ -10,7 +10,7 @@ const WhatWeDo = () => {
       title: "20+ Years Engineering Expertise",
       description:
         "Adiance is transitioning from an Original Equipment Manufacturer (OEM) to a hybrid OEM & Original Design Manufacturer (ODM), focusing on customized Printed Circuit Boards for surveillance cameras and electronic devices, enhancing efficiency and reducing lead times.",
-      imageUrl: "/images/wwd1.png",
+      imageUrl: "/images/wwd1.webp",
       url: "/product-engineering"
     },
     {
@@ -18,7 +18,7 @@ const WhatWeDo = () => {
       title: "Non-Chinese SoC CCTV Manufacturer",
       description:
         "Adiance's NVR-free approach and cloud storage offer cost-effective, scalable, and secure solutions for modern surveillance environments. This eliminates on-premises hardware, simplifies setup, and enhances data security, allowing seamless integration with other services.",
-      imageUrl: "/images/wwd2.png",
+      imageUrl: "/images/wwd2.webp",
       url: "/manufacturing"
     },
     {
@@ -26,7 +26,7 @@ const WhatWeDo = () => {
       title: "STQC, ONVIF, IP Compliant",
       description:
         "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
-      imageUrl: "/images/wwd3.png",
+      imageUrl: "/images/wwd3.webp",
       url: "https://www.adiance.com/cloud-application"
     },
     {
@@ -34,7 +34,7 @@ const WhatWeDo = () => {
       title: "In-House R&D & Automated Production Lines",
       description:
         "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
-      imageUrl: "/images/wwd3.png",
+      imageUrl: "/images/wwd3.webp",
       url: "https://www.adiance.com/cloud-application"
     },
     // {
@@ -42,7 +42,7 @@ const WhatWeDo = () => {
     //   title: "Product Engineering",
     //   description:
     //     "Adiance is transitioning from an Original Equipment Manufacturer (OEM) to a hybrid OEM & Original Design Manufacturer (ODM), focusing on customized Printed Circuit Boards for surveillance cameras and electronic devices, enhancing efficiency and reducing lead times.",
-    //   imageUrl: "/images/wwd1.png",
+    //   imageUrl: "/images/wwd1.webp",
     //   url: "/product-engineering"
     // },
     // {
@@ -50,7 +50,7 @@ const WhatWeDo = () => {
     //   title: "Manufacturing",
     //   description:
     //     "Adiance's NVR-free approach and cloud storage offer cost-effective, scalable, and secure solutions for modern surveillance environments. This eliminates on-premises hardware, simplifies setup, and enhances data security, allowing seamless integration with other services.",
-    //   imageUrl: "/images/wwd2.png",
+    //   imageUrl: "/images/wwd2.webp",
     //   url: "/manufacturing"
     // },
     // {
@@ -58,7 +58,7 @@ const WhatWeDo = () => {
     //   title: "Cloud and Application",
     //   description:
     //     "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
-    //   imageUrl: "/images/wwd3.png",
+    //   imageUrl: "/images/wwd3.webp",
     //   url: "https://www.adiance.com/cloud-application"
     // },
     // {
@@ -66,14 +66,14 @@ const WhatWeDo = () => {
     //   title: " Backward Integration",
     //   description:
     //     "Our company is transitioning from OEM services to embracing both OEM and ODM approaches, demonstrating our commitment to backward integration. This allows us to offer a wider range of products, cater to diverse market demands, and foster deeper partnerships, enhancing innovation and product quality. ",
-    //   imageUrl: "/images/backward.png",
+    //   imageUrl: "/images/backward.webp",
     // },
     // {
     //   id: 5,
     //   title: " Backward Integration",
     //   description:
     //     "Our company is transitioning from OEM services to embracing both OEM and ODM approaches, demonstrating our commitment to backward integration. This allows us to offer a wider range of products, cater to diverse market demands, and foster deeper partnerships, enhancing innovation and product quality. ",
-    //   imageUrl: "/images/backward.png",
+    //   imageUrl: "/images/backward.webp",
     // },
   ];
 

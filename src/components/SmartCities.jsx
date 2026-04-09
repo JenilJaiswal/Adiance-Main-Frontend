@@ -151,7 +151,7 @@ const SmartCities = () => {
             }}
           >
             <img
-              src="/images/sc1.png"
+              src="/images/sc1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -255,7 +255,7 @@ const SmartCities = () => {
             }}
           >
             <img
-              src="/images/sc2.jpg"
+              src="/images/sc2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -294,7 +294,7 @@ const SmartCities = () => {
             }}
           >
             <img
-              src="/images/sc3.png"
+              src="/images/sc3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

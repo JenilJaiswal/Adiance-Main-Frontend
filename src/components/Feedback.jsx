@@ -84,7 +84,7 @@ const Feedback = () => {
       <Header />
 
       <div className="nav-header">
-        <img src="/images/scaled.jpg" alt="Header" className="header-image" />
+        <img src="/images/scaled.webp" alt="Header" className="header-image" />
         <div className="text-overlay">Feedback</div>
 
         <style jsx>{`

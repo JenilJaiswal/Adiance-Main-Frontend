@@ -36,10 +36,10 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 // Original image paths
 const images = [
-  "/images/sentiment_analysis_accordian.jpg.png",
-  "/images/ExecellentAudio.jpg",
-  "/images/videiliveStriming.jpg",
-  "/images/Zeroinstoletion.jpg",
+  "/images/sentiment_analysis_accordian.webp.webp",
+  "/images/ExecellentAudio.webp",
+  "/images/videiliveStriming.webp",
+  "/images/Zeroinstoletion.webp",
 ];
 
 // Dynamic data object for the accordion

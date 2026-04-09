@@ -7,13 +7,13 @@ const OurOfferings = () => {
       id: 1,
       title: "AI-Driven Camera Manufacturing",
 
-      imageUrl: "/images/about_001.png",
+      imageUrl: "/images/about_001.webp",
       url: "/public-transport",
     },
     {
       id: 2,
       title: "Catering to Indian and Global Clients",
-      imageUrl: "/images/about_002.png",
+      imageUrl: "/images/about_002.webp",
       url: "/remote-security",
     },
     {
@@ -21,7 +21,7 @@ const OurOfferings = () => {
       title: "Cutting-Edge Manufacturing Facilities",
       description:
         "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
-      imageUrl: "/images/about_003.png",
+      imageUrl: "/images/about_003.webp",
       url: "/healthcare",
     },
     {
@@ -29,7 +29,7 @@ const OurOfferings = () => {
       title: "360 Degree Approach",
       description:
         "Our CCTV cameras are integrated with our Video Management System (VMS), enhancing efficiency and scalability through centralized management, real-time monitoring, and advanced analytics, enhancing situational awareness and providing valuable insights.",
-      imageUrl: "/images/about_004.png",
+      imageUrl: "/images/about_004.webp",
       url: "Public-Safety",
     },
   ];

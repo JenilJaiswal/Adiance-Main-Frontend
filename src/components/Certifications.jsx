@@ -22,11 +22,11 @@ const Certifications = () => {
     const imageSize = screenWidth > 768 ? 100 : 50;
 
     const images = [
-        "images/Home_ISO.png",
-        "images/Home_RoHS.png",
-        "images/Home_BIS.png",
-        "images/Home_FCC.png",
-        "images/Home_CE.png",
+        "images/Home_ISO.webp",
+        "images/Home_RoHS.webp",
+        "images/Home_BIS.webp",
+        "images/Home_FCC.webp",
+        "images/Home_CE.webp",
     ];
 
     const imageStyle = {

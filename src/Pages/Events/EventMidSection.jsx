@@ -3,15 +3,15 @@ import CTASection from "../../N_Component/CTASection";
 import "./EventMidSection.css";
 
 const pastEventLogos = [
-  { name: "IFSEC",          logo: "/images/IFSEC_logo.png" },
-  { name: "Semicon India",  logo: "/images/semicon-india-logo.png" },
-  { name: "SmartTech Asia", logo: "/images/smarttech-asia-logo.png" },
+  { name: "IFSEC",          logo: "/images/IFSEC_logo.webp" },
+  { name: "Semicon India",  logo: "/images/semicon-india-logo.webp" },
+  { name: "SmartTech Asia", logo: "/images/smarttech-asia-logo.webp" },
 ];
 
 const ifsecEventImages = [
-  { id: 1, src: "/images/event_carousel_1.png", alt: "IFSEC India 2025 - Adiance booth showcase" },
-  { id: 3, src: "/images/event_carousel_3.png", alt: "IFSEC India 2025 - Team interactions" },
-  { id: 4, src: "/images/event_carousel_4.png", alt: "IFSEC India 2025 - Technology display" },
+  { id: 1, src: "/images/event_carousel_1.webp", alt: "IFSEC India 2025 - Adiance booth showcase" },
+  { id: 3, src: "/images/event_carousel_3.webp", alt: "IFSEC India 2025 - Team interactions" },
+  { id: 4, src: "/images/event_carousel_4.webp", alt: "IFSEC India 2025 - Technology display" },
 ];
 
 
@@ -35,7 +35,7 @@ const EventMidSection = () => {
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="event-mid-hero-section">
         <img
-          src="/images/Adiance-Banner-001.jpg"
+          src="/images/Adiance-Banner-001.webp"
           alt="Adiance at Industry Events"
           className="event-mid-hero-bg"
         />
@@ -107,7 +107,7 @@ const EventMidSection = () => {
                   src={image.src}
                   alt={image.alt}
                   loading="lazy"
-                  onError={(e) => { e.target.src = "/images/ifsec-event.jpg"; }}
+                  onError={(e) => { e.target.src = "/images/ifsec-event.webp"; }}
                 />
               </div>
             ))}
@@ -139,12 +139,12 @@ const EventMidSection = () => {
           <div className="event-mid-info-inner">
             <div className="event-mid-info-logo">
               <img
-                src="/images/IFSEC_logo.png"
+                src="/images/IFSEC_logo.webp"
                 alt="IFSEC India Logo"
                 loading="lazy"
                 width="600"
                 height="400"
-                onError={(e) => { e.target.src = "/images/Logo.png"; }}
+                onError={(e) => { e.target.src = "/images/Logo.webp"; }}
               />
             </div>
             <div className="event-mid-info-text">

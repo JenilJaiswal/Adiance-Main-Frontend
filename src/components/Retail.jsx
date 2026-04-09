@@ -170,7 +170,7 @@ const Retail = () => {
             }}
           >
             <img
-              src="/images/r1.png"
+              src="/images/r1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -270,7 +270,7 @@ const Retail = () => {
             }}
           >
             <img
-              src="/images/r2.png"
+              src="/images/r2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -309,7 +309,7 @@ const Retail = () => {
             }}
           >
             <img
-              src="/images/r3.png"
+              src="/images/r3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -408,7 +408,7 @@ const Retail = () => {
             }}
           >
             <img
-              src="/images/r4.png"
+              src="/images/r4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -447,7 +447,7 @@ const Retail = () => {
             }}
           >
             <img
-              src="/images/r5.png"
+              src="/images/r5.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

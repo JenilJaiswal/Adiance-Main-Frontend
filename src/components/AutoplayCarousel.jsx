@@ -6,75 +6,75 @@ import { Helmet } from "react-helmet";
 export default function AutoplayCarousel() {
   const cardDetails = {
     0: {
-      imgUrl: "/images/client1.png",
+      imgUrl: "/images/client1.webp",
       title: "Text 1",
     },
     1: {
-      imgUrl: "/images/client2.png",
+      imgUrl: "/images/client2.webp",
       title: "Text 2",
     },
     2: {
-      imgUrl: "/images/client3.png",
+      imgUrl: "/images/client3.webp",
       title: "Text 3",
     },
     3: {
-      imgUrl: "/images/client4.png",
+      imgUrl: "/images/client4.webp",
       title: "Text 4",
     },
     4: {
-      imgUrl: "/images/client5.png",
+      imgUrl: "/images/client5.webp",
       title: "Text 5",
     },
     5: {
-      imgUrl: "/images/client6.png",
+      imgUrl: "/images/client6.webp",
       title: "Text 6",
     },
     6: {
-      imgUrl: "/images/client7.png",
+      imgUrl: "/images/client7.webp",
       title: "Text 7",
     },
     7: {
-      imgUrl: "/images/client8.png",
+      imgUrl: "/images/client8.webp",
       title: "Text 8",
     },
     8: {
-      imgUrl: "/images/client9.png",
+      imgUrl: "/images/client9.webp",
       title: "Text 9",
     },
     9: {
-      imgUrl: "/images/client10.png",
+      imgUrl: "/images/client10.webp",
       title: "Text 10",
     },
     10: {
-      imgUrl: "/images/client11.png",
+      imgUrl: "/images/client11.webp",
       title: "Text 11",
     },
     11: {
-      imgUrl: "/images/client12.png",
+      imgUrl: "/images/client12.webp",
       title: "Text 12",
     },
     12: {
-      imgUrl: "/images/client13.png",
+      imgUrl: "/images/client13.webp",
       title: "Text 13",
     },
     13: {
-      imgUrl: "/images/client14.png",
+      imgUrl: "/images/client14.webp",
       title: "Text 14",
     },
     14: {
-      imgUrl: "/images/client15.png",
+      imgUrl: "/images/client15.webp",
       title: "Text 15",
     },
     15: {
-      imgUrl: "/images/client16.png",
+      imgUrl: "/images/client16.webp",
       title: "Text 16",
     },
     16: {
-      imgUrl: "/images/client17.png",
+      imgUrl: "/images/client17.webp",
       title: "Text 17",
     },
     17: {
-      imgUrl: "/images/client18.png",
+      imgUrl: "/images/client18.webp",
       title: "Text 18",
     },
   };

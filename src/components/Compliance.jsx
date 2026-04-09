@@ -163,7 +163,7 @@ const Compliance = () => {
             }}
           >
             <img
-              src="/images/compliance1.png"
+              src="/images/compliance1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -264,7 +264,7 @@ const Compliance = () => {
             }}
           >
             <img
-              src="/images/compliance2.png"
+              src="/images/compliance2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -304,7 +304,7 @@ const Compliance = () => {
             }}
           >
             <img
-              src="/images/compliance3.png"
+              src="/images/compliance3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -404,7 +404,7 @@ const Compliance = () => {
             }}
           >
             <img
-              src="/images/compliance4.png"
+              src="/images/compliance4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

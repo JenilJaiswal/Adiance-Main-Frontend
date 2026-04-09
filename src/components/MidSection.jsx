@@ -24,7 +24,7 @@ const MidSection = () => {
           <Grid item xs={12} sm={6} md={6} lg={6}>
             <img
               src={
-                "images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-02.png"
+                "images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-02.webp"
               }
               alt={"img not loaded"}
               style={{

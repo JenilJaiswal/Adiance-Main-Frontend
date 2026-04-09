@@ -69,8 +69,8 @@ const AboutSlider = () => {
               onMouseLeave={() => setHovered1(false)}
             >
               <img
-                // src="/images/P9-AMBICAM-4g-dome-camera-VM-72AD4G210C-02.png"
-                src="/images/CCTV_04.png"
+                // src="/images/P9-AMBICAM-4g-dome-camera-VM-72AD4G210C-02.webp"
+                src="/images/CCTV_04.webp"
                 alt="Product Image"
                 style={{
                   maxWidth: getMaxWidth(),
@@ -129,7 +129,7 @@ const AboutSlider = () => {
             >
               <Link to="/5g-edge-ai-camera-s-series-surveillance" style={{ display: "inline-block", width: "100%" }}>
                 <img
-                  src="images/S-series cameras.png"
+                  src="images/S-series cameras.webp"
                   alt="S-series cameras"
                   style={{
                     display: "block",

@@ -8,21 +8,21 @@ const ThermalCameraSlider = () => {
       id: 1,
       title: "ADIANCE CLOUD BASED THERMAL CAMERA – (VM-72F210AC)",
       imageUrl:
-        "/images/P2-VMUKTI-CLOUD-BASED-THERMAL-CAMERA-VM-72F210AC-01.png",
+        "/images/P2-VMUKTI-CLOUD-BASED-THERMAL-CAMERA-VM-72F210AC-01.webp",
       link: "/adiance-thermal-camera-f",
     },
     {
       id: 2,
       title: "ADIANCE CLOUD BASED THERMAL CAMERA – (VM-72N210AC)",
       imageUrl:
-        "/images/P1-VMUKTI-CLOUD-BASED-THERMAL-CAMERA-VM-72N210AC-01.png",
+        "/images/P1-VMUKTI-CLOUD-BASED-THERMAL-CAMERA-VM-72N210AC-01.webp",
       link: "/adiance-thermal-camera-n",
     },
     // Add more products as needed
     {
       id: 3,
       title: "ADIANCE CLOUD BASED THERMAL CAMERA – (VM-72L210AC)",
-      imageUrl: "/images/Vmukti-Thermal-Camera-New-1.png",
+      imageUrl: "/images/Vmukti-Thermal-Camera-New-1.webp",
       link: "/adiance-thermal-camera-l",
     },
   ];

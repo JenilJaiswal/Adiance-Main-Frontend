@@ -203,7 +203,7 @@ const CrowdControl = () => {
             }}
           >
             <img
-              src="/images/cc1.png"
+              src="/images/cc1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -305,7 +305,7 @@ const CrowdControl = () => {
             }}
           >
             <img
-              src="/images/cc2.png"
+              src="/images/cc2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

@@ -17,7 +17,7 @@ const products = [
     title: "R Series",
     description:
       "Personalize this product series to fit your unique style and needs—endless customization options await!",
-    imgUrl: "/images/CCTV_03.png",
+    imgUrl: "/images/CCTV_03.webp",
   },
   {
     metaTitle: " H Series | Customizable Solutions - Adaince Technologies",
@@ -26,7 +26,7 @@ const products = [
     title: "H Series",
     description:
       "Personalize this product series to fit your unique style and needs—endless customization options await!",
-    imgUrl: "/images/CCTV_02.png",
+    imgUrl: "/images/CCTV_02.webp",
   },
   // Add more products as needed
 ];

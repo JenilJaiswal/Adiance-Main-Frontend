@@ -146,7 +146,7 @@ const FutureGrowth = () => {
             }}
           >
             <img
-              src="/images/fng1.png"
+              src="/images/fng1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -256,7 +256,7 @@ const FutureGrowth = () => {
             }}
           >
             <img
-              src="/images/fng2.png"
+              src="/images/fng2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

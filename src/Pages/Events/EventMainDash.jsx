@@ -168,7 +168,7 @@ const EventMainDash = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundImage: "url(/images/IFSEC-main-image.png)",
+            backgroundImage: "url(/images/IFSEC-main-image.webp)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             opacity: 0.15, // Slightly increased opacity for visibility
@@ -209,13 +209,13 @@ const EventMainDash = () => {
           {/* Left: IFSEC & Adiance */}
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
             <img
-              src="/images/IFSEC-Logo.png"
+              src="/images/IFSEC-Logo.webp"
               alt="SmartTech"
               className="logo-ifsec"
               style={{ height: "50px", objectFit: "contain" }}
             />
             <img
-              src="/Adiance-Logo.png"
+              src="/Adiance-Logo.webp"
               alt="Adiance"
               className="logo-adiance"
               style={{

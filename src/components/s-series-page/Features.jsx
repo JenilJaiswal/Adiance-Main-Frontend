@@ -5,13 +5,13 @@ import React, { useState } from "react";
 
 // Original image paths from your previous code
 const images = [
-  "/images/sentiment_analysis_accordian.png", // [0]
-  "/images/Humandetection.png",             // [1]
+  "/images/sentiment_analysis_accordian.webp", // [0]
+  "/images/Humandetection.webp",             // [1]
   "/images/Facedetection.webp",             // [2]
-  "/images/motion-ditection.jpg",           // [3]
-  "/images/Linecrossing.png",               // [4]
-  "/images/Areadetection.jpg",              // [5]
-  "/images/Buggagedetection.jpg",           // [6]
+  "/images/motion-ditection.webp",           // [3]
+  "/images/Linecrossing.webp",               // [4]
+  "/images/Areadetection.webp",              // [5]
+  "/images/Buggagedetection.webp",           // [6]
 ];
 
 // New dynamic data object
@@ -21,49 +21,49 @@ const featureData = [
     title: "Unattended Baggage",
     description:
       "Instantly flags left objects in lobbies, branches, and transit zones to trigger SOP checks and prevent security risks.",
-    image: images[6], // Mapped from original Buggagedetection.jpg
+    image: images[6], // Mapped from original Buggagedetection.webp
   },
   {
     id: "f2",
     title: "Missing Objects",
     description:
       "Alerts when assets or merchandise disappear from shelves, showrooms, or stockrooms - speeding investigation and loss recovery.",
-    image: images[0], // Mapped from original sentiment_analysis...png
+    image: images[0], // Mapped from original sentiment_analysis...webp
   },
   {
     id: "f3",
     title: "Line Crossing",
     description:
       "Monitors restricted perimeters (server rooms, cash areas, yards) and alerts the moment a boundary is breached for rapid response.",
-    image: images[4], // Mapped from original Linecrossing.png
+    image: images[4], // Mapped from original Linecrossing.webp
   },
   {
     id: "f4",
     title: "Area Intrusion",
     description:
       "Secures no-go zones like data centers, warehouses, and loading bays—auto-notifying teams when someone enters after hours or without authorization.",
-    image: images[5], // Mapped from original Areadetection.jpg
+    image: images[5], // Mapped from original Areadetection.webp
   },
   {
     id: "f5",
     title: "Customer Traffic (Footfall & Dwell)",
     description:
       "Measures entries, exits, and dwell times across stores, branches, and campuses—turning visitor flow into staffing and layout decisions.",
-    image: images[1], // Mapped from original Humandetection.png
+    image: images[1], // Mapped from original Humandetection.webp
   },
   {
     id: "f6",
     title: "Motion Detection",
     description:
       "Detects unusual movement after hours on floors, aisles, or parking lots—reducing patrol load and catching incidents early.",
-    image: images[3], // Mapped from original motion-ditection.jpg
+    image: images[3], // Mapped from original motion-ditection.webp
   },
   {
     id: "f7",
     title: "Human Detection",
     description:
       "Differentiates people from background motion to cut false alerts—ideal for office corridors, factory floors, and reception areas.",
-    image: images[1], // Re-using Humandetection.png
+    image: images[1], // Re-using Humandetection.webp
   },
   {
     id: "f8",

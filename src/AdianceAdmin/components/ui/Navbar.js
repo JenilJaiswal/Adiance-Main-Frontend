@@ -147,7 +147,7 @@ const Navbar = ({ adminSection, setAdminSection }) => {
             >
               {/* <Logo height="25px" /> */}
               <img
-                src="../../images/Logo.png"
+                src="../../images/Logo.webp"
                 alt="Logo"
                 style={{ height: "30px" }}
               />

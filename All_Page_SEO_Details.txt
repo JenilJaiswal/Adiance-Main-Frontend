@@ -20,7 +20,7 @@ PAGE 1: HOME
   Canonical URL:  https://www.adiance.com/
   OG Title:       Best CCTV Camera Manufacturer In India - OEM & ODM CCTV Company
   OG Description: Are you looking for a reliable CCTV manufacturing company in India? Adiance provides AI CCTV cameras, NVRs, cloud VMS and custom OEM/ODM electronics solutions.
-  OG Image:       https://www.adiance.com/images/SCameraPageOG.jpg
+  OG Image:       https://www.adiance.com/images/SCameraPageOG.webp
   OG Type:        website
   OG URL:         Dynamic (https://www.adiance.com{pathname})
   OG Site Name:   Adiance Technologies
@@ -420,7 +420,7 @@ PAGE 23: PUBLIC SAFETY
   OG Tags:        NOT SET
   JSON-LD:        NONE
   Image Alt Text: "Image" (generic on all images)
-  Images:         /images/ps1.jpg, /images/ps2.jpg, /images/ps3.png, /images/ps4.png
+  Images:         /images/ps1.webp, /images/ps2.webp, /images/ps3.webp, /images/ps4.webp
   H1:             (Not set — uses Typography h5 variant)
   Internal Links: /contact, /edgeaicamera
 
@@ -439,7 +439,7 @@ PAGE 24: TRAFFIC MANAGEMENT
   OG Tags:        NOT SET
   JSON-LD:        NONE
   Image Alt Text: "Image" (generic on all images)
-  Images:         /images/trafic1.png, /images/trafic2.jpg, /images/trafic3.jpg, /images/trafic4.jpg
+  Images:         /images/trafic1.webp, /images/trafic2.webp, /images/trafic3.webp, /images/trafic4.webp
   H1:             (Not set — uses Typography h5 variant)
   Internal Links: /contact, /anpr-camera
 
@@ -458,7 +458,7 @@ PAGE 25: CROWD CONTROL
   OG Tags:        NOT SET
   JSON-LD:        NONE
   Image Alt Text: "Image" (generic on all images)
-  Images:         /images/cc1.png, /images/cc2.png
+  Images:         /images/cc1.webp, /images/cc2.webp
   H1:             (Not set — uses Typography h5 variant)
   Internal Links: /contact
 
@@ -479,7 +479,7 @@ PAGE 26: SMART CITIES
   JSON-LD:        NONE
   ⚠️ NOTE:        Uses useSEO hook but NO Helmet tag rendered in component!
   Image Alt Text: "Image" (generic on all images)
-  Images:         /images/sc1.png, /images/sc2.jpg, /images/sc3.png
+  Images:         /images/sc1.webp, /images/sc2.webp, /images/sc3.webp
   H1:             (Not set — uses Typography h5 variant)
   Internal Links: /contact
 
@@ -498,7 +498,7 @@ PAGE 27: REMOTE SECURITY
   OG Tags:        NOT SET
   JSON-LD:        NONE
   Image Alt Text: "Image" (generic on all images)
-  Images:         /images/rss1.png, /images/rss2.png, /images/rss3.jpg
+  Images:         /images/rss1.webp, /images/rss2.webp, /images/rss3.webp
   H1:             (Not set — uses Typography h5 variant)
   Internal Links: /contact, /4gcamera
 
@@ -517,7 +517,7 @@ PAGE 28: HIGH TRAFFIC INFRASTRUCTURE
   OG Tags:        NOT SET
   JSON-LD:        NONE
   Image Alt Text: "Image" (generic on all images)
-  Images:         /images/hti1.png, /images/hti2.png, /images/hti3.png, /images/hti4.png
+  Images:         /images/hti1.webp, /images/hti2.webp, /images/hti3.webp, /images/hti4.webp
   H1:             (Not set — uses Typography h5 variant)
   Internal Links: /contact
 

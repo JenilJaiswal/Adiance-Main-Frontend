@@ -151,7 +151,7 @@ const Education = () => {
             }}
           >
             <img
-              src="/images/edu1.png"
+              src="/images/edu1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -249,7 +249,7 @@ const Education = () => {
             }}
           >
             <img
-              src="/images/edu2.png"
+              src="/images/edu2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -289,7 +289,7 @@ const Education = () => {
             }}
           >
             <img
-              src="/images/edu3.png"
+              src="/images/edu3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -387,7 +387,7 @@ const Education = () => {
             }}
           >
             <img
-              src="/images/edu4.png"
+              src="/images/edu4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

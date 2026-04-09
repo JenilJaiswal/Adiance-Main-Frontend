@@ -73,7 +73,7 @@ const CareerDashboard = () => {
         <Box sx={{ flex: 1, width: "100%" }}>
           <Box
             component="img"
-            src={`${process.env.PUBLIC_URL}/images/CareerDash.png`}
+            src={`${process.env.PUBLIC_URL}/images/CareerDash.webp`}
             alt="Meet the team work behind our successes"
             sx={{
               borderRadius: "24px",

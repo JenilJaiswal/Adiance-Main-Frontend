@@ -117,8 +117,8 @@ export default function HeroSection() {
         <Box zIndex={1}>
           <ImagePop>
             <Image
-              src={`${process.env.PUBLIC_URL}/assets/career.png`}
-              // src={${process.env.PUBLIC_URL} /assets/career.png}
+              src={`${process.env.PUBLIC_URL}/assets/career.webp`}
+              // src={${process.env.PUBLIC_URL} /assets/career.webp}
               alt="Team collaboration"
               borderRadius="md"
               aspectRatio={137 / 100}

@@ -184,7 +184,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/360_1.png"
+              src="/images/360_1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -290,7 +290,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/360_2.jpg"
+              src="/images/360_2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -330,7 +330,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/360_3.jpg"
+              src="/images/360_3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -443,7 +443,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/360_4.jpg"
+              src="/images/360_4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

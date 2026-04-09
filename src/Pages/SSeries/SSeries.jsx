@@ -20,22 +20,22 @@ import "./SSeries.css";
 const heroBadges = ["Edge AI", "3MP QHD", "Wi-Fi / LAN / 4G LTE", "IP66 Rated"];
 
 const whyItems = [
-  { id: "panel1", title: "Plug-N-Play + All-in-One App", desc: "Go live in minutes. Control live view, alerts, playback, reports, and multiple cameras in the ArcisAI app. Includes 2-year warranty and responsive support.", img: "/images/sentiment_analysis_accordian.jpg.png" },
-  { id: "panel2", title: "Event-Based Intelligence", desc: "Clean, actionable notifications with false-alert filtering and auto detection reports delivered to your app in real time.", img: "/images/ExecellentAudio.jpg" },
-  { id: "panel3", title: "Clear Vision, Day & Night", desc: "3MP QHD (2304x1296 @30fps) with 10x digital zoom, low-light sensitivity (0.1Lux color / 0.01Lux B/W) and Smart IR (4 LEDs) for up to 50 m.", img: "/images/videiliveStriming.jpg" },
-  { id: "panel4", title: "Instant Deterrence & 2-Way Talk", desc: "Built-in siren, strobe light, microphone, and speaker so you can intervene in the moment.", img: "/images/Zeroinstoletion.jpg" },
-  { id: "panel5", title: "Connect Anywhere (Wi-Fi / LAN / 4G LTE)", desc: "Works where Wi-Fi isn't feasible via CAT-1 LTE (FDD B1/B3/B5/B8; TDD B34/B38/B39/B40/B41). ONVIF 2.4 for easy VMS integration.", img: "/images/sentiment_analysis_accordian.jpg.png" },
-  { id: "panel6", title: "Outdoor-Ready & Reliable", desc: "IP66 weatherproofing, 4000V lightning protection, stable DC 12V (<=12W) operation - plus secure cloud storage plans.", img: "/images/ExecellentAudio.jpg" },
+  { id: "panel1", title: "Plug-N-Play + All-in-One App", desc: "Go live in minutes. Control live view, alerts, playback, reports, and multiple cameras in the ArcisAI app. Includes 2-year warranty and responsive support.", img: "/images/sentiment_analysis_accordian.webp.webp" },
+  { id: "panel2", title: "Event-Based Intelligence", desc: "Clean, actionable notifications with false-alert filtering and auto detection reports delivered to your app in real time.", img: "/images/ExecellentAudio.webp" },
+  { id: "panel3", title: "Clear Vision, Day & Night", desc: "3MP QHD (2304x1296 @30fps) with 10x digital zoom, low-light sensitivity (0.1Lux color / 0.01Lux B/W) and Smart IR (4 LEDs) for up to 50 m.", img: "/images/videiliveStriming.webp" },
+  { id: "panel4", title: "Instant Deterrence & 2-Way Talk", desc: "Built-in siren, strobe light, microphone, and speaker so you can intervene in the moment.", img: "/images/Zeroinstoletion.webp" },
+  { id: "panel5", title: "Connect Anywhere (Wi-Fi / LAN / 4G LTE)", desc: "Works where Wi-Fi isn't feasible via CAT-1 LTE (FDD B1/B3/B5/B8; TDD B34/B38/B39/B40/B41). ONVIF 2.4 for easy VMS integration.", img: "/images/sentiment_analysis_accordian.webp.webp" },
+  { id: "panel6", title: "Outdoor-Ready & Reliable", desc: "IP66 weatherproofing, 4000V lightning protection, stable DC 12V (<=12W) operation - plus secure cloud storage plans.", img: "/images/ExecellentAudio.webp" },
 ];
 
 const features = [
-  { title: "Unattended Baggage", desc: "Instantly flags left objects in lobbies, branches, and transit zones to trigger SOP checks and prevent security risks.", img: "/images/Buggagedetection.jpg" },
-  { title: "Missing Objects", desc: "Alerts when assets or merchandise disappear from shelves, showrooms, or stockrooms - speeding investigation and loss recovery.", img: "/images/sentiment_analysis_accordian.png" },
-  { title: "Line Crossing", desc: "Monitors restricted perimeters (server rooms, cash areas, yards) and alerts the moment a boundary is breached for rapid response.", img: "/images/Linecrossing.png" },
-  { title: "Area Intrusion", desc: "Secures no-go zones like data centers, warehouses, and loading bays—auto-notifying teams when someone enters after hours or without authorization.", img: "/images/Areadetection.jpg" },
-  { title: "Customer Traffic (Footfall & Dwell)", desc: "Measures entries, exits, and dwell times across stores, branches, and campuses—turning visitor flow into staffing and layout decisions.", img: "/images/Humandetection.png" },
-  { title: "Motion Detection", desc: "Detects unusual movement after hours on floors, aisles, or parking lots—reducing patrol load and catching incidents early.", img: "/images/motion-ditection.jpg" },
-  { title: "Human Detection", desc: "Differentiates people from background motion to cut false alerts—ideal for office corridors, factory floors, and reception areas.", img: "/images/Humandetection.png" },
+  { title: "Unattended Baggage", desc: "Instantly flags left objects in lobbies, branches, and transit zones to trigger SOP checks and prevent security risks.", img: "/images/Buggagedetection.webp" },
+  { title: "Missing Objects", desc: "Alerts when assets or merchandise disappear from shelves, showrooms, or stockrooms - speeding investigation and loss recovery.", img: "/images/sentiment_analysis_accordian.webp" },
+  { title: "Line Crossing", desc: "Monitors restricted perimeters (server rooms, cash areas, yards) and alerts the moment a boundary is breached for rapid response.", img: "/images/Linecrossing.webp" },
+  { title: "Area Intrusion", desc: "Secures no-go zones like data centers, warehouses, and loading bays—auto-notifying teams when someone enters after hours or without authorization.", img: "/images/Areadetection.webp" },
+  { title: "Customer Traffic (Footfall & Dwell)", desc: "Measures entries, exits, and dwell times across stores, branches, and campuses—turning visitor flow into staffing and layout decisions.", img: "/images/Humandetection.webp" },
+  { title: "Motion Detection", desc: "Detects unusual movement after hours on floors, aisles, or parking lots—reducing patrol load and catching incidents early.", img: "/images/motion-ditection.webp" },
+  { title: "Human Detection", desc: "Differentiates people from background motion to cut false alerts—ideal for office corridors, factory floors, and reception areas.", img: "/images/Humandetection.webp" },
   { title: "Face Detection", desc: "Captures clear face events at entrances and counters for audit trails, incident review, and compliance support.", img: "/images/Facedetection.webp" },
 ];
 
@@ -179,7 +179,7 @@ const SSeries = () => {
                 <React.Fragment key={i}>
                   {i === 1 && (
                     <div className="ss-industries-center-img">
-                      <img src="/N_Images/S-Series.png" alt="S-Series Camera" loading="lazy" />
+                      <img src="/N_Images/S-Series.webp" alt="S-Series Camera" loading="lazy" />
                     </div>
                   )}
                   <Link to={ind.link} className="ss-industry-card">

@@ -6,7 +6,7 @@ import "../styles/ImageSlider.css";
 const ImageSlider = () => {
   const slides = [
     {
-      image: "/images/slider1.png",
+      image: "/images/slider1.webp",
       heading: "India's Top Non-Chinese SoC CCTV Camera Manufacturer",
       subheading:
         "Designed, Developed & Manufactured in India for Reliable, Secure Surveillance.",
@@ -14,7 +14,7 @@ const ImageSlider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider2.png",
+      image: "/images/slider2.webp",
       heading: "Your Trusted OEM, ODM & JDM CCTV Manufacturing Partner",
       subheading:
         "From design to production — complete engineering, integration and delivery under one roof.",
@@ -22,14 +22,14 @@ const ImageSlider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider3.png",
+      image: "/images/slider3.webp",
       heading: "Advanced Edge AI Cameras Built for Performance & Precision",
       subheading: "S-Series & Eco-Series powered by secure, non-Chinese SoC technology.",
       ctaText: "View ArcisAI Products",
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider4.png",
+      image: "/images/slider4.webp",
       heading: "Made in India Security Cameras to World",
       subheading:
         "Export-ready product engineering with global certifications and world-class standards.",
@@ -37,7 +37,7 @@ const ImageSlider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider5.png",
+      image: "/images/slider5.webp",
       heading: "Edge AI, Cloud AI & Gen AI Powered Video Surveillance Solutions",
       subheading:
         "Smart, scalable, and intelligent security solutions built into ArcisAI’s ecosystem of cameras and VMS platforms.",

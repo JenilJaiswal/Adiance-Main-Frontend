@@ -104,33 +104,33 @@ const AboutMidSection = () => {
   }, []);
 
   // const imagePaths = [
-  //   "/images/P7-AMBICAM-4g-dome-ptz-camera-VM-72BPTZ410AC-02-150x150.png",
-  //   "/images/P5-Edge-AI-Based-Face-Recognition-VM-72D5AIVE-01-1-150x150.png",
-  //   "/images/P25-Edge-AI-Based-Object-Face-Detection-Cameras-VM-72B5AIVE-02-1.png",
-  //   "/images/P23-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-03-150x150.png",
-  //   "/images/P9-AMBICAM-4g-dome-camera-VM-72AD4G210C-02.png",
-  //   "/images/P23-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-02-1.png",
+  //   "/images/P7-AMBICAM-4g-dome-ptz-camera-VM-72BPTZ410AC-02-150x150.webp",
+  //   "/images/P5-Edge-AI-Based-Face-Recognition-VM-72D5AIVE-01-1-150x150.webp",
+  //   "/images/P25-Edge-AI-Based-Object-Face-Detection-Cameras-VM-72B5AIVE-02-1.webp",
+  //   "/images/P23-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-03-150x150.webp",
+  //   "/images/P9-AMBICAM-4g-dome-camera-VM-72AD4G210C-02.webp",
+  //   "/images/P23-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-02-1.webp",
   // ];
   // const imagePath2 = [
-  //   "/images/t2-150x150.jpg",
-  //   "/images/t5-1-150x150.jpg",
-  //   "/images/t3-150x150.jpg",
-  //   "/images/t1-150x150.jpg",
-  //   "/images/t5-1-150x150.jpg",
+  //   "/images/t2-150x150.webp",
+  //   "/images/t5-1-150x150.webp",
+  //   "/images/t3-150x150.webp",
+  //   "/images/t1-150x150.webp",
+  //   "/images/t5-1-150x150.webp",
   // ];
 
 
 
   const imagePath3 = [
-    "images/adiance-factory-008.jpg",
-    "images/adiance-factory-006.jpg",
-    "images/adiance-factory-002.jpg",
-    "images/adiance-factory-005.jpg",
-    "images/adiance-factory-007.jpg",
-    // "images/adiance-factory-004.jpg",
-    "images/adiance-factory-001.jpg",
-    "images/adiance-factory-003.jpg",
-    "images/adiance-factory-009.jpg",
+    "images/adiance-factory-008.webp",
+    "images/adiance-factory-006.webp",
+    "images/adiance-factory-002.webp",
+    "images/adiance-factory-005.webp",
+    "images/adiance-factory-007.webp",
+    // "images/adiance-factory-004.webp",
+    "images/adiance-factory-001.webp",
+    "images/adiance-factory-003.webp",
+    "images/adiance-factory-009.webp",
   ];
   return (
     <div>
@@ -204,7 +204,7 @@ const AboutMidSection = () => {
           }}
         >
           <img
-            src="/images/ourMission.jpg"
+            src="/images/ourMission.webp"
             alt="Image"
             style={{
               maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -296,7 +296,7 @@ const AboutMidSection = () => {
           }}
         >
           <img
-            src="/images/ourVision.jpg"
+            src="/images/ourVision.webp"
             alt="Image"
             style={{
               maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -333,7 +333,7 @@ const AboutMidSection = () => {
                   }}
                 >
                   <img
-                    src="/images/about1.png"
+                    src="/images/about1.webp"
                     alt="Image 1"
                     style={{
                       width: "100%",
@@ -369,7 +369,7 @@ const AboutMidSection = () => {
                   }}
                 >
                   <img
-                    src="/images/about3.png"
+                    src="/images/about3.webp"
                     alt="Image 3"
                     style={{
                       width: "100%",
@@ -407,7 +407,7 @@ const AboutMidSection = () => {
                   }}
                 >
                   <img
-                    src="/images/about2.png"
+                    src="/images/about2.webp"
                     alt="Image 2"
                     style={{
                       width: "100%",
@@ -445,7 +445,7 @@ const AboutMidSection = () => {
                   }}
                 >
                   <img
-                    src="/images/about4.jpg"
+                    src="/images/about4.webp"
                     alt="Image 4"
                     style={{
                       width: "100%",
@@ -577,7 +577,7 @@ const AboutMidSection = () => {
           }}
         >
           <img
-            src="/images/about_torque.png"
+            src="/images/about_torque.webp"
             alt="Image"
             style={{
               maxWidth: screenWidth > 888 ? "350px" : "250px",

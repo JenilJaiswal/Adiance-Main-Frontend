@@ -10,37 +10,37 @@ const ProductSlider = () => {
     {
       id: 1,
       title: "4G Camera",
-      imageUrl: "/images/4g-camera-768x768.jpg",
+      imageUrl: "/images/4g-camera-768x768.webp",
       link: "/4gcamera",
     },
     {
       id: 2,
       title: "Edge AI Camera",
-      imageUrl: "/images/Edge-AI-Camera-768x768.jpg",
+      imageUrl: "/images/Edge-AI-Camera-768x768.webp",
       link: "/edgeaicamera",
     },
     {
       id: 3,
       title: "ANPR Camera",
-      imageUrl: "/images/ANPR-Camera-768x768.jpg",
+      imageUrl: "/images/ANPR-Camera-768x768.webp",
       link: "/anpr-camera",
     },
     {
       id: 4,
       title: "Thermal Camera",
-      imageUrl: "/images/Thermal-Camera-768x768.jpg",
+      imageUrl: "/images/Thermal-Camera-768x768.webp",
       link: "/thermal-camera",
     },
     {
       id: 5,
       title: "Cloud XVR",
-      imageUrl: "/images/XVR-768x768.jpg",
+      imageUrl: "/images/XVR-768x768.webp",
       link: "/cloudxvr",
     },
     {
       id: 6,
       title: "4K Camera",
-      imageUrl: "/images/4k-Camera-768x768.jpg",
+      imageUrl: "/images/4k-Camera-768x768.webp",
       link: "/4kcamera",
     },
   ];

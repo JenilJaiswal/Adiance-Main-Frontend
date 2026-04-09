@@ -186,7 +186,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus1.png"
+              src="/images/sus1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -286,7 +286,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus2.png"
+              src="/images/sus2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -325,7 +325,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus3.png"
+              src="/images/sus3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -426,7 +426,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus4.png"
+              src="/images/sus4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -465,7 +465,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus5.jpg"
+              src="/images/sus5.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -568,7 +568,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus6.png"
+              src="/images/sus6.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

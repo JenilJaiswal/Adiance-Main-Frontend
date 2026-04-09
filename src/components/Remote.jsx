@@ -151,7 +151,7 @@ const Remote = () => {
             }}
           >
             <img
-              src="/images/rss1.png"
+              src="/images/rss1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -253,7 +253,7 @@ const Remote = () => {
             }}
           >
             <img
-              src="/images/rss2.png"
+              src="/images/rss2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -292,7 +292,7 @@ const Remote = () => {
             }}
           >
             <img
-              src="/images/rss3.jpg"
+              src="/images/rss3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

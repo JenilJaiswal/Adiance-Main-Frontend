@@ -152,7 +152,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/b1.png"
+              src="/images/b1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -253,7 +253,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/b2.png"
+              src="/images/b2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -292,7 +292,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/b3.png"
+              src="/images/b3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

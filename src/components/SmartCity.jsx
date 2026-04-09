@@ -188,7 +188,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc1.png"
+              src="/images/ssc1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -288,7 +288,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc2.png"
+              src="/images/ssc2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -327,7 +327,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc3.png"
+              src="/images/ssc3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -428,7 +428,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc4.png"
+              src="/images/ssc4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -467,7 +467,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc5.png"
+              src="/images/ssc5.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -566,7 +566,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc6.png"
+              src="/images/ssc6.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

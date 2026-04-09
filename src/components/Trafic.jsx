@@ -151,7 +151,7 @@ const Trafic = () => {
             }}
           >
             <img
-              src="/images/trafic1.png"
+              src="/images/trafic1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -247,7 +247,7 @@ const Trafic = () => {
             }}
           >
             <img
-              src="/images/trafic2.jpg"
+              src="/images/trafic2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -286,7 +286,7 @@ const Trafic = () => {
             }}
           >
             <img
-              src="/images/trafic3.jpg"
+              src="/images/trafic3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -386,7 +386,7 @@ const Trafic = () => {
             }}
           >
             <img
-              src="/images/trafic4.jpg"
+              src="/images/trafic4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

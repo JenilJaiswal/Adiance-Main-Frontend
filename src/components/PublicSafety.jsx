@@ -219,7 +219,7 @@ const PublicSafety = () => {
             }}
           >
             <img
-              src="/images/ps1.jpg"
+              src="/images/ps1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -317,7 +317,7 @@ const PublicSafety = () => {
             }}
           >
             <img
-              src="/images/ps2.jpg"
+              src="/images/ps2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -356,7 +356,7 @@ const PublicSafety = () => {
             }}
           >
             <img
-              src="/images/ps3.png"
+              src="/images/ps3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -454,7 +454,7 @@ const PublicSafety = () => {
             }}
           >
             <img
-              src="/images/ps4.png"
+              src="/images/ps4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

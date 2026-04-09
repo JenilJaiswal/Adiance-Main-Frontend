@@ -138,7 +138,7 @@ const PopUpForm = () => {
               left: "50%",
               transform: "translate(-50%, -50%)",
               width: { lg: "80%", sm: "90%" },
-              backgroundImage: "url('/images/iscWestPopup.png')",
+              backgroundImage: "url('/images/iscWestPopup.webp')",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               borderRadius: 5,
@@ -357,9 +357,9 @@ const PopUpForm = () => {
                 mb: 2,
               }}
             >
-              <img src="/Adiance-Logo.png" alt="adiance" width="30%" loading="lazy" />
+              <img src="/Adiance-Logo.webp" alt="adiance" width="30%" loading="lazy" />
               {/* <img
-                src="/images/iscWestLogo.png"
+                src="/images/iscWestLogo.webp"
                 alt="event"
                 width="30%"
                 bgcolor="gray"

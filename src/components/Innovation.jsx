@@ -16,105 +16,105 @@ const Innovation = () => {
       title: "OEM-ODM Manufacturing Services Expertise",
       description:
         "Adiance is transitioning from an Original Equipment Manufacturer (OEM) to a hybrid OEM & Original Design Manufacturer (ODM), focusing on customized Printed Circuit Boards for surveillance cameras and electronic devices, enhancing efficiency and reducing lead times.",
-      imageUrl: "/images/oemodm.png",
+      imageUrl: "/images/oemodm.webp",
     },
     {
       id: 2,
       title: "Cloud System",
       description:
         "Adiance's NVR-free approach and cloud storage offer cost-effective, scalable, and secure solutions for modern surveillance environments. This eliminates on-premises hardware, simplifies setup, and enhances data security, allowing seamless integration with other services.",
-      imageUrl: "/images/NVRFree.png",
+      imageUrl: "/images/NVRFree.webp",
     },
     {
       id: 3,
       title: "Patent",
       description:
         "Our cloud service technology utilizes advanced compression algorithms to optimize data storage, efficiency, and bandwidth usage, reducing storage size, costs, and ensuring seamless scalability, enabling businesses to manage data growth effectively.",
-      imageUrl: "/images/patent.jpg",
+      imageUrl: "/images/patent.webp",
     },
     {
       id: 4,
       title: "Customized",
       description:
         "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
-      imageUrl: "/images/customized.png",
+      imageUrl: "/images/customized.webp",
     },
     {
       id: 5,
       title: " Backward Integration",
       description:
         "Our company is transitioning from OEM services to embracing both OEM and ODM approaches, demonstrating our commitment to backward integration. This allows us to offer a wider range of products, cater to diverse market demands, and foster deeper partnerships, enhancing innovation and product quality. ",
-      imageUrl: "/images/backward.png",
+      imageUrl: "/images/backward.webp",
     },
     {
       id: 6,
       title: "PTZ Surveillance",
       description:
         "PTZ cameras are versatile surveillance tools used in public spaces and industrial settings. They offer comprehensive coverage with dynamic control over pan, tilt, and zoom functions, focusing on specific areas of interest. These cameras are essential in sectors like transportation, infrastructure, education, hospitality, and retail, providing flexible control and enhanced security measures.",
-      imageUrl: "/images/PTZCamera.jpg",
+      imageUrl: "/images/PTZCamera.webp",
     },
     {
       id: 7,
       title: "Panoramic",
       description:
         "Panoramic surveillance cameras provide a 360-degree field of view, eliminating blind spots and providing comprehensive coverage. They offer high-resolution imaging, low-light performance, and advanced detection capabilities. They are used in large outdoor areas and indoor environments, enhancing security and situational awareness. They can cover entire spaces with a single unit, reducing the need for multiple cameras.",
-      imageUrl: "/images/Panoromic.jpg",
+      imageUrl: "/images/Panoromic.webp",
     },
     {
       id: 8,
       title: "Smart ANPR/LPR",
       description:
         "Smart Automatic Number Plate Recognition/License Plate Recognition (ANPR/LPR) surveillance cameras use optical character recognition technology to accurately capture and interpret vehicle license plates. They offer rapid identification, high accuracy rates, and integration with databases for instant verification. These cameras are used in law enforcement for traffic monitoring, parking management, toll collection, and vehicle access control, enhancing efficiency and security.",
-      imageUrl: "/images/SmartLPRANPR.jpg",
+      imageUrl: "/images/SmartLPRANPR.webp",
     },
     {
       id: 9,
       title: "Smart Facial Recognition",
       description:
         "Smart facial recognition surveillance cameras use advanced algorithms to identify individuals in real-time based on facial features. They offer high-definition imaging, low-light performance, and remote access for 24/7 surveillance. These cameras are used in law enforcement, retail, and access control systems for security, customer experiences, and public safety. They automate identification processes, streamlining security operations.",
-      imageUrl: "/images/FacialRecognition.jpg",
+      imageUrl: "/images/FacialRecognition.webp",
     },
     {
       id: 10,
       title: "Super WDR",
       description:
         "The Super WDR surveillance camera uses advanced imaging technology to capture clear, detailed footage in challenging lighting conditions. It balances exposure levels in bright and dark areas, ensuring accurate image reproduction. This camera is crucial for high-security environments like banks, casinos, and government facilities, as well as outdoor settings like parking lots and traffic intersections, enhancing surveillance effectiveness and security.",
-      imageUrl: "/images/SuperWDR.png",
+      imageUrl: "/images/SuperWDR.webp",
     },
     {
       id: 11,
       title: "Smart Technology",
       description:
         "Smart technology surveillance cameras use advanced features like facial recognition, object tracking, and behavioral analysis to detect and alert authorities to suspicious activities. They enhance security in public spaces, transportation hubs, and commercial establishments. AI algorithms provide real-time insights, enabling proactive responses to potential threats. They facilitate efficient investigation processes and safeguard communities, improving public safety and deterring criminal activities.",
-      imageUrl: "/images/SmartTech.png",
+      imageUrl: "/images/SmartTech.webp",
     },
     {
       id: 12,
       title: "Artificial Intelligence",
       description:
         "AI-based surveillance cameras, using deep learning algorithms, detect and track people, vehicles, and objects in real-time. They are used in law enforcement, retail, transportation, and smart cities to enhance security, prevent crime, and respond to emergencies. They also aid in traffic management, crowd control, and retail analytics, improving operational efficiency and public safety. With their ability to analyze vast data, AI surveillance cameras are essential tools for maintaining security.",
-      imageUrl: "/images/Adiance-Banner-002-1024x415.jpg",
+      imageUrl: "/images/Adiance-Banner-002-1024x415.webp",
     },
     {
       id: 13,
       title: "Smart WiFi & Smart 4G",
       description:
         "Smart WiFi and Smart 4G surveillance cameras offer versatile features like easy installation and remote access via smartphone apps. They provide high-definition video recording, motion detection, two-way audio communication, and cloud storage options. These cameras are used in home security, small business monitoring, pet surveillance, and outdoor surveillance where traditional wired connections are impractical. They provide convenient and reliable security solutions.",
-      imageUrl: "/images/SmartWifi.png",
+      imageUrl: "/images/SmartWifi.webp",
     },
     {
       id: 14,
       title: "Innovation",
       description:
         "Surveillance cameras have advanced features like high-definition imaging, wide-angle coverage, low-light performance, AI-powered analytics, remote monitoring, and tamper detection. These innovations enhance security monitoring, providing detailed capture, real-time insights, remote monitoring, and seamless integration capabilities, enhancing public safety and security in the modern world.",
-      imageUrl: "/images/Innovation.png",
+      imageUrl: "/images/Innovation.webp",
     },
     {
       id: 15,
       title: "VMS",
       description:
         "Our CCTV cameras are integrated with our Video Management System (VMS), enhancing efficiency and scalability through centralized management, real-time monitoring, and advanced analytics, enhancing situational awareness and providing valuable insights.",
-      imageUrl: "/images/VMS.jpg",
+      imageUrl: "/images/VMS.webp",
     },
   ];
 

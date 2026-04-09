@@ -7,13 +7,13 @@ const OurOfferings = () => {
       id: 1,
       title: "Cloud Storage",
 
-      imageUrl: "/images/cloudAbout.png",
+      imageUrl: "/images/cloudAbout.webp",
       url: "/public-transport",
     },
     {
       id: 2,
       title: "Customization",
-      imageUrl: "/images/customizedAbout.png",
+      imageUrl: "/images/customizedAbout.webp",
       url: "/remote-security",
     },
     {
@@ -21,7 +21,7 @@ const OurOfferings = () => {
       title: "PCB Design",
       description:
         "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
-      imageUrl: "/images/PCBAbout.png",
+      imageUrl: "/images/PCBAbout.webp",
       url: "/healthcare",
     },
   ];

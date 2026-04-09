@@ -11,16 +11,16 @@ const IfsecIndia2025 = () => {
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
 
   const imageGallery1 = [
-    { id: 1, src: "/images/IFSEC_carousel_1.png", alt: "IFSEC India 2025 - Booth Setup" },
-    { id: 2, src: "/images/IFSEC_carousel_2.png", alt: "IFSEC India 2025 - Product Display" },
-    { id: 3, src: "/images/IFSEC_carousel_3.png", alt: "IFSEC India 2025 - Visitor Engagement" },
-    { id: 4, src: "/images/IFSEC_carousel_4.png", alt: "IFSEC India 2025" },
+    { id: 1, src: "/images/IFSEC_carousel_1.webp", alt: "IFSEC India 2025 - Booth Setup" },
+    { id: 2, src: "/images/IFSEC_carousel_2.webp", alt: "IFSEC India 2025 - Product Display" },
+    { id: 3, src: "/images/IFSEC_carousel_3.webp", alt: "IFSEC India 2025 - Visitor Engagement" },
+    { id: 4, src: "/images/IFSEC_carousel_4.webp", alt: "IFSEC India 2025" },
   ];
 
   const imageGallery2 = [
-    { id: 5, src: "/images/IFSEC_gallery_1.png", alt: "IFSEC India 2025 - Live Demo" },
-    { id: 6, src: "/images/IFSEC_gallery_2.png", alt: "IFSEC India 2025 - Team Interaction" },
-    { id: 7, src: "/images/IFSEC_gallery_3.png", alt: "IFSEC India 2025 - Technology Showcase" },
+    { id: 5, src: "/images/IFSEC_gallery_1.webp", alt: "IFSEC India 2025 - Live Demo" },
+    { id: 6, src: "/images/IFSEC_gallery_2.webp", alt: "IFSEC India 2025 - Team Interaction" },
+    { id: 7, src: "/images/IFSEC_gallery_3.webp", alt: "IFSEC India 2025 - Technology Showcase" },
   ];
 
   return (
@@ -37,7 +37,7 @@ const IfsecIndia2025 = () => {
           property="og:description"
           content="At IFSEC India 2025, Adiance Technologies showcased ArcisAI's AI CCTV ecosystem, Eco-Series cameras, NVRs, ABD device, and cloud-ready VMS innovations."
         />
-        <meta property="og:image" content="https://www.adiance.com/images/IFSEC_carousel_1.png" />
+        <meta property="og:image" content="https://www.adiance.com/images/IFSEC_carousel_1.webp" />
         <meta property="og:url" content="https://www.adiance.com/event/ifsec-india-2025" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
@@ -49,7 +49,7 @@ const IfsecIndia2025 = () => {
           name="twitter:description"
           content="At IFSEC India 2025, Adiance Technologies showcased ArcisAI's AI CCTV ecosystem, Eco-Series cameras, NVRs, ABD device, and cloud-ready VMS innovations."
         />
-        <meta name="twitter:image" content="https://www.adiance.com/images/ifsec-hero-image.jpg" />
+        <meta name="twitter:image" content="https://www.adiance.com/images/ifsec-hero-image.webp" />
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -66,7 +66,7 @@ const IfsecIndia2025 = () => {
               "url": "https://www.adiance.com/",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.adiance.com/images/Logo-241x47-1.png",
+                "url": "https://www.adiance.com/images/Logo-241x47-1.webp",
                 "width": 205,
                 "height": 40,
               },
@@ -80,7 +80,7 @@ const IfsecIndia2025 = () => {
             },
             "primaryImageOfPage": {
               "@type": "ImageObject",
-              "url": "https://www.adiance.com/images/ifsec-hero-image.jpg",
+              "url": "https://www.adiance.com/images/ifsec-hero-image.webp",
               "width": 1512,
               "height": 800,
               "caption": "Adiance Technologies at IFSEC India 2025",
@@ -127,7 +127,7 @@ const IfsecIndia2025 = () => {
                   src={image.src}
                   alt={image.alt}
                   className="ifsec-scroll-image"
-                  onError={(e) => { e.target.src = "/images/placeholder-gallery.jpg"; }}
+                  onError={(e) => { e.target.src = "/images/placeholder-gallery.webp"; }}
                 />
               </div>
             ))}
@@ -137,7 +137,7 @@ const IfsecIndia2025 = () => {
                   src={image.src}
                   alt={image.alt}
                   className="ifsec-scroll-image"
-                  onError={(e) => { e.target.src = "/images/placeholder-gallery.jpg"; }}
+                  onError={(e) => { e.target.src = "/images/placeholder-gallery.webp"; }}
                 />
               </div>
             ))}
@@ -256,7 +256,7 @@ const IfsecIndia2025 = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  onError={(e) => { e.target.src = "/images/placeholder-gallery.jpg"; }}
+                  onError={(e) => { e.target.src = "/images/placeholder-gallery.webp"; }}
                 />
                 <div className="ifsec-photo-overlay">
                   <p>{image.alt}</p>

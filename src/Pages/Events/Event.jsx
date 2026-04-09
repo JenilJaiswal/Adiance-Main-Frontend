@@ -22,7 +22,7 @@ export default function Event() {
       "url": "https://www.adiance.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.adiance.com/images/Logo-241x47-1.png",
+        "url": "https://www.adiance.com/images/Logo-241x47-1.webp",
         "width": 205,
         "height": 40
       },
@@ -36,7 +36,7 @@ export default function Event() {
     },
     "primaryImageOfPage": {
       "@type": "ImageObject",
-      "url": "https://www.adiance.com/images/ifsec-event.jpg",
+      "url": "https://www.adiance.com/images/ifsec-event.webp",
       "width": 1512,
       "height": 800,
       "caption": "Adiance Technologies - Events"
@@ -58,7 +58,7 @@ export default function Event() {
           property="og:description"
           content="Connect with the Adiance team at leading cctv manufacturing, OEM, and security hardware events. Stay updated on upcoming expos and explore our latest product showcases."
         />
-        <meta property="og:image" content="https://www.adiance.com/images/event_carousel_1.png" />
+        <meta property="og:image" content="https://www.adiance.com/images/event_carousel_1.webp" />
         <meta property="og:url" content="https://www.adiance.com/event" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
@@ -70,7 +70,7 @@ export default function Event() {
           name="twitter:description"
           content="Connect with the Adiance team at leading cctv manufacturing, OEM, and security hardware events. Stay updated on upcoming expos and explore our latest product showcases."
         />
-        <meta name="twitter:image" content="https://www.adiance.com/images/ifsec-event.jpg" />
+        <meta name="twitter:image" content="https://www.adiance.com/images/ifsec-event.webp" />
 
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">

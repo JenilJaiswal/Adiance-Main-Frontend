@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 const SITE_NAME = 'Adiance';
 const BASE_URL = 'https://www.adiance.com';
-const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.webp`;
 function setMeta(attr, key, content) {
   let el = document.querySelector(`meta[${attr}="${key}"]`);
   if (!el) { el = document.createElement('meta'); el.setAttribute(attr === 'property' ? 'property' : 'name', key); document.head.appendChild(el); }

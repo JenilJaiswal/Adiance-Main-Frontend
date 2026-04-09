@@ -170,7 +170,7 @@ const Hospital = () => {
             }}
           >
             <img
-              src="/images/ht1.png"
+              src="/images/ht1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -268,7 +268,7 @@ const Hospital = () => {
             }}
           >
             <img
-              src="/images/ht2.png"
+              src="/images/ht2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -307,7 +307,7 @@ const Hospital = () => {
             }}
           >
             <img
-              src="/images/ht5.png"
+              src="/images/ht5.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -404,7 +404,7 @@ const Hospital = () => {
             }}
           >
             <img
-              src="/images/ht4.png"
+              src="/images/ht4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -443,7 +443,7 @@ const Hospital = () => {
             }}
           >
             <img
-              src="/images/ht3.png"
+              src="/images/ht3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
