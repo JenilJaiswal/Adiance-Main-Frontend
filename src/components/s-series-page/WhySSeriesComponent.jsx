@@ -36,7 +36,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 // Original image paths
 const images = [
-  "/images/sentiment_analysis_accordian.webp.webp",
+  "/images/sentiment_analysis_accordian.webp",
   "/images/ExecellentAudio.webp",
   "/images/videiliveStriming.webp",
   "/images/Zeroinstoletion.webp",

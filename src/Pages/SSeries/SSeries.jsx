@@ -20,11 +20,11 @@ import "./SSeries.css";
 const heroBadges = ["Edge AI", "3MP QHD", "Wi-Fi / LAN / 4G LTE", "IP66 Rated"];
 
 const whyItems = [
-  { id: "panel1", title: "Plug-N-Play + All-in-One App", desc: "Go live in minutes. Control live view, alerts, playback, reports, and multiple cameras in the ArcisAI app. Includes 2-year warranty and responsive support.", img: "/images/sentiment_analysis_accordian.webp.webp" },
+  { id: "panel1", title: "Plug-N-Play + All-in-One App", desc: "Go live in minutes. Control live view, alerts, playback, reports, and multiple cameras in the ArcisAI app. Includes 2-year warranty and responsive support.", img: "/images/sentiment_analysis_accordian.webp" },
   { id: "panel2", title: "Event-Based Intelligence", desc: "Clean, actionable notifications with false-alert filtering and auto detection reports delivered to your app in real time.", img: "/images/ExecellentAudio.webp" },
   { id: "panel3", title: "Clear Vision, Day & Night", desc: "3MP QHD (2304x1296 @30fps) with 10x digital zoom, low-light sensitivity (0.1Lux color / 0.01Lux B/W) and Smart IR (4 LEDs) for up to 50 m.", img: "/images/videiliveStriming.webp" },
   { id: "panel4", title: "Instant Deterrence & 2-Way Talk", desc: "Built-in siren, strobe light, microphone, and speaker so you can intervene in the moment.", img: "/images/Zeroinstoletion.webp" },
-  { id: "panel5", title: "Connect Anywhere (Wi-Fi / LAN / 4G LTE)", desc: "Works where Wi-Fi isn't feasible via CAT-1 LTE (FDD B1/B3/B5/B8; TDD B34/B38/B39/B40/B41). ONVIF 2.4 for easy VMS integration.", img: "/images/sentiment_analysis_accordian.webp.webp" },
+  { id: "panel5", title: "Connect Anywhere (Wi-Fi / LAN / 4G LTE)", desc: "Works where Wi-Fi isn't feasible via CAT-1 LTE (FDD B1/B3/B5/B8; TDD B34/B38/B39/B40/B41). ONVIF 2.4 for easy VMS integration.", img: "/images/sentiment_analysis_accordian.webp" },
   { id: "panel6", title: "Outdoor-Ready & Reliable", desc: "IP66 weatherproofing, 4000V lightning protection, stable DC 12V (<=12W) operation - plus secure cloud storage plans.", img: "/images/ExecellentAudio.webp" },
 ];
 
