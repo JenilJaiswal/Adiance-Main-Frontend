@@ -9,17 +9,21 @@ const Clients = ({ showTitle = true }) => {
           {clientLogos.map((num) => (
             <div key={num} className="client-logo-wrapper">
               <img
-                src={`/N_Images/client${num}.svg`}
+                src={`/N_Images/client${num}.png`}
                 alt={`Client ${num}`}
                 className="client-logo"
                 loading="lazy"
+                decoding="async"
+                width={150}
+                // height={150}
+                onLoad={(e) => e.currentTarget.classList.add('loaded')}
               />
             </div>
           ))}
         </div>
       </div>
-      
-      <style jsx>{`
+
+      <style>{`
         .clients-container {
           padding: 40px 20px;
           text-align: center;
