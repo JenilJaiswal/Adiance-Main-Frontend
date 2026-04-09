@@ -1,4 +1,3 @@
-import React from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home_Slider.css";
@@ -49,8 +48,6 @@ const Home_Slider = () => {
   return (
     <div style={{ height: "800px", margin: "0 auto" }} className="main">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-        
         .carousel-item img {
           max-width: 100%;
           height: auto;
@@ -195,6 +192,10 @@ const Home_Slider = () => {
               src={slide.image}
               alt={`Slide ${index + 1}`}
               style={{ height: "800px", objectFit: "cover" }}
+              width={1440}
+              height={800}
+              fetchpriority={index === 0 ? "high" : "low"}
+              loading={index === 0 ? "eager" : "lazy"}
             />
             <div className="overlay"></div>
             <div className="carousel-caption-custom">

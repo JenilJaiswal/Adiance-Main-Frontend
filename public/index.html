@@ -7,8 +7,13 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet" />
+  <!-- Single consolidated font request: Roboto (all weights) + Inknut Antiqua -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto:wght@300;400;500;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <!-- Preload LCP image (above-the-fold hero slider) -->
+  <link rel="preload" as="image" href="/N_Images/Slider1.webp" fetchpriority="high" />
 
 
 
@@ -132,7 +137,7 @@
   <script src="https://smtpjs.com/v3/smtp.js" defer></script>
   <!-- LUCKY ORANGE ANALYTICS - DISABLED (includes chat widget) -->
   <!-- <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=0fe5f817"></script> -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
 </body>
 
