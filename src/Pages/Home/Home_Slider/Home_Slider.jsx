@@ -1,5 +1,4 @@
 import { Carousel } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home_Slider.css";
 
 const Home_Slider = () => {

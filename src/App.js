@@ -1,16 +1,13 @@
-import React, { Suspense } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Suspense, useEffect } from "react";
 import "./N_Component/Style.css";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
   useLocation,
   useNavigate,
 } from "react-router-dom";
 import routes from "./components/routes";
-import { useEffect } from "react";
 import RedirectManager from "./RedirectManager";
 
 // Scroll to top component
