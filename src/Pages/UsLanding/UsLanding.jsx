@@ -75,6 +75,9 @@ const UsLanding = () => {
           alt="NDAA Compliant Cameras for US"
           className="us-hero-bg"
           loading="lazy"
+          decoding="async"
+          width="1440"
+          height="800"
         />
         <div className="us-hero-overlay" />
         <div className="us-hero-content">

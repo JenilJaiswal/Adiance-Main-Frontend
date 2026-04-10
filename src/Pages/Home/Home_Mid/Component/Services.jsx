@@ -70,6 +70,9 @@ const Services = () => {
                 alt={item.title}
                 className="card-image"
                 loading="lazy"
+                decoding="async"
+                width="412"
+                height="412"
               />
               <div className="card-overlay">
                 <div className="card-content">

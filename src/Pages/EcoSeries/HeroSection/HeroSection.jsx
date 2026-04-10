@@ -11,6 +11,9 @@ function HeroSection() {
         alt="ECO Series CCTV Cameras"
         className="eco-hero-bg"
         loading="lazy"
+        decoding="async"
+        width="1440"
+        height="800"
       />
       <div className="eco-hero-overlay" />
       <div className="eco-hero-content">

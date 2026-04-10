@@ -92,7 +92,7 @@ const SSeries = () => {
 
       {/* 1. Hero */}
       <section className="ss-hero">
-        <img src="/N_Images/S-Series-Edge-AI-CCTV-Cameras.webp" alt="S-Series AI CCTV Cameras" className="ss-hero-bg" loading="lazy" />
+        <img src="/N_Images/S-Series-Edge-AI-CCTV-Cameras.webp" alt="S-Series AI CCTV Cameras" className="ss-hero-bg" loading="lazy" decoding="async" width="1440" height="800" />
         <div className="ss-hero-overlay" />
         <div className="ss-hero-content">
           <span className="ss-hero-badge">S-Series</span>
@@ -126,7 +126,7 @@ const SSeries = () => {
             </nav>
             <div className="ss-why-panel" key={activeWhy}>
               <div className="ss-why-panel-img">
-                <img src={currentWhy.img} alt={currentWhy.title} loading="lazy" />
+                <img src={currentWhy.img} alt={currentWhy.title} loading="lazy" decoding="async" width="600" height="400" />
               </div>
               <div className="ss-why-panel-info">
                 <h3 className="ss-why-panel-title">{currentWhy.title}</h3>
@@ -156,7 +156,7 @@ const SSeries = () => {
             </div>
             <div className="ss-features-panel" key={activeFeatureIdx}>
               <div className="ss-features-panel-img">
-                <img src={activeFeature.img} alt={activeFeature.title} loading="lazy" />
+                <img src={activeFeature.img} alt={activeFeature.title} loading="lazy" decoding="async" width="600" height="400" />
               </div>
               <div className="ss-features-panel-info">
                 <h3 className="ss-features-panel-title">{activeFeature.title}</h3>
@@ -179,7 +179,7 @@ const SSeries = () => {
                 <React.Fragment key={i}>
                   {i === 1 && (
                     <div className="ss-industries-center-img">
-                      <img src="/N_Images/S-Series.webp" alt="S-Series Camera" loading="lazy" />
+                      <img src="/N_Images/S-Series.webp" alt="S-Series Camera" loading="lazy" decoding="async" width="400" height="400" />
                     </div>
                   )}
                   <Link to={ind.link} className="ss-industry-card">

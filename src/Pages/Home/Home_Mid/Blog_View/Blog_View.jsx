@@ -36,7 +36,7 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
           </div>
         </div>
         <div className="blog-image-section">
-          <img src={imageUrl} alt={title} className="blog-image" loading="lazy" />
+          <img src={imageUrl} alt={title} className="blog-image" loading="lazy" decoding="async" width="400" height="250" />
         </div>
       </div>
     </Link>

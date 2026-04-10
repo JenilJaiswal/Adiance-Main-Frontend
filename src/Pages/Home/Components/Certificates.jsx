@@ -52,6 +52,9 @@ const Certificates = () => {
                 alt={cert.alt}
                 className="certificate-image"
                 loading="lazy"
+                decoding="async"
+                width="90"
+                height="90"
               />
             </div>
           ))}

@@ -103,6 +103,9 @@ const EdgeAICamera = () => {
           alt="Edge AI Camera"
           className="edgeai-hero-bg"
           loading="lazy"
+          decoding="async"
+          width="1440"
+          height="800"
         />
         <div className="edgeai-hero-overlay" />
         <div className="edgeai-hero-content">
@@ -173,6 +176,9 @@ const EdgeAICamera = () => {
                     alt={product.title}
                     className="edgeai-product-image"
                     loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="400"
                   />
                 </div>
                 <div className="edgeai-product-title-bar">

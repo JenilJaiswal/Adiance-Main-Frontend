@@ -38,6 +38,10 @@ const EventMidSection = () => {
           src="/images/Adiance-Banner-001.webp"
           alt="Adiance at Industry Events"
           className="event-mid-hero-bg"
+          loading="lazy"
+          decoding="async"
+          width="1440"
+          height="600"
         />
         <div className="event-mid-hero-overlay">
           <div className="event-mid-hero-content">
@@ -77,6 +81,9 @@ const EventMidSection = () => {
                   src={event.logo}
                   alt={`${event.name} logo`}
                   loading="lazy"
+                  decoding="async"
+                  width="200"
+                  height="80"
                   onError={(e) => { e.target.style.display = "none"; }}
                 />
               </div>
@@ -107,6 +114,9 @@ const EventMidSection = () => {
                   src={image.src}
                   alt={image.alt}
                   loading="lazy"
+                  decoding="async"
+                  width="1440"
+                  height="600"
                   onError={(e) => { e.target.src = "/images/ifsec-event.webp"; }}
                 />
               </div>

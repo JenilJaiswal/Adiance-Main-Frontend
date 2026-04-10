@@ -96,6 +96,9 @@ const Industries = () => {
                 alt={item.title}
                 className="card-image"
                 loading="lazy"
+                decoding="async"
+                width="412"
+                height="412"
               />
               <div className="card-title-overlay">
                 <h3 className="overlay-title">{item.title}</h3>

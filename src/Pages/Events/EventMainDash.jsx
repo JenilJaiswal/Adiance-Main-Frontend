@@ -213,6 +213,10 @@ const EventMainDash = () => {
               alt="SmartTech"
               className="logo-ifsec"
               style={{ height: "50px", objectFit: "contain" }}
+              loading="lazy"
+              decoding="async"
+              width="200"
+              height="50"
             />
             <img
               src="/Adiance-Logo.webp"
@@ -223,6 +227,10 @@ const EventMainDash = () => {
                 objectFit: "contain",
                 filter: "brightness(0) invert(1)",
               }}
+              loading="lazy"
+              decoding="async"
+              width="160"
+              height="40"
             />
           </div>
 
@@ -232,6 +240,10 @@ const EventMainDash = () => {
             alt="Make In India"
             className="logo-mii"
             style={{ height: "60px", objectFit: "contain" }}
+            loading="lazy"
+            decoding="async"
+            width="120"
+            height="60"
           />
         </div>
 

@@ -132,6 +132,9 @@ const NdaaCompliance = () => {
           alt="NDAA Compliant Cameras"
           className="ndaa-hero-bg"
           loading="lazy"
+          decoding="async"
+          width="1440"
+          height="800"
         />
         <div className="ndaa-hero-overlay" />
         <div className="ndaa-hero-content">

@@ -13,6 +13,10 @@ const Services_Hero = ({
         src={backgroundImage}
         alt="Hero Background"
         className="services-hero-bg-image"
+        loading="lazy"
+        decoding="async"
+        width="1440"
+        height="600"
       />
       <div className="services-hero-container">
         <div className="services-hero-content">
