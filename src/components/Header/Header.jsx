@@ -125,7 +125,7 @@ const Header = () => {
       <div className="header-container">
         <div className="logo-section">
           <Link to="/">
-            <img src="/images/Logo.webp" alt="Adiance Logo" className="header-logo" />
+            <img src="/images/Logo.webp" alt="Adiance Logo" className="header-logo" loading="eager" fetchpriority="high" />
           </Link>
         </div>
 

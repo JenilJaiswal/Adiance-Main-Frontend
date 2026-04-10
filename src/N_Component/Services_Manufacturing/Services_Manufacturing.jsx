@@ -80,7 +80,7 @@ const Services_Manufacturing = ({
           </div>
         ) : rightImage ? (
           <div className="services-manufacturing-right">
-            <img src={rightImage} alt={rightImageAlt} className="services-manufacturing-right-image" />
+            <img src={rightImage} alt={rightImageAlt} className="services-manufacturing-right-image" loading="lazy" decoding="async" />
           </div>
         ) : null}
       </div>

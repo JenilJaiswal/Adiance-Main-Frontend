@@ -31,8 +31,8 @@ const Industries = () => {
           </Box>
         </div>
         <div>
-            <img src="/images/Frame1.webp" alt="" height="auto" width="100%" />
-            <img src="/images/Frame2.webp" alt="" height="auto" width="100%"/>
+            <img src="/images/Frame1.webp" alt="" height="auto" width="100%" loading="lazy" decoding="async" />
+            <img src="/images/Frame2.webp" alt="" height="auto" width="100%" loading="lazy" decoding="async" />
         </div>
       </div>
     </>
