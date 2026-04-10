@@ -61,6 +61,10 @@ const OurOfferings = () => {
               src={item.imageUrl}
               alt={item.title}
               className="innovation-image"
+              loading="lazy"
+              decoding="async"
+              width="325"
+              height="325"
             />
             {/* <div className="item-details">
               <div className="item-title">{item.title}</div>

@@ -205,7 +205,11 @@ const AboutMidSection = () => {
         >
           <img
             src="/images/ourMission.webp"
-            alt="Image"
+            alt="Our Mission"
+            loading="lazy"
+            decoding="async"
+            width="350"
+            height="350"
             style={{
               maxWidth: screenWidth > 888 ? "350px" : "250px",
               maxHeight: screenWidth > 888 ? "350px" : "250px",
@@ -297,7 +301,11 @@ const AboutMidSection = () => {
         >
           <img
             src="/images/ourVision.webp"
-            alt="Image"
+            alt="Our Vision"
+            loading="lazy"
+            decoding="async"
+            width="350"
+            height="350"
             style={{
               maxWidth: screenWidth > 888 ? "350px" : "250px",
               maxHeight: screenWidth > 888 ? "350px" : "250px",
@@ -334,13 +342,12 @@ const AboutMidSection = () => {
                 >
                   <img
                     src="/images/about1.webp"
-                    alt="Image 1"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      transition: "transform 0.3s ease-in-out",
-                    }}
+                    alt="About image 1"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="300"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s ease-in-out" }}
                     className="hover-scale"
                   />
                   <div
@@ -370,13 +377,12 @@ const AboutMidSection = () => {
                 >
                   <img
                     src="/images/about3.webp"
-                    alt="Image 3"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      transition: "transform 0.3s ease-in-out",
-                    }}
+                    alt="About image 3"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="300"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s ease-in-out" }}
                     className="hover-scale"
                   />
                   <div
@@ -408,13 +414,12 @@ const AboutMidSection = () => {
                 >
                   <img
                     src="/images/about2.webp"
-                    alt="Image 2"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      transition: "transform 0.3s ease-in-out",
-                    }}
+                    alt="About image 2"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="300"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s ease-in-out" }}
                     className="hover-scale"
                   />
                   <div
@@ -446,13 +451,12 @@ const AboutMidSection = () => {
                 >
                   <img
                     src="/images/about4.webp"
-                    alt="Image 4"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      transition: "transform 0.3s ease-in-out",
-                    }}
+                    alt="About image 4"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="300"
+                    style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.3s ease-in-out" }}
                     className="hover-scale"
                   />
                   <div
@@ -578,7 +582,11 @@ const AboutMidSection = () => {
         >
           <img
             src="/images/about_torque.webp"
-            alt="Image"
+            alt="Manufacturing"
+            loading="lazy"
+            decoding="async"
+            width="350"
+            height="350"
             style={{
               maxWidth: screenWidth > 888 ? "350px" : "250px",
               maxHeight: screenWidth > 888 ? "350px" : "250px",
@@ -727,7 +735,11 @@ const AboutMidSection = () => {
           <Grid key={index} item xs={6} sm={4} md={3} lg={3}>
             <img
               src={image}
-              alt={`Image ${index + 1}`}
+              alt={`Factory ${index + 1}`}
+              loading="lazy"
+              decoding="async"
+              width="800"
+              height="533"
               style={{
                 width: "100%",
                 height: "auto",
