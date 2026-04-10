@@ -20,7 +20,7 @@ const NavHeader = ({ text }) => {
 
   return (
     <div className="nav-header">
-      <img src={randomImageUrl} alt="Header" className="header-image" loading="lazy" decoding="async" width="1440" height="400" />
+      <img src={randomImageUrl} alt="Header" className="header-image" loading="eager" fetchpriority="high" decoding="async" width="1440" height="400" />
       <div className="text-overlay">{text}</div>
 
       <style jsx>{`

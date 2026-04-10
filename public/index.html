@@ -15,27 +15,43 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto:wght@300;400;500;600;700&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'" />
   <!-- Preload LCP image (above-the-fold hero slider) -->
   <link rel="preload" as="image" href="/N_Images/Slider1.webp" fetchpriority="high" />
+  <!-- Preload inner page header images (NavHeader - always above the fold) -->
+  <link rel="preload" as="image" href="/images/innovation-header.webp" />
+  <link rel="preload" as="image" href="/images/product-header.webp" />
 
 
 
 
-  <!-- Google Tag Manager - deferred to avoid render-blocking -->
+  <!-- Google Tag Manager - loads on first user interaction to avoid affecting LCP/TBT -->
   <script>
-    window.addEventListener('DOMContentLoaded', function () {
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-M7PMRCM");
-    });
+    (function () {
+      var gtmLoaded = false;
+      function loadGTM() {
+        if (gtmLoaded) return;
+        gtmLoaded = true;
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M7PMRCM');
+        ['scroll', 'mousemove', 'keydown', 'touchstart', 'click'].forEach(function (e) {
+          window.removeEventListener(e, loadGTM);
+        });
+      }
+      // Load on first user interaction
+      ['scroll', 'mousemove', 'keydown', 'touchstart', 'click'].forEach(function (e) {
+        window.addEventListener(e, loadGTM, { once: true, passive: true });
+      });
+      // Fallback: load after 7 seconds even with no interaction
+      setTimeout(loadGTM, 7000);
+    })();
   </script>
   <!-- End Google Tag Manager -->
 
