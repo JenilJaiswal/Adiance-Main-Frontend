@@ -102,7 +102,7 @@ const EdgeAICamera = () => {
           src="/N_Images/EdgeAI.webp"
           alt="Edge AI Camera"
           className="edgeai-hero-bg"
-          loading="lazy"
+          fetchpriority="high"
           decoding="async"
           width="1440"
           height="800"

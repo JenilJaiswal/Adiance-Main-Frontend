@@ -7,7 +7,7 @@ const OEM_Hero = () => {
         src="/N_Images/OEM_Hero.svg"
         alt="OEM Background"
         className="oem-hero-bg-image"
-        loading="lazy"
+        fetchpriority="high"
         decoding="async"
       />
       <div className="oem-hero-container">

@@ -10,7 +10,7 @@ function HeroSection() {
         src="/N_Images/Slider2.webp"
         alt="ECO Series CCTV Cameras"
         className="eco-hero-bg"
-        loading="lazy"
+        fetchpriority="high"
         decoding="async"
         width="1440"
         height="800"

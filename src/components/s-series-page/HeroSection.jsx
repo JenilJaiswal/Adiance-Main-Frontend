@@ -9,7 +9,7 @@ function HeroSection() {
     <section className={styles.heroSection}>
       <div className={styles.heroContent}>
         <img
-          loading="lazy"
+          fetchpriority="high"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9c499e0cb9ae526ff0136c99f5430f56698ab490144c8a26921738d54138e85?placeholderIfAbsent=true&apiKey=5e6c7542e7f24225a4d3d5a1be551cbc"
           className={styles.backgroundImage}
           alt=""

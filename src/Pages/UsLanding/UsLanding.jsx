@@ -74,7 +74,7 @@ const UsLanding = () => {
           src="/N_Images/Slider2.webp"
           alt="NDAA Compliant Cameras for US"
           className="us-hero-bg"
-          loading="lazy"
+          fetchpriority="high"
           decoding="async"
           width="1440"
           height="800"

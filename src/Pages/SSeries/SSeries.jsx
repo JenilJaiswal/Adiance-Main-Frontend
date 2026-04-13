@@ -92,7 +92,7 @@ const SSeries = () => {
 
       {/* 1. Hero */}
       <section className="ss-hero">
-        <img src="/N_Images/S-Series-Edge-AI-CCTV-Cameras.webp" alt="S-Series AI CCTV Cameras" className="ss-hero-bg" loading="lazy" decoding="async" width="1440" height="800" />
+        <img src="/N_Images/S-Series-Edge-AI-CCTV-Cameras.webp" alt="S-Series AI CCTV Cameras" className="ss-hero-bg" fetchpriority="high" decoding="async" width="1440" height="800" />
         <div className="ss-hero-overlay" />
         <div className="ss-hero-content">
           <span className="ss-hero-badge">S-Series</span>

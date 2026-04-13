@@ -131,7 +131,7 @@ const NdaaCompliance = () => {
           src="/N_Images/Slider3.webp"
           alt="NDAA Compliant Cameras"
           className="ndaa-hero-bg"
-          loading="lazy"
+          fetchpriority="high"
           decoding="async"
           width="1440"
           height="800"
