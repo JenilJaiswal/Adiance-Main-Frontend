@@ -9,7 +9,7 @@ const Clients = ({ showTitle = true }) => {
           {clientLogos.map((num) => (
             <div key={num} className="client-logo-wrapper">
               <img
-                src={`/N_Images/client${num}.webp`}
+                src={`/N_Images/client${num}.svg`}
                 alt={`Client ${num}`}
                 className="client-logo"
                 loading="lazy"
