@@ -1,8 +1,7 @@
 import axios from "axios";
 
-// https://backend.adiance.com/api
-// process.env.REACT_APP_API_URL ||
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
 const withAuth = () => {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("jwtToken") : null;
@@ -129,8 +128,7 @@ export const deleteFile = async (filename) => {
   // console.log("Deleting file:", filename);
   const safeName = encodeURIComponent(filename);
   const response = await axios.delete(
-    `https://backend.adiance.com:443/upload/${safeName}`
-    // `http://localhost:5000/upload/${safeName}`         
+    `${BACKEND_BASE_URL}/upload/${safeName}`
   );
   return response.data;
 };

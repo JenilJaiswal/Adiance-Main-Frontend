@@ -462,11 +462,8 @@ const CreateBlogForm = ({ blog, isMinorUpdate, onBlogSave }) => {
         title: formData.blogTitle,
         blogAuthor: formData.blogAuthor,
         imageText: formData.imageText,
-        // Use newly selected file if present, otherwise keep existing uploaded path
-        mainImage:
-          newMainImage instanceof File
-            ? newMainImage
-            : formData?.mainImage?.path || null,
+        // Always use the pre-uploaded path (set by handleImageUpload via /upload)
+        mainImage: formData?.mainImage?.path || null,
         imageVideos: [],
         brief: ensuredBrief,
         headingsAndImages: serializedComponents,
@@ -540,8 +537,7 @@ const CreateBlogForm = ({ blog, isMinorUpdate, onBlogSave }) => {
       const formData = new FormData();
       formData.append("file", file);
 
-      const response = await fetch("https://backend.adiance.com:443/upload", {
-        // const response = await fetch("http://localhost:5000/upload", {
+      const response = await fetch(`${BACKEND_BASE_URL}/upload`, {
         method: "POST",
         body: formData,
       });
