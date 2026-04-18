@@ -130,6 +130,16 @@ const Innovation = () => {
           name="keywords"
           content="AI surveillance innovation, edge AI camera technology, smart video analytics"
         />
+        <meta property="og:title" content="AI & Innovation in Surveillance | Edge AI Technology | Adiance" />
+        <meta property="og:description" content="Adiance leads innovation in AI-powered surveillance with edge AI processing, smart video analytics, and next-generation camera technology." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
+        <meta name="twitter:title" content="AI & Innovation in Surveillance | Adiance" />
+        <meta name="twitter:description" content="Adiance leads innovation in AI-powered surveillance with edge AI processing and smart video analytics." />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

@@ -7,6 +7,7 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import routes from "./components/routes";
 import RedirectManager from "./RedirectManager";
 
@@ -63,20 +64,21 @@ const CombinedRedirect = () => {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <RedirectManager />
-      {/* <EventMainDash /> */}
-      <CombinedRedirect />
-      <Suspense fallback={null}>
-        <Routes>
-          {routes.map(({ path, element }, index) => {
-            // console.log("Checking route:", path);
-            return <Route key={index} path={path} element={element} replace />;
-          })}
-        </Routes>
-      </Suspense>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <RedirectManager />
+        {/* <EventMainDash /> */}
+        <CombinedRedirect />
+        <Suspense fallback={null}>
+          <Routes>
+            {routes.map(({ path, element }, index) => {
+              return <Route key={index} path={path} element={element} replace />;
+            })}
+          </Routes>
+        </Suspense>
+      </Router>
+    </HelmetProvider>
   );
 }
 

@@ -189,7 +189,7 @@ const Home_Slider = () => {
             <img
               className="d-block w-100"
               src={slide.image}
-              alt={`Slide ${index + 1}`}
+              alt={slide.heading}
               style={{ height: "800px", objectFit: "cover" }}
               width={1440}
               height={800}
@@ -210,9 +210,11 @@ const Home_Slider = () => {
                 {slide.heading}
               </div> */}
 
-              <div className="slide-heading">
-                {slide.heading}
-              </div>
+              {index === 0 ? (
+                <h1 className="slide-heading">{slide.heading}</h1>
+              ) : (
+                <div className="slide-heading">{slide.heading}</div>
+              )}
 
 
               <div className="carousel-caption-custom-para">

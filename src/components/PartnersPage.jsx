@@ -28,6 +28,11 @@ const PartnersPage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
+        <meta name="twitter:title" content="Partner With Us - Adiance Technologies" />
+        <meta name="twitter:description" content="Partner with Adiance Technologies for cutting-edge surveillance solutions." />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <div>

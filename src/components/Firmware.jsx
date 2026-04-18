@@ -165,6 +165,9 @@ const Firmware = () => {
           name="description"
           content="Download the latest firmware updates for Adiance security cameras. Keep your surveillance system secure and up-to-date."
         />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

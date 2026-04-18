@@ -24,6 +24,11 @@ const PrivacyPolicy = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
+        <meta name="twitter:title" content="Privacy & Cookie Policy - Adiance Technologies" />
+        <meta name="twitter:description" content="Explore cookies, tracking options, and third-party services in Adiance Technologies' Privacy & Cookie Policy." />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

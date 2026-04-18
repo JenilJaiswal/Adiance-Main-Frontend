@@ -289,8 +289,11 @@
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
-  height: 30px;
+  width: 48px;
+  height: 48px;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 10px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -330,6 +333,7 @@
 .mobile-nav-link {
   display: block;
   padding: 15px 0;
+  min-height: 48px;
   color: #B21B13;
   text-decoration: none;
   font-weight: 500;
@@ -349,6 +353,7 @@
 .header-mobile-nav-title {
   font-weight: 500;
   font-size: 16px;
+  min-height: 48px;
   color: #333;
   padding: 15px 0;
   border-bottom: 1px solid #f0f0f0;
@@ -388,6 +393,7 @@
 .header-mobile-nav-sublink {
   display: block;
   padding: 12px 0;
+  min-height: 48px;
   color: #666;
   text-decoration: none;
   font-size: 14px;

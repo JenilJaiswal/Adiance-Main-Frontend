@@ -32,6 +32,15 @@ const OEM = () => {
       <Helmet>
         <title>OEM Manufacturer for CCTV, Robotics & PCB | OEM Company In India</title>
         <meta name="description" content="Looking for an OEM manufacturer in India? We deliver custom OEM manufacturing services for CCTV cameras, robotic arms and PCBs with full engineering support." />
+        <link rel="canonical" href="https://www.adiance.com/oem-services" />
+        <meta property="og:title" content="OEM Manufacturer for CCTV, Robotics & PCB | OEM Company In India" />
+        <meta property="og:description" content="Looking for an OEM manufacturer in India? We deliver custom OEM manufacturing services for CCTV cameras, robotic arms and PCBs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.adiance.com/oem-services" />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
       </Helmet>
       <Header />
       <OEM_Hero />

@@ -157,6 +157,9 @@ const Tools = () => {
           name="description"
           content="Download tools and software for Adiance security cameras. Configuration utilities, mobile apps, and management software."
         />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

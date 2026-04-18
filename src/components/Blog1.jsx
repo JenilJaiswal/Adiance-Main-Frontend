@@ -6,6 +6,7 @@ import { Typography, Chip, Box, Grid, Container } from "@mui/material";
 import { Label } from "@mui/icons-material"; // Import icons
 import { Helmet } from "react-helmet-async";
 import BlogFaq from "./BlogFaq.jsx";
+import Breadcrumb from "./Breadcrumb";
 import { useLocation } from "react-router-dom";
 import { getBlogByUrlWords } from "../AdianceAdmin/api/blogs";
 import TableOfContents from "./TableOfContents";
@@ -20,7 +21,7 @@ const Blog1 = () => {
   const location = useLocation();
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
   const currentUrl = canonicalUrl;
-  const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+  const BACKEND_BASE_URL = "http://localhost:5000";
   const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
 
   // Generate OG image URL
@@ -226,14 +227,15 @@ const Blog1 = () => {
         <title>
           {blog.content?.metaTitle ||
             blog.metadata?.metaTitle ||
-            "Default Title my name is again default title"}
+            blog.content?.title ||
+            "Adiance Blog"}
         </title>
         <meta
           name="description"
           content={
             blog.content?.metaDescription ||
             blog.metadata?.metaDescription ||
-            "Default Description"
+            ""
           }
         />
         <meta name="robots" content="index, follow" />
@@ -242,7 +244,8 @@ const Blog1 = () => {
           content={
             blog.content?.metaTitle ||
             blog.metadata?.metaTitle ||
-            "Default OG Title"
+            blog.content?.title ||
+            ""
           }
         />
         <meta
@@ -250,22 +253,23 @@ const Blog1 = () => {
           content={
             blog.content?.metaDescription ||
             blog.metadata?.metaDescription ||
-            "Default OG Description"
+            ""
           }
         />
         <meta property="og:url" content={currentUrl} />
-        <meta property="og:type" content="blog" />
-        <meta property="og:site_name" content="Adiance Technology" />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Adiance Technologies" />
         <meta property="og:image" content={mainImageOg} />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@adiance" />
+        <meta name="twitter:site" content="@adiancetech" />
         <meta
           name="twitter:title"
           content={
             blog.content?.metaTitle ||
             blog.metadata?.metaTitle ||
-            "Default Twitter Title"
+            blog.content?.title ||
+            ""
           }
         />
         <meta
@@ -273,31 +277,88 @@ const Blog1 = () => {
           content={
             blog.content?.metaDescription ||
             blog.metadata?.metaDescription ||
-            "Default Twiter Description"
+            ""
           }
         />
         <meta name="twitter:image" content={mainImageOg} />
-        <link rel="canonical" href={`${currentUrl}`} />
-      </Helmet>
-      <script>
+        <link rel="canonical" href={currentUrl} />
+
+        {/* Article JSON-LD Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": blog.content?.metaTitle || blog.content?.title || "",
+            "description": blog.content?.metaDescription || "",
+            "image": mainImageOg,
+            "datePublished": blog.createdAt || "",
+            "dateModified": blog.updatedAt || blog.createdAt || "",
+            "author": {
+              "@type": "Person",
+              "name": blog.content?.blogAuthor || "Adiance Technologies"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Adiance Technologies",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.adiance.com/images/Logo.webp"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": currentUrl
+            },
+            "url": currentUrl
+          })}
+        </script>
+
+        {/* BreadcrumbList JSON-LD Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.adiance.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://www.adiance.com/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": blog.content?.metaTitle || blog.content?.title || "",
+                "item": currentUrl
+              }
+            ]
+          })}
+        </script>
+
+        {/* CMS-injected schemas */}
         {Array.isArray(blog.content?.schemas) &&
           blog.content.schemas.map((item, index) => {
             if (!item.content) return null;
+            const schemaStr =
+              typeof item.content === "string"
+                ? item.content
+                : item.content?.schemaData || "";
+            if (!schemaStr) return null;
             return (
-              <script
-                key={index}
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html:
-                    typeof item.content === "string"
-                      ? item.content
-                      : item.content?.schemaData || "",
-                }}
-              />
+              <script key={index} type="application/ld+json">
+                {schemaStr}
+              </script>
             );
           })}
-      </script>
+      </Helmet>
       <Header />
+      <Breadcrumb customTitle={blog.content?.metaTitle || blog.content?.title} />
       <Container maxWidth="xl">
         <Grid
           container
@@ -334,10 +395,12 @@ const Blog1 = () => {
           {/* Image Section */}
           <Grid item xs={12} md={6} padding={{ xs: "1.5rem", lg: "3rem" }}>
             <img
-              src={`${IMAGE_BASE_URL}/${String(
-                blog.content?.mainImage || ""
-              ).replace(/^\/?(images\/)?/, "")}`}
-              alt={blog.content?.title}
+              src={
+                blog.content?.mainImage
+                  ? `${IMAGE_BASE_URL}/${String(blog.content.mainImage).replace(/^\/?(images\/)?/, "")}`
+                  : "/images/Logo.webp"
+              }
+              alt={blog.content?.title || "Adiance Blog"}
               style={{
                 width: "100%",
                 maxWidth: "1200px",

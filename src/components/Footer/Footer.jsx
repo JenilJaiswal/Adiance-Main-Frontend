@@ -45,9 +45,12 @@ const Footer = () => {
               <ul>
                 <li><a href="/edge-ai-cctv-cameras">Edge AI Cameras</a></li>
                 <li><a href="/eco-series">ECO Series</a></li>
-                {/* <li><a href="/edgeaicamera">Edge AI Camera</a></li> */}
                 <li><a href="/ndaa-compliance">NDAA Compliance</a></li>
                 <li><a href="/us">US Market</a></li>
+                <li><a href="/ndaa-compliant-cctv-camera-manufacturer">NDAA Compliant Cameras</a></li>
+                <li><a href="/white-label-cctv-camera-manufacturer">White Label Cameras</a></li>
+                <li><a href="/non-chinese-cctv-camera-manufacturer">Non-Chinese Cameras</a></li>
+                <li><a href="/private-label-security-camera-supplier">Private Label Cameras</a></li>
               </ul>
             </div>
 
@@ -72,6 +75,8 @@ const Footer = () => {
                 <li><a href="/odm-services">ODM Services</a></li>
                 <li><a href="/jdm-services">JDM Services</a></li>
                 <li><a href="/pcb-assembly-service">PCB Assembly Services</a></li>
+                <li><a href="/oem-cctv-camera-manufacturer-usa">OEM Camera USA</a></li>
+                <li><a href="/full-solution-oem-camera-manufacturer">OEM Camera India</a></li>
               </ul>
             </div>
 

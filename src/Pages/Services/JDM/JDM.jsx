@@ -33,6 +33,15 @@ const JDM = () => {
       <Helmet>
         <title>JDM Manufacturer for CCTV, Robotics & PCB | Joint Development</title>
         <meta name="description" content="Adiance Technologies offers joint development manufacturing for CCTV, robotics and PCB - co-creating products with shared engineering, R&D and scalable manufacturing." />
+        <link rel="canonical" href="https://www.adiance.com/jdm-services" />
+        <meta property="og:title" content="JDM Manufacturer for CCTV, Robotics & PCB | Joint Development" />
+        <meta property="og:description" content="Adiance Technologies offers joint development manufacturing for CCTV, robotics and PCB." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.adiance.com/jdm-services" />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
       </Helmet>
       <Header />
       <Services_Hero {...heroData.jdm}  />

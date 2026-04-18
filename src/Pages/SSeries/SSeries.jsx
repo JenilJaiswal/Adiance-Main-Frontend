@@ -86,6 +86,29 @@ const SSeries = () => {
         <meta name="twitter:description" content="Deploy EdgeAI S-Series AI CCTV cameras in minutes." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "S-Series EdgeAI CCTV Cameras",
+            "description": "India's most advanced Edge AI CCTV cameras with 3MP QHD, Wi-Fi/LAN/4G LTE connectivity, IP66 rated, smart IR up to 50m.",
+            "brand": { "@type": "Brand", "name": "Adiance" },
+            "manufacturer": { "@type": "Organization", "name": "Adiance Technologies", "url": "https://www.adiance.com" },
+            "url": canonicalUrl,
+            "image": "https://www.adiance.com/N_Images/S-Series-Edge-AI-CCTV-Cameras.webp",
+            "category": "Surveillance Cameras"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.adiance.com" },
+              { "@type": "ListItem", "position": 2, "name": "Edge AI CCTV Cameras", "item": canonicalUrl }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <Header />

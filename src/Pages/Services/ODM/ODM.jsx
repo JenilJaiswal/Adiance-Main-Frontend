@@ -32,10 +32,19 @@ const ODM = () => {
     <>
       <Helmet>
         <title>ODM Manufacturer for CCTV, PCB and Robotic - ODM Company In India</title>
-        <meta 
-          name="description" 
-          content="Looking for a white-label ODM service provider in India? We deliver EMS ODM solutions for CCTV cameras, PCBs and robotics manufactured under your branding." 
+        <meta
+          name="description"
+          content="Looking for a white-label ODM service provider in India? We deliver EMS ODM solutions for CCTV cameras, PCBs and robotics manufactured under your branding."
         />
+        <link rel="canonical" href="https://www.adiance.com/odm-services" />
+        <meta property="og:title" content="ODM Manufacturer for CCTV, PCB and Robotic - ODM Company In India" />
+        <meta property="og:description" content="Looking for a white-label ODM service provider in India? We deliver EMS ODM solutions for CCTV cameras, PCBs and robotics." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.adiance.com/odm-services" />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
       </Helmet>
       <div>
         <Header />

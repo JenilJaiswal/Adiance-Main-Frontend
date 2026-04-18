@@ -31,6 +31,15 @@ const PCB = () => {
         <Helmet>
           <title>Best PCB Assembly Services in India – Adiance Technologies</title>
           <meta name="description" content="Looking for a printed circuit board assembly service? We offer quality-tested PCB assembly services for CCTV and robotic arms with fast turnaround and full support." />
+          <link rel="canonical" href="https://www.adiance.com/pcb-assembly-service" />
+          <meta property="og:title" content="Best PCB Assembly Services in India – Adiance Technologies" />
+          <meta property="og:description" content="Quality-tested PCB assembly services for CCTV and robotic arms with fast turnaround and full support." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.adiance.com/pcb-assembly-service" />
+          <meta property="og:site_name" content="Adiance Technologies" />
+          <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@adiancetech" />
         </Helmet>
         <Header />
         <Services_Hero {...heroData.pcb} />

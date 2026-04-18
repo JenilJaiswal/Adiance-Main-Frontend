@@ -58,9 +58,12 @@ const Header = () => {
       dropdownItems: [
         { name: "Edge AI Camera", path: "/edge-ai-cctv-cameras" },
         { name: "ECO Series", path: "/eco-series" },
-        // { name: "Edge AI Camera", path: "/edgeaicamera" },
         { name: "NDAA Compliance", path: "/ndaa-compliance" },
-        { name: "US Market", path: "/us" }
+        { name: "US Market", path: "/us" },
+        { name: "NDAA Compliant Cameras", path: "/ndaa-compliant-cctv-camera-manufacturer" },
+        { name: "White Label Cameras", path: "/white-label-cctv-camera-manufacturer" },
+        { name: "Non-Chinese Cameras", path: "/non-chinese-cctv-camera-manufacturer" },
+        { name: "Private Label Cameras", path: "/private-label-security-camera-supplier" }
       ]
     },
     {
@@ -82,7 +85,9 @@ const Header = () => {
         { name: "OEM Services", path: "/oem-services" },
         { name: "ODM Services", path: "/odm-services" },
         { name: "JDM Services", path: "/jdm-services" },
-        { name: "PCB Assembly Services", path: "/pcb-assembly-service" }
+        { name: "PCB Assembly Services", path: "/pcb-assembly-service" },
+        { name: "OEM Camera USA", path: "/oem-cctv-camera-manufacturer-usa" },
+        { name: "OEM Camera India", path: "/full-solution-oem-camera-manufacturer" }
       ]
     },
     {
