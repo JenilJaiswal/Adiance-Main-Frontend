@@ -21,7 +21,7 @@ const Blog1 = () => {
   const location = useLocation();
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
   const currentUrl = canonicalUrl;
-  const BACKEND_BASE_URL = "http://localhost:5000";
+  const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
   const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
 
   // Generate OG image URL
@@ -34,6 +34,7 @@ const Blog1 = () => {
 
   useEffect(() => {
     if (!slug) return;
+    window.prerenderReady = false;
     const fetchBlog = async () => {
       try {
         setLoading(true);
@@ -51,6 +52,7 @@ const Blog1 = () => {
         setError(err.message || "Failed to fetch blog");
       } finally {
         setLoading(false);
+        window.prerenderReady = true;
       }
     };
     fetchBlog();
