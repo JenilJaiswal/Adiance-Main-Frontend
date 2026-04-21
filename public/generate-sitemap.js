@@ -120,7 +120,6 @@ const staticPages = [
   { url: "/white-label-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.95 },
   { url: "/oem-cctv-camera-manufacturer-usa", changefreq: "weekly", priority: 0.95 },
   { url: "/non-chinese-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.95 },
-  { url: "/private-label-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.9 },
   { url: "/private-label-security-camera-supplier", changefreq: "weekly", priority: 0.95 },
   { url: "/non-chinese-soc-camera-manufacturer", changefreq: "monthly", priority: 0.85 },
   { url: "/full-solution-oem-camera-manufacturer", changefreq: "monthly", priority: 0.85 },
@@ -134,7 +133,6 @@ const staticPages = [
   { url: "/about", changefreq: "weekly", priority: 0.8 },
   { url: "/innovation", changefreq: "weekly", priority: 0.8 },
   { url: "/contact", changefreq: "weekly", priority: 0.8 },
-  { url: "/partner-with-us", changefreq: "weekly", priority: 0.8 },
 
   // Product series pages
   { url: "/r-series", changefreq: "weekly", priority: 0.8 },
@@ -159,11 +157,6 @@ const staticPages = [
   { url: "/4g-dome-ptz-camera", changefreq: "weekly", priority: 0.8 },
   { url: "/4g-mini-bullet-camera", changefreq: "weekly", priority: 0.8 },
   { url: "/cloudxvr", changefreq: "weekly", priority: 0.8 },
-  {
-    url: "/5g-edge-ai-camera-s-series-surveillance",
-    changefreq: "weekly",
-    priority: 0.8,
-  },
 
   // Industry application pages
   { url: "/public-safety", changefreq: "weekly", priority: 0.8 },
@@ -262,49 +255,22 @@ const staticPages = [
   { url: "/cctv-camera-manufacturer-ireland", changefreq: "weekly", priority: 0.85 },
   { url: "/cctv-camera-manufacturer-argentina", changefreq: "weekly", priority: 0.85 },
   // === Alternative-To Pages ===
-  { url: "/alternative-to-hikvision", changefreq: "weekly", priority: 0.9 },
-  { url: "/alternative-to-dahua", changefreq: "weekly", priority: 0.9 },
   { url: "/alternative-to-chinese-cameras", changefreq: "weekly", priority: 0.9 },
   // === Use-Case Landing Pages ===
   { url: "/smart-city-cctv-solutions", changefreq: "weekly", priority: 0.85 },
-  { url: "/retail-surveillance-oem", changefreq: "weekly", priority: 0.85 },
   { url: "/banking-finance-cctv-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/healthcare-surveillance-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/school-campus-cctv-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/warehouse-logistics-cctv-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/oil-gas-security-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
   // === Smart Home OEM Pages ===
   { url: "/smart-home-oem-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
   { url: "/white-label-baby-monitor-manufacturer", changefreq: "weekly", priority: 0.85 },
   { url: "/white-label-pet-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/white-label-home-security-camera", changefreq: "weekly", priority: 0.85 },
-  { url: "/white-label-elder-care-camera", changefreq: "weekly", priority: 0.85 },
-  { url: "/white-label-nanny-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/oem-wifi-camera-with-app", changefreq: "weekly", priority: 0.85 },
-  { url: "/amazon-fba-camera-supplier", changefreq: "weekly", priority: 0.85 },
-  { url: "/non-chinese-baby-monitor-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/non-chinese-home-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
   // === Technology Pages ===
   { url: "/anpr-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/face-recognition-camera-oem", changefreq: "weekly", priority: 0.85 },
-  { url: "/4g-sim-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/ptz-camera-oem-manufacturer", changefreq: "weekly", priority: 0.85 },
   { url: "/edge-ai-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/cloud-vms-white-label", changefreq: "weekly", priority: 0.85 },
-  { url: "/white-label-cctv-mobile-app", changefreq: "weekly", priority: 0.85 },
   // === Compliance Pages ===
-  { url: "/ndaa-compliant-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.9 },
-  { url: "/ndaa-compliant-cameras-guide", changefreq: "weekly", priority: 0.85 },
   { url: "/gdpr-compliant-surveillance-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/ce-certified-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
-  { url: "/taa-compliant-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
   // === Other Key Pages ===
   { url: "/complete-surveillance-solutions", changefreq: "weekly", priority: 0.85 },
   { url: "/product-portfolio", changefreq: "weekly", priority: 0.85 },
-  { url: "/oem-cctv-camera-manufacturer-india", changefreq: "weekly", priority: 0.9 },
-  { url: "/cctv-manufacturer-middle-east", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-manufacturer-europe", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-manufacturer-africa", changefreq: "weekly", priority: 0.85 },
 ];
 
 // Function to fetch blog URLs from API
