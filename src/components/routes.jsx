@@ -66,6 +66,7 @@ const NotFound = lazy(() => import("./NotFound"));
 const JDM = lazy(() => import("../Pages/Services/JDM/JDM"));
 const PCB = lazy(() => import("../Pages/Services/PCB/PCB"));
 const EcoSeries = lazy(() => import("../Pages/EcoSeries/EcoSeries"));
+const BISERCertification = lazy(() => import("../Pages/BISERCertification/BISERCertification"));
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -153,6 +154,7 @@ const routes = [
 
   // Series pages
   { path: "/eco-series", element: <EcoSeries /> },
+  { path: "/BIS-ER-certification", element: <BISERCertification /> },
   { path: "/r-series", element: <RSeries title="R Series" /> },
   { path: "/h-series", element: <RSeries title="H Series" /> },
   {path: "/oem-services", element: <OEM />},

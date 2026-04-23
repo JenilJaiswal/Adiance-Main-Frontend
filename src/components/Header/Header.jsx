@@ -87,7 +87,8 @@ const Header = () => {
         { name: "JDM Services", path: "/jdm-services" },
         { name: "PCB Assembly Services", path: "/pcb-assembly-service" },
         { name: "OEM Camera USA", path: "/oem-cctv-camera-manufacturer-usa" },
-        { name: "OEM Camera India", path: "/full-solution-oem-camera-manufacturer" }
+        { name: "OEM Camera India", path: "/full-solution-oem-camera-manufacturer" },
+        { name: "BIS-ER Certification", path: "/bis-er-certification" }
       ]
     },
     {
