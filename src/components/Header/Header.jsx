@@ -88,7 +88,6 @@ const Header = () => {
         { name: "PCB Assembly Services", path: "/pcb-assembly-service" },
         { name: "OEM Camera USA", path: "/oem-cctv-camera-manufacturer-usa" },
         { name: "OEM Camera India", path: "/full-solution-oem-camera-manufacturer" },
-        { name: "BIS-ER Certification", path: "/bis-er-certification" }
       ]
     },
     {
@@ -116,6 +115,7 @@ const Header = () => {
       path: "#",
       dropdownItems: [
         { name: "About Company", path: "/about" },
+        { name: "BIS-ER Certification", path: "/bis-er-certification" },
         { name: "Warranty Service", path: "/warranty-service" },
         { name: "Privacy Policy", path: "/privacy-policy" },
         { name: "Warranty Policy", path: "/warranty-policy" },

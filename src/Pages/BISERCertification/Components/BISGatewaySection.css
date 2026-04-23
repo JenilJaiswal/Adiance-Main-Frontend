@@ -2,13 +2,13 @@
   width: 100%;
   max-width: 1518px;
   margin: 0 auto;
-  background: #0d0707;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.15);
+  background: #f9f9f9;
   overflow: hidden;
 }
 
 /* ── Top header (153px) — title + subtitle ── */
 .bis-gw-header {
+  margin: 2rem;
   height: 153px;
   display: flex;
   flex-direction: column;

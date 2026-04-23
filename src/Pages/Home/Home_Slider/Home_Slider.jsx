@@ -74,7 +74,7 @@ const BISSlide = () => (
           />
         </picture>
       </div>
-      <a href="/contact" className="bis-slide-cta">Connect with us</a>
+      <a href="/bis-er-certification" className="bis-slide-cta">Explore More</a>
     </div>
   </div>
 );
