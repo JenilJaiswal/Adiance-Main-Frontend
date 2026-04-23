@@ -39,7 +39,7 @@
   margin: 0;
   padding: 0;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   height: 80px; /* Match header height */
 }
 
@@ -223,7 +223,7 @@
 /* Responsive adjustments */
 @media (max-width: 1440px) {
   .nav-items-list {
-    gap: 8px;
+    gap: 20px;
   }
   .header-nav-dropdown-trigger {
     padding: 0 10px;
@@ -237,7 +237,7 @@
   }
   
   .nav-items-list {
-    gap: 6px;
+    gap: 15px;
   }
   
   .header-nav-dropdown-trigger {
