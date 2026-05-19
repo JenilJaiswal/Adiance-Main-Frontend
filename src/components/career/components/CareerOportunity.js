@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useState, useEffect } from "react";
 import {
   Box,
@@ -21,7 +23,7 @@ import { LoadingButton } from "@mui/lab"; // For button with loading state
 import { FiPaperclip } from "react-icons/fi";
 import CloseIcon from "@mui/icons-material/Close";
 import { Helmet } from "react-helmet";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/compat/react-router-dom";
 import { getJobs } from "../../../AdianceAdmin/api/jobs";
 
 const CareerOportunity = () => {

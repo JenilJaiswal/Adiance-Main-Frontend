@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "@/compat/react-router-dom";
 import Header from "./Header/Header.jsx";
 import Footer from "./Footer/Footer.jsx";
 import { Typography, Chip, Box, Grid, Container } from "@mui/material";
@@ -7,7 +9,7 @@ import { Label } from "@mui/icons-material"; // Import icons
 import { Helmet } from "react-helmet-async";
 import BlogFaq from "./BlogFaq.jsx";
 import Breadcrumb from "./Breadcrumb";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 import { getBlogByUrlWords } from "../AdianceAdmin/api/blogs";
 import TableOfContents from "./TableOfContents";
 import ContactForm from "./ContactForm";
@@ -21,7 +23,7 @@ const Blog1 = () => {
   const location = useLocation();
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
   const currentUrl = canonicalUrl;
-  const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+  const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
   const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
 
   // Generate OG image URL

@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState } from "react";
 import { Grid } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link } from "@/compat/react-router-dom";
 
 const AboutSlider = () => {
   const [hovered0, setHovered0] = useState(false);

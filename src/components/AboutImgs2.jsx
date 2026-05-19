@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/compat/react-router-dom";
 
 const OurOfferings = () => {
   const innovationItems = [

@@ -1,9 +1,11 @@
+"use client";
+
 import { lazy } from "react";
 
 // SEO Pages
-const GeoPage = lazy(() => import("../Pages/SEOPages/GeoPage/GeoPage"));
-const SEOLandingPage = lazy(() => import("../Pages/SEOPages/LandingPage/SEOLandingPage"));
-const SEOBlogPage = lazy(() => import("../Pages/SEOPages/BlogPage/SEOBlogPage"));
+const GeoPage = lazy(() => import("../views/SEOPages/GeoPage/GeoPage"));
+const SEOLandingPage = lazy(() => import("../views/SEOPages/LandingPage/SEOLandingPage"));
+const SEOBlogPage = lazy(() => import("../views/SEOPages/BlogPage/SEOBlogPage"));
 
 // Admin
 const LoginDash = lazy(() => import("../AdianceAdmin/pages/LoginDash"));
@@ -26,11 +28,11 @@ const CyberSecurity = lazy(() => import("./CyberSecurity"));
 const Datasheet = lazy(() => import("./Datasheet"));
 const Downloads = lazy(() => import("./Downloads"));
 const Education = lazy(() => import("./Education"));
-const Event = lazy(() => import("../Pages/Events/Event"));
+const Event = lazy(() => import("../views/Events/Event"));
 const HighTraffic = lazy(() => import("./HighTraffic"));
-const Home = lazy(() => import("../Pages/Home/Home"));
-const OEM = lazy(() => import("../Pages/Services/OEM/OEM"));
-const ODM = lazy(() => import("../Pages/Services/ODM/ODM"));
+const Home = lazy(() => import("../views/Home/Home"));
+const OEM = lazy(() => import("../views/Services/OEM/OEM"));
+const ODM = lazy(() => import("../views/Services/ODM/ODM"));
 const Hospital = lazy(() => import("./Hospital"));
 const Innovation = lazy(() => import("./Innovation"));
 const Manufacturing = lazy(() => import("./Manufacturing"));
@@ -46,7 +48,7 @@ const Robotics = lazy(() => import("./Robotics"));
 const RSeries = lazy(() => import("./RSeries"));
 const SmartCities = lazy(() => import("./SmartCities"));
 const SmartCity = lazy(() => import("./SmartCity"));
-const SSeries = lazy(() => import("../Pages/SSeries/SSeries"));
+const SSeries = lazy(() => import("../views/SSeries/SSeries"));
 const TermsOfService = lazy(() => import("./TermsOfService"));
 const ThankYouPage = lazy(() => import("./ThankYouPage"));
 const ThermalCamera = lazy(() => import("./ThermalCamera"));
@@ -56,17 +58,17 @@ const WarrantyService = lazy(() => import("./WarrantyService"));
 const WifiCameraPdf = lazy(() => import("./WifiCameraPdf"));
 const Firmware = lazy(() => import("./Firmware"));
 const Tools = lazy(() => import("./Tools"));
-const EdgeAICamera = lazy(() => import("../Pages/EdgeAICamera/EdgeAICamera"));
-const NdaaCompliance = lazy(() => import("../Pages/NdaaCompliance/NdaaCompliance"));
-const UsLanding = lazy(() => import("../Pages/UsLanding/UsLanding"));
+const EdgeAICamera = lazy(() => import("../views/EdgeAICamera/EdgeAICamera"));
+const NdaaCompliance = lazy(() => import("../views/NdaaCompliance/NdaaCompliance"));
+const UsLanding = lazy(() => import("../views/UsLanding/UsLanding"));
 const _4KCamera = lazy(() => import("./_4KCamera"));
 const _4GCamera = lazy(() => import("./_4GCamera"));
-const IfsecIndia2025 = lazy(() => import("../Pages/Events/IfsecIndia2025"));
+const IfsecIndia2025 = lazy(() => import("../views/Events/IfsecIndia2025"));
 const NotFound = lazy(() => import("./NotFound"));
-const JDM = lazy(() => import("../Pages/Services/JDM/JDM"));
-const PCB = lazy(() => import("../Pages/Services/PCB/PCB"));
-const EcoSeries = lazy(() => import("../Pages/EcoSeries/EcoSeries"));
-const BISERCertification = lazy(() => import("../Pages/BISERCertification/BISERCertification"));
+const JDM = lazy(() => import("../views/Services/JDM/JDM"));
+const PCB = lazy(() => import("../views/Services/PCB/PCB"));
+const EcoSeries = lazy(() => import("../views/EcoSeries/EcoSeries"));
+const BISERCertification = lazy(() => import("../views/BISERCertification/BISERCertification"));
 
 const routes = [
   { path: "/", element: <Home /> },

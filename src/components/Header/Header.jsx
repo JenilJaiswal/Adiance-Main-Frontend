@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useState, useEffect, useRef } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "@/compat/react-router-dom";
 import "./Header.css";
 
 const Header = () => {

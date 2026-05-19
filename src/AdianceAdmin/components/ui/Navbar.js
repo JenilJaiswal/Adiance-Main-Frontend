@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import {
   AppBar,
@@ -18,7 +20,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "@/compat/react-router-dom";
 import ChangePassword from "../../pages/Dashboard/components/ChangePassword";
 
 // Your SVG logo as a component

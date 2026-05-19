@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useCallback, memo } from "react";
 import {
     Box,
@@ -19,7 +21,7 @@ import SmartLink from "./SmartLink";
 import { getBlogs } from "../AdianceAdmin/pages/Dashboard/components/blog"; // Updated path
 
 // The base URL for your images.
-const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
 const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images/`;
 
 const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {

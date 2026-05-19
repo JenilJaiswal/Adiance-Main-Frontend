@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 import "../styles/bootNavbar.css";
 import SmartLink from "./SmartLink";
 // import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";

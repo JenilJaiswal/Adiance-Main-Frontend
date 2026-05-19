@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Flex,
@@ -117,8 +119,8 @@ export default function HeroSection() {
         <Box zIndex={1}>
           <ImagePop>
             <Image
-              src={`${process.env.PUBLIC_URL}/assets/career.webp`}
-              // src={${process.env.PUBLIC_URL} /assets/career.webp}
+              src={`${""}/assets/career.webp`}
+              // src={${""} /assets/career.webp}
               alt="Team collaboration"
               borderRadius="md"
               aspectRatio={137 / 100}

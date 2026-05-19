@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { Typography } from "@mui/material";
 import Header from "./Header/Header";
@@ -8,7 +10,7 @@ import AnprSlider from "./AnprSlider";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const ANPRCamera = () => {
   const location = useLocation(); // Get the current route

@@ -1,7 +1,9 @@
+"use client";
+
 import React, { useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { Link } from "react-router-dom";
+import { Link } from "@/compat/react-router-dom";
 
 const ProductSlider = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);

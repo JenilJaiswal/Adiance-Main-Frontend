@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from 'react';
 const SITE_NAME = 'Adiance';
 const BASE_URL = 'https://www.adiance.com';

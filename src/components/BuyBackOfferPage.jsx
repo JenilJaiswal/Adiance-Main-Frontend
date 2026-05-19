@@ -1,8 +1,10 @@
+"use client";
+
 import React from "react";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 import BuyBackHeroSection from "./buy-back-offer-page/BuyBackHeroSection";
 import BuyBackFeatureSection from "./buy-back-offer-page/BuyBackFeatureSection";
 import BuyBackWhyTrade from "./buy-back-offer-page/BuyBackWhyTrade";

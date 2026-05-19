@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import ProductSinglePage from "./ProductSinglePage";
 import Header from './Header/Header';
@@ -17,7 +19,7 @@ import TechnologyPartner from "./s-series-page/TechnologyPartner";
 import AutoplayCarousel from "./AutoplayCarousel";
 import FaqsSection from "./faqsSection";
 import faqsData from "./faqsData";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 function SSeries({ productTitle, imgIdx }) {
   const location = useLocation(); // Get the current route

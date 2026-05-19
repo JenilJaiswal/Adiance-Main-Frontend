@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography, Box, Card, CardContent } from "@mui/material";
 import Header from "./Header/Header";
@@ -5,7 +7,7 @@ import NavHeader from "./NavHeader";
 import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const CloudApplication = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);

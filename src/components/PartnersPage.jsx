@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
@@ -7,7 +9,7 @@ import Channelpartner from "./patnerPage-components/Channelpartner";
 import WhyPartnerwithAdiance from "./patnerPage-components/WhyPartnerwithAdiance";
 import Globalnetwork from "./patnerPage-components/Globalnetwork";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 import DealersLandingPageForm from "./DealersLandingPageForm";
 
 const PartnersPage = () => {

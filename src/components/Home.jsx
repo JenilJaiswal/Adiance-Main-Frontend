@@ -1,7 +1,9 @@
+"use client";
+
 import React from "react";
 import Header from "../N_Component/Header/Header";
-import Home_Slider from "../Pages/Home/Home_Slider/Home_Slider";
-import What_We_Do from "../Pages/Home/WhatWeDo/WhatWeDo";
+import Home_Slider from "../views/Home/Home_Slider/Home_Slider";
+import What_We_Do from "../views/Home/WhatWeDo/WhatWeDo";
 // import ImageSlider from "./ImageSlider";
 import ProductSlider from "./ProductSlider";
 import MidSection from "./MidSection";
@@ -11,7 +13,7 @@ import { Helmet } from "react-helmet";
 import AutoplayCarousel from "./AutoplayCarousel";
 import IconsWithTitles from "./IconsWithTitles";
 import IfsecModal from "./IfsecModal";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 import PopUpForm from "./PopUpForm";
 // import Certifications from "./Certifications";
 // import OurOfferings from "./OurOfferings";
@@ -22,7 +24,7 @@ import faqsData from "./faqsData";
 // import Achieved from "./Achieved";
 import BlogView from "./BlogView";
 import Testimonials from "./s-series-page/Testimonials";
-import Home_mid from "../Pages/Home/Home_Mid/Home_mid";
+import Home_mid from "../views/Home/Home_Mid/Home_mid";
 
 function Home() {
   const organizationSchema = { "@context": "http://schema.org", "@type": "Organization", "name": "Adiance Technologies", "url": "https://www.adiance.com", "logo": "https://www.adiance.com/images/Logo.webp", "contactPoint": { "@type": "ContactPoint", "telephone": "+91 9687779999", "email": "contact@adiance.com", "contactType": "Sales", "areaServed": "Global" }, "sameAs": ["https://www.facebook.com/adiancetechnologies", "https://www.linkedin.com/company/adiancetechnologies", "https://x.com/adiancetech", "https://www.instagram.com/adiancetech/", "https://youtube.com/@adiancetechnologies"], "address": { "@type": "PostalAddress", "streetAddress": "7, Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev", "addressLocality": "Ahmedabad", "addressRegion": "Gujarat", "postalCode": "380054", "addressCountry": "IN" }, "foundingDate": "2003", "description": "Searching for for a reliable CCTV camera manufacturing company in India? Adiance Technologies provides CCTV cameras, NVRs, cloud VMS and custom OEM/ODM electronics solutions." };

@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/compat/react-router-dom";
 
 // MUI Components
 import {

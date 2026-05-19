@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Container,
@@ -22,7 +24,7 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "@/compat/react-router-dom";
 import { getBlogs, getBlogById } from "./blog";
 import { Helmet } from "react-helmet-async";
 import ContactUs from "../ContactUs/Contactus";
@@ -289,7 +291,7 @@ const BlogsOverviewDash = () => {
     const match = url.match(/^(https?:\/\/[^\/]+\/)/);
     setBaseUrl(match ? match[1] : url);
   }, []);
-  const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+  const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
   const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
   useEffect(() => {
     const fetchBlog = async () => {

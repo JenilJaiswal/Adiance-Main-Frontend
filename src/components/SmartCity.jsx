@@ -1,10 +1,12 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
 import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
 import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 import { Helmet } from "react-helmet";
 
 const SmartCity = () => {

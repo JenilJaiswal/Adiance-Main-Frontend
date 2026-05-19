@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -13,7 +15,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import NavHeader from "./NavHeader";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const Feedback = () => {
   const [company, setCompany] = useState("");

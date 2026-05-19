@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { Typography } from "@mui/material";
 import Header from "./Header/Header";
@@ -9,7 +11,7 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import _4KCameraSlider from "./_4KCameraSlider";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 const ThermalCamera = () => {
   const [activeTab, setActiveTab] = useState("benefits");
   const location = useLocation(); // Get the current route

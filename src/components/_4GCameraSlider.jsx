@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import { Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link } from "@/compat/react-router-dom";
 
 const _4KCameraSlider = () => {
   const products = [

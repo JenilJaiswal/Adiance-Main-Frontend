@@ -1,4 +1,6 @@
-import { useNavigate } from "react-router-dom";
+"use client";
+
+import { useNavigate } from "@/compat/react-router-dom";
 
 const Globalnetwork = ({ data }) => {
   const navigate = useNavigate();

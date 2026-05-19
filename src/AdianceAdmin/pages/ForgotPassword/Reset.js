@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "@/compat/react-router-dom";
 import {
   Box,
   TextField,

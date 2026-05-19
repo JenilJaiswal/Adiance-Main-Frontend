@@ -1,5 +1,7 @@
+"use client";
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/compat/react-router-dom';
 import useNavigationClick from '../hooks/useNavigationClick';
 
 /**

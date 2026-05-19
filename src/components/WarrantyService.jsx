@@ -1,10 +1,12 @@
+"use client";
+
 import React from "react";
 import { Typography } from "@mui/material";
 import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
 import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const WarrantyService = () => {
   const location = useLocation(); // Get the current route

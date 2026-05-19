@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from "react-bootstrap";
 import * as React from 'react';
 import Card from '@mui/material/Card';

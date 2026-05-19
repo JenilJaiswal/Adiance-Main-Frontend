@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -8,7 +10,7 @@ import Footer from "./Footer/Footer";
 import NavHeader from "./NavHeader";
 import { Helmet } from "react-helmet";
 import ContactForm from "./ContactForm";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 const products = [
   {
     metaTitle: "R Series | Tailored Security with Endless Customization",

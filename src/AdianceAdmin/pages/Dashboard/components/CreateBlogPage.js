@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import {
   Box,
@@ -48,8 +50,8 @@ import {
 } from "../../../api/blogs";
 import { SlateEditor, createEmptyParagraph } from "./SlateEditor";
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
-const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
 const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
 
 const BlogPreview = ({ formData, components, faqTitle, tags }) => (

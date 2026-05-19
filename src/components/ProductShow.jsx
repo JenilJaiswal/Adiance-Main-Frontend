@@ -1,3 +1,5 @@
+"use client";
+
 // import React from "react";
 // import ProductSinglePage from "./ProductSinglePage";
 // import Header from "./Header";
@@ -58,7 +60,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import NavHeader from "./NavHeader";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 function ProductShow({ productTitle, imgIdx }) {
   const location = useLocation(); // Get the current route

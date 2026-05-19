@@ -1,4 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+"use client";
+
+import { useNavigate } from '@/compat/react-router-dom';
 
 /**
  * Custom hook to handle navigation with Ctrl/Cmd+Click support

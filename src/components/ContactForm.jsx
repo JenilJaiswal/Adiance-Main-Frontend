@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '@/compat/react-router-dom';
 import {
   Box,
   Typography,
@@ -11,7 +13,7 @@ import {
 } from '@mui/material';
 import { sendContactEmail } from '../AdianceAdmin/api/blogs';
 
-const EMS_API_URL = `${process.env.REACT_APP_API_URL || "https://backend.adiance.com:443/api"}/crm-lead`;
+const EMS_API_URL = `${process.env.NEXT_PUBLIC_API_URL || "https://backend.adiance.com:443/api"}/crm-lead`;
 
 const ContactForm = ({ redirectUrl = "/thank-you" }) => {
   const navigate = useNavigate();

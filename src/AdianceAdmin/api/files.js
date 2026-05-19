@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// process.env.REACT_APP_API_URL ||
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// process.env.NEXT_PUBLIC_API_URL ||
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
 
 const withAuth = () => {
 	const token = typeof window !== 'undefined' ? localStorage.getItem('jwtToken') : null;
