@@ -29,3 +29,4 @@ yarn-error.log*
 /www
 /site-available
 /site-enable
+.vercel
