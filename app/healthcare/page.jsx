@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const Hospital = dynamic(() => import("@/components/Hospital"), { ssr: false });
+export const metadata = buildMetadata("/healthcare");
 
 export default function Page() {
-  return <Hospital />;
+  return <ClientPage />;
 }

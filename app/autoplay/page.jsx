@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const AutoplayCarousel = dynamic(() => import("@/components/AutoplayCarousel"), { ssr: false });
+export const metadata = buildMetadata("/autoplay");
 
 export default function Page() {
-  return <AutoplayCarousel />;
+  return <ClientPage />;
 }

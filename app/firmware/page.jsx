@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const Firmware = dynamic(() => import("@/components/Firmware"), { ssr: false });
+export const metadata = buildMetadata("/firmware");
 
 export default function Page() {
-  return <Firmware />;
+  return <ClientPage />;
 }

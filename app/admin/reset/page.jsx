@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const Reset = dynamic(() => import("@/AdianceAdmin/pages/ForgotPassword/Reset"), { ssr: false });
+export const metadata = buildMetadata("/admin/reset");
 
 export default function Page() {
-  return <Reset />;
+  return <ClientPage />;
 }

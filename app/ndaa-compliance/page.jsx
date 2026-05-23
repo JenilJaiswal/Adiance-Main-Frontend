@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const NdaaCompliance = dynamic(() => import("@/views/NdaaCompliance/NdaaCompliance"), { ssr: false });
+export const metadata = buildMetadata("/ndaa-compliance");
 
 export default function Page() {
-  return <NdaaCompliance />;
+  return <ClientPage />;
 }

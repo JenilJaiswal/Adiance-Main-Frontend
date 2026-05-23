@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const IfsecIndia2025 = dynamic(() => import("@/views/Events/IfsecIndia2025"), { ssr: false });
+export const metadata = buildMetadata("/event/ifsec-india-2025");
 
 export default function Page() {
-  return <IfsecIndia2025 />;
+  return <ClientPage />;
 }

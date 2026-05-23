@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const SEOLandingPage = dynamic(() => import("@/views/SEOPages/LandingPage/SEOLandingPage"), { ssr: false });
+export const metadata = buildMetadata("/oem-cctv-camera-manufacturer-usa");
 
 export default function Page() {
-  return <SEOLandingPage />;
+  return <ClientPage />;
 }

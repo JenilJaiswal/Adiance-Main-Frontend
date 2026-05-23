@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const Compliance = dynamic(() => import("@/components/Compliance"), { ssr: false });
+export const metadata = buildMetadata("/compliance");
 
 export default function Page() {
-  return <Compliance />;
+  return <ClientPage />;
 }

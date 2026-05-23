@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const Remote = dynamic(() => import("@/components/Remote"), { ssr: false });
+export const metadata = buildMetadata("/remote-security");
 
 export default function Page() {
-  return <Remote />;
+  return <ClientPage />;
 }

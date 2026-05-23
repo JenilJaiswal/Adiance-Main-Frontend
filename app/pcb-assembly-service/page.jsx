@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const PCB = dynamic(() => import("@/views/Services/PCB/PCB"), { ssr: false });
+export const metadata = buildMetadata("/pcb-assembly-service");
 
 export default function Page() {
-  return <PCB />;
+  return <ClientPage />;
 }

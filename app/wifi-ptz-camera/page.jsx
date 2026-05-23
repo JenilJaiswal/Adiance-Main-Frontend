@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const WifiCameraPdf = dynamic(() => import("@/components/WifiCameraPdf"), { ssr: false });
+export const metadata = buildMetadata("/wifi-ptz-camera");
 
 export default function Page() {
-  return <WifiCameraPdf />;
+  return <ClientPage />;
 }

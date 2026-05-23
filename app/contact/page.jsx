@@ -1,9 +1,19 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import { BreadcrumbJsonLd } from "@/seo/JsonLd";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const ContactUs = dynamic(() => import("@/components/ContactUs"), { ssr: false });
+export const metadata = buildMetadata("/contact");
 
 export default function Page() {
-  return <ContactUs />;
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Contact", url: "/contact" },
+        ]}
+      />
+      <ClientPage />
+    </>
+  );
 }

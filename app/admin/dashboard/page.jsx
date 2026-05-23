@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const Dashboard = dynamic(() => import("@/AdianceAdmin/pages/Dashboard/Dashboard"), { ssr: false });
+export const metadata = buildMetadata("/admin/dashboard");
 
 export default function Page() {
-  return <Dashboard />;
+  return <ClientPage />;
 }

@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const RSeries = dynamic(() => import("@/components/RSeries"), { ssr: false });
+export const metadata = buildMetadata("/r-series");
 
 export default function Page() {
-  return <RSeries title="R Series" />;
+  return <ClientPage />;
 }

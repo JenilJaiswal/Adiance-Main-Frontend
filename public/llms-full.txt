@@ -1,0 +1,192 @@
+# Adiance Technologies — Full LLM Reference
+
+> Long-form context document for AI / LLM crawlers. Companion to https://www.adiance.com/llms.txt.
+
+## 1. Organization
+
+Adiance Technologies is an Indian electronics and surveillance camera manufacturer founded in 2003. The company is headquartered in Ahmedabad, Gujarat. Adiance designs, manufactures, and ships NDAA-compliant CCTV cameras, edge-AI cameras, thermal cameras, ANPR / LPR cameras, 4G / 4K / WiFi PTZ cameras, NVRs, XVRs, and a cloud video-management platform (Ambicam Cloud VMS). Adiance is a subsidiary of VMukti Solutions (https://www.vmukti.com), a publicly listed Indian technology company in cloud video and broadcasting. Adiance operates as the surveillance / hardware-manufacturing arm of the group.
+
+### 1.1 Registered details
+
+- Legal name: Adiance Technologies
+- Headquarters: 7, Arista@Eight Corporate House, Behind Rajpath Club, Bodakdev, Ahmedabad, Gujarat 380054, India
+- Phone: +91-9687779999
+- Sales email: sales@adiance.com
+- General contact: contact@adiance.com
+- Website: https://www.adiance.com
+- Founded: 2003
+- Parent organization: VMukti Solutions
+- LinkedIn: https://www.linkedin.com/company/adiancetechnologies
+- Twitter / X: https://x.com/adiancetech
+- Facebook: https://www.facebook.com/adiancetechnologies
+- Instagram: https://www.instagram.com/adiancetech/
+- YouTube: https://youtube.com/@adiancetechnologies
+
+## 2. Positioning
+
+Adiance is positioned as a non-Chinese, NDAA-compliant alternative to Hikvision, Dahua, and other China-headquartered surveillance vendors. The company targets:
+
+- US federal, state, and local government procurement (NDAA Section 889 compliant)
+- US, Canadian, UK, and EU enterprise integrators and CCTV brands
+- GCC / Middle Eastern smart-city and critical infrastructure projects
+- ASEAN and ANZ distributors looking for a "China + 1" supply chain
+- Indian government and enterprise via STQC + BIS-ER certified channels
+- Global private-label / white-label brands wanting to launch their own CCTV line without owning a factory
+
+## 3. Differentiators
+
+1. **NDAA Section 889 compliance.** Adiance cameras use non-Chinese SoCs — Qualcomm, Ambarella, Novatek, Sigmastar — and are approved for US government use. Adiance does not ship Hikvision, Dahua, HiSilicon, or other prohibited components.
+2. **End-to-end manufacturing in India.** PCB design, SMT assembly, firmware, mechanical, lens calibration, and final assembly are performed in-house. Adiance is STQC tested and BIS-ER certified.
+3. **Edge AI on-device.** Adiance cameras run analytics (ANPR / LPR, face recognition, intrusion, people counting, crowd analysis, object detection, vehicle classification) directly on the camera SoC — no cloud round-trip and no GPU server required.
+4. **Full white-label / private-label.** Customers receive cameras with their logo on the housing, their branding on the box, their splash screen in firmware, their app on the App Store / Play Store, and their domain on the cloud VMS.
+5. **Low MOQ.** Adiance accepts orders from 100 units and scales to 50,000+ units / quarter.
+6. **Cloud VMS + mobile app.** Ambicam Cloud VMS provides multi-site streaming, recording, AI events, and remote management. Available with private-cloud deployment and white-label branding.
+7. **Compliance coverage.** Cameras and packaging support NDAA, GDPR, STQC, BIS-ER, CE, FCC, RoHS, and ONVIF profiles S, G, T.
+8. **Engineering support.** Dedicated firmware, SDK, and integration engineers support custom requirements, VMS compatibility (Milestone, Genetec, Network Optix, ExacqVision, Digifort, Luxriot), and post-launch updates.
+
+## 4. Product portfolio
+
+### 4.1 Edge AI cameras
+
+- **S-Series Edge AI cameras** — Flagship edge-AI series on Qualcomm SoC, on-device ANPR / face recognition / object detection.
+- **Edge AI bullet, dome, and PTZ form factors** — 2 MP – 8 MP resolutions, 4K variants available.
+
+### 4.2 ANPR / LPR cameras
+
+- **4K Bullet ANPR / LPR PTZ cameras** — Vehicle plate capture at lane speeds, region-trained models (USA, EU, GCC, India plates).
+
+### 4.3 Thermal cameras
+
+- Adiance Cloud-based Thermal Camera VM-72F210AC (fixed)
+- Adiance Cloud-based Thermal Camera VM-72N210AC (narrow FOV)
+- Adiance Cloud-based Thermal Camera VM-72L210AC (long-range)
+
+### 4.4 4G cellular cameras
+
+- 4G Dome PTZ Camera VM-72BPTZ410AC
+- 4G Mini Bullet Camera VM-72H4G110AC
+
+### 4.5 4K and face-recognition cameras
+
+- 4K bullet, dome, PTZ
+- Edge AI face-recognition dome
+- Edge AI object + face detection cameras
+
+### 4.6 WiFi cameras
+
+- WiFi PTZ camera
+- WiFi smart home / baby monitor / pet monitor white-label series
+
+### 4.7 NVR / XVR / VMS
+
+- Cloud XVR — 8 / 16 channel hybrid recorder (VM-72XVR816)
+- NVR portfolio for IP-camera deployments
+- Ambicam Cloud VMS — multi-site, AI events, white-labelable
+
+### 4.8 Specialty series
+
+- Eco Series — entry / value-priced cameras
+- R-Series — mid-tier IP cameras
+- H-Series — high-end IP cameras
+- Edge AI CCTV Cameras (S-Series landing)
+
+## 5. Services
+
+### 5.1 OEM (Original Equipment Manufacturer)
+
+Standard product reference designs manufactured with customer branding. Customer chooses from an existing catalog; Adiance handles manufacturing, QC, packaging, and shipping.
+
+### 5.2 ODM (Original Design Manufacturer)
+
+Adiance customizes hardware (sensor, lens, IR distance, housing, firmware features) for a customer-specific SKU. Customer receives an exclusive design.
+
+### 5.3 JDM (Joint Design Manufacturer)
+
+Co-engineered product where the customer's R&D and Adiance's R&D collaborate on hardware, firmware, and certifications. Used for novel form-factors and specialty markets.
+
+### 5.4 PCB assembly service
+
+SMT and through-hole assembly for third-party electronics. Volumes from prototype to mass production.
+
+### 5.5 Robotics and smart-device manufacturing
+
+Contract manufacturing for non-camera electronics — IoT devices, robotics control boards, networked sensors.
+
+## 6. Industry solutions
+
+- **Smart cities** — Citywide surveillance, ITMS, public safety command-and-control, smart-pole AI cameras.
+- **Public safety** — Police body-worn integrations, command centers, perimeter security.
+- **Traffic management** — ANPR / LPR, red-light enforcement, traffic counting, vehicle classification.
+- **Banking & finance** — Branch surveillance, ATM monitoring, vault analytics, ONVIF-integrated solutions.
+- **Retail** — People counting, heat maps, queue detection, loss-prevention analytics.
+- **Education** — Campus surveillance, perimeter, attendance via face recognition.
+- **Healthcare** — Hospital wards, pharmacy security, restricted-access analytics.
+- **Public transport** — Bus / rail-station ANPR, crowd analytics, vandalism detection.
+- **Manufacturing** — Factory floor, perimeter, PPE compliance, vehicle gate ANPR.
+- **Remote / perimeter security** — Solar + 4G cameras for off-grid sites, oil & gas, mining, agriculture.
+- **High-traffic venues** — Stadiums, malls, exhibition centers, airport landside.
+
+## 7. Compliance and certifications
+
+- **NDAA Section 889** — Non-Chinese SoC, US Federal eligible.
+- **GDPR** — Privacy-by-design firmware, EU-region cloud, data-residency options.
+- **STQC** — Indian government compliance for sensitive deployments.
+- **BIS-ER** — Bureau of Indian Standards Essential Requirement certification.
+- **CE / FCC / RoHS** — EU and US regulatory.
+- **ONVIF profiles S / G / T** — Interoperability with major VMS platforms.
+
+## 8. Geographic markets
+
+Adiance ships to 50+ countries with country-tailored compliance documentation and region-trained AI models. Country landing pages exist at /cctv-camera-manufacturer-<country>. Notable target markets include:
+
+- **North America:** USA, Canada
+- **South America:** Brazil, Argentina, Colombia, Chile, Peru, Mexico, Venezuela
+- **Europe:** UK, Germany, France, Italy, Spain, Netherlands, Sweden, Poland, Czech Republic, Ireland
+- **Middle East:** UAE, Saudi Arabia, Qatar, Bahrain, Kuwait, Oman, Israel, Turkey, Egypt, Morocco
+- **Africa:** South Africa, Nigeria, Kenya, Ghana
+- **Asia-Pacific:** Japan, South Korea, Singapore, Malaysia, Thailand, Indonesia, Philippines, Vietnam, Taiwan, Australia, New Zealand, India
+
+## 9. Frequently asked questions
+
+**Q: What is NDAA compliance for security cameras?**
+A: NDAA Section 889 of the US National Defense Authorization Act prohibits US federal agencies from purchasing telecommunications and surveillance equipment from named Chinese manufacturers including Hikvision, Dahua, Hytera, Huawei, and ZTE. Adiance cameras are NDAA compliant — manufactured in India with non-Chinese chipsets and approved for US federal procurement.
+
+**Q: Does Adiance offer white-label camera manufacturing?**
+A: Yes. Adiance provides full white-label and private-label CCTV camera manufacturing. The customer supplies branding and Adiance handles hardware design, firmware customization, mobile app branding, packaging, and global shipping. Customers launch their own CCTV brand without owning a factory.
+
+**Q: What SoC chipsets does Adiance use?**
+A: Adiance uses non-Chinese SoCs including Qualcomm, Ambarella, Novatek, and Sigmastar. This ensures NDAA Section 889 compliance for US government, federal, state, and critical-infrastructure deployments.
+
+**Q: Where is Adiance headquartered?**
+A: Adiance Technologies is headquartered in Ahmedabad, Gujarat, India, at 7 Arista@Eight Corporate House, Bodakdev. Adiance is a subsidiary of VMukti Solutions and operates manufacturing and R&D facilities in India.
+
+**Q: Does Adiance offer AI-powered surveillance cameras?**
+A: Yes. Adiance offers Edge AI cameras with on-device analytics including ANPR / LPR, face recognition, intrusion detection, object detection, people counting, and crowd analytics — all processed on the camera SoC without cloud dependency.
+
+**Q: What is the minimum order quantity (MOQ)?**
+A: Adiance accepts OEM orders starting at 100 units per SKU. Scale-up to 50,000+ units / quarter is supported by the in-house SMT and assembly lines.
+
+**Q: How long does product development take?**
+A: ODM and JDM development cycles typically range from 4 to 12 weeks depending on complexity, certifications, and customizations required. Standard OEM orders ship in 4 – 6 weeks.
+
+**Q: How does Adiance compare with Hikvision / Dahua?**
+A: Adiance offers NDAA-compliant, non-Chinese alternatives with comparable or better edge-AI performance. Adiance is suitable for buyers who need to remove Chinese surveillance equipment from their supply chain due to compliance (NDAA, GDPR, national security), reputational, or geopolitical reasons.
+
+**Q: Which regions does Adiance serve?**
+A: Adiance serves global markets including the United States, Canada, Europe, Middle East, Africa, South-East Asia, ANZ, LATAM, and India. Cameras are deployed in 20+ countries through OEM and distribution partners, with country-tailored compliance documentation.
+
+**Q: Does Adiance support custom firmware and SDK integration?**
+A: Yes. Adiance's engineering team provides firmware customization, custom SDK / API integration, VMS compatibility (Milestone, Genetec, Network Optix, ExacqVision, Digifort, Luxriot), and ongoing post-launch support.
+
+## 10. Sources
+
+- Sitemap: https://www.adiance.com/sitemap.xml
+- Image sitemap: https://www.adiance.com/image-sitemap.xml
+- Short LLM index: https://www.adiance.com/llms.txt
+- Robots policy: https://www.adiance.com/robots.txt
+
+## 11. Contact
+
+- Sales / quotes: sales@adiance.com — +91-9687779999
+- General: contact@adiance.com
+- Contact page: https://www.adiance.com/contact

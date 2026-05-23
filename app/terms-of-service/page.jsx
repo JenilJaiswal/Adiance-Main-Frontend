@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const TermsOfService = dynamic(() => import("@/components/TermsOfService"), { ssr: false });
+export const metadata = buildMetadata("/terms-of-service");
 
 export default function Page() {
-  return <TermsOfService />;
+  return <ClientPage />;
 }

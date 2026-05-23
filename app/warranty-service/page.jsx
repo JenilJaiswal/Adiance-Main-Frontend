@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const WarrantyService = dynamic(() => import("@/components/WarrantyService"), { ssr: false });
+export const metadata = buildMetadata("/warranty-service");
 
 export default function Page() {
-  return <WarrantyService />;
+  return <ClientPage />;
 }

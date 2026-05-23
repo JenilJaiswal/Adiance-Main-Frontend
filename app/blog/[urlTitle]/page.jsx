@@ -1,9 +1,19 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const Blog1 = dynamic(() => import("@/components/Blog1"), { ssr: false });
+export async function generateMetadata({ params }) {
+  const slug = params?.urlTitle || "";
+  const title = slug
+    ? slug
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, (c) => c.toUpperCase()) + " | Adiance Blog"
+    : "Adiance Blog";
+  return buildMetadata("/blog/".replace(/\/+$/, "") || "/blog", {
+    title,
+    canonical: `/blog/${slug}`,
+  });
+}
 
 export default function Page() {
-  return <Blog1 />;
+  return <ClientPage />;
 }

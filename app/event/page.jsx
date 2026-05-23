@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const Event = dynamic(() => import("@/views/Events/Event"), { ssr: false });
+export const metadata = buildMetadata("/event");
 
 export default function Page() {
-  return <Event />;
+  return <ClientPage />;
 }

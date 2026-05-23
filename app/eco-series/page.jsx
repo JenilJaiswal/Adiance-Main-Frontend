@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const EcoSeries = dynamic(() => import("@/views/EcoSeries/EcoSeries"), { ssr: false });
+export const metadata = buildMetadata("/eco-series");
 
 export default function Page() {
-  return <EcoSeries />;
+  return <ClientPage />;
 }

@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const OtpVerification = dynamic(() => import("@/AdianceAdmin/pages/OTP/OtpVerification"), { ssr: false });
+export const metadata = buildMetadata("/admin/verify");
 
 export default function Page() {
-  return <OtpVerification />;
+  return <ClientPage />;
 }

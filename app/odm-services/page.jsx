@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const ODM = dynamic(() => import("@/views/Services/ODM/ODM"), { ssr: false });
+export const metadata = buildMetadata("/odm-services");
 
 export default function Page() {
-  return <ODM />;
+  return <ClientPage />;
 }

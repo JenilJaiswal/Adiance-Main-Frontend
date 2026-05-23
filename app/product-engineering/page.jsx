@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const ProdEngineering = dynamic(() => import("@/components/ProdEngineering"), { ssr: false });
+export const metadata = buildMetadata("/product-engineering");
 
 export default function Page() {
-  return <ProdEngineering />;
+  return <ClientPage />;
 }

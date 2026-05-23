@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const PublicTransport = dynamic(() => import("@/components/PublicTransport"), { ssr: false });
+export const metadata = buildMetadata("/public-transport");
 
 export default function Page() {
-  return <PublicTransport />;
+  return <ClientPage />;
 }

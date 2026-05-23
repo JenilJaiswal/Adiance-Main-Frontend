@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const ANPRCamera = dynamic(() => import("@/components/ANPRCamera"), { ssr: false });
+export const metadata = buildMetadata("/anpr-camera");
 
 export default function Page() {
-  return <ANPRCamera />;
+  return <ClientPage />;
 }

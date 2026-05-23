@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const PrivacyPolicy = dynamic(() => import("@/components/PrivacyPolicy"), { ssr: false });
+export const metadata = buildMetadata("/privacy-policy");
 
 export default function Page() {
-  return <PrivacyPolicy />;
+  return <ClientPage />;
 }

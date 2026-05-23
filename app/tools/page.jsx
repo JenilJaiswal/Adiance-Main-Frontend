@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const Tools = dynamic(() => import("@/components/Tools"), { ssr: false });
+export const metadata = buildMetadata("/tools");
 
 export default function Page() {
-  return <Tools />;
+  return <ClientPage />;
 }

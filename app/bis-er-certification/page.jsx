@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const BISERCertification = dynamic(() => import("@/views/BISERCertification/BISERCertification"), { ssr: false });
+export const metadata = buildMetadata("/bis-er-certification");
 
 export default function Page() {
-  return <BISERCertification />;
+  return <ClientPage />;
 }

@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const SEOBlogPage = dynamic(() => import("@/views/SEOPages/BlogPage/SEOBlogPage"), { ssr: false });
+export const metadata = buildMetadata("/case-study/white-label-edge-ai-camera-japan");
 
 export default function Page() {
-  return <SEOBlogPage type="case-study" />;
+  return <ClientPage />;
 }

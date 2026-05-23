@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const ProductShow = dynamic(() => import("@/components/ProductShow"), { ssr: false });
+export const metadata = buildMetadata("/cloudxvr");
 
 export default function Page() {
-  return <ProductShow productTitle="ADIANCE 8-16 Channel XVR – VM-72XVR816" />;
+  return <ClientPage />;
 }

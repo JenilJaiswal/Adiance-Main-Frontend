@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const SEOBlogPage = dynamic(() => import("@/views/SEOPages/BlogPage/SEOBlogPage"), { ssr: false });
+export const metadata = buildMetadata("/blog/the-complete-guide-to-ndaa-compliant-surveillance-cameras");
 
 export default function Page() {
-  return <SEOBlogPage />;
+  return <ClientPage />;
 }

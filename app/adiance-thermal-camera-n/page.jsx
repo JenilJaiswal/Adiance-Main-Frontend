@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const ProductShow = dynamic(() => import("@/components/ProductShow"), { ssr: false });
+export const metadata = buildMetadata("/adiance-thermal-camera-n");
 
 export default function Page() {
-  return <ProductShow productTitle="ADIANCE CLOUD BASED THERMAL CAMERA – (VM-72N210AC)" />;
+  return <ClientPage />;
 }

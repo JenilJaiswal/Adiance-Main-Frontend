@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const ThermalCamera = dynamic(() => import("@/components/ThermalCamera"), { ssr: false });
+export const metadata = buildMetadata("/thermal-camera");
 
 export default function Page() {
-  return <ThermalCamera />;
+  return <ClientPage />;
 }

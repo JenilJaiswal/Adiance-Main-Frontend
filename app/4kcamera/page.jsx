@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const _4KCamera = dynamic(() => import("@/components/_4KCamera"), { ssr: false });
+export const metadata = buildMetadata("/4kcamera");
 
 export default function Page() {
-  return <_4KCamera />;
+  return <ClientPage />;
 }

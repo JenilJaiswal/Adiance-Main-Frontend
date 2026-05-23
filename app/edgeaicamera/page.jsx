@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const EdgeAICamera = dynamic(() => import("@/views/EdgeAICamera/EdgeAICamera"), { ssr: false });
+export const metadata = buildMetadata("/edgeaicamera");
 
 export default function Page() {
-  return <EdgeAICamera />;
+  return <ClientPage />;
 }

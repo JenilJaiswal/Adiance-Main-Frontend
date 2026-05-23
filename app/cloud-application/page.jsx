@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const CloudApplication = dynamic(() => import("@/components/CloudApplication"), { ssr: false });
+export const metadata = buildMetadata("/cloud-application");
 
 export default function Page() {
-  return <CloudApplication />;
+  return <ClientPage />;
 }

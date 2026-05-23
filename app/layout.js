@@ -43,6 +43,24 @@ export const metadata = {
   verification: {
     google: "ToZv5ontdwBZWArKbClqliVv4Zzduzs5-CbhZxgxaE4",
   },
+  robots:
+    process.env.NEXT_PUBLIC_ALLOW_INDEX === "true" ||
+    process.env.VERCEL_ENV === "production"
+      ? {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+            "max-video-preview": -1,
+          },
+        }
+      : {
+          index: false,
+          follow: false,
+        },
   other: {
     "geo.region": "IN-GJ",
     "geo.placename": "Ahmedabad",
@@ -117,86 +135,6 @@ const websiteSchema = {
   },
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.adiance.com/",
-    },
-  ],
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is NDAA compliance for security cameras?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "NDAA Section 889 prohibits US federal agencies from purchasing telecommunications and surveillance equipment from specific Chinese manufacturers including Hikvision and Dahua. Adiance cameras are NDAA compliant, manufactured in India with non-Chinese chipsets, and approved for US government use.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Adiance offer white-label camera manufacturing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Adiance provides full white-label and private-label CCTV camera manufacturing. We handle hardware design, firmware, packaging, and branding so you can launch your own camera brand without building a factory.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What SoC chipsets does Adiance use in its cameras?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Adiance uses non-Chinese SoC platforms including Novatek, Sigmastar, and other NDAA-safe chipsets. This ensures compliance for US government and enterprise deployments.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Where is Adiance headquartered?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Adiance Technologies is headquartered in Ahmedabad, Gujarat, India. We are a subsidiary of VMukti Solutions and operate manufacturing and R&D facilities in India.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Adiance offer AI-powered surveillance cameras?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Adiance offers AI Edge cameras with on-device analytics including people counting, intrusion detection, ANPR, face recognition, and smart motion detection — all processed at the edge without cloud dependency.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which regions does Adiance serve?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Adiance serves global markets including the United States, Europe, Middle East, Southeast Asia, and India. Our cameras are deployed in 20+ countries through OEM and distribution partners.",
-      },
-    },
-  ],
-};
-
-const srOnlyH1Style = {
-  position: "absolute",
-  width: "1px",
-  height: "1px",
-  padding: 0,
-  margin: "-1px",
-  overflow: "hidden",
-  clip: "rect(0,0,0,0)",
-  whiteSpace: "nowrap",
-  border: 0,
-};
-
 const hideChatWidgetsCss = `
 .zsiq-float,.zsiq-flexM,.zsiq_cnt,#zsiq_float,[id*="zsiq"],[class*="zsiq"],[class*="salesiq"]{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;}
 [id*="chat"],[class*="chat-widget"],[class*="chatbot"],[class*="tawk"],[class*="intercom"],[class*="drift"]{display:none!important;visibility:hidden!important;}
@@ -247,20 +185,8 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
       </head>
       <body>
-        <h1 style={srOnlyH1Style}>
-          NDAA Compliant OEM Camera Manufacturer | White Label CCTV Cameras |
-          Adiance India
-        </h1>
         <Providers>{children}</Providers>
         <Script id="gtm-loader" strategy="afterInteractive">{`
 (function(){var gtmLoaded=false;function loadGTM(){if(gtmLoaded)return;gtmLoaded=true;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M7PMRCM');['scroll','mousemove','keydown','touchstart','click'].forEach(function(e){window.removeEventListener(e,loadGTM);});}['scroll','mousemove','keydown','touchstart','click'].forEach(function(e){window.addEventListener(e,loadGTM,{once:true,passive:true});});setTimeout(loadGTM,7000);})();

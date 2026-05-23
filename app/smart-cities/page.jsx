@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const SmartCities = dynamic(() => import("@/components/SmartCities"), { ssr: false });
+export const metadata = buildMetadata("/smart-cities");
 
 export default function Page() {
-  return <SmartCities />;
+  return <ClientPage />;
 }

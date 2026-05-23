@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const GeoPage = dynamic(() => import("@/views/SEOPages/GeoPage/GeoPage"), { ssr: false });
+export const metadata = buildMetadata("/cctv-camera-manufacturer-australia-v2");
 
 export default function Page() {
-  return <GeoPage />;
+  return <ClientPage />;
 }

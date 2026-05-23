@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const CrowdControl = dynamic(() => import("@/components/CrowdControl"), { ssr: false });
+export const metadata = buildMetadata("/crowd-control");
 
 export default function Page() {
-  return <CrowdControl />;
+  return <ClientPage />;
 }

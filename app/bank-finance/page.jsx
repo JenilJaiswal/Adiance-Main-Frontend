@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const BankFinance = dynamic(() => import("@/components/BankFinance"), { ssr: false });
+export const metadata = buildMetadata("/bank-finance");
 
 export default function Page() {
-  return <BankFinance />;
+  return <ClientPage />;
 }

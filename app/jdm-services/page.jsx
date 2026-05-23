@@ -1,9 +1,8 @@
-"use client";
+import { buildMetadata } from "@/seo/pageMetadata";
+import ClientPage from "./ClientPage";
 
-import dynamic from "next/dynamic";
-
-const JDM = dynamic(() => import("@/views/Services/JDM/JDM"), { ssr: false });
+export const metadata = buildMetadata("/jdm-services");
 
 export default function Page() {
-  return <JDM />;
+  return <ClientPage />;
 }
