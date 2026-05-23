@@ -124,6 +124,15 @@ const nextConfig = {
     }));
     return [...dynamic, ...legacy];
   },
+  async rewrites() {
+    const backend =
+      process.env.NEXT_PUBLIC_BACKEND_URL || "https://backend.adiance.com";
+    return [
+      { source: "/api/:path*", destination: `${backend}/api/:path*` },
+      { source: "/images/:path*", destination: `${backend}/images/:path*` },
+      { source: "/upload/:path*", destination: `${backend}/upload/:path*` },
+    ];
+  },
 };
 
 module.exports = nextConfig;
