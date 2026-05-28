@@ -40,6 +40,22 @@ const legacyRedirects = {
   "/smart-wifi-cloud-cctv-camera": "/products/wifi-cameras",
 };
 
+const cspDirectives = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://cdn.jsdelivr.net https://*.zoho.com https://*.zohopublic.com https://*.zohostatic.com",
+  "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net",
+  "connect-src 'self' https://*.adiance.com https://backend.adiance.com https://www.google-analytics.com https://*.googletagmanager.com https://*.facebook.com https://*.zoho.com https://*.zohopublic.com",
+  "media-src 'self' https:",
+  "frame-src 'self' https://www.googletagmanager.com https://*.zoho.com https://*.youtube.com https://www.youtube.com",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self' https://*.zoho.com",
+  "frame-ancestors 'self'",
+  "upgrade-insecure-requests",
+];
+
 const securityHeaders = [
   {
     key: "Strict-Transport-Security",
@@ -53,6 +69,10 @@ const securityHeaders = [
     value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
   },
   { key: "X-DNS-Prefetch-Control", value: "on" },
+  {
+    key: "Content-Security-Policy",
+    value: cspDirectives.join("; "),
+  },
 ];
 
 const nextConfig = {
@@ -86,13 +106,6 @@ const nextConfig = {
         ],
       },
       {
-        source: "/robots.txt",
-        headers: [
-          { key: "Content-Type", value: "text/plain; charset=utf-8" },
-          { key: "Cache-Control", value: "public, max-age=3600" },
-        ],
-      },
-      {
         source: "/sitemap.xml",
         headers: [
           { key: "Content-Type", value: "application/xml; charset=utf-8" },
@@ -104,6 +117,13 @@ const nextConfig = {
         headers: [
           { key: "Content-Type", value: "application/xml; charset=utf-8" },
           { key: "Cache-Control", value: "public, max-age=3600" },
+        ],
+      },
+      {
+        source: "/.well-known/security.txt",
+        headers: [
+          { key: "Content-Type", value: "text/plain; charset=utf-8" },
+          { key: "Cache-Control", value: "public, max-age=86400" },
         ],
       },
     ];

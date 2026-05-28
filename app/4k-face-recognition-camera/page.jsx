@@ -1,8 +1,14 @@
 import { buildMetadata } from "@/seo/pageMetadata";
+import { PageSchema } from "@/seo/PageSchema";
 import ClientPage from "./ClientPage";
 
 export const metadata = buildMetadata("/4k-face-recognition-camera");
 
 export default function Page() {
-  return <ClientPage />;
+  return (
+    <>
+      <PageSchema path="/4k-face-recognition-camera" />
+      <ClientPage />
+    </>
+  );
 }

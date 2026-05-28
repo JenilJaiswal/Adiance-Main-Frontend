@@ -4,7 +4,7 @@
 
 ## 1. Organization
 
-Adiance Technologies is an Indian electronics and surveillance camera manufacturer founded in 2003. The company is headquartered in Ahmedabad, Gujarat. Adiance designs, manufactures, and ships NDAA-compliant CCTV cameras, edge-AI cameras, thermal cameras, ANPR / LPR cameras, 4G / 4K / WiFi PTZ cameras, NVRs, XVRs, and a cloud video-management platform (Ambicam Cloud VMS). Adiance is a subsidiary of VMukti Solutions (https://www.vmukti.com), a publicly listed Indian technology company in cloud video and broadcasting. Adiance operates as the surveillance / hardware-manufacturing arm of the group.
+Adiance Technologies is an Indian electronics and surveillance camera manufacturer founded in 2003. The company is headquartered in Ahmedabad, Gujarat. Adiance designs, manufactures, and ships NDAA-compliant CCTV cameras, edge-AI cameras, thermal cameras, ANPR / LPR cameras, 4G / 4K / WiFi PTZ cameras, NVRs, XVRs, and a cloud video-management platform (Ambicam Cloud VMS). VMukti Solutions (https://www.vmukti.com) is a group company / sub-organization focused on cloud video and broadcasting. Adiance operates as the surveillance and hardware-manufacturing arm of the group.
 
 ### 1.1 Registered details
 
@@ -15,7 +15,7 @@ Adiance Technologies is an Indian electronics and surveillance camera manufactur
 - General contact: contact@adiance.com
 - Website: https://www.adiance.com
 - Founded: 2003
-- Parent organization: VMukti Solutions
+- Group company: VMukti Solutions (sub-organization of Adiance Technologies)
 - LinkedIn: https://www.linkedin.com/company/adiancetechnologies
 - Twitter / X: https://x.com/adiancetech
 - Facebook: https://www.facebook.com/adiancetechnologies
@@ -158,7 +158,7 @@ A: Yes. Adiance provides full white-label and private-label CCTV camera manufact
 A: Adiance uses non-Chinese SoCs including Qualcomm, Ambarella, Novatek, and Sigmastar. This ensures NDAA Section 889 compliance for US government, federal, state, and critical-infrastructure deployments.
 
 **Q: Where is Adiance headquartered?**
-A: Adiance Technologies is headquartered in Ahmedabad, Gujarat, India, at 7 Arista@Eight Corporate House, Bodakdev. Adiance is a subsidiary of VMukti Solutions and operates manufacturing and R&D facilities in India.
+A: Adiance Technologies is headquartered in Ahmedabad, Gujarat, India, at 7 Arista@Eight Corporate House, Bodakdev. Adiance operates manufacturing and R&D facilities in India. VMukti Solutions is an Adiance group company focused on cloud video and broadcasting.
 
 **Q: Does Adiance offer AI-powered surveillance cameras?**
 A: Yes. Adiance offers Edge AI cameras with on-device analytics including ANPR / LPR, face recognition, intrusion detection, object detection, people counting, and crowd analytics — all processed on the camera SoC without cloud dependency.

@@ -83,7 +83,7 @@ const organizationSchema = {
   description:
     "Adiance Technologies is an NDAA compliant OEM camera manufacturer in India. We provide white-label CCTV cameras, AI-powered surveillance solutions, NVRs, cloud VMS, and custom OEM/ODM/JDM electronics manufacturing services for global markets.",
   foundingDate: "2003",
-  parentOrganization: {
+  subOrganization: {
     "@type": "Organization",
     name: "VMukti Solutions",
     url: "https://www.vmukti.com",

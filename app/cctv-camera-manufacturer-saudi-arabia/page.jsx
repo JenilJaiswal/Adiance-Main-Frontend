@@ -1,8 +1,14 @@
 import { buildMetadata } from "@/seo/pageMetadata";
+import { PageSchema } from "@/seo/PageSchema";
 import ClientPage from "./ClientPage";
 
 export const metadata = buildMetadata("/cctv-camera-manufacturer-saudi-arabia");
 
 export default function Page() {
-  return <ClientPage />;
+  return (
+    <>
+      <PageSchema path="/cctv-camera-manufacturer-saudi-arabia" />
+      <ClientPage />
+    </>
+  );
 }

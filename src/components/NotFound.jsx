@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
-import { Helmet } from "react-helmet";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 
@@ -24,14 +23,7 @@ const ThankYouPage = () => {
         // background: "linear-gradient(135deg, #667eea, #764ba2)", // Stylish gradient
       }}
     >
-      <Helmet>
-        <title>Page Not Found | Adiance</title>
-        <meta
-          name="description"
-          content="The page you are looking for does not exist."
-        />
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      {/* Metadata (title, description, robots: noindex) is set server-side via app/not-found.jsx */}
       <Header />
       <Box
         sx={{

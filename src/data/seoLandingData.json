@@ -4669,6 +4669,590 @@
       }
     ]
   },
+  "alternative-to-hikvision": {
+    "slug": "alternative-to-hikvision",
+    "seo": {
+      "title": "Alternative to Hikvision | NDAA-Compliant OEM Cameras — Adiance",
+      "description": "Looking for a Hikvision alternative? Adiance is an NDAA-compliant, non-Chinese OEM CCTV camera manufacturer in India. Edge AI, white-label, drop-in Hikvision model replacements.",
+      "keywords": "alternative to Hikvision, Hikvision alternative, Hikvision replacement, non-Chinese alternative to Hikvision, NDAA compliant alternative, OEM CCTV manufacturer, white label CCTV, Hikvision ban replacement"
+    },
+    "hero": {
+      "title": "The NDAA-Compliant Alternative to Hikvision",
+      "subtitle": "Hikvision is banned by NDAA Section 889, restricted across the UK, Australia, and Japan, and removed from federal procurement worldwide. Adiance offers a complete, non-Chinese alternative — built in India on Qualcomm and Ambarella SoCs, with full OEM/ODM white-label support and a clean compliance record.",
+      "ctaText": "Request a Hikvision Replacement Quote"
+    },
+    "intro": {
+      "title": "Replace Hikvision Without Compromising Capability",
+      "description": "Adiance manufactures a direct, like-for-like replacement portfolio for every major Hikvision form factor — bullet, dome, PTZ, ANPR, thermal, 4G, and WiFi cameras. Same performance envelope, same ONVIF interoperability, same VMS compatibility — minus the Hikvision SoC, the NDAA risk, and the geopolitical exposure."
+    },
+    "features": [
+      {
+        "icon": "🛡",
+        "title": "NDAA Section 889 Compliant",
+        "description": "Zero Hikvision, HiSilicon, or Huawei components. Approved for US federal, state, and critical-infrastructure procurement."
+      },
+      {
+        "icon": "📷",
+        "title": "Drop-In Model Mapping",
+        "description": "Adiance equivalents for every common Hikvision SKU — bullet (DS-2CD2), dome (DS-2CD21), PTZ (DS-2DE), and ANPR ranges."
+      },
+      {
+        "icon": "⚡",
+        "title": "On-Device Edge AI",
+        "description": "ANPR / LPR, face recognition, intrusion, people counting, and object detection — all processed on-camera, no cloud dependency."
+      },
+      {
+        "icon": "🌐",
+        "title": "ONVIF Profile S/G/T",
+        "description": "Full interoperability with Milestone, Genetec, Network Optix, ExacqVision, Digifort, and Luxriot VMS platforms."
+      },
+      {
+        "icon": "🏷",
+        "title": "Full White-Label OEM",
+        "description": "Your logo, your firmware, your mobile app, your packaging. Launch a Hikvision-class brand without owning a factory."
+      },
+      {
+        "icon": "🇮🇳",
+        "title": "Made in India",
+        "description": "End-to-end design, SMT assembly, firmware, mechanical, and QA in Ahmedabad — STQC tested, BIS-ER certified."
+      }
+    ],
+    "stats": [
+      {
+        "value": "889",
+        "label": "NDAA Section Banning Hikvision"
+      },
+      {
+        "value": "40+",
+        "label": "Countries Restricting Hikvision"
+      },
+      {
+        "value": "100%",
+        "label": "Non-Chinese SoC at Adiance"
+      },
+      {
+        "value": "100",
+        "label": "Minimum Order Quantity"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Why are governments and enterprises moving away from Hikvision?",
+        "answer": "Hikvision is restricted under the US NDAA Section 889, banned from UK government critical infrastructure, restricted in Australia, removed from Japanese government procurement, and flagged by EU human-rights reviews. Documented cybersecurity vulnerabilities and concerns about state ownership are also driving private-sector replacements."
+      },
+      {
+        "question": "Can Adiance replace specific Hikvision SKUs?",
+        "answer": "Yes. Adiance maintains a Hikvision-to-Adiance model-mapping sheet for every common bullet, dome, PTZ, ANPR, and thermal SKU. Our engineering team will provide a direct equivalent for each Hikvision model in your current deployment with matching resolution, lens, IR distance, and ONVIF profile."
+      },
+      {
+        "question": "Will Adiance cameras work with my existing VMS?",
+        "answer": "Yes. Adiance cameras support ONVIF Profile S, G, and T, and are tested for compatibility with Milestone XProtect, Genetec Security Center, Network Optix Nx Witness, ExacqVision, Digifort, and Luxriot. Your existing VMS investment is preserved."
+      },
+      {
+        "question": "How does Adiance pricing compare to Hikvision OEM?",
+        "answer": "Adiance OEM pricing is typically within 10-15% of Hikvision OEM tiers. The small premium delivers full NDAA compliance, a clean cybersecurity record, and audited supply chain — a significant compliance and risk-mitigation benefit at marginal cost."
+      },
+      {
+        "question": "Is Adiance NDAA Section 889 compliant?",
+        "answer": "Yes. Adiance cameras contain zero components from prohibited entities (Hikvision, Dahua, Huawei, ZTE, Hytera, HiSilicon). Non-Chinese SoCs from Qualcomm, Ambarella, Novatek, and Sigmastar are used. Full bill-of-materials documentation is available for federal procurement audits."
+      },
+      {
+        "question": "Can I launch my own brand of Hikvision-alternative cameras?",
+        "answer": "Yes. Adiance offers complete white-label OEM/ODM manufacturing. Launch a branded NDAA-compliant CCTV line with custom firmware, mobile app, packaging, and cloud VMS — starting from 100 units per SKU."
+      }
+    ],
+    "whyCards": {
+      "heading": "Why the Hikvision Replacement Wave Is Accelerating",
+      "cards": [
+        {
+          "icon": "🛡",
+          "title": "Regulatory Bans",
+          "description": "NDAA Section 889 prohibits US federal use. The UK has ordered removal from government sites. Australia, Japan, and Lithuania have followed. EU procurement is increasingly restricted."
+        },
+        {
+          "icon": "🔒",
+          "title": "Cybersecurity Concerns",
+          "description": "Multiple CVE-listed vulnerabilities have been disclosed against Hikvision firmware. Enterprise CISOs are removing Chinese surveillance from critical infrastructure as a defensive measure."
+        },
+        {
+          "icon": "🌐",
+          "title": "Supply Chain Risk",
+          "description": "Single-country exposure to Chinese surveillance equipment has become a board-level risk. \"China + 1\" sourcing is now standard practice for global brands and integrators."
+        }
+      ]
+    },
+    "marketContext": {
+      "heading": "Adiance: The Complete Hikvision Replacement Stack",
+      "paragraphs": [
+        "Hikvision shipped a complete vertically-integrated stack — cameras, NVRs, VMS, mobile app, and AI analytics. To replace it credibly, an alternative must match that stack end-to-end.",
+        "Adiance ships a like-for-like portfolio: Edge AI bullet, dome, and PTZ cameras (2 MP – 8 MP, including 4K), 4G cellular cameras, WiFi PTZ, ANPR / LPR, and Cloud Thermal cameras.",
+        "Recording is handled by Adiance NVR and Cloud XVR (8 / 16 channel hybrid recorder VM-72XVR816), with enterprise-grade throughput and long-duration storage.",
+        "Ambicam Cloud VMS provides multi-site streaming, recording, AI events, and remote management — white-labelable with private deployment options.",
+        "On-device edge AI replaces Hikvision DeepinView analytics with ANPR, face recognition, intrusion detection, people counting, and object detection processed on the camera SoC.",
+        "Mobile apps for iOS and Android can be white-labeled under your brand. ONVIF Profile S, G, T support preserves compatibility with existing third-party VMS deployments."
+      ]
+    },
+    "comparisonTable": {
+      "heading": "Hikvision vs. Adiance: Direct Comparison",
+      "columns": [
+        "Feature",
+        "Hikvision",
+        "Adiance (India)"
+      ],
+      "rows": [
+        {
+          "feature": "SoC Origin",
+          "col1": "HiSilicon (Huawei subsidiary, China)",
+          "col2": "Qualcomm / Ambarella / Novatek"
+        },
+        {
+          "feature": "NDAA Section 889",
+          "col1": "Prohibited",
+          "col2": "Fully Compliant"
+        },
+        {
+          "feature": "UK Government Procurement",
+          "col1": "Restricted",
+          "col2": "Eligible"
+        },
+        {
+          "feature": "Manufacturing Location",
+          "col1": "China (Hangzhou)",
+          "col2": "India (Ahmedabad)"
+        },
+        {
+          "feature": "Supply Chain Audit",
+          "col1": "Limited transparency",
+          "col2": "Fully auditable BoM"
+        },
+        {
+          "feature": "Edge AI Analytics",
+          "col1": "DeepinView (cloud-assist)",
+          "col2": "On-device AI (no cloud needed)"
+        },
+        {
+          "feature": "Cloud VMS",
+          "col1": "Hik-Connect",
+          "col2": "Ambicam Cloud VMS (white-labelable)"
+        },
+        {
+          "feature": "ONVIF Profiles",
+          "col1": "S, G, T",
+          "col2": "S, G, T"
+        },
+        {
+          "feature": "OEM White-Label",
+          "col1": "Limited",
+          "col2": "Full ecosystem white-labeling"
+        },
+        {
+          "feature": "Cybersecurity Track Record",
+          "col1": "Multiple CVEs disclosed",
+          "col2": "Clean record, secure firmware"
+        },
+        {
+          "feature": "MOQ for OEM",
+          "col1": "500 – 1,000+ units",
+          "col2": "From 100 units"
+        }
+      ]
+    },
+    "applications": {
+      "heading": "OEM & White-Label Hikvision Replacement Programs",
+      "cards": [
+        {
+          "icon": "📷",
+          "title": "Direct OEM Replacement",
+          "description": "We provide direct Adiance equivalents for your current Hikvision lineup — same resolution, same form factor, same ONVIF profile, NDAA-compliant SoC."
+        },
+        {
+          "icon": "📷",
+          "title": "ODM Custom Design",
+          "description": "Custom hardware design where the existing Hikvision SKU doesn't have a perfect Adiance equivalent. PCB, firmware, and enclosure tailored to your spec."
+        },
+        {
+          "icon": "📷",
+          "title": "JDM Co-Engineering",
+          "description": "Joint development for specialty markets — body-worn, transportation, hostile-environment, or compliance-specific deployments."
+        }
+      ]
+    },
+    "regionGrid": {
+      "heading": "Hikvision Replacement Programs Worldwide",
+      "regions": [
+        {
+          "icon": "📷",
+          "name": "United States",
+          "description": "NDAA Section 889 compliant replacements for federal, state, local, and critical-infrastructure customers required to remove Hikvision.",
+          "countries": []
+        },
+        {
+          "icon": "📷",
+          "name": "United Kingdom",
+          "description": "Drop-in replacements for UK government departments and critical-national-infrastructure sites following Cabinet Office removal orders.",
+          "countries": []
+        },
+        {
+          "icon": "📷",
+          "name": "Australia & New Zealand",
+          "description": "Hikvision replacement programs for Australian federal and state government departments under the Department of Home Affairs guidance.",
+          "countries": []
+        },
+        {
+          "icon": "📷",
+          "name": "European Union",
+          "description": "GDPR-compliant replacements for EU government tenders, critical infrastructure, and enterprise customers tightening procurement standards.",
+          "countries": []
+        },
+        {
+          "icon": "📷",
+          "name": "Middle East",
+          "description": "OEM partners and integrators in UAE, Saudi Arabia, and Qatar replacing Chinese surveillance under sovereign procurement programs.",
+          "countries": []
+        },
+        {
+          "icon": "📷",
+          "name": "Asia-Pacific",
+          "description": "Japanese and Taiwanese enterprise replacements driven by national security guidance and supply-chain diversification mandates.",
+          "countries": []
+        }
+      ]
+    },
+    "relatedLinks": [
+      {
+        "title": "Alternative to Dahua",
+        "url": "/alternative-to-dahua",
+        "description": ""
+      },
+      {
+        "title": "Alternative to Chinese Cameras",
+        "url": "/alternative-to-chinese-cameras",
+        "description": ""
+      },
+      {
+        "title": "NDAA Compliant Cameras",
+        "url": "/ndaa-compliant-cctv-camera-manufacturer",
+        "description": ""
+      },
+      {
+        "title": "Non-Chinese CCTV Manufacturer",
+        "url": "/non-chinese-cctv-camera-manufacturer",
+        "description": ""
+      },
+      {
+        "title": "Non-Chinese SoC Camera Manufacturer",
+        "url": "/non-chinese-soc-camera-manufacturer",
+        "description": ""
+      },
+      {
+        "title": "White Label CCTV",
+        "url": "/white-label-cctv-camera-manufacturer",
+        "description": ""
+      },
+      {
+        "title": "Edge AI Cameras",
+        "url": "/edge-ai-camera-manufacturer",
+        "description": ""
+      },
+      {
+        "title": "Full Product Portfolio",
+        "url": "/product-portfolio",
+        "description": ""
+      }
+    ]
+  },
+  "alternative-to-dahua": {
+    "slug": "alternative-to-dahua",
+    "seo": {
+      "title": "Alternative to Dahua | NDAA-Compliant OEM Cameras — Adiance",
+      "description": "Looking for a Dahua alternative? Adiance is an NDAA-compliant, non-Chinese OEM CCTV camera manufacturer in India. Edge AI, white-label, drop-in Dahua model replacements.",
+      "keywords": "alternative to Dahua, Dahua alternative, Dahua replacement, non-Chinese alternative to Dahua, NDAA compliant alternative, OEM CCTV manufacturer, white label CCTV, Dahua ban replacement"
+    },
+    "hero": {
+      "title": "The NDAA-Compliant Alternative to Dahua",
+      "subtitle": "Dahua Technology is named in NDAA Section 889, restricted in the UK and Australia, and removed from US federal procurement. Adiance is a verified non-Chinese alternative — manufactured in India on Qualcomm and Ambarella SoCs, with full OEM/ODM white-label capability and a clean compliance record.",
+      "ctaText": "Request a Dahua Replacement Quote"
+    },
+    "intro": {
+      "title": "Replace Dahua Without Losing Performance or Features",
+      "description": "Adiance manufactures direct equivalents to every Dahua form factor — bullet, dome, PTZ, ANPR, thermal, 4G, and WiFi cameras — with matching resolution, lens, IR distance, and ONVIF interoperability. Drop-in replacement without re-architecting your existing surveillance stack."
+    },
+    "features": [
+      {
+        "icon": "🛡",
+        "title": "NDAA Section 889 Compliant",
+        "description": "Zero Dahua, HiSilicon, or named-entity components. Approved for US federal procurement and critical infrastructure."
+      },
+      {
+        "icon": "📷",
+        "title": "Drop-In Model Mapping",
+        "description": "Adiance equivalents for every common Dahua SKU — IPC-HFW, IPC-HDW, SD bullet, dome, PTZ, and ANPR lines."
+      },
+      {
+        "icon": "⚡",
+        "title": "On-Device Edge AI",
+        "description": "ANPR / LPR, face recognition, intrusion, perimeter, people counting — all processed on the camera SoC."
+      },
+      {
+        "icon": "🌐",
+        "title": "ONVIF Profile S/G/T",
+        "description": "Full interoperability with Milestone, Genetec, Network Optix, ExacqVision, Digifort, and Luxriot."
+      },
+      {
+        "icon": "🏷",
+        "title": "Full White-Label OEM",
+        "description": "Your logo, your firmware, your mobile app, your packaging — from 100 units per SKU."
+      },
+      {
+        "icon": "🇮🇳",
+        "title": "Made in India",
+        "description": "Designed, assembled, and shipped from Ahmedabad. STQC tested, BIS-ER certified, fully auditable BoM."
+      }
+    ],
+    "stats": [
+      {
+        "value": "889",
+        "label": "NDAA Section Banning Dahua"
+      },
+      {
+        "value": "40+",
+        "label": "Countries Restricting Dahua"
+      },
+      {
+        "value": "100%",
+        "label": "Non-Chinese SoC at Adiance"
+      },
+      {
+        "value": "100",
+        "label": "Minimum Order Quantity"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Why are organizations replacing Dahua surveillance equipment?",
+        "answer": "Dahua Technology is named in NDAA Section 889 alongside Hikvision, restricted from UK government critical infrastructure, removed from Australian federal procurement, and flagged by US Treasury sanctions. Multiple cybersecurity vulnerabilities have also been disclosed in Dahua firmware."
+      },
+      {
+        "question": "Can Adiance replace specific Dahua SKUs?",
+        "answer": "Yes. Adiance maintains a Dahua-to-Adiance model-mapping sheet for every IPC-HFW, IPC-HDW, SD bullet, dome, PTZ, and ANPR SKU. Our engineering team will provide a direct equivalent for each Dahua model in your current deployment with matching specs."
+      },
+      {
+        "question": "Will Adiance cameras work with my existing Dahua NVR or VMS?",
+        "answer": "Adiance cameras support ONVIF Profile S, G, and T, so they integrate with most Dahua NVRs running ONVIF mode and with all major third-party VMS platforms. For mixed deployments we recommend Ambicam Cloud VMS or a standard ONVIF NVR for full feature parity."
+      },
+      {
+        "question": "How does Adiance pricing compare to Dahua OEM?",
+        "answer": "Adiance OEM pricing is typically within 10-15% of Dahua OEM tiers. The small premium delivers full NDAA compliance, audited non-Chinese supply chain, and clean cybersecurity record — a significant risk-mitigation benefit at marginal incremental cost."
+      },
+      {
+        "question": "Is Adiance NDAA Section 889 compliant?",
+        "answer": "Yes. Adiance cameras contain zero components from prohibited entities (Dahua, Hikvision, Huawei, ZTE, Hytera, HiSilicon). Non-Chinese SoCs from Qualcomm, Ambarella, Novatek, and Sigmastar are used. Full BoM documentation is available for federal procurement audits."
+      },
+      {
+        "question": "Can I launch my own brand of Dahua-alternative cameras?",
+        "answer": "Yes. Adiance offers complete white-label OEM/ODM manufacturing. Launch a branded NDAA-compliant CCTV line with custom firmware, mobile app, packaging, and cloud VMS — starting from 100 units per SKU."
+      }
+    ],
+    "whyCards": {
+      "heading": "Why the Dahua Replacement Wave Is Accelerating",
+      "cards": [
+        {
+          "icon": "🛡",
+          "title": "Regulatory Bans",
+          "description": "NDAA Section 889 prohibits US federal use. UK Cabinet Office has restricted Dahua on sensitive sites. Australia and Japan have followed with procurement restrictions."
+        },
+        {
+          "icon": "🔒",
+          "title": "Cybersecurity Disclosures",
+          "description": "Multiple CVE-listed vulnerabilities have been disclosed against Dahua firmware. Critical-infrastructure operators are removing Chinese surveillance as a defensive baseline."
+        },
+        {
+          "icon": "🌐",
+          "title": "Supply Chain Risk",
+          "description": "Single-country exposure to Chinese surveillance hardware is now a board-level concern. \"China + 1\" sourcing is standard for global integrators and brand owners."
+        }
+      ]
+    },
+    "marketContext": {
+      "heading": "Adiance: The Complete Dahua Replacement Stack",
+      "paragraphs": [
+        "Dahua shipped a vertically integrated stack — cameras, NVRs, DSS VMS, mobile app, and AI analytics. To replace it credibly, an alternative must match that stack end-to-end.",
+        "Adiance ships a matching portfolio: Edge AI bullet, dome, and PTZ cameras (2 MP – 8 MP, with 4K variants), 4G cellular cameras, WiFi PTZ, ANPR / LPR, and Cloud Thermal cameras.",
+        "Recording is handled by Adiance NVR and Cloud XVR (8 / 16 channel hybrid recorder VM-72XVR816), with enterprise throughput and long-duration storage.",
+        "Ambicam Cloud VMS replaces Dahua DSS / DMSS — multi-site streaming, recording, AI events, and remote management — fully white-labelable.",
+        "On-device edge AI replaces Dahua WizSense analytics with ANPR, face recognition, intrusion, perimeter protection, people counting, and object detection processed on-camera.",
+        "Mobile apps for iOS and Android can be white-labeled under your brand. ONVIF Profile S, G, T preserves compatibility with third-party VMS, NVR, and access-control platforms."
+      ]
+    },
+    "comparisonTable": {
+      "heading": "Dahua vs. Adiance: Direct Comparison",
+      "columns": [
+        "Feature",
+        "Dahua",
+        "Adiance (India)"
+      ],
+      "rows": [
+        {
+          "feature": "SoC Origin",
+          "col1": "HiSilicon / proprietary (China)",
+          "col2": "Qualcomm / Ambarella / Novatek"
+        },
+        {
+          "feature": "NDAA Section 889",
+          "col1": "Prohibited",
+          "col2": "Fully Compliant"
+        },
+        {
+          "feature": "UK Government Procurement",
+          "col1": "Restricted",
+          "col2": "Eligible"
+        },
+        {
+          "feature": "Manufacturing Location",
+          "col1": "China (Hangzhou)",
+          "col2": "India (Ahmedabad)"
+        },
+        {
+          "feature": "Supply Chain Audit",
+          "col1": "Limited transparency",
+          "col2": "Fully auditable BoM"
+        },
+        {
+          "feature": "Edge AI Analytics",
+          "col1": "WizSense (cloud-assist)",
+          "col2": "On-device AI (no cloud needed)"
+        },
+        {
+          "feature": "Cloud VMS",
+          "col1": "DSS / DMSS",
+          "col2": "Ambicam Cloud VMS (white-labelable)"
+        },
+        {
+          "feature": "ONVIF Profiles",
+          "col1": "S, G, T",
+          "col2": "S, G, T"
+        },
+        {
+          "feature": "OEM White-Label",
+          "col1": "Limited",
+          "col2": "Full ecosystem white-labeling"
+        },
+        {
+          "feature": "Cybersecurity Track Record",
+          "col1": "Multiple CVEs disclosed",
+          "col2": "Clean record, secure firmware"
+        },
+        {
+          "feature": "MOQ for OEM",
+          "col1": "500 – 1,000+ units",
+          "col2": "From 100 units"
+        }
+      ]
+    },
+    "applications": {
+      "heading": "OEM & White-Label Dahua Replacement Programs",
+      "cards": [
+        {
+          "icon": "📷",
+          "title": "Direct OEM Replacement",
+          "description": "Adiance equivalents for your current Dahua lineup — matching resolution, form factor, ONVIF profile, and NDAA-compliant non-Chinese SoC."
+        },
+        {
+          "icon": "📷",
+          "title": "ODM Custom Design",
+          "description": "Custom hardware design where a Dahua SKU has no perfect Adiance equivalent. PCB, firmware, and enclosure tailored to your specification."
+        },
+        {
+          "icon": "📷",
+          "title": "JDM Co-Engineering",
+          "description": "Joint development for specialty markets — body-worn, transportation, hostile-environment, or compliance-specific deployments."
+        }
+      ]
+    },
+    "regionGrid": {
+      "heading": "Dahua Replacement Programs Worldwide",
+      "regions": [
+        {
+          "icon": "📷",
+          "name": "United States",
+          "description": "NDAA Section 889 compliant replacements for federal, state, local, and critical-infrastructure customers required to remove Dahua.",
+          "countries": []
+        },
+        {
+          "icon": "📷",
+          "name": "United Kingdom",
+          "description": "Drop-in Dahua replacements for UK government and critical-national-infrastructure sites under Cabinet Office removal guidance.",
+          "countries": []
+        },
+        {
+          "icon": "📷",
+          "name": "Australia & New Zealand",
+          "description": "Dahua replacement programs for Australian federal and state government departments under Department of Home Affairs guidance.",
+          "countries": []
+        },
+        {
+          "icon": "📷",
+          "name": "European Union",
+          "description": "GDPR-compliant replacements for EU government tenders and enterprise customers tightening procurement standards on Chinese surveillance.",
+          "countries": []
+        },
+        {
+          "icon": "📷",
+          "name": "Middle East",
+          "description": "OEM partners and integrators in UAE, Saudi Arabia, and Qatar replacing Chinese surveillance under sovereign procurement programs.",
+          "countries": []
+        },
+        {
+          "icon": "📷",
+          "name": "Asia-Pacific",
+          "description": "Japanese and Taiwanese enterprise replacements driven by national security guidance and supply-chain diversification.",
+          "countries": []
+        }
+      ]
+    },
+    "relatedLinks": [
+      {
+        "title": "Alternative to Hikvision",
+        "url": "/alternative-to-hikvision",
+        "description": ""
+      },
+      {
+        "title": "Alternative to Chinese Cameras",
+        "url": "/alternative-to-chinese-cameras",
+        "description": ""
+      },
+      {
+        "title": "NDAA Compliant Cameras",
+        "url": "/ndaa-compliant-cctv-camera-manufacturer",
+        "description": ""
+      },
+      {
+        "title": "Non-Chinese CCTV Manufacturer",
+        "url": "/non-chinese-cctv-camera-manufacturer",
+        "description": ""
+      },
+      {
+        "title": "Non-Chinese SoC Camera Manufacturer",
+        "url": "/non-chinese-soc-camera-manufacturer",
+        "description": ""
+      },
+      {
+        "title": "White Label CCTV",
+        "url": "/white-label-cctv-camera-manufacturer",
+        "description": ""
+      },
+      {
+        "title": "Edge AI Cameras",
+        "url": "/edge-ai-camera-manufacturer",
+        "description": ""
+      },
+      {
+        "title": "Full Product Portfolio",
+        "url": "/product-portfolio",
+        "description": ""
+      }
+    ]
+  },
   "smart-city-cctv-solutions": {
     "slug": "smart-city-cctv-solutions",
     "seo": {

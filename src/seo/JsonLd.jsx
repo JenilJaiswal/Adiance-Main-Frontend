@@ -67,7 +67,7 @@ export const HOMEPAGE_FAQ = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "Adiance Technologies is headquartered in Ahmedabad, Gujarat, India. Adiance is a subsidiary of VMukti Solutions and operates manufacturing and R&D facilities in India.",
+          "Adiance Technologies is headquartered in Ahmedabad, Gujarat, India. Adiance operates manufacturing and R&D facilities in India. VMukti Solutions is an Adiance group company focused on cloud video and broadcasting.",
       },
     },
     {

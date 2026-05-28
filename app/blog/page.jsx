@@ -1,5 +1,5 @@
 import { buildMetadata } from "@/seo/pageMetadata";
-import { BreadcrumbJsonLd } from "@/seo/JsonLd";
+import { PageSchema } from "@/seo/PageSchema";
 import ClientPage from "./ClientPage";
 
 export const metadata = buildMetadata("/blog");
@@ -7,12 +7,7 @@ export const metadata = buildMetadata("/blog");
 export default function Page() {
   return (
     <>
-      <BreadcrumbJsonLd
-        items={[
-          { name: "Home", url: "/" },
-          { name: "Blog", url: "/blog" },
-        ]}
-      />
+      <PageSchema path="/blog" />
       <ClientPage />
     </>
   );
