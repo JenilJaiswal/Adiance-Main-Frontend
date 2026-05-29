@@ -1,0 +1,15 @@
+# API calls go through a Next.js same-origin proxy (defined in
+# next.config.js rewrites) so the browser never hits CORS.
+# Image URLs (<img src>) load directly from the backend — img tags
+# don't need CORS, so this is fine.
+NEXT_PUBLIC_API_URL=/api
+NEXT_PUBLIC_BACKEND_URL=https://backend.adiance.com
+NEXT_PUBLIC_API_IMAGE_URL=https://backend.adiance.com/images
+
+# SEO indexing gate (set "true" only on production deploys)
+NEXT_PUBLIC_ALLOW_INDEX=true
+
+# Development overrides — uncomment to hit the local backend directly.
+# NEXT_PUBLIC_API_URL=http://localhost:5000/api
+# NEXT_PUBLIC_BACKEND_URL=http://localhost:5000
+# NEXT_PUBLIC_API_IMAGE_URL=http://localhost:5000/images
