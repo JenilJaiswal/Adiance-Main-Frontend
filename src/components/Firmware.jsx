@@ -20,7 +20,7 @@ const instance = axios.create({
 // API functions
 const getAllFirmware = async () => {
   try {
-    const res = await instance.get("/firmware/getAllFirmware");
+    const res = await instance.get("/firmware/latest");
     return res.data;
   } catch (err) {
     console.error("Firmware fetch failed:", err);
