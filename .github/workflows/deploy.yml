@@ -57,6 +57,17 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             set -e
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+            if ! command -v pm2 >/dev/null 2>&1; then
+              for p in /usr/local/bin/pm2 /usr/bin/pm2 "$HOME/.nvm/versions/node"/*/bin/pm2; do
+                if [ -x "$p" ]; then export PATH="$(dirname "$p"):$PATH"; break; fi
+              done
+            fi
+            if ! command -v pm2 >/dev/null 2>&1; then
+              echo "ERROR: pm2 not installed on server. Run: npm i -g pm2"
+              exit 1
+            fi
             APP_DIR="${{ secrets.SERVER_PATH }}"
             RELEASE_DIR="$APP_DIR/current"
             BACKUP_DIR="$APP_DIR/previous"
