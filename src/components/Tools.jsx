@@ -20,7 +20,7 @@ const instance = axios.create({
 // API functions for Tools (Apps)
 const getAllAppVersion = async () => {
   try {
-    const res = await instance.get("/app/getAllApps");
+    const res = await instance.get("/app/latest");
     return res.data;
   } catch (err) {
     console.error("App version fetch failed:", err);
