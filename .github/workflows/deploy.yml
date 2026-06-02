@@ -4,10 +4,27 @@ on:
   push:
     branches:
       - nextjs-migration
+  workflow_dispatch:
+    inputs:
+      skip_lint:
+        description: "Skip lint step"
+        required: false
+        default: "false"
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  NODE_VERSION: "20"
+  PM2_APP_NAME: adiance-nextjs
+  HEALTH_CHECK_PORT: "3000"
 
 jobs:
   build-and-deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
@@ -16,11 +33,24 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: ${{ env.NODE_VERSION }}
           cache: npm
 
+      - name: Cache Next.js build
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('package-lock.json') }}-
+
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-audit --no-fund
+
+      - name: Lint
+        if: ${{ inputs.skip_lint != 'true' }}
+        run: npm run lint
+        continue-on-error: true
 
       - name: Create env
         run: echo "${{ secrets.REACT_ENV }}" > .env
@@ -39,6 +69,7 @@ jobs:
           if [ -d public ]; then cp -r public deploy/public; fi
           cp .env deploy/.env
           tar -czf release.tar.gz -C deploy .
+          ls -lh release.tar.gz
 
       - name: Upload release to server
         uses: appleboy/scp-action@v0.1.7
@@ -49,12 +80,14 @@ jobs:
           source: "release.tar.gz"
           target: ${{ secrets.SERVER_PATH }}
 
-      - name: Extract and restart on server
+      - name: Extract and reload on server
+        id: deploy
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
+          command_timeout: 5m
           script: |
             set -e
             export NVM_DIR="$HOME/.nvm"
@@ -69,6 +102,7 @@ jobs:
               exit 1
             fi
             APP_DIR="${{ secrets.SERVER_PATH }}"
+            APP_NAME="${{ env.PM2_APP_NAME }}"
             RELEASE_DIR="$APP_DIR/current"
             BACKUP_DIR="$APP_DIR/previous"
             rm -rf "$BACKUP_DIR"
@@ -77,5 +111,62 @@ jobs:
             tar -xzf "$APP_DIR/release.tar.gz" -C "$RELEASE_DIR"
             rm -f "$APP_DIR/release.tar.gz"
             cd "$RELEASE_DIR"
-            pm2 reload adiance --update-env || pm2 start server.js --name adiance --time
+            if pm2 describe "$APP_NAME" >/dev/null 2>&1; then
+              pm2 reload "$APP_NAME" --update-env
+            else
+              pm2 start server.js --name "$APP_NAME" --time --cwd "$RELEASE_DIR"
+            fi
             pm2 save
+
+      - name: Health check
+        id: health
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          command_timeout: 2m
+          script: |
+            URL="http://localhost:${{ env.HEALTH_CHECK_PORT }}"
+            for i in $(seq 1 12); do
+              code=$(curl -fsS -o /dev/null -w "%{http_code}" "$URL" || echo "000")
+              if echo "$code" | grep -qE "^(2|3)"; then
+                echo "Health check passed (HTTP $code)"
+                exit 0
+              fi
+              echo "Attempt $i: HTTP $code — retrying in 5s..."
+              sleep 5
+            done
+            echo "Health check failed after 12 attempts"
+            exit 1
+
+      - name: Rollback on health check failure
+        if: failure() && steps.deploy.conclusion == 'success' && steps.health.conclusion == 'failure'
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          command_timeout: 3m
+          script: |
+            set -e
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+            APP_DIR="${{ secrets.SERVER_PATH }}"
+            APP_NAME="${{ env.PM2_APP_NAME }}"
+            RELEASE_DIR="$APP_DIR/current"
+            BACKUP_DIR="$APP_DIR/previous"
+            if [ ! -d "$BACKUP_DIR" ]; then
+              echo "No backup available to roll back to"
+              exit 1
+            fi
+            rm -rf "$RELEASE_DIR"
+            mv "$BACKUP_DIR" "$RELEASE_DIR"
+            cd "$RELEASE_DIR"
+            if pm2 describe "$APP_NAME" >/dev/null 2>&1; then
+              pm2 reload "$APP_NAME" --update-env
+            else
+              pm2 start server.js --name "$APP_NAME" --time --cwd "$RELEASE_DIR"
+            fi
+            pm2 save
+            echo "Rolled back to previous release"
