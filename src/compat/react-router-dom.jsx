@@ -50,6 +50,37 @@ export const NavLink = forwardRef(function NavLink(
   );
 });
 
+const NAV_STATE_KEY = "__nav_state__";
+
+function stripUrl(url) {
+  return String(url).split("?")[0].split("#")[0];
+}
+
+function writeNavState(url, state) {
+  if (typeof window === "undefined") return;
+  try {
+    if (state === undefined || state === null) {
+      sessionStorage.removeItem(NAV_STATE_KEY);
+    } else {
+      sessionStorage.setItem(
+        NAV_STATE_KEY,
+        JSON.stringify({ pathname: stripUrl(url), state }),
+      );
+    }
+  } catch {}
+}
+
+function readNavState(pathname) {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = sessionStorage.getItem(NAV_STATE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (parsed?.pathname === pathname) return parsed.state ?? null;
+  } catch {}
+  return null;
+}
+
 export function useNavigate() {
   const router = useRouter();
   return useMemo(() => {
@@ -60,6 +91,7 @@ export function useNavigate() {
         return;
       }
       const url = typeof to === "string" ? to : to?.pathname ?? "/";
+      writeNavState(url, options?.state);
       if (options && options.replace) router.replace(url);
       else router.push(url);
     };
@@ -73,7 +105,7 @@ export function useLocation() {
     pathname,
     search: typeof window !== "undefined" ? window.location.search : "",
     hash: typeof window !== "undefined" ? window.location.hash : "",
-    state: null,
+    state: readNavState(pathname),
     key: pathname,
   };
 }
