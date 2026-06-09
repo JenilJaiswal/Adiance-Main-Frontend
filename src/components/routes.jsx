@@ -20,6 +20,8 @@ const AutoplayCarousel = lazy(() => import("./AutoplayCarousel"));
 const BankFinance = lazy(() => import("./BankFinance"));
 const Blog1 = lazy(() => import("./Blog1"));
 const Blogs = lazy(() => import("./Blogs"));
+const News = lazy(() => import("./News"));
+const NewsDetail = lazy(() => import("./NewsDetail"));
 const CloudApplication = lazy(() => import("./CloudApplication"));
 const Compliance = lazy(() => import("./Compliance"));
 const ContactUs = lazy(() => import("./ContactUs"));
@@ -188,6 +190,8 @@ const routes = [
   { path: "/warranty-policy", element: <WarrantyPolicy /> },
   { path: "/blog", element: <Blogs /> },
   { path: "/blog/:urlTitle", element: <Blog1 /> },
+  { path: "/news", element: <News /> },
+  { path: "/news/:slug", element: <NewsDetail /> },
   // { path: "/careers", element: <CareerHome /> },
   // ----------ADMIN STARTS------------
   { path: "/admin", element: <LoginDash /> },

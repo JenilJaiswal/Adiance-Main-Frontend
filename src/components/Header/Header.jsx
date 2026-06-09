@@ -109,6 +109,7 @@ const Header = () => {
       path: "#",
       dropdownItems: [
         { name: "Blogs", path: "/blog" },
+        { name: "News", path: "/news" },
         { name: "Events", path: "/event" }
       ]
     },

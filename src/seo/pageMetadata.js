@@ -131,6 +131,13 @@ const CATALOG = {
     description:
       "Meet Adiance at global security trade shows including IFSEC, ISC West, Intersec, and Secutech. Discover NDAA-compliant cameras and edge-AI products.",
   },
+  "/news": {
+    title: "News & Press Releases | Adiance Technologies",
+    description:
+      "Latest news, announcements and press releases from Adiance Technologies — NDAA compliant OEM camera manufacturer.",
+    keywords:
+      "Adiance news, surveillance industry news, CCTV press releases, NDAA news",
+  },
   "/thank-you": {
     title: "Thank You | Adiance Technologies",
     description: "Thanks for contacting Adiance. Our team will reach out shortly.",

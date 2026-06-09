@@ -8,6 +8,7 @@ const breadcrumbNameMap = {
   "/about": "About Us",
   "/contact": "Contact Us",
   "/blog": "Blog",
+  "/news": "News",
   "/products": "Products",
   "/solutions": "Solutions",
   "/partners": "Partners",

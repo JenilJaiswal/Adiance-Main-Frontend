@@ -24,7 +24,6 @@ const redirects = {
   "/top-5-company-thermal-camera-": "/products/thermal-cameras",
   "/voipgateway.html": "/",
   "/2023/07/27": "/blog",
-  "/news": "/blog",
   "/panoramic": "/products/ptz-cameras",
   "/video-surveillance-manufacturer-in-the-usa": "/about",
   "/adiance-": "/",

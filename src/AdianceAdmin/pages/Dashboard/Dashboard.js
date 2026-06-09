@@ -19,6 +19,7 @@ import {
 // Import your page components (assuming they are also converted to MUI)
 import Navbar from "../../components/ui/Navbar";
 import CreateBlogPage from "./components/CreateBlogPage";
+import CreateNewsPage from "./components/CreateNewsPage";
 import HRAddJobPage from "./components/HRAddJobPage";
 import HRJobListPage from "./components/HRJobListPage";
 
@@ -106,7 +107,39 @@ const Dashboard = () => {
 
     // --- MARKETING Role ---
     if (role === "MARKETING") {
-      return <CreateBlogPage />;
+      // Reuse the admin section selector so marketing can switch between Blogs/News
+      if (!adminSection) {
+        return (
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            minHeight="calc(100vh - 64px)"
+          >
+            <Paper sx={{ p: 4, textAlign: "center" }}>
+              <Typography variant="h6" gutterBottom>
+                Select a section to manage:
+              </Typography>
+              <Stack direction="row" spacing={2} justifyContent="center" mt={2}>
+                <Button
+                  variant="contained"
+                  onClick={() => setAdminSection("BLOG")}
+                >
+                  Blogs
+                </Button>
+                <Button
+                  variant="contained"
+                  onClick={() => setAdminSection("NEWS")}
+                >
+                  News
+                </Button>
+              </Stack>
+            </Paper>
+          </Box>
+        );
+      }
+      if (adminSection === "BLOG") return <CreateBlogPage />;
+      if (adminSection === "NEWS") return <CreateNewsPage />;
     }
 
     // --- ADMIN Role ---
@@ -133,6 +166,12 @@ const Dashboard = () => {
                 </Button>
                 <Button
                   variant="contained"
+                  onClick={() => setAdminSection("NEWS")}
+                >
+                  News
+                </Button>
+                <Button
+                  variant="contained"
                   onClick={() => setAdminSection("JOB")}
                 >
                   Jobs
@@ -146,6 +185,10 @@ const Dashboard = () => {
       // If a section is selected, show the corresponding component
       if (adminSection === "BLOG") {
         return <CreateBlogPage />;
+      }
+
+      if (adminSection === "NEWS") {
+        return <CreateNewsPage />;
       }
 
       if (adminSection === "JOB") {

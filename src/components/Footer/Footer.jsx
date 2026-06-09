@@ -100,6 +100,7 @@ const Footer = () => {
               <h3>RESOURCES</h3>
               <ul>
                 <li><a href="/blog">Blogs</a></li>
+                <li><a href="/news">News</a></li>
                 <li><a href="/event">Events</a></li>
               </ul>
             </div>

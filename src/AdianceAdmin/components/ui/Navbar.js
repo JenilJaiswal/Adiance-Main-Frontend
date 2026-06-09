@@ -156,7 +156,7 @@ const Navbar = ({ adminSection, setAdminSection }) => {
             </Box>
             {/* ---------------------------------------------------- */}
             <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
-              {userInfo.role === "ADMIN" && adminSection && (
+              {(userInfo.role === "ADMIN" || userInfo.role === "MARKETING") && adminSection && (
                 <Box>
                   <Stack direction="row" bgcolor="#F5F5F5" borderRadius="24px">
                     <Button borderRadius="24px" variant="contained" onClick={handleMenuClick}>
@@ -177,12 +177,22 @@ const Navbar = ({ adminSection, setAdminSection }) => {
                       </MenuItem>
                       <MenuItem
                         onClick={() => {
-                          setAdminSection("JOB");
+                          setAdminSection("NEWS");
                           handleAdminMenuClose();
                         }}
                       >
-                        Jobs
+                        News
                       </MenuItem>
+                      {userInfo.role === "ADMIN" && (
+                        <MenuItem
+                          onClick={() => {
+                            setAdminSection("JOB");
+                            handleAdminMenuClose();
+                          }}
+                        >
+                          Jobs
+                        </MenuItem>
+                      )}
                     </Menu>
                     <Button
                       onClick={() => setAdminSection(null)}
