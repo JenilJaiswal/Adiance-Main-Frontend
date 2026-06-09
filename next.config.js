@@ -37,6 +37,8 @@ const legacyRedirects = {
   "/adiance-cloud-based-thermal-camera": "/products/thermal-cameras",
   "/smart-anpr-lpr": "/products/anpr-lpr-cameras",
   "/smart-wifi-cloud-cctv-camera": "/products/wifi-cameras",
+  "/blog/complete-guide-ndaa-compliant-surveillance-cameras":
+    "/blog/the-complete-guide-to-ndaa-compliant-surveillance-cameras",
 };
 
 const cspDirectives = [

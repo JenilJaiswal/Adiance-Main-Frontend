@@ -1,8 +1,15 @@
-import { buildMetadata } from "@/seo/pageMetadata";
+import { legacyBlogMetadata, LegacyBlogSchemas } from "@/seo/legacyBlogMeta";
 import ClientPage from "./ClientPage";
 
-export const metadata = buildMetadata("/blog/how-to-migrate-cctv-brand-from-chinese-soc");
+const SLUG = "how-to-migrate-cctv-brand-from-chinese-soc";
+
+export const metadata = legacyBlogMetadata(SLUG);
 
 export default function Page() {
-  return <ClientPage />;
+  return (
+    <>
+      <LegacyBlogSchemas slug={SLUG} />
+      <ClientPage />
+    </>
+  );
 }
