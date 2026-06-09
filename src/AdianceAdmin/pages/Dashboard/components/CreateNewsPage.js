@@ -82,16 +82,7 @@ const CreateNewsPage = () => {
     },
   });
 
-  const titleValue = watch("title");
-  const urlWordsValue = watch("urlWords");
   const imageValue = watch("image");
-
-  // Auto-fill slug from title when creating a new news item and slug is empty
-  useEffect(() => {
-    if (!editing && titleValue && !urlWordsValue) {
-      setValue("urlWords", slugify(titleValue), { shouldDirty: true });
-    }
-  }, [titleValue, urlWordsValue, editing, setValue]);
 
   useEffect(() => {
     if (editing && editing._id) {
@@ -281,7 +272,7 @@ const CreateNewsPage = () => {
             ),
           }}
           {...register("urlWords", { required: true })}
-          onBlur={(e) => setValue("urlWords", slugify(e.target.value))}
+          placeholder="e.g. my-custom-news-slug"
         />
 
         <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
