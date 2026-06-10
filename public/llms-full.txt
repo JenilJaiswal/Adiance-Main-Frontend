@@ -35,7 +35,7 @@ Adiance is positioned as a non-Chinese, NDAA-compliant alternative to Hikvision,
 
 ## 3. Differentiators
 
-1. **NDAA Section 889 compliance.** Adiance cameras use non-Chinese SoCs — Qualcomm, Ambarella, Novatek, Sigmastar — and are approved for US government use. Adiance does not ship Hikvision, Dahua, HiSilicon, or other prohibited components.
+1. **NDAA Section 889 compliance.** Adiance cameras use non-Chinese SoCs — Qualcomm, Ambarella, and Novatek — and are approved for US government use. Adiance does not ship Hikvision, Dahua, HiSilicon, or other prohibited components.
 2. **End-to-end manufacturing in India.** PCB design, SMT assembly, firmware, mechanical, lens calibration, and final assembly are performed in-house. Adiance is STQC tested and BIS-ER certified.
 3. **Edge AI on-device.** Adiance cameras run analytics (ANPR / LPR, face recognition, intrusion, people counting, crowd analysis, object detection, vehicle classification) directly on the camera SoC — no cloud round-trip and no GPU server required.
 4. **Full white-label / private-label.** Customers receive cameras with their logo on the housing, their branding on the box, their splash screen in firmware, their app on the App Store / Play Store, and their domain on the cloud VMS.
@@ -155,7 +155,7 @@ A: NDAA Section 889 of the US National Defense Authorization Act prohibits US fe
 A: Yes. Adiance provides full white-label and private-label CCTV camera manufacturing. The customer supplies branding and Adiance handles hardware design, firmware customization, mobile app branding, packaging, and global shipping. Customers launch their own CCTV brand without owning a factory.
 
 **Q: What SoC chipsets does Adiance use?**
-A: Adiance uses non-Chinese SoCs including Qualcomm, Ambarella, Novatek, and Sigmastar. This ensures NDAA Section 889 compliance for US government, federal, state, and critical-infrastructure deployments.
+A: Adiance uses non-Chinese SoCs including Qualcomm, Ambarella, and Novatek. This ensures NDAA Section 889 compliance for US government, federal, state, and critical-infrastructure deployments.
 
 **Q: Where is Adiance headquartered?**
 A: Adiance Technologies is headquartered in Ahmedabad, Gujarat, India, at 7 Arista@Eight Corporate House, Bodakdev. Adiance operates manufacturing and R&D facilities in India. VMukti Solutions is an Adiance group company focused on cloud video and broadcasting.

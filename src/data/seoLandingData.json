@@ -1425,7 +1425,7 @@
         {
           "icon": "📷",
           "title": "Non-Chinese SoC Inside",
-          "description": "Multiple chipset families: Qualcomm, Sigmastar, Sony, and others. Zero backdoor risk. NDAA Section 889 compliant out of the box."
+          "description": "Multiple chipset families: Qualcomm, Ambarella, Sony, and others. Zero backdoor risk. NDAA Section 889 compliant out of the box."
         },
         {
           "icon": "📷",
@@ -1460,7 +1460,7 @@
         {
           "feature": "SoC Origin",
           "col1": "Chinese (HiSilicon)",
-          "col2": "Non-Chinese (Qualcomm, Sigmastar, Sony)"
+          "col2": "Non-Chinese (Qualcomm, Ambarella, Sony)"
         },
         {
           "feature": "Cloud VMS",
@@ -1493,7 +1493,7 @@
       "heading": "The Non-Chinese SoC Advantage",
       "paragraphs": [
         "Hikvision and Dahua are banned under NDAA Section 889. Brands selling cameras with Chinese SoC face government contract exclusion, backdoor risk headlines, supply chain disruption, and eroding customer trust. This is not a future risk — it is happening now.",
-        "We use multiple non-Chinese chipset families — Qualcomm, Sigmastar, Sony, and others. Every component is traceable to non-banned sources. Your customers get cameras they can deploy in government buildings, defense perimeters, and critical infrastructure without compliance concerns. That is your competitive advantage as an OEM partner."
+        "We use multiple non-Chinese chipset families — Qualcomm, Ambarella, Sony, and others. Every component is traceable to non-banned sources. Your customers get cameras they can deploy in government buildings, defense perimeters, and critical infrastructure without compliance concerns. That is your competitive advantage as an OEM partner."
       ]
     }
   },
@@ -2654,7 +2654,7 @@
       },
       {
         "question": "Why is Adiance Technologies considered NDAA compliant?",
-        "answer": "Adiance Technologies is an Indian OEM/ODM manufacturer. Our entire supply chain, from design to manufacturing, is based in India, utilizing non-Chinese chipsets (such as Sigmastar and Sony) and components. This strict adherence to non-restricted origins ensures that all Adiance AI CCTV cameras meet the stringent requirements of NDAA Section 889, providing our partners with compliant and secure surveillance solutions."
+        "answer": "Adiance Technologies is an Indian OEM/ODM manufacturer. Our entire supply chain, from design to manufacturing, is based in India, utilizing non-Chinese chipsets (such as Ambarella and Sony) and components. This strict adherence to non-restricted origins ensures that all Adiance AI CCTV cameras meet the stringent requirements of NDAA Section 889, providing our partners with compliant and secure surveillance solutions."
       },
       {
         "question": "Are Adiance cameras tariff-free for US imports?",
@@ -2670,7 +2670,7 @@
       },
       {
         "question": "What kind of chipsets does Adiance use in its NDAA compliant cameras?",
-        "answer": "Adiance Technologies exclusively uses non-Chinese chipsets from reputable manufacturers such as Sigmastar and Sony in its NDAA compliant AI CCTV cameras. This commitment to secure and trusted components is a cornerstone of our compliance strategy and product integrity."
+        "answer": "Adiance Technologies exclusively uses non-Chinese chipsets from reputable manufacturers such as Ambarella and Sony in its NDAA compliant AI CCTV cameras. This commitment to secure and trusted components is a cornerstone of our compliance strategy and product integrity."
       },
       {
         "question": "Can Adiance customize NDAA compliant cameras for specific OEM needs?",
@@ -2721,7 +2721,7 @@
         },
         {
           "feature": "Chipsets",
-          "col1": "Non-Chinese (Sigmastar, Sony)",
+          "col1": "Non-Chinese (Ambarella, Sony)",
           "col2": "Often Chinese-made, posing security risks"
         },
         {
@@ -2911,7 +2911,7 @@
         {
           "icon": "📷",
           "title": "Non-Chinese Chipsets",
-          "description": "Adiance cameras use Sigmastar and Sony chipsets with no components from manufacturers subject to Chinese national security laws. True hardware-level data sovereignty."
+          "description": "Adiance cameras use Ambarella and Sony chipsets with no components from manufacturers subject to Chinese national security laws. True hardware-level data sovereignty."
         }
       ]
     },
@@ -2935,7 +2935,7 @@
         },
         {
           "feature": "Non-Chinese chipset supply chain",
-          "col1": "Sigmastar and Sony chipsets",
+          "col1": "Ambarella and Sony chipsets",
           "col2": "Chinese SoC manufacturers"
         },
         {
@@ -3585,7 +3585,7 @@
       },
       {
         "question": "Are Adiance CCTV cameras NDAA compliant?",
-        "answer": "Yes, all Adiance CCTV cameras are fully NDAA Section 889 compliant. We utilize non-Chinese chipsets (such as Sigmastar and Sony) and our manufacturing is based in India, ensuring our products meet the strict requirements for US government and critical infrastructure projects. Our transparent supply chain documentation supports this claim."
+        "answer": "Yes, all Adiance CCTV cameras are fully NDAA Section 889 compliant. We utilize non-Chinese chipsets (such as Ambarella and Sony) and our manufacturing is based in India, ensuring our products meet the strict requirements for US government and critical infrastructure projects. Our transparent supply chain documentation supports this claim."
       },
       {
         "question": "Why is \"Made in India\" important for US buyers?",
@@ -3593,7 +3593,7 @@
       },
       {
         "question": "Do Adiance cameras use Chinese components?",
-        "answer": "No, Adiance Technologies explicitly avoids the use of restricted Chinese components and chipsets. Our cameras are built with trusted components from global suppliers, including chipsets from Sigmastar and Sony, to guarantee non-Chinese origin and compliance. This policy is strictly enforced across our entire product line."
+        "answer": "No, Adiance Technologies explicitly avoids the use of restricted Chinese components and chipsets. Our cameras are built with trusted components from global suppliers, including chipsets from Ambarella and Sony, to guarantee non-Chinese origin and compliance. This policy is strictly enforced across our entire product line."
       },
       {
         "question": "What kind of OEM/ODM services does Adiance offer?",
@@ -3642,7 +3642,7 @@
       "rows": [
         {
           "feature": "Origin & Compliance",
-          "col1": "Made in India, NDAA Section 889 Compliant, Non-Chinese Chipsets (Sigmastar/Sony). Our manufacturing process is transparent and fully auditable.",
+          "col1": "Made in India, NDAA Section 889 Compliant, Non-Chinese Chipsets (Ambarella/Sony). Our manufacturing process is transparent and fully auditable.",
           "col2": "Often Chinese origin, potential NDAA non-compliance, restricted chipsets. Supply chains can be opaque and difficult to verify."
         },
         {
@@ -4239,7 +4239,7 @@
       },
       {
         "question": "Are Adiance cameras and VMS NDAA compliant?",
-        "answer": "Yes, Adiance Technologies is committed to compliance. Our cameras are manufactured in India using non-Chinese chipsets (Sigmastar/Sony), making them fully NDAA compliant. Our ArcisAI VMS is also STQC certified, ensuring high standards of security and reliability for your deployments."
+        "answer": "Yes, Adiance Technologies is committed to compliance. Our cameras are manufactured in India using non-Chinese chipsets (Ambarella/Sony), making them fully NDAA compliant. Our ArcisAI VMS is also STQC certified, ensuring high standards of security and reliability for your deployments."
       },
       {
         "question": "Can we integrate Adiance solutions with our existing network infrastructure?",
@@ -4292,7 +4292,7 @@
       "rows": [
         {
           "feature": "Origin & Compliance",
-          "col1": "Made in India, NDAA Compliant, Non-Chinese Chipsets (Sigmastar/Sony)",
+          "col1": "Made in India, NDAA Compliant, Non-Chinese Chipsets (Ambarella/Sony)",
           "col2": "Often restricted-origin, compliance issues"
         },
         {
@@ -4754,7 +4754,7 @@
       },
       {
         "question": "Is Adiance NDAA Section 889 compliant?",
-        "answer": "Yes. Adiance cameras contain zero components from prohibited entities (Hikvision, Dahua, Huawei, ZTE, Hytera, HiSilicon). Non-Chinese SoCs from Qualcomm, Ambarella, Novatek, and Sigmastar are used. Full bill-of-materials documentation is available for federal procurement audits."
+        "answer": "Yes. Adiance cameras contain zero components from prohibited entities (Hikvision, Dahua, Huawei, ZTE, Hytera, HiSilicon). Non-Chinese SoCs from Qualcomm, Ambarella, and Novatek are used. Full bill-of-materials documentation is available for federal procurement audits."
       },
       {
         "question": "Can I launch my own brand of Hikvision-alternative cameras?",
@@ -5046,7 +5046,7 @@
       },
       {
         "question": "Is Adiance NDAA Section 889 compliant?",
-        "answer": "Yes. Adiance cameras contain zero components from prohibited entities (Dahua, Hikvision, Huawei, ZTE, Hytera, HiSilicon). Non-Chinese SoCs from Qualcomm, Ambarella, Novatek, and Sigmastar are used. Full BoM documentation is available for federal procurement audits."
+        "answer": "Yes. Adiance cameras contain zero components from prohibited entities (Dahua, Hikvision, Huawei, ZTE, Hytera, HiSilicon). Non-Chinese SoCs from Qualcomm, Ambarella, and Novatek are used. Full BoM documentation is available for federal procurement audits."
       },
       {
         "question": "Can I launch my own brand of Dahua-alternative cameras?",

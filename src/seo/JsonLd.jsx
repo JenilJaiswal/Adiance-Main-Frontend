@@ -58,7 +58,7 @@ export const HOMEPAGE_FAQ = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "Adiance uses non-Chinese SoC platforms including Qualcomm, Ambarella, Novatek, and Sigmastar. This ensures NDAA compliance for US government and enterprise deployments.",
+          "Adiance uses non-Chinese SoC platforms including Qualcomm, Ambarella, and Novatek. This ensures NDAA compliance for US government and enterprise deployments.",
       },
     },
     {

@@ -455,7 +455,7 @@ const CATALOG = {
   "/non-chinese-soc-camera-manufacturer": {
     title: "Non-Chinese SoC Camera Manufacturer | NDAA-Compliant | Adiance",
     description:
-      "Adiance manufactures cameras on non-Chinese SoCs — Qualcomm, Ambarella, Novatek, Sigmastar — for NDAA compliance.",
+      "Adiance manufactures cameras on non-Chinese SoCs — Qualcomm, Ambarella, and Novatek — for NDAA compliance.",
   },
   "/non-chinese-cctv-camera-manufacturer": {
     title: "Non-Chinese CCTV Camera Manufacturer | India | Adiance",

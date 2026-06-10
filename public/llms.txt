@@ -15,7 +15,7 @@
 
 ## Why Adiance
 
-- **NDAA Section 889 compliant** — non-Chinese SoC platforms (Qualcomm, Ambarella, Novatek, Sigmastar); approved for US Federal procurement and critical infrastructure.
+- **NDAA Section 889 compliant** — non-Chinese SoC platforms (Qualcomm, Ambarella, Novatek); approved for US Federal procurement and critical infrastructure.
 - **Made in India** — STQC tested, BIS-ER certified, end-to-end PCB design, SMT assembly, firmware, mechanical, QA, and packaging in-house.
 - **Full white-label** — your logo, your firmware, your mobile app, your packaging. Launch a private-label CCTV brand without owning a factory.
 - **Edge AI on-device** — ANPR/LPR, face recognition, object detection, intrusion, people counting, crowd analytics — all processed on the camera, no cloud dependency.
