@@ -61,10 +61,10 @@ const comparisonRows = [
 ];
 
 const faqs = [
-  { q: "What is NDAA Section 889 compliance?", a: "NDAA Section 889 of the National Defense Authorization Act prohibits U.S. federal agencies from procuring or using telecommunications and video surveillance equipment from specific Chinese manufacturers including Huawei, ZTE, Hytera, Hikvision, and Dahua, as well as their subsidiaries and affiliates." },
+  { q: "What is NDAA Section 889 compliance?", a: "NDAA Section 889 of the National Defense Authorization Act prohibits U.S. federal agencies from procuring or using telecommunications and video surveillance equipment from the specific manufacturers named in the Act, as well as their subsidiaries and affiliates." },
   { q: "Are Adiance cameras NDAA compliant?", a: "Yes. Adiance cameras are designed and manufactured without any components from the banned entities listed under NDAA Section 889. Our entire product line is fully compliant and suitable for use in U.S. government facilities, education institutions, and federally-funded projects." },
   { q: "Who needs NDAA-compliant cameras?", a: "Any organization receiving U.S. federal funding or contracting with the federal government must use NDAA-compliant equipment. This includes government agencies, military installations, public schools and universities, healthcare facilities receiving federal funds, airports, and critical infrastructure." },
-  { q: "How do Adiance cameras compare to Hikvision and Dahua alternatives?", a: "Adiance offers comparable or superior technology including Edge AI analytics, 4G/LTE connectivity, and cloud VMS at competitive pricing. Unlike banned manufacturers, Adiance cameras can be deployed in any government or federally-funded project without compliance risk." },
+  { q: "How do Adiance cameras compare with non-compliant camera brands?", a: "Adiance offers comparable or superior technology including Edge AI analytics, 4G/LTE connectivity, and cloud VMS at competitive pricing. Adiance cameras can be deployed in any government or federally-funded project without compliance risk." },
   { q: "Does Adiance offer OEM/ODM manufacturing for NDAA-compliant cameras?", a: "Yes. Adiance provides full OEM and ODM manufacturing services, allowing security integrators and distributors to offer NDAA-compliant cameras under their own brand with custom firmware, housing, and packaging options." },
   { q: "What certifications do Adiance cameras hold?", a: "Adiance cameras are NDAA Section 889 compliant, ONVIF Profile S/T/G compatible, and manufactured in ISO-certified facilities. We also support RTSP, HTTPS encryption, and comply with international data protection standards." },
 ];
@@ -102,8 +102,8 @@ const NdaaCompliance = () => {
     <div className="ndaa-compliance-container">
       <Helmet>
         <title>NDAA Compliant Security Cameras | Section 889 Approved | Adiance</title>
-        <meta name="description" content="Adiance manufactures NDAA Section 889 compliant security cameras. Government-approved alternative to Hikvision & Dahua with Edge AI, 4G LTE, and Cloud VMS. Trusted by US federal agencies." />
-        <meta name="keywords" content="NDAA compliant cameras, NDAA Section 889, government approved security cameras, Hikvision alternative, Dahua alternative, compliant CCTV manufacturer, federal security cameras" />
+        <meta name="description" content="Adiance manufactures NDAA Section 889 compliant security cameras with Edge AI, 4G LTE, and Cloud VMS — approved for US government and federally funded deployments." />
+        <meta name="keywords" content="NDAA compliant cameras, NDAA Section 889, government approved security cameras, NDAA compliant camera replacement, compliant CCTV manufacturer, federal security cameras" />
         <link rel="canonical" href={canonicalUrl} />
         <meta name="robots" content="index, follow" />
 
@@ -159,7 +159,7 @@ const NdaaCompliance = () => {
           <h2 className="ndaa-section-title">What is NDAA Section 889?</h2>
           <div className="ndaa-what-content">
             <p className="ndaa-text">
-              The National Defense Authorization Act (NDAA) Section 889 prohibits U.S. federal agencies and their contractors from procuring telecommunications and video surveillance equipment from specific Chinese manufacturers — including <strong>Hikvision</strong> and <strong>Dahua</strong> — due to national security concerns.
+              The National Defense Authorization Act (NDAA) Section 889 prohibits U.S. federal agencies and their contractors from procuring telecommunications and video surveillance equipment from the specific manufacturers named in the Act, due to national security concerns.
             </p>
             <p className="ndaa-text">
               This regulation affects every organization that does business with the U.S. federal government, receives federal grants, or operates within federally-funded facilities including schools, hospitals, military bases, and government buildings.
@@ -226,7 +226,7 @@ const NdaaCompliance = () => {
                 <tr>
                   <th>Feature</th>
                   <th>Adiance</th>
-                  <th>Hikvision / Dahua</th>
+                  <th>Non-Compliant Brands</th>
                   <th>Other NDAA Brands</th>
                 </tr>
               </thead>

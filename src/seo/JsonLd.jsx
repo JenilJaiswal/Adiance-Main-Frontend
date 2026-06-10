@@ -40,7 +40,7 @@ export const HOMEPAGE_FAQ = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "NDAA Section 889 prohibits US federal agencies from purchasing telecommunications and surveillance equipment from named Chinese manufacturers including Hikvision and Dahua. Adiance cameras are NDAA compliant, manufactured in India with non-Chinese chipsets, and approved for US Federal procurement.",
+          "NDAA Section 889 prohibits US federal agencies from purchasing telecommunications and surveillance equipment from the manufacturers named in the Act. Adiance cameras are NDAA compliant, manufactured in India with non-Chinese chipsets, and approved for US Federal procurement.",
       },
     },
     {

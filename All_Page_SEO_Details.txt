@@ -881,8 +881,8 @@ PAGE 48: NDAA COMPLIANCE
   File:           src/components/NdaaCompliance.jsx
 --------------------------------------------------------------------------------
   Title:          NDAA Compliant Security Cameras | Section 889 Approved | Adiance
-  Description:    Adiance manufactures NDAA Section 889 compliant security cameras. Government-approved alternative to Hikvision & Dahua with Edge AI, 4G LTE, and Cloud VMS. Trusted by US federal agencies.
-  Keywords:       NDAA compliant cameras, NDAA Section 889, government approved security cameras, Hikvision alternative, Dahua alternative, compliant CCTV manufacturer, federal security cameras
+  Description:    Adiance manufactures NDAA Section 889 compliant security cameras. Approved for US government and federally funded deployments, with Edge AI, 4G LTE, and Cloud VMS. Trusted by US federal agencies.
+  Keywords:       NDAA compliant cameras, NDAA Section 889, government approved security cameras, NDAA compliant camera replacement, compliant CCTV manufacturer, federal security cameras
   Canonical URL:  Dynamic (https://www.adiance.com{pathname})
   OG Title:       NDAA Compliant Security Cameras | Adiance Technologies
   OG Description: Government-approved NDAA Section 889 compliant cameras. A trusted alternative to banned manufacturers with advanced AI surveillance technology.
@@ -1031,8 +1031,8 @@ PAGE 56: US MARKET LANDING
   File:           src/components/UsLanding.jsx
 --------------------------------------------------------------------------------
   Title:          NDAA Compliant Security Cameras for the United States | Adiance
-  Description:    Adiance provides NDAA Section 889 compliant security cameras for US government agencies, schools, hospitals, and enterprises. A trusted Hikvision and Dahua alternative with Edge AI and 4G LTE.
-  Keywords:       NDAA compliant cameras USA, security cameras for US government, Hikvision alternative United States, government approved CCTV, federal security camera supplier
+  Description:    Adiance provides NDAA Section 889 compliant security cameras for US government agencies, schools, hospitals, and enterprises. A trusted NDAA-compliant manufacturing partner with Edge AI and 4G LTE.
+  Keywords:       NDAA compliant cameras USA, security cameras for US government, NDAA compliant camera replacement USA, government approved CCTV, federal security camera supplier
   Canonical URL:  Dynamic (https://www.adiance.com{pathname})
   OG Title:       NDAA Compliant Security Cameras for the United States | Adiance
   OG Description: Government-approved NDAA Section 889 compliant cameras for US federal agencies, education, healthcare, and enterprise.
