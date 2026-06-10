@@ -10,11 +10,13 @@ import DownloadForOfflineOutlinedIcon from "@mui/icons-material/DownloadForOffli
 import SearchIcon from "@mui/icons-material/Search";
 import axios from "axios";
 
-// API configuration
-const API_BASE_URL = "https://etaems.arcisai.io:5000/api/version";
+// API configuration — requests go through the Next.js proxy at
+// app/api/version/[...path]/route.js to bypass CORS and self-signed
+// cert issues on the upstream tools/firmware backend.
+const API_BASE_URL = "/api/version";
 const instance = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000,
+  timeout: 60000,
 });
 
 // API functions for Tools (Apps)
@@ -49,6 +51,7 @@ const downloadAppById = async (id, type) => {
     } else {
       // Default fallback filenames
       if (type === "releaseNotes") filename = "releaseNotes.txt";
+      if (type === "userManual") filename = "userManual.pdf";
       if (type === "app") filename = "applicationFiles.zip"; // always ZIP now
     }
 
@@ -253,7 +256,7 @@ const Tools = () => {
                         <th style={headerCellStyle}>App Name</th>
                         <th style={headerCellStyle}>Version</th>
                         <th style={headerCellStyle}>Uploaded On</th>
-                        <th style={headerCellStyle}>Release Notes</th>
+                        <th style={headerCellStyle}>User Manual</th>
                         <th style={headerCellStyle}>Download</th>
                       </tr>
                     </thead>
@@ -267,23 +270,27 @@ const Tools = () => {
                             <td style={bodyCellStyle(isLastRow)}>{row.versionName}</td>
                             <td style={bodyCellStyle(isLastRow)}>{formatDate(row.updatedAt || row.uploadedAt || row.createdAt)}</td>
                             <td style={bodyCellStyle(isLastRow)}>
-                              <button
-                                onClick={() => handleDownload(row._id, 'releaseNotes')}
-                                className="link"
-                                aria-label={`Open release notes for ${appName}`}
-                                style={{ 
-                                  display: "inline-flex", 
-                                  alignItems: "center", 
-                                  gap: 8,
-                                  background: "none",
-                                  border: "none",
-                                  cursor: "pointer",
-                                  padding: 0
-                                }}
-                              >
-                                <DescriptionOutlinedIcon fontSize="small" />
-                                <span>View</span>
-                              </button>
+                              {row.userManualFile ? (
+                                <button
+                                  onClick={() => handleDownload(row._id, 'userManual')}
+                                  className="link"
+                                  aria-label={`Download user manual for ${appName}`}
+                                  style={{
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    gap: 8,
+                                    background: "none",
+                                    border: "none",
+                                    cursor: "pointer",
+                                    padding: 0
+                                  }}
+                                >
+                                  <DescriptionOutlinedIcon fontSize="small" />
+                                  <span>Download</span>
+                                </button>
+                              ) : (
+                                <span style={{ color: "#888" }}>—</span>
+                              )}
                             </td>
                             <td style={bodyCellStyle(isLastRow)}>
                               <button

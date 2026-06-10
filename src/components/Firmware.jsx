@@ -10,17 +10,19 @@ import DownloadForOfflineOutlinedIcon from "@mui/icons-material/DownloadForOffli
 import SearchIcon from "@mui/icons-material/Search";
 import axios from "axios";
 
-// API configuration
-const API_BASE_URL = "https://etaems.arcisai.io:5000/api/version";
+// API configuration — requests go through the Next.js proxy at
+// app/api/version/[...path]/route.js to bypass CORS and self-signed
+// cert issues on the upstream tools/firmware backend.
+const API_BASE_URL = "/api/version";
 const instance = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000,
+  timeout: 60000,
 });
 
 // API functions
 const getAllFirmware = async () => {
   try {
-    const res = await instance.get("/firmware/latest");
+    const res = await instance.get("/firmware/getAllFirmware");
     return res.data;
   } catch (err) {
     console.error("Firmware fetch failed:", err);

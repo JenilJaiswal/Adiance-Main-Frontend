@@ -47,7 +47,7 @@ const cspDirectives = [
   "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net",
-  "connect-src 'self' https://*.adiance.com https://backend.adiance.com https://arcisai.io https://*.arcisai.io https://www.google-analytics.com https://*.googletagmanager.com https://*.facebook.com https://*.zoho.com https://*.zohopublic.com",
+  "connect-src 'self' https://*.adiance.com https://backend.adiance.com https://arcisai.io https://*.arcisai.io https://*.arcisai.io:5000 https://www.google-analytics.com https://*.googletagmanager.com https://*.facebook.com https://*.zoho.com https://*.zohopublic.com",
   "media-src 'self' https:",
   "frame-src 'self' https://www.googletagmanager.com https://*.zoho.com https://*.youtube.com https://www.youtube.com",
   "object-src 'none'",
@@ -149,11 +149,13 @@ const nextConfig = {
   async rewrites() {
     const backend =
       process.env.NEXT_PUBLIC_BACKEND_URL || "https://backend.adiance.com";
-    return [
-      { source: "/api/:path*", destination: `${backend}/api/:path*` },
-      { source: "/images/:path*", destination: `${backend}/images/:path*` },
-      { source: "/upload/:path*", destination: `${backend}/upload/:path*` },
-    ];
+    return {
+      fallback: [
+        { source: "/api/:path*", destination: `${backend}/api/:path*` },
+        { source: "/images/:path*", destination: `${backend}/images/:path*` },
+        { source: "/upload/:path*", destination: `${backend}/upload/:path*` },
+      ],
+    };
   },
 };
 
