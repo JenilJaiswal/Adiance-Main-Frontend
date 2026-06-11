@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/complete-surveillance-solutions");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/complete-surveillance-solutions" landingSlug="complete-surveillance-solutions" />
       <ClientPage />
+      <PageSchema path="/complete-surveillance-solutions" landingSlug="complete-surveillance-solutions" />
     </>
   );
 }

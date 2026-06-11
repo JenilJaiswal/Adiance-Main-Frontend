@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/ndaa-compliance");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/ndaa-compliance" />
       <ClientPage />
+      <PageSchema path="/ndaa-compliance" />
     </>
   );
 }

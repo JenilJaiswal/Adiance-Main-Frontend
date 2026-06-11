@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/public-transport");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/public-transport" />
       <ClientPage />
+      <PageSchema path="/public-transport" />
     </>
   );
 }

@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/privacy-policy");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/privacy-policy" />
       <ClientPage />
+      <PageSchema path="/privacy-policy" />
     </>
   );
 }

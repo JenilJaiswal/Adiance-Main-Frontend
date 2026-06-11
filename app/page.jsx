@@ -10,8 +10,8 @@ export default function Page() {
     <>
       <JsonLd data={HOMEPAGE_WEBPAGE} />
       <JsonLd data={HOMEPAGE_FAQ} />
-      <PageSchema path="/" />
       <ClientPage />
+      <PageSchema path="/" />
     </>
   );
 }

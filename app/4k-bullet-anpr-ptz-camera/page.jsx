@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/4k-bullet-anpr-ptz-camera");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/4k-bullet-anpr-ptz-camera" />
       <ClientPage />
+      <PageSchema path="/4k-bullet-anpr-ptz-camera" />
     </>
   );
 }

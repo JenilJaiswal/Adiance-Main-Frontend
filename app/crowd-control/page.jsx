@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/crowd-control");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/crowd-control" />
       <ClientPage />
+      <PageSchema path="/crowd-control" />
     </>
   );
 }

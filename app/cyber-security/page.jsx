@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/cyber-security");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/cyber-security" />
       <ClientPage />
+      <PageSchema path="/cyber-security" />
     </>
   );
 }

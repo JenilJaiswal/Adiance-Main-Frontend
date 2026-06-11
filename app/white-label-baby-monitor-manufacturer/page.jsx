@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/white-label-baby-monitor-manufacturer");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/white-label-baby-monitor-manufacturer" landingSlug="white-label-baby-monitor-manufacturer" />
       <ClientPage />
+      <PageSchema path="/white-label-baby-monitor-manufacturer" landingSlug="white-label-baby-monitor-manufacturer" />
     </>
   );
 }

@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/ndaa-compliant-cctv-camera-manufacturer"
 export default function Page() {
   return (
     <>
-      <PageSchema path="/ndaa-compliant-cctv-camera-manufacturer" landingSlug="ndaa-compliant-cctv-camera-manufacturer" />
       <ClientPage />
+      <PageSchema path="/ndaa-compliant-cctv-camera-manufacturer" landingSlug="ndaa-compliant-cctv-camera-manufacturer" />
     </>
   );
 }

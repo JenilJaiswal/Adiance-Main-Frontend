@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/banking-finance-cctv-manufacturer");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/banking-finance-cctv-manufacturer" landingSlug="banking-finance-cctv-manufacturer" />
       <ClientPage />
+      <PageSchema path="/banking-finance-cctv-manufacturer" landingSlug="banking-finance-cctv-manufacturer" />
     </>
   );
 }

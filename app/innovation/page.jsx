@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/innovation");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/innovation" />
       <ClientPage />
+      <PageSchema path="/innovation" />
     </>
   );
 }

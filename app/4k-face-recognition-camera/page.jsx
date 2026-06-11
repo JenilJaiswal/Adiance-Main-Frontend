@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/4k-face-recognition-camera");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/4k-face-recognition-camera" />
       <ClientPage />
+      <PageSchema path="/4k-face-recognition-camera" />
     </>
   );
 }

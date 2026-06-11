@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/firmware");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/firmware" />
       <ClientPage />
+      <PageSchema path="/firmware" />
     </>
   );
 }

@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/cloud-application");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/cloud-application" />
       <ClientPage />
+      <PageSchema path="/cloud-application" />
     </>
   );
 }

@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/global-presence");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/global-presence" landingSlug="global-presence" />
       <ClientPage />
+      <PageSchema path="/global-presence" landingSlug="global-presence" />
     </>
   );
 }

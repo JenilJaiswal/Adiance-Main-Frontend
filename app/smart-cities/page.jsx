@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/smart-cities");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/smart-cities" />
       <ClientPage />
+      <PageSchema path="/smart-cities" />
     </>
   );
 }

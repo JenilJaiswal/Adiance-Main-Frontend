@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/oem-services");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/oem-services" />
       <ClientPage />
+      <PageSchema path="/oem-services" />
     </>
   );
 }

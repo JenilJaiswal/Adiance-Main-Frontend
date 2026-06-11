@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/oem-white-label-platform");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/oem-white-label-platform" landingSlug="oem-white-label-platform" />
       <ClientPage />
+      <PageSchema path="/oem-white-label-platform" landingSlug="oem-white-label-platform" />
     </>
   );
 }

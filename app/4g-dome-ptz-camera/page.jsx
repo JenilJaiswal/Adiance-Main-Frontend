@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/4g-dome-ptz-camera");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/4g-dome-ptz-camera" />
       <ClientPage />
+      <PageSchema path="/4g-dome-ptz-camera" />
     </>
   );
 }

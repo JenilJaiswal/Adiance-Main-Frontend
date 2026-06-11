@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/cctv-camera-manufacturer-india");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/cctv-camera-manufacturer-india" />
       <ClientPage />
+      <PageSchema path="/cctv-camera-manufacturer-india" />
     </>
   );
 }

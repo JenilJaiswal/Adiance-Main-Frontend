@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/remote-security");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/remote-security" />
       <ClientPage />
+      <PageSchema path="/remote-security" />
     </>
   );
 }

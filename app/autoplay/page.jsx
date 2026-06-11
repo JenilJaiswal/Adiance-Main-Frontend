@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/autoplay");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/autoplay" />
       <ClientPage />
+      <PageSchema path="/autoplay" />
     </>
   );
 }

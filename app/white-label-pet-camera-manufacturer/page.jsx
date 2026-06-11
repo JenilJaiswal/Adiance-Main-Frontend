@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/white-label-pet-camera-manufacturer");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/white-label-pet-camera-manufacturer" landingSlug="white-label-pet-camera-manufacturer" />
       <ClientPage />
+      <PageSchema path="/white-label-pet-camera-manufacturer" landingSlug="white-label-pet-camera-manufacturer" />
     </>
   );
 }

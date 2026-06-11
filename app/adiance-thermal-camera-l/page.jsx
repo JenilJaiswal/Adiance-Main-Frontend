@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/adiance-thermal-camera-l");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/adiance-thermal-camera-l" />
       <ClientPage />
+      <PageSchema path="/adiance-thermal-camera-l" />
     </>
   );
 }

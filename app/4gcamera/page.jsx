@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/4gcamera");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/4gcamera" />
       <ClientPage />
+      <PageSchema path="/4gcamera" />
     </>
   );
 }

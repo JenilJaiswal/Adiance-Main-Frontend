@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/alternative-to-chinese-cameras");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/alternative-to-chinese-cameras" landingSlug="alternative-to-chinese-cameras" />
       <ClientPage />
+      <PageSchema path="/alternative-to-chinese-cameras" landingSlug="alternative-to-chinese-cameras" />
     </>
   );
 }

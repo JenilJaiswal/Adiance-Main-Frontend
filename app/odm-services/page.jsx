@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/odm-services");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/odm-services" />
       <ClientPage />
+      <PageSchema path="/odm-services" />
     </>
   );
 }

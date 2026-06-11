@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/edge-ai-based-object-n-face-detection-ca
 export default function Page() {
   return (
     <>
-      <PageSchema path="/edge-ai-based-object-n-face-detection-cameras" />
       <ClientPage />
+      <PageSchema path="/edge-ai-based-object-n-face-detection-cameras" />
     </>
   );
 }

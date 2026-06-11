@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/admin");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/admin" />
       <ClientPage />
+      <PageSchema path="/admin" />
     </>
   );
 }

@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/anpr-camera");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/anpr-camera" />
       <ClientPage />
+      <PageSchema path="/anpr-camera" />
     </>
   );
 }

@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/pcb-assembly-service");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/pcb-assembly-service" />
       <ClientPage />
+      <PageSchema path="/pcb-assembly-service" />
     </>
   );
 }

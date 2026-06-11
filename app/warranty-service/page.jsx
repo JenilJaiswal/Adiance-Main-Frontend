@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/warranty-service");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/warranty-service" />
       <ClientPage />
+      <PageSchema path="/warranty-service" />
     </>
   );
 }

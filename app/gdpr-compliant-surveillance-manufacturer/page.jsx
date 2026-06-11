@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/gdpr-compliant-surveillance-manufacturer
 export default function Page() {
   return (
     <>
-      <PageSchema path="/gdpr-compliant-surveillance-manufacturer" landingSlug="gdpr-compliant-surveillance-manufacturer" />
       <ClientPage />
+      <PageSchema path="/gdpr-compliant-surveillance-manufacturer" landingSlug="gdpr-compliant-surveillance-manufacturer" />
     </>
   );
 }

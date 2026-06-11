@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/cloudxvr");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/cloudxvr" />
       <ClientPage />
+      <PageSchema path="/cloudxvr" />
     </>
   );
 }

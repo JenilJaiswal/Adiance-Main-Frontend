@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/bis-er-certification");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/bis-er-certification" />
       <ClientPage />
+      <PageSchema path="/bis-er-certification" />
     </>
   );
 }

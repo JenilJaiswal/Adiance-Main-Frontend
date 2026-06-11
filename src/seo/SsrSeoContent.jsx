@@ -1,5 +1,5 @@
 /**
- * Server-rendered SEO body. Emits visible-to-crawler H1/H2/p/a content for
+ * Server-rendered SEO body. Emits VISIBLE, user-expandable content for
  * every route so the raw HTML carries:
  *   - exactly one <h1> (matches the page <title>)
  *   - H2 intro section
@@ -12,9 +12,11 @@
  * metadata catalog and emit a curated set of internal links so AI crawlers
  * always see a contentful page.
  *
- * The block is wrapped in a CSS-hidden container (visually invisible) so it
- * doesn't conflict with the existing client-rendered UI. Crawlers (including
- * AI crawlers that don't execute JS) still see the markup in the raw HTML.
+ * The block renders as a collapsed <details> appendix at the END of the page
+ * (after the client UI), expandable by users. This keeps the content fully
+ * visible/accessible per Google's guidelines (no hidden text) while staying
+ * visually unobtrusive. Crawlers including non-JS AI crawlers see the markup
+ * in the raw HTML; Google indexes content inside collapsed <details>.
  */
 
 import landingData from "../data/seoLandingData.json";
@@ -22,16 +24,28 @@ import { CATALOG } from "./pageMetadata";
 
 const SITE = "https://www.adiance.com";
 
-const HIDDEN_STYLE = {
-  position: "absolute",
-  width: "1px",
-  height: "1px",
-  padding: "0",
-  margin: "-1px",
-  overflow: "hidden",
-  clip: "rect(0,0,0,0)",
-  whiteSpace: "nowrap",
-  border: "0",
+const WRAP_STYLE = {
+  maxWidth: "1140px",
+  margin: "0 auto",
+  padding: "24px 20px 40px",
+  fontSize: "14px",
+  lineHeight: 1.7,
+  color: "#444",
+};
+
+const SUMMARY_STYLE = {
+  cursor: "pointer",
+  fontWeight: 600,
+  fontSize: "15px",
+  color: "#222",
+  padding: "10px 0",
+  listStyle: "revert",
+};
+
+const BODY_STYLE = {
+  paddingTop: "8px",
+  borderTop: "1px solid #eee",
+  marginTop: "8px",
 };
 
 const DEFAULT_RELATED = [
@@ -118,13 +132,14 @@ export function SsrSeoContent({ path, landingSlug }) {
     return items;
   })();
 
+  const summaryLabel =
+    "About " + (body.h1 || "this page") + " — details, FAQ & related pages";
+
   return (
-    <section
-      aria-hidden="true"
-      data-ssr-seo="true"
-      style={HIDDEN_STYLE}
-      suppressHydrationWarning
-    >
+    <section data-ssr-seo="true" style={WRAP_STYLE} suppressHydrationWarning>
+      <details>
+        <summary style={SUMMARY_STYLE}>{summaryLabel}</summary>
+        <div style={BODY_STYLE}>
       <nav aria-label="Breadcrumb">
         <ol>
           {breadcrumbs.map((b, i) => (
@@ -135,16 +150,16 @@ export function SsrSeoContent({ path, landingSlug }) {
         </ol>
       </nav>
 
-      <h1>{body.h1}</h1>
+      <h2>{body.h1}</h2>
 
-      <h2>{body.h2}</h2>
+      <h3>{body.h2}</h3>
       {body.paragraphs.map((p, i) => (
         <p key={`p${i}`}>{p}</p>
       ))}
 
       {body.features.length > 0 && (
         <>
-          <h2>Key capabilities</h2>
+          <h3>Key capabilities</h3>
           <ul>
             {body.features.slice(0, 12).map((f, i) => (
               <li key={`f${i}`}>
@@ -157,12 +172,12 @@ export function SsrSeoContent({ path, landingSlug }) {
 
       {body.faq.length > 0 && (
         <>
-          <h2>Frequently asked questions</h2>
+          <h3>Frequently asked questions</h3>
           <dl>
             {body.faq.map((f, i) => (
               <div key={`q${i}`}>
                 <dt>
-                  <h3>{f.question}</h3>
+                  <h4>{f.question}</h4>
                 </dt>
                 <dd>{f.answer}</dd>
               </div>
@@ -171,7 +186,7 @@ export function SsrSeoContent({ path, landingSlug }) {
         </>
       )}
 
-      <h2>Related Adiance pages</h2>
+      <h3>Related Adiance pages</h3>
       <ul>
         {body.related.slice(0, 12).map((l, i) => (
           <li key={`r${i}`}>
@@ -188,6 +203,8 @@ export function SsrSeoContent({ path, landingSlug }) {
         <a href="/about">/about</a> to learn more about our manufacturing
         capabilities.
       </p>
+        </div>
+      </details>
     </section>
   );
 }

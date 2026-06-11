@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/product-portfolio");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/product-portfolio" landingSlug="product-portfolio" />
       <ClientPage />
+      <PageSchema path="/product-portfolio" landingSlug="product-portfolio" />
     </>
   );
 }

@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/alternative-to-dahua");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/alternative-to-dahua" landingSlug="alternative-to-dahua" />
       <ClientPage />
+      <PageSchema path="/alternative-to-dahua" landingSlug="alternative-to-dahua" />
     </>
   );
 }

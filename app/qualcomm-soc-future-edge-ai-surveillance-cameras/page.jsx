@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/qualcomm-soc-future-edge-ai-surveillance
 export default function Page() {
   return (
     <>
-      <PageSchema path="/qualcomm-soc-future-edge-ai-surveillance-cameras" landingSlug="qualcomm-soc-future-edge-ai-surveillance-cameras" />
       <ClientPage />
+      <PageSchema path="/qualcomm-soc-future-edge-ai-surveillance-cameras" landingSlug="qualcomm-soc-future-edge-ai-surveillance-cameras" />
     </>
   );
 }

@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/wifi-ptz-camera");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/wifi-ptz-camera" />
       <ClientPage />
+      <PageSchema path="/wifi-ptz-camera" />
     </>
   );
 }

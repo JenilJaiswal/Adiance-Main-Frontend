@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/alternative-to-hikvision");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/alternative-to-hikvision" landingSlug="alternative-to-hikvision" />
       <ClientPage />
+      <PageSchema path="/alternative-to-hikvision" landingSlug="alternative-to-hikvision" />
     </>
   );
 }

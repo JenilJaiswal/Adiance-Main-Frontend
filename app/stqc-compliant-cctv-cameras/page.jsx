@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/stqc-compliant-cctv-cameras");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/stqc-compliant-cctv-cameras" landingSlug="stqc-compliant-cctv-cameras" />
       <ClientPage />
+      <PageSchema path="/stqc-compliant-cctv-cameras" landingSlug="stqc-compliant-cctv-cameras" />
     </>
   );
 }

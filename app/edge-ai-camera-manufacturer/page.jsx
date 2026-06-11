@@ -7,8 +7,8 @@ export const metadata = buildMetadata("/edge-ai-camera-manufacturer");
 export default function Page() {
   return (
     <>
-      <PageSchema path="/edge-ai-camera-manufacturer" landingSlug="edge-ai-camera-manufacturer" />
       <ClientPage />
+      <PageSchema path="/edge-ai-camera-manufacturer" landingSlug="edge-ai-camera-manufacturer" />
     </>
   );
 }
