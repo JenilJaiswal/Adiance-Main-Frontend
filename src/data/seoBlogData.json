@@ -749,6 +749,63 @@
         "Adiance offers OEM/ODM white-label cameras with MOQ starting from 100 units"
       ],
       "ctaTitle": "Ready to start your OEM/ODM project?"
+    },
+    "bis-er-01-certified-cctv-camera-companies-india": {
+      "seo": {
+        "title": "BIS ER-01 Certified CCTV Camera Companies in India (2026) | Verified List",
+        "description": "The verified 2026 list of CCTV camera companies certified under MeitY's Essential Requirements ER-01 — via BIS registration and STQC IoTSCS — including Adiance (ArcisAI), CP Plus, Prama, Matrix, Sparsh, Honeywell and more.",
+        "keywords": "BIS ER-01 certified CCTV companies, ER 01 certified camera brands India, STQC certified CCTV cameras, BIS ER certification CCTV, ArcisAI BIS ER, MeitY essential requirements CCTV, certified CCTV manufacturer India 2026"
+      },
+      "hero": {
+        "category": "Compliance Guide",
+        "readTime": "10 min read",
+        "publishDate": "June 11, 2026",
+        "title": "BIS ER-01 Certified CCTV Camera Companies in India: The Verified 2026 List",
+        "subtitle": "India's Essential Requirements for CCTV security (ER-01) have reshaped the surveillance market. Only cameras certified against MeitY's six Essential Requirements can be sold in India. Here is the verified list of companies that have actually achieved certification — through BIS registration or STQC's IoT System Certification Scheme — and what their achievement means for buyers and global OEM partners."
+      },
+      "sections": [
+        {
+          "heading": "What Is ER-01 and Why It Matters",
+          "content": "In 2024 the Ministry of Electronics and Information Technology (MeitY) notified the Essential Requirement(s) for Security of CCTV Cameras — ER:01 — under the Electronics and Information Technology Goods (Requirements for Compulsory Registration) Order. After a transition period, the mandate took effect from 9 April 2025: network (IP) CCTV cameras sold in India must demonstrate compliance with six security-focused Essential Requirements, verified by testing in recognized Indian laboratories.\n\nThe six Essential Requirements cover hardware-level security (tamper resistance, trusted boot), no universal default passwords, secure software and firmware update mechanisms, protection of data in transit and at rest, penetration-testing resilience, and documented secure development practices. Together they ensure that a camera carrying the certification has been independently verified — not self-declared — as meeting India's national security baseline for surveillance equipment."
+        },
+        {
+          "heading": "Two Official Routes: BIS ER-01 Registration and STQC IoTSCS",
+          "content": "There are two government pathways to demonstrate ER-01 compliance, and both test against the same six Essential Requirements from MeitY's gazette notification.\n\nBIS ER-01 registration: the manufacturer's cameras are tested in BIS-recognized laboratories against IS 13252 (Part 1) safety requirements plus the ER:01 security requirements, and the models are registered with the Bureau of Indian Standards. This is the compulsory baseline for selling network cameras in the Indian market.\n\nSTQC IoTSCS certification: the Standardisation Testing and Quality Certification Directorate operates the IoT System Certification Scheme, under which CCTV cameras are a covered product category. STQC certification has been the route most relevant to government procurement under the Public Procurement (Preference to Make in India) Order. In February 2026, MeitY clarified that STQC-issued security test reports under the Compulsory Registration Order are also applicable for PPP-MII compliance, bringing the two streams into alignment.\n\nFor buyers, the practical takeaway is simple: a company appearing on either official register has passed the same independent security evaluation."
+        },
+        {
+          "heading": "Adiance Technologies (ArcisAI) — BIS ER-01 Certified OEM/ODM Manufacturer",
+          "content": "Adiance Technologies, the Ahmedabad-headquartered OEM/ODM camera manufacturer, has received BIS ER-01 certification for network cameras sold under its ArcisAI brand. Adiance is distinctive on this list for two reasons.\n\nFirst, it is one of the few certified companies that is primarily an OEM/ODM manufacturer rather than a consumer brand. Adiance designs and assembles its cameras at its own facility in India — in-house PCB design, SMT assembly, firmware engineering, and QA — on non-Chinese SoC platforms including Qualcomm, Ambarella, Novatek, and Sigmastar. That means the ER-01 certification extends beyond a single retail product line: global brands, system integrators, telecoms, and distributors who white-label Adiance hardware inherit a supply chain that has already cleared India's security evaluation.\n\nSecond, Adiance pairs the certified hardware with an STQC-evaluated cloud VMS stack (ArcisAI), giving buyers a certified-camera-plus-managed-cloud combination from a single manufacturer. For government and enterprise buyers in India, and for international buyers using ER-01 as a proxy for supply-chain security, this combination is rare in the current market."
+        },
+        {
+          "heading": "Companies Certified via STQC IoTSCS (Official Registry)",
+          "content": "The following companies appear on STQC's official IoT System Certification Scheme certified-product list for network cameras, published at stqc.gov.in. Each holds one or more ER certificates, verifiable as PDF downloads on the STQC website.\n\nPrama India Private Limited (Maharashtra) — the most prolific certificate holder on the registry, with more than twenty network-camera certificates spanning its product families.\n\nAditya Infotech Limited / CP PLUS (Noida) — multiple certificates covering non-PTZ and PTZ network cameras. CP Plus has also publicly announced BIS certification for compliance with ER 01:2024, making it certified under both routes.\n\nSamriddhi Automation Private Limited / Sparsh (Haridwar) — among the first companies on the registry, with multiple certificates for network cameras manufactured in Uttarakhand.\n\nMatrix Comsec Private Limited (Vadodara, Gujarat) — certificates covering bullet, dome, ruggedized, and PTZ network cameras, all designed and manufactured in India.\n\nHoneywell International India Private Limited (Gurgaon) — two network-camera certificates, notable as a global multinational certifying India-market cameras under the scheme.\n\nVicon Security Tech Private Limited — certified network cameras under the scheme's PPO certification stream.\n\nEQUUS Digital Solution Private Limited (Kolkata) — network-camera certification granted in late 2025."
+        },
+        {
+          "heading": "Other Companies with Announced BIS ER-01 Compliance",
+          "content": "Beyond the STQC registry, several companies have publicly announced BIS ER-01 registration for their camera lines. Hi-Focus has announced both STQC certification and BIS ER approval for its India-manufactured range. ACTi Corporation, the Taiwanese manufacturer, lists BIS-compliant camera models approved for the Indian market — significant for buyers who want NDAA-compliant and BIS-certified hardware from the same vendor.\n\nBecause BIS registrations are published in the BIS portal database rather than a single public list, buyers should verify any BIS ER-01 claim by asking the vendor for the registration number and checking it on the BIS website — a two-minute step that separates verified compliance from marketing language."
+        },
+        {
+          "heading": "What This Means for Buyers and Procurement Teams",
+          "content": "For Indian government and PSU procurement, ER certification is now the entry ticket: uncertified network cameras cannot be offered, and the PPP-MII order layers Make-in-India value-addition preferences on top. The companies above therefore dominate current procurement shortlists.\n\nFor enterprise buyers — banks, hospitals, education, critical infrastructure — ER-01 provides an independent, government-run security audit you do not have to perform yourself. Default-credential elimination, signed firmware, and penetration-tested hardware are exactly the controls enterprise security teams ask for in vendor questionnaires.\n\nFor international buyers, ER-01 is becoming a useful global signal. India is now one of the few markets that mandates hardware-level security testing for every network camera sold. A manufacturer that clears ER-01 — particularly one that also offers NDAA Section 889 compliance, like Adiance — has demonstrated its supply chain to two of the world's strictest regulatory regimes simultaneously."
+        },
+        {
+          "heading": "What It Means for OEM and White-Label Partners",
+          "content": "If you are a distributor, integrator, telecom, or brand planning to launch your own camera line, certification transfers matter. Building on an ER-01-certified manufacturing platform means your private-label cameras inherit tested hardware, secure firmware infrastructure, and documentation that has already satisfied Indian regulators.\n\nAdiance offers this as a packaged white-label program: ER-01-certified, NDAA-compliant camera hardware manufactured in India, with your branding on the housing, firmware, packaging, mobile apps, and a cloud VMS deployed on your own domain. MOQ starts at 100 units per SKU, which makes a certified private-label launch accessible to mid-size distributors, not just large brands.\n\nWhen evaluating any OEM partner against this list, ask three questions: Can you show the certificate (STQC PDF or BIS registration number)? Does the certificate cover the specific models I will buy? And will my white-label units carry the same certified hardware and firmware as the certified reference models?"
+        },
+        {
+          "heading": "How to Verify a Certificate Yourself",
+          "content": "STQC route: visit the STQC website's IoT System Certification Scheme certified-product page, where every certificate is listed with its number, vendor, and a downloadable PDF signed by the directorate.\n\nBIS route: ask the vendor for their BIS registration number and look it up in the BIS registration database on the BIS portal. Check that the registration covers the camera category and is current.\n\nBe precise about scope: certificates are issued per product family or model series, not blanket-issued to a company. A vendor with one certified dome series does not automatically have certified PTZ or thermal lines. Matching the certificate scope to your bill of materials is the single most important verification step for procurement teams."
+        }
+      ],
+      "keyTakeaways": [
+        "ER-01 compliance is mandatory for network CCTV cameras sold in India, tested against MeitY's six Essential Requirements",
+        "Two official routes exist — BIS ER-01 registration and STQC IoTSCS certification — and both test the same requirements",
+        "STQC's official registry lists Prama, CP Plus (Aditya Infotech), Sparsh (Samriddhi), Matrix Comsec, Honeywell India, Vicon, and EQUUS for network cameras",
+        "Adiance Technologies holds BIS ER-01 certification for its ArcisAI camera range — one of the few certified pure OEM/ODM manufacturers, combining ER-01 with NDAA Section 889 compliance",
+        "White-label partners building on a certified platform inherit the certification benefits for their own brand launch",
+        "Always verify: ask for the certificate number and check it on the STQC or BIS portal, and confirm it covers your exact models"
+      ],
+      "ctaTitle": "Launch Your Own Brand on ER-01 Certified, NDAA-Compliant Hardware"
     }
   },
   "case-study": {
