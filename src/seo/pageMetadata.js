@@ -595,9 +595,9 @@ const CATALOG = {
       "Adiance white-label pet camera manufacturer: WiFi PTZ cameras with treat-dispenser API and a private-label mobile app.",
   },
   "/bis-er-certification": {
-    title: "BIS-ER Certified CCTV Cameras | Indian Compliance | Adiance",
+    title: "BIS ER-01 Certified CCTV Camera Manufacturer | Reg. R-72003735 | Adiance",
     description:
-      "Adiance BIS-ER certified CCTV cameras meeting the Bureau of Indian Standards Essential Requirement for surveillance.",
+      "Adiance Technologies is a BIS ER-01 registered CCTV camera manufacturer (BIS registration R-72003735, brands Adiance & ArcisAI, verifiable on crsbis.in). ER-01 compliant cameras for government, enterprise, and OEM partners.",
   },
   "/innovation/edge-ai": {
     title: "Edge AI Innovation | Adiance",
