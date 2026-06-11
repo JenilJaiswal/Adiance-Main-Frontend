@@ -16,7 +16,7 @@ import FlightIcon from "@mui/icons-material/Flight";
 import "./UsLanding.css";
 
 const reasons = [
-  { title: "NDAA Section 889 Compliant", desc: "Every Adiance camera meets federal procurement requirements. No components from any manufacturer named in NDAA Section 889." },
+  { title: "NDAA Section 889 Compliant", desc: "Every Adiance camera meets federal procurement requirements. No components from Hikvision, Dahua, Huawei, ZTE, or Hytera." },
   { title: "TAA Compliant Manufacturing", desc: "Products manufactured in compliance with the Trade Agreements Act, eligible for GSA Schedule and federal contracts." },
   { title: "US-Based Support", desc: "Dedicated support team for US customers with business-hours coverage. Technical assistance, RMA, and warranty service." },
   { title: "Federal Pricing Programs", desc: "Competitive government pricing available for bulk deployments. Volume discounts for school districts and state agencies." },
@@ -48,8 +48,8 @@ const UsLanding = () => {
     <div className="us-landing-container">
       <Helmet>
         <title>NDAA Compliant Security Cameras for the United States | Adiance</title>
-        <meta name="description" content="Adiance provides NDAA Section 889 compliant security cameras for US government agencies, schools, hospitals, and enterprises. A trusted NDAA-compliant manufacturing partner with Edge AI and 4G LTE." />
-        <meta name="keywords" content="NDAA compliant cameras USA, security cameras for US government, NDAA compliant camera replacement USA, government approved CCTV, federal security camera supplier" />
+        <meta name="description" content="Adiance provides NDAA Section 889 compliant security cameras for US government agencies, schools, hospitals, and enterprises. A trusted Hikvision and Dahua alternative with Edge AI and 4G LTE." />
+        <meta name="keywords" content="NDAA compliant cameras USA, security cameras for US government, Hikvision alternative United States, government approved CCTV, federal security camera supplier" />
         <link rel="canonical" href={canonicalUrl} />
         <meta name="robots" content="index, follow" />
 

@@ -551,18 +551,18 @@ const CATALOG = {
       "Looking for an alternative to Chinese CCTV cameras? Adiance offers NDAA-compliant, non-Chinese SoC surveillance.",
   },
   "/alternative-to-hikvision": {
-    title: "NDAA-Compliant Replacement Cameras for Existing CCTV Systems | Adiance",
+    title: "Alternative to Hikvision | NDAA-Compliant OEM Cameras | Adiance",
     description:
-      "Upgrade to NDAA-compliant, non-Chinese OEM CCTV cameras from Adiance. Edge AI, ONVIF S/G/T, white-label, drop-in model mapping for existing systems.",
+      "Replace Hikvision with NDAA-compliant, non-Chinese OEM CCTV cameras from Adiance. Edge AI, ONVIF S/G/T, white-label, drop-in model mapping.",
     keywords:
-      "NDAA compliant camera replacement, NDAA compliant alternative, non-Chinese CCTV, OEM CCTV manufacturer, ONVIF replacement cameras",
+      "alternative to Hikvision, Hikvision replacement, NDAA compliant alternative, non-Chinese CCTV, OEM CCTV manufacturer",
   },
   "/alternative-to-dahua": {
-    title: "NDAA-Compliant Camera Upgrades for Security Integrators | Adiance",
+    title: "Alternative to Dahua | NDAA-Compliant OEM Cameras | Adiance",
     description:
-      "Move your camera line to NDAA-compliant, non-Chinese OEM manufacturing with Adiance. Edge AI, ONVIF S/G/T, white-label, drop-in model mapping.",
+      "Replace Dahua with NDAA-compliant, non-Chinese OEM CCTV cameras from Adiance. Edge AI, ONVIF S/G/T, white-label, drop-in model mapping.",
     keywords:
-      "NDAA compliant camera upgrade, compliant CCTV supplier, non-Chinese CCTV, OEM CCTV manufacturer, white label CCTV",
+      "alternative to Dahua, Dahua replacement, NDAA compliant alternative, non-Chinese CCTV, OEM CCTV manufacturer",
   },
   "/smart-city-cctv-solutions": {
     title: "Smart-City CCTV Solutions | AI Surveillance | Adiance",
