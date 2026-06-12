@@ -80,8 +80,9 @@ const ContactZoho = () => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (name === "phone") {
-      const digitsOnly = value.replace(/\D/g, "").slice(0, 10);
-      setFormData((prev) => ({ ...prev, [name]: digitsOnly }));
+      // Allow international formats: digits, leading +, spaces, dashes, parentheses
+      const cleaned = value.replace(/[^\d+\-() ]/g, "").slice(0, 18);
+      setFormData((prev) => ({ ...prev, [name]: cleaned }));
     } else {
       setFormData((prev) => ({
         ...prev,
@@ -100,29 +101,15 @@ const ContactZoho = () => {
     return emailRegex.test(email);
   };
 
-  // Phone validation function
+  // Phone validation — accepts international numbers (with country code)
   const validatePhone = (phone) => {
-    // Must start with 6-9 and be 10 digits
-    if (!/^[6-9]\d{9}$/.test(phone)) {
-      return "Mobile number must be 10 digits and start with 6, 7, 8, or 9";
+    const digits = phone.replace(/\D/g, "");
+    if (digits.length < 7 || digits.length > 15) {
+      return "Please enter a valid phone number (7-15 digits, country code welcome)";
     }
-
-    // Prevent all same digits
-    if (/^(\d)\1{9}$/.test(phone)) {
-      return "Mobile number cannot have all same digits";
+    if (/^(\d)\1+$/.test(digits)) {
+      return "Phone number cannot be all the same digit";
     }
-
-    // Prevent sequential numbers
-    const sequentialAsc = "0123456789";
-    const sequentialDesc = "9876543210";
-
-    if (
-      sequentialAsc.includes(phone) ||
-      sequentialDesc.includes(phone)
-    ) {
-      return "Sequential mobile numbers are not allowed";
-    }
-
     return null; // valid
   };
 
@@ -136,11 +123,7 @@ const ContactZoho = () => {
       !formData.email ||
       !formData.phone ||
       !formData.company ||
-      !formData.location ||
-      !formData.businessType ||
-      !formData.enquiryFor ||
-      !formData.customerType ||
-      !formData.camerasFor
+      !formData.location
     ) {
       setSnackbar({
         open: true,
@@ -262,9 +245,9 @@ const ContactZoho = () => {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="10-digit number"
-                  helperText="Enter exactly 10 digits"
-                  error={formData.phone.length > 0 && formData.phone.length !== 10}
+                  placeholder="+1 555 123 4567"
+                  helperText="Include your country code (e.g. +1, +44, +971)"
+                  error={formData.phone.length > 0 && validatePhone(formData.phone) !== null}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -285,7 +268,7 @@ const ContactZoho = () => {
                 <TextField
                   fullWidth
                   required
-                  label="City"
+                  label="City & Country"
                   name="location"
                   value={formData.location}
                   onChange={handleChange}
@@ -294,7 +277,6 @@ const ContactZoho = () => {
               <Grid item xs={12} sm={6}>
                 <TextField
                   fullWidth
-                  required
                   label="Number of Cameras Needed"
                   name="customerQuantity"
                   type="number"
@@ -316,7 +298,6 @@ const ContactZoho = () => {
               <Grid item xs={12} sm={6}>
                 <TextField
                   fullWidth
-                  required
                   select
                   label="Business Type"
                   name="businessType"
@@ -339,7 +320,6 @@ const ContactZoho = () => {
               <Grid item xs={12} sm={6}>
                 <TextField
                   fullWidth
-                  required
                   select
                   label="Enquiry For"
                   name="enquiryFor"
@@ -363,7 +343,6 @@ const ContactZoho = () => {
               <Grid item xs={12} sm={6}>
                 <TextField
                   fullWidth
-                  required
                   select
                   label="I am a:"
                   name="customerType"
@@ -382,7 +361,6 @@ const ContactZoho = () => {
               <Grid item xs={12} sm={6}>
                 <TextField
                   fullWidth
-                  required
                   select
                   label="I want cameras for:"
                   name="camerasFor"
