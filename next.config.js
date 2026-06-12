@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const legacyRedirects = {
+  "/netherlands-cctv-camera-manufacturer": "/cctv-camera-manufacturer-netherlands",
+  "/cctv-manufacturer-europe": "/oem-camera-manufacturer-europe",
+  "/oem-cctv-india": "/cctv-camera-manufacturer-india",
   "/the-top-10-cctv-camera-manufacturers-in-the-usa": "/blog",
   "/future-and-growth": "/about",
   "/sustainability": "/about",
