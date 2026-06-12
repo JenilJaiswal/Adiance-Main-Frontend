@@ -14,7 +14,6 @@
 
 import { JsonLd } from "./JsonLd";
 import { CATALOG } from "./pageMetadata";
-import { SsrSeoContent } from "./SsrSeoContent";
 import landingData from "../data/seoLandingData.json";
 
 const SITE = "https://www.adiance.com";
@@ -104,7 +103,7 @@ function faqSchemaFromLanding(slug) {
  * If `landingSlug` is supplied and matches an entry in seoLandingData.json,
  * a FAQPage block is also emitted.
  */
-export function PageSchema({ path, title, description, landingSlug, skipBody }) {
+export function PageSchema({ path, title, description, landingSlug }) {
   if (!path) return null;
   const faq = landingSlug ? faqSchemaFromLanding(landingSlug) : null;
   return (
@@ -112,9 +111,6 @@ export function PageSchema({ path, title, description, landingSlug, skipBody }) 
       <JsonLd data={webPageSchema(path, title, description)} />
       <JsonLd data={breadcrumbSchema(path)} />
       {faq ? <JsonLd data={faq} /> : null}
-      {!skipBody ? (
-        <SsrSeoContent path={path} landingSlug={landingSlug} />
-      ) : null}
     </>
   );
 }
