@@ -157,6 +157,45 @@
           "question": "Where can I get a quote for Adiance products in the USA?",
           "answer": "You can request a quote for Adiance products by contacting us through our website. Our sales team will be happy to assist you with pricing and product information. We are committed to providing competitive pricing and excellent value to our partners in the United States."
         }
+      ],
+      "marketSections": [
+        {
+          "title": "NDAA Section 889: The Decisive Factor in US Procurement",
+          "paragraphs": [
+            "Since NDAA Section 889 took effect, every US federal agency, federal contractor, and federally funded organization — schools, hospitals, airports, utilities — has been required to remove and avoid surveillance equipment from the manufacturers named in the Act. This created a structural, decade-long replacement cycle in the world's largest security market.",
+            "Adiance manufactures in India on a fully auditable non-Chinese SoC supply chain — Qualcomm, Ambarella, Novatek and Sigmastar — with component-level BOM documentation prepared for federal procurement audits. US integrators and brands use Adiance hardware to bid on government, education and critical-infrastructure projects that Chinese-manufactured lines are excluded from.",
+            "For US white-label partners, this means your brand can sell into the compliance-driven segment — the fastest-growing slice of the US market — with documentation ready for prime contractors and procurement officers."
+          ]
+        },
+        {
+          "title": "Built for US Deployments",
+          "paragraphs": [
+            "Cameras ship with FCC-compliant electronics and US-region ANPR/LPR models trained on North American plate formats. On-device edge AI (face recognition, intrusion, people counting) processes locally — important for state privacy laws that restrict cloud biometric processing.",
+            "The white-label Ambicam/ArcisAI cloud VMS deploys on US-region infrastructure under your domain, and the mobile apps publish to the App Store and Google Play under your brand. ONVIF Profile S/G/T means drop-in compatibility with the NVRs and VMS platforms your customers already run."
+          ]
+        }
+      ],
+      "localInfo": [
+        {
+          "icon": "📦",
+          "title": "MOQ & Sampling",
+          "description": "Minimum order from 100 units per SKU. Branded samples ship within 7–10 days for technical and quality evaluation before any production commitment."
+        },
+        {
+          "icon": "🚚",
+          "title": "Shipping & Lead Time",
+          "description": "Air freight from Ahmedabad in 5–7 business days; sea freight available for volume orders. Standard white-label production runs 8–12 weeks including branding and QC."
+        },
+        {
+          "icon": "📄",
+          "title": "Export Documentation",
+          "description": "Commercial invoice, packing list, certificate of origin and NDAA compliance statement included. DDP, DAP or FOB Incoterms; USD pricing with bank or LC payment terms."
+        },
+        {
+          "icon": "🤝",
+          "title": "Dedicated Support",
+          "description": "A named account manager, firmware update commitment, and engineering support for VMS integration (ONVIF S/G/T, Milestone, Genetec, Network Optix and more)."
+        }
       ]
     },
     "cctv-camera-manufacturer-uk": {
@@ -210,6 +249,45 @@
           "question": "Are your cameras suitable for large-scale enterprise projects?",
           "answer": "Yes, our product portfolio is designed to cater to projects of all sizes, from small businesses to large-scale enterprise and government deployments. Our scalable solutions, robust hardware, and advanced management software make us an ideal partner for complex security projects."
         }
+      ],
+      "marketSections": [
+        {
+          "title": "The UK's Shift to Trusted Surveillance Supply Chains",
+          "paragraphs": [
+            "The UK Cabinet Office has instructed government departments to stop deploying surveillance equipment from certain Chinese manufacturers on sensitive sites, and the Procurement Act has tightened supplier scrutiny across the public sector. UK integrators increasingly need a manufacturer whose supply chain stands up to that scrutiny.",
+            "Adiance cameras are built in India on non-Chinese SoC platforms with full component traceability — positioned for UK government, local authority, education and CNI projects where supply-chain provenance is now a tender requirement.",
+            "For UK distributors and brands, Adiance offers full white-label manufacturing: your brand on the camera, firmware, packaging, mobile apps and a cloud VMS hosted on UK/EU infrastructure for data-residency compliance."
+          ]
+        },
+        {
+          "title": "UK Compliance and Data Protection",
+          "paragraphs": [
+            "Hardware carries UKCA and CE markings with RoHS compliance. The platform is engineered for UK GDPR and the Data Protection Act 2018: configurable retention, encrypted transmission and storage, role-based access, and audit logging — the controls UK DPOs ask about in vendor assessments.",
+            "UK-region ANPR models are trained on UK number-plate formats, supporting parking, access control and traffic schemes."
+          ]
+        }
+      ],
+      "localInfo": [
+        {
+          "icon": "📦",
+          "title": "MOQ & Sampling",
+          "description": "Minimum order from 100 units per SKU. Branded samples ship within 7–10 days for technical and quality evaluation before any production commitment."
+        },
+        {
+          "icon": "🚚",
+          "title": "Shipping & Lead Time",
+          "description": "Air freight from Ahmedabad in 4–6 business days; sea freight available for volume orders. Standard white-label production runs 8–12 weeks including branding and QC."
+        },
+        {
+          "icon": "📄",
+          "title": "Export Documentation",
+          "description": "UKCA/CE documentation, commercial invoice, packing list and certificate of origin included. GBP or USD pricing; DDP and DAP terms available to UK warehouses."
+        },
+        {
+          "icon": "🤝",
+          "title": "Dedicated Support",
+          "description": "A named account manager, firmware update commitment, and engineering support for VMS integration (ONVIF S/G/T, Milestone, Genetec, Network Optix and more)."
+        }
       ]
     },
     "cctv-camera-manufacturer-germany": {
@@ -262,6 +340,45 @@
         {
           "question": "How can I become an Adiance partner in Germany?",
           "answer": "We are always looking for new partners in Germany. Please contact us to discuss the opportunities for partnership."
+        }
+      ],
+      "marketSections": [
+        {
+          "title": "Compliance-First Manufacturing for the German Market",
+          "paragraphs": [
+            "Germany is Europe's most exacting surveillance market: GDPR and the BDSG set strict rules on video data, works councils scrutinize workplace monitoring, and public-sector buyers increasingly demand supply-chain transparency. German integrators need a manufacturer that engineers for this from the start.",
+            "Adiance cameras carry CE marking with RoHS compliance and ship with GDPR-ready features as standard: configurable retention periods, encryption in transit and at rest, granular role-based access, privacy masking, and audit trails — documented in German-language datasheets on request.",
+            "As a non-Chinese, India-based manufacturer with an auditable SoC supply chain (Qualcomm, Ambarella, Novatek), Adiance fits the supply-chain diversification mandate many German enterprises adopted for critical electronics."
+          ]
+        },
+        {
+          "title": "OEM Partnership for DACH Brands",
+          "paragraphs": [
+            "German and DACH-region distributors use Adiance to launch private-label camera lines without factory investment: 35+ models including dome, bullet, PTZ, thermal and edge-AI ranges, EU-region ANPR models trained on German and EU plate formats, and a white-label cloud VMS deployable on EU data centers for residency compliance.",
+            "Engineering collaboration is direct — our firmware team supports custom integrations (KNX/BACnet gateways via partners, ONVIF Profile S/G/T, RTSP/HTTPS) and provides long-term firmware maintenance commitments that German enterprise buyers require."
+          ]
+        }
+      ],
+      "localInfo": [
+        {
+          "icon": "📦",
+          "title": "MOQ & Sampling",
+          "description": "Minimum order from 100 units per SKU. Branded samples ship within 7–10 days for technical and quality evaluation before any production commitment."
+        },
+        {
+          "icon": "🚚",
+          "title": "Shipping & Lead Time",
+          "description": "Air freight from Ahmedabad in 5–7 business days; sea freight available for volume orders. Standard white-label production runs 8–12 weeks including branding and QC."
+        },
+        {
+          "icon": "📄",
+          "title": "Export Documentation",
+          "description": "CE/RoHS declarations, GDPR feature documentation, commercial invoice and EUR-1/certificate of origin included. EUR pricing available; DDP to German warehouses."
+        },
+        {
+          "icon": "🤝",
+          "title": "Dedicated Support",
+          "description": "A named account manager, firmware update commitment, and engineering support for VMS integration (ONVIF S/G/T, Milestone, Genetec, Network Optix and more)."
         }
       ]
     },
@@ -369,6 +486,45 @@
           "question": "How can I get started with Adiance?",
           "answer": "Getting started with Adiance is easy. Simply contact us through our website to discuss your requirements with one of our partnership specialists. We will work with you to develop a customized solution that meets your specific needs and helps you achieve your business goals."
         }
+      ],
+      "marketSections": [
+        {
+          "title": "Australia's Supply-Chain Reset in Surveillance",
+          "paragraphs": [
+            "In 2023 the Australian Government audited and began removing Chinese-manufactured cameras from federal sites, and state agencies followed. Combined with the Security of Critical Infrastructure (SOCI) Act obligations, Australian buyers in government, utilities, ports and telecoms now require demonstrable supply-chain provenance for video surveillance.",
+            "Adiance manufactures in India on non-Chinese SoC platforms with component-level documentation — a direct fit for Australian compliance-driven procurement, and aligned with the NDAA standard that Australian agencies commonly reference.",
+            "Cameras carry RCM marking for the Australian market, with firmware engineered for Australian privacy-principles (APPs) compliance: retention controls, encryption and access auditing."
+          ]
+        },
+        {
+          "title": "OEM Partnership for ANZ Distributors",
+          "paragraphs": [
+            "Australian and New Zealand distributors use Adiance as a 'China + 1' manufacturing base: white-label dome, bullet, PTZ, thermal and 4G ranges (popular for remote-site and agricultural monitoring), ANZ-format ANPR models, and a cloud VMS deployable on Australian regions for data residency.",
+            "Time-zone overlap with India makes engineering collaboration practical, and established air routes deliver samples within a week."
+          ]
+        }
+      ],
+      "localInfo": [
+        {
+          "icon": "📦",
+          "title": "MOQ & Sampling",
+          "description": "Minimum order from 100 units per SKU. Branded samples ship within 7–10 days for technical and quality evaluation before any production commitment."
+        },
+        {
+          "icon": "🚚",
+          "title": "Shipping & Lead Time",
+          "description": "Air freight from Ahmedabad in 5–7 business days; sea freight available for volume orders. Standard white-label production runs 8–12 weeks including branding and QC."
+        },
+        {
+          "icon": "📄",
+          "title": "Export Documentation",
+          "description": "RCM conformity documentation, commercial invoice, packing list and certificate of origin included. AUD or USD pricing; DDP to AU East-Coast warehouses available."
+        },
+        {
+          "icon": "🤝",
+          "title": "Dedicated Support",
+          "description": "A named account manager, firmware update commitment, and engineering support for VMS integration (ONVIF S/G/T, Milestone, Genetec, Network Optix and more)."
+        }
       ]
     },
     "cctv-camera-manufacturer-canada": {
@@ -475,6 +631,45 @@
           "question": "What is the lead time for OEM orders to the UAE?",
           "answer": "Standard lead time for OEM orders to the UAE is 30-45 days from order confirmation. For urgent requirements, we offer expedited production with 15-20 day turnaround. Shipping to Dubai and Abu Dhabi typically takes 7-10 days."
         }
+      ],
+      "marketSections": [
+        {
+          "title": "Surveillance Manufacturing for the UAE's Smart-City Ambitions",
+          "paragraphs": [
+            "The UAE runs some of the world's densest surveillance deployments — Dubai's city-wide programs, Abu Dhabi's critical-infrastructure coverage, and mandatory CCTV regulations for commercial premises across the Emirates. Regulators such as SIRA in Dubai set detailed technical standards that systems must meet.",
+            "Adiance designs camera lines to align with UAE regulatory requirements — resolution, retention, low-light performance and tamper protection — and supports integrators through the approval documentation process. Gulf-region ANPR models are trained on UAE plate formats including bilingual Arabic-English plates.",
+            "Cameras are engineered for the climate: extended operating temperature ranges, IP67 housings and corrosion-resistant coatings suited to coastal and desert deployments."
+          ]
+        },
+        {
+          "title": "White-Label Partnership for Gulf Distributors",
+          "paragraphs": [
+            "UAE distributors and integrators use Adiance to run their own brands instead of reselling others': full branding on hardware, firmware, packaging and an Arabic-localizable mobile app, with the cloud VMS deployable on regional infrastructure.",
+            "India-to-UAE logistics are among the fastest in our network — short air corridors to Dubai and Abu Dhabi, and India–UAE CEPA trade terms that improve landed cost for volume programs."
+          ]
+        }
+      ],
+      "localInfo": [
+        {
+          "icon": "📦",
+          "title": "MOQ & Sampling",
+          "description": "Minimum order from 100 units per SKU. Branded samples ship within 7–10 days for technical and quality evaluation before any production commitment."
+        },
+        {
+          "icon": "🚚",
+          "title": "Shipping & Lead Time",
+          "description": "Air freight from Ahmedabad in 2–4 business days; sea freight available for volume orders. Standard white-label production runs 8–12 weeks including branding and QC."
+        },
+        {
+          "icon": "📄",
+          "title": "Export Documentation",
+          "description": "Commercial invoice, packing list, certificate of origin under India–UAE CEPA where applicable. AED or USD pricing; DDP to Dubai/Abu Dhabi and re-export support via JAFZA partners."
+        },
+        {
+          "icon": "🤝",
+          "title": "Dedicated Support",
+          "description": "A named account manager, firmware update commitment, and engineering support for VMS integration (ONVIF S/G/T, Milestone, Genetec, Network Optix and more)."
+        }
       ]
     },
     "cctv-camera-manufacturer-saudi-arabia": {
@@ -527,6 +722,45 @@
         {
           "question": "How can I partner with Adiance in Saudi Arabia?",
           "answer": "To partner with Adiance in Saudi Arabia, simply visit our contact page or use the WhatsApp link on this page to get in touch with our regional sales team for a consultation."
+        }
+      ],
+      "marketSections": [
+        {
+          "title": "Built for Saudi Arabia's Giga-Project Era",
+          "paragraphs": [
+            "Saudi Arabia is executing the largest construction and smart-city program on earth — NEOM, Qiddiya, Red Sea Global, Diriyah — alongside Vision 2030 mandates that expand surveillance across transport, energy and public venues. The Kingdom's High Commission for Industrial Security (HCIS) and MOI requirements set demanding standards for critical facilities.",
+            "Adiance supplies Saudi integrators and brands with cameras engineered for these specifications: thermal and perimeter lines for energy and industrial sites, PTZ and edge-AI ranges for city deployments, and ANPR models trained on Saudi plate formats.",
+            "Hardware is qualified for extreme heat — extended temperature tolerance, sun shields, IP67 sealing and dust resistance proven in Gulf installations."
+          ]
+        },
+        {
+          "title": "A Compliant Alternative for Saudi Brands",
+          "paragraphs": [
+            "As government and Aramco-ecosystem buyers tighten supply-chain requirements, Saudi distributors increasingly want a non-Chinese manufacturing base. Adiance provides SASO-aligned documentation, component traceability and NDAA-compliant supply chains that satisfy international partners operating in the Kingdom.",
+            "White-label programs include Arabic-localized apps and VMS, your brand across the full ecosystem, and MOQ from 100 units — accessible for regional distributors building a house brand for the giga-project supply cycle."
+          ]
+        }
+      ],
+      "localInfo": [
+        {
+          "icon": "📦",
+          "title": "MOQ & Sampling",
+          "description": "Minimum order from 100 units per SKU. Branded samples ship within 7–10 days for technical and quality evaluation before any production commitment."
+        },
+        {
+          "icon": "🚚",
+          "title": "Shipping & Lead Time",
+          "description": "Air freight from Ahmedabad in 3–5 business days; sea freight available for volume orders. Standard white-label production runs 8–12 weeks including branding and QC."
+        },
+        {
+          "icon": "📄",
+          "title": "Export Documentation",
+          "description": "SASO/SABER conformity support, commercial invoice, certificate of origin and packing list included. SAR or USD pricing; experienced with Saudi customs clearance and FASAH documentation."
+        },
+        {
+          "icon": "🤝",
+          "title": "Dedicated Support",
+          "description": "A named account manager, firmware update commitment, and engineering support for VMS integration (ONVIF S/G/T, Milestone, Genetec, Network Optix and more)."
         }
       ]
     },

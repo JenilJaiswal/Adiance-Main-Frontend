@@ -125,6 +125,42 @@ const GeoPage = () => {
         </div>
       </section>
 
+      {/* Country Market Sections (optional per-country depth) */}
+      {Array.isArray(country.marketSections) && country.marketSections.length > 0 && (
+        <section className="geo-intro" style={{ paddingTop: 0 }}>
+          <div className="geo-intro-inner" style={{ display: 'block' }}>
+            {country.marketSections.map((sec, i) => (
+              <div key={i} style={{ marginBottom: '32px' }}>
+                <h2 className="geo-intro-title">{sec.title}</h2>
+                {sec.paragraphs.map((p, j) => (
+                  <p key={j} className="geo-intro-desc" style={{ marginBottom: '14px' }}>{p}</p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Local compliance & logistics (optional per-country) */}
+      {country.localInfo && (
+        <section className="geo-features" style={{ paddingTop: 0 }}>
+          <div className="geo-features-inner">
+            <h2 className="geo-section-title">
+              {country.country} <span className="geo-accent">Compliance & Logistics</span>
+            </h2>
+            <div className="geo-features-grid">
+              {country.localInfo.map((item, i) => (
+                <div key={i} className="geo-feature-card">
+                  <div className="geo-feature-icon">{item.icon}</div>
+                  <h3 className="geo-feature-title">{item.title}</h3>
+                  <p className="geo-feature-desc">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Features Grid */}
       <section className="geo-features">
         <div className="geo-features-inner">
