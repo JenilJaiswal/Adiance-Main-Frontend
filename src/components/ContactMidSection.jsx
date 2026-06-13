@@ -35,7 +35,7 @@ const ContactMidSection = () => {
           <a href="tel:+12818572584" style={{ color: "inherit", textDecoration: "none" }}>
             +1 (281) 857-2584
           </a>{" "}
-          <span style={{ opacity: 0.7 }}>— Dev Sanghvi, Houston TX</span>
+          <span style={{ opacity: 0.7 }}>— Dev Sanghvi, Houston TX</span><br /><a href="mailto:dev@adiance.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.9em", opacity: 0.85 }}>dev@adiance.com</a>
         </Typography>
       </Grid>
 

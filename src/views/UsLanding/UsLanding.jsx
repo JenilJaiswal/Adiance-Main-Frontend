@@ -153,7 +153,7 @@ const UsLanding = () => {
         <a href="tel:+12818572584" style={{ background: "#BF0603", color: "#FFF", padding: "12px 26px", borderRadius: 8, textDecoration: "none", fontWeight: 600, fontSize: 17, display: "inline-block" }}>
           +1 (281) 857-2584
         </a>
-        <p style={{ fontSize: 14, color: "#666", margin: "14px 0 0" }}>Or email <a href="mailto:sales@adiance.com" style={{ color: "#BF0603" }}>sales@adiance.com</a></p>
+        <p style={{ fontSize: 14, color: "#666", margin: "14px 0 0" }}>Or email Dev directly: <a href="mailto:dev@adiance.com" style={{ color: "#BF0603", fontWeight: 600 }}>dev@adiance.com</a></p>
       </section>
             <CTASection
         title="Partner with Adiance in the United States"
