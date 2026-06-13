@@ -6,49 +6,49 @@ const Services = () => {
   const serviceItems = [
     {
       id: 1,
-      title: "ODM CCTV Camera Manufacturing",
+      title: "ArcisAI Cloud VMS — White-Label",
       description: (
-        <p>Adiance acts as your dedicated security camera manufacturing partner, producing ready-to-market IP CCTV cameras under your brand name. We handle the full process - engineering, component sourcing, assembly, testing, certifications, packaging, and shipping - so you can launch products quickly without investing in your own factory.</p>
-      ),
-      imageUrl: "/N_Images/ODM-CCTV-Camera-Manufacturing.webp",
-    },
-    {
-      id: 2,
-      title: "OEM CCTV Camera Development",
-      description: (
-        <p>Our OEM capability allows you to create completely custom CCTV products tailored to your market. We design the hardware, PCB, firmware, enclosures, features, and performance parameters exactly as you require.</p>
-      ),
-      imageUrl: "/N_Images/OEM-CCTV-Camera-Development.webp",
-    },
-    {
-      id: 3,
-      title: "JDM CCTV Camera Development",
-      description: (
-        <p>In Joint development manufacturing (JDM), your engineering team and Adiance's R&D team collaborate to co-create your hardware with our intelligent system or our hardware with your system, delivering fully integrated video surveillance solutions from concept to production.</p>
-      ),
-      imageUrl: "/N_Images/SmartTech.webp",
-    },
-    {
-      id: 4,
-      title: "PCB Assembly Manufacturing",
-      description: (
-        <p>Adiance provides high-precision PCB & Turnkey assembly for CCTV cameras and robotics for industrial automation. We manage the complete PCB lifecycle—SMT assembly, component sourcing, quality inspection, firmware loading, and product testing.</p>
-      ),
-      imageUrl: "/N_Images/PCB-Assembly-Manufacturing.webp",
-    },
-    {
-      id: 5,
-      title: "Cloud Storage Solutions",
-      description: (
-        <p>Secure and scalable cloud storage for ArcisAI cameras, with flexible retention plans of 1, 3, 5, 7, and 30 days. Easily access and retrieve footage from multiple locations with fast, reliable, and safe storage.</p>
+        <p>STQC-certified cloud video management deployed on your domain with your branding. Multi-site streaming, AI event automation, role-based access, GDPR-ready retention. The complete SaaS layer your competitors charge $20K+ a year to license — yours to resell.</p>
       ),
       imageUrl: "/N_Images/cloudAbout.webp",
     },
     {
-      id: 6,
-      title: "Customization In Hardware & Custom Engineering",
+      id: 2,
+      title: "Branded Mobile App (iOS + Android)",
       description: (
-        <p>Brands can customize part of the hardware - including enclosures, lenses, connectivity, firmware, SoC selection, and functional features. We will modify both the design and technical specification to match your brand identity and performance needs.</p>
+        <p>Published under your developer account on the App Store and Google Play with your logo, colors and feature set. Live view, playback, push alerts, cloud playback, shared access — every screen the end-customer sees is YOUR brand, not Adiance.</p>
+      ),
+      imageUrl: "/N_Images/SmartTech.webp",
+    },
+    {
+      id: 3,
+      title: "Arcis Bridge — Convert Any Legacy Camera",
+      description: (
+        <p>Plug-in device that connects ANY ONVIF IP camera — including your installed base from other brands — into your white-label ArcisAI cloud. Turn the cameras you installed years ago into recurring SaaS revenue overnight, without ripping anything out.</p>
+      ),
+      imageUrl: "/N_Images/Arcis-Bridge-Device.webp",
+    },
+    {
+      id: 4,
+      title: "ODM CCTV Camera Manufacturing",
+      description: (
+        <p>35+ models — dome, bullet, PTZ, 4K, thermal, ANPR, 4G, edge AI — manufactured on non-Chinese SoC platforms (Qualcomm, Ambarella, Novatek, Sigmastar). NDAA Section 889 compliant. BIS Reg. R-72003735. MOQ from 100 units. 8–12 weeks to branded production.</p>
+      ),
+      imageUrl: "/N_Images/ODM-CCTV-Camera-Manufacturing.webp",
+    },
+    {
+      id: 5,
+      title: "OEM Hardware + Edge AI Engineering",
+      description: (
+        <p>Full custom development — PCB, firmware, enclosure, lens calibration, AI model tuning. Region-trained ANPR/LPR for USA, EU, GCC and India plate formats. On-device face recognition, intrusion, object detection, people counting — processed locally for privacy compliance.</p>
+      ),
+      imageUrl: "/N_Images/OEM-CCTV-Camera-Development.webp",
+    },
+    {
+      id: 6,
+      title: "GenAI Video Intelligence Layer",
+      description: (
+        <p>Natural-language video search across deployed cameras — "find the silver sedan that entered the south gate after 8pm." Enterprise-class feature parity with Milestone and Genetec's newest releases, packaged for SMB resellers and at a fraction of the cost.</p>
       ),
       imageUrl: "/N_Images/customized.webp",
     },
@@ -57,9 +57,9 @@ const Services = () => {
   return (
     <div className="services-container">
       <div className="services-header">
-        <h2 className="services-title">Powering Global CCTV Brands With Advanced CCTV Manufacturing Services</h2>
+        <h2 className="services-title">The Complete White-Label Surveillance Ecosystem — Under Your Brand</h2>
         <p className="services-description">
-          We provide complete hardware design, development, and security cameras manufacturing services - covering OEM, ODM, JDM, PCB assembly, cloud storage and hardware customization. Every service is built to help brands launch, scale, and differentiate their CCTV products with confidence.
+          Camera, NVR, cloud VMS, mobile app, edge AI, GenAI analytics and a bridge for your legacy fleet — every layer carries your brand. NDAA-compliant, BIS-registered (R-72003735), manufactured in India on a non-Chinese supply chain. The full stack global partners need to launch and scale.
         </p>
       </div>
 
