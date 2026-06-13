@@ -146,7 +146,16 @@ const UsLanding = () => {
       </section>
 
       {/* Section 5 — Partner CTA */}
-      <CTASection
+      <section style={{ background: "#FFF7F0", borderTop: "3px solid #BF0603", padding: "32px 20px", textAlign: "center" }}>
+        <p style={{ fontSize: 13, letterSpacing: 2, color: "#BF0603", margin: "0 0 6px", textTransform: "uppercase", fontWeight: 700 }}>US Sales Contact</p>
+        <h3 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 8px", color: "#1A1A1A" }}>Dev Sanghvi &mdash; Houston, TX</h3>
+        <p style={{ fontSize: 17, color: "#444", margin: "0 0 16px" }}>Local US-based sales rep. CST business hours. Direct dial:</p>
+        <a href="tel:+12818572584" style={{ background: "#BF0603", color: "#FFF", padding: "12px 26px", borderRadius: 8, textDecoration: "none", fontWeight: 600, fontSize: 17, display: "inline-block" }}>
+          +1 (281) 857-2584
+        </a>
+        <p style={{ fontSize: 14, color: "#666", margin: "14px 0 0" }}>Or email <a href="mailto:sales@adiance.com" style={{ color: "#BF0603" }}>sales@adiance.com</a></p>
+      </section>
+            <CTASection
         title="Partner with Adiance in the United States"
         description="We are actively building our US distribution network. Whether you are a security integrator, government procurement officer, or technology distributor, we would love to hear from you."
         buttonText="Request US Pricing"

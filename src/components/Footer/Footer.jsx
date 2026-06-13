@@ -37,6 +37,8 @@ const Footer = () => {
                 <a href="tel:+12818572584" style={{ color: "inherit", textDecoration: "none" }}>
                   US: +1 (281) 857-2584
                 </a>
+                <br />
+                <span style={{ opacity: 0.7, fontSize: "0.85em" }}>Dev Sanghvi — Houston, TX</span>
               </span>
             </div>
             <div className="contact-item address">
