@@ -198,6 +198,13 @@ const CATALOG = {
     description:
       "Download the latest firmware for Adiance CCTV cameras, NVRs, and edge-AI surveillance devices.",
   },
+  "/tools/ndaa-compliance-checker": {
+    title: "NDAA Compliance Checker for CCTV Cameras (Free Tool) | Adiance",
+    description:
+      "Free NDAA Section 889 compliance checker for surveillance cameras. Enter a brand or SoC and verify in 10 seconds whether your camera is approved for US federal and federally-funded deployments.",
+    keywords:
+      "NDAA compliance checker, is camera NDAA compliant, NDAA Section 889 checker, NDAA compliant SoC list, NDAA banned camera brands, surveillance compliance tool",
+  },
   "/tools": {
     title: "Surveillance Tools & Utilities | Adiance",
     description:
