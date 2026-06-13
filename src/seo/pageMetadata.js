@@ -198,6 +198,13 @@ const CATALOG = {
     description:
       "Download the latest firmware for Adiance CCTV cameras, NVRs, and edge-AI surveillance devices.",
   },
+  "/compliance-documents": {
+    title: "Compliance Documents — BIS, NDAA, ONVIF, CE, FCC, ISO | Adiance",
+    description:
+      "Download Adiance compliance documentation: BIS registration R-72003735 certificate, NDAA Section 889 attestation, ONVIF conformance, CE Declaration of Conformity, FCC certification, ISO 9001:2015 and STQC certification for ArcisAI VMS.",
+    keywords:
+      "Adiance compliance documents, BIS certificate download, NDAA Section 889 attestation, ONVIF Profile S G T conformance, CE Declaration of Conformity CCTV, FCC certification camera, ISO 9001 surveillance manufacturer",
+  },
   "/tools/chinese-camera-restrictions-map": {
     title: "Where Chinese Cameras Are Restricted — 2026 Live Map | Adiance",
     description:
