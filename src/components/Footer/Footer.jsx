@@ -38,7 +38,7 @@ const Footer = () => {
                   US: +1 (281) 857-2584
                 </a>
                 <br />
-                <span style={{ opacity: 0.7, fontSize: "0.85em" }}>Dev Sanghvi — Houston, TX</span><br /><a href="mailto:dev@adiance.com" style={{ color: "inherit", textDecoration: "none", opacity: 0.85, fontSize: "0.9em" }}>dev@adiance.com</a>
+                <span style={{ opacity: 0.7, fontSize: "0.85em" }}>Dev Sanghvi</span><br /><a href="mailto:dev@adiance.com" style={{ color: "inherit", textDecoration: "none", opacity: 0.85, fontSize: "0.9em" }}>dev@adiance.com</a>
               </span>
             </div>
             <div className="contact-item address">

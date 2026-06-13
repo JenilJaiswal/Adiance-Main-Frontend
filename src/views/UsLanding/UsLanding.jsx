@@ -147,13 +147,11 @@ const UsLanding = () => {
 
       {/* Section 5 — Partner CTA */}
       <section style={{ background: "#FFF7F0", borderTop: "3px solid #BF0603", padding: "32px 20px", textAlign: "center" }}>
-        <p style={{ fontSize: 13, letterSpacing: 2, color: "#BF0603", margin: "0 0 6px", textTransform: "uppercase", fontWeight: 700 }}>US Sales Contact</p>
-        <h3 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 8px", color: "#1A1A1A" }}>Dev Sanghvi &mdash; Houston, TX</h3>
-        <p style={{ fontSize: 17, color: "#444", margin: "0 0 16px" }}>Local US-based sales rep. CST business hours. Direct dial:</p>
+        <h3 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px", color: "#1A1A1A" }}>Dev Sanghvi</h3>
         <a href="tel:+12818572584" style={{ background: "#BF0603", color: "#FFF", padding: "12px 26px", borderRadius: 8, textDecoration: "none", fontWeight: 600, fontSize: 17, display: "inline-block" }}>
           +1 (281) 857-2584
         </a>
-        <p style={{ fontSize: 14, color: "#666", margin: "14px 0 0" }}>Or email Dev directly: <a href="mailto:dev@adiance.com" style={{ color: "#BF0603", fontWeight: 600 }}>dev@adiance.com</a></p>
+        <p style={{ fontSize: 14, color: "#666", margin: "14px 0 0" }}><a href="mailto:dev@adiance.com" style={{ color: "#BF0603", fontWeight: 600 }}>dev@adiance.com</a></p>
       </section>
             <CTASection
         title="Partner with Adiance in the United States"

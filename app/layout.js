@@ -114,14 +114,6 @@ const organizationSchema = {
       areaServed: ["US", "CA", "MX"],
       availableLanguage: ["English"],
       name: "Dev Sanghvi",
-      contactOption: "TollFree",
-      hoursAvailable: {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        opens: "08:00",
-        closes: "18:00",
-        validFrom: "2026-06-13",
-      },
     },
   ],
   sameAs: [
