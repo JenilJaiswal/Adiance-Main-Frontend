@@ -198,6 +198,13 @@ const CATALOG = {
     description:
       "Download the latest firmware for Adiance CCTV cameras, NVRs, and edge-AI surveillance devices.",
   },
+  "/tools/chinese-camera-restrictions-map": {
+    title: "Where Chinese Cameras Are Restricted — 2026 Live Map | Adiance",
+    description:
+      "Interactive 2026 map of every country with active restrictions on Chinese-manufactured surveillance cameras. Updated quarterly. Filter by region, regulation type, and effective date.",
+    keywords:
+      "Chinese cameras banned countries, NDAA Section 889 countries, Hikvision banned list, Dahua restrictions 2026, non-Chinese surveillance manufacturing, UK CCTV restrictions, Australia camera ban, EU Chinese surveillance restrictions",
+  },
   "/tools/ndaa-compliance-checker": {
     title: "NDAA Compliance Checker for CCTV Cameras (Free Tool) | Adiance",
     description:
