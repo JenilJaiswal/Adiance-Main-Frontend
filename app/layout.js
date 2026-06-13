@@ -122,6 +122,7 @@ const organizationSchema = {
     "https://x.com/adiancetech",
     "https://www.instagram.com/adiancetech/",
     "https://youtube.com/@adiancetechnologies",
+    "https://www.wikidata.org/wiki/Q-ADIANCE",
   ],
   knowsAbout: [
     "NDAA compliant cameras",
