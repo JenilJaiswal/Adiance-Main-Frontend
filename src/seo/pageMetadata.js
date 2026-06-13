@@ -198,6 +198,13 @@ const CATALOG = {
     description:
       "Download the latest firmware for Adiance CCTV cameras, NVRs, and edge-AI surveillance devices.",
   },
+  "/sample-request": {
+    title: "Request a Free Sample — NDAA Compliant CCTV Camera | Adiance",
+    description:
+      "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment.",
+    keywords:
+      "free CCTV camera sample, NDAA compliant camera sample request, OEM camera sample, white label CCTV sample, Adiance sample request",
+  },
   "/compliance-documents": {
     title: "Compliance Documents — BIS, NDAA, ONVIF, CE, FCC, ISO | Adiance",
     description:
