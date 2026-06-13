@@ -28,7 +28,7 @@ const aboutOrganizationSchema = {
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "sales",
-    "telephone": "+91 9687779999",
+    "telephone": ["+91 9687779999", "+1-281-857-2584"],
     "email": "contact@adiance.com"
   },
   "sameAs": [

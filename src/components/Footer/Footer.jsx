@@ -29,7 +29,15 @@ const Footer = () => {
             </div>
             <div className="contact-item">
               <img src="/N_Images/call_icon.svg" alt="Phone" className="contact-icon-img" loading="lazy" />
-              <span>(+91) 968 777 9999</span>
+              <span>
+                <a href="tel:+919687779999" style={{ color: "inherit", textDecoration: "none" }}>
+                  IN: (+91) 968 777 9999
+                </a>
+                <br />
+                <a href="tel:+12818572584" style={{ color: "inherit", textDecoration: "none" }}>
+                  US: +1 (281) 857-2584
+                </a>
+              </span>
             </div>
             <div className="contact-item address">
               <img src="/N_Images/location_icon.svg" alt="Location" className="contact-icon-img" loading="lazy" />

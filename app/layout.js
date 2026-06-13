@@ -106,6 +106,15 @@ const organizationSchema = {
       areaServed: "Global",
       availableLanguage: ["English", "Hindi"],
     },
+    {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      telephone: "+1-281-857-2584",
+      email: "sales@adiance.com",
+      areaServed: ["US", "CA", "MX"],
+      availableLanguage: ["English"],
+      name: "Dev Sanghvi",
+    },
   ],
   sameAs: [
     "https://www.facebook.com/adiancetechnologies",

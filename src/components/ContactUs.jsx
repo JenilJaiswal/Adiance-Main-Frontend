@@ -18,7 +18,7 @@ const localBusinessSchema = {
   "url": "https://www.adiance.com",
   "logo": "https://www.adiance.com/images/Logo.webp",
   "image": "https://www.adiance.com/images/Logo.webp",
-  "telephone": "+91 9687779999",
+  "telephone": ["+91 9687779999", "+1-281-857-2584"],
   "email": "contact@adiance.com",
   "address": {
     "@type": "PostalAddress",
