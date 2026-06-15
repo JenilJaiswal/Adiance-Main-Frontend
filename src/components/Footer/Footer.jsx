@@ -88,7 +88,7 @@ const Footer = () => {
                 <li><a href="/jdm-services">JDM Services</a></li>
                 <li><a href="/pcb-assembly-service">PCB Assembly Services</a></li>
                 <li><a href="/oem-cctv-camera-manufacturer-usa">OEM Camera USA</a></li>
-                <li><a href="/full-solution-oem`-camera-manufacturer">OEM Camera India</a></li>
+                <li><a href="/full-solution-oem-camera-manufacturer">OEM Camera India</a></li>
               </ul>
             </div>
 
