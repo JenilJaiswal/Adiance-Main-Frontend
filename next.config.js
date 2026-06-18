@@ -46,11 +46,11 @@ const legacyRedirects = {
 
 const cspDirectives = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://cdn.jsdelivr.net https://*.zoho.com https://*.zohopublic.com https://*.zohostatic.com",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://*.doubleclick.net https://connect.facebook.net https://cdn.jsdelivr.net https://*.zoho.com https://*.zohopublic.com https://*.zohopublic.in https://*.zohostatic.com",
   "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net",
-  "connect-src 'self' https://*.adiance.com https://backend.adiance.com https://arcisai.io https://*.arcisai.io https://*.arcisai.io:5000 https://www.google-analytics.com https://*.googletagmanager.com https://*.facebook.com https://*.zoho.com https://*.zohopublic.com",
+  "connect-src 'self' https://*.adiance.com https://backend.adiance.com https://arcisai.io https://*.arcisai.io https://*.arcisai.io:5000 https://www.google-analytics.com https://*.googletagmanager.com https://www.google.com https://*.doubleclick.net https://*.facebook.com https://*.zoho.com https://*.zohopublic.com https://*.zohopublic.in",
   "media-src 'self' https:",
   "frame-src 'self' https://www.googletagmanager.com https://*.zoho.com https://*.youtube.com https://www.youtube.com",
   "object-src 'none'",
