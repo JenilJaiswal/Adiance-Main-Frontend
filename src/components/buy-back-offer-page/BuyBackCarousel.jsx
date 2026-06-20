@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   Box,
@@ -11,12 +13,12 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const cameras = [
-  { name: "Bullet Camera", image: "/images/arcis-Bullet-camera.png" },
-  { name: "Dome Camera", image: "/images/arcis-Dome-camera.png" },
-  { name: "PTZ Camera", image: "/images/arcis-PTZ-camera.png" },
-  { name: "4G Bullet Camera", image: "/images/arcis-4G-Bullet-camera.png" },
-  { name: "WiFi PTZ Camera", image: "/images/arcis-Wifi-ptz-camera.png" },
-  { name: "5G Bullet Camera", image: "/images/arcis-5G-Bullet-camera.png" },
+  { name: "Bullet Camera", image: "/images/arcis-Bullet-camera.webp" },
+  { name: "Dome Camera", image: "/images/arcis-Dome-camera.webp" },
+  { name: "PTZ Camera", image: "/images/arcis-PTZ-camera.webp" },
+  { name: "4G Bullet Camera", image: "/images/arcis-4G-Bullet-camera.webp" },
+  { name: "WiFi PTZ Camera", image: "/images/arcis-Wifi-ptz-camera.webp" },
+  { name: "5G Bullet Camera", image: "/images/arcis-5G-Bullet-camera.webp" },
 ];
 
 const BuyBackCarousel = () => {
@@ -118,6 +120,7 @@ const BuyBackCarousel = () => {
                   <img
                     src={camera.image}
                     alt={camera.name}
+                    loading="lazy"
                     style={{
                       maxWidth: "70%",
                       height: "auto",

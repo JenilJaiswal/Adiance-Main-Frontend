@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import { Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link } from "@/compat/react-router-dom";
 
 const AnprSlider = () => {
   const products = [
@@ -8,7 +10,7 @@ const AnprSlider = () => {
       id: 1,
       title: "Edge AI Based PTZ ANPR Bullet Camera",
       imageUrl: [
-        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-01.png",
+        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-01.webp",
       ],
       link: "/edge-ai-based-ptz-anpr-bullet-camera",
     },

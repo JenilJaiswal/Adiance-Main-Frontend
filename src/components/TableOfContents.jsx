@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Box, Typography, List, ListItem, ListItemButton } from '@mui/material';
 import { KeyboardArrowRight } from '@mui/icons-material';

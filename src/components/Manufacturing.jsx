@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography, Box, Card, CardContent } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const Manufacturing = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -258,6 +260,15 @@ const Manufacturing = () => {
           name="description"
           content="Adiance Technologies ensures precision in PCB manufacturing, integration, and quality inspection from material selection to packaging for reliable CCTV systems."
         />
+        <meta name="keywords" content="PCB manufacturing, CCTV manufacturing, quality inspection" />
+        <meta property="og:title" content="End-to-End PCB Manufacturing & Quality Inspection" />
+        <meta property="og:description" content="Adiance Technologies ensures precision in PCB manufacturing, integration, and quality inspection from material selection to packaging for reliable CCTV systems." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

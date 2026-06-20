@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import {
   AppBar,
@@ -18,7 +20,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "@/compat/react-router-dom";
 import ChangePassword from "../../pages/Dashboard/components/ChangePassword";
 
 // Your SVG logo as a component
@@ -147,14 +149,14 @@ const Navbar = ({ adminSection, setAdminSection }) => {
             >
               {/* <Logo height="25px" /> */}
               <img
-                src="../../images/Logo.png"
+                src="../../images/Logo.webp"
                 alt="Logo"
                 style={{ height: "30px" }}
               />
             </Box>
             {/* ---------------------------------------------------- */}
             <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
-              {userInfo.role === "ADMIN" && adminSection && (
+              {(userInfo.role === "ADMIN" || userInfo.role === "MARKETING") && adminSection && (
                 <Box>
                   <Stack direction="row" bgcolor="#F5F5F5" borderRadius="24px">
                     <Button borderRadius="24px" variant="contained" onClick={handleMenuClick}>
@@ -175,12 +177,22 @@ const Navbar = ({ adminSection, setAdminSection }) => {
                       </MenuItem>
                       <MenuItem
                         onClick={() => {
-                          setAdminSection("JOB");
+                          setAdminSection("NEWS");
                           handleAdminMenuClose();
                         }}
                       >
-                        Jobs
+                        News
                       </MenuItem>
+                      {userInfo.role === "ADMIN" && (
+                        <MenuItem
+                          onClick={() => {
+                            setAdminSection("JOB");
+                            handleAdminMenuClose();
+                          }}
+                        >
+                          Jobs
+                        </MenuItem>
+                      )}
                     </Menu>
                     <Button
                       onClick={() => setAdminSection(null)}

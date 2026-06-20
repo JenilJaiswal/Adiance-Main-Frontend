@@ -1,0 +1,110 @@
+.oem-manufacturing-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Main box (controls max width of image section) */
+.oem-manufacturing-content-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+/* Background image */
+.oem-manufacturing-bg-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Red overlay */
+.oem-manufacturing-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Content */
+.oem-manufacturing-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px;
+  color: #fff;
+  max-width: 800px;
+}
+
+/* Title */
+.oem-manufacturing-title {
+  width: 800px;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.oem-manufacturing-description {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* -------- Tablet -------- */
+@media (max-width: 1024px) {
+  .oem-manufacturing-content {
+    padding: 40px;
+  }
+
+  .oem-manufacturing-title {
+    width: 600px;
+    font-size: 34px;
+  }
+
+  .oem-manufacturing-description {
+    font-size: 16px;
+  }
+}
+
+/* -------- Mobile -------- */
+@media (max-width: 768px) {
+  .oem-manufacturing-content-wrapper {
+    min-height: auto;
+  }
+
+  .oem-manufacturing-content {
+    padding: 32px 20px;
+  }
+
+  .oem-manufacturing-title {
+    width: 370px;
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .oem-manufacturing-description {
+    width: 350px;
+    font-size: 15px;
+  }
+}
+
+/* -------- Small Mobile -------- */
+@media (max-width: 480px) {
+  .oem-manufacturing-title {
+    font-size: 22px;
+  }
+
+  .oem-manufacturing-description {
+    font-size: 14px;
+  }
+}

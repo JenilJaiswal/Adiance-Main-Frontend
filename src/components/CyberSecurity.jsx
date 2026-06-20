@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography, Card, CardContent } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const CyberSecurity = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -112,6 +114,15 @@ const CyberSecurity = () => {
           name="description"
           content="Ensure data security with cutting-edge cybersecurity solutions. Protect sensitive information, mitigate risks, and stay compliant with evolving cyber threats"
         />
+        <meta name="keywords" content="cybersecurity, data protection, camera security" />
+        <meta property="og:title" content="Advanced Cybersecurity Solutions for Data Protection" />
+        <meta property="og:description" content="Ensure data security with cutting-edge cybersecurity solutions. Protect sensitive information, mitigate risks, and stay compliant with evolving cyber threats" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

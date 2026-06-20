@@ -1,0 +1,57 @@
+{
+  "categories": [
+    {
+      "name": "EdgeAI WiFi/4G Series",
+      "products": [
+        { "id": 19, "title": "Outdoor WiFi PT", "model": "AD-90ARWFBDP", "type": "PTZ/PT", "connectivity": "WiFi", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 20, "title": "Indoor Panning Camera", "model": "AD-90ARXBDP", "type": "Indoor", "connectivity": "WiFi", "resolution": "3MP", "irRange": "10m", "ipRating": "Indoor" },
+        { "id": 21, "title": "AI Outdoor WiFi PT", "model": "AD-90AIWFBDP", "type": "PTZ/PT", "connectivity": "WiFi", "resolution": "3MP", "irRange": "30m", "ipRating": "IP66" },
+        { "id": 22, "title": "AI IP Bullet", "model": "AD-90AIEBDP", "type": "Bullet", "connectivity": "IP/Ethernet", "resolution": "3MP", "irRange": "30m", "ipRating": "IP66" },
+        { "id": 23, "title": "4G AI PTZ", "model": "AD-90AI4GBDP", "type": "PTZ/PT", "connectivity": "4G", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 24, "title": "4G AI Bullet", "model": "AD-90AI4GBDPB", "type": "Bullet", "connectivity": "4G", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 25, "title": "4G AI Dome", "model": "AD-90AI4GBDPD", "type": "Dome", "connectivity": "4G", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" }
+      ]
+    },
+    {
+      "name": "5MP NVR Series",
+      "products": [
+        { "id": 26, "title": "IP Bullet Metal", "model": "AD-90NRE5BM", "type": "Bullet", "connectivity": "IP/Ethernet", "resolution": "5MP", "irRange": "30m", "ipRating": "IP67" },
+        { "id": 27, "title": "IP Bullet Plastic", "model": "AD-90NRE5BP", "type": "Bullet", "connectivity": "IP/Ethernet", "resolution": "5MP", "irRange": "30m", "ipRating": "IP67" },
+        { "id": 28, "title": "PoE Bullet Plastic", "model": "AD-90NRP5BP", "type": "Bullet", "connectivity": "PoE", "resolution": "5MP", "irRange": "30m", "ipRating": "IP67" },
+        { "id": 29, "title": "PoE Bullet Metal", "model": "AD-90NRP5BM", "type": "Bullet", "connectivity": "PoE", "resolution": "5MP", "irRange": "30m", "ipRating": "IP67" },
+        { "id": 30, "title": "IP Dome Plastic", "model": "AD-90NRE5DP", "type": "Dome", "connectivity": "IP/Ethernet", "resolution": "5MP", "irRange": "30m", "ipRating": "IP67" },
+        { "id": 31, "title": "IP Dome Metal", "model": "AD-90NRE5DM", "type": "Dome", "connectivity": "IP/Ethernet", "resolution": "5MP", "irRange": "30m", "ipRating": "IP67" },
+        { "id": 32, "title": "PoE Dome Plastic", "model": "AD-90NRP5DP", "type": "Dome", "connectivity": "PoE", "resolution": "5MP", "irRange": "30m", "ipRating": "IP67" },
+        { "id": 33, "title": "PoE Dome Metal", "model": "AD-90NRP5DM", "type": "Dome", "connectivity": "PoE", "resolution": "5MP", "irRange": "30m", "ipRating": "IP67" }
+      ]
+    },
+    {
+      "name": "3MP IP Series",
+      "products": [
+        { "id": 1, "title": "IP Dome Plastic", "model": "AD-90ARE3DP", "type": "Dome", "connectivity": "IP/Ethernet", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 2, "title": "IP Dome Metal", "model": "AD-90ARE3DM", "type": "Dome", "connectivity": "IP/Ethernet", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 3, "title": "IP Bullet Plastic", "model": "AD-90ARE3BP", "type": "Bullet", "connectivity": "IP/Ethernet", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 4, "title": "IP Bullet Metal", "model": "AD-90ARE3BM", "type": "Bullet", "connectivity": "IP/Ethernet", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 5, "title": "IP Mini PT", "model": "AD-90ARE3MPT", "type": "PTZ/PT", "connectivity": "IP/Ethernet", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 6, "title": "IP PT", "model": "AD-90ARE3PT", "type": "PTZ/PT", "connectivity": "IP/Ethernet", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 7, "title": "IP Dome Plastic (2.8mm)", "model": "AD-90ARE3DP2", "type": "Dome", "connectivity": "IP/Ethernet", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 8, "title": "IP Bullet Plastic (2.8mm)", "model": "AD-90ARE3BP2", "type": "Bullet", "connectivity": "IP/Ethernet", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 9, "title": "IP PT Battery", "model": "AD-90ARE3PTB", "type": "PTZ/PT", "connectivity": "IP/Ethernet", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 10, "title": "IP Bullet Battery", "model": "AD-90ARE3BPB", "type": "Bullet", "connectivity": "IP/Ethernet", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" }
+      ]
+    },
+    {
+      "name": "3MP PoE Series",
+      "products": [
+        { "id": 11, "title": "PoE Dome Plastic", "model": "AD-90ARP3DP", "type": "Dome", "connectivity": "PoE", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 12, "title": "PoE Dome Metal", "model": "AD-90ARP3DM", "type": "Dome", "connectivity": "PoE", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 13, "title": "PoE PT", "model": "AD-90ARP3PT", "type": "PTZ/PT", "connectivity": "PoE", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 14, "title": "PoE Mini PT", "model": "AD-90ARP3MPT", "type": "PTZ/PT", "connectivity": "PoE", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 15, "title": "PoE Bullet Plastic", "model": "AD-90ARP3BP", "type": "Bullet", "connectivity": "PoE", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 16, "title": "PoE Bullet Metal", "model": "AD-90ARP3BM", "type": "Bullet", "connectivity": "PoE", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 17, "title": "PoE Mini PT (2.8mm)", "model": "AD-90ARP3MPT2", "type": "PTZ/PT", "connectivity": "PoE", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" },
+        { "id": 18, "title": "PoE Bullet Plastic (2.8mm)", "model": "AD-90ARP3BP2", "type": "Bullet", "connectivity": "PoE", "resolution": "3MP", "irRange": "20m", "ipRating": "IP66" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "odm": {
+    "title": "White-Label ODM Solutions Built for Your Brand",
+    "description": "Launch market-ready products faster with our white-label ODM manufacturing services and pre-engineered, quality-tested products for electronics, surveillance, and automation industries.",
+    "image": "/N_Images/OEM_Hero_Right_2.svg",
+    "imageAlt": "ODM Solution",
+    "backgroundColor": "#BF0603"
+  },
+  "jdm": {
+    "title": "Co-Creation–Driven JDM Solutions for Your Next-Gen Product",
+    "description": "Turn your vision into reality with our collaborative engineering and co-development process - ideal for advanced CCTV cameras, robotic systems and PCB-based devices.",
+    "image": "/N_Images/JDM_Solution.webp",
+    "imageAlt": "JDM Solution",
+    "backgroundColor": "#BF0603",
+    "wideImage": true
+  }
+}

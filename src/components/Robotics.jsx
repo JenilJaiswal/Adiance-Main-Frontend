@@ -1,10 +1,12 @@
+"use client";
+
 import React from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const Robotics = () => {
   const location = useLocation(); // Get the current route
@@ -18,6 +20,15 @@ const Robotics = () => {
           name="description"
           content="Integrates robotics into surveillance with autonomous drones, AI, and real-time monitoring. Enhance security with Adiance Technologies' robotic solutions."
         />
+        <meta name="keywords" content="robotics surveillance, autonomous drone security, robotic camera" />
+        <meta property="og:title" content="Robotics in Surveillance - Adiance Technologies" />
+        <meta property="og:description" content="Integrates robotics into surveillance with autonomous drones, AI, and real-time monitoring. Enhance security with Adiance Technologies' robotic solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import { Container } from "react-bootstrap";
@@ -45,7 +47,7 @@ const SseriesCamera = ({ title, subTitle, buttonText, buttonLink }) => {
         }}
       >
         <Box sx={{ maxWidth: { xs: "20%" } }}>
-          <img src="/images/Group.svg" alt="groupsvg" width="100%" />
+          <img src="/images/Group.svg" alt="groupsvg" width="100%" loading="lazy" />
         </Box>
       </Box>
       <Container
@@ -141,7 +143,7 @@ const SseriesCamera = ({ title, subTitle, buttonText, buttonLink }) => {
         }}
       >
         <Box sx={{ maxWidth: { xs: "20%" } }}>
-          <img src="/images/Group.svg" alt="groupsvg" width="100%" />
+          <img src="/images/Group.svg" alt="groupsvg" width="100%" loading="lazy" />
         </Box>
       </Box>
     </Box>

@@ -1,115 +1,140 @@
-import React from "react";
-import { Box, Button, Typography, Container } from "@mui/material"; // Changed Container import
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { useNavigate } from "react-router-dom";
+"use client";
+
+import { useNavigate } from "@/compat/react-router-dom";
 
 const Globalnetwork = ({ data }) => {
   const navigate = useNavigate();
 
-  const handleContactClick = () => {
-    navigate("/contact");
-  };
-
   return (
-    <>
-      <Box
-        sx={{
-          backgroundColor: "#fff5f5",
-          paddingBlock: "1rem",
-          marginBottom: "-6rem",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "flex-end",
-            marginBottom: "2rem",
-          }}
-        >
-          <Box sx={{ maxWidth: { xs: "20%" } }}>
-            <img src="/images/Group.svg" alt="groupsvg" width="100%" />
-          </Box>
-        </Box>
-        <Container // Use MUI Container
-          maxWidth="xl"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "2rem",
-          }}
-        >
-          {/* text part */}
-          <Box>
-            <Typography
-              variant="h2"
-              sx={{
-                fontWeight: "bold",
-                textAlign: "center",
-                fontSize: { xs: "2.5rem", sm: "3.5rem", lg: "3.5rem" },
-              }}
-            >
-              {/* Use dynamic title */}
-              {data.title}{" "}
-              <Typography
-                variant="h2"
-                component="span"
-                sx={{
-                  fontWeight: "bold",
-                  textAlign: "center",
-                  color: "#A00A09",
-                  fontSize: { xs: "2.5rem", sm: "3.5rem", lg: "4.5rem" },
-                }}
-              >
-                {/* Use dynamic highlight */}
-                {data.highlight}
-              </Typography>
-            </Typography>
-            <Typography
-              variant="h6"
-              sx={{ marginTop: "1rem", textAlign: "center" }}
-            >
-              {/* Use dynamic description */}
-              {data.description}
-            </Typography>
-          </Box>
+    <section className="gn-cta-section">
+      {/* Decorative top-right */}
+      <div className="gn-deco gn-deco-right">
+        <img src="/images/Group.svg" alt="" aria-hidden="true" loading="lazy" />
+      </div>
 
-          {/* buttons part */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", sm: "row" },
-              justifyContent: "center",
-              gap: "1rem",
-            }}
-          >
-            {/* <Button
-              variant="contained"
-              endIcon={<ChevronRightIcon />}
-              sx={{
-                backgroundColor: "#BF0603",
-                color: "#ffffff",
-                textTransform: "none",
-                padding: "0.7rem",
-              }}
-              onClick={handleContactClick}
-            >
-              Contact Us
-            </Button> */}
-          </Box>
-        </Container>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "flex-start",
-            marginTop: "2rem",
-          }}
+      <div className="gn-cta-content">
+        <h2 className="gn-cta-title">
+          {data.title}{" "}
+          <span className="gn-cta-highlight">{data.highlight}</span>
+        </h2>
+        <p className="gn-cta-desc">{data.description}</p>
+        <button
+          className="gn-cta-btn"
+          onClick={() => navigate("/contact")}
         >
-          <Box sx={{ maxWidth: { xs: "20%" } }}>
-            <img src="/images/Group.svg" alt="groupsvg" width="100%" />
-          </Box>
-        </Box>
-      </Box>
-    </>
+          Contact Us &nbsp;›
+        </button>
+      </div>
+
+      {/* Decorative bottom-left */}
+      <div className="gn-deco gn-deco-left">
+        <img src="/images/Group.svg" alt="" aria-hidden="true" loading="lazy" />
+      </div>
+
+      <style>{`
+        .gn-cta-section {
+          position: relative;
+          background-color: #BF0603;
+          padding: 80px 20px;
+          text-align: center;
+          overflow: hidden;
+          font-family: 'Roboto', sans-serif;
+        }
+
+        .gn-deco {
+          position: absolute;
+          width: 18%;
+          opacity: 0.15;
+          pointer-events: none;
+        }
+
+        .gn-deco-right {
+          top: 0;
+          right: 0;
+        }
+
+        .gn-deco-left {
+          bottom: 0;
+          left: 0;
+          transform: rotate(180deg);
+        }
+
+        .gn-deco img {
+          width: 100%;
+          display: block;
+        }
+
+        .gn-cta-content {
+          position: relative;
+          z-index: 1;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        .gn-cta-title {
+          font-size: 3rem;
+          font-weight: 700;
+          color: #ffffff;
+          line-height: 1.2;
+          margin-bottom: 20px;
+        }
+
+        .gn-cta-highlight {
+          color: #ffffff;
+          font-size: 3.5rem;
+        }
+
+        .gn-cta-desc {
+          font-size: 18px;
+          font-weight: 400;
+          color: rgba(255, 255, 255, 0.9);
+          line-height: 1.6;
+          margin-bottom: 36px;
+        }
+
+        .gn-cta-btn {
+          display: inline-block;
+          background-color: #ffffff;
+          color: #BF0603;
+          font-family: 'Roboto', sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 13px 40px;
+          border: 2px solid #ffffff;
+          border-radius: 2px;
+          cursor: pointer;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          letter-spacing: 0.5px;
+        }
+
+        .gn-cta-btn:hover {
+          background-color: transparent;
+          color: #ffffff;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 1024px) {
+          .gn-cta-section { padding: 60px 20px; }
+          .gn-cta-title { font-size: 2.4rem; }
+          .gn-cta-highlight { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 768px) {
+          .gn-cta-section { padding: 50px 15px; }
+          .gn-cta-title { font-size: 1.9rem; }
+          .gn-cta-highlight { font-size: 2.2rem; }
+          .gn-cta-desc { font-size: 16px; }
+        }
+
+        @media (max-width: 480px) {
+          .gn-cta-section { padding: 40px 10px; }
+          .gn-cta-title { font-size: 1.6rem; }
+          .gn-cta-highlight { font-size: 1.9rem; }
+        }
+      `}</style>
+    </section>
   );
 };
 

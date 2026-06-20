@@ -1,0 +1,36 @@
+{
+  "oem": {
+    "title": "Original Equipment Manufacturing Company That Meets STQC <br /> Quality Protocols",
+    "paragraphs": [
+      "With over 20 years of original equipment manufacturing expertise, Adiance Technologies Pvt. Ltd. stands as a leading Indian manufacturer delivering STQC-certified CCTV camera systems, precision robotic automation, and PCB assemblies tailored for complex industrial applications.",
+      "Our vertically integrated infrastructure spans PCB design, SMT & THT assembly, camera system integration, robotic arm production, multi-level inspections, and packaging all under strict internal quality controls. Our end-to-end processes ensure confidentiality, traceability and compliance at every stage.",
+      "Built on a foundation of engineering depth and scalable production, We consistently met the rigorous demands of both domestic and global partners serving OEM clients across safety, manufacturing and electronics sectors."
+    ]
+  },
+  "odm": {
+    "title": "Original Design Manufacturing Company Trusted by Global <br /> Brands",
+    "paragraphs": [
+      "With over 20 years of experience in original design manufacturing, Adiance Technologies Pvt. Ltd. stands as a reliable ODM service provider in India, offering white-label CCTV systems, robotic automation, and PCB solutions tailored to your business demands and timelines.",
+      "Our vertically integrated design and assembly ecosystem includes product conceptualization, industrial design, PCB and enclosure engineering, firmware development and full mechanical integration all executed under strict quality protocols and IP protection.",
+      "We've helped leading brands and tech startups accelerate their go-to-market journeys by providing custom ODM solutions that balance innovation, compliance and market readiness across electronics, surveillance and smart automation industries."
+    ]
+  },
+  "jdm": {
+    "title": "Joint Development Manufacturing Company Built for High-Innovation <br /> Products",
+    "paragraphs": [
+      "With over 20 years of engineering and manufacturing experience, Adiance Technologies Pvt. Ltd. enables companies to build breakthrough hardware through shared development and end-to-end manufacturing.",
+      "Our JDM framework includes co-design, R&D collaboration, joint prototyping, shared IP structure, engineering validation, pilot batch execution and mass production, all aligned with global quality standards.",
+      "Drawing strength from our vertically integrated setup—PCB design, SMT/THT, mechanical design, firmware engineering, robotic system integration, camera assembly and multi-stage QA—we help clients build products faster, smarter and more cost-efficiently.",
+      "Adiance serves global hardware innovators across safety, automation, robotics and electronics with development models tailored for advanced product requirements."
+    ]
+  },
+  "pcb": {
+    "title": "Trusted Printed Circuit Board Assembly Company for <br /> Surveillance & Automation",
+    "paragraphs": [
+      "With decades of experience in electronics manufacturing, Adiance Technologies Pvt. Ltd. is a trusted pcb assembly manufacturer in India, specializing in printed circuit board assembly for CCTV cameras and robotic automation systems.",
+      "Our end-to-end capabilities include SMT/THT assembly, component soldering, firmware programming, in-circuit testing, and ESD-safe packaging — all under stringent quality control. We build every PCB to meet the high standards of embedded surveillance and precision robotics.",
+      "From camera boards to robotic control units, we deliver scalable, production-ready PCBs that comply with IPC-A-610, RoHS, and CE norms. Whether you're launching new devices or upgrading existing ones, our EMS PCB manufacturing services ensure speed, reliability and seamless integration with your hardware systems."
+    ]
+  }
+
+}

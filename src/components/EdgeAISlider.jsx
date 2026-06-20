@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import { Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link } from "@/compat/react-router-dom";
 
 const ThermalCameraSlider = () => {
   const products = [
@@ -8,13 +10,13 @@ const ThermalCameraSlider = () => {
       id: 1,
       title: "Edge AI Based PTZ ANPR Bullet Camera",
       imageUrl:
-        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-01.png",
+        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-01.webp",
       link: "/edge-ai-based-ptz-anpr-bullet-camera",
     },
     {
       id: 2,
       title: "Edge AI Based Face Recognition Dome Camera",
-      imageUrl: "/images/P5-Edge-AI-Based-Face-Recognition-VM-72D5AIVE-02.png",
+      imageUrl: "/images/P5-Edge-AI-Based-Face-Recognition-VM-72D5AIVE-02.webp",
       link: "/edge-ai-based-recognition-camera",
     },
     // Add more products as needed
@@ -22,7 +24,7 @@ const ThermalCameraSlider = () => {
       id: 3,
       title: "Edge AI Based Object & Face Detection Camera",
       imageUrl:
-        "/images/P4-Edge-AI-Based-Object-Face-Detection-Cameras-VM-72B5AIVE-02.png",
+        "/images/P4-Edge-AI-Based-Object-Face-Detection-Cameras-VM-72B5AIVE-02.webp",
       link: "/edge-ai-based-object-n-face-detection-cameras",
     },
   ];

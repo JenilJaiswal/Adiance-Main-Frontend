@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const Remote = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -112,6 +114,15 @@ const Remote = () => {
           name="description"
           content="Remote security surveillance for remote sites, temporary installations, and rural areas. Rugged cameras, solar power, and cloud monitoring ensure safety."
         />
+        <meta name="keywords" content="remote security camera, remote surveillance, rural security CCTV" />
+        <meta property="og:title" content="Remote Security Surveillance - Adiance Technologies" />
+        <meta property="og:description" content="Remote security surveillance for remote sites, temporary installations, and rural areas. Rugged cameras, solar power, and cloud monitoring ensure safety." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
@@ -145,7 +156,7 @@ const Remote = () => {
             }}
           >
             <img
-              src="/images/rss1.png"
+              src="/images/rss1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -247,7 +258,7 @@ const Remote = () => {
             }}
           >
             <img
-              src="/images/rss2.png"
+              src="/images/rss2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -286,7 +297,7 @@ const Remote = () => {
             }}
           >
             <img
-              src="/images/rss3.jpg"
+              src="/images/rss3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

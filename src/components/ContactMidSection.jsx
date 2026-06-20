@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -20,10 +22,20 @@ const ContactMidSection = () => {
           Phone
         </Typography>
         <Typography variant="body1" gutterBottom>
-          Contact us for sale
+          Contact us for sales
+        </Typography>
+        <Typography variant="body2" color="textSecondary" sx={{ mb: 0.5 }}>
+          <strong>India:</strong>{" "}
+          <a href="tel:+919687779999" style={{ color: "inherit", textDecoration: "none" }}>
+            +91 96877 79999
+          </a>
         </Typography>
         <Typography variant="body2" color="textSecondary">
-          +919687779999
+          <strong>USA:</strong>{" "}
+          <a href="tel:+12818572584" style={{ color: "inherit", textDecoration: "none" }}>
+            +1 (281) 857-2584
+          </a>{" "}
+          <span style={{ opacity: 0.7 }}>— Dev Sanghvi</span><br /><a href="mailto:dev@adiance.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.9em", opacity: 0.85 }}>dev@adiance.com</a>
         </Typography>
       </Grid>
 

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import {
   Box,
@@ -116,6 +118,7 @@ const Testimonials = () => {
               fontWeight: "bold",
               textAlign: "center",
               fontSize: { xs: "2.5rem", sm: "3.5rem", lg: "3.5rem" },
+              color: "#444444",
             }}
           >
             Testimonials
@@ -129,7 +132,7 @@ const Testimonials = () => {
                 <Card
                   sx={{
                     padding: "1rem",
-                    borderRadius: "20px",
+                    // borderRadius: "20px",
                     height: "100%", // Ensures all cards in a row are same height
                   }}
                 >

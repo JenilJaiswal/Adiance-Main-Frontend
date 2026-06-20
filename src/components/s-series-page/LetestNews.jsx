@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from "react-bootstrap";
 import * as React from 'react';
 import Card from '@mui/material/Card';
@@ -12,19 +14,19 @@ const LetestNews = () => {
   const newsData = [
     {
       id: 1,
-      img: "/images/IMG.png",
+      img: "/images/IMG.webp",
       title: "Product Selector",
       description: "Explore our products and identify the most suitable ones.",
     },
     {
       id: 2,
-      img: "/images/Bitmap.png",
+      img: "/images/Bitmap.webp",
       title: "Latest News",
       description: "10 Ways to reduce your office work depression.",
     },
     {
       id: 3,
-      img: "/images/Bitmap (1).png",
+      img: "/images/Bitmap (1).webp",
       title: "Where to Buy",
       description: "Buy through our authorized channels or contact our sales.",
     },

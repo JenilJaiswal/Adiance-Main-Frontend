@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const Trafic = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -112,6 +114,15 @@ const Trafic = () => {
           name="description"
           content="Adiance Technologies advanced traffic management, vehicle surveillance, and school bus monitoring solutions to enhance safety and improve urban mobility."
         />
+        <meta name="keywords" content="traffic management CCTV, vehicle surveillance, traffic monitoring" />
+        <meta property="og:title" content="Traffic Management & Monitoring Solutions" />
+        <meta property="og:description" content="Adiance Technologies advanced traffic management, vehicle surveillance, and school bus monitoring solutions to enhance safety and improve urban mobility." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
@@ -145,7 +156,7 @@ const Trafic = () => {
             }}
           >
             <img
-              src="/images/trafic1.png"
+              src="/images/trafic1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -241,7 +252,7 @@ const Trafic = () => {
             }}
           >
             <img
-              src="/images/trafic2.jpg"
+              src="/images/trafic2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -280,7 +291,7 @@ const Trafic = () => {
             }}
           >
             <img
-              src="/images/trafic3.jpg"
+              src="/images/trafic3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -380,7 +391,7 @@ const Trafic = () => {
             }}
           >
             <img
-              src="/images/trafic4.jpg"
+              src="/images/trafic4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

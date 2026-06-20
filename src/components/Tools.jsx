@@ -1,22 +1,28 @@
+"use client";
+
 import React, { useMemo, useState, useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import { Helmet } from "react-helmet";
+import { useLocation } from "@/compat/react-router-dom";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import DownloadForOfflineOutlinedIcon from "@mui/icons-material/DownloadForOfflineOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import axios from "axios";
 
-// API configuration
-const API_BASE_URL = "https://etaems.arcisai.io:5000/api/version";
+// API configuration — requests go through the Next.js proxy at
+// app/api/version/[...path]/route.js to bypass CORS and self-signed
+// cert issues on the upstream tools/firmware backend.
+const API_BASE_URL = "/api/version";
 const instance = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000,
+  timeout: 60000,
 });
 
 // API functions for Tools (Apps)
 const getAllAppVersion = async () => {
   try {
-    const res = await instance.get("/app/getAllApps");
+    const res = await instance.get("/app/latest");
     return res.data;
   } catch (err) {
     console.error("App version fetch failed:", err);
@@ -45,6 +51,7 @@ const downloadAppById = async (id, type) => {
     } else {
       // Default fallback filenames
       if (type === "releaseNotes") filename = "releaseNotes.txt";
+      if (type === "userManual") filename = "userManual.pdf";
       if (type === "app") filename = "applicationFiles.zip"; // always ZIP now
     }
 
@@ -80,6 +87,8 @@ const downloadAppById = async (id, type) => {
 
 
 const Tools = () => {
+  const location = useLocation();
+  const canonicalUrl = `https://www.adiance.com${location.pathname}`;
   const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -147,6 +156,17 @@ const Tools = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Tools & Software Downloads | Adiance</title>
+        <meta
+          name="description"
+          content="Download tools and software for Adiance security cameras. Configuration utilities, mobile apps, and management software."
+        />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
       <Header />
       <div className="container" style={{ paddingTop: "100px", paddingBottom: "60px" }}>
         <h1 style={{ marginBottom: "8px" }}>Tools</h1>
@@ -236,7 +256,7 @@ const Tools = () => {
                         <th style={headerCellStyle}>App Name</th>
                         <th style={headerCellStyle}>Version</th>
                         <th style={headerCellStyle}>Uploaded On</th>
-                        <th style={headerCellStyle}>Release Notes</th>
+                        <th style={headerCellStyle}>User Manual</th>
                         <th style={headerCellStyle}>Download</th>
                       </tr>
                     </thead>
@@ -250,23 +270,27 @@ const Tools = () => {
                             <td style={bodyCellStyle(isLastRow)}>{row.versionName}</td>
                             <td style={bodyCellStyle(isLastRow)}>{formatDate(row.updatedAt || row.uploadedAt || row.createdAt)}</td>
                             <td style={bodyCellStyle(isLastRow)}>
-                              <button
-                                onClick={() => handleDownload(row._id, 'releaseNotes')}
-                                className="link"
-                                aria-label={`Open release notes for ${appName}`}
-                                style={{ 
-                                  display: "inline-flex", 
-                                  alignItems: "center", 
-                                  gap: 8,
-                                  background: "none",
-                                  border: "none",
-                                  cursor: "pointer",
-                                  padding: 0
-                                }}
-                              >
-                                <DescriptionOutlinedIcon fontSize="small" />
-                                <span>View</span>
-                              </button>
+                              {row.userManualFile ? (
+                                <button
+                                  onClick={() => handleDownload(row._id, 'userManual')}
+                                  className="link"
+                                  aria-label={`Download user manual for ${appName}`}
+                                  style={{
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    gap: 8,
+                                    background: "none",
+                                    border: "none",
+                                    cursor: "pointer",
+                                    padding: 0
+                                  }}
+                                >
+                                  <DescriptionOutlinedIcon fontSize="small" />
+                                  <span>Download</span>
+                                </button>
+                              ) : (
+                                <span style={{ color: "#888" }}>—</span>
+                              )}
                             </td>
                             <td style={bodyCellStyle(isLastRow)}>
                               <button

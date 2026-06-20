@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const PublicSafety = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -112,6 +114,15 @@ const PublicSafety = () => {
           name="description"
           content="Enhance security with AI-driven CCTV solutions. HD imaging, wide-angle coverage, low-light performance & smart analytics for real-time monitoring & safety."
         />
+        <meta name="keywords" content="public safety CCTV, AI security camera, surveillance monitoring" />
+        <meta property="og:title" content="Public Safety & Security | AI-Powered CCTV Surveillance" />
+        <meta property="og:description" content="Enhance security with AI-driven CCTV solutions. HD imaging, wide-angle coverage, low-light performance & smart analytics for real-time monitoring & safety." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
@@ -213,7 +224,7 @@ const PublicSafety = () => {
             }}
           >
             <img
-              src="/images/ps1.jpg"
+              src="/images/ps1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -311,7 +322,7 @@ const PublicSafety = () => {
             }}
           >
             <img
-              src="/images/ps2.jpg"
+              src="/images/ps2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -350,7 +361,7 @@ const PublicSafety = () => {
             }}
           >
             <img
-              src="/images/ps3.png"
+              src="/images/ps3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -448,7 +459,7 @@ const PublicSafety = () => {
             }}
           >
             <img
-              src="/images/ps4.png"
+              src="/images/ps4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

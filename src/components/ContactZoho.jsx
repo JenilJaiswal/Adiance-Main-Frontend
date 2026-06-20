@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/compat/react-router-dom";
 
 // MUI Components
 import {
@@ -62,15 +64,14 @@ const ContactZoho = () => {
     camerasFor: "",
     customerQuantity: "",
     updates: false,
-    leadType: "Adiance Website",
+    source: "Adiance Website-(Contact)",
     businessUnit: "Adiance Technologies Pvt Ltd",
   });
 
   const [isLoading, setIsLoading] = useState(false);
 
   // API URLs remain the same
-  const EMS_API_URL =
-    "https://c-r-m-icr7b.ondigitalocean.app/backend/api/crmSales/createLead";
+  const EMS_API_URL = "https://backend.adiance.com:443/api/crm-lead";
 
   // const ADIANCE_EMAIL_URL = "http://localhost:5000/api/send-email-adiance";
   const ADIANCE_EMAIL_URL = "https://backend.adiance.com:443/api/send-email-adiance"
@@ -79,8 +80,9 @@ const ContactZoho = () => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (name === "phone") {
-      const digitsOnly = value.replace(/\D/g, "").slice(0, 10);
-      setFormData((prev) => ({ ...prev, [name]: digitsOnly }));
+      // Allow international formats: digits, leading +, spaces, dashes, parentheses
+      const cleaned = value.replace(/[^\d+\-() ]/g, "").slice(0, 18);
+      setFormData((prev) => ({ ...prev, [name]: cleaned }));
     } else {
       setFormData((prev) => ({
         ...prev,
@@ -93,25 +95,60 @@ const ContactZoho = () => {
     setSnackbar((prev) => ({ ...prev, open: false }));
   };
 
-  // handleSubmit logic is the same, just with Snackbar instead of Toast
-  const handleSubmit = async (e) => {
+  // Email validation function
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
+  // Phone validation — accepts international numbers (with country code)
+  const validatePhone = (phone) => {
+    const digits = phone.replace(/\D/g, "");
+    if (digits.length < 7 || digits.length > 15) {
+      return "Please enter a valid phone number (7-15 digits, country code welcome)";
+    }
+    if (/^(\d)\1+$/.test(digits)) {
+      return "Phone number cannot be all the same digit";
+    }
+    return null; // valid
+  };
+
+  // handleSubmit logic with enhanced validation
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Check for required fields
     if (
       !formData.name ||
       !formData.email ||
       !formData.phone ||
       !formData.company ||
-      !formData.location ||
-      !formData.businessType ||
-      !formData.enquiryFor ||
-      !formData.customerType ||
-      !formData.camerasFor
+      !formData.location
     ) {
       setSnackbar({
         open: true,
         message: "Please fill in all required fields marked with *",
+        severity: "error",
+      });
+      return;
+    }
+
+    // ✅ Phone validation (NOW USED)
+    const phoneError = validatePhone(formData.phone);
+    if (phoneError) {
+      setSnackbar({
+        open: true,
+        message: phoneError,
+        severity: "error",
+      });
+      return;
+    }
+
+    // Validate email format
+    if (!isValidEmail(formData.email)) {
+      setSnackbar({
+        open: true,
+        message: "Please enter a valid email address",
         severity: "error",
       });
       return;
@@ -124,10 +161,6 @@ const ContactZoho = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-        // body: JSON.stringify({
-        //     ...formData,
-        //     formType: "Contact",
-        //   }),
       });
 
       const crmPayload = {
@@ -138,10 +171,11 @@ const ContactZoho = () => {
         location: formData.location,
         clientCategory: formData.customerType,
         industryType: formData.camerasFor,
-        leadType: "Adiance website",
+        source: "Adiance Website-(Contact)",
         customerType: formData.customerType,
         requirement: [],
         customerQuantity: formData.customerQuantity,
+        domain: "Adiance",
       };
       const crmPromise = axios.post(EMS_API_URL, crmPayload);
 
@@ -151,13 +185,7 @@ const ContactZoho = () => {
       if (!(crmRes.status === 200 || crmRes.status === 201))
         throw new Error("CRM API failed");
 
-      // setSnackbar({
-      //   open: true,
-      //   message: "Your enquiry has been submitted successfully.",
-      //   severity: "success",
-      // });
-
-      setTimeout(() => navigate("/thank-you"), 1500); // Navigate after a short delay
+      setTimeout(() => navigate("/thank-you"), 1500);
     } catch (error) {
       console.error("Submission Error:", error);
       setSnackbar({
@@ -165,10 +193,11 @@ const ContactZoho = () => {
         message: error.message || "An unexpected error occurred.",
         severity: "error",
       });
-    } finally {
       setIsLoading(false);
     }
   };
+
+
 
   return (
     <Box sx={{ py: { xs: 4, md: 8 }, bgcolor: "grey.100" }}>
@@ -216,7 +245,9 @@ const ContactZoho = () => {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="10-digit number"
+                  placeholder="+1 555 123 4567"
+                  helperText="Include your country code (e.g. +1, +44, +971)"
+                  error={formData.phone.length > 0 && validatePhone(formData.phone) !== null}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -228,6 +259,8 @@ const ContactZoho = () => {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
+                  helperText="Enter a valid email address"
+                  error={formData.email.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)}
                 />
               </Grid>
               {/* Row 3 */}
@@ -235,7 +268,7 @@ const ContactZoho = () => {
                 <TextField
                   fullWidth
                   required
-                  label="City"
+                  label="City & Country"
                   name="location"
                   value={formData.location}
                   onChange={handleChange}
@@ -244,7 +277,6 @@ const ContactZoho = () => {
               <Grid item xs={12} sm={6}>
                 <TextField
                   fullWidth
-                  required
                   label="Number of Cameras Needed"
                   name="customerQuantity"
                   type="number"
@@ -266,7 +298,6 @@ const ContactZoho = () => {
               <Grid item xs={12} sm={6}>
                 <TextField
                   fullWidth
-                  required
                   select
                   label="Business Type"
                   name="businessType"
@@ -289,7 +320,6 @@ const ContactZoho = () => {
               <Grid item xs={12} sm={6}>
                 <TextField
                   fullWidth
-                  required
                   select
                   label="Enquiry For"
                   name="enquiryFor"
@@ -313,7 +343,6 @@ const ContactZoho = () => {
               <Grid item xs={12} sm={6}>
                 <TextField
                   fullWidth
-                  required
                   select
                   label="I am a:"
                   name="customerType"
@@ -332,7 +361,6 @@ const ContactZoho = () => {
               <Grid item xs={12} sm={6}>
                 <TextField
                   fullWidth
-                  required
                   select
                   label="I want cameras for:"
                   name="camerasFor"

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -6,7 +8,7 @@ import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import AllInclusiveOutlinedIcon from "@mui/icons-material/AllInclusiveOutlined";
 import InsightsOutlinedIcon from "@mui/icons-material/InsightsOutlined";
 import AutoModeOutlinedIcon from "@mui/icons-material/AutoModeOutlined";
-import { Link } from "react-router-dom";
+import { Link } from "@/compat/react-router-dom";
 import Typography from "@mui/material/Typography";
 
 const IconsRow = () => {

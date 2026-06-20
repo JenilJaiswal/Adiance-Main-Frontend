@@ -1,0 +1,14 @@
+{
+  "oem": {
+    "backgroundImage": "/N_Images/About_OEM_bg.webp",
+    "title": "Comprehensive OEM Manufacturing Solutions Built Around Your Product Needs",
+    "description": "Turn your product vision into market-ready success with us — We are India's trusted original equipment manufacturer company for CCTV cameras, robotic arms and PCB solutions.",
+    "backgroundImageAlt": "OEM Manufacturing Background"
+  },
+  "pcb": {
+    "backgroundImage": "/N_Images/About_OEM_bg.webp",
+    "title": "Comprehensive PCB Assembly Services by Indian EMS <br /> Manufacturer",
+    "description": "We offer reliable PCB assembly solutions in India for surveillance systems and robotic applications, using high-speed SMT, THT processes and multi-level testing to deliver consistent quality at production scale.",
+    "backgroundImageAlt": "PCB Manufacturing Background"
+  }
+}

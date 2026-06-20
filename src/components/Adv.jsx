@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 const Adv = () => {
@@ -18,9 +20,10 @@ const Adv = () => {
         <div className="adv-item">
           <center>
             <img
-              src="images/Happy Clients.png"
+              src="images/Happy Clients.webp"
               alt="Conveyor Belt"
               className="adv-img"
+              loading="lazy"
             />
           </center>
           <p className="adv-text adv-text-bigger">
@@ -32,7 +35,7 @@ const Adv = () => {
         </div>
         <div className="adv-item">
           <center>
-            <img src="images/Security Partner in 15+ States.png" alt="Research" className="adv-img" />
+            <img src="images/Security Partner in 15+ States.webp" alt="Research" className="adv-img" loading="lazy" />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>
@@ -43,7 +46,7 @@ const Adv = () => {
         </div>
         <div className="adv-item">
           <center>
-            <img src="images/Trusted by Indian Government.png" alt="Employee" className="adv-img" />
+            <img src="images/Trusted by Indian Government.webp" alt="Employee" className="adv-img" loading="lazy" />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>
@@ -53,7 +56,7 @@ const Adv = () => {
         </div>
         <div className="adv-item">
           <center>
-            <img src="images/Patented Technology.png" alt="Performance" className="adv-img" />
+            <img src="images/Patented Technology.webp" alt="Performance" className="adv-img" loading="lazy" />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>Patented Technology</center>
@@ -61,7 +64,7 @@ const Adv = () => {
         </div>
         <div className="adv-item">
           <center>
-            <img src="images/Menufecturing Facility in Gujarat.png" alt="Certificate" className="adv-img" />
+            <img src="images/Menufecturing Facility in Gujarat.webp" alt="Certificate" className="adv-img" loading="lazy" />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>
@@ -71,7 +74,7 @@ const Adv = () => {
         </div>
         <div className="adv-item">
           <center>
-            <img src="images/Made in India.png" alt="Certificate" className="adv-img" />
+            <img src="images/Made in India.webp" alt="Certificate" className="adv-img" loading="lazy" />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>
@@ -81,7 +84,7 @@ const Adv = () => {
         </div>
         <div className="adv-item">
           <center>
-            <img src="images/20+ Years of Industry Experience.png" alt="Certificate" className="adv-img" />
+            <img src="images/20+ Years of Industry Experience.webp" alt="Certificate" className="adv-img" loading="lazy" />
           </center>
           <p className="adv-text adv-text-bigger">
             <center>

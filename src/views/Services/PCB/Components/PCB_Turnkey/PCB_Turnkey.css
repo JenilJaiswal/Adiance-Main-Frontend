@@ -1,0 +1,174 @@
+.pcb-turnkey-container {
+    position: relative;
+    min-height: 600px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.pcb-turnkey-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    color: #fff;
+}
+
+.pcb-turnkey-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1100px;
+}
+
+.pcb-turnkey-description {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: 400;
+    line-height: 1.7;
+    font-family: 'Roboto', sans-serif;
+    max-width: 600px;
+}
+
+.pcb-turnkey-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+}
+
+.pcb-turnkey-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.pcb-feature-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .pcb-turnkey-container {
+        min-height: 550px;
+        padding: 60px 20px;
+    }
+
+    .pcb-turnkey-title {
+        font-size: 2.2rem;
+    }
+
+    .pcb-turnkey-description {
+        font-size: 1rem;
+    }
+
+    .pcb-turnkey-feature {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .pcb-turnkey-container {
+        min-height: 500px;
+        padding: 50px 20px;
+    }
+
+    .pcb-turnkey-title {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+    .pcb-turnkey-description {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .pcb-turnkey-features {
+        max-width: 100%;
+    }
+
+    .pcb-turnkey-feature {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pcb-turnkey-container {
+        min-height: 450px;
+        padding: 40px 15px;
+    }
+
+    .pcb-turnkey-overlay {
+        background: linear-gradient(90deg, rgba(191, 6, 3, 0.9) 0%, rgba(191, 6, 3, 0.75) 100%);
+    }
+
+    .pcb-turnkey-title {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+    }
+
+    .pcb-turnkey-description {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+
+    .pcb-turnkey-features {
+        gap: 14px;
+    }
+
+    .pcb-turnkey-feature {
+        font-size: 0.9rem;
+    }
+
+    .pcb-feature-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pcb-turnkey-container {
+        min-height: 400px;
+        padding: 35px 15px;
+    }
+
+    .pcb-turnkey-title {
+        font-size: 1.5rem;
+        margin-bottom: 14px;
+    }
+
+    .pcb-turnkey-description {
+        font-size: 0.85rem;
+        margin-bottom: 25px;
+    }
+
+    .pcb-turnkey-features {
+        gap: 12px;
+    }
+
+    .pcb-turnkey-feature {
+        font-size: 0.85rem;
+    }
+
+    .pcb-feature-icon {
+        width: 18px;
+        height: 18px;
+    }
+}

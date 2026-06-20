@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useNavigate } from '@/compat/react-router-dom';
 import {
   Box,
   Typography,
@@ -9,6 +12,8 @@ import {
   CircularProgress
 } from '@mui/material';
 import { sendContactEmail } from '../AdianceAdmin/api/blogs';
+
+const EMS_API_URL = `${process.env.NEXT_PUBLIC_API_URL || "https://backend.adiance.com:443/api"}/crm-lead`;
 
 const ContactForm = ({ redirectUrl = "/thank-you" }) => {
   const navigate = useNavigate();
@@ -29,24 +34,73 @@ const ContactForm = ({ redirectUrl = "/thank-you" }) => {
     }));
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+  //   setSubmitStatus(null);
+
+  //   try {
+  //     await sendContactEmail(formData);
+  //     navigate(redirectUrl);
+  //     // setSubmitStatus('success');
+  //     setFormData({
+  //       fullName: '',
+  //       email: '',
+  //       phone: '',
+  //       message: ''
+  //     });
+  //   } catch (error) {
+  //     setSubmitStatus('error');
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
     try {
-      await sendContactEmail(formData);
-      navigate(redirectUrl);
-      // setSubmitStatus('success');
+      // 1. Send the Contact Email (as you were doing)
+      const emailPromise = sendContactEmail(formData);
+
+      // 2. Prepare and send CRM Payload
+      const crmPayload = {
+        name: formData.fullName, // Blog uses fullName
+        mobile: formData.phone,
+        email: formData.email,
+        company: "N/A",           // Default for blog leads
+        location: "N/A",          // Default for blog leads
+        clientCategory: "Dealer",
+        industryType: "N/A",
+        source: "Adiance Website-(Blog)", // Changed source to track origin
+        customerType: "Dealer",
+        requirement: [],
+        customerQuantity: "0", // Default for blog leads,
+        domain: "Adiance",
+      };
+
+      // Using axios for CRM as seen in your contact page code
+      const crmPromise = axios.post(EMS_API_URL, crmPayload);
+
+      // 3. Wait for both to finish
+      await Promise.all([emailPromise, crmPromise]);
+
+      // Success Actions
       setFormData({
         fullName: '',
         email: '',
         phone: '',
         message: ''
       });
+      
+      // Navigate to success/redirect URL
+      navigate(redirectUrl);
+
     } catch (error) {
+      console.error("Submission Error:", error);
       setSubmitStatus('error');
-    } finally {
       setIsSubmitting(false);
     }
   };

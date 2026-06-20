@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 
 const InnovationHome = ({ type = "innovation" }) => {
@@ -21,7 +23,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/S-Series-Edge-AI-CCTV-Cameras.jpg",
+      imageUrl: "/images/S-Series-Edge-AI-CCTV-Cameras.webp",
     },
     {
       id: 2,
@@ -43,7 +45,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/Eco-Series-Security-CCTV-Cameras.jpg",
+      imageUrl: "/images/Eco-Series-Security-CCTV-Cameras.webp",
     },
     {
       id: 3,
@@ -65,7 +67,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/STQC-Cloud-VMS—Secure-Video-Management-System.jpg",
+      imageUrl: "/images/STQC-Cloud-VMS—Secure-Video-Management-System.webp",
     },
     {
       id: 4,
@@ -87,7 +89,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/Arcis-Bridge-Device.jpg",
+      imageUrl: "/images/Arcis-Bridge-Device.webp",
     },
     {
       id: 5,
@@ -116,7 +118,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/NVRs-Network-Video-Recorders-ArcisAI.jpg",
+      imageUrl: "/images/NVRs-Network-Video-Recorders-ArcisAI.webp",
     },
     {
       id: 6,
@@ -134,7 +136,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           </p>
         </>
       ),
-      imageUrl: "/images/NVRs-ArcisAI-Robotics-arm.jpg",
+      imageUrl: "/images/NVRs-ArcisAI-Robotics-arm.webp",
     },
   ];
 
@@ -151,7 +153,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           products quickly without investing in your own factory.
         </p>
       ),
-      imageUrl: "/images/ODM-CCTV-Camera-Manufacturing.jpg",
+      imageUrl: "/images/ODM-CCTV-Camera-Manufacturing.webp",
     },
     {
       id: 2,
@@ -164,7 +166,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           require.
         </p>
       ),
-      imageUrl: "/images/OEM-CCTV-Camera-Development.jpg",
+      imageUrl: "/images/OEM-CCTV-Camera-Development.webp",
     },
     {
       id: 3,
@@ -177,7 +179,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           integrated video surveillance solutions from concept to production.
         </p>
       ),
-      imageUrl: "/images/SmartTech.png",
+      imageUrl: "/images/SmartTech.webp",
     },
     {
       id: 4,
@@ -190,7 +192,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           firmware loading, and product testing.
         </p>
       ),
-      imageUrl: "/images/PCB-Assembly-Manufacturing.jpg",
+      imageUrl: "/images/PCB-Assembly-Manufacturing.webp",
     },
     {
       id: 5,
@@ -202,7 +204,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           footage from multiple locations with fast, reliable, and safe storage.
         </p>
       ),
-      imageUrl: "/images/cloudAbout.png",
+      imageUrl: "/images/cloudAbout.webp",
     },
     {
       id: 6,
@@ -215,7 +217,7 @@ const InnovationHome = ({ type = "innovation" }) => {
           to match your brand identity and performance needs.
         </p>
       ),
-      imageUrl: "/images/customized.png",
+      imageUrl: "/images/customized.webp",
     },
   ];
 

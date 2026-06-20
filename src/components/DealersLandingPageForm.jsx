@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import {
   TextField,
@@ -20,7 +22,7 @@ import {
   MenuItem,
 } from "@mui/material";
 import { CheckCircleOutline, ErrorOutline } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/compat/react-router-dom";
 
 
 const DealersLandingPageForm = () => {

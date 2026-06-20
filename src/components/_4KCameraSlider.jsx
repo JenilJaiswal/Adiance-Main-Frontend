@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import { Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link } from "@/compat/react-router-dom";
 
 const _4KCameraSlider = () => {
   const products = [
@@ -8,7 +10,7 @@ const _4KCameraSlider = () => {
       id: 1,
       title: "Edge AI Based PTZ ANPR Bullet Camera",
       imageUrl: [
-        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-02.png",
+        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-02.webp",
       ],
       link: "/4k-bullet-anpr-ptz-camera",
     },
@@ -16,7 +18,7 @@ const _4KCameraSlider = () => {
       id: 2,
       title: "Edge AI Based Face Recognition Dome Camera",
       imageUrl: [
-        "/images/P5-Edge-AI-Based-Face-Recognition-VM-72D5AIVE-01-1.png",
+        "/images/P5-Edge-AI-Based-Face-Recognition-VM-72D5AIVE-01-1.webp",
       ],
       link: "/4k-face-recognition-camera",
     },
@@ -24,7 +26,7 @@ const _4KCameraSlider = () => {
       id: 3,
       title: "Edge AI Based Object & Face Detection Cameras",
       imageUrl: [
-        "/images/P4-Edge-AI-Based-Object-Face-Detection-Cameras-VM-72B5AIVE-01.png",
+        "/images/P4-Edge-AI-Based-Object-Face-Detection-Cameras-VM-72B5AIVE-01.webp",
       ],
       link: "/edge-ai-based-object-n-face-detection-cameras",
     },

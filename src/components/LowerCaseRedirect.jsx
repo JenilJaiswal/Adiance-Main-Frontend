@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "@/compat/react-router-dom";
 
 const LowercaseRedirect = () => {
   const location = useLocation();

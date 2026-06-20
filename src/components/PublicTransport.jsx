@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const PublicTransport = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -131,6 +133,15 @@ const PublicTransport = () => {
           name="description"
           content="Adiance Technologies provides advanced CCTV solutions for public transport, ensuring passenger safety and real-time monitoring with HD cameras and AI analytics"
         />
+        <meta name="keywords" content="public transport CCTV, bus security camera, transit surveillance" />
+        <meta property="og:title" content="CCTV Solutions for Public Transport Safety & Efficiency" />
+        <meta property="og:description" content="Adiance Technologies provides advanced CCTV solutions for public transport, ensuring passenger safety and real-time monitoring with HD cameras and AI analytics" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
@@ -164,7 +175,7 @@ const PublicTransport = () => {
             }}
           >
             <img
-              src="/images/pt1.png"
+              src="/images/pt1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -248,7 +259,7 @@ const PublicTransport = () => {
             }}
           >
             <img
-              src="/images/pt2.png"
+              src="/images/pt2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -287,7 +298,7 @@ const PublicTransport = () => {
             }}
           >
             <img
-              src="/images/pt3.png"
+              src="/images/pt3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -369,7 +380,7 @@ const PublicTransport = () => {
             }}
           >
             <img
-              src="/images/pt4.png"
+              src="/images/pt4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -408,7 +419,7 @@ const PublicTransport = () => {
             }}
           >
             <img
-              src="/images/pt5.png"
+              src="/images/pt5.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

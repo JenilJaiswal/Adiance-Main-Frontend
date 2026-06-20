@@ -1,0 +1,6 @@
+Contact: mailto:security@adiance.com
+Contact: mailto:tech@adiance.com
+Expires: 2027-05-28T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://www.adiance.com/.well-known/security.txt
+Policy: https://www.adiance.com/privacy-policy

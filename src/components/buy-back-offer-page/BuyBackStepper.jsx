@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Box, Typography, Stepper, Step, StepLabel, useMediaQuery, Paper, Container } from "@mui/material";
 import { useTheme } from "@mui/material/styles";

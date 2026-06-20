@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useEffect } from "react";
 import { Button, Typography, Box } from "@mui/material";
 import {
@@ -7,7 +9,7 @@ import {
 } from "@mui/icons-material";
 import "../styles/MidBar.css";
 import NavigationBar from "./NavigationBar";
-import { Link as RouterLink } from "react-router-dom";
+import SmartLink from "./SmartLink";
 import VerifiedIcon from "@mui/icons-material/Verified";
 
 export default function MidBar() {
@@ -43,9 +45,9 @@ export default function MidBar() {
           // fontFamily: "Inknut Antiqua, serif",
         }}
       >
-        <RouterLink to="/">
+        <SmartLink to="/">
           <img
-            src="/images/Logo.png"
+            src="/images/Logo.webp"
             alt="Logo"
             style={{
               marginTop: "5px",
@@ -53,7 +55,7 @@ export default function MidBar() {
               marginRight: "20px",
             }} // Added marginRight for space between logo and div tags
           />
-        </RouterLink>
+        </SmartLink>
         {/* <div
           style={{
             display: "flex",

@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useState, useEffect, useCallback } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/compat/react-router-dom";
 import {
   TextField,
   Select,
@@ -10,9 +12,10 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Breadcrumb from "./Breadcrumb";
+import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
 import { getBlogs } from "../AdianceAdmin/api/blogs";
 
@@ -25,9 +28,8 @@ const Blogs = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState("latest");
 
-  const IMAGE_BASE_URL = (
-    "https://backend.adiance.com:443/images" || "http://localhost:5000/uploads"
-  ).replace(/\/$/, "");
+  const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
+  const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
   const PAGE_SIZE = 6;
 
   const fetchData = useCallback(async () => {
@@ -82,13 +84,49 @@ const Blogs = () => {
   return (
     <div>
       <Helmet>
-        <title>Insights & Trends | Explore Our Security Blog</title>
+        <title>Insights & Trends | Explore Our Security Blog - Adiance</title>
         <meta
           name="description"
-          content="Stay updated with the latest security trends, AI innovations, and expert insights on surveillance, cybersecurity, and smart protection solutions."
+          content="Stay updated with the latest security trends, AI innovations, and expert insights on surveillance, cybersecurity, and smart protection solutions from Adiance Technologies."
         />
+        <link rel="canonical" href="https://www.adiance.com/blog" />
+        <meta property="og:title" content="Insights & Trends | Explore Our Security Blog - Adiance" />
+        <meta property="og:description" content="Stay updated with the latest security trends, AI innovations, and expert insights on surveillance, cybersecurity, and smart protection solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.adiance.com/blog" />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
+        <meta name="twitter:title" content="Insights & Trends | Explore Our Security Blog - Adiance" />
+        <meta name="twitter:description" content="Stay updated with the latest security trends, AI innovations, and expert insights on surveillance." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Adiance Blog",
+            "description": "Stay updated with the latest security trends, AI innovations, and expert insights on surveillance.",
+            "url": "https://www.adiance.com/blog",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Adiance Technologies",
+              "url": "https://www.adiance.com"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.adiance.com" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.adiance.com/blog" }
+            ]
+          })}
+        </script>
       </Helmet>
       <Header />
+      <Breadcrumb />
       <NavHeader text={"Blogs"} />
       {/* Filters */}
       <Stack
@@ -137,10 +175,12 @@ const Blogs = () => {
               style={{ textDecoration: "none", color: "inherit", display: "block" }}
             >
               <img
-                src={`${IMAGE_BASE_URL}/${String(
-                  blog.content?.mainImage || ""
-                ).replace(/^\/?(images\/)?/, "")}`}
-                alt={blog.content?.imageText || blog.content?.title}
+                src={
+                  blog.content?.mainImage
+                    ? `${IMAGE_BASE_URL}/${String(blog.content.mainImage).replace(/^\/?(images\/)?/, "")}`
+                    : "/images/Logo.webp"
+                }
+                alt={blog.content?.imageText || blog.content?.title || "Adiance Blog"}
                 className="item-image"
               />
               <div className="item-details">
@@ -173,7 +213,7 @@ const Blogs = () => {
         )}
       </div>
       {blogs.length > 0 && totalPages > 1 && (
-        <Box sx={{ mt: 3, display: "flex", justifyContent: "center" }}>
+        <Box sx={{ mt: 3, mb: 4, display: "flex", justifyContent: "center" }}>
           <Pagination
             count={totalPages}
             page={currentPage}

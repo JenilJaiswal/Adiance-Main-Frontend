@@ -1,0 +1,26 @@
+{
+  "oem": {
+    "backgroundImage": "/N_Images/OEM_Hero.svg",
+    "title": "Original Equipment<br />Manufacturer Services<br />for CCTV, Robotics Arm & PCB",
+    "description": "We are a leading OEM company in India offering scalable production, custom engineering and STQC-certified precision across video surveillance systems, industrial robotic arms and electronic assemblies.",
+    "ctaText": "Get a Custom OEM Quote"
+  },
+  "odm": {
+    "backgroundImage": "/N_Images/ODM_Hero.webp",
+    "title": "Original Design<br />Manufacturer Services<br />for PCB, CCTV & Robotics Arm",
+    "description": "Design, develop, and deliver innovative products under your brand with our white-label ODM manufacturing services. From concept to full-scale production, We handle everything. Our solutions align with your business goals and help reduce time-to-market.",
+    "ctaText": "Get a ODM Quote Now"
+  },
+  "jdm": {
+    "backgroundImage": "/N_Images/JDM_Hero.webp",
+    "title": "Joint Development<br />Manufacturing Services<br />for CCTV, Robotics & PCB",
+    "description": "We partner with brands, startups and enterprises to co-develop innovative hardware— combining your product concept with our engineering, R&D, prototyping and scaled manufacturing expertise.",
+    "ctaText": "Get a Custom JDM Quote"
+  },
+  "pcb": {
+    "backgroundImage": "/N_Images/PCB_Hero.webp",
+    "title": "Trusted PCB Manufacturing Assembly for Camera and Robotic Systems",
+    "description": "We specialize in printed circuit board assembly services for CCTV and robotics - built for performance, tested for reliability, and delivered to match your production scale and timelines.",
+    "ctaText": "Book Your PCB Production Slot"
+  }
+}

@@ -1,23 +1,33 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Suspense, useEffect } from "react";
+import "./N_Component/Style.css";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
   useLocation,
   useNavigate,
 } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import routes from "./components/routes";
-import { useEffect } from "react";
-import EventMainDash from "./components/Events/EventMainDash";
+import RedirectManager from "./RedirectManager";
+
+// Scroll to top component
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const CombinedRedirect = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    let targetPath = location.pathname;
+  let targetPath = location.pathname;
 
     // Redirect specific path
     if (targetPath === "/anrpcamera") {
@@ -54,16 +64,21 @@ const CombinedRedirect = () => {
 
 function App() {
   return (
-    <Router>
-      {/* <EventMainDash /> */}
-      <CombinedRedirect />
-      <Routes>
-        {routes.map(({ path, element }, index) => {
-          // console.log("Checking route:", path);
-          return <Route key={index} path={path} element={element} replace />;
-        })}
-      </Routes>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <RedirectManager />
+        {/* <EventMainDash /> */}
+        <CombinedRedirect />
+        <Suspense fallback={null}>
+          <Routes>
+            {routes.map(({ path, element }, index) => {
+              return <Route key={index} path={path} element={element} replace />;
+            })}
+          </Routes>
+        </Suspense>
+      </Router>
+    </HelmetProvider>
   );
 }
 

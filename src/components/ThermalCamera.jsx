@@ -1,14 +1,16 @@
+"use client";
+
 import React, { useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
 import ThermalCameraSlider from "./ThermalCameraSlider";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 const ThermalCamera = () => {
   const [activeTab, setActiveTab] = useState("benefits");
   const location = useLocation(); // Get the current route
@@ -33,6 +35,15 @@ const ThermalCamera = () => {
             name="description"
             content="Thermal cameras with AI analytics detect fever and elevated body temperatures in real-time, ensuring safety in airports, offices, and healthcare facilities."
           />
+          <meta name="keywords" content="thermal camera, fever detection camera, AI thermal screening" />
+          <meta property="og:title" content="Thermal Camera Solutions - AI-Powered Fever Detection" />
+          <meta property="og:description" content="Thermal cameras with AI analytics detect fever and elevated body temperatures in real-time, ensuring safety in airports, offices, and healthcare facilities." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
           <link rel="canonical" href={canonicalUrl} />
         </Helmet>
         <Header />

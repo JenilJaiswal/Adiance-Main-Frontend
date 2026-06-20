@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Container,
@@ -21,7 +23,7 @@ import {
   CalendarMonth as CalendarIcon,
 } from "@mui/icons-material";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "@/compat/react-router-dom";
 import { Helmet } from "react-helmet";
 import { getBlogs, getBlogById } from "./blog"; // Assuming your API file is named blog.js
 

@@ -1,0 +1,107 @@
+# Adiance Technologies
+
+> Adiance Technologies is an NDAA-compliant OEM/ODM CCTV camera manufacturer headquartered in Ahmedabad, India. We produce white-label surveillance cameras, edge-AI cameras, thermal cameras, ANPR/LPR cameras, 4G cameras, PTZ cameras, and an in-house Cloud VMS / NVR platform for global security integrators, distributors, and government deployments.
+
+## About
+
+- **Name:** Adiance Technologies
+- **Founded:** 2003
+- **Headquarters:** 7 Arista@Eight Corporate House, Behind Rajpath Club, Bodakdev, Ahmedabad, Gujarat 380054, India
+- **Phone:** +91-9687779999
+- **Sales email:** sales@adiance.com
+- **Website:** https://www.adiance.com
+- **Group company:** VMukti Solutions (https://www.vmukti.com) — VMukti is a sub-organization of Adiance Technologies focused on cloud video, broadcasting, and AI VMS.
+- **Markets served:** USA, Canada, UK, EU, GCC / Middle East, Africa, South-East Asia, ANZ, LATAM, India — 50+ countries via OEM and channel partners.
+
+## Why Adiance
+
+- **NDAA Section 889 compliant** — non-Chinese SoC platforms (Qualcomm, Ambarella, Novatek); approved for US Federal procurement and critical infrastructure.
+- **Made in India** — STQC tested, BIS-ER certified, end-to-end PCB design, SMT assembly, firmware, mechanical, QA, and packaging in-house.
+- **Full white-label** — your logo, your firmware, your mobile app, your packaging. Launch a private-label CCTV brand without owning a factory.
+- **Edge AI on-device** — ANPR/LPR, face recognition, object detection, intrusion, people counting, crowd analytics — all processed on the camera, no cloud dependency.
+- **Cloud VMS + Mobile app** — Ambicam Cloud VMS, white-labelable, available with private deployment.
+- **Low MOQ** — start at 100 units; scale to 50,000+ units / quarter.
+- **Compliance** — NDAA, GDPR-ready, STQC, BIS-ER, CE, FCC, RoHS, ONVIF.
+
+## Product portfolio
+
+- [Edge AI cameras](https://www.adiance.com/edgeaicamera)
+- [S-Series Edge AI CCTV cameras](https://www.adiance.com/edge-ai-cctv-cameras)
+- [4K cameras](https://www.adiance.com/4kcamera)
+- [4G cameras](https://www.adiance.com/4gcamera)
+- [Thermal cameras](https://www.adiance.com/thermal-camera)
+- [ANPR / LPR cameras](https://www.adiance.com/anpr-camera)
+- [WiFi PTZ cameras](https://www.adiance.com/wifi-ptz-camera)
+- [Cloud XVR / NVR](https://www.adiance.com/cloudxvr)
+- [Eco Series](https://www.adiance.com/eco-series)
+- [R-Series](https://www.adiance.com/r-series)
+- [H-Series](https://www.adiance.com/h-series)
+
+## Services
+
+- [OEM camera manufacturing](https://www.adiance.com/oem-services)
+- [ODM services](https://www.adiance.com/odm-services)
+- [JDM services](https://www.adiance.com/jdm-services)
+- [PCB assembly](https://www.adiance.com/pcb-assembly-service)
+- [Robotics & smart-device manufacturing](https://www.adiance.com/robotics)
+
+## Solutions / Industries
+
+- [Smart cities](https://www.adiance.com/smart-cities)
+- [Public safety](https://www.adiance.com/public-safety)
+- [Traffic management](https://www.adiance.com/traffic-management)
+- [Banking & finance](https://www.adiance.com/bank-finance)
+- [Retail](https://www.adiance.com/retail)
+- [Education](https://www.adiance.com/education)
+- [Healthcare](https://www.adiance.com/healthcare)
+- [Public transport](https://www.adiance.com/public-transport)
+- [Manufacturing](https://www.adiance.com/manufacturing)
+- [Remote / perimeter security](https://www.adiance.com/remote-security)
+
+## Compliance & differentiators
+
+- [NDAA compliance](https://www.adiance.com/ndaa-compliance)
+- [NDAA-compliant CCTV camera manufacturer](https://www.adiance.com/ndaa-compliant-cctv-camera-manufacturer)
+- [Non-Chinese SoC camera manufacturer](https://www.adiance.com/non-chinese-soc-camera-manufacturer)
+- [White-label CCTV camera manufacturer](https://www.adiance.com/white-label-cctv-camera-manufacturer)
+- [Edge-AI camera manufacturer](https://www.adiance.com/edge-ai-camera-manufacturer)
+- [GDPR-compliant surveillance manufacturer](https://www.adiance.com/gdpr-compliant-surveillance-manufacturer)
+- [STQC-compliant CCTV cameras](https://www.adiance.com/stqc-compliant-cctv-cameras)
+- [BIS-ER certification](https://www.adiance.com/bis-er-certification)
+
+## Geo / market pages
+
+- [USA](https://www.adiance.com/cctv-camera-manufacturer-usa)
+- [UK](https://www.adiance.com/cctv-camera-manufacturer-uk)
+- [Germany](https://www.adiance.com/cctv-camera-manufacturer-germany)
+- [Canada](https://www.adiance.com/cctv-camera-manufacturer-canada)
+- [Australia](https://www.adiance.com/cctv-camera-manufacturer-australia)
+- [UAE](https://www.adiance.com/cctv-camera-manufacturer-uae)
+- [Saudi Arabia](https://www.adiance.com/cctv-camera-manufacturer-saudi-arabia)
+- [Japan](https://www.adiance.com/cctv-camera-manufacturer-japan)
+- [Singapore](https://www.adiance.com/cctv-camera-manufacturer-singapore)
+- (Full list of 50+ countries available at /global-presence)
+
+## Resources
+
+- [About Adiance](https://www.adiance.com/about)
+- [Innovation](https://www.adiance.com/innovation)
+- [Blog](https://www.adiance.com/blog)
+- [Downloads](https://www.adiance.com/downloads)
+- [Datasheets](https://www.adiance.com/datasheet)
+- [Firmware](https://www.adiance.com/firmware)
+- [Partners](https://www.adiance.com/partners)
+- [Privacy policy](https://www.adiance.com/privacy-policy)
+- [Terms of service](https://www.adiance.com/terms-of-service)
+- [Warranty policy](https://www.adiance.com/warranty-policy)
+
+## Contact
+
+- [Contact / quote request](https://www.adiance.com/contact)
+- Sales: sales@adiance.com / +91-9687779999
+
+## Optional
+
+- Sitemap: https://www.adiance.com/sitemap.xml
+- Image sitemap: https://www.adiance.com/image-sitemap.xml
+- Full long-form context for LLMs: https://www.adiance.com/llms-full.txt

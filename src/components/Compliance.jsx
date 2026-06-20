@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const Compliance = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -112,6 +114,15 @@ const Compliance = () => {
           name="description"
           content="Adiance Technologies upholds integrity with anti-corruption, data protection, and human rights, ensuring ethical and secure business practices."
         />
+        <meta name="keywords" content="compliance standards, NDAA compliance, ethical surveillance" />
+        <meta property="og:title" content="Compliance & Ethical Standards - Adiance Technologies" />
+        <meta property="og:description" content="Adiance Technologies upholds integrity with anti-corruption, data protection, and human rights, ensuring ethical and secure business practices." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
@@ -157,7 +168,7 @@ const Compliance = () => {
             }}
           >
             <img
-              src="/images/compliance1.png"
+              src="/images/compliance1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -258,7 +269,7 @@ const Compliance = () => {
             }}
           >
             <img
-              src="/images/compliance2.png"
+              src="/images/compliance2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -298,7 +309,7 @@ const Compliance = () => {
             }}
           >
             <img
-              src="/images/compliance3.png"
+              src="/images/compliance3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -398,7 +409,7 @@ const Compliance = () => {
             }}
           >
             <img
-              src="/images/compliance4.png"
+              src="/images/compliance4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

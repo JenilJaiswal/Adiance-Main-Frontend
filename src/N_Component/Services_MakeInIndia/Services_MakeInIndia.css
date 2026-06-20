@@ -1,0 +1,168 @@
+.make-in-india-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 80px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.make-in-india-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.make-in-india-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 700px;
+}
+
+.main-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.logo-containers {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.make-in-india-logo {
+  width: 280px;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .make-in-india-container {
+    padding: 70px 60px;
+  }
+  
+  .main-title {
+    font-size: 38px;
+  }
+  
+  .description {
+    font-size: 17px;
+  }
+  
+  .make-in-india-logo {
+    width: 250px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .make-in-india-container {
+    padding: 60px 40px;
+  }
+  
+  .make-in-india-content {
+    gap: 40px;
+  }
+  
+  .main-title {
+    font-size: 34px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+  
+  .make-in-india-logo {
+    width: 220px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .make-in-india-container {
+    padding: 50px 30px;
+  }
+  
+  .make-in-india-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .text-content {
+    max-width: 100%;
+  }
+  
+  .main-title {
+    font-size: 32px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+  
+  .make-in-india-logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .make-in-india-container {
+    padding: 40px 24px;
+  }
+  
+  .main-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  
+  .description {
+    font-size: 15px;
+  }
+  
+  .make-in-india-logo {
+    width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .make-in-india-container {
+    padding: 35px 20px;
+  }
+  
+  .main-title {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  
+  .description {
+    font-size: 14px;
+  }
+  
+  .make-in-india-logo {
+    width: 150px;
+  }
+}

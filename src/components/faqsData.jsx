@@ -56,6 +56,32 @@ const faqsData = {
       },
     ],
   },
+  oem: {
+    title: "Have Questions About OEM? We’ve Got Answers.",
+    qa: [
+      {
+        question: "Do you support custom product development or only standard models?",
+        answer:
+          "Yes, we offer both. You can choose from our proven standard product lines or engage with us for fully customized OEM solutions including design, firmware and packaging aligned with your brand and requirements.",
+      },
+
+      {
+        question: "What industries do you serve with your OEM manufacturing services?",
+        answer:
+          "We cater to a wide range of industries including security & surveillance CCTV cameras, industrial automation (robotic arms), IoT, PCBs, smart city solutions and more. Whether you're a startup or an enterprise, our OEM services are designed to scale with your product needs.",
+      },
+      {
+        question: "Is there a minimum order quantity?",
+        answer:
+          "MOQ varies based on product type and customization needs. However, we’re flexible especially for startups and pilot production batches. Connect with us for a tailored quote.",
+      },
+      {
+        question: "Can international clients work with you?",
+        answer:
+          "Yes, we work with global brands and provide export-ready original equipment manufacturing service. Our infrastructure supports international quality standards, documentation, and delivery protocols.",
+      },
+    ]
+  }
 };
 
 export default faqsData;

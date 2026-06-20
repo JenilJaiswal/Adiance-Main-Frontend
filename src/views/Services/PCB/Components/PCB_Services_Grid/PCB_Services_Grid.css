@@ -1,0 +1,119 @@
+.pcb-services-grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    /* padding: 60px 20px; */
+    background-color: #ffffff;
+}
+
+.pcb-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.pcb-service-card {
+    display: flex;
+    gap: 16px;
+    padding: 10px;
+}
+.pcb-service-icon {
+    display: flex;
+    align-items: center;
+}
+.pcb-service-icon img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+}
+
+.pcb-service-content {
+    flex: 1;
+}
+
+.pcb-service-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #BF0603;
+    margin: 0 0 8px 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+}
+
+.pcb-service-description {
+    font-size: 0.85rem;
+    color: #444444;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .pcb-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .pcb-service-card {
+        padding: 20px;
+    }
+
+    .pcb-service-title {
+        font-size: 1rem;
+    }
+
+    .pcb-service-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .pcb-services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pcb-service-card {
+        padding: 18px;
+        align-items: center;
+    }
+
+    .pcb-service-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .pcb-service-icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pcb-service-title {
+        font-size: 0.95rem;
+    }
+
+    .pcb-service-description {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .pcb-service-card {
+        padding: 16px;
+        gap: 22px;
+        align-items: center;
+    }
+
+    .pcb-service-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .pcb-service-icon img {
+        width: 50px;
+        height: 50px;
+    }
+}

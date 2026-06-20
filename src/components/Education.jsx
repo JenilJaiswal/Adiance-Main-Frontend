@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const Education = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -112,6 +114,15 @@ const Education = () => {
           name="description"
           content="Campus security with real-time monitoring, prevent bullying & misconduct, and improve parental engagement with Adiance Technologies smart solutions"
         />
+        <meta name="keywords" content="campus security camera, school CCTV, education surveillance" />
+        <meta property="og:title" content="Campus Security & Monitoring - Adiance Technologies" />
+        <meta property="og:description" content="Campus security with real-time monitoring, prevent bullying & misconduct, and improve parental engagement with Adiance Technologies smart solutions" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
@@ -145,7 +156,7 @@ const Education = () => {
             }}
           >
             <img
-              src="/images/edu1.png"
+              src="/images/edu1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -243,7 +254,7 @@ const Education = () => {
             }}
           >
             <img
-              src="/images/edu2.png"
+              src="/images/edu2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -283,7 +294,7 @@ const Education = () => {
             }}
           >
             <img
-              src="/images/edu3.png"
+              src="/images/edu3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -381,7 +392,7 @@ const Education = () => {
             }}
           >
             <img
-              src="/images/edu4.png"
+              src="/images/edu4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

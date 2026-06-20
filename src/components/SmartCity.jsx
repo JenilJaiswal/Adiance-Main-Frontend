@@ -1,10 +1,12 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 import { Helmet } from "react-helmet";
 
 const SmartCity = () => {
@@ -149,6 +151,15 @@ const SmartCity = () => {
           name="description"
           content="Adiance Technologies offers smart city solutions with high-res cameras and ANPR for crime prevention, traffic monitoring, and real-time congestion management."
         />
+        <meta name="keywords" content="smart city camera, safe city CCTV, ANPR traffic camera" />
+        <meta property="og:title" content="Smart & Safe City Solutions - Crime & Traffic Management" />
+        <meta property="og:description" content="Adiance Technologies offers smart city solutions with high-res cameras and ANPR for crime prevention, traffic monitoring, and real-time congestion management." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
@@ -182,7 +193,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc1.png"
+              src="/images/ssc1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -282,7 +293,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc2.png"
+              src="/images/ssc2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -321,7 +332,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc3.png"
+              src="/images/ssc3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -422,7 +433,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc4.png"
+              src="/images/ssc4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -461,7 +472,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc5.png"
+              src="/images/ssc5.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -560,7 +571,7 @@ const SmartCity = () => {
             }}
           >
             <img
-              src="/images/ssc6.png"
+              src="/images/ssc6.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

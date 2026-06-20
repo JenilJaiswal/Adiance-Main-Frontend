@@ -1,12 +1,10 @@
-import React from "react";
 import { Carousel } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/ImageSlider.css";
 
 const ImageSlider = () => {
   const slides = [
     {
-      image: "/images/slider1.png",
+      image: "/images/slider1.webp",
       heading: "India's Top Non-Chinese SoC CCTV Camera Manufacturer",
       subheading:
         "Designed, Developed & Manufactured in India for Reliable, Secure Surveillance.",
@@ -14,7 +12,7 @@ const ImageSlider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider2.png",
+      image: "/images/slider2.webp",
       heading: "Your Trusted OEM, ODM & JDM CCTV Manufacturing Partner",
       subheading:
         "From design to production — complete engineering, integration and delivery under one roof.",
@@ -22,14 +20,14 @@ const ImageSlider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider3.png",
+      image: "/images/slider3.webp",
       heading: "Advanced Edge AI Cameras Built for Performance & Precision",
       subheading: "S-Series & Eco-Series powered by secure, non-Chinese SoC technology.",
       ctaText: "View ArcisAI Products",
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider4.png",
+      image: "/images/slider4.webp",
       heading: "Made in India Security Cameras to World",
       subheading:
         "Export-ready product engineering with global certifications and world-class standards.",
@@ -37,7 +35,7 @@ const ImageSlider = () => {
       ctaLink: "/contact",
     },
     {
-      image: "/images/slider5.png",
+      image: "/images/slider5.webp",
       heading: "Edge AI, Cloud AI & Gen AI Powered Video Surveillance Solutions",
       subheading:
         "Smart, scalable, and intelligent security solutions built into ArcisAI’s ecosystem of cameras and VMS platforms.",
@@ -71,39 +69,48 @@ const ImageSlider = () => {
           text-align: left;
           max-width: 65%;
           z-index: 10;
+          font-family: 'Roboto', sans-serif;
         }
           .carousel-caption-custom-para{
           max-width: 70%;
+          font-family: 'Roboto', sans-serif;
           }
 
         .carousel-caption-custom h1 {
           font-size: 3rem;
-          font-weight: bold;
+          font-weight: 700;
           margin-bottom: 25px;
           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+          font-family: 'Roboto', sans-serif;
+        }
+
+        .slide-heading {
+          font-size: 3rem;
+          font-weight: 700;
+          line-height: 1.2;
+          margin-bottom: 25px;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+          font-family: 'Roboto', sans-serif;
         }
 
         .carousel-caption-custom p {
           font-size: 1.5rem;
           margin-bottom: 25px;
           text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+          font-family: 'Roboto', sans-serif;
+          font-weight: 400;
         }
 
         .cta-button {
-          background-color: #007bff; /* Example color, adjust as needed */
+          // background-color: #007bff; 
           color: white;
           padding: 10px 20px;
           text-decoration: none;
-          border-radius: 5px;
-          font-weight: bold;
+          font-weight: 500;
           display: inline-block;
-          border: none;
+          border: 1px solid #ffffff;
           transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-          background-color: #0056b3;
-          color: white;
+          font-family: 'Roboto', sans-serif;
         }
 
         @media (max-width: 768px) {
@@ -113,6 +120,10 @@ const ImageSlider = () => {
              max-width: 90%;
           }
            .carousel-caption-custom h1 {
+             font-size: 1.5rem;
+              margin-bottom: 10px;
+          }
+           .slide-heading {
              font-size: 1.5rem;
               margin-bottom: 10px;
           }

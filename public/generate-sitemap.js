@@ -42,7 +42,7 @@ function getLastModTime(url) {
       '/cloudxvr': 'src/components/ProductShow.jsx',
       '/5g-edge-ai-camera-s-series-surveillance': 'src/components/SSeries.jsx',
       '/public-safety': 'src/components/PublicSafety.jsx',
-      '/trafic-management': 'src/components/Trafic.jsx',
+      '/traffic-management': 'src/components/Trafic.jsx',
       '/crowd-control': 'src/components/CrowdControl.jsx',
       '/smart-cities': 'src/components/SmartCities.jsx',
       '/remote-security': 'src/components/Remote.jsx',
@@ -71,11 +71,13 @@ function getLastModTime(url) {
       '/terms-of-service': 'src/components/TermsOfService.jsx',
       '/privacy-policy': 'src/components/PrivacyPolicy.jsx',
       '/blog': 'src/components/Blogs.jsx',
-      '/thank-you': 'src/components/ThankYouPage.jsx',
-      '/thanks': 'src/components/ThankYouPage.jsx',
+      // '/thank-you': 'src/components/ThankYouPage.jsx',
+      // '/thanks': 'src/components/ThankYouPage.jsx',
       '/wifi-ptz-camera': 'src/components/WifiCameraPdf.jsx',
       '/robotics': 'src/components/Robotics.jsx',
       '/autoplay': 'src/components/AutoplayCarousel.jsx',
+      '/event': 'src/components/Event.jsx',
+      '/event/ifsec-india-2025': 'src/components/IfsecIndia2025.jsx',
     };
 
     const filePath = urlToFileMap[url];
@@ -86,7 +88,7 @@ function getLastModTime(url) {
         'src/components/routes.jsx',
         'package.json'
       ];
-      
+
       for (const fallbackFile of fallbackFiles) {
         try {
           const stats = statSync(path.join(__dirname, '..', fallbackFile));
@@ -112,12 +114,25 @@ function getLastModTime(url) {
 const staticPages = [
   // Homepage - highest priority
   { url: "/", changefreq: "daily", priority: 1.0 },
+  // ===== SSR LANDING PAGES (added 2026-04-18 by Dev Agent Session 2) =====
+  // These pages are ranking on Google page 1 and MUST be in the sitemap.
+  { url: "/ndaa-compliant-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.95 },
+  { url: "/white-label-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.95 },
+  { url: "/oem-cctv-camera-manufacturer-usa", changefreq: "weekly", priority: 0.95 },
+  { url: "/non-chinese-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.95 },
+  { url: "/private-label-security-camera-supplier", changefreq: "weekly", priority: 0.95 },
+  { url: "/non-chinese-soc-camera-manufacturer", changefreq: "monthly", priority: 0.85 },
+  { url: "/full-solution-oem-camera-manufacturer", changefreq: "monthly", priority: 0.85 },
+  { url: "/oem-camera-manufacturer-middle-east", changefreq: "monthly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-australia", changefreq: "monthly", priority: 0.8 },
+  { url: "/cctv-camera-manufacturer-india", changefreq: "monthly", priority: 0.8 },
+
+
 
   // Main navigation pages - weekly updates
   { url: "/about", changefreq: "weekly", priority: 0.8 },
   { url: "/innovation", changefreq: "weekly", priority: 0.8 },
   { url: "/contact", changefreq: "weekly", priority: 0.8 },
-  { url: "/partner-with-us", changefreq: "weekly", priority: 0.8 },
 
   // Product series pages
   { url: "/r-series", changefreq: "weekly", priority: 0.8 },
@@ -142,15 +157,10 @@ const staticPages = [
   { url: "/4g-dome-ptz-camera", changefreq: "weekly", priority: 0.8 },
   { url: "/4g-mini-bullet-camera", changefreq: "weekly", priority: 0.8 },
   { url: "/cloudxvr", changefreq: "weekly", priority: 0.8 },
-  {
-    url: "/5g-edge-ai-camera-s-series-surveillance",
-    changefreq: "weekly",
-    priority: 0.8,
-  },
 
   // Industry application pages
   { url: "/public-safety", changefreq: "weekly", priority: 0.8 },
-  { url: "/trafic-management", changefreq: "weekly", priority: 0.8 },
+  { url: "/traffic-management", changefreq: "weekly", priority: 0.8 },
   { url: "/crowd-control", changefreq: "weekly", priority: 0.8 },
   { url: "/smart-cities", changefreq: "weekly", priority: 0.8 },
   { url: "/remote-security", changefreq: "weekly", priority: 0.8 },
@@ -189,15 +199,78 @@ const staticPages = [
   { url: "/blog", changefreq: "weekly", priority: 0.8 },
 
   // Thank you pages
-  { url: "/thank-you", changefreq: "monthly", priority: 0.3 },
-  { url: "/thanks", changefreq: "monthly", priority: 0.3 },
+  // { url: "/thank-you", changefreq: "monthly", priority: 0.3 },
+  // { url: "/thanks", changefreq: "monthly", priority: 0.3 },
 
   // PDF pages
   { url: "/wifi-ptz-camera", changefreq: "monthly", priority: 0.6 },
 
+  // Event pages
+  { url: "/event", changefreq: "monthly", priority: 0.6 },
+  { url: "/event/ifsec-india-2025", changefreq: "monthly", priority: 0.6 },
+
   // Miscellaneous
   { url: "/robotics", changefreq: "weekly", priority: 0.8 },
   { url: "/autoplay", changefreq: "monthly", priority: 0.4 },
+  // === GEO Country Pages (Added 2026-04-19) ===
+  { url: "/cctv-camera-manufacturer-uae", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-saudi-arabia", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-usa", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-uk", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-canada", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-germany", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-france", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-japan", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-south-korea", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-singapore", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-brazil", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-israel", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-netherlands", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-italy", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-spain", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-mexico", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-south-africa", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-turkey", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-qatar", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-kuwait", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-oman", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-bahrain", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-sweden", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-poland", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-malaysia", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-thailand", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-vietnam", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-indonesia", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-philippines", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-colombia", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-chile", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-nigeria", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-kenya", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-egypt", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-taiwan", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-morocco", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-ghana", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-czech-republic", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-new-zealand", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-ireland", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-argentina", changefreq: "weekly", priority: 0.85 },
+  // === Alternative-To Pages ===
+  { url: "/alternative-to-chinese-cameras", changefreq: "weekly", priority: 0.9 },
+  // === Use-Case Landing Pages ===
+  { url: "/smart-city-cctv-solutions", changefreq: "weekly", priority: 0.85 },
+  { url: "/banking-finance-cctv-manufacturer", changefreq: "weekly", priority: 0.85 },
+  // === Smart Home OEM Pages ===
+  { url: "/smart-home-oem-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
+  { url: "/white-label-baby-monitor-manufacturer", changefreq: "weekly", priority: 0.85 },
+  { url: "/white-label-pet-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
+  // === Technology Pages ===
+  { url: "/anpr-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
+  { url: "/edge-ai-camera-manufacturer", changefreq: "weekly", priority: 0.85 },
+  // === Compliance Pages ===
+  { url: "/gdpr-compliant-surveillance-manufacturer", changefreq: "weekly", priority: 0.85 },
+  // === Other Key Pages ===
+  { url: "/complete-surveillance-solutions", changefreq: "weekly", priority: 0.85 },
+  { url: "/product-portfolio", changefreq: "weekly", priority: 0.85 },
 ];
 
 // Function to fetch blog URLs from API
@@ -354,7 +427,7 @@ async function createSitemap() {
         sitemap.write(url);
       });
 
-sitemap.end();
+      sitemap.end();
 
       // Wait for this sitemap to complete
       await streamToPromise(sitemap);
@@ -372,8 +445,7 @@ sitemap.end();
     console.log("\nSitemap Summary:");
     console.log(`- Homepage: 1 URL (priority: 1.0, changefreq: daily)`);
     console.log(
-      `- Static pages: ${
-        staticPages.length - 1
+      `- Static pages: ${staticPages.length - 1
       } URLs (priority: 0.8, changefreq: weekly)`
     );
     console.log(

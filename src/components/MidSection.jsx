@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import ImageGallery from "./ImageGallery";
 import Adv from "./Adv";
@@ -7,7 +9,7 @@ import Grid from "@mui/material/Grid";
 import AutoplayCarousel from "./AutoplayCarousel";
 import InnovationHome from "./InnovationHome";
 import OurOfferings from "./OurOfferings";
-import WhatWeDo from "./WhatWeDo";
+// import WhatWeDo from "./WhatWeDo";
 import Certifications from "./Certifications";
 
 const MidSection = () => {
@@ -24,7 +26,7 @@ const MidSection = () => {
           <Grid item xs={12} sm={6} md={6} lg={6}>
             <img
               src={
-                "images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-02.png"
+                "images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-02.webp"
               }
               alt={"img not loaded"}
               style={{
@@ -51,7 +53,7 @@ const MidSection = () => {
           </Grid>
         </Grid>
       </div> */}
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
       <AutoplayCarousel />
       <InnovationHome />
       {/* <AboutSlider /> */}

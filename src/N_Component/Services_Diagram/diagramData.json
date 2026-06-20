@@ -1,0 +1,26 @@
+{
+  "oemGathering": {
+    "title": "Requirement Gathering & Consultation",
+    "subtitle": "As a leading OEM manufacturer in India, we deliver smart innovation through scalable engineering, precision assembly and end-to-end manufacturing.",
+    "diagramImage": "/N_Images/OEM_Gathering.svg",
+    "diagramAlt": "OEM Process Flow - Requirement Gathering & Consultation"
+  },
+  "odmGathering": {
+    "title": "Requirement Understanding",
+    "subtitle": "We help you match your business needs with the most suitable pre-engineered ODM products available in our catalog.",
+    "diagramImage": "/N_Images/ODM_Gathering.svg",
+    "diagramAlt": "ODM Process Flow - Requirement Gathering & Consultation"
+  },
+  "jdmGathering": {
+    "title": "Requirement Discovery & Project Alignment",
+    "subtitle": "We begin with deep technical discussions to align your product idea with development feasibility.",
+    "diagramImage": "/N_Images/JDM_Gathering.svg",
+    "diagramAlt": "ODM Process Flow - Requirement Gathering & Consultation"
+  },
+  "pcbGathering": {
+    "title": "Requirement Project & Analysis",
+    "subtitle": "We begin with a deep understanding of your PCB needs aligned to your hardware systems",
+    "diagramImage": "/N_Images/PCB_Diagram.svg",
+    "diagramAlt": "ODM Process Flow - Requirement Gathering & Consultation"
+  }
+}

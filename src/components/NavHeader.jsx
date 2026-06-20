@@ -1,11 +1,13 @@
+"use client";
+
 import React from "react";
 
 // Array of image URLs
 const imageUrls = [
-  // "/images/Adiance-Banner-001.jpg",
-  "/images/innovation-header.jpg",
-  "/images/product-header.jpg",
-  // "/images/Adiance-Banner-003.jpg",
+  // "/images/Adiance-Banner-001.webp",
+  "/images/innovation-header.webp",
+  "/images/product-header.webp",
+  // "/images/Adiance-Banner-003.webp",
 ];
 
 const getRandomImageUrl = () => {
@@ -20,7 +22,7 @@ const NavHeader = ({ text }) => {
 
   return (
     <div className="nav-header">
-      <img src={randomImageUrl} alt="Header" className="header-image" />
+      <img src={randomImageUrl} alt="Header" className="header-image" loading="eager" fetchpriority="high" decoding="async" width="1440" height="400" />
       <div className="text-overlay">{text}</div>
 
       <style jsx>{`

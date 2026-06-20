@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -9,11 +11,11 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import NavHeader from "./NavHeader";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const Feedback = () => {
   const [company, setCompany] = useState("");
@@ -84,7 +86,7 @@ const Feedback = () => {
       <Header />
 
       <div className="nav-header">
-        <img src="/images/scaled.jpg" alt="Header" className="header-image" />
+        <img src="/images/scaled.webp" alt="Header" className="header-image" />
         <div className="text-overlay">Feedback</div>
 
         <style jsx>{`

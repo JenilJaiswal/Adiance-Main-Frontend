@@ -1,0 +1,23 @@
+{
+  "oem": {
+    "title": "Make-in-India OEM Engineering & Product Assembly Process for Smart Innovation",
+    "description": "As a leading OEM manufacturer in India, we deliver smart innovation through scalable engineering, precision assembly and end-to-end manufacturing.",
+    "backgroundImage": "/N_Images/make-in-india-bg.svg",
+    "logo": "/N_Images/oem_make-in-india.svg",
+    "logoAlt": "Make in India"
+  },
+  "odm": {
+    "title": "Make-in-India ODM Manufacturing Services Process for Pre-Engineered Innovation",
+    "description": "As a trusted ODM manufacturer in India, we help you launch proven, market-ready products under your brand — with faster timelines and reduced R&D investment.",
+    "backgroundImage": "/N_Images/make-in-india-bg.svg",
+    "logo": "/N_Images/oem_make-in-india.svg",
+    "logoAlt": "Make in India"
+  },
+  "jdm": {
+    "title": "Make-in-India JDM Engineering & Co-Development Process",
+    "description": "As a leading JDM manufacturer in India, we partner with your team at every engineering stage—from concept to commercial launch.",
+    "backgroundImage": "/N_Images/make-in-india-bg.svg",
+    "logo": "/N_Images/oem_make-in-india.svg",
+    "logoAlt": "Make in India"
+  }
+}

@@ -1,14 +1,16 @@
+"use client";
+
 import React from "react";
 
 const ImageGallery = () => {
   // Array of image paths
   const imagePaths = [
-    "images/adiance-factory-008.jpg",
-    "images/adiance-factory-006.jpg",
-    "images/adiance-factory-002.jpg",
-    "images/adiance-factory-005.jpg",
-    "images/adiance-factory-007.jpg",
-    "images/adiance-factory-004.jpg",
+    "images/adiance-factory-008.webp",
+    "images/adiance-factory-006.webp",
+    "images/adiance-factory-002.webp",
+    "images/adiance-factory-005.webp",
+    "images/adiance-factory-007.webp",
+    "images/adiance-factory-004.webp",
   ];
 
   return (
@@ -17,7 +19,7 @@ const ImageGallery = () => {
       <div className="image-grid">
         {imagePaths.map((path, index) => (
           <div className="image-item" key={index}>
-            <img src={path} alt={`Image ${index + 1}`} />
+            <img src={path} alt={`Image ${index + 1}`} loading="lazy" />
           </div>
         ))}
       </div>

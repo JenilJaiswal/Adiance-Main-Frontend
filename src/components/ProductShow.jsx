@@ -1,3 +1,5 @@
+"use client";
+
 // import React from "react";
 // import ProductSinglePage from "./ProductSinglePage";
 // import Header from "./Header";
@@ -54,11 +56,11 @@
 
 import React from "react";
 import ProductSinglePage from "./ProductSinglePage";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import NavHeader from "./NavHeader";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 function ProductShow({ productTitle, imgIdx }) {
   const location = useLocation(); // Get the current route
@@ -73,7 +75,7 @@ function ProductShow({ productTitle, imgIdx }) {
       title: "ADIANCE CLOUD BASED THERMAL CAMERA – (VM-72F210AC)",
       description:
         "AI & Cloud-Based Thermal Fever Screening Camera with VMS & VAS Solution By monitoring the visitor’s temperature, it is most directly known whether the visitor has a fever or not, and even further can speculate on the effect of the COVID-19 and further send employees/ visitors to quarantine for treatment and prevention",
-      imgUrl: "/images/P2-VMUKTI-CLOUD-BASED-THERMAL-CAMERA-VM-72F210AC-01.png",
+      imgUrl: "/images/P2-VMUKTI-CLOUD-BASED-THERMAL-CAMERA-VM-72F210AC-01.webp",
       benefits: [
         "Easy Installation and Integration",
         "Fast, flexible and accurate screening for preliminary measurement",
@@ -137,7 +139,7 @@ function ProductShow({ productTitle, imgIdx }) {
       title: "ADIANCE CLOUD BASED THERMAL CAMERA – (VM-72N210AC)",
       description:
         "AI & Cloud-Based Thermal Fever Screening Camera with VMS & VAS Solution By monitoring the visitor’s temperature, it is most directly known whether the visitor has a fever or not, and even further can speculate on the effect of the COVID-19 and further send employees/ visitors to quarantine for treatment and prevention.",
-      imgUrl: "/images/P1-VMUKTI-CLOUD-BASED-THERMAL-CAMERA-VM-72N210AC-01.png",
+      imgUrl: "/images/P1-VMUKTI-CLOUD-BASED-THERMAL-CAMERA-VM-72N210AC-01.webp",
       benefits: [
         "Fast and Accurate Screening",
         "Multi-Person Monitoring",
@@ -200,7 +202,7 @@ function ProductShow({ productTitle, imgIdx }) {
       title: "ADIANCE CLOUD BASED THERMAL CAMERA – (VM-72L210AC)",
       description:
         "AI & Cloud-Based Thermal Fever Screening Camera with VMS & VAS Solution By monitoring the visitor’s temperature, it is most directly known whether the visitor has a fever or not, and even further can speculate on the effect of the COVID-19 and further send employees/ visitors to quarantine for treatment and prevention.",
-      imgUrl: "/images/Vmukti-Thermal-Camera-New-1.png",
+      imgUrl: "/images/Vmukti-Thermal-Camera-New-1.webp",
       benefits: [
         "Fast and Accurate Screening",
         "Multi-Person Monitoring",
@@ -257,9 +259,9 @@ function ProductShow({ productTitle, imgIdx }) {
       description:
         "Adiance’s smart product family, 4k products are equipped with Edge AI features such as ANPR detection, object detection, facial recognition, Intrusion, and more. Adiance FHD, H.265+ PTZ Bullet Network Camera delivers up to FHD resolution (2592×1944, effectively four times that of Full HD) at 30 frames per second (fps), providing users with an ultra-high-definition video viewing experience.",
       imgUrl: [
-        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-01.png",
-        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-02.png",
-        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-03.png",
+        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-01.webp",
+        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-02.webp",
+        "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-03.webp",
       ],
       benefits: [
         "Enhanced security monitoring with FHD Video surveillance",
@@ -323,8 +325,8 @@ function ProductShow({ productTitle, imgIdx }) {
       description:
         "Adiance’s smart product family, 4k products are equipped with Edge AI features such as ANPR detection, object detection, facial recognition, Intrusion, and more. Adiance FHD, H.265+ Bullet Camera delivers up to 4k resolution 3840×2160, effectively four times that of Full HD) at 30 frames per second (fps), providing users with an ultra-high-definition video viewing experience.",
       imgUrl: [
-        "/images/P5-Edge-AI-Based-Face-Recognition-VM-72D5AIVE-01-1.png",
-        "/images/P5-Edge-AI-Based-Face-Recognition-VM-72D5AIVE-02.png",
+        "/images/P5-Edge-AI-Based-Face-Recognition-VM-72D5AIVE-01-1.webp",
+        "/images/P5-Edge-AI-Based-Face-Recognition-VM-72D5AIVE-02.webp",
       ],
       benefits: [
         "Enhanced security monitoring with FHD Video surveillance",
@@ -388,8 +390,8 @@ function ProductShow({ productTitle, imgIdx }) {
       description:
         "Adiance’s smart product family, 4k products are equipped with Edge AI features such as ANPR detection, object detection, facial recognition, Intrusion, and more. Adiance FHD, H.265+ PTZ Dome & Bullet Camera delivers up to FHD resolution (2592×1944, effectively four times that of Full HD) at 30 frames per second (fps), providing users with ultra-high-definition video viewing experience.",
       imgUrl: [
-        "/images/P4-Edge-AI-Based-Object-Face-Detection-Cameras-VM-72B5AIVE-01.png",
-        "/images/P4-Edge-AI-Based-Object-Face-Detection-Cameras-VM-72B5AIVE-02.png",
+        "/images/P4-Edge-AI-Based-Object-Face-Detection-Cameras-VM-72B5AIVE-01.webp",
+        "/images/P4-Edge-AI-Based-Object-Face-Detection-Cameras-VM-72B5AIVE-02.webp",
       ],
       benefits: [
         "Enhanced security monitoring with FHD Video surveillance",
@@ -452,7 +454,7 @@ function ProductShow({ productTitle, imgIdx }) {
       title: "AMBICAM 4G Dome PTZ Camera (VM-72BPTZ410AC)",
       description:
         "Ambicam 4G Dome PTZ smart cloud cameras are a professional surveillance system for cover wide area and camera works by moving the camera in different directions using PTZ Option to get a whole picture of the surveillance area and zooming in for further detail of security events. The pan, tilt, and zoom capabilities make it possible to monitor large areas with a single camera. 4G Dome PTZ cameras work 24/7 via cloud to help you monitor every minute of the day. Easy to install and use, the bullet cameras even save your costs. Order your very own Ambicam 4G dome PTZ smart cameras today.",
-      imgUrl: "/images/PTZ.jpg",
+      imgUrl: "/images/PTZ.webp",
       benefits: [
         "Cloud/4G monitoring for optimum security and reliability",
         "HD streams to make every detail visible",
@@ -510,7 +512,7 @@ function ProductShow({ productTitle, imgIdx }) {
       title: "AMBICAM 4G Mini Bullet Camera (VM-72H4G110AC)",
       description:
         "Ambicam 4G Mini Bullet smart cloud cameras are a professional surveillance system for your workspace or residence. 4G Mini Bullet cameras work 24/7 via cloud to help you monitor every minute of the day. Easy to install and use, the bullet cameras even save your costs. Order your very own Ambicam 4G Mini Bullet smart cameras today. With unparalleled Wi-Fi video capabilities, you cannot go wrong with this one!",
-      imgUrl: "/images/adiance-4g-camera.png",
+      imgUrl: "/images/adiance-4g-camera.webp",
       benefits: [
         "Cloud/4G monitoring for optimum security and reliability",
         "HD streams to make every detail visible",
@@ -565,7 +567,7 @@ function ProductShow({ productTitle, imgIdx }) {
       title: "AMBICAM 4G Dome Camera (VM-72AD4G210C)",
       description:
         "Ambicam 4G Dome smart cloud cameras are a professional surveillance system for your School Bus or Vehicle and remote Location monitoring. 4G Dome cameras work 24/7 via cloud to help you monitor every minute of the day. Easy to install and use, the bullet cameras even save your costs. Order your very own Ambicam 4G dome smart cameras today. With unparalleled 4G video capabilities, you cannot go wrong with this one!",
-      imgUrl: "/images/P9-AMBICAM-4g-dome-camera-VM-72AD4G210C-02.png",
+      imgUrl: "/images/P9-AMBICAM-4g-dome-camera-VM-72AD4G210C-02.webp",
       benefits: [
         "Cloud/4G monitoring for optimum security and reliability",
         "HD streams to make every detail visible",
@@ -619,7 +621,7 @@ function ProductShow({ productTitle, imgIdx }) {
       title: "AMBICAM H.265+ 4G Dome PTZ Camera (VM-72BPTZ410AC)",
       description:
         "Ambicam 4G H.265+ Dome PTZ smart cloud cameras are a professional surveillance system for cover wide area and camera works by moving the camera in different directions using PTZ Option to get a whole picture of the surveillance area and zooming in for further detail of security events. The pan, tilt, and zoom capabilities make it possible to monitor large areas with a single camera. 4G H.265+ Dome PTZ cameras work 24/7 via cloud to help you monitor every minute of the day. Easy to install and use, the bullet cameras even save your costs. Order your very own Ambicam 4G dome PTZ smart cameras today.",
-      imgUrl: "/images/P7-AMBICAM-4g-dome-ptz-camera-VM-72BPTZ410AC-02.png",
+      imgUrl: "/images/P7-AMBICAM-4g-dome-ptz-camera-VM-72BPTZ410AC-02.webp",
       benefits: [
         "Cloud/4G monitoring for optimum security and reliability",
         "HD streams to make every detail visible",
@@ -677,7 +679,7 @@ function ProductShow({ productTitle, imgIdx }) {
       title: "ADIANCE 8-16 Channel XVR – VM-72XVR816",
       description:
         "Definition of Cloud XVR: Cloud XVR typically refers to a video surveillance system that leverages cloud computing for storage, management, and analysis of recorded video footage. It allows users to access and manage their video data remotely through an internet connection.",
-      imgUrl: "/images/XVR.jpg",
+      imgUrl: "/images/XVR.webp",
       features: ["Cloud Storage", "Remote Access", "Scalability", "Analytics"],
       benefits: [
         "Cost Effective",
@@ -709,7 +711,7 @@ function ProductShow({ productTitle, imgIdx }) {
       title: "AI 3MP Nexgen 4G PT Camera - S Series",
       description:
         "This advanced tool introduces precision with 4G connectivity for unfailing surveillance, integrated with AI for sharp detail and efficient object recognition. Designed to operate in varying environment conditions, the A8S offers high-definition imagery with 3 Megapixel clarity and adapts through pan-tilt functionality for extended viewings. It stands out for its reliability in remote access and storage capacities, making security oversight manageable and more effective. Perfect for environments requiring vigilant monitoring without compromise.",
-      imgUrl: "/images/AI3MP.jpg",
+      imgUrl: "/images/AI3MP.webp",
       features: [
         '3 Megapixel camera with 1/2.8" CMOS sensor, 4MM lens, 347° pan, and 90° tilt range.',
         "Supports multiple 4G bands (FDD-LTE: B1/B3/B5/B8; TDD-LTE: B34/B38/B39/B40/B41).",
@@ -761,7 +763,7 @@ function ProductShow({ productTitle, imgIdx }) {
       title: "3MP 4G Bullet All Time Color Camera - A Series",
       description:
         " The 3MP 4G Bullet All-Time Color Camera offers high-resolution 3MP imaging, full-time color vision, and reliable 4G connectivity, making it ideal for remote areas. With features like motion and human detection, two-way audio, and versatile storage options (micro SD card up to 256GB and cloud storage), it ensures enhanced security. The camera supports multiple network protocols and provides wide coverage with its 75° horizontal viewing angle. Easy to set up with plug-and-play functionality, it includes robust IR and white LEDs for night vision up to 30 meters, and its weather-resistant design ensures durability in various environments.",
-      imgUrl: "/images/CCTV_01.png",
+      imgUrl: "/images/CCTV_01.webp",
       features: [
         '1/2.8" CMOS Sensor for clear imaging.',
         "4mm lens with a 75° horizontal viewing angle.",
@@ -826,7 +828,7 @@ function ProductShow({ productTitle, imgIdx }) {
       title: "R Series",
       description:
         "Personalize this product series to fit your unique style and needs—endless customization options await!",
-      imgUrl: "/images/CCTV_03.png",
+      imgUrl: "/images/CCTV_03.webp",
       features: [],
       benefits: [],
       applications: [],

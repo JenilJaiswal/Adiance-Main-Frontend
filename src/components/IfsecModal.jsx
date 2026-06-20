@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import {
   Box,
@@ -167,7 +169,7 @@ const IfsecModal = () => {
             // height: "90%",
             backgroundImage: {
               xs: "none",
-              lg: "url('/images/pop-up-image.png')",
+              lg: "url('/images/pop-up-image.webp')",
             },
             backgroundSize: "cover",
             // backgroundPosition: "center",

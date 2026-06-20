@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const BankFinance = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -112,6 +114,15 @@ const BankFinance = () => {
           name="description"
           content="Adiance CCTV solutions enhance bank security with facial recognition, ATM surveillance & fraud prevention. Ensure customer safety with intelligent monitoring."
         />
+        <meta name="keywords" content="bank security camera, ATM surveillance, finance CCTV" />
+        <meta property="og:title" content="Bank & Finance Security | CCTV & Fraud Prevention" />
+        <meta property="og:description" content="Adiance CCTV solutions enhance bank security with facial recognition, ATM surveillance & fraud prevention. Ensure customer safety with intelligent monitoring." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
@@ -146,7 +157,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/b1.png"
+              src="/images/b1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -247,7 +258,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/b2.png"
+              src="/images/b2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -286,7 +297,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/b3.png"
+              src="/images/b3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

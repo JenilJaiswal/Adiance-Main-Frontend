@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/compat/react-router-dom";
 
 const OurOfferings = () => {
   const innovationItems = [
@@ -7,13 +9,13 @@ const OurOfferings = () => {
       id: 1,
       title: "Cloud Storage",
 
-      imageUrl: "/images/cloudAbout.png",
+      imageUrl: "/images/cloudAbout.webp",
       url: "/public-transport",
     },
     {
       id: 2,
       title: "Customization",
-      imageUrl: "/images/customizedAbout.png",
+      imageUrl: "/images/customizedAbout.webp",
       url: "/remote-security",
     },
     {
@@ -21,7 +23,7 @@ const OurOfferings = () => {
       title: "PCB Design",
       description:
         "Our 360-degree approach to security focuses on customization, recognizing that every security scenario is unique and requires tailored solutions. We offer specific CCTV camera types, advanced features, and smart software integrations to help customers customize their security systems.",
-      imageUrl: "/images/PCBAbout.png",
+      imageUrl: "/images/PCBAbout.webp",
       url: "/healthcare",
     },
   ];
@@ -61,6 +63,10 @@ const OurOfferings = () => {
               src={item.imageUrl}
               alt={item.title}
               className="innovation-image"
+              loading="lazy"
+              decoding="async"
+              width="325"
+              height="325"
             />
             {/* <div className="item-details">
               <div className="item-title">{item.title}</div>

@@ -1,14 +1,16 @@
+"use client";
+
 import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import NavHeader from "./NavHeader";
 import { Helmet } from "react-helmet";
 import ContactForm from "./ContactForm";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 const products = [
   {
     metaTitle: "R Series | Tailored Security with Endless Customization",
@@ -17,7 +19,7 @@ const products = [
     title: "R Series",
     description:
       "Personalize this product series to fit your unique style and needs—endless customization options await!",
-    imgUrl: "/images/CCTV_03.png",
+    imgUrl: "/images/CCTV_03.webp",
   },
   {
     metaTitle: " H Series | Customizable Solutions - Adaince Technologies",
@@ -26,7 +28,7 @@ const products = [
     title: "H Series",
     description:
       "Personalize this product series to fit your unique style and needs—endless customization options await!",
-    imgUrl: "/images/CCTV_02.png",
+    imgUrl: "/images/CCTV_02.webp",
   },
   // Add more products as needed
 ];
@@ -64,6 +66,12 @@ const RSeries = ({ title }) => {
               name="description"
               content={product.metaDescription || product.description}
             />
+            <meta name="keywords" content="R-Series camera, customizable CCTV, Adiance R-Series" />
+            <meta property="og:title" content={product.metaTitle || product.title} />
+            <meta property="og:description" content={product.metaDescription || product.description} />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={canonicalUrl} />
+            <meta property="og:site_name" content="Adiance Technologies" />
             <link rel="canonical" href={canonicalUrl} />
           </Helmet>
 

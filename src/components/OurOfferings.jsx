@@ -1,78 +1,80 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/compat/react-router-dom";
 
 const OurOfferings = () => {
   const innovationItems = [
     {
       id: 1,
       title: "Retail",
-      imageUrl: "/images/r1.png",
+      imageUrl: "/images/r1.webp",
       url: "#",
     },
     {
       id: 2,
       title: "Smart Cities",
-      imageUrl: "/images/sc1.png",
+      imageUrl: "/images/sc1.webp",
       url: "#",
     },
     {
       id: 3,
       title: "Banking",
-      imageUrl: "/images/b1.png",
+      imageUrl: "/images/b1.webp",
       url: "#",
     },
     {
       id: 4,
       title: "Manufacturing",
-      imageUrl: "/images/adiance-factory-001.jpg",
+      imageUrl: "/images/adiance-factory-001.webp",
       url: "#",
     },
     {
       id: 5,
       title: "Warehouse & Logistics",
-      imageUrl: "/images/Traffic Management.png",
+      imageUrl: "/images/Traffic Management.webp",
       url: "#",
     },
     {
       id: 6,
       title: "Automotive",
-      imageUrl: "/images/trafic2.jpg",
+      imageUrl: "/images/trafic2.webp",
       url: "#",
     },
     {
       id: 7,
       title: "Home Security",
-      imageUrl: "/images/SmartWifi.png",
+      imageUrl: "/images/SmartWifi.webp",
       url: "#",
     },
     {
       id: 8,
       title: "Transportation",
-      imageUrl: "/images/our1.jpg",
+      imageUrl: "/images/our1.webp",
       url: "#",
     },
     {
       id: 9,
       title: "Education",
-      imageUrl: "/images/Education.png",
+      imageUrl: "/images/Education.webp",
       url: "#",
     },
     {
       id: 10,
       title: "Healthcare",
-      imageUrl: "/images/our2.jpg",
+      imageUrl: "/N_Images/our2.webp",
       url: "#",
     },
     {
       id: 11,
       title: "Hospitality",
-      imageUrl: "/images/ht1.png",
+      imageUrl: "/images/ht1.webp",
       url: "#",
     },
     {
       id: 12,
       title: "Construction",
-      imageUrl: "/images/Home_Construction.png",
+      imageUrl: "/images/Home_Construction.webp",
       url: "#",
     },
   ];

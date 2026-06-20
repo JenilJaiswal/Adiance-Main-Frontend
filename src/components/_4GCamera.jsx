@@ -1,15 +1,17 @@
+"use client";
+
 import React, { useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
 import ThermalCameraSlider from "./ThermalCameraSlider";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import _4GCameraSlider from "./_4GCameraSlider";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const ThermalCamera = () => {
   const [activeTab, setActiveTab] = useState("benefits");
@@ -34,6 +36,15 @@ const ThermalCamera = () => {
             name="description"
             content="4G FHD Security Camera with seamless connectivity, HD clarity, real-time alerts & easy setup. Ideal for remote locations, parking lots & outdoor security"
           />
+          <meta name="keywords" content="4G camera, LTE security camera, remote surveillance camera" />
+          <meta property="og:title" content="4G FHD Security Camera | Remote Surveillance Solution" />
+          <meta property="og:description" content="4G FHD Security Camera with seamless connectivity, HD clarity, real-time alerts & easy setup. Ideal for remote locations, parking lots & outdoor security" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
           <link rel="canonical" href={canonicalUrl} />
         </Helmet>
         <Header />

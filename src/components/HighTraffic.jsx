@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const HighTraffic = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -112,6 +114,15 @@ const HighTraffic = () => {
           name="description"
           content="Secure dockyards, bus stops, railways, and airports with advanced CCTV, real-time monitoring, and thermal imaging for enhanced safety and threat detection."
         />
+        <meta name="keywords" content="high traffic CCTV, airport security camera, railway surveillance" />
+        <meta property="og:title" content="CCTV Solutions for High-Traffic Infrastructure Security" />
+        <meta property="og:description" content="Secure dockyards, bus stops, railways, and airports with advanced CCTV, real-time monitoring, and thermal imaging for enhanced safety and threat detection." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
@@ -145,7 +156,7 @@ const HighTraffic = () => {
             }}
           >
             <img
-              src="/images/hti1.png"
+              src="/images/hti1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -245,7 +256,7 @@ const HighTraffic = () => {
             }}
           >
             <img
-              src="/images/hti2.png"
+              src="/images/hti2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -284,7 +295,7 @@ const HighTraffic = () => {
             }}
           >
             <img
-              src="/images/hti3.png"
+              src="/images/hti3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -382,7 +393,7 @@ const HighTraffic = () => {
             }}
           >
             <img
-              src="/images/hti4.png"
+              src="/images/hti4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

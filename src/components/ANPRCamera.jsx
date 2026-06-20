@@ -1,14 +1,16 @@
+"use client";
+
 import React, { useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
 import AnprSlider from "./AnprSlider";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const ANPRCamera = () => {
   const location = useLocation(); // Get the current route
@@ -33,6 +35,15 @@ const ANPRCamera = () => {
             name="description"
             content="Adiance Technologies  ANPR Cameras use AI-powered plate recognition for real-time traffic monitoring & law enforcement. Enhance security & road safety today."
           />
+          <meta name="keywords" content="ANPR camera, number plate recognition, traffic monitoring camera" />
+          <meta property="og:title" content="ANPR Camera for Traffic Monitoring & Crime Prevention" />
+          <meta property="og:description" content="Adiance Technologies  ANPR Cameras use AI-powered plate recognition for real-time traffic monitoring & law enforcement. Enhance security & road safety today." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
           <link rel="canonical" href={canonicalUrl} />
         </Helmet>
         <Header />

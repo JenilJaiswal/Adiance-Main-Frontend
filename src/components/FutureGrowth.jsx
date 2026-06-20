@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const FutureGrowth = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -146,7 +148,7 @@ const FutureGrowth = () => {
             }}
           >
             <img
-              src="/images/fng1.png"
+              src="/images/fng1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -256,7 +258,7 @@ const FutureGrowth = () => {
             }}
           >
             <img
-              src="/images/fng2.png"
+              src="/images/fng2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

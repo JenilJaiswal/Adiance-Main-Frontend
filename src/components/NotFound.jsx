@@ -1,7 +1,9 @@
+"use client";
+
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
 const ThankYouPage = () => {
   const handleGoBack = () => {
@@ -21,6 +23,7 @@ const ThankYouPage = () => {
         // background: "linear-gradient(135deg, #667eea, #764ba2)", // Stylish gradient
       }}
     >
+      {/* Metadata (title, description, robots: noindex) is set server-side via app/not-found.jsx */}
       <Header />
       <Box
         sx={{

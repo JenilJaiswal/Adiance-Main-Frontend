@@ -1,0 +1,304 @@
+================================================================================
+                    ADIANCE FRONTEND - DESIGN REFERENCE GUIDE
+================================================================================
+  Based on: Home Page (src/Pages/Home/)
+  Purpose: Follow these patterns when updating or creating other pages
+================================================================================
+
+
+1. COLOR PALETTE
+================================================================================
+
+  Primary Brand Color:    #BF0603  (Red - used for titles, buttons, overlays, accents)
+  White:                  #FFFFFF
+  Light Gray Background:  #ECECEC
+  Dark Heading:           #444444
+  Body Text Black:        #000000
+  Dark Overlay:           #2B3035  (with opacity for slider overlays)
+  Border Gray:            #D1D5DB  (dots, inactive elements)
+  Secondary Text:         #333333  (reviews, secondary text)
+  Icon Gray:              #718096  (placeholder text)
+  Spinner Track:          #E2E8F0
+  Star Empty:             #E0E0E0
+  Star Filled:            #BF0603
+
+
+2. TYPOGRAPHY
+================================================================================
+
+  Font Family:  'Roboto', sans-serif
+  Google Font:  https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700
+
+  Font Weights:
+    - 300: Light
+    - 400: Regular (body text)
+    - 500: Medium (intro text, medium emphasis)
+    - 600: SemiBold (section titles)
+    - 700: Bold (headings, major titles)
+
+  Font Sizes (Desktop):
+    - Hero Heading:     3rem (48px)
+    - Section Titles:   42px - 48px
+    - Subheading:       40px
+    - Subtitle:         36px - 42px
+    - Body Text:        18px
+    - Medium Text:      16px
+    - Small Text:       14px
+    - Mini Text:        12px - 13px
+
+  Line Heights:
+    - Headings:     1.2 - 1.3
+    - Body:         1.4 - 1.6
+    - Description:  1.4
+
+
+3. SPACING & PADDING
+================================================================================
+
+  Page Section Padding:
+    - Desktop:        60px 20px
+    - Tablet:         50px 15px
+    - Mobile:         40px 10px
+    - Small Mobile:   30px 10px
+
+  Container:
+    - max-width: 1200px - 1600px
+    - margin: 0 auto
+
+  Vertical Gaps:
+    - Large:    40px - 50px  (between major sections)
+    - Medium:   20px - 32px  (between cards/elements)
+    - Small:    16px         (between related items)
+    - Minimal:  4px - 8px    (fine-tuning)
+
+  Card Padding:
+    - Desktop:  20px - 32px
+    - Tablet:   15px - 24px
+    - Mobile:   10px - 16px
+
+
+4. RESPONSIVE BREAKPOINTS
+================================================================================
+
+  Small Mobile:   max-width: 480px
+  Mobile:         max-width: 768px
+  Tablet:         max-width: 1024px
+  Tablet+:        max-width: 1199px
+  Large Desktop:  min-width: 1200px
+  Extra Large:    min-width: 1280px
+
+  Scaling Pattern:
+    Titles:     48px -> 36px -> 28px -> 24px
+    Padding:    60px -> 50px -> 40px -> 30px
+    Gaps:       30px -> 25px -> 15px -> 20px
+    Grid Cols:  4 -> 3 -> 2 -> 1
+
+  CSS Media Query Order:
+    /* Desktop: default styles (no media query) */
+    @media (max-width: 1024px) { /* Tablet */ }
+    @media (max-width: 768px)  { /* Mobile */ }
+    @media (max-width: 480px)  { /* Small Mobile */ }
+
+
+5. CARD DESIGN PATTERNS
+================================================================================
+
+  Standard Card:
+    - border-radius: 0 (square corners by default)
+    - box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
+    - hover shadow: 0 8px 25px rgba(0, 0, 0, 0.15)
+    - hover transform: translateY(-8px)
+    - transition: all 0.3s ease
+    - image hover: scale(1.05) with 0.3s transition
+
+  Overlay Card (Innovation, Services, Industries):
+    - Height: 360px (desktop), 300px (tablet), 350px (mobile)
+    - Gradient: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%)
+    - Overlay opacity: 0 -> 1 on hover (0.3s ease)
+    - Title bar: position absolute, bottom: 0, background: #BF0603, padding: 15px 20px
+    - On hover: title bar fades out, overlay with description fades in
+
+  Testimonial Card:
+    - border: 1px solid #BF0603
+    - Star rating: filled #BF0603, empty #E0E0E0
+    - Review text: italic
+    - Title: red color (#BF0603)
+
+  Achievement Card:
+    - Aspect ratio: 1/1 (square)
+    - Alternating colors:
+      Light: bg #ECECEC, text #BF0603, border: 1px solid #BF0603
+      Dark:  bg #BF0603, text #FFFFFF, border: none
+
+
+6. GRID LAYOUTS
+================================================================================
+
+  Desktop:
+    - 3 columns: repeat(3, 1fr), gap: 30px  (Innovation, Services)
+    - 4 columns: repeat(4, 1fr), gap: 30px  (Industries)
+    - 4 columns: repeat(4, 1fr), gap: 1rem  (Testimonials)
+
+  Tablet (max-width: 1024px):
+    - auto-fit: minmax(300px, 1fr)  (Innovation, Services)
+    - 3 columns  (Industries, Testimonials)
+
+  Mobile (max-width: 768px):
+    - 2 columns  (Innovation, Services, Industries, Testimonials)
+
+  Small Mobile (max-width: 480px):
+    - 1 column (all sections go single column)
+
+
+7. GRADIENTS
+================================================================================
+
+  Slider Overlay:
+    linear-gradient(1deg, rgba(43,48,53,0.8) 10%, rgba(0,0,0,0) 100%)
+
+  Card Overlay:
+    linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.9) 100%)
+
+
+8. ANIMATIONS & TRANSITIONS
+================================================================================
+
+  Marquee Scroll (Achievements):
+    - animation: marqueeScroll 15s linear infinite
+    - transform: translateX(-50%)
+    - Hover: animation-play-state: paused
+
+  Card Transitions:
+    - transform + box-shadow: 0.3s ease
+    - Blog images: 0.4s ease
+
+  Loading Spinner:
+    - animation: spin 0.65s linear infinite
+    - border: 4px solid #E2E8F0
+    - border-top: 4px solid #BF0603
+    - border-radius: 50%
+
+  Count-Up (Achievements):
+    - Uses Intersection Observer (threshold: 0.1)
+    - Duration: 500ms
+
+  Blog Carousel:
+    - transform: 0.5s ease-in-out
+    - Auto-advance: 4000ms interval
+    - Pause on hover/touch
+
+  Arrow Hover Effects:
+    - Blog read-more: translateX(2px)
+    - Icon arrow: translateX(4px)
+
+
+9. PAGE STRUCTURE TEMPLATE
+================================================================================
+
+  Every page should follow this structure:
+
+    <div className="page-container" style={{
+      overflowX: 'hidden',
+      width: '100%',
+      maxWidth: '1600px',
+      margin: '0 auto'
+    }}>
+      <Helmet>
+        <title>Page Title - Adiance</title>
+        <meta name="description" content="..." />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta name="robots" content="index, follow" />
+        {/* Open Graph Tags */}
+        {/* Twitter Card Tags */}
+        {/* Schema JSON-LD */}
+      </Helmet>
+      <Header />
+      {/* Page Content Sections */}
+      <Footer />
+    </div>
+
+
+10. SEO & META PATTERNS
+================================================================================
+
+  Required for every page:
+    - <title> tag (unique per page)
+    - meta description (unique per page)
+    - canonical URL using useLocation()
+    - robots meta tag
+    - Open Graph tags (og:title, og:description, og:image, og:type, og:url, og:site_name)
+    - Twitter Card tags (twitter:card, twitter:site, twitter:title, twitter:description, twitter:image)
+    - viewport meta tag
+    - charset UTF-8
+    - Schema.org JSON-LD (Organization, WebPage, FAQ as applicable)
+
+  Canonical URL Pattern:
+    const location = useLocation();
+    const canonicalUrl = `https://www.adiance.com${location.pathname}`;
+
+  Twitter Handle: @adiancetech
+  OG Site Name: Adiance Technologies
+
+
+11. CSS NAMING CONVENTION
+================================================================================
+
+  Pattern: BEM-inspired with hyphens
+
+    {component}-container     -> Main wrapper
+    {component}-title         -> Heading
+    {component}-description   -> Body text
+    {component}-card          -> Card element
+    {component}-header        -> Header section
+    {component}-card-overlay  -> Hover overlay
+    {component}-card-title-overlay -> Title bar on card
+
+  Examples:
+    .wwd-*            -> WhatWeDo section
+    .blog-*           -> Blog section
+    .testimonial-*    -> Testimonials section
+    .achievement-*    -> Achievements section
+    .industry-*       -> Industries section
+    .service-*        -> Services section
+    .innovation-*     -> Innovation section
+
+
+12. IMAGE HANDLING
+================================================================================
+
+  - Use .webp format for all images (performance optimization)
+  - Use object-fit: cover for consistent aspect ratios
+  - overflow: hidden on image containers
+  - Image hover: scale(1.05) with transition 0.3s ease
+  - Always include descriptive alt text
+
+
+13. BORDER RADIUS VALUES
+================================================================================
+
+  - Fully Rounded (dividers):  9999px
+  - Buttons (minimal):         2px
+  - Cards:                     0 (square corners default)
+
+
+14. SHARED COMPONENTS
+================================================================================
+
+  Header:  src/components/Header/Header
+  Footer:  src/components/Footer/Footer
+
+  These are used on EVERY page - always import and include them.
+
+
+15. STYLE APPROACH
+================================================================================
+
+  - CSS-in-JSX (styled jsx) for component-scoped styles
+  - Separate .css files for larger component styles
+  - Inline styles for one-off container properties
+  - Consistent use of max-width + margin: 0 auto for centering
+
+
+================================================================================
+  END OF DESIGN REFERENCE
+================================================================================

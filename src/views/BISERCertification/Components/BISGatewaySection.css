@@ -1,0 +1,253 @@
+.bis-gw-section {
+  width: 100%;
+  max-width: 1518px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+/* ── Top header (153px) — title + subtitle ── */
+.bis-gw-header {
+  margin: 2rem;
+  height: 153px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 0 40px;
+  background: #f9f9f9;
+}
+
+.bis-gw-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #BF0603;
+  line-height: 1;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.bis-gw-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* ── Bottom body (423px) — camera bg + overlaid content ── */
+.bis-gw-body {
+  position: relative;
+  height: 423px;
+  background-size: cover;
+  background-position: right center;
+  overflow: hidden;
+}
+
+/* BIS + STQC icon — center-left, 33px from body top */
+.bis-gw-icon-wrap {
+  position: absolute;
+  left: 492px;
+  top: 33px;
+  z-index: 2;
+}
+
+.bis-gw-icon {
+  width: 362px;
+  height: 92px;
+  object-fit: contain;
+  border-radius: 13px;
+  display: block;
+}
+
+/* Left text content — 55px from body top, 33px from left */
+.bis-gw-content {
+  position: absolute;
+  left: 33px;
+  top: 55px;
+  width: 412px;
+  z-index: 2;
+}
+
+.bis-gw-para {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.55;
+  margin: 0 0 20px;
+}
+
+.bis-gw-list {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bis-gw-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.bis-gw-check {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.bis-gw-tagline {
+  background: #BF0603;
+  padding: 14px 18px;
+  width: 381px;
+}
+
+.bis-gw-tagline p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  font-style: normal;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────── */
+
+@media (max-width: 1200px) {
+  .bis-gw-icon-wrap {
+    left: 430px;
+    top: 30px;
+  }
+
+  .bis-gw-icon {
+    width: 280px;
+    height: 71px;
+  }
+
+  .bis-gw-content {
+    top: 50px;
+    width: 410px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .bis-gw-title { font-size: 32px; }
+  .bis-gw-subtitle { font-size: 20px; }
+
+  .bis-gw-icon-wrap {
+    left: 380px;
+    top: 24px;
+  }
+
+  .bis-gw-icon {
+    width: 240px;
+    height: 61px;
+  }
+
+  .bis-gw-content {
+    top: 44px;
+    width: 340px;
+    left: 24px;
+  }
+}
+
+/* Tablet — stack vertically */
+@media (max-width: 900px) {
+  .bis-gw-header {
+    height: auto;
+    padding: 36px 30px 28px;
+    gap: 12px;
+  }
+
+  .bis-gw-title { font-size: 28px; }
+  .bis-gw-subtitle { font-size: 18px; }
+
+  .bis-gw-body {
+    height: auto;
+    min-height: 360px;
+    padding: 30px 30px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .bis-gw-icon-wrap {
+    position: static;
+  }
+
+  .bis-gw-icon {
+    width: 220px;
+    height: 56px;
+  }
+
+  .bis-gw-content {
+    position: static;
+    width: 100%;
+  }
+
+  .bis-gw-tagline {
+    width: 100%;
+  }
+
+  .bis-gw-tagline p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bis-gw-header {
+    padding: 28px 20px 22px;
+  }
+  .bis-gw-para{
+    font-size: 1rem;
+  }
+
+  .bis-gw-item{
+    font-size: 0.8rem;
+  }
+  .bis-gw-title { font-size: 24px; }
+  .bis-gw-subtitle { font-size: 16px; }
+
+  .bis-gw-body {
+    padding: 24px 20px 28px;
+    gap: 20px;
+  }
+
+  .bis-gw-icon {
+    width: 180px;
+    height: 46px;
+  }
+
+  .bis-gw-tagline p {
+    font-size: 18px;
+  }
+
+  .bis-gw-list { gap: 12px; }
+}
+
+@media (max-width: 375px) {
+  .bis-gw-title { font-size: 22px; }
+  .bis-gw-subtitle { font-size: 15px; }
+
+  .bis-gw-icon {
+    width: 150px;
+    height: 38px;
+  }
+}

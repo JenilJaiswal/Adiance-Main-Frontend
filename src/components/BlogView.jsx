@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useCallback, memo } from "react";
+"use client";
+
+import { useState, useEffect, useCallback, memo } from "react";
 import {
     Box,
     Flex,
@@ -8,7 +10,6 @@ import {
     VStack,
     Image,
     Link,
-    Icon,
     useBreakpointValue,
     Spinner,
     useToast,
@@ -16,13 +17,12 @@ import {
     Center,
     ChakraProvider,
 } from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
-import { FiArrowDown, FiArrowRight } from "react-icons/fi";
+import SmartLink from "./SmartLink";
 import { getBlogs } from "../AdianceAdmin/pages/Dashboard/components/blog"; // Updated path
 
 // The base URL for your images.
-const IMAGE_BASE_URL =
-    "https://res.cloudinary.com/dzs02ecai/image/upload/v1758361869/uploads/";
+const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
+const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images/`;
 
 const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
     // Safely access nested properties with fallbacks
@@ -34,25 +34,46 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
     const url = `/blog/${post.metadata?.urlWords || post._id}`;
 
     const textSection = (
-        <VStack
-            align="start"
-            justify="center"
-            spacing={4}
-            p={{ base: 6, md: 8 }}
+        <Box
+            p={{ base: 4, md: 6, lg: 8 }}
             w={{ base: "100%", md: "50%" }}
             bg="#bf0603"
             color="white"
-            h="100%" // This will now correctly be 100% of the 400px parent
-            minH="200px" // Keep for mobile
+            h="100%"
+            minH={{ base: "300px", md: "400px", lg: "450px" }}
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
         >
-            <Heading as="h3" size="md" noOfLines={2}>
-                {title}
-            </Heading>
-            <Box width="20px" height="2px" bg="white" borderRadius="full" />
-            <Text fontSize="sm" opacity={0.9} noOfLines={3}>
-                {brief}
-            </Text>
-            <Flex as="span" fontWeight="bold" display="flex" alignItems="center">
+            <VStack align="start" spacing={{ base: 3, md: 4 }} flex="1">
+                <Box minH={{ base: "60px", md: "80px", lg: "100px" }} display="flex" alignItems="flex-start">
+                    <Heading 
+                        as="h3" 
+                        size={{ base: "sm", md: "md", lg: "lg" }} 
+                        lineHeight="1.3"
+                    >
+                        {title}
+                    </Heading>
+                </Box>
+                <Box width="20px" height="2px" bg="white" borderRadius="full" />
+                <Box minH={{ base: "60px", md: "80px", lg: "100px" }} display="flex" alignItems="flex-start">
+                    <Text 
+                        fontSize={{ base: "sm", md: "md" }} 
+                        opacity={0.9} 
+                        lineHeight="1.6"
+                    >
+                        {brief}
+                    </Text>
+                </Box>
+            </VStack>
+            <Flex 
+                as="span" 
+                fontWeight="bold" 
+                display="flex" 
+                alignItems="center"
+                fontSize={{ base: "sm", md: "md" }}
+                mt={4}
+            >
                 Read more
                 <Box ml="2">
                     <svg
@@ -69,7 +90,7 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
                     </svg>
                 </Box>
             </Flex>
-        </VStack>
+        </Box>
     );
 
     const imageSection = (
@@ -78,8 +99,21 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
             alt={title}
             objectFit="cover"
             w={{ base: "100%", md: "50%" }}
-            // UPDATED: Set desktop height to 100% to fill the 400px container
-            h={{ base: "250px", md: "100%" }}
+            h={{ base: "250px", sm: "300px", md: "100%" }}
+            minH={{ base: "250px", sm: "300px", md: "450px", lg: "500px" }}
+            fallback={
+                <Box
+                    w={{ base: "100%", md: "50%" }}
+                    h={{ base: "250px", sm: "300px", md: "100%" }}
+                    minH={{ base: "250px", sm: "300px", md: "450px", lg: "500px" }}
+                    bg="gray.200"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                >
+                    <Text color="gray.500" fontSize="sm">No Image</Text>
+                </Box>
+            }
         />
     );
 
@@ -89,15 +123,21 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
     });
 
     return (
-        // The entire card is now wrapped in a RouterLink
-        <Link as={RouterLink} to={url} _hover={{ textDecoration: "none" }}>
+        // The entire card is now wrapped in a SmartLink
+        <Link as={SmartLink} to={url} _hover={{ textDecoration: "none" }}>
             <Flex
                 w="100%"
-                borderRadius="24px"
+                // borderRadius={{ base: "16px", md: "24px" }}
                 overflow="hidden"
                 direction={flexDirection}
-                // UPDATED: Set fixed height on desktop, auto on mobile
-                h={{ base: "auto", md: "400px" }}
+                h={{ base: "auto", sm: "auto", md: "450px", lg: "500px" }}
+                minH={{ base: "400px", md: "450px", lg: "500px" }}
+                boxShadow={{ base: "md", md: "lg" }}
+                transition="all 0.3s ease"
+                _hover={{
+                    transform: { base: "none", md: "translateY(-4px)" },
+                    boxShadow: { base: "md", md: "xl" }
+                }}
             >
                 {textSection}
                 {imageSection}
@@ -109,26 +149,39 @@ const BlogPostCard = memo(({ post, layoutVariant = "textFirst" }) => {
 // --- Placeholder Component ---
 const BlogPlaceholderCard = ({ layoutVariant = "textFirst" }) => {
     const textSection = (
-        <Center
-            p={{ base: 6, md: 8 }}
+        <Box
+            p={{ base: 4, md: 6, lg: 8 }}
             w={{ base: "100%", md: "50%" }}
             bg="#bf0603"
             color="whiteAlpha.700"
-            // UPDATED: Match the real card's props
             h="100%"
-            minH="200px"
+            minH={{ base: "300px", md: "400px", lg: "450px" }}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
         >
-            <Text>No blog post available.</Text>
-        </Center>
+            <VStack spacing={4}>
+                <Text fontSize={{ base: "md", md: "lg" }} fontWeight="semibold">No blog post available.</Text>
+                <Text fontSize={{ base: "sm", md: "md" }} opacity={0.8} textAlign="center">
+                    Check back later for new content and insights.
+                </Text>
+            </VStack>
+        </Box>
     );
 
     const imageSection = (
         <Box
             w={{ base: "100%", md: "50%" }}
-            // UPDATED: Match the real card's props
-            h={{ base: "250px", md: "100%" }}
+            h={{ base: "250px", sm: "300px", md: "100%" }}
+            minH={{ base: "250px", sm: "300px", md: "450px", lg: "500px" }}
             bg="gray.200"
-        />
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+        >
+            <Text color="gray.500" fontSize="sm">No Image</Text>
+        </Box>
     );
 
     const flexDirection = useBreakpointValue({
@@ -139,11 +192,12 @@ const BlogPlaceholderCard = ({ layoutVariant = "textFirst" }) => {
     return (
         <Flex
             w="100%"
-            borderRadius="24px"
+            // borderRadius={{ base: "16px", md: "24px" }}
             overflow="hidden"
             direction={flexDirection}
-            // UPDATED: Match the real card's props
-            h={{ base: "auto", md: "400px" }}
+            h={{ base: "auto", sm: "auto", md: "450px", lg: "500px" }}
+            minH={{ base: "400px", md: "450px", lg: "500px" }}
+            boxShadow={{ base: "md", md: "lg" }}
         >
             {textSection}
             {imageSection}
@@ -197,7 +251,7 @@ const BlogViewContent = () => {
     }, [currentIndex, isMobile, isPaused, blogs.length]);
 
     return (
-        <Box bg="white" p="2%" borderRadius="24px">
+        <Box bg="white" p="2%" >
             <Flex
                 direction={{ base: "column", lg: "row" }}
                 align="center"
@@ -217,7 +271,8 @@ const BlogViewContent = () => {
                     <Heading
                         as="h2"
                         fontSize={{ base: "24px", md: "48px" }}
-                        fontWeight="bold"
+                        fontWeight="600"
+                        color="#444444"
                     >
                         Our Latest{" "}
                         <Box as="span" color="#bf0603">
@@ -253,7 +308,7 @@ const BlogViewContent = () => {
                         </Text>
                     </Flex>
                     <Link
-                        as={RouterLink}
+                        as={SmartLink}
                         to="/blog"
                         _hover={{ textDecoration: "none" }}
                         display={{ base: "none", md: "block" }}
@@ -264,7 +319,7 @@ const BlogViewContent = () => {
                             _hover={{ bg: "gray.300" }}
                             size="lg"
                             px={8}
-                            borderRadius="24px"
+                            // borderRadius="24px"
                         >
                             View all
                             <Box ml="2">
@@ -308,6 +363,7 @@ const BlogViewContent = () => {
                             w="100%"
                             position="relative"
                             overflow="hidden"
+                            minH={{ base: "450px", md: "500px", lg: "550px" }}
                             onMouseEnter={() => setIsPaused(true)}
                             onMouseLeave={() => setIsPaused(false)}
                             onTouchStart={() => setIsPaused(true)}
@@ -315,17 +371,31 @@ const BlogViewContent = () => {
                         >
                             <Flex
                                 w="100%"
+                                h="100%"
                                 transition="transform 0.5s ease-in-out"
                                 transform={`translateX(-${currentIndex * 100}%)`}
                             >
                                 {blogs.length > 0 ? (
                                     blogs.map((post) => (
-                                        <Box key={post._id} flex="0 0 100%" p={1}>
+                                        <Box 
+                                            key={post._id} 
+                                            flex="0 0 100%" 
+                                            p={{ base: 2, md: 3, lg: 4 }}
+                                            h="100%"
+                                            display="flex"
+                                            alignItems="stretch"
+                                        >
                                             <BlogPostCard post={post} />
                                         </Box>
                                     ))
                                 ) : (
-                                    <Box flex="0 0 100%">
+                                    <Box 
+                                        flex="0 0 100%" 
+                                        h="100%"
+                                        display="flex"
+                                        alignItems="center"
+                                        justifyContent="center"
+                                    >
                                         <BlogPlaceholderCard />
                                     </Box>
                                 )}
@@ -353,7 +423,7 @@ const BlogViewContent = () => {
                     )}
                 </Stack>
                 <Link
-                    as={RouterLink}
+                    as={SmartLink}
                     to="/blog"
                     _hover={{ textDecoration: "none" }}
                     display={{ base: "block", md: "none" }}
@@ -365,7 +435,7 @@ const BlogViewContent = () => {
                         _hover={{ bg: "gray.300" }}
                         size="lg"
                         px={8}
-                        borderRadius="24px"
+                        // borderRadius="24px"
                     >
                         View all
                         <Box ml="2">

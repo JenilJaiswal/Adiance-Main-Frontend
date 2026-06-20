@@ -1,0 +1,400 @@
+/* ===== ECO Product Filter Section ===== */
+.eco-filter-section {
+  background: #ffffff;
+  padding: 60px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.eco-filter-container {
+  max-width: 1565px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.eco-filter-header {
+  margin-bottom: 40px;
+}
+
+.eco-filter-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #444444;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.eco-filter-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #555555;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Filter Bar */
+.eco-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  padding: 30px 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 24px;
+}
+
+.eco-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eco-filter-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.eco-filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.eco-filter-btn {
+  padding: 8px 22px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #555555;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.eco-filter-btn:hover {
+  border-color: #BF0603;
+  color: #BF0603;
+}
+
+.eco-filter-btn-active {
+  background: #BF0603;
+  border-color: #BF0603;
+  color: #ffffff;
+}
+
+.eco-filter-btn-active:hover {
+  background: #a00502;
+  border-color: #a00502;
+  color: #ffffff;
+}
+
+/* Results Count */
+.eco-filter-results-count {
+  font-size: 15px;
+  color: #777777;
+  margin-bottom: 30px;
+}
+
+.eco-filter-results-count strong {
+  color: #1a1a1a;
+}
+
+/* ===== Category Group ===== */
+.eco-category-group {
+  margin-bottom: 50px;
+}
+
+.eco-category-group:last-child {
+  margin-bottom: 0;
+}
+
+.eco-category-header {
+  margin-bottom: 28px;
+}
+
+.eco-category-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #444444;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.eco-category-line {
+  height: 1px;
+  background: #BF0603;
+}
+
+/* ===== Product Grid ===== */
+.eco-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===== Product Card ===== */
+.eco-product-card {
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #BF0603;
+  background: #ffffff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Card Header */
+.eco-card-header {
+  margin-bottom: 20px;
+}
+
+.eco-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1e23;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.eco-card-model {
+  font-size: 13px;
+  font-weight: 500;
+  color: #888888;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0.3px;
+}
+
+/* Card Specs */
+.eco-card-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.eco-spec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.eco-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.eco-spec-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.eco-spec-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1e23;
+}
+
+/* Card Actions */
+.eco-card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.eco-card-btn {
+  flex: 1;
+  padding: 10px 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.eco-card-btn-outline {
+  border: 1px solid #BF0603;
+  background: #ffffff;
+  color: #1a1e23;
+}
+
+.eco-card-btn-outline:hover {
+  /* border-color: #1a1e23; */
+  background: #BF0603;
+  color: #ffffff;
+}
+
+.eco-card-btn-filled {
+  /* border: 1px solid #000000; */
+  background: #BF0603;
+  color: #ffffff;
+}
+
+/* No Results */
+.eco-no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.eco-no-results p {
+  font-size: 18px;
+  color: #777777;
+  margin-bottom: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1199px) {
+  .eco-filter-title {
+    font-size: 36px;
+  }
+
+  .eco-filter-bar {
+    gap: 28px;
+  }
+
+  .eco-product-grid {
+    gap: 20px;
+  }
+
+  .eco-product-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .eco-filter-section {
+    padding: 50px 16px;
+  }
+
+  .eco-filter-title {
+    font-size: 32px;
+  }
+
+  .eco-filter-subtitle {
+    font-size: 16px;
+  }
+
+  .eco-filter-bar {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .eco-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .eco-category-group {
+    margin-bottom: 40px;
+  }
+
+  .eco-category-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .eco-filter-section {
+    padding: 40px 15px;
+  }
+
+  .eco-filter-header {
+    margin-bottom: 30px;
+  }
+
+  .eco-filter-title {
+    font-size: 28px;
+  }
+
+  .eco-filter-subtitle {
+    font-size: 15px;
+  }
+
+  .eco-filter-btn {
+    padding: 7px 16px;
+    font-size: 13px;
+  }
+
+  .eco-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .eco-product-card {
+    padding: 16px;
+  }
+
+  .eco-card-title {
+    font-size: 16px;
+  }
+
+  .eco-card-model {
+    font-size: 12px;
+  }
+
+  .eco-spec-value {
+    font-size: 14px;
+  }
+
+  .eco-spec-label {
+    font-size: 10px;
+  }
+
+  .eco-card-btn {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .eco-filter-section {
+    padding: 30px 15px;
+  }
+
+  .eco-filter-title {
+    font-size: 24px;
+  }
+
+  .eco-filter-subtitle {
+    font-size: 14px;
+  }
+
+  .eco-product-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .eco-card-actions {
+    gap: 10px;
+  }
+
+  .eco-card-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .eco-category-group {
+    margin-bottom: 32px;
+  }
+
+  .eco-category-title {
+    font-size: 20px;
+  }
+
+  .eco-category-header {
+    margin-bottom: 20px;
+  }
+}

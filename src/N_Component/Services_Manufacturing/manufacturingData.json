@@ -1,0 +1,152 @@
+{
+  "odmCCTV": {
+    "title": "ODM CCTV Camera Manufacturer",
+    "subtitle": "Ready-to-manufacture designs built for quick deployment and scalability:",
+    "topFeatures": [
+      "Bullet, Dome, and PTZ camera models",
+      "2MP, 3MP, 5MP resolution variants",
+      "Wired, PoE, Wi-Fi, 4G/5G connectivity options",
+      "Fixed & motorized lens configurations",
+      "EdgeAI-compatible SKUs",
+      "ICR Infrared, night vision, and starlight-enabled options"
+    ],
+    "bannerText": "We deliver scalable production, white-label support and global compliance aligned with market needs",
+    "bottomFeatures": [
+      "White-label branding and export-grade packaging",
+      "Pre-installed standard VMS & mobile app support",
+      "NDA-compliant production",
+      "Custom packaging and regional firmware settings",
+      "Efficient assembly and field-ready configurations"
+    ],
+    "certifications": [
+      { "src": "/N_Images/Home_ISO.webp", "alt": "ISO" },
+      { "src": "/N_Images/Home_CE.webp", "alt": "CE" },
+      { "src": "/N_Images/Home_FCC.webp", "alt": "FCC" },
+      { "src": "/N_Images/Home_RoHS.webp", "alt": "RoHS" },
+      { "src": "/N_Images/Home_BIS.webp", "alt": "BIS" },
+      { "src": "/N_Images/onvif.svg", "alt": "ONVIF" }
+    ],
+    "backgroundImage": "/N_Images/ODM_Manufacturing_bg.svg"
+  },
+  "odmRoboticArm": {
+    "title": "ODM Robotic Arm Manufacturing",
+    "subtitle": "Industrial-grade robotic arms for precision automation and smart factory deployment.",
+    "topFeatures": [
+      "4-axis to 6-axis robotic arms with varying degrees of freedom",
+      "Payload capacity from 3 kg to 20+ kg",
+      "Reach lengths: 500 mm to 1500 mm",
+      "Application-ready for: Pick & Place, Packaging, Material Handling, Welding, Assembly",
+      "CNC Machine Tending, PCB Soldering",
+      "Used across industries: Electronics, FMCG, Automotive, Metalworks, Assembly Lines"
+    ],
+    "bannerText": "We deliver industrial-grade robotic arms with high-precision engineering and ODM-ready infrastructure.",
+    "bottomFeatures": [
+      "Pre-calibrated for 24/7 high-speed operational cycles",
+      "Built-in safety systems: Collision detection, Emergency stop, Lockout mechanisms",
+      "Compatible with common controllers (PLC, SCADA)",
+      "Firmware preloading and motion sequence setup",
+      "Custom enclosures and mounting support (IP-rated if required)",
+      "White-label branding and OEM-style documentation",
+      "Field-tested under simulated industrial conditions for reliability",
+      "Used across: Electronics, FMCG, Automotive, Metalworks, and Assembly Lines"
+    ],
+    "backgroundImage": "/N_Images/ODM_Robotic_Arm_bg.webp",
+    "rightImage": "/N_Images/OEM_Hero_Right_1.svg",
+    "rightImageAlt": "Robotic Arm"
+  },
+  "odmPCB": {
+    "title": "ODM PCB Assembly & Manufacturing Services",
+    "subtitle": "Our ODM-ready PCBs are purpose-built for high-performance electronic systems across security and automation applications.",
+    "topFeatures": [
+      "CCTV mainboards",
+      "Robotic motor control boards",
+      "Vision processing units",
+      "Embedded systems for smart devices",
+      "Edge AI-compatible PCB layouts"
+    ],
+    "bannerText": "We offer end-to-end PCB manufacturing services optimized for quality, compliance and speed — all under your brand.",
+    "bottomFeatures": [
+      "Design Review, BOM Validation & Gerber File Optimization",
+      "Firmware preload & MCU programming support",
+      "High-speed SMT & THT Component Placement",
+      "Reflow Soldering & Wave Soldering Techniques",
+      "Automated Solder Paste Stenciling",
+      "Automated Optical Inspection (AOI)",
+      "In-Circuit and Functional Testing",
+      "Ultrasonic Cleaning & Conformal Coating (optional)",
+      "Final QC Inspection, Labeling & ESD-Safe Packaging",
+      "Branding support: QR code labeling, branded packaging, serialized tracking",
+      "IPC-A-610 Class 2 & 3 compliant assembly",
+      "Compliance-ready: RoHS, REACH, CE, UL"
+    ],
+    "backgroundImage": "/N_Images/ODM_PCB_bg.webp",
+    "rightImages": [
+      { "src": "/N_Images/ODM_pcb1.webp", "alt": "PCB Manufacturing Facility 1" },
+      { "src": "/N_Images/ODM_pcb2.webp", "alt": "PCB Manufacturing Facility 2" },
+      { "src": "/N_Images/ODM_pcb3.webp", "alt": "PCB Manufacturing Facility 3" }
+    ]
+  },
+  "jdmCCTV": {
+    "title": "JDM for CCTV Camera Development",
+    "subtitle": "Co-develop the next generation of surveillance products with shared R&D and engineering:",
+    "topFeatures": [
+      "Bullet, Dome, and PTZ camera models",
+      "2MP, 3MP, 5MP resolution variants",
+      "Wired, PoE, Wi-Fi, 4G/5G connectivity options",
+      "Fixed & motorized lens configurations",
+      "EdgeAI-compatible SKUs",
+      "ICR Infrared, night vision, and starlight-enabled options"
+    ],
+    "bottomFeatures": [
+      "White-label branding and export-grade packaging",
+      "Pre-installed standard VMS & mobile app support",
+      "NDA-compliant production"
+    ],
+    "certifications": [
+      { "src": "/N_Images/Home_ISO.webp", "alt": "ISO" },
+      { "src": "/N_Images/Home_CE.webp", "alt": "CE" },
+      { "src": "/N_Images/Home_FCC.webp", "alt": "FCC" },
+      { "src": "/N_Images/Home_RoHS.webp", "alt": "RoHS" },
+      { "src": "/N_Images/Home_BIS.webp", "alt": "BIS" },
+      { "src": "/N_Images/onvif.svg", "alt": "ONVIF" }
+    ],
+    "backgroundImage": "/N_Images/ODM_Manufacturing_bg.svg"
+  },
+  "jdmRoboticArm": {
+    "title": "JDM for Robotic Arm Development",
+    "subtitle": "Build industrial-grade robotic systems through joint engineering:",
+    "topFeatures": [
+      "4-axis to 6-axis robotic arms with varying degrees of freedom",
+      "Payload capacity from 3 kg to 20+ kg",
+      "Reach lengths: 500 mm to 1500 mm",
+      "Application-ready for: Pick & Place, Packaging, Material Handling, Welding, Assembly.",
+      "CNC Machine Tending, PCB Soldering",
+      "Used across industries: Electronics, FMCG, Automotive, Metalworks, Assembly Lines",
+      "Pre-calibrated for 24/7 high-speed operational cycles",
+      "Built-in safety systems: Collision detection, Emergency stop, Lockout mechanisms",
+      "Compatible with common controllers (PLC, SCADA)"
+    ],
+    "rightImage": "/N_Images/OEM_Robotic_Arm.webp",
+    "rightImageAlt": "Robotic Arm"
+  },
+  "jdmPCB": {
+    "title": "JDM for PCB & Electronic Device Development",
+    "subtitle": "Perfect for startups, R&D teams and companies building custom electronic products.",
+    "topFeatures": [
+      "CCTV mainboards",
+      "Robotic motor control boards",
+      "Vision processing units",
+      "Embedded systems for smart devices",
+      "Edge AI-compatible PCB layouts",
+      "Pre-calibrated for 24/7 high-speed operational cycles",
+      "Built-in safety systems: Collision detection, Emergency stop, Lockout mechanisms",
+      "Compatible with common controllers (PLC, SCADA)",
+      "Firmware preloading and motion sequence setup"
+    ],
+    "rightImages": [
+      { "src": "/N_Images/ODM_pcb1.webp", "alt": "PCB Manufacturing Facility 1" },
+      { "src": "/N_Images/ODM_pcb2.webp", "alt": "PCB Manufacturing Facility 2" },
+      { "src": "/N_Images/ODM_pcb3.webp", "alt": "PCB Manufacturing Facility 3" }
+    ]
+  }
+}

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "./OneStopSolution.module.css";
 import { Box } from "@mui/material";

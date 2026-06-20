@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const Retail = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -131,6 +133,15 @@ const Retail = () => {
           name="description"
           content="Enhance retail security with Adiance’s CCTV systems. Prevent theft, manage queues, gain customer insights, and monitor stores remotely with advanced analytics."
         />
+        <meta name="keywords" content="retail CCTV, store security camera, retail surveillance" />
+        <meta property="og:title" content="Smart Retail CCTV — Protect, Monitor & Analyze." />
+        <meta property="og:description" content="Enhance retail security with Adiance’s CCTV systems. Prevent theft, manage queues, gain customer insights, and monitor stores remotely with advanced analytics." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
@@ -164,7 +175,7 @@ const Retail = () => {
             }}
           >
             <img
-              src="/images/r1.png"
+              src="/images/r1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -264,7 +275,7 @@ const Retail = () => {
             }}
           >
             <img
-              src="/images/r2.png"
+              src="/images/r2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -303,7 +314,7 @@ const Retail = () => {
             }}
           >
             <img
-              src="/images/r3.png"
+              src="/images/r3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -402,7 +413,7 @@ const Retail = () => {
             }}
           >
             <img
-              src="/images/r4.png"
+              src="/images/r4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -441,7 +452,7 @@ const Retail = () => {
             }}
           >
             <img
-              src="/images/r5.png"
+              src="/images/r5.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

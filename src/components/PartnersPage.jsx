@@ -1,13 +1,15 @@
+"use client";
+
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import Image from "react-bootstrap/Image";
 import HeroSectionP from "./patnerPage-components/HeroSectionP";
 import Channelpartner from "./patnerPage-components/Channelpartner";
 import WhyPartnerwithAdiance from "./patnerPage-components/WhyPartnerwithAdiance";
 import Globalnetwork from "./patnerPage-components/Globalnetwork";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 import DealersLandingPageForm from "./DealersLandingPageForm";
 
 const PartnersPage = () => {
@@ -22,6 +24,17 @@ const PartnersPage = () => {
           name="description"
           content="Partner with Adiance Technologies for cutting-edge surveillance solutions. Expertise in PCB manufacturing, AI,and smart tech for customized, security systems."
         />
+        <meta name="keywords" content="partner with Adiance, CCTV distribution partner, security integrator" />
+        <meta property="og:title" content="Partner With Us - Adiance Technologies" />
+        <meta property="og:description" content="Partner with Adiance Technologies for cutting-edge surveillance solutions. Expertise in PCB manufacturing, AI,and smart tech for customized, security systems." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
+        <meta name="twitter:title" content="Partner With Us - Adiance Technologies" />
+        <meta name="twitter:description" content="Partner with Adiance Technologies for cutting-edge surveillance solutions." />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <div>

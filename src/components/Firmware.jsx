@@ -1,16 +1,22 @@
+"use client";
+
 import React, { useMemo, useState, useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import { Helmet } from "react-helmet";
+import { useLocation } from "@/compat/react-router-dom";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import DownloadForOfflineOutlinedIcon from "@mui/icons-material/DownloadForOfflineOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import axios from "axios";
 
-// API configuration
-const API_BASE_URL = "https://etaems.arcisai.io:5000/api/version";
+// API configuration — requests go through the Next.js proxy at
+// app/api/version/[...path]/route.js to bypass CORS and self-signed
+// cert issues on the upstream tools/firmware backend.
+const API_BASE_URL = "/api/version";
 const instance = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000,
+  timeout: 60000,
 });
 
 // API functions
@@ -81,6 +87,8 @@ const downloadFirmwareById = async (id, type) => {
 };
 
 const Firmware = () => {
+  const location = useLocation();
+  const canonicalUrl = `https://www.adiance.com${location.pathname}`;
   const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -155,6 +163,17 @@ const Firmware = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Firmware Downloads | Camera Firmware Updates | Adiance</title>
+        <meta
+          name="description"
+          content="Download the latest firmware updates for Adiance security cameras. Keep your surveillance system secure and up-to-date."
+        />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
       <Header />
       <div className="container" style={{ paddingTop: "100px", paddingBottom: "60px" }}>
         <h1 style={{ marginBottom: "8px" }}>Firmware</h1>

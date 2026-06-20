@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const BankFinance = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -184,7 +186,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/360_1.png"
+              src="/images/360_1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -290,7 +292,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/360_2.jpg"
+              src="/images/360_2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -330,7 +332,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/360_3.jpg"
+              src="/images/360_3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -443,7 +445,7 @@ const BankFinance = () => {
             }}
           >
             <img
-              src="/images/360_4.jpg"
+              src="/images/360_4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

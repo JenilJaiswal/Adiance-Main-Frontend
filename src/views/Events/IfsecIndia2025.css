@@ -1,0 +1,383 @@
+/* ==================== SHARED CONTAINER ==================== */
+.ifsec-container {
+  max-width: 1565px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==================== HERO SECTION ==================== */
+.ifsec-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.ifsec-hero-bg {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.ifsec-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ifsec-hero-content {
+  max-width: 1565px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 5%;
+}
+
+.ifsec-hero-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  max-width: 800px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ifsec-hero-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  max-width: 700px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ==================== SECTION HEADER ==================== */
+.ifsec-section-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.ifsec-section-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: #444444;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.ifsec-section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #444444;
+  margin: 10px auto 0 auto;
+}
+
+.ifsec-section-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ifsec-section-description a {
+  color: #BF0603;
+  text-decoration: none;
+}
+
+.ifsec-section-description a:hover {
+  text-decoration: underline;
+}
+
+/* ==================== SCROLL GALLERY ==================== */
+.ifsec-scroll-gallery-section {
+  padding: 70px 0;
+  overflow: hidden;
+}
+
+.ifsec-scroll-gallery-section .ifsec-section-header {
+  padding: 0 20px;
+  max-width: 1565px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.ifsec-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.ifsec-scroll-track {
+  display: flex;
+  width: calc(420px * 8);
+  animation: ifsecScroll 22s linear infinite;
+}
+
+.ifsec-scroll-item {
+  flex-shrink: 0;
+  width: 400px;
+  height: 280px;
+  margin-right: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ifsec-scroll-item:hover {
+  transform: translateY(-3px);
+}
+
+.ifsec-scroll-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.3s ease;
+}
+
+.ifsec-scroll-item:hover .ifsec-scroll-image {
+  transform: scale(1.05);
+}
+
+.ifsec-scroll-container:hover .ifsec-scroll-track {
+  animation-play-state: paused;
+}
+
+@keyframes ifsecScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-420px * 4)); }
+}
+
+/* ==================== CONTENT SECTIONS ==================== */
+.ifsec-content-section {
+  padding: 35px 0;
+  background-color: #ffffff;
+}
+
+.ifsec-content-section.ifsec-bg-gray {
+  background-color: #ffffff;
+}
+
+/* ==================== PHOTO GRID ==================== */
+.ifsec-photo-grid-section {
+  padding: 70px 0;
+  background-color: #ffffff;
+}
+
+.ifsec-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.ifsec-photo-card {
+  position: relative;
+  overflow: hidden;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+}
+
+.ifsec-photo-card:hover {
+  transform: translateY(-3px);
+  /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); */
+}
+
+.ifsec-photo-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.ifsec-photo-card:hover img {
+  transform: scale(1.005);
+}
+
+.ifsec-photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #BF0603;
+  padding: 12px 18px;
+}
+
+.ifsec-photo-overlay p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ==================== CTA SECTION ==================== */
+.ifsec-cta-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.ifsec-cta-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #BF0603;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.ifsec-cta-btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #BF0603;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 42px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #BF0603;
+  letter-spacing: 0.5px;
+}
+
+.ifsec-cta-btn:hover {
+  background-color: #f8f9fa;
+  color: #8c150f;
+  transform: translateY(-3px);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .ifsec-hero-section,
+  .ifsec-hero-bg {
+    min-height: 480px;
+  }
+
+  .ifsec-hero-title {
+    font-size: 32px;
+  }
+
+  .ifsec-section-title {
+    font-size: 34px;
+  }
+
+  .ifsec-hero-description,
+  .ifsec-section-description {
+    font-size: 16px;
+  }
+
+  .ifsec-scroll-item {
+    width: 320px;
+    height: 240px;
+  }
+
+  .ifsec-scroll-track {
+    width: calc(340px * 8);
+  }
+
+  .ifsec-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ifsec-cta-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ifsec-hero-section,
+  .ifsec-hero-bg {
+    min-height: 360px;
+  }
+
+  .ifsec-hero-content {
+    padding: 40px 5%;
+  }
+
+  .ifsec-hero-section,
+  .ifsec-content-section,
+  .ifsec-scroll-gallery-section,
+  .ifsec-photo-grid-section,
+  .ifsec-cta-section {
+    padding: 50px 0;
+  }
+
+  .ifsec-hero-title {
+    font-size: 26px;
+  }
+
+  .ifsec-section-title {
+    font-size: 26px;
+  }
+
+  .ifsec-hero-description {
+    font-size: 15px;
+  }
+
+  .ifsec-section-description {
+    font-size: 15px;
+  }
+
+  .ifsec-scroll-item {
+    width: 260px;
+    height: 200px;
+  }
+
+  .ifsec-scroll-track {
+    width: calc(280px * 8);
+  }
+
+  .ifsec-photo-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ifsec-cta-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .ifsec-cta-btn {
+    padding: 12px 30px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ifsec-hero-title {
+    font-size: 22px;
+  }
+
+  .ifsec-section-title {
+    font-size: 22px;
+  }
+
+  .ifsec-scroll-item {
+    width: 220px;
+    height: 170px;
+  }
+
+  .ifsec-scroll-track {
+    width: calc(240px * 8);
+  }
+}

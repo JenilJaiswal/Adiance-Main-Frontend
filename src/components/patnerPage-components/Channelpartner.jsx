@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import {
   Box,
@@ -16,7 +18,7 @@ const partnerData = [
   {
     label: "Distributor",
     title: "Distributor:",
-    imageSrc: "/images/Channelpartner.png",
+    imageSrc: "/images/Channelpartner.webp",
     altText: "Distributor Partner",
     content: [
       {
@@ -86,7 +88,7 @@ const partnerData = [
   {
     label: "Dealer",
     title: "Dealer:",
-    imageSrc: "/images/DistributionPartner.jpg",
+    imageSrc: "/images/DistributionPartner.webp",
     altText: "Dealer Partner",
     content: [
       {
@@ -151,7 +153,7 @@ const partnerData = [
   {
     label: "End Customer",
     title: "End Customer:",
-    imageSrc: "/images/TecnologyPartner.jpg",
+    imageSrc: "/images/TecnologyPartner.webp",
     altText: "End Customer",
     content: [
       {

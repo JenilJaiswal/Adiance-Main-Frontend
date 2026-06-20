@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Grid from "@mui/material/Grid";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const Sustainability = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -186,7 +188,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus1.png"
+              src="/images/sus1.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -286,7 +288,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus2.png"
+              src="/images/sus2.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -325,7 +327,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus3.png"
+              src="/images/sus3.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -426,7 +428,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus4.png"
+              src="/images/sus4.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -465,7 +467,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus5.jpg"
+              src="/images/sus5.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",
@@ -568,7 +570,7 @@ const Sustainability = () => {
             }}
           >
             <img
-              src="/images/sus6.png"
+              src="/images/sus6.webp"
               alt="Image"
               style={{
                 maxWidth: screenWidth > 888 ? "350px" : "250px",

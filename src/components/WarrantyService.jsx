@@ -1,10 +1,12 @@
+"use client";
+
 import React from "react";
 import { Typography } from "@mui/material";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NavHeader from "./NavHeader";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/compat/react-router-dom";
 
 const WarrantyService = () => {
   const location = useLocation(); // Get the current route
@@ -18,6 +20,15 @@ const WarrantyService = () => {
           name="description"
           content="Adiance Technologies Terms & Conditions for products and services—know your rights, warranties, and legal obligations before making a purchase."
         />
+        <meta name="keywords" content="warranty service, Adiance warranty, CCTV warranty" />
+        <meta property="og:title" content="Store Terms & Conditions - Purchase Agreement" />
+        <meta property="og:description" content="Adiance Technologies Terms & Conditions for products and services—know your rights, warranties, and legal obligations before making a purchase." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Adiance Technologies" />
+        <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@adiancetech" />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />

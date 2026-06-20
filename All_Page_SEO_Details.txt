@@ -1,0 +1,1181 @@
+================================================================================
+              ADIANCE FRONTEND — COMPLETE SEO DETAILS FOR ALL PAGES
+================================================================================
+  Source: src/components/routes.jsx (routing), src/hooks/seoConfig.js (shared SEO config)
+  Base URL: https://www.adiance.com
+================================================================================
+
+
+================================================================================
+PAGE 1: HOME
+================================================================================
+  Route:          /
+  Component:      Home
+  File:           src/components/Home.jsx
+  SEO Source:     Helmet + seoConfig.home (src/hooks/seoConfig.js)
+--------------------------------------------------------------------------------
+  Title:          NDAA Compliant CCTV Camera Manufacturer | OEM & ODM | Adiance
+  Description:    NDAA-compliant CCTV manufacturer offering OEM/ODM white-label cameras with AI video analytics and edge AI for global security integrators.
+  Keywords:       NDAA compliant camera manufacturer, OEM CCTV camera, ODM surveillance camera, white label CCTV, AI surveillance camera, edge AI camera
+  Canonical URL:  https://www.adiance.com/
+  OG Title:       Best CCTV Camera Manufacturer In India - OEM & ODM CCTV Company
+  OG Description: Are you looking for a reliable CCTV manufacturing company in India? Adiance provides AI CCTV cameras, NVRs, cloud VMS and custom OEM/ODM electronics solutions.
+  OG Image:       https://www.adiance.com/images/SCameraPageOG.webp
+  OG Type:        website
+  OG URL:         Dynamic (https://www.adiance.com{pathname})
+  OG Site Name:   Adiance Technologies
+  OG Locale:      en_US
+  JSON-LD:        Organization Schema, WebPage Schema, FAQ Schema
+  H1:             (Not explicitly set in Helmet)
+  Internal Links: /edgeaicamera, /s-series-ai-cctv-cameras, /4gcamera, /anpr-camera,
+                  /thermal-camera, /4kcamera, /cloudxvr, /contact, /about,
+                  /innovation, /ndaa-compliance, /oem-manufacturing, /blog
+
+
+================================================================================
+PAGE 2: ABOUT US
+================================================================================
+  Route:          /about
+  Component:      AboutUs
+  File:           src/components/AboutUs.jsx
+  SEO Source:     Helmet + seoConfig.about (src/hooks/seoConfig.js)
+--------------------------------------------------------------------------------
+  Title:          About Adiance | NDAA Compliant Camera Manufacturer Since 2003
+  Description:    Adiance Technologies has been manufacturing surveillance cameras since 2003. We offer NDAA-compliant, non-Chinese SoC cameras with in-house AI VMS and mobile app for global security markets.
+  Keywords:       Adiance Technologies, CCTV manufacturer India, surveillance camera company
+  Canonical URL:  https://www.adiance.com/about
+  OG Title:       NOT SET
+  OG Description: NOT SET
+  OG Image:       NOT SET
+  OG Type:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set in Helmet)
+  Internal Links: /contact, /innovation, /manufacturing
+
+
+================================================================================
+PAGE 3: INNOVATION
+================================================================================
+  Route:          /innovation
+  Component:      Innovation
+  File:           src/components/Innovation.jsx
+  SEO Source:     Helmet + seoConfig.innovation (src/hooks/seoConfig.js)
+--------------------------------------------------------------------------------
+  Title:          AI & Innovation in Surveillance | Edge AI Technology | Adiance
+  Description:    Adiance leads innovation in AI-powered surveillance with edge AI processing, smart video analytics, and next-generation camera technology.
+  Keywords:       AI surveillance innovation, edge AI camera technology, smart video analytics
+  Canonical URL:  https://www.adiance.com/innovation
+  OG Title:       NOT SET
+  OG Description: NOT SET
+  OG Image:       NOT SET
+  OG Type:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set in Helmet)
+  Image Alt Text: Dynamic — alt={item.title} for each innovation item
+  Internal Links: /contact, /edgeaicamera, /s-series-ai-cctv-cameras
+
+
+================================================================================
+PAGE 4: CONTACT US
+================================================================================
+  Route:          /contact
+  Component:      ContactUs
+  File:           src/components/ContactUs.jsx
+  SEO Source:     Helmet + seoConfig.contact (src/hooks/seoConfig.js)
+--------------------------------------------------------------------------------
+  Title:          Contact Adiance | Get a Quote for CCTV Cameras & OEM Services
+  Description:    Contact Adiance for OEM/ODM CCTV camera quotes, white-label partnerships, or technical inquiries. Global manufacturer serving 30+ countries.
+  Keywords:       contact CCTV manufacturer, get a quote CCTV camera, OEM camera inquiry
+  Canonical URL:  https://www.adiance.com/contact
+  OG Title:       NOT SET
+  OG Description: NOT SET
+  OG Image:       NOT SET
+  OG Type:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set in Helmet)
+  Internal Links: /thank-you (on form submission)
+
+
+================================================================================
+PAGE 5: THANK YOU
+================================================================================
+  Route:          /thank-you, /blog-thank-you, /partner-thank-you
+  Component:      ThankYouPage
+  File:           src/components/ThankYouPage.jsx
+--------------------------------------------------------------------------------
+  Title:          NOT SET — NO HELMET TAGS
+  Description:    NOT SET
+  Keywords:       NOT SET
+  Canonical URL:  NOT SET
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             🎉 Thank You! (Typography h3 variant)
+  Internal Links: / (Home)
+
+
+================================================================================
+PAGE 6: THERMAL CAMERA F
+================================================================================
+  Route:          /adiance-thermal-camera-f
+  Component:      ProductShow
+  File:           src/components/ProductShow.jsx
+  SEO Source:     Helmet (dynamic from product data array)
+--------------------------------------------------------------------------------
+  Title:          Cloud-Based Thermal Camera | Fever Screening Solution
+  Description:    Thermal Camera offers AI-driven fever screening, remote monitoring & COVID-19 prevention. Ensure safety with accurate & contactless detection.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 7: THERMAL CAMERA N
+================================================================================
+  Route:          /adiance-thermal-camera-n
+  Component:      ProductShow
+  File:           src/components/ProductShow.jsx
+  SEO Source:     Helmet (dynamic from product data array)
+--------------------------------------------------------------------------------
+  Title:          Dynamic (from product data)
+  Description:    Dynamic (from product data)
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 8: THERMAL CAMERA L
+================================================================================
+  Route:          /adiance-thermal-camera-l
+  Component:      ProductShow
+  File:           src/components/ProductShow.jsx
+  SEO Source:     Helmet (dynamic from product data array)
+--------------------------------------------------------------------------------
+  Title:          Dynamic (from product data)
+  Description:    Dynamic (from product data)
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 9: 4K BULLET ANPR PTZ CAMERA
+================================================================================
+  Route:          /4k-bullet-anpr-ptz-camera
+  Component:      ProductShow
+  File:           src/components/ProductShow.jsx
+  SEO Source:     Helmet (dynamic from product data array)
+--------------------------------------------------------------------------------
+  Title:          Dynamic (from product data)
+  Description:    Dynamic (from product data)
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 10: 4K FACE RECOGNITION CAMERA
+================================================================================
+  Route:          /4k-face-recognition-camera
+  Component:      ProductShow
+  File:           src/components/ProductShow.jsx
+  SEO Source:     Helmet (dynamic from product data array)
+--------------------------------------------------------------------------------
+  Title:          Dynamic (from product data)
+  Description:    Dynamic (from product data)
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 11: EDGE AI OBJECT & FACE DETECTION CAMERAS
+================================================================================
+  Route:          /edge-ai-based-object-n-face-detection-cameras
+  Component:      ProductShow
+  File:           src/components/ProductShow.jsx
+  SEO Source:     Helmet (dynamic from product data array)
+--------------------------------------------------------------------------------
+  Title:          Dynamic (from product data)
+  Description:    Dynamic (from product data)
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 12: 4G DOME PTZ CAMERA
+================================================================================
+  Route:          /4g-dome-ptz-camera
+  Component:      ProductShow
+  File:           src/components/ProductShow.jsx
+  SEO Source:     Helmet (dynamic from product data array)
+--------------------------------------------------------------------------------
+  Title:          Dynamic (from product data)
+  Description:    Dynamic (from product data)
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 13: 4G MINI BULLET CAMERA
+================================================================================
+  Route:          /4g-mini-bullet-camera
+  Component:      ProductShow
+  File:           src/components/ProductShow.jsx
+  SEO Source:     Helmet (dynamic from product data array)
+--------------------------------------------------------------------------------
+  Title:          Dynamic (from product data)
+  Description:    Dynamic (from product data)
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 14: CLOUD XVR
+================================================================================
+  Route:          /cloudxvr
+  Component:      ProductShow
+  File:           src/components/ProductShow.jsx
+  SEO Source:     Helmet (dynamic from product data array)
+--------------------------------------------------------------------------------
+  Title:          Dynamic (from product data)
+  Description:    Dynamic (from product data)
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 15: S-SERIES AI CCTV CAMERAS
+================================================================================
+  Route:          /s-series-ai-cctv-cameras, /5g-edge-ai-camera-s-series-surveillance
+  Component:      SSeries
+  File:           src/components/SSeries.jsx
+--------------------------------------------------------------------------------
+  Title:          EdgeAI - S-Series AI CCTV Cameras for Smart Protection | Adiance
+  Description:    Deploy EdgeAI S-Series AI CCTV cameras in minutes. Get clean alerts, reliable night vision and easy multi-site control for safer operations across industries.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set in Helmet)
+  Internal Links: /contact, /edgeaicamera
+
+
+================================================================================
+PAGE 16: R-SERIES
+================================================================================
+  Route:          /r-series
+  Component:      RSeries
+  File:           src/components/RSeries.jsx
+  SEO Source:     Helmet (conditional on product data)
+--------------------------------------------------------------------------------
+  Title:          R Series | Tailored Security with Endless Customization
+  Description:    The R Series offers endless customization options to match your style and needs. Personalize your security solution for ultimate flexibility and performance.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: alt={product.title}
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 17: H-SERIES
+================================================================================
+  Route:          /h-series
+  Component:      RSeries
+  File:           src/components/RSeries.jsx
+  SEO Source:     Helmet (conditional on product data)
+--------------------------------------------------------------------------------
+  Title:          Dynamic (from product.metaTitle or product.title)
+  Description:    Dynamic (from product.metaDescription or product.description)
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 18: THERMAL CAMERA CATEGORY
+================================================================================
+  Route:          /thermal-camera
+  Component:      ThermalCamera
+  File:           src/components/ThermalCamera.jsx
+--------------------------------------------------------------------------------
+  Title:          Thermal Camera Solutions - AI-Powered Fever Detection
+  Description:    Thermal cameras with AI analytics detect fever and elevated body temperatures in real-time, ensuring safety in airports, offices, and healthcare facilities.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set in Helmet)
+  Internal Links: /adiance-thermal-camera-f, /adiance-thermal-camera-n,
+                  /adiance-thermal-camera-l, /contact
+
+
+================================================================================
+PAGE 19: ANPR CAMERA CATEGORY
+================================================================================
+  Route:          /anpr-camera
+  Component:      ANPRCamera
+  File:           src/components/ANPRCamera.jsx
+--------------------------------------------------------------------------------
+  Title:          ANPR Camera for Traffic Monitoring & Crime Prevention
+  Description:    Adiance Technologies ANPR Cameras use AI-powered plate recognition for real-time traffic monitoring & law enforcement. Enhance security & road safety today.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set in Helmet)
+  Internal Links: /4k-bullet-anpr-ptz-camera, /contact
+
+
+================================================================================
+PAGE 20: 4K CAMERA CATEGORY
+================================================================================
+  Route:          /4kcamera
+  Component:      _4KCamera
+  File:           src/components/_4KCamera.jsx
+--------------------------------------------------------------------------------
+  Title:          Adiance 4K UHD AI Camera | Advanced Security & ANPR
+  Description:    Adiance 4K UHD Camera with AI, deep learning, ANPR, & real-time alerts. High accuracy surveillance with proactive threat detection & efficient video retrieval.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set in Helmet)
+  Internal Links: /4k-face-recognition-camera, /4k-bullet-anpr-ptz-camera, /contact
+
+
+================================================================================
+PAGE 21: EDGE AI CAMERA CATEGORY / PRODUCT PORTFOLIO
+================================================================================
+  Route:          /edgeaicamera, /product-portfolio
+  Component:      EdgeAICamera
+  File:           src/components/EdgeAICamera.jsx
+  SEO Source:     Helmet + seoConfig.products (src/hooks/seoConfig.js)
+--------------------------------------------------------------------------------
+  Title:          CCTV Camera Products | AI-Powered Surveillance Cameras | Adiance
+  Description:    Explore Adiance CCTV camera range: edge AI cameras, PTZ cameras, bullet cameras, dome cameras, and NVRs. All NDAA-compliant with Qualcomm and Novatek chipsets.
+  Keywords:       edge AI camera, CCTV camera products, PTZ camera, bullet camera, dome camera, NVR
+  Canonical URL:  https://www.adiance.com/edgeaicamera
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set in Helmet)
+  Internal Links: /edge-ai-based-object-n-face-detection-cameras, /contact,
+                  /s-series-ai-cctv-cameras
+
+
+================================================================================
+PAGE 22: 4G CAMERA CATEGORY
+================================================================================
+  Route:          /4gcamera
+  Component:      _4GCamera
+  File:           src/components/_4GCamera.jsx
+--------------------------------------------------------------------------------
+  Title:          4G FHD Security Camera | Remote Surveillance Solution
+  Description:    4G FHD Security Camera with seamless connectivity, HD clarity, real-time alerts & easy setup. Ideal for remote locations, parking lots & outdoor security
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set in Helmet)
+  Internal Links: /4g-dome-ptz-camera, /4g-mini-bullet-camera, /contact
+
+
+================================================================================
+PAGE 23: PUBLIC SAFETY
+================================================================================
+  Route:          /public-safety
+  Component:      PublicSafety
+  File:           src/components/PublicSafety.jsx
+--------------------------------------------------------------------------------
+  Title:          Public Safety & Security | AI-Powered CCTV Surveillance
+  Description:    Enhance security with AI-driven CCTV solutions. HD imaging, wide-angle coverage, low-light performance & smart analytics for real-time monitoring & safety.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  Images:         /images/ps1.webp, /images/ps2.webp, /images/ps3.webp, /images/ps4.webp
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /contact, /edgeaicamera
+
+
+================================================================================
+PAGE 24: TRAFFIC MANAGEMENT
+================================================================================
+  Route:          /traffic-management
+  Component:      Trafic
+  File:           src/components/Trafic.jsx
+--------------------------------------------------------------------------------
+  Title:          Traffic Management & Monitoring Solutions
+  Description:    Adiance Technologies advanced traffic management, vehicle surveillance, and school bus monitoring solutions to enhance safety and improve urban mobility.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  Images:         /images/trafic1.webp, /images/trafic2.webp, /images/trafic3.webp, /images/trafic4.webp
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /contact, /anpr-camera
+
+
+================================================================================
+PAGE 25: CROWD CONTROL
+================================================================================
+  Route:          /crowd-control
+  Component:      CrowdControl
+  File:           src/components/CrowdControl.jsx
+--------------------------------------------------------------------------------
+  Title:          Smart Crowd Counting & Management – Adiance Technologies
+  Description:    Enhance crowd safety with Adiance CCTV solutions. Get real-time crowd counting, behavior analysis & facial recognition for efficient crowd management
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  Images:         /images/cc1.webp, /images/cc2.webp
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 26: SMART CITIES
+================================================================================
+  Route:          /smart-cities
+  Component:      SmartCities
+  File:           src/components/SmartCities.jsx
+  SEO Source:     seoConfig.smartCities (src/hooks/seoConfig.js)
+--------------------------------------------------------------------------------
+  Title:          Smart City Surveillance Solutions | AI-Powered CCTV | Adiance
+  Description:    Adiance smart city surveillance solutions: AI-powered CCTV cameras, video analytics, traffic monitoring for municipal governments.
+  Keywords:       smart city surveillance, city CCTV camera, municipal security
+  Canonical URL:  https://www.adiance.com/smart-cities
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  ⚠️ NOTE:        Uses useSEO hook but NO Helmet tag rendered in component!
+  Image Alt Text: "Image" (generic on all images)
+  Images:         /images/sc1.webp, /images/sc2.webp, /images/sc3.webp
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 27: REMOTE SECURITY
+================================================================================
+  Route:          /remote-security
+  Component:      Remote
+  File:           src/components/Remote.jsx
+--------------------------------------------------------------------------------
+  Title:          Remote Security Surveillance - Adiance Technologies
+  Description:    Remote security surveillance for remote sites, temporary installations, and rural areas. Rugged cameras, solar power, and cloud monitoring ensure safety.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  Images:         /images/rss1.webp, /images/rss2.webp, /images/rss3.webp
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /contact, /4gcamera
+
+
+================================================================================
+PAGE 28: HIGH TRAFFIC INFRASTRUCTURE
+================================================================================
+  Route:          /high-traffic
+  Component:      HighTraffic
+  File:           src/components/HighTraffic.jsx
+--------------------------------------------------------------------------------
+  Title:          CCTV Solutions for High-Traffic Infrastructure Security
+  Description:    Secure dockyards, bus stops, railways, and airports with advanced CCTV, real-time monitoring, and thermal imaging for enhanced safety and threat detection.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  Images:         /images/hti1.webp, /images/hti2.webp, /images/hti3.webp, /images/hti4.webp
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 29: EDUCATION
+================================================================================
+  Route:          /education
+  Component:      Education
+  File:           src/components/Education.jsx
+--------------------------------------------------------------------------------
+  Title:          Campus Security & Monitoring - Adiance Technologies
+  Description:    Campus security with real-time monitoring, prevent bullying & misconduct, and improve parental engagement with Adiance Technologies smart solutions
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 30: HEALTHCARE
+================================================================================
+  Route:          /healthcare
+  Component:      Hospital
+  File:           src/components/Hospital.jsx
+--------------------------------------------------------------------------------
+  Title:          Healthcare CCTV-Patient Safety & Security Surveillance
+  Description:    Enhance healthcare security with high-resolution CCTV systems. Monitor patient safety, control access, protect assets, enable emergency response. PTZ cameras.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 31: PUBLIC TRANSPORT
+================================================================================
+  Route:          /public-transport
+  Component:      PublicTransport
+  File:           src/components/PublicTransport.jsx
+--------------------------------------------------------------------------------
+  Title:          CCTV Solutions for Public Transport Safety & Efficiency
+  Description:    Adiance Technologies provides advanced CCTV solutions for public transport, ensuring passenger safety and real-time monitoring with HD cameras and AI analytics
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  H1:             (Not set — uses Typography body1 variant)
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 32: RETAIL
+================================================================================
+  Route:          /retail
+  Component:      Retail
+  File:           src/components/Retail.jsx
+--------------------------------------------------------------------------------
+  Title:          Smart Retail CCTV — Protect, Monitor & Analyze.
+  Description:    Enhance retail security with Adiance's CCTV systems. Prevent theft, manage queues, gain customer insights, and monitor stores remotely with advanced analytics.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 33: SMART & SAFE CITY
+================================================================================
+  Route:          /smart-safe-city
+  Component:      SmartCity
+  File:           src/components/SmartCity.jsx
+--------------------------------------------------------------------------------
+  Title:          Smart & Safe City Solutions - Crime & Traffic Management
+  Description:    Adiance Technologies offers smart city solutions with high-res cameras and ANPR for crime prevention, traffic monitoring, and real-time congestion management.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /contact, /anpr-camera
+
+
+================================================================================
+PAGE 34: BANKING & FINANCE
+================================================================================
+  Route:          /bank-finance
+  Component:      BankFinance
+  File:           src/components/BankFinance.jsx
+--------------------------------------------------------------------------------
+  Title:          Bank & Finance Security | CCTV & Fraud Prevention
+  Description:    Adiance CCTV solutions enhance bank security with facial recognition, ATM surveillance & fraud prevention. Ensure customer safety with intelligent monitoring.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 35: DOWNLOADS
+================================================================================
+  Route:          /downloads
+  Component:      Downloads
+  File:           src/components/Downloads.jsx
+--------------------------------------------------------------------------------
+  Title:          Download Center – Software & Datasheets for Security
+  Description:    Access the latest software and datasheets for security solutions. Download firmware, manuals, and technical documents for seamless integration and support.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set)
+  Internal Links: /datasheet, /firmware, /tools
+
+
+================================================================================
+PAGE 36: DATASHEET
+================================================================================
+  Route:          /datasheet
+  Component:      Datasheet
+  File:           src/components/Datasheet.jsx
+--------------------------------------------------------------------------------
+  Title:          Download Datasheets for Security & Surveillance Product
+  Description:    Access and download datasheets for security and surveillance products. Get detailed specifications and features for informed decision-making.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set)
+  Internal Links: /downloads
+
+
+================================================================================
+PAGE 37: FIRMWARE
+================================================================================
+  Route:          /firmware
+  Component:      Firmware
+  File:           src/components/Firmware.jsx
+--------------------------------------------------------------------------------
+  ⚠️ NO HELMET/SEO TAGS AT ALL
+  Title:          NOT SET
+  Description:    NOT SET
+  Keywords:       NOT SET
+  Canonical URL:  NOT SET
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             "Firmware" (plain h1 HTML element)
+  ARIA Labels:    "Search firmware by model, camera or version", "Clear search",
+                  "Open release notes for {camera_name}", "Download firmware for {camera_name}"
+  Internal Links: /downloads
+
+
+================================================================================
+PAGE 38: TOOLS
+================================================================================
+  Route:          /tools
+  Component:      Tools
+  File:           src/components/Tools.jsx
+--------------------------------------------------------------------------------
+  ⚠️ NO HELMET/SEO TAGS AT ALL
+  Title:          NOT SET
+  Description:    NOT SET
+  Keywords:       NOT SET
+  Canonical URL:  NOT SET
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             "Tools" (plain h1 HTML element)
+  ARIA Labels:    "Search tools by app, model or version", "Clear search",
+                  "Open release notes for {app_name}", "Download application for {app_name}"
+  Internal Links: /downloads
+
+
+================================================================================
+PAGE 39: TERMS OF SERVICE
+================================================================================
+  Route:          /terms-of-service
+  Component:      TermsOfService
+  File:           src/components/TermsOfService.jsx
+--------------------------------------------------------------------------------
+  Title:          Terms of Service - Adiance Technologies
+  Description:    Review Adiance Technologies' Terms of Service to understand our policies, responsibilities, and guidelines for using our products and services.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set)
+  Internal Links: /privacy-policy, /warranty-policy
+
+
+================================================================================
+PAGE 40: PRIVACY POLICY
+================================================================================
+  Route:          /privacy-policy
+  Component:      PrivacyPolicy
+  File:           src/components/PrivacyPolicy.jsx
+--------------------------------------------------------------------------------
+  Title:          Privacy & Cookie Policy - Adiance Technologies
+  Description:    Explore cookies, tracking options, and third-party services in Adiance Technologies' Privacy & Cookie Policy. Manage preferences and safeguard your data.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set)
+  Internal Links: /terms-of-service
+
+
+================================================================================
+PAGE 41: WARRANTY SERVICE
+================================================================================
+  Route:          /warranty-service
+  Component:      WarrantyService
+  File:           src/components/WarrantyService.jsx
+--------------------------------------------------------------------------------
+  Title:          Store Terms & Conditions - Purchase Agreement
+  Description:    Adiance Technologies Terms & Conditions for products and services—know your rights, warranties, and legal obligations before making a purchase.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set)
+  Internal Links: /warranty-policy, /contact
+
+
+================================================================================
+PAGE 42: WARRANTY POLICY
+================================================================================
+  Route:          /warranty-policy
+  Component:      WarrantyPolicy
+  File:           src/components/WarrantyPolicy.jsx
+--------------------------------------------------------------------------------
+  Title:          Warranty Policy - Adiance Technologies
+  Description:    Explore Adiance's warranty services for reliable support and protection of your surveillance systems. Ensure security and peace of mind with our coverage.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set)
+  Internal Links: /warranty-service, /contact
+
+
+================================================================================
+PAGE 43: BLOG LISTING
+================================================================================
+  Route:          /blog
+  Component:      Blogs
+  File:           src/components/Blogs.jsx
+  SEO Source:     Helmet + seoConfig.blog (src/hooks/seoConfig.js)
+--------------------------------------------------------------------------------
+  Title:          Security Camera Blog | Industry Insights & Guides | Adiance
+  Description:    Expert articles on CCTV cameras, NDAA compliance, AI surveillance, OEM manufacturing from Adiance Technologies.
+  Keywords:       CCTV camera blog, surveillance industry insights, NDAA compliance guide
+  Canonical URL:  https://www.adiance.com/blog
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: Dynamic — alt={blog.content?.imageText || blog.content?.title}
+  H1:             "Security Camera Blog | Industry Insights & Guides" (plain h1)
+  Internal Links: /blog/{urlTitle} (dynamic blog article links)
+
+
+================================================================================
+PAGE 44: BLOG ARTICLE (DYNAMIC)
+================================================================================
+  Route:          /blog/:urlTitle
+  Component:      Blog1
+  File:           src/components/Blog1.jsx
+  SEO Source:     Helmet (dynamic from blog API data)
+--------------------------------------------------------------------------------
+  Title:          Dynamic — blog.content?.metaTitle || blog.metadata?.metaTitle
+  Description:    Dynamic — blog.content?.metaDescription || blog.metadata?.metaDescription
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Title:       Dynamic (from blog data)
+  OG Description: Dynamic (from blog data)
+  OG URL:         Dynamic (currentUrl)
+  OG Type:        blog
+  OG Site Name:   Adiance Technology
+  OG Image:       Dynamic (blog.content?.mainImage)
+  OG Locale:      en_US
+  Twitter Card:   summary_large_image
+  Twitter Site:   Dynamic (from blog data)
+  Twitter Title:  Dynamic (from blog data)
+  Twitter Desc:   Dynamic (from blog data)
+  Twitter Image:  Dynamic (from blog data)
+  JSON-LD:        ArticleSchema + dynamic schemas from blog.content?.schemas
+  Image Alt Text: Dynamic — alt={blog.content?.title}
+  H1:             Dynamic — {blog.content?.title} (Typography h1 variant)
+  Internal Links: /blog (back to listing)
+
+
+================================================================================
+PAGE 45: PARTNERS
+================================================================================
+  Route:          /partners
+  Component:      PartnersPage
+  File:           src/components/PartnersPage.jsx
+--------------------------------------------------------------------------------
+  Title:          Partner With Us - Adiance Technologies
+  Description:    Partner with Adiance Technologies for cutting-edge surveillance solutions. Expertise in PCB manufacturing, AI,and smart tech for customized, security systems.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not explicitly set)
+  Internal Links: /contact, /oem-manufacturing
+
+
+================================================================================
+PAGE 46: ROBOTICS
+================================================================================
+  Route:          /robotics
+  Component:      Robotics
+  File:           src/components/Robotics.jsx
+--------------------------------------------------------------------------------
+  Title:          Robotics in Surveillance - Adiance Technologies
+  Description:    Integrates robotics into surveillance with autonomous drones, AI, and real-time monitoring. Enhance security with Adiance Technologies' robotic solutions.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not set — uses Typography h4 variant)
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 47: COMPLIANCE
+================================================================================
+  Route:          /compliance
+  Component:      Compliance
+  File:           src/components/Compliance.jsx
+--------------------------------------------------------------------------------
+  Title:          Compliance & Ethical Standards - Adiance Technologies
+  Description:    Adiance Technologies upholds integrity with anti-corruption, data protection, and human rights, ensuring ethical and secure business practices.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Image Alt Text: "Image" (generic on all images)
+  H1:             (Not set — uses Typography h5 variant)
+  Internal Links: /ndaa-compliance, /contact
+
+
+================================================================================
+PAGE 48: NDAA COMPLIANCE
+================================================================================
+  Route:          /ndaa-compliance
+  Component:      NdaaCompliance
+  File:           src/components/NdaaCompliance.jsx
+--------------------------------------------------------------------------------
+  Title:          NDAA Compliant Security Cameras | Section 889 Approved | Adiance
+  Description:    Adiance manufactures NDAA Section 889 compliant security cameras. Government-approved alternative to Hikvision & Dahua with Edge AI, 4G LTE, and Cloud VMS. Trusted by US federal agencies.
+  Keywords:       NDAA compliant cameras, NDAA Section 889, government approved security cameras, Hikvision alternative, Dahua alternative, compliant CCTV manufacturer, federal security cameras
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Title:       NDAA Compliant Security Cameras | Adiance Technologies
+  OG Description: Government-approved NDAA Section 889 compliant cameras. A trusted alternative to banned manufacturers with advanced AI surveillance technology.
+  OG URL:         Dynamic (https://www.adiance.com{pathname})
+  OG Type:        website
+  OG Image:       NOT SET
+  JSON-LD:        FAQPage Schema, Organization Schema
+  H1:             "NDAA Section 889 Compliant Security Cameras"
+  Internal Links: /contact, /compliance, /edgeaicamera, /4g-dome-ptz-camera,
+                  /4g-mini-bullet-camera, /s-series-ai-cctv-cameras, /solar-cctv-camera,
+                  /anpr-camera, /cloudxvr, /4k-ai-camera
+
+
+================================================================================
+PAGE 49: OEM MANUFACTURING
+================================================================================
+  Route:          /oem-manufacturing
+  Component:      OemManufacturing
+  File:           src/components/OemManufacturing.jsx
+--------------------------------------------------------------------------------
+  Title:          OEM/ODM CCTV Camera Manufacturer | White Label Security Cameras | Adiance
+  Description:    Adiance offers OEM and ODM CCTV camera manufacturing with custom firmware, white-label branding, and NDAA compliance. Partner with a trusted IP camera manufacturer for your security product line.
+  Keywords:       OEM CCTV manufacturer, ODM security camera, white label CCTV, private label camera manufacturer, custom security camera, IP camera OEM, CCTV camera supplier
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Title:       OEM/ODM CCTV Camera Manufacturing | Adiance Technologies
+  OG Description: Custom CCTV camera manufacturing with OEM/ODM services. White-label, NDAA-compliant security cameras for integrators and distributors worldwide.
+  OG URL:         Dynamic (https://www.adiance.com{pathname})
+  OG Type:        NOT SET (missing)
+  OG Image:       NOT SET
+  JSON-LD:        FAQPage Schema
+  H1:             "OEM & ODM Camera Manufacturing"
+  Internal Links: /contact, /ndaa-compliance, /manufacturing
+
+
+================================================================================
+PAGE 50: CYBER SECURITY
+================================================================================
+  Route:          /cyber-security
+  Component:      CyberSecurity
+  File:           src/components/CyberSecurity.jsx
+--------------------------------------------------------------------------------
+  Title:          Advanced Cybersecurity Solutions for Data Protection
+  Description:    Ensure data security with cutting-edge cybersecurity solutions. Protect sensitive information, mitigate risks, and stay compliant with evolving cyber threats
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not set — uses Typography variants)
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 51: MANUFACTURING
+================================================================================
+  Route:          /manufacturing
+  Component:      Manufacturing
+  File:           src/components/Manufacturing.jsx
+--------------------------------------------------------------------------------
+  Title:          End-to-End PCB Manufacturing & Quality Inspection
+  Description:    Adiance Technologies ensures precision in PCB manufacturing, integration, and quality inspection from material selection to packaging for reliable CCTV systems.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not set — uses Typography variants)
+  Internal Links: /contact, /oem-manufacturing
+
+
+================================================================================
+PAGE 52: PRODUCT ENGINEERING
+================================================================================
+  Route:          /product-engineering
+  Component:      ProdEngineering
+  File:           src/components/ProdEngineering.jsx
+--------------------------------------------------------------------------------
+  Title:          Product Engineering Solutions - Adiance Technologies
+  Description:    Adiance Technologies specializes in advanced product engineering, delivering innovative hardware and software solutions for cutting-edge surveillance.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not set — uses Typography variants)
+  Internal Links: /contact
+
+
+================================================================================
+PAGE 53: CLOUD APPLICATION
+================================================================================
+  Route:          /cloud-application
+  Component:      CloudApplication
+  File:           src/components/CloudApplication.jsx
+--------------------------------------------------------------------------------
+  Title:          Cutting-Edge Cloud Services for Modern Enterprises
+  Description:    Adiance Technologies is customizable and efficient cloud solutions with patented technology, empowering enterprises with advanced, reliable cloud services.
+  Keywords:       NOT SET
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  H1:             (Not set — uses Typography variants)
+  Internal Links: /contact, /cloudxvr
+
+
+================================================================================
+PAGE 54: OEM CCTV INDIA
+================================================================================
+  Route:          /oem-cctv-india
+  Component:      OemCctvIndia
+  File:           src/components/OemCctvIndia.jsx
+  SEO Source:     useSEO hook + seoConfig.oem (src/hooks/seoConfig.js)
+--------------------------------------------------------------------------------
+  Title:          OEM & White Label CCTV Camera Manufacturing | Adiance
+  Description:    Partner with Adiance for OEM and white-label CCTV camera manufacturing. Custom branding, firmware customization, NDAA compliance, and global shipping.
+  Keywords:       OEM CCTV camera manufacturer, white label camera, private label surveillance
+  Canonical URL:  https://www.adiance.com/oem-cctv-camera-manufacturer-india
+  OG Tags:        NOT SET
+  JSON-LD:        FAQPage Schema
+  H1:             "Your Trusted OEM CCTV Camera Manufacturer in India"
+  H2:             "The Adiance Advantage: A True End-to-End Manufacturing Partner"
+  Internal Links: /contact, /oem-manufacturing
+
+
+================================================================================
+PAGE 55: WIFI PTZ CAMERA
+================================================================================
+  Route:          /wifi-ptz-camera
+  Component:      WifiCameraPdf
+  File:           src/components/WifiCameraPdf.jsx
+--------------------------------------------------------------------------------
+  ⚠️ NO HELMET/SEO TAGS AT ALL
+  Title:          NOT SET
+  Description:    NOT SET
+  Keywords:       NOT SET
+  Canonical URL:  NOT SET
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Content:        Only an iframe displaying a PDF file
+  H1:             NOT SET
+  Internal Links: NONE
+
+
+================================================================================
+PAGE 56: US MARKET LANDING
+================================================================================
+  Route:          /us
+  Component:      UsLanding
+  File:           src/components/UsLanding.jsx
+--------------------------------------------------------------------------------
+  Title:          NDAA Compliant Security Cameras for the United States | Adiance
+  Description:    Adiance provides NDAA Section 889 compliant security cameras for US government agencies, schools, hospitals, and enterprises. A trusted Hikvision and Dahua alternative with Edge AI and 4G LTE.
+  Keywords:       NDAA compliant cameras USA, security cameras for US government, Hikvision alternative United States, government approved CCTV, federal security camera supplier
+  Canonical URL:  Dynamic (https://www.adiance.com{pathname})
+  OG Title:       NDAA Compliant Security Cameras for the United States | Adiance
+  OG Description: Government-approved NDAA Section 889 compliant cameras for US federal agencies, education, healthcare, and enterprise.
+  OG URL:         Dynamic (https://www.adiance.com{pathname})
+  OG Type:        NOT SET (missing)
+  OG Image:       NOT SET
+  JSON-LD:        NONE
+  H1:             "NDAA-Compliant Security Cameras for the United States"
+  Internal Links: /contact, /ndaa-compliance, /oem-manufacturing, /edgeaicamera,
+                  /4g-dome-ptz-camera, /s-series-ai-cctv-cameras, /anpr-camera,
+                  /solar-cctv-camera, /cloudxvr
+
+
+================================================================================
+PAGE 57: EUROPE LANDING
+================================================================================
+  Route:          /cctv-manufacturer-europe
+  Component:      EuropeLanding
+  File:           src/components/EuropeLanding.jsx
+  SEO Source:     useSEO hook + seoConfig.europe (src/hooks/seoConfig.js)
+--------------------------------------------------------------------------------
+  Title:          CCTV Camera Manufacturer for Europe | GDPR Ready | Adiance
+  Description:    Adiance provides GDPR-ready, NDAA-compliant CCTV cameras for the European market. Non-Chinese manufactured surveillance solutions.
+  Keywords:       CCTV camera Europe, GDPR compliant camera, surveillance camera EU
+  Canonical URL:  https://www.adiance.com/cctv-manufacturer-europe
+  OG Tags:        NOT SET
+  JSON-LD:        WebPage Schema, FAQPage Schema
+  H1:             (Present in content)
+  Internal Links: /contact, /ndaa-compliance, /oem-manufacturing, /edgeaicamera,
+                  /s-series-ai-cctv-cameras, /anpr-camera, /cloudxvr
+
+
+================================================================================
+PAGE 58: MIDDLE EAST LANDING
+================================================================================
+  Route:          /oem-camera-manufacturer-middle-east
+  Component:      MiddleEastLanding
+  File:           src/components/MiddleEastLanding.jsx
+  SEO Source:     useSEO hook + seoConfig.middleEast (src/hooks/seoConfig.js)
+--------------------------------------------------------------------------------
+  Title:          CCTV Camera Supplier for Middle East | NDAA Compliant | Adiance
+  Description:    Adiance supplies NDAA-compliant CCTV cameras to the Middle East market including UAE, Saudi Arabia, Qatar, and the broader GCC region.
+  Keywords:       CCTV camera Middle East, surveillance camera UAE, Saudi Arabia CCTV
+  Canonical URL:  https://www.adiance.com/oem-camera-manufacturer-middle-east
+  OG Tags:        NOT SET
+  JSON-LD:        WebPage Schema, FAQPage Schema
+  H1:             (Present in content)
+  Internal Links: /contact, /ndaa-compliance, /oem-manufacturing, /edgeaicamera,
+                  /s-series-ai-cctv-cameras, /anpr-camera, /cloudxvr
+
+
+================================================================================
+PAGE 59: ADMIN LOGIN
+================================================================================
+  Route:          /admin
+  Component:      LoginDash
+  File:           src/AdianceAdmin/pages/LoginDash.js
+--------------------------------------------------------------------------------
+  Title:          NOT SET (admin page — no SEO needed)
+  Description:    NOT SET
+  Keywords:       NOT SET
+  Canonical URL:  NOT SET
+  OG Tags:        NOT SET
+  JSON-LD:        NONE
+  Internal Links: /admin/reset, /admin/verify, /admin/dashboard
+
+
+================================================================================
+PAGE 60: ADMIN PASSWORD RESET
+================================================================================
+  Route:          /admin/reset
+  Component:      Reset
+  File:           src/AdianceAdmin/pages/ForgotPassword/Reset.js
+--------------------------------------------------------------------------------
+  Title:          NOT SET (admin page — no SEO needed)
+  Description:    NOT SET
+  Internal Links: /admin
+
+
+================================================================================
+PAGE 61: ADMIN OTP VERIFICATION
+================================================================================
+  Route:          /admin/verify
+  Component:      OtpVerification
+  File:           src/AdianceAdmin/pages/OTP/OtpVerification.js
+--------------------------------------------------------------------------------
+  Title:          NOT SET (admin page — no SEO needed)
+  Description:    NOT SET
+  Internal Links: /admin/dashboard
+
+
+================================================================================
+PAGE 62: ADMIN DASHBOARD
+================================================================================
+  Route:          /admin/dashboard
+  Component:      Dashboard
+  File:           src/AdianceAdmin/pages/Dashboard/Dashboard.js
+--------------------------------------------------------------------------------
+  Title:          NOT SET (admin page — no SEO needed)
+  Description:    NOT SET
+  Internal Links: /admin (logout)
+
+
+================================================================================
+PAGE 63: 404 NOT FOUND
+================================================================================
+  Route:          * (catch-all)
+  Component:      NotFound
+  File:           src/components/NotFound.jsx
+--------------------------------------------------------------------------------
+  ⚠️ NO HELMET/SEO TAGS
+  Title:          NOT SET
+  Description:    NOT SET
+  H1:             "Oops! Page Not Found" (Typography h3 variant)
+  Internal Links: / (Home)
+
+
+================================================================================
+                    SHARED SEO CONFIG (src/hooks/seoConfig.js)
+================================================================================
+  Used by: Home, AboutUs, Innovation, ContactUs, Blogs, SmartCities,
+           EdgeAICamera, ProductShow, OemCctvIndia, EuropeLanding,
+           MiddleEastLanding
+
+  Config Key    | Title                                                          | Canonical URL
+  ------------- | -------------------------------------------------------------- | ------------------------------------------
+  home          | NDAA Compliant CCTV Camera Manufacturer | OEM & ODM | Adiance  | https://www.adiance.com/
+  about         | About Adiance | NDAA Compliant Camera Manufacturer Since 2003  | https://www.adiance.com/about
+  products      | CCTV Camera Products | AI-Powered Surveillance Cameras         | https://www.adiance.com/edgeaicamera
+  oem           | OEM & White Label CCTV Camera Manufacturing | Adiance          | https://www.adiance.com/oem-cctv-india
+  innovation    | AI & Innovation in Surveillance | Edge AI Technology | Adiance | https://www.adiance.com/innovation
+  contact       | Contact Adiance | Get a Quote for CCTV Cameras & OEM Services  | https://www.adiance.com/contact
+  blog          | Security Camera Blog | Industry Insights & Guides | Adiance    | https://www.adiance.com/blog
+  smartCities   | Smart City Surveillance Solutions | AI-Powered CCTV | Adiance  | https://www.adiance.com/smart-cities
+  middleEast    | CCTV Camera Supplier for Middle East | NDAA Compliant          | https://www.adiance.com/oem-camera-manufacturer-middle-east
+  europe        | CCTV Camera Manufacturer for Europe | GDPR Ready | Adiance     | https://www.adiance.com/cctv-manufacturer-europe
+  oemPartner    | OEM/ODM Partner Program | White-Label CCTV Manufacturing       | https://www.adiance.com/oem-partner
+
+
+================================================================================
+                         URL REDIRECTS (from App.js)
+================================================================================
+  /anrpcamera               →  /anpr-camera
+  /s-series                 →  /5g-edge-ai-camera-s-series-surveillance
+  Uppercase paths           →  Lowercase equivalent
+  Trailing slash URLs       →  Without trailing slash
