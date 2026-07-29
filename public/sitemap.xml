@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://www.adiance.com/</loc>
         <lastmod>2026-04-17T06:21:01.228Z</lastmod>
@@ -111,12 +115,6 @@
     <url>
         <loc>https://www.adiance.com/4kcamera</loc>
         <lastmod>2026-04-18T09:27:08.400Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.adiance.com/edgeaicamera</loc>
-        <lastmod>2026-04-21T07:19:01.273Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -972,7 +970,6 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
-
     <url>
         <loc>https://www.adiance.com/blog/complete-guide-ndaa-compliant-surveillance-cameras</loc>
         <lastmod>2026-02-26T22:33:38.315Z</lastmod>
