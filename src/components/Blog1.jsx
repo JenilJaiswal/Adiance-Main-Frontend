@@ -61,9 +61,32 @@ const Blog1 = () => {
   }, [slug]);
 
   if (loading) return <div>Loading...</div>;
-  if (error)
-    return <div style={{ padding: "2rem", color: "red" }}>{error}</div>;
-  if (!blog) return null;
+  if (error || !blog) {
+    return (
+      <div>
+        <Header />
+        <div style={{ padding: '120px 20px', textAlign: 'center', minHeight: '60vh' }}>
+          <h1 style={{ fontSize: '3rem', marginBottom: '1rem', color: '#333' }}>404</h1>
+          <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: '#666' }}>Blog Post Not Found</h2>
+          <p style={{ fontSize: '1rem', color: '#666', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
+            The blog post you're looking for doesn't exist or has been removed.
+          </p>
+          <a href="/blog" style={{
+            display: 'inline-block',
+            padding: '12px 24px',
+            backgroundColor: '#bf0603',
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '6px',
+            fontSize: '1rem'
+          }}>
+            Back to Blog
+          </a>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   // Function to render bold words in the paragraph
   // Function to render bold words in the paragraph

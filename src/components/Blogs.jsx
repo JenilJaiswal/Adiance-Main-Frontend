@@ -9,6 +9,7 @@ import {
   InputAdornment,
   Box,
   Pagination,
+  PaginationItem,
   Stack,
   Typography,
 } from "@mui/material";
@@ -18,6 +19,7 @@ import Breadcrumb from "./Breadcrumb";
 import Footer from "./Footer/Footer";
 import { Helmet } from "react-helmet";
 import { getBlogs } from "../AdianceAdmin/api/blogs";
+import { useSearchParams } from "next/navigation";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -27,6 +29,7 @@ const Blogs = () => {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOrder, setSortOrder] = useState("latest");
+  const searchParams = useSearchParams();
 
   const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
   const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
@@ -80,6 +83,7 @@ const Blogs = () => {
     const date = new Date(dateString);
     return date.toDateString();
   };
+  const isSearchPage = searchParams.has("q");
 
   return (
     <div>
@@ -89,10 +93,10 @@ const Blogs = () => {
           name="description"
           content="Stay updated with the latest security trends, AI innovations, and expert insights on surveillance, cybersecurity, and smart protection solutions from Adiance Technologies."
         />
-        <link rel="canonical" href="https://www.adiance.com/blog" />
         <meta property="og:title" content="Insights & Trends | Explore Our Security Blog - Adiance" />
         <meta property="og:description" content="Stay updated with the latest security trends, AI innovations, and expert insights on surveillance, cybersecurity, and smart protection solutions." />
         <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://www.adiance.com/blog" />
         <meta property="og:url" content="https://www.adiance.com/blog" />
         <meta property="og:site_name" content="Adiance Technologies" />
         <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
@@ -100,6 +104,7 @@ const Blogs = () => {
         <meta name="twitter:site" content="@adiancetech" />
         <meta name="twitter:title" content="Insights & Trends | Explore Our Security Blog - Adiance" />
         <meta name="twitter:description" content="Stay updated with the latest security trends, AI innovations, and expert insights on surveillance." />
+        {isSearchPage && <meta name="robots" content="noindex, follow" />}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -221,6 +226,7 @@ const Blogs = () => {
             onChange={(_e, p) => setCurrentPage(p)}
             showFirstButton
             showLastButton
+            renderItem={(item) => <PaginationItem {...item} component="button" />}
           />
         </Box>
       )}
