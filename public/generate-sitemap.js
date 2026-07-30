@@ -29,7 +29,6 @@ function getLastModTime(url) {
       '/thermal-camera': 'src/components/ThermalCamera.jsx',
       '/anpr-camera': 'src/components/ANPRCamera.jsx',
       '/4kcamera': 'src/components/_4KCamera.jsx',
-      '/edgeaicamera': 'src/components/EdgeAICamera.jsx',
       '/4gcamera': 'src/components/_4GCamera.jsx',
       '/adiance-thermal-camera-f': 'src/components/ProductShow.jsx',
       '/adiance-thermal-camera-n': 'src/components/ProductShow.jsx',
@@ -140,7 +139,6 @@ const staticPages = [
   { url: "/thermal-camera", changefreq: "weekly", priority: 0.8 },
   { url: "/anpr-camera", changefreq: "weekly", priority: 0.8 },
   { url: "/4kcamera", changefreq: "weekly", priority: 0.8 },
-  { url: "/edgeaicamera", changefreq: "weekly", priority: 0.8 },
   { url: "/4gcamera", changefreq: "weekly", priority: 0.8 },
 
   // Individual product pages
@@ -271,6 +269,13 @@ const staticPages = [
   // === Other Key Pages ===
   { url: "/complete-surveillance-solutions", changefreq: "weekly", priority: 0.85 },
   { url: "/product-portfolio", changefreq: "weekly", priority: 0.85 },
+  // === Reconciled with production sitemap (added 2026-07-30) ===
+  { url: "/alternative-to-hikvision", changefreq: "weekly", priority: 0.9 },
+  { url: "/alternative-to-dahua", changefreq: "weekly", priority: 0.9 },
+  { url: "/compliance-documents", changefreq: "monthly", priority: 0.7 },
+  { url: "/sample-request", changefreq: "monthly", priority: 0.6 },
+  { url: "/tools/ndaa-compliance-checker", changefreq: "monthly", priority: 0.7 },
+  { url: "/tools/chinese-camera-restrictions-map", changefreq: "monthly", priority: 0.7 },
 ];
 
 // Function to fetch blog URLs from API
@@ -296,12 +301,10 @@ async function fetchBlogUrls() {
     };
 
     // Try multiple possible API endpoints
+    // Use ONLY the published endpoint so drafts/unpublished posts can never
+    // enter the sitemap. Do not fall back to getAllBlogs (no status filter).
     const possibleEndpoints = [
-      `${API_URL}/api/blogs/getAllBlogs?page=1&limit=1000`, // Correct endpoint
-      `${API_URL}/api/blogs?page=1&limit=1000&status=published`, // New vmukti endpoint
-      `${API_URL}/api/blogs?page=1&limit=1000`, // New endpoint without status filter
-      `${API_URL}/getAllBlogs?page=1&limit=1000`, // Legacy endpoint
-      `${API_URL}/blogs?page=1&limit=1000`, // Direct blogs endpoint
+      `${API_URL}/api/blogs?page=1&limit=1000&status=published`,
     ];
 
     let response;
@@ -350,8 +353,19 @@ async function fetchBlogUrls() {
         lastmod: blog.updatedAt || blog.createdAt || blog.date,
       }));
 
-      console.log(`Successfully fetched ${blogUrls.length} blog URLs`);
-      return blogUrls;
+      // De-duplicate by URL — the CMS can return the same slug more than once.
+      // Also drop any entry that failed to resolve a slug (/blog/undefined).
+      const seenUrls = new Set();
+      const uniqueBlogUrls = blogUrls.filter((b) => {
+        if (!b.url || b.url === "/blog/undefined" || seenUrls.has(b.url)) return false;
+        seenUrls.add(b.url);
+        return true;
+      });
+
+      console.log(
+        `Successfully fetched ${blogUrls.length} blog URLs (${uniqueBlogUrls.length} unique after de-duplication)`
+      );
+      return uniqueBlogUrls;
     }
 
     console.log("No blogs found or API response format unexpected");
@@ -382,6 +396,19 @@ async function createSitemap() {
     // Fetch blog URLs
     const blogUrls = await fetchBlogUrls();
     console.log(`Found ${blogUrls.length} blog URLs`);
+
+    // Safety guardrail: never write an incomplete sitemap.
+    // If the CMS fetch failed or returned an implausibly low number of
+    // published blogs, abort WITHOUT touching the existing sitemap files.
+    const MIN_EXPECTED_BLOGS = 100;
+    if (blogUrls.length < MIN_EXPECTED_BLOGS) {
+      console.error(
+        `ABORT: only ${blogUrls.length} blog URL(s) fetched (expected >= ${MIN_EXPECTED_BLOGS}). ` +
+        `Refusing to overwrite the sitemap with an incomplete blog set. ` +
+        `Check the CMS API before regenerating.`
+      );
+      process.exit(1);
+    }
 
     // Add lastmod to static pages
     const staticPagesWithLastmod = staticPages.map(page => ({
