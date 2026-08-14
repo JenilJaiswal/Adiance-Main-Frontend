@@ -18,7 +18,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 // import { BiSolidOffer } from "react-icons/bi";
 
 const ResponsiveNavbar = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(() => (typeof window !== "undefined" ? window.innerWidth : 1280));
   const [showProducts, setShowProducts] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
   const [showSupport, setShowSupport] = useState(false);

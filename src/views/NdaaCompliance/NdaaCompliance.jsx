@@ -79,15 +79,6 @@ const faqSchema = {
   })),
 };
 
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Adiance",
-  "url": "https://www.adiance.com",
-  "description": "Manufacturer of NDAA-compliant security cameras and video surveillance solutions",
-  "address": { "@type": "PostalAddress", "addressLocality": "Ahmedabad", "addressRegion": "Gujarat", "addressCountry": "IN" },
-};
-
 const renderCell = (val) => {
   if (val === true) return <span className="ndaa-check">&#10003; Yes</span>;
   if (val === false) return <span className="ndaa-cross">&#10007; Banned</span>;
@@ -122,7 +113,7 @@ const NdaaCompliance = () => {
         <meta charSet="UTF-8" />
 
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
+        {/* Organization is emitted globally by app/layout.js — not duplicated here. */}
       </Helmet>
 
       <Header />

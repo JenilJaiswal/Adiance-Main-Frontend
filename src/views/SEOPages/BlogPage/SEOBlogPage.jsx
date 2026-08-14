@@ -42,24 +42,6 @@ const SEOBlogPage = ({ type = 'blog' }) => {
 
   const canonicalUrl = `https://www.adiance.com${pathname}`;
 
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": type === 'case-study' ? "Article" : "BlogPosting",
-    "headline": page.seo.title,
-    "description": page.seo.description,
-    "url": canonicalUrl,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Adiance",
-      "url": "https://www.adiance.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.adiance.com/logo.svg"
-      }
-    },
-    "datePublished": page.hero.publishDate
-  };
-
   return (
     <div className="seo-blog-container">
       <Helmet>
@@ -73,8 +55,11 @@ const SEOBlogPage = ({ type = 'blog' }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={page.seo.title} />
         <meta name="twitter:description" content={page.seo.description} />
-        <link rel="canonical" href={canonicalUrl} />
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+        {/*
+          Canonical and BlogPosting JSON-LD are emitted server-side by
+          legacyBlogMetadata() / <LegacyBlogSchemas>. Repeating them here
+          defined the article twice and added a competing canonical.
+        */}
       </Helmet>
 
       <Header />

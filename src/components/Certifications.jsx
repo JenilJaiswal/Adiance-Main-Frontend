@@ -7,7 +7,7 @@ import { background } from "@chakra-ui/react";
 import { transform } from "framer-motion";
 
 const Certifications = () => {
-    const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
+    const [screenWidth, setScreenWidth] = React.useState(() => (typeof window !== "undefined" ? window.innerWidth : 1280));
 
     React.useEffect(() => {
         const handleResize = () => {

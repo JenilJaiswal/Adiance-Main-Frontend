@@ -1,7 +1,6 @@
 "use client";
 
 import { Helmet } from "react-helmet";
-import { useLocation } from "@/compat/react-router-dom";
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -9,8 +8,6 @@ import CTASection from "../../N_Component/CTASection";
 import "./IfsecIndia2025.css";
 
 const IfsecIndia2025 = () => {
-  const location = useLocation();
-  const canonicalUrl = `https://www.adiance.com${location.pathname}`;
 
   const imageGallery1 = [
     { id: 1, src: "/images/IFSEC_carousel_1.webp", alt: "IFSEC India 2025 - Booth Setup" },
@@ -52,44 +49,6 @@ const IfsecIndia2025 = () => {
           content="At IFSEC India 2025, Adiance Technologies showcased ArcisAI's AI CCTV ecosystem, Eco-Series cameras, NVRs, ABD device, and cloud-ready VMS innovations."
         />
         <meta name="twitter:image" content="https://www.adiance.com/images/ifsec-hero-image.webp" />
-        <link rel="canonical" href={canonicalUrl} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Adiance Technologies Unveils ArcisAI Innovation at IFSEC India 2025",
-            "description": "At IFSEC India 2025, Adiance Technologies showcased ArcisAI's AI CCTV ecosystem, Eco-Series cameras, NVRs, ABD device, and cloud-ready VMS innovations.",
-            "url": "https://www.adiance.com/event/ifsec-india-2025",
-            "datePublished": "2026-01-12",
-            "dateModified": "2026-01-12",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Adiance Technologies",
-              "url": "https://www.adiance.com/",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.adiance.com/images/Logo-241x47-1.webp",
-                "width": 205,
-                "height": 40,
-              },
-              "sameAs": [
-                "https://www.facebook.com/adiancetechnologies/",
-                "https://www.instagram.com/adiancetech/",
-                "https://www.linkedin.com/company/adiancetechnologies/",
-                "https://x.com/adiancetech",
-                "https://www.youtube.com/@AdianceTechnologies",
-              ],
-            },
-            "primaryImageOfPage": {
-              "@type": "ImageObject",
-              "url": "https://www.adiance.com/images/ifsec-hero-image.webp",
-              "width": 1512,
-              "height": 800,
-              "caption": "Adiance Technologies at IFSEC India 2025",
-            },
-            "inLanguage": "en-US",
-          })}
-        </script>
       </Helmet>
 
       <Header />

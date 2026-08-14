@@ -89,23 +89,13 @@ const Breadcrumb = ({ customTitle }) => {
     });
   }
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: crumbs.map((crumb, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: crumb.label,
-      item: `https://www.adiance.com${crumb.path === "/" ? "" : crumb.path}`,
-    })),
-  };
-
+  // No BreadcrumbList JSON-LD here. Every route rendering this component also
+  // renders <PageSchema>, which emits a server-side BreadcrumbList — emitting a
+  // second one client-side defined the same list twice on /about, /contact,
+  // /blog, /news and the blog/news detail pages. This stays a visual-only
+  // breadcrumb; the markup is the server's job.
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <nav aria-label="Breadcrumb" style={styles.nav}>
         <ol style={styles.ol}>
           {crumbs.map((crumb, index) => {

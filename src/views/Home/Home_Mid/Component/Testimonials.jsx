@@ -55,7 +55,12 @@ const StarRating = ({ rating }) => {
 
 const Testimonials = () => {
   const [index, setIndex] = useState(0);
-  const [width, setWidth] = useState(window.innerWidth);
+  // Lazy + guarded: reading window during render crashes server rendering.
+  // On the client this still resolves to the real width at hydration; the
+  // server falls back to a desktop-width default.
+  const [width, setWidth] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth : 1280,
+  );
 
   useEffect(() => {
     function handleResize() {

@@ -9,8 +9,10 @@ const legacyRedirects = {
   "/sustainability": "/about",
   "/index.html": "/",
   "/360-approach": "/about",
-  "/feedback": "/contact-us",
-  "/partner-with-us": "/partner",
+  // /contact-us and /partner are not routes — these 301s dead-ended on a 404
+  // and dropped the link equity instead of passing it on.
+  "/feedback": "/contact",
+  "/partner-with-us": "/partners",
   "/2022/02/17": "/blog",
   "/smart-anpr-lpr-cctv-camera": "/anpr-camera",
   "/best-5-emerging-trends-in-ai-based-cctv-surveillance-technology": "/blog",
@@ -52,10 +54,19 @@ const legacyRedirects = {
   "/europe": "/oem-camera-manufacturer-europe",
   "/oem": "/oem-services",
   "/Trafic-Management": "/traffic-management",
-  "/unlocking-innovation-in-camera-manufacturing/": "/innovation",
+  // No trailing slash: `trailingSlash: false` + the middleware strip normalise
+  // the path before redirects match, so the slashed key never fired and the URL
+  // 404'd instead of redirecting.
+  "/unlocking-innovation-in-camera-manufacturing": "/innovation",
   "/cctv-manufacturer-ahmedabad": "/about",
   "/how-is-ai-technology-making-video-surveillance-systems-smarter": "/blog",
   "/white-label-home-security-camera": "/white-label-cctv-camera-manufacturer",
+  // Still live and indexable in production (200) although no app/seo route
+  // exists in this repo, so it duplicates /white-label-cctv-camera-manufacturer
+  // on a money keyword. 301 rather than letting it 404 on the next deploy, so
+  // its accumulated ranking signals consolidate onto the canonical page.
+  "/seo/white-label-cctv-camera-manufacturer":
+    "/white-label-cctv-camera-manufacturer",
   "/japan-cctv-camera-manufacturer": "/cctv-camera-manufacturer-japan",
   "/h265-4g-dome-ptz-camera": "/4g-dome-ptz-camera",
   "/industries/smart-cities": "/smart-cities",

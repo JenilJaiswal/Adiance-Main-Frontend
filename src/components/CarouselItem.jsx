@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 export default function CarouselItem({ imgUrl, imgTitle }) {
   //   console.log(imgUrl);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(() => (typeof window !== "undefined" ? window.innerWidth : 1280));
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);

@@ -16,6 +16,31 @@ function clean(value) {
   return typeof value === "string" ? value.trim() : "";
 }
 
+/**
+ * Flatten the CMS rich-text shape — [{ type, children: [{ text }] }] — into
+ * plain text so it can be used in a meta description or FAQ answer.
+ */
+function richText(value) {
+  if (!value) return "";
+  if (typeof value === "string") return value.replace(/\s+/g, " ").trim();
+  const nodes = Array.isArray(value) ? value : [value];
+  return nodes
+    .map((node) =>
+      Array.isArray(node?.children)
+        ? node.children.map((child) => clean(child?.text)).join("")
+        : clean(node?.text),
+    )
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function summarise(text, max = 155) {
+  if (!text) return "";
+  if (text.length <= max) return text;
+  return `${text.slice(0, max).replace(/\s+\S*$/, "")}…`;
+}
+
 function ogImageFor(mainImage) {
   const raw = clean(mainImage);
   if (!raw) return `${SITE}/images/Logo.webp`;
@@ -41,29 +66,63 @@ async function fetchBlog(slug) {
   }
 }
 
+/** Post-specific description, never the /blog index copy. */
+function descriptionFor(blog) {
+  return (
+    clean(blog?.content?.metaDescription) ||
+    clean(blog?.metadata?.metaDescription) ||
+    summarise(richText(blog?.content?.brief)) ||
+    undefined
+  );
+}
+
 export async function generateMetadata({ params }) {
   const slug = params?.urlTitle || "";
   const blog = await fetchBlog(slug);
 
   const cmsTitle =
     clean(blog?.content?.metaTitle) || clean(blog?.metadata?.metaTitle);
-  const cmsDesc =
-    clean(blog?.content?.metaDescription) ||
-    clean(blog?.metadata?.metaDescription);
   const fallbackTitle = slug
     ? `${titleFromSlug(slug)} | Adiance Blog`
     : "Adiance Blog";
 
   const title = cmsTitle || clean(blog?.content?.title) || fallbackTitle;
-  const description = cmsDesc || undefined;
-  const ogImage = ogImageFor(blog?.content?.mainImage);
+  const tags = Array.isArray(blog?.content?.tags) ? blog.content.tags : [];
+  const published = blog?.createdAt || undefined;
+  const modified = blog?.updatedAt || blog?.createdAt || undefined;
 
-  return buildMetadata("/blog", {
+  // Build against the post's own path, not "/blog" — keying off the index
+  // route made every post inherit the blog index description and keywords.
+  return buildMetadata(`/blog/${slug}`, {
     title,
-    description,
+    description: descriptionFor(blog),
     canonical: `/blog/${slug}`,
-    ogImage,
+    ogImage: ogImageFor(blog?.content?.mainImage),
+    keywords: tags.length ? tags.join(", ") : undefined,
+    ogType: "article",
+    publishedTime: published,
+    modifiedTime: modified,
+    authors: [clean(blog?.content?.blogAuthor) || "Adiance Technologies"],
   });
+}
+
+/** FAQPage JSON-LD from the post's own FAQ block, when it has one. */
+function faqSchema(blog) {
+  const items = blog?.content?.faqs?.items;
+  if (!Array.isArray(items)) return null;
+  const mainEntity = items
+    .map((item) => ({
+      question: clean(item?.question),
+      answer: richText(item?.answer),
+    }))
+    .filter((entry) => entry.question && entry.answer)
+    .map((entry) => ({
+      "@type": "Question",
+      name: entry.question,
+      acceptedAnswer: { "@type": "Answer", text: entry.answer },
+    }));
+  if (!mainEntity.length) return null;
+  return { "@context": "https://schema.org", "@type": "FAQPage", mainEntity };
 }
 
 export default async function Page({ params }) {
@@ -74,21 +133,19 @@ export default async function Page({ params }) {
     clean(blog?.content?.metaTitle) ||
     clean(blog?.metadata?.metaTitle) ||
     clean(blog?.content?.title);
-  const cmsDesc =
-    clean(blog?.content?.metaDescription) ||
-    clean(blog?.metadata?.metaDescription);
   const headline = cmsTitle || titleFromSlug(slug);
   const url = `${SITE}/blog/${slug}`;
   const ogImage = ogImageFor(blog?.content?.mainImage);
   const author = clean(blog?.content?.blogAuthor) || "Adiance Technologies";
   const datePublished = blog?.createdAt || undefined;
   const dateModified = blog?.updatedAt || blog?.createdAt || undefined;
+  const tags = Array.isArray(blog?.content?.tags) ? blog.content.tags : [];
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline,
-    description: cmsDesc || undefined,
+    description: descriptionFor(blog),
     image: ogImage,
     url,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
@@ -101,12 +158,16 @@ export default async function Page({ params }) {
     },
     datePublished,
     dateModified,
+    ...(tags.length ? { keywords: tags.join(", ") } : {}),
     inLanguage: "en-US",
   };
+
+  const faq = faqSchema(blog);
 
   return (
     <>
       <JsonLd data={articleSchema} />
+      {faq ? <JsonLd data={faq} /> : null}
       <BreadcrumbJsonLd
         items={[
           { name: "Home", url: "/" },

@@ -43,9 +43,14 @@ export const metadata = {
   verification: {
     google: "ToZv5ontdwBZWArKbClqliVv4Zzduzs5-CbhZxgxaE4",
   },
+  // Third copy of the index gate — keep in sync with `allowIndex` in
+  // src/seo/pageMetadata.js and `isProd` in app/robots.js. Production builds
+  // index by default; staging/preview opt out with NEXT_PUBLIC_ALLOW_INDEX=false.
   robots:
     process.env.NEXT_PUBLIC_ALLOW_INDEX === "true" ||
-    process.env.VERCEL_ENV === "production"
+    process.env.VERCEL_ENV === "production" ||
+    (process.env.NODE_ENV === "production" &&
+      process.env.NEXT_PUBLIC_ALLOW_INDEX !== "false")
       ? {
           index: true,
           follow: true,
@@ -123,6 +128,7 @@ const organizationSchema = {
     "https://www.instagram.com/adiancetech/",
     "https://youtube.com/@adiancetechnologies",
     "https://www.wikidata.org/wiki/Q140191186",
+    "https://arcisai.io",
   ],
   knowsAbout: [
     "NDAA compliant cameras",

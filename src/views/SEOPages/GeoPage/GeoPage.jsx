@@ -2,7 +2,6 @@
 
 import React, { useEffect } from 'react';
 import { useLocation } from '@/compat/react-router-dom';
-import { Helmet } from 'react-helmet';
 import Header from '../../../components/Header/Header';
 import Footer from '../../../components/Footer/Footer';
 import Clients from '../../../N_Component/Clients';
@@ -44,38 +43,13 @@ const GeoPage = () => {
     qa: faqs.map(f => ({ question: f.question, answer: f.answer }))
   };
 
-  const canonicalUrl = `https://www.adiance.com/${slug}`;
-
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": country.seo.title,
-    "description": country.seo.description,
-    "url": canonicalUrl,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Adiance",
-      "url": "https://www.adiance.com"
-    }
-  };
-
+  // No client-side <Helmet> head tags here. Title/description/keywords, OG,
+  // Twitter and the canonical are emitted server-side by buildMetadata() from
+  // the same geoPageData.json entry, and WebPage/BreadcrumbList JSON-LD comes
+  // from <PageSchema>. A client-side self-canonical here would override the
+  // server canonical and undo the -v2 -> base consolidation.
   return (
     <div className="geo-page-container">
-      <Helmet>
-        <title>{country.seo.title}</title>
-        <meta name="description" content={country.seo.description} />
-        <meta name="keywords" content={country.seo.keywords} />
-        <meta property="og:title" content={country.seo.title} />
-        <meta property="og:description" content={country.seo.description} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={country.seo.title} />
-        <meta name="twitter:description" content={country.seo.description} />
-        <link rel="canonical" href={canonicalUrl} />
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
-      </Helmet>
-
       <Header />
 
       {/* Hero Section */}

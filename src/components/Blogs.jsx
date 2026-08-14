@@ -119,16 +119,7 @@ const Blogs = () => {
             }
           })}
         </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.adiance.com" },
-              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.adiance.com/blog" }
-            ]
-          })}
-        </script>
+        {/* BreadcrumbList comes from <PageSchema> on /blog — not duplicated here. */}
       </Helmet>
       <Header />
       <Breadcrumb />

@@ -47,15 +47,6 @@ const localBusinessSchema = {
   ]
 };
 
-const contactBreadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.adiance.com" },
-    { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://www.adiance.com/contact" }
-  ]
-};
-
 export default function ContactUs() {
   const location = useLocation();
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
@@ -83,7 +74,7 @@ export default function ContactUs() {
         <meta name="twitter:description" content="Have questions or need assistance? Contact Adiance Technologies for inquiries, support, or product details." />
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(contactBreadcrumbSchema)}</script>
+        {/* BreadcrumbList comes from <PageSchema> on /contact — not duplicated here. */}
       </Helmet>
       <Header />
       <Breadcrumb />

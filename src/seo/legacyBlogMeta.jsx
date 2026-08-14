@@ -9,6 +9,22 @@ function getEntry(slug) {
   return seoBlogData?.blog?.[slug] || null;
 }
 
+/**
+ * Legacy blog posts that duplicate a stronger landing page on the same topic.
+ * Both URLs stay reachable, but the canonical (and the schema `url`) point at
+ * the landing page so the pair stops competing for the same query.
+ */
+const CANONICAL_OVERRIDES = {
+  // Same article, same seo.title, published at both URLs. The landing page is
+  // the richer of the two (hero, features, stats, 5-question FAQ).
+  "qualcomm-soc-future-edge-ai-surveillance-cameras":
+    "/qualcomm-soc-future-edge-ai-surveillance-cameras",
+};
+
+function canonicalFor(slug) {
+  return CANONICAL_OVERRIDES[slug] || `/blog/${slug}`;
+}
+
 function toIsoDate(dateString) {
   if (!dateString) return undefined;
   const ts = Date.parse(dateString);
@@ -24,7 +40,7 @@ export function legacyBlogMetadata(slug) {
     title: seo.title || hero.title,
     description: seo.description || hero.subtitle,
     keywords: seo.keywords,
-    canonical: path,
+    canonical: canonicalFor(slug),
     ogImage: entry?.ogImage || DEFAULT_OG,
   });
 }
@@ -34,7 +50,8 @@ export function LegacyBlogSchemas({ slug }) {
   if (!entry) return null;
   const seo = entry.seo || {};
   const hero = entry.hero || {};
-  const url = `${SITE}/blog/${slug}`;
+  // Point the entity at the canonical URL so the schema agrees with <link rel="canonical">.
+  const url = `${SITE}${canonicalFor(slug)}`;
   const datePublished = toIsoDate(hero.publishDate);
 
   const schema = {

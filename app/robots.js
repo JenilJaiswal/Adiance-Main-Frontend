@@ -21,9 +21,14 @@ const AI_BOTS = [
 ];
 
 export default function robots() {
+  // Keep this gate in sync with `allowIndex` in src/seo/pageMetadata.js.
+  // Production builds are crawlable by default; staging/preview must opt out
+  // explicitly with NEXT_PUBLIC_ALLOW_INDEX=false.
   const isProd =
     process.env.VERCEL_ENV === "production" ||
-    process.env.NEXT_PUBLIC_ALLOW_INDEX === "true";
+    process.env.NEXT_PUBLIC_ALLOW_INDEX === "true" ||
+    (process.env.NODE_ENV === "production" &&
+      process.env.NEXT_PUBLIC_ALLOW_INDEX !== "false");
 
   if (!isProd) {
     return {
@@ -40,7 +45,10 @@ export default function robots() {
       },
       ...AI_BOTS.map((ua) => ({ userAgent: ua, allow: "/" })),
     ],
-    sitemap: [`${SITE}/sitemap.xml`, `${SITE}/image-sitemap.xml`],
+    // public/image-sitemap.xml is an empty stub (no <url> entries), so it is
+    // not advertised here — pointing Google at an empty sitemap only produces
+    // a Search Console error. Re-add once it is actually populated.
+    sitemap: [`${SITE}/sitemap.xml`],
     host: SITE,
   };
 }

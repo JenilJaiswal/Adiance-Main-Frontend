@@ -7,8 +7,12 @@
  * homepage <title>/<description>/<canonical> on inner routes.
  */
 
+import geoPageData from "../data/geoPageData.json";
+
 const SITE = "https://www.adiance.com";
 const DEFAULT_OG = `${SITE}/images/Logo.webp`;
+/** Hand-written per-country SEO copy — the same source GeoPage renders in the body. */
+const GEO = geoPageData.countries || {};
 const SITE_NAME = "Adiance Technologies";
 const TWITTER = "@adiancetech";
 
@@ -639,16 +643,48 @@ const CATALOG = {
   "/admin/verify": { title: "Adiance Admin OTP Verification", description: "Verify OTP.", noindex: true },
 };
 
-/** Country pages — single template, dynamic insertions */
+/**
+ * Country pages — prefer the hand-written copy in geoPageData.json so the
+ * <title>/<description> match what GeoPage actually renders on the page.
+ * Countries with no geo entry fall back to the generic template.
+ */
 Object.entries(COUNTRY_PAGES).forEach(([slug, country]) => {
+  const geo = GEO[slug]?.seo || {};
   CATALOG["/" + slug] = {
+    // Title deliberately keeps the template rather than geo.seo.title: it is
+    // what these 45 pages already rank with, it is unique per country, and it
+    // carries "NDAA Compliant" — the key differentiator the geo copy drops.
+    // To switch to the geo titles instead, use `geo.title || ...` here.
     title: `CCTV Camera Manufacturer in ${country} | NDAA Compliant | Adiance`,
-    description: `Adiance is a leading NDAA-compliant CCTV camera manufacturer supplying ${country} with white-label OEM cameras, edge AI, and cloud VMS.`,
-    keywords: `CCTV camera manufacturer ${country}, surveillance camera ${country}, OEM CCTV ${country}, NDAA compliant ${country}`,
+    // Description/keywords do come from geoPageData — hand-written per country
+    // and more specific than the template, with the template as fallback.
+    description:
+      geo.description ||
+      `Adiance is a leading NDAA-compliant CCTV camera manufacturer supplying ${country} with white-label OEM cameras, edge AI, and cloud VMS.`,
+    keywords:
+      geo.keywords ||
+      `CCTV camera manufacturer ${country}, surveillance camera ${country}, OEM CCTV ${country}, NDAA compliant ${country}`,
   };
-  // v2 variants
-  CATALOG[`/${slug}-v2`] = CATALOG["/" + slug];
 });
+
+/**
+ * `-v2` pages are alternate copy variants targeting the same country and the
+ * same queries as their base page. Keep them reachable, but canonicalise them
+ * to the base page so the pair stops cannibalising each other.
+ */
+Object.keys(GEO)
+  .filter((slug) => slug.endsWith("-v2"))
+  .forEach((slug) => {
+    const basePath = "/" + slug.replace(/-v2$/, "");
+    const base = CATALOG[basePath] || {};
+    const geo = GEO[slug]?.seo || {};
+    CATALOG["/" + slug] = {
+      title: geo.title || base.title,
+      description: geo.description || base.description,
+      keywords: geo.keywords || base.keywords,
+      canonical: basePath,
+    };
+  });
 
 /** Resolve metadata for any path; falls back to a slug-derived title. */
 function lookup(rawPath) {
@@ -672,12 +708,18 @@ export function buildMetadata(path, override = {}) {
     "Adiance Technologies is an NDAA-compliant OEM/ODM CCTV camera manufacturer based in India.";
   const keywords = override.keywords || cfg.keywords;
   const ogImage = override.ogImage || cfg.ogImage || DEFAULT_OG;
-  const canonical = override.canonical || path;
+  const canonical = override.canonical || cfg.canonical || path;
   const noindex = override.noindex ?? cfg.noindex ?? false;
 
+  // Index by default in any production build. This site is self-hosted
+  // (`output: "standalone"`), so VERCEL_ENV is undefined in prod — gating on it
+  // silently shipped `noindex` sitewide. Non-production environments (staging,
+  // preview) must opt out explicitly with NEXT_PUBLIC_ALLOW_INDEX=false.
   const allowIndex =
     process.env.NEXT_PUBLIC_ALLOW_INDEX === "true" ||
-    process.env.VERCEL_ENV === "production";
+    process.env.VERCEL_ENV === "production" ||
+    (process.env.NODE_ENV === "production" &&
+      process.env.NEXT_PUBLIC_ALLOW_INDEX !== "false");
 
   const metadata = {
     title,
@@ -695,8 +737,19 @@ export function buildMetadata(path, override = {}) {
       url: `${SITE}${canonical}`,
       siteName: SITE_NAME,
       images: [ogImage],
-      type: "website",
+      type: override.ogType || "website",
       locale: "en_US",
+      ...(override.ogType === "article"
+        ? {
+            ...(override.publishedTime
+              ? { publishedTime: override.publishedTime }
+              : {}),
+            ...(override.modifiedTime
+              ? { modifiedTime: override.modifiedTime }
+              : {}),
+            ...(override.authors ? { authors: override.authors } : {}),
+          }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",

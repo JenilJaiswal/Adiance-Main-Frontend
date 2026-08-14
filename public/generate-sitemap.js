@@ -8,6 +8,15 @@ const axios = require("axios");
 const HOSTNAME = "https://www.adiance.com/";
 const API_URL = process.env.API_URL || "https://backend.adiance.com:443";
 
+// Blog slugs the CMS still publishes but that next.config.js 301-redirects
+// elsewhere. Listing a redirecting URL in the sitemap wastes crawl budget and
+// hides the real destination. Keep in sync with `legacyRedirects`.
+const REDIRECTED_BLOG_URLS = new Set([
+  "/blog/complete-guide-ndaa-compliant-surveillance-cameras", // -> /blog/the-complete-guide-to-ndaa-compliant-surveillance-cameras
+  "/blog/661921c42125c9f9e2d81608", // -> /blog
+  "/blog/679cbf82eec2800b46544898", // -> /blog
+]);
+
 // Fallback blog URLs (can be updated manually if API is not available)
 const FALLBACK_BLOG_URLS = [
   // Add your blog URLs here as fallback
@@ -74,7 +83,7 @@ function getLastModTime(url) {
       // '/thanks': 'src/components/ThankYouPage.jsx',
       '/wifi-ptz-camera': 'src/components/WifiCameraPdf.jsx',
       '/robotics': 'src/components/Robotics.jsx',
-      '/autoplay': 'src/components/AutoplayCarousel.jsx',
+      // '/autoplay': 'src/components/AutoplayCarousel.jsx',
       '/event': 'src/components/Event.jsx',
       '/event/ifsec-india-2025': 'src/components/IfsecIndia2025.jsx',
     };
@@ -209,7 +218,9 @@ const staticPages = [
 
   // Miscellaneous
   { url: "/robotics", changefreq: "weekly", priority: 0.8 },
-  { url: "/autoplay", changefreq: "monthly", priority: 0.4 },
+  // /autoplay is Disallow'd in robots.txt — a blocked URL must not be
+  // advertised as indexable in the sitemap.
+  // { url: "/autoplay", changefreq: "monthly", priority: 0.4 },
   // === GEO Country Pages (Added 2026-04-19) ===
   { url: "/cctv-camera-manufacturer-uae", changefreq: "weekly", priority: 0.85 },
   { url: "/cctv-camera-manufacturer-saudi-arabia", changefreq: "weekly", priority: 0.85 },
@@ -276,6 +287,50 @@ const staticPages = [
   { url: "/sample-request", changefreq: "monthly", priority: 0.6 },
   { url: "/tools/ndaa-compliance-checker", changefreq: "monthly", priority: 0.7 },
   { url: "/tools/chinese-camera-restrictions-map", changefreq: "monthly", priority: 0.7 },
+
+  // === Live indexable routes that were missing from the sitemap entirely ===
+  // Verified 200 on production. Deliberately NOT added: /edgeaicamera (removed
+  // on purpose in 7ead5f0) and /blog/qualcomm-soc-future-edge-ai-surveillance-
+  // cameras (canonicalised to the landing page of the same name).
+  { url: "/oem-services", changefreq: "weekly", priority: 0.8 },
+  { url: "/odm-services", changefreq: "weekly", priority: 0.8 },
+  { url: "/jdm-services", changefreq: "weekly", priority: 0.8 },
+  { url: "/pcb-assembly-service", changefreq: "weekly", priority: 0.8 },
+  { url: "/ndaa-compliance", changefreq: "weekly", priority: 0.8 },
+  { url: "/bis-er-certification", changefreq: "weekly", priority: 0.8 },
+  { url: "/stqc-compliant-cctv-cameras", changefreq: "weekly", priority: 0.8 },
+  { url: "/custom-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.8 },
+  { url: "/start-your-own-cctv-brand", changefreq: "weekly", priority: 0.8 },
+  { url: "/oem-white-label-platform", changefreq: "weekly", priority: 0.8 },
+  { url: "/oem-camera-manufacturer-europe", changefreq: "weekly", priority: 0.8 },
+  { url: "/cctv-oem-for-telecom-isp", changefreq: "weekly", priority: 0.8 },
+  { url: "/qualcomm-edge-ai-camera-manufacturer", changefreq: "weekly", priority: 0.8 },
+  { url: "/qualcomm-soc-future-edge-ai-surveillance-cameras", changefreq: "weekly", priority: 0.8 },
+  { url: "/edge-ai-cctv-cameras", changefreq: "weekly", priority: 0.8 },
+  { url: "/eco-series", changefreq: "weekly", priority: 0.8 },
+  { url: "/global-presence", changefreq: "weekly", priority: 0.8 },
+  { url: "/us", changefreq: "weekly", priority: 0.8 },
+  { url: "/news", changefreq: "weekly", priority: 0.8 },
+  { url: "/cctv-camera-manufacturer-peru", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-venezuela", changefreq: "weekly", priority: 0.85 },
+  { url: "/case-study/white-label-edge-ai-camera-japan", changefreq: "monthly", priority: 0.7 },
+  // Static (non-CMS) blog posts — these live in app/blog/<slug>/ and are never
+  // returned by the CMS fetch below, so they have to be listed explicitly.
+  { url: "/blog/the-complete-guide-to-ndaa-compliant-surveillance-cameras", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/bis-er-01-certified-cctv-camera-companies-india", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/china-plus-one-strategy-cctv-manufacturing", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/comparing-qualcomm-ambarella-novatek-for-cctv", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/geopolitics-of-guts-why-non-chinese-soc-is-new-baseline", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/how-to-choose-oem-cctv-manufacturer", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/how-to-choose-oem-cctv-manufacturer-checklist", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/how-to-migrate-cctv-brand-from-chinese-soc", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/ndaa-compliant-cctv-cameras-buyers-guide", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/oem-cctv-camera-moq-explained", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/supply-chain-diversification-2026", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/supply-chain-diversification-cctv-manufacturing", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/white-label-vs-branded-cctv-cameras", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/white-label-vs-private-label-cctv-cameras", changefreq: "monthly", priority: 0.6 },
+  { url: "/blog/why-surveillance-needs-built-in-vms-cloud", changefreq: "monthly", priority: 0.6 },
 ];
 
 // Function to fetch blog URLs from API
@@ -354,10 +409,13 @@ async function fetchBlogUrls() {
       }));
 
       // De-duplicate by URL — the CMS can return the same slug more than once.
-      // Also drop any entry that failed to resolve a slug (/blog/undefined).
+      // Also drop any entry that failed to resolve a slug (/blog/undefined),
+      // and any slug that next.config.js 301-redirects elsewhere (a sitemap
+      // must advertise the destination, never the redirecting URL).
       const seenUrls = new Set();
       const uniqueBlogUrls = blogUrls.filter((b) => {
         if (!b.url || b.url === "/blog/undefined" || seenUrls.has(b.url)) return false;
+        if (REDIRECTED_BLOG_URLS.has(b.url)) return false;
         seenUrls.add(b.url);
         return true;
       });

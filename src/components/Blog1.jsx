@@ -308,65 +308,12 @@ const Blog1 = () => {
           }
         />
         <meta name="twitter:image" content={mainImageOg} />
-        <link rel="canonical" href={currentUrl} />
-
-        {/* Article JSON-LD Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": blog.content?.metaTitle || blog.content?.title || "",
-            "description": blog.content?.metaDescription || "",
-            "image": mainImageOg,
-            "datePublished": blog.createdAt || "",
-            "dateModified": blog.updatedAt || blog.createdAt || "",
-            "author": {
-              "@type": "Person",
-              "name": blog.content?.blogAuthor || "Adiance Technologies"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Adiance Technologies",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.adiance.com/images/Logo.webp"
-              }
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": currentUrl
-            },
-            "url": currentUrl
-          })}
-        </script>
-
-        {/* BreadcrumbList JSON-LD Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.adiance.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Blog",
-                "item": "https://www.adiance.com/blog"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": blog.content?.metaTitle || blog.content?.title || "",
-                "item": currentUrl
-              }
-            ]
-          })}
-        </script>
+        {/*
+          Canonical, Article/BlogPosting and BreadcrumbList JSON-LD are all
+          emitted server-side by app/blog/[urlTitle]/page.jsx. They were being
+          defined a second time here, client-side, with a competing canonical.
+          CMS-injected per-post schemas below are unique and stay.
+        */}
 
         {/* CMS-injected schemas */}
         {Array.isArray(blog.content?.schemas) &&

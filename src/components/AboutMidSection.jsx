@@ -10,7 +10,7 @@ import AboutImgs from "./AboutImgs";
 import AboutImgs2 from "./AboutImgs2";
 import Certifications from "./Certifications";
 const AboutMidSection = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(() => (typeof window !== "undefined" ? window.innerWidth : 1280));
   const hiddenStyle = { display: "none" };
 
   useEffect(() => {

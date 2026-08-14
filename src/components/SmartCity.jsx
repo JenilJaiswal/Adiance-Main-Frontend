@@ -10,7 +10,7 @@ import { useLocation } from "@/compat/react-router-dom";
 import { Helmet } from "react-helmet";
 
 const SmartCity = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(() => (typeof window !== "undefined" ? window.innerWidth : 1280));
   const location = useLocation(); // Get the current route
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
 

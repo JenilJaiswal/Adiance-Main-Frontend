@@ -42,19 +42,6 @@ const SEOLandingPage = () => {
 
   const canonicalUrl = `https://www.adiance.com/${slug}`;
 
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": page.seo.title,
-    "description": page.seo.description,
-    "url": canonicalUrl,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Adiance",
-      "url": "https://www.adiance.com"
-    }
-  };
-
   return (
     <div className="seo-landing-container">
       <Helmet>
@@ -68,8 +55,12 @@ const SEOLandingPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={page.seo.title} />
         <meta name="twitter:description" content={page.seo.description} />
-        <link rel="canonical" href={canonicalUrl} />
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+        {/*
+          Canonical and WebPage/BreadcrumbList/FAQPage JSON-LD are emitted
+          server-side by buildMetadata() and <PageSchema landingSlug=...>.
+          Repeating them here defined the WebPage entity twice and gave the
+          page a second, competing canonical.
+        */}
       </Helmet>
 
       <Header />

@@ -66,7 +66,12 @@ const BlogViewContent = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
+  // Lazy + guarded: reading window during render crashes server rendering.
+  // The client still evaluates the real viewport at hydration; the server
+  // renders the desktop variant.
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth < 1280 : false,
+  );
 
   useEffect(() => {
     const handleResize = () => {

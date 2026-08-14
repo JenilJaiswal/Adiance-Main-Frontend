@@ -9,46 +9,6 @@ import AboutMidSection from "./AboutMidSection";
 import { Helmet } from "react-helmet";
 import { useLocation } from "@/compat/react-router-dom";
 
-const aboutOrganizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Adiance Technologies",
-  "url": "https://www.adiance.com",
-  "logo": "https://www.adiance.com/images/Logo.webp",
-  "description": "Adiance Technologies is a global leader in CCTV camera manufacturing, cloud storage, and security solutions. Providing OEM, ODM, and JDM services with cutting-edge AI technology since 2003.",
-  "foundingDate": "2003",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "House No. 7, Arista Eight, Corporate House, Rajpath Rangoli Rd, behind Satyam House, Bodakdev",
-    "addressLocality": "Ahmedabad",
-    "addressRegion": "Gujarat",
-    "postalCode": "380059",
-    "addressCountry": "IN"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "sales",
-    "telephone": ["+91 9687779999", "+1-281-857-2584"],
-    "email": "contact@adiance.com"
-  },
-  "sameAs": [
-    "https://www.facebook.com/adiancetechnologies",
-    "https://www.linkedin.com/company/adiancetechnologies",
-    "https://x.com/adiancetech",
-    "https://www.instagram.com/adiancetech/",
-    "https://youtube.com/@adiancetechnologies"
-  ]
-};
-
-const aboutBreadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.adiance.com" },
-    { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.adiance.com/about" }
-  ]
-};
-
 export default function AboutUs() {
   const location = useLocation();
   const canonicalUrl = `https://www.adiance.com${location.pathname}`;
@@ -75,9 +35,11 @@ export default function AboutUs() {
         <meta name="twitter:site" content="@adiancetech" />
         <meta name="twitter:title" content="About Adiance - OEM Camera Manufacturer India | Since 2003" />
         <meta name="twitter:description" content="Learn about Adiance Technologies, India's leading NDAA compliant OEM camera manufacturer since 2003." />
-        <link rel="canonical" href={canonicalUrl} />
-        <script type="application/ld+json">{JSON.stringify(aboutOrganizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(aboutBreadcrumbSchema)}</script>
+        {/*
+          Organization is emitted globally by app/layout.js and the canonical +
+          BreadcrumbList by buildMetadata()/<PageSchema> on /about. All three
+          were being defined a second time here, client-side.
+        */}
       </Helmet>
       <Header />
       <Breadcrumb />
