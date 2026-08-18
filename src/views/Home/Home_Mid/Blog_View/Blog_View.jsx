@@ -72,10 +72,16 @@ const BlogViewContent = () => {
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 1280 : false,
   );
+  // Same guard as isMobile: reading window during render crashes SSR, so the
+  // <768px icon size is tracked in state and evaluated on the client only.
+  const [isSmall, setIsSmall] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth < 768 : false,
+  );
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1280);
+      setIsSmall(window.innerWidth < 768);
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -117,7 +123,7 @@ const BlogViewContent = () => {
           </h2>
           <div className="blog-intro">
             <div className="blog-arrow-svg">
-              <svg xmlns="http://www.w3.org/2000/svg" width={window.innerWidth < 768 ? "25" : "34"} height={window.innerWidth < 768 ? "25" : "34"} viewBox="0 0 34 34" fill="none">
+              <svg xmlns="http://www.w3.org/2000/svg" width={isSmall ? "25" : "34"} height={isSmall ? "25" : "34"} viewBox="0 0 34 34" fill="none">
                 <path d="M30.0367 33C31.6935 32.9989 33.0357 31.6548 33.0346 29.9979L33.0159 2.99793C33.0148 1.34108 31.6707 -0.00113787 30.0138 7.16405e-06C28.357 0.0011522 27.0148 1.34523 27.0159 3.00208L27.0325 27.0021L3.03251 27.0187C1.37566 27.0198 0.0334405 28.3639 0.0345855 30.0207C0.0357305 31.6776 1.3798 33.0198 3.03666 33.0187L30.0367 33ZM5 5L2.88015 7.12279L27.9147 32.1228L30.0346 30L32.1544 27.8772L7.11985 2.87721L5 5Z" fill="#bf0603"/>
               </svg>
             </div>

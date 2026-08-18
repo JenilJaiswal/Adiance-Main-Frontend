@@ -27,9 +27,12 @@ const Blogs = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [sortOrder, setSortOrder] = useState("latest");
   const searchParams = useSearchParams();
+  // Initialise from the ?q= param so the WebSite SearchAction target
+  // (/blog?q={search_term_string}) actually searches on load instead of
+  // just showing the default list.
+  const [searchQuery, setSearchQuery] = useState(() => searchParams.get("q") || "");
+  const [sortOrder, setSortOrder] = useState("latest");
 
   const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
   const IMAGE_BASE_URL = `${BACKEND_BASE_URL}/images`;
@@ -66,6 +69,13 @@ const Blogs = () => {
   useEffect(() => {
     fetchData();
   }, [fetchData]);
+
+  // Keep the search in sync with the ?q= param if it changes after load
+  // (e.g. a second sitelinks-searchbox query), and reset to page 1.
+  useEffect(() => {
+    const q = searchParams.get("q") || "";
+    setSearchQuery((prev) => (prev === q ? prev : q));
+  }, [searchParams]);
 
   const handleNextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));

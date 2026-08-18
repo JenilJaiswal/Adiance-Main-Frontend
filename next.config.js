@@ -138,6 +138,26 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: false,
   poweredByHeader: false,
+  // DEV-11 (Core Web Vitals): reduce unused JS. Tree-shake barrel imports from
+  // the heavy UI libraries so a page only ships the components it actually uses.
+  experimental: {
+    optimizePackageImports: [
+      "@mui/material",
+      "@mui/icons-material",
+      "@mui/lab",
+      "@mui/styles",
+      "@chakra-ui/react",
+      "@chakra-ui/icons",
+      "react-icons",
+      "react-bootstrap",
+      "framer-motion",
+    ],
+  },
+  // Strip console.* (except errors) from production bundles.
+  compiler: {
+    removeConsole:
+      process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "**" },
