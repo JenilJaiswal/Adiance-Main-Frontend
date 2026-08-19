@@ -72,17 +72,18 @@ const BlogViewContent = () => {
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth < 1280 : false,
   );
-  // Same guard as isMobile: reading window during render crashes SSR, so the
-  // <768px icon size is tracked in state and evaluated on the client only.
-  const [isSmall, setIsSmall] = useState(() =>
-    typeof window !== "undefined" ? window.innerWidth < 768 : false,
-  );
+  // Must start at the same value the server renders: this drives the arrow
+  // icon's width/height attributes, so reading the viewport during the initial
+  // render made the client emit 25 where the SSR HTML said 34, breaking
+  // hydration. The real viewport is applied by the effect below, on mount.
+  const [isSmall, setIsSmall] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1280);
       setIsSmall(window.innerWidth < 768);
     };
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);

@@ -82,7 +82,10 @@ const BISSlide = () => (
 const Home_Slider = () => {
   return (
     <div style={{ height: "886px", margin: "0 auto" }} className="main">
-      <style>{`
+      {/* Raw, not a text child: React escapes ' to &#x27; when serialising text,
+          but <style> is a raw-text element so the browser never decodes it —
+          server and client text then disagree and hydration fails. */}
+      <style dangerouslySetInnerHTML={{ __html: `
         .carousel-item img {
           max-width: 100%;
           height: auto;
@@ -222,7 +225,7 @@ const Home_Slider = () => {
           .carousel-item { height: 700px !important; }
           .carousel-item img:not(.bis-icon-img) { height: 700px !important; object-fit: cover; }
         }
-      `}</style>
+      ` }} />
 
       <Carousel>
         {slides.map((slide, index) => {

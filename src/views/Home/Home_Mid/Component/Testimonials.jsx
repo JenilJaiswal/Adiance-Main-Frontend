@@ -55,17 +55,17 @@ const StarRating = ({ rating }) => {
 
 const Testimonials = () => {
   const [index, setIndex] = useState(0);
-  // Lazy + guarded: reading window during render crashes server rendering.
-  // On the client this still resolves to the real width at hydration; the
-  // server falls back to a desktop-width default.
-  const [width, setWidth] = useState(() =>
-    typeof window !== "undefined" ? window.innerWidth : 1280,
-  );
+  // Must start at the same desktop default the server uses: reading
+  // window.innerWidth during the initial render made the client emit a
+  // different number of cards than the SSR HTML, which breaks hydration. The
+  // real viewport is applied by the effect below, which runs right after mount.
+  const [width, setWidth] = useState(1280);
 
   useEffect(() => {
     function handleResize() {
       setWidth(window.innerWidth);
     }
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);

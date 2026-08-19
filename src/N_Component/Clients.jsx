@@ -23,7 +23,10 @@ const Clients = ({ showTitle = true }) => {
         </div>
       </div>
 
-      <style>{`
+      {/* Raw, not a text child: React escapes " to &quot; when serialising text,
+          but <style> is a raw-text element so the browser never decodes it —
+          server and client text then disagree and hydration fails. */}
+      <style dangerouslySetInnerHTML={{ __html: `
         .clients-container {
           padding: 40px 20px;
           text-align: center;
@@ -131,7 +134,7 @@ const Clients = ({ showTitle = true }) => {
             max-width: 60px;
           }
         }
-      `}</style>
+      ` }} />
     </div>
   );
 };
