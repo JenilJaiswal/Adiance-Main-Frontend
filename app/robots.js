@@ -1,10 +1,12 @@
 const SITE = "https://www.adiance.com";
 
+// AI / generative-engine crawlers to grant full access (good for GEO).
+// IMPORTANT: search engines (Googlebot, Bingbot, Applebot, DuckDuckBot,
+// YandexBot, ...) are deliberately NOT listed here. Giving a search bot its
+// own `allow: /` group makes it a more-specific match than the `*` group, so
+// it would IGNORE every Disallow below. Search engines must fall through to
+// the `*` group so the Disallow rules actually apply to them.
 const AI_BOTS = [
-  "Googlebot",
-  "Googlebot-Image",
-  "Google-Extended",
-  "Bingbot",
   "GPTBot",
   "ChatGPT-User",
   "OAI-SearchBot",
@@ -12,12 +14,10 @@ const AI_BOTS = [
   "Claude-Web",
   "anthropic-ai",
   "PerplexityBot",
-  "Applebot",
+  "Google-Extended",
   "Applebot-Extended",
   "CCBot",
   "cohere-ai",
-  "DuckDuckBot",
-  "YandexBot",
 ];
 
 export default function robots() {
@@ -49,6 +49,7 @@ export default function robots() {
     // not advertised here — pointing Google at an empty sitemap only produces
     // a Search Console error. Re-add once it is actually populated.
     sitemap: [`${SITE}/sitemap.xml`],
-    host: SITE,
+    // NOTE: no `host` field — it emits a `Host:` directive, which is a
+    // Yandex-only extension that Google flags as unsupported in GSC.
   };
 }

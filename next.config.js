@@ -8,6 +8,25 @@ const legacyRedirects = {
   "/future-and-growth": "/about",
   "/sustainability": "/about",
   "/index.html": "/",
+  // T4: legacy Joomla / removed URLs reported as 404 in GSC → closest live page.
+  "/index": "/",
+  "/hobvy": "/",
+  // T4 — remaining GSC "Not found (404)" URLs → closest live 200 target.
+  "/about-us": "/about",
+  "/thermalcamera": "/thermal-camera",
+  "/true-4k-smart-cloud-cctv-camera": "/4kcamera",
+  "/cctv-camera-manufacturers-suppliers-exporters": "/oem-services",
+  "/voipcallcenter.html": "/",
+  "/technology/innovation": "/innovation",
+  "/realtime-edge-ai-based-smart-cloud-camera": "/edgeaicamera",
+  "/adiance-cloud-based-thermal-camera-n": "/adiance-thermal-camera-n",
+  "/5g-cctv-camera-manufacturing": "/4gcamera",
+  // Legacy /seo/ doorway page → its canonical hub (rest of /seo/* 404 by design).
+  "/seo/oem-cctv-manufacturer-europe": "/oem-camera-manufacturer-europe",
+  // Missing compliance PDF → the live compliance-documents hub.
+  "/compliance/adiance-rohs-statement.pdf": "/compliance-documents",
+  "/top-5-company-thermal-camera-manufacturers": "/thermal-camera",
+  "/oem-cctv-camera-manufacturer-india": "/cctv-camera-manufacturer-india",
   "/360-approach": "/about",
   // /contact-us and /partner are not routes — these 301s dead-ended on a 404
   // and dropped the link equity instead of passing it on.
@@ -209,18 +228,29 @@ const nextConfig = {
   },
   async redirects() {
     const dynamic = [
-      { source: "/anrpcamera", destination: "/anpr-camera", permanent: true },
+      { source: "/anrpcamera", destination: "/anpr-camera", statusCode: 301 },
       {
         source: "/s-series",
         destination: "/4gcamera",
-        permanent: true,
+        statusCode: 301,
+      },
+      // T4: legacy Joomla content URLs (/index.php?option=com_content&...) that
+      // were never redirected after the migration. 1:1 targets are unknown, so
+      // send them to the homepage hub. 301.
+      {
+        source: "/index.php",
+        has: [{ type: "query", key: "option", value: "com_content" }],
+        destination: "/",
+        statusCode: 301,
       },
     ];
     const legacy = Object.entries(legacyRedirects).map(
       ([source, destination]) => ({
         source,
         destination,
-        permanent: true,
+        // Emit an explicit 301 (Next's `permanent: true` sends 308; GSC/audits
+        // expect a classic 301 for these legacy content redirects).
+        statusCode: 301,
       }),
     );
     return [...dynamic, ...legacy];

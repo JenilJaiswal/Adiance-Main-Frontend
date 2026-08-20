@@ -254,7 +254,7 @@ const NavigationBar = () => {
                     </Typography>
                     <Typography variant="body1">
                       <SmartLink
-                        to="/4g-dome-camera"
+                        to="/4g-dome-ptz-camera"
                         className={classes.menuLink}
                       >
                         4G Dome Camera
@@ -262,7 +262,7 @@ const NavigationBar = () => {
                     </Typography>
                     <Typography variant="body1">
                       <SmartLink
-                        to="/h265-4g-dome-ptz-camera"
+                        to="/4g-dome-ptz-camera"
                         className={classes.menuLink}
                       >
                         H.265+ 4G Dome PTZ Camera
@@ -374,7 +374,7 @@ const NavigationBar = () => {
                   </SmartLink> */}
                 </Typography>
                 {/* <Typography variant="body1">
-                  <SmartLink to="/feedback" className={classes.menuLink}>
+                  <SmartLink to="/contact" className={classes.menuLink}>
                     Feedback
                   </SmartLink>
                 </Typography> */}

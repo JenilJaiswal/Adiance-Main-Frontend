@@ -129,7 +129,7 @@ const AboutSlider = () => {
               onMouseEnter={() => setHovered2(true)}
               onMouseLeave={() => setHovered2(false)}
             >
-              <Link to="/5g-edge-ai-camera-s-series-surveillance" style={{ display: "inline-block", width: "100%" }}>
+              <Link to="/4gcamera" style={{ display: "inline-block", width: "100%" }}>
                 <img
                   src="images/S-series cameras.webp"
                   alt="S-series cameras"

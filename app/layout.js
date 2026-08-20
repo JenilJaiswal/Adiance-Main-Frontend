@@ -184,14 +184,13 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        <link
-          rel="preload"
-          as="image"
-          href="/N_Images/Slider1.webp"
-          fetchPriority="high"
-        />
-        <link rel="preload" as="image" href="/images/innovation-header.webp" />
-        <link rel="preload" as="image" href="/images/product-header.webp" />
+        {/*
+          T2 (mobile LCP): image preloads must be page-specific, not global.
+          Preloading the homepage slider + the innovation/product hero images on
+          EVERY route made phones download images they never render, competing
+          with each page's real LCP element. The homepage hero is preloaded in
+          app/page.jsx; other templates should preload their own hero locally.
+        */}
         <style dangerouslySetInnerHTML={{ __html: hideChatWidgetsCss }} />
         <script
           type="application/ld+json"

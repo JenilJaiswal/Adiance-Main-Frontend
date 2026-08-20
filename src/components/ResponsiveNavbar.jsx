@@ -59,7 +59,7 @@ const ResponsiveNavbar = () => {
   const isSmallScreen = screenWidth <= 993; // Adjust the threshold as needed
 
   const handleGetQuote = () => {
-    window.location.href = "/partner-with-us";
+    window.location.href = "/partners";
   };
 
   const handleExternalLink = (e) => {
@@ -353,7 +353,7 @@ const ResponsiveNavbar = () => {
                   {/* Other product links hidden on mobile as requested */}
                   <NavDropdown.Item
                     as={SmartLink}
-                    to="/5g-edge-ai-camera-s-series-surveillance"
+                    to="/4gcamera"
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
                     }}
@@ -761,7 +761,7 @@ const ResponsiveNavbar = () => {
 
                             {/* <li>
                               <ArrowRightIcon />
-                              <SmartLink to="/feedback" className="link">
+                              <SmartLink to="/contact" className="link">
                                 Feedback
                               </SmartLink>
                             </li> */}
@@ -853,7 +853,7 @@ const ResponsiveNavbar = () => {
 
                   {/* <NavDropdown.Item
                     as={SmartLink}
-                    to="/feedback"
+                    to="/contact"
                     style={{
                       fontSize: screenWidth > 993 ? "20px" : "inherit",
                     }}
@@ -1050,11 +1050,11 @@ const ResponsiveNavbar = () => {
 
             <Nav.Link
               as={SmartLink}
-              to="/partner-with-us"
+              to="/partners"
               style={{
                 whiteSpace: "nowrap",
                 color:
-                  location.pathname === "/partner-with-us"
+                  location.pathname === "/partners"
                     ? "white"
                     : "#A9A9A9",
                 fontSize: screenWidth > 993 ? "18px" : "inherit",

@@ -1,6 +1,7 @@
+import { notFound } from "next/navigation";
 import { buildMetadata } from "@/seo/pageMetadata";
 import { JsonLd, BreadcrumbJsonLd } from "@/seo/JsonLd";
-import ClientPage from "./ClientPage";
+import BlogSSRBody from "@/components/BlogSSRBody";
 
 const SITE = "https://www.adiance.com";
 const BACKEND =
@@ -66,6 +67,31 @@ async function fetchBlog(slug) {
   }
 }
 
+/**
+ * Like fetchBlog, but distinguishes a definitively-missing post (→ 404) from a
+ * transient backend error (→ render the client shell as a fallback). This stops
+ * dead/invalid posts serving a 200 empty shell (soft-404) without 404-ing a
+ * real post just because the API blipped.
+ */
+async function resolveBlog(slug) {
+  if (!slug) return { state: "notfound", blog: null };
+  try {
+    const res = await fetch(
+      `${BACKEND}/api/blogs/urlWords/${encodeURIComponent(slug)}`,
+      { next: { revalidate: 300 } }
+    );
+    if (res.status === 404) return { state: "notfound", blog: null };
+    if (!res.ok) return { state: "error", blog: null };
+    const json = await res.json();
+    if (json?.status === "success" && json?.data?.metadata?.urlWords) {
+      return { state: "ok", blog: json.data };
+    }
+    return { state: "notfound", blog: null };
+  } catch {
+    return { state: "error", blog: null };
+  }
+}
+
 /** Post-specific description, never the /blog index copy. */
 function descriptionFor(blog) {
   return (
@@ -125,9 +151,69 @@ function faqSchema(blog) {
   return { "@context": "https://schema.org", "@type": "FAQPage", mainEntity };
 }
 
+/**
+ * Server-rendered article body (title + image + paragraphs) used as the SSR
+ * fallback so the real content is in the initial HTML. Wrapped defensively —
+ * any shape surprise returns null and we simply fall back to the client render.
+ */
+function ssrArticleBody(blog) {
+  if (!blog) return null;
+  try {
+    const c = blog.content || {};
+    const title = clean(c.metaTitle) || clean(c.title) || "";
+    // `brief` is a short summary (string on current posts, Slate array on old ones).
+    const briefText =
+      typeof c.brief === "string" ? c.brief.trim() : richText(c.brief);
+    // The full article body lives in `headingsAndImages`:
+    // [{ type: "p" | "h2" | "h3" | ..., content: { text } }].
+    const blocks = Array.isArray(c.headingsAndImages) ? c.headingsAndImages : [];
+    const rendered = blocks
+      .map((b, i) => {
+        const type = String(b?.type || "p").toLowerCase();
+        const text = b?.content?.text ? String(b.content.text).trim() : "";
+        if (!text) return null;
+        if (type === "h1" || type === "h2") return <h2 key={i}>{text}</h2>;
+        if (type === "h3" || type === "h4") return <h3 key={i}>{text}</h3>;
+        return <p key={i}>{text}</p>;
+      })
+      .filter(Boolean);
+    if (!title && !briefText && rendered.length === 0) return null;
+    const img = c.mainImage ? ogImageFor(c.mainImage) : null;
+    return (
+      <article
+        className="blog-ssr-body"
+        style={{ maxWidth: "900px", margin: "0 auto", padding: "24px 5%" }}
+      >
+        {title ? <h1>{title}</h1> : null}
+        {img ? (
+          <img
+            src={img}
+            alt={title || "Adiance Blog"}
+            width="1200"
+            height="630"
+            style={{ maxWidth: "100%", height: "auto", borderRadius: "8px" }}
+          />
+        ) : null}
+        {briefText ? (
+          <p>
+            <strong>{briefText}</strong>
+          </p>
+        ) : null}
+        {rendered}
+      </article>
+    );
+  } catch {
+    return null;
+  }
+}
+
 export default async function Page({ params }) {
   const slug = params?.urlTitle || "";
-  const blog = await fetchBlog(slug);
+  const { state, blog } = await resolveBlog(slug);
+  // Deleted / unpublished / invalid slug (incl. raw id-form URLs that don't
+  // resolve) → real HTTP 404 via app/not-found.jsx, not a 200 empty shell.
+  // A transient backend error falls through and renders the client shell.
+  if (state === "notfound") notFound();
 
   const cmsTitle =
     clean(blog?.content?.metaTitle) ||
@@ -175,7 +261,7 @@ export default async function Page({ params }) {
           { name: headline, url: `/blog/${slug}` },
         ]}
       />
-      <ClientPage />
+      <BlogSSRBody fallback={ssrArticleBody(blog)} />
     </>
   );
 }

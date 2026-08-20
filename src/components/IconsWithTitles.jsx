@@ -63,7 +63,7 @@ const IconsRow = () => {
         </div>
         {/* <div style={{ textAlign: "center" }}> */}
         {/* <Link
-          to="/sustainability"
+          to="/about"
           style={{ textDecoration: "none", color: "inherit" }}
         > */}
         {/* <SchoolOutlinedIcon sx={{ fontSize: iconSize }} className="icon" /> */}
@@ -73,7 +73,7 @@ const IconsRow = () => {
         {/* </div> */}
         <div style={{ textAlign: "center" }}>
           <Link
-            to="/sustainability"
+            to="/about"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <AllInclusiveOutlinedIcon
@@ -85,7 +85,7 @@ const IconsRow = () => {
         </div>
         <div style={{ textAlign: "center" }}>
           <Link
-            to="/future-and-growth"
+            to="/about"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <InsightsOutlinedIcon
@@ -97,7 +97,7 @@ const IconsRow = () => {
         </div>
         <div style={{ textAlign: "center" }}>
           <Link
-            to="/360-approach"
+            to="/about"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <AutoModeOutlinedIcon
