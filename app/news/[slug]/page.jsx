@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { buildMetadata } from "@/seo/pageMetadata";
 import { JsonLd, BreadcrumbJsonLd } from "@/seo/JsonLd";
 import ClientPage from "./ClientPage";
@@ -58,6 +59,31 @@ async function fetchNews(slug) {
   }
 }
 
+/**
+ * Like fetchNews, but distinguishes a definitively-missing article (→ 404) from
+ * a transient backend error (→ render the client shell as a fallback). This stops
+ * unknown slugs serving a 200 empty shell (soft-404) without 404-ing a real
+ * article just because the API blipped.
+ */
+async function resolveNews(slug) {
+  if (!slug) return { state: "notfound", item: null };
+  try {
+    const res = await fetch(
+      `${BACKEND}/api/news/urlWords/${encodeURIComponent(slug)}`,
+      { next: { revalidate: 300 } }
+    );
+    if (res.status === 404) return { state: "notfound", item: null };
+    if (!res.ok) return { state: "error", item: null };
+    const json = await res.json();
+    if (json?.status === "success" && json?.data) {
+      return { state: "ok", item: json.data };
+    }
+    return { state: "notfound", item: null };
+  } catch {
+    return { state: "error", item: null };
+  }
+}
+
 export async function generateMetadata({ params }) {
   const slug = params?.slug || "";
   const item = await fetchNews(slug);
@@ -91,7 +117,12 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const slug = params?.slug || "";
-  const item = await fetchNews(slug);
+  const { state, item } = await resolveNews(slug);
+  // Deleted / unpublished / invalid slug → real HTTP 404 via app/not-found.jsx,
+  // not a 200 empty shell. A transient backend error falls through and renders
+  // the client shell.
+  if (state === "notfound") notFound();
+
   const headline = clean(item?.title) || clean(item?.metaTitle) || titleFromSlug(slug);
   const url = `${SITE}/news/${slug}`;
 

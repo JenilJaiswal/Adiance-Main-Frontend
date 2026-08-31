@@ -110,6 +110,10 @@ const legacyRedirects = {
   "/blog/661921c42125c9f9e2d81608": "/blog",
   "/wifi-camera-manufacturer": "/wifi-ptz-camera",
   "/4g-camera": "/4gcamera",
+  // Linked 14 times across 13 published blog posts but never a real route —
+  // S-series content lives at /4gcamera. Same target as the existing
+  // /s-series rule; the longer slug was the one the posts actually used.
+  "/s-series-ai-cctv-cameras": "/4gcamera",
   "/adianance-cloud-based-thermal-camera-f": "/adiance-thermal-camera-f",
   "/blog/679cbf82eec2800b46544898": "/blog",
   "/adiance-cloud-based-thermal-camera-f": "/adiance-thermal-camera-f",

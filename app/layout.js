@@ -37,7 +37,7 @@ export const metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-    apple: "/Logo.webp",
+    apple: "/images/Logo.webp",
   },
   manifest: "/manifest.json",
   verification: {
