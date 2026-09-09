@@ -67,6 +67,8 @@ const faqs = [
   { q: "How do Adiance cameras compare to Hikvision and Dahua alternatives?", a: "Adiance offers comparable or superior technology including Edge AI analytics, 4G/LTE connectivity, and cloud VMS at competitive pricing. Adiance cameras can be deployed in any government or federally-funded project without compliance risk." },
   { q: "Does Adiance offer OEM/ODM manufacturing for NDAA-compliant cameras?", a: "Yes. Adiance provides full OEM and ODM manufacturing services, allowing security integrators and distributors to offer NDAA-compliant cameras under their own brand with custom firmware, housing, and packaging options." },
   { q: "What certifications do Adiance cameras hold?", a: "Adiance cameras are NDAA Section 889 compliant, ONVIF Profile S/T/G compatible, and manufactured in ISO-certified facilities. We also support RTSP, HTTPS encryption, and comply with international data protection standards." },
+  { q: "How can I verify a camera is actually NDAA compliant before I buy it?", a: "Ask the manufacturer for a written NDAA Section 889 compliance statement naming the SoC (chipset) supplier and confirming it is not one of the banned entities or their subsidiaries. Cross-check the SoC brand against the official NDAA Section 889 text and FAR 52.204-25 clause linked above, and request supply-chain documentation as part of procurement due diligence — Adiance provides this documentation to every OEM/government partner on request." },
+  { q: "Is Adiance NDAA compliant, or just 'Hikvision-free'?", a: "Both. Being free of Hikvision and Dahua components is necessary but not sufficient — NDAA Section 889 also covers Huawei, ZTE, Hytera, and their subsidiaries and affiliates. Adiance's entire bill of materials, including the SoC, is sourced outside of this banned-entity list, not just the camera brand." },
 ];
 
 const faqSchema = {
@@ -155,6 +157,17 @@ const NdaaCompliance = () => {
             <p className="ndaa-text">
               This regulation affects every organization that does business with the U.S. federal government, receives federal grants, or operates within federally-funded facilities including schools, hospitals, military bases, and government buildings.
             </p>
+            <p className="ndaa-text ndaa-citation">
+              Official source: read the full text of{" "}
+              <a href="https://www.congress.gov/bill/115th-congress/house-bill/5515" target="_blank" rel="noopener noreferrer">
+                NDAA Section 889 on congress.gov
+              </a>{" "}
+              or the{" "}
+              <a href="https://www.acquisition.gov/far/subpart-52.2#FAR_52_204_25" target="_blank" rel="noopener noreferrer">
+                FAR 52.204-25 implementing clause
+              </a>{" "}
+              to verify which manufacturers and affiliates are covered.
+            </p>
           </div>
 
           <h3 className="ndaa-subsection-title">Who Must Comply?</h3>
@@ -233,6 +246,28 @@ const NdaaCompliance = () => {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      {/* Section 5.5 — Related resources (Final SEO Audit Checklist rows 27/49/51/52,
+          contextual internal linking, added 2026-09-08) */}
+      <section className="ndaa-section ndaa-related">
+        <div className="ndaa-container">
+          <h2 className="ndaa-section-title">Related Compliance &amp; Manufacturing Resources</h2>
+          <ul className="ndaa-related-list">
+            <li>
+              <a href="/bis-er-certification">BIS-ER &amp; STQC certification</a> — required for
+              selling surveillance electronics in India
+            </li>
+            <li>
+              <a href="/non-chinese-cctv-camera-manufacturer">Non-Chinese CCTV camera manufacturer</a>{" "}
+              — full non-Chinese SoC supply chain
+            </li>
+            <li>
+              <a href="/white-label-cctv-camera-manufacturer">White-label CCTV manufacturing</a> —
+              launch your own NDAA-compliant product line
+            </li>
+          </ul>
         </div>
       </section>
 

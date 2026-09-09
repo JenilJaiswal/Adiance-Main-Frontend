@@ -1,0 +1,121 @@
+.bis-deepdive-section {
+  padding: 60px 24px;
+  background: #fafafa;
+}
+
+.bis-deepdive-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bis-deepdive-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.bis-deepdive-intro {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 32px;
+}
+
+.bis-deepdive-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 32px 0 16px;
+}
+
+.bis-deepdive-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.bis-deepdive-step {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.bis-deepdive-step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #BF0603;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.bis-deepdive-step-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.bis-deepdive-step-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+.bis-deepdive-links {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.bis-deepdive-links a {
+  color: #BF0603;
+  text-decoration: underline;
+}
+
+.bis-deepdive-faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bis-deepdive-faq-q {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.bis-deepdive-faq-a {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+.bis-deepdive-note {
+  margin-top: 32px;
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+.bis-deepdive-note a {
+  color: #BF0603;
+}
+
+.bis-deepdive-related ul {
+  padding-left: 20px;
+  margin: 0;
+}
+.bis-deepdive-related li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.bis-deepdive-related a {
+  color: #BF0603;
+  font-weight: 600;
+}

@@ -37,6 +37,8 @@ export const metadata = {
   },
   icons: {
     icon: "/favicon.ico",
+    // Was "/Logo.webp" (missing the /images/ prefix) — 404'd on all 172
+    // pages. Matches the fix already live in production (commit 913827f).
     apple: "/images/Logo.webp",
   },
   manifest: "/manifest.json",
@@ -80,7 +82,14 @@ export const viewport = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  // Final Audit Checklist row 44: flagged as missing a LocalBusiness type
+  // despite having one clear address + phone. This is a manufacturer, not a
+  // storefront (schema.org's own guidance for that case, which the audit's
+  // fix note also names), so it keeps "Organization" as the primary type and
+  // adds "LocalBusiness" alongside it rather than replacing it — Google
+  // accepts an array of types on one JSON-LD block, and every field below
+  // (address, contactPoint, etc.) already satisfies LocalBusiness too.
+  "@type": ["Organization", "LocalBusiness"],
   name: "Adiance Technologies",
   alternateName: "Adiance",
   url: "https://www.adiance.com",

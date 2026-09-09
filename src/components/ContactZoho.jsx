@@ -185,6 +185,20 @@ const ContactZoho = () => {
       if (!(crmRes.status === 200 || crmRes.status === 201))
         throw new Error("CRM API failed");
 
+      // Final SEO Audit Checklist row 70 — GA4's own in-product recommendation
+      // (seen live 2026-09-08) suggested tracking /contact submissions as a
+      // "generate_lead" key event. Pushed to the existing GTM dataLayer (see
+      // the gtm-loader script in app/layout.js) rather than calling gtag()
+      // directly, since GTM is already the single source of truth for tags.
+      if (typeof window !== "undefined" && window.dataLayer) {
+        window.dataLayer.push({
+          event: "generate_lead",
+          lead_source: "contact_form",
+          company: formData.company,
+          customer_type: formData.customerType,
+        });
+      }
+
       setTimeout(() => navigate("/thank-you"), 1500);
     } catch (error) {
       console.error("Submission Error:", error);
@@ -203,9 +217,12 @@ const ContactZoho = () => {
     <Box sx={{ py: { xs: 4, md: 8 }, bgcolor: "grey.100" }}>
       <Container maxWidth="full">
         <Paper elevation={3} sx={{ borderRadius: "20px", p: { xs: 2, sm: 4 } }}>
+          {/* NavHeader (used once above this section) already renders the
+              page's <h1> ("Contact Us") — component is "h2" here so the
+              page has a single h1, same visual style via variant="h4". */}
           <Typography
             variant="h4"
-            component="h1"
+            component="h2"
             gutterBottom
             textAlign="center"
             fontWeight="bold"

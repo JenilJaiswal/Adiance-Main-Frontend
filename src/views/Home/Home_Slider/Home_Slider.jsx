@@ -82,10 +82,7 @@ const BISSlide = () => (
 const Home_Slider = () => {
   return (
     <div style={{ height: "886px", margin: "0 auto" }} className="main">
-      {/* Raw, not a text child: React escapes ' to &#x27; when serialising text,
-          but <style> is a raw-text element so the browser never decodes it —
-          server and client text then disagree and hydration fails. */}
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style>{`
         .carousel-item img {
           max-width: 100%;
           height: auto;
@@ -225,7 +222,7 @@ const Home_Slider = () => {
           .carousel-item { height: 700px !important; }
           .carousel-item img:not(.bis-icon-img) { height: 700px !important; object-fit: cover; }
         }
-      ` }} />
+      `}</style>
 
       <Carousel>
         {slides.map((slide, index) => {
@@ -261,8 +258,11 @@ const Home_Slider = () => {
               />
               <div className="overlay"></div>
               <div className="carousel-caption-custom">
+                {/* The "bis" slide (BISSlide, shown first/active by default)
+                    already renders the page's <h1>; this carousel heading
+                    stays <h2> for every slide so the page has a single h1. */}
                 {index === 1 ? (
-                  <h1 className="slide-heading">{slide.heading}</h1>
+                  <h2 className="slide-heading">{slide.heading}</h2>
                 ) : (
                   <div className="slide-heading">{slide.heading}</div>
                 )}

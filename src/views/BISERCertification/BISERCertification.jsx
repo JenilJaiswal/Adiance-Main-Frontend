@@ -9,6 +9,7 @@ import BISValueSection from './Components/BISValueSection';
 import BISOEMSection from './Components/BISOEMSection';
 import BISBusinessSection from './Components/BISBusinessSection';
 import BISGatewaySection from './Components/BISGatewaySection';
+import BISDeepDiveSection from './Components/BISDeepDiveSection';
 import CTASection from '../../N_Component/CTASection';
 import Footer from '../../components/Footer/Footer';
 
@@ -38,6 +39,13 @@ const BISERCertification = () => {
       <BISOEMSection />
       <BISBusinessSection />
       <BISGatewaySection />
+      {/* Final SEO Audit Checklist rows 25 (comprehensive content, 1500+ words,
+          verification steps, FAQs) and 28 (outbound links to BIS/STQC official
+          sources) — added 2026-09-08. Certificate/registration numbers are
+          deliberately NOT hardcoded here (they're product/model-specific and
+          change), the section links to the official lookup portals instead and
+          points partners to /contact for current certificate copies. */}
+      <BISDeepDiveSection />
       <CTASection
         title="Build Your Brand. Enter the Market with Confidence."
         description="Launch compliant, certified surveillance products—backed by expert manufacturing and certification support."

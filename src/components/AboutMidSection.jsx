@@ -150,7 +150,10 @@ const AboutMidSection = () => {
       >
         {/* First paragraph */}
         <Grid item xs={12} sm={12}>
-          <h1
+          {/* NavHeader (used once above this section) already renders the
+              page's <h1> ("About Us") — this stays <h2> so the page has a
+              single h1. */}
+          <h2
             style={{
               textAlign: "center",
               fontWeight: "bolder",
@@ -159,7 +162,7 @@ const AboutMidSection = () => {
             }}
           >
             WE ARE ADIANCE
-          </h1>
+          </h2>
           <Typography variant="body1" align="justify">
             Adiance is a leading technology company specializing in innovative
             solutions for security, surveillance, and connectivity. We design

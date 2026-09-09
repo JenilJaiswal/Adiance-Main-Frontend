@@ -110,15 +110,69 @@ const legacyRedirects = {
   "/blog/661921c42125c9f9e2d81608": "/blog",
   "/wifi-camera-manufacturer": "/wifi-ptz-camera",
   "/4g-camera": "/4gcamera",
-  // Linked 14 times across 13 published blog posts but never a real route —
-  // S-series content lives at /4gcamera. Same target as the existing
-  // /s-series rule; the longer slug was the one the posts actually used.
-  "/s-series-ai-cctv-cameras": "/4gcamera",
   "/adianance-cloud-based-thermal-camera-f": "/adiance-thermal-camera-f",
   "/blog/679cbf82eec2800b46544898": "/blog",
   "/adiance-cloud-based-thermal-camera-f": "/adiance-thermal-camera-f",
   "/edge-ai-based-ptz-anpr-bullet-camera-vm-72bptz5aive-3":
     "/4k-bullet-anpr-ptz-camera",
+  // Master Action Plan PRIORITY 2: "camera manufacturing services" ranks at
+  // position ~3.1 for 148 impressions but 0 clicks — Google is showing this
+  // dead legacy URL (no live route, no prior redirect) as the result, so the
+  // click never lands anywhere. Send it to the live page that best matches
+  // the query intent instead of dropping the link equity on a 404.
+  "/security-camera-manufacturing": "/oem-services",
+  "/ip-bullet-camera-and-dome-cctv-camera-manufacturer-supplier": "/oem-services",
+  // Matches the fix already live in production (commit 913827f) — 14 dead
+  // links across 13 published blog posts pointed at this old slug.
+  "/s-series-ai-cctv-cameras": "/4gcamera",
+  // Status-audit finding: this legacy blog post and the richer landing page
+  // at the non-/blog/ path are the same article. src/seo/legacyBlogMeta.jsx
+  // already pointed the blog copy's canonical at the landing page (a
+  // correct, deliberate fix), but a canonical tag only *hints* — it doesn't
+  // stop Google crawling and reporting both as duplicate/alternate pages.
+  // A 301 removes the duplicate outright and still passes any link equity
+  // the /blog/ URL had picked up.
+  "/blog/qualcomm-soc-future-edge-ai-surveillance-cameras":
+    "/qualcomm-soc-future-edge-ai-surveillance-cameras",
+  // Status-audit P4: these 5 "-v2" pages are alternate-copy duplicates of
+  // their base country page, already correctly self-canonicalising to the
+  // base (src/seo/pageMetadata.js) but still live as separate crawlable
+  // URLs. 301 them outright rather than leaving Google to rely on the
+  // canonical hint alone.
+  "/cctv-camera-manufacturer-australia-v2": "/cctv-camera-manufacturer-australia",
+  "/cctv-camera-manufacturer-canada-v2": "/cctv-camera-manufacturer-canada",
+  "/cctv-camera-manufacturer-germany-v2": "/cctv-camera-manufacturer-germany",
+  "/cctv-camera-manufacturer-uk-v2": "/cctv-camera-manufacturer-uk",
+  "/cctv-camera-manufacturer-usa-v2": "/cctv-camera-manufacturer-usa",
+
+  // Final Audit Checklist (2026-09-07), row 108: GSC shows a live, indexed
+  // URL with a literal backtick character in it (almost certainly a
+  // malformed inbound link, e.g. someone linked to us using Markdown
+  // backticks by mistake and the raw text leaked into an href). It 404s
+  // with no redirect today. Route it to the real page instead of losing
+  // whatever link equity it has.
+  "/full-solution-oem`-camera-manufacturer": "/full-solution-oem-camera-manufacturer",
+  "/full-solution-oem%60-camera-manufacturer": "/full-solution-oem-camera-manufacturer",
+
+  // Final Audit Checklist, row 107: GSC's "excluded by noindex" report for
+  // these 11 URLs is actually old renamed/retired page slugs now correctly
+  // 404ing (Next's not-found page legitimately carries noindex — that part
+  // is fine) — but several of these old URLs never got a 301 to the page
+  // that replaced them, so the ranking/link-equity they'd built up is being
+  // thrown away instead of passed on. Mapped each to its current equivalent.
+  "/cctv-manufacturer-middle-east": "/oem-camera-manufacturer-middle-east",
+  "/cctv-manufacturer-africa": "/oem-services",
+  "/healthcare-surveillance-manufacturer": "/healthcare",
+  "/partner": "/partners",
+  "/it-cctv-camera-manufacturer": "/oem-services",
+  "/edge-ai-based-object-face-detection-cameras": "/edge-ai-based-object-n-face-detection-cameras",
+  "/edge-ai-based-face-recognition-camera": "/4k-face-recognition-camera",
+  "/customized-cctv-surveillance-cameras": "/custom-cctv-camera-manufacturer",
+  "/adiance-h-265-4g-dome-ptz-camera": "/4g-dome-ptz-camera",
+  // NOTE: /smart-edge-ai-cloud-cctv-camera, /smart-anpr-lpr, /panoramic, and
+  // /wireless-ip-cctv-camera-manufacturer-supplier (also flagged by this
+  // audit) already had redirects further up this file from earlier work —
+  // left as-is rather than duplicated here.
 };
 
 const cspDirectives = [

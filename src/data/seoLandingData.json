@@ -1114,6 +1114,14 @@
       {
         "question": "Does Adiance hold any certifications for its cameras?",
         "answer": "Yes. Adiance cameras are STQC certified (India's Bureau of Indian Standards quality certification), ISO 9001:2015 certified, and comply with CE, FCC, and ONVIF standards. Adiance is also a member of ELCINA, ESAI, and GESIA — India's leading electronics and security industry associations."
+      },
+      {
+        "question": "Is Adiance's non-Chinese SoC camera NDAA Section 889 compliant?",
+        "answer": "Yes. NDAA Section 889 (see the official text at congress.gov, House Bill 5515, 115th Congress) bans federal procurement of surveillance equipment from Hikvision, Dahua, Huawei, ZTE, Hytera, and their subsidiaries. Adiance cameras use Qualcomm or Ambarella SoC and are manufactured outside of that banned-entity list end to end."
+      },
+      {
+        "question": "Who makes non-Chinese CCTV cameras in India?",
+        "answer": "Adiance is an India-based OEM/ODM manufacturer building CCTV and surveillance cameras on non-Chinese SoC platforms (Qualcomm, Ambarella), with BIS-ER registration certified by STQC (see crsbis.in and stqc.gov.in for official verification) and NDAA Section 889 compliance for US government and enterprise buyers."
       }
     ],
     "whyCards": {
@@ -6607,7 +6615,7 @@
     },
     "hero": {
       "title": "White Label Baby Monitor Manufacturer",
-      "subtitle": "The global smart home camera market is projected to reach $14.6 billion by 2028. Adiance manufactures white-label WiFi cameras for retail brands — baby monitors, pet cameras, home security cameras — with a complete ecosystem including custom mobile app, cloud storage, and retail packaging, all under your brand.",
+      "subtitle": "Parents increasingly expect smart, app-connected baby monitors with real-time cry detection and room-condition tracking. Adiance manufactures white-label PTZ baby monitor cameras for retail brands — with cry detection, temperature and humidity sensors, and lullaby playback — with a complete ecosystem including custom mobile app, cloud storage, and retail packaging, all under your brand.",
       "ctaText": "Launch Your Camera Brand"
     },
     "stats": [
@@ -6629,45 +6637,45 @@
       }
     ],
     "intro": {
-      "title": "Baby Monitor Categories for Your Brand",
-      "description": "From baby monitors to outdoor security, Adiance manufactures every category of smart home camera — all white-labeled with your branding, app, and cloud platform. Unlike generic OEM suppliers who only provide hardware, Adiance delivers a complete ecosystem — camera, app, cloud, and packaging — all white-labeled under your brand."
+      "title": "Baby Monitor Models Built for Your Brand",
+      "description": "Adiance designs and manufactures a full line of smart baby monitors — from PTZ nursery cameras to audio-only and multi-room models — all white-labeled with your branding, app, and cloud platform. Unlike generic OEM suppliers who only provide hardware, Adiance delivers the complete baby-monitor ecosystem: camera, app, cloud, and packaging, under your brand."
     },
     "features": [
       {
         "icon": "👶",
-        "title": "Baby Monitor Camera",
-        "description": "PTZ WiFi camera with cry detection, temperature monitoring, lullaby playback, and night vision. The fastest-growing category in baby monitors."
+        "title": "PTZ Nursery Camera",
+        "description": "360-degree pan-tilt-zoom camera with AI cry detection, temperature and humidity sensors, two-way audio, and lullaby playback — Adiance's flagship baby monitor format."
       },
       {
-        "icon": "🐾",
-        "title": "Pet Camera",
-        "description": "Auto-tracking WiFi camera designed for pet monitoring with treat dispenser integration, bark detection, and activity zone alerts."
+        "icon": "🌙",
+        "title": "Breathing & Movement Monitor",
+        "description": "Camera-based movement tracking that alerts parents to unusual stillness in the crib, layered on top of standard video and audio monitoring."
       },
       {
-        "icon": "🏠",
-        "title": "Indoor Security Camera",
-        "description": "Compact WiFi camera for home security with person detection, motion zones, and privacy mode. The essential smart home product."
+        "icon": "📺",
+        "title": "Multi-Room Split-Screen Monitor",
+        "description": "App support for viewing multiple nursery cameras at once, built for parents with more than one child or who want coverage in both the nursery and playroom."
       },
       {
-        "icon": "👴",
-        "title": "Elder Care Camera",
-        "description": "Activity monitoring camera for elderly care with fall detection, inactivity alerts, and emergency SOS button integration."
+        "icon": "🌙",
+        "title": "Smart Night Light Camera",
+        "description": "Baby monitor with an integrated, app-controlled night light and wake-window scheduling — a popular upsell feature for premium baby-monitor SKUs."
       },
       {
-        "icon": "🌧️",
-        "title": "Outdoor WiFi Camera",
-        "description": "Weather-resistant outdoor camera with spotlight, siren, color night vision, and solar panel option for wire-free installation."
+        "icon": "🔊",
+        "title": "Audio-Only Baby Monitor",
+        "description": "A simpler, lower-cost monitor for brands that want an entry-level SKU without a camera, using two-way audio and sound-level alerts only."
       },
       {
-        "icon": "📷",
-        "title": "Nanny Camera",
-        "description": "Discreet indoor camera designed for childcare monitoring with compact form factor, wide-angle lens, and continuous recording."
+        "icon": "🎒",
+        "title": "Portable Travel Baby Monitor",
+        "description": "Compact, battery-powered monitor designed for travel cots and grandparents' homes, with fast setup and a smaller companion app footprint."
       }
     ],
     "faq": [
       {
         "question": "What baby monitors does Adiance manufacture as OEM?",
-        "answer": "Adiance manufactures a complete range of smart home WiFi cameras for OEM/white-label partners including baby monitors with PTZ and cry detection, pet cameras with auto-tracking, indoor home security cameras, elder care monitoring cameras, and outdoor WiFi security cameras. All cameras come with a white-label mobile app, cloud storage platform, and complete ecosystem under your brand."
+        "answer": "Adiance manufactures PTZ nursery cameras with cry detection, breathing/movement monitors, multi-room split-screen monitors, smart night-light cameras, audio-only monitors, and portable travel monitors — all as OEM/white-label products. Every model ships with a white-label mobile app, cloud storage platform, and complete ecosystem under your brand. (Adiance also manufactures pet cameras, indoor/outdoor security cameras, and elder-care cameras for brands that want to launch more than one category.)"
       },
       {
         "question": "Can I launch my own smart home camera brand with Adiance?",
@@ -6679,7 +6687,7 @@
       },
       {
         "question": "Are Adiance baby monitors non-Chinese manufactured?",
-        "answer": "Yes. Adiance cameras are designed and manufactured in India using non-restricted SoC chipsets. This makes them an ideal alternative for brands seeking to diversify away from Chinese supply chains, comply with NDAA regulations, or market their products as non-Chinese origin — a growing competitive advantage in the US, European, and Australian retail markets."
+        "answer": "Yes. Adiance baby monitors are designed and manufactured in India using non-restricted SoC chipsets. This makes them an ideal alternative for baby monitor brands seeking to diversify away from Chinese supply chains, comply with NDAA regulations, or market their products as non-Chinese origin — a growing advantage in the US, European, and Australian baby-product retail markets."
       },
       {
         "question": "Does Adiance provide a mobile app with the cameras?",
@@ -6699,15 +6707,15 @@
       }
     ],
     "marketContext": {
-      "heading": "Baby Monitor Categories for Your Brand",
+      "heading": "Baby Monitor Models for Your Brand",
       "paragraphs": [
-        "From baby monitors to outdoor security, Adiance manufactures every category of smart home camera — all white-labeled with your branding, app, and cloud platform.",
-        "PTZ WiFi camera with cry detection, temperature monitoring, lullaby playback, and night vision. The fastest-growing category in baby monitors.",
-        "Auto-tracking WiFi camera designed for pet monitoring with treat dispenser integration, bark detection, and activity zone alerts.",
-        "Compact WiFi camera for home security with person detection, motion zones, and privacy mode. The essential smart home product.",
-        "Activity monitoring camera for elderly care with fall detection, inactivity alerts, and emergency SOS button integration.",
-        "Weather-resistant outdoor camera with spotlight, siren, color night vision, and solar panel option for wire-free installation.",
-        "Discreet indoor camera designed for childcare monitoring with compact form factor, wide-angle lens, and continuous recording."
+        "Adiance manufactures a full line of smart baby monitors — all white-labeled with your branding, app, and cloud platform.",
+        "The PTZ nursery camera is the flagship format: 360-degree pan-tilt-zoom coverage with AI cry detection, temperature and humidity sensors, two-way audio, and lullaby playback.",
+        "Breathing and movement monitors add crib-stillness alerts on top of standard video and audio monitoring — a fast-growing feature request from premium baby brands.",
+        "Multi-room split-screen support lets parents with more than one child, or coverage needs in both nursery and playroom, view several cameras from one app.",
+        "Smart night-light cameras combine an app-controlled light with wake-window scheduling — a popular upsell SKU.",
+        "Audio-only monitors give brands a simpler, lower-cost entry-level product using two-way audio and sound alerts without a camera.",
+        "Portable travel monitors are compact and battery-powered, built for travel cots and grandparents' homes."
       ]
     },
     "whyCards": {
@@ -6716,12 +6724,12 @@
         {
           "icon": "📱",
           "title": "White-Label Mobile App",
-          "description": "Fully branded iOS and Android app published under your developer account. Supports live view, two-way audio, motion alerts, cloud playback, device sharing, and push notifications. Your customers see only your brand — never Adiance."
+          "description": "Fully branded iOS and Android app published under your developer account, built for baby-monitor features — cry detection, temperature/humidity tracking, lullaby playback, and multi-room split-screen viewing. Your customers see only your brand — never Adiance."
         },
         {
           "icon": "☁",
           "title": "Cloud Storage Platform",
-          "description": "White-label cloud storage with flexible subscription tiers you control. Offer free basic plans and premium paid plans to generate recurring monthly revenue. AWS-backed infrastructure with 99.9% uptime SLA."
+          "description": "White-label cloud storage sized for continuous nursery footage, with flexible subscription tiers you control. Offer free basic plans and premium paid plans to generate recurring monthly revenue from your baby monitor line."
         },
         {
           "icon": "📦",
@@ -6804,6 +6812,11 @@
           "description": "Private label sellers on Amazon, Walmart Marketplace, and Shopify looking to launch their own smart home camera brand with FBA-ready fulfillment and A+ content support."
         },
         {
+          "icon": "🍼",
+          "title": "Baby & Nursery Product Brands",
+          "description": "Baby-gear companies (strollers, cribs, feeding) adding a connected monitor to their lineup to build a recurring app and subscription relationship with new parents."
+        },
+        {
           "icon": "🌎",
           "title": "D2C Consumer Brands",
           "description": "Direct-to-consumer brands expanding into smart home products. Launch a camera line that integrates with your existing brand ecosystem and customer base."
@@ -6821,7 +6834,7 @@
         {
           "icon": "🌐",
           "title": "Telecom & ISP Providers",
-          "description": "Telecom operators and internet service providers bundling baby monitors with broadband plans. White-label cameras with your app and cloud infrastructure."
+          "description": "Telecom operators and internet service providers bundling baby monitors with broadband or smart-home plans. White-label cameras with your app and cloud infrastructure."
         },
         {
           "icon": "🔒",
@@ -6859,7 +6872,7 @@
       {
         "title": "Baby Monitor OEM Guide",
         "url": "/blog/how-to-launch-smart-home-camera-brand-oem-guide",
-        "description": "Complete blog guide for retail brands"
+        "description": "Complete blog guide for baby monitor brands"
       }
     ]
   },
@@ -6872,7 +6885,7 @@
     },
     "hero": {
       "title": "White Label Pet Camera Manufacturer",
-      "subtitle": "The global smart home camera market is projected to reach $14.6 billion by 2028. Adiance manufactures white-label WiFi cameras for retail brands — baby monitors, pet cameras, home security cameras — with a complete ecosystem including custom mobile app, cloud storage, and retail packaging, all under your brand.",
+      "subtitle": "The global pet camera market is growing fast as pet owners want to check in on their dogs and cats from anywhere. Adiance manufactures white-label, auto-tracking pet cameras for retail brands — with treat-dispenser integration, bark/meow detection, and a complete ecosystem including custom mobile app, cloud storage, and retail packaging, all under your brand.",
       "ctaText": "Launch Your Camera Brand"
     },
     "stats": [
@@ -6894,45 +6907,45 @@
       }
     ],
     "intro": {
-      "title": "Pet Camera Categories for Your Brand",
-      "description": "From pet cameras to outdoor security, Adiance manufactures every category of smart home camera — all white-labeled with your branding, app, and cloud platform. Unlike generic OEM suppliers who only provide hardware, Adiance delivers a complete ecosystem — camera, app, cloud, and packaging — all white-labeled under your brand."
+      "title": "Pet Camera Models Built for Your Brand",
+      "description": "Adiance designs and manufactures a full line of WiFi pet cameras — from auto-tracking indoor cameras to treat-dispensing and outdoor-rated models — all white-labeled with your branding, app, and cloud platform. Unlike generic OEM suppliers who only provide hardware, Adiance delivers the complete pet-camera ecosystem: camera, app, cloud, and packaging, under your brand."
     },
     "features": [
       {
         "icon": "🐾",
-        "title": "Pet Camera",
-        "description": "Auto-tracking WiFi camera designed for pet monitoring with treat dispenser integration, bark detection, and activity zone alerts."
+        "title": "Auto-Tracking Pet Camera",
+        "description": "AI-powered pan-tilt camera that follows your pet around the room, with bark and meow detection and two-way audio so owners can talk to their pet remotely."
       },
       {
-        "icon": "👶",
-        "title": "Baby Monitor Camera",
-        "description": "PTZ WiFi camera with cry detection, temperature monitoring, lullaby playback, and night vision. The fastest-growing category in smart home cameras."
+        "icon": "🍖",
+        "title": "Treat-Dispensing Camera",
+        "description": "Combines live video with a remote treat dispenser, letting owners reward their pet on demand straight from the app — one of the fastest-growing pet camera formats."
       },
       {
-        "icon": "🏠",
-        "title": "Indoor Security Camera",
-        "description": "Compact WiFi camera for home security with person detection, motion zones, and privacy mode. The essential smart home product."
-      },
-      {
-        "icon": "👴",
-        "title": "Elder Care Camera",
-        "description": "Activity monitoring camera for elderly care with fall detection, inactivity alerts, and emergency SOS button integration."
+        "icon": "📍",
+        "title": "Activity Zone & Alert Camera",
+        "description": "Set custom activity zones (near doors, furniture, or food bowls) and get instant alerts when a pet enters them — useful for training and behavior monitoring."
       },
       {
         "icon": "🌧️",
-        "title": "Outdoor WiFi Camera",
-        "description": "Weather-resistant outdoor camera with spotlight, siren, color night vision, and solar panel option for wire-free installation."
+        "title": "Outdoor & Backyard Pet Camera",
+        "description": "Weather-resistant camera for yards and patios, with color night vision and motion alerts so owners can keep an eye on pets that spend time outside."
       },
       {
-        "icon": "📷",
-        "title": "Nanny Camera",
-        "description": "Discreet indoor camera designed for childcare monitoring with compact form factor, wide-angle lens, and continuous recording."
+        "icon": "🐶",
+        "title": "Multi-Pet Monitoring Camera",
+        "description": "Wide-angle lens and multi-device app support for households with more than one pet, so owners can check on every animal from a single app."
+      },
+      {
+        "icon": "📱",
+        "title": "Compact Travel Pet Camera",
+        "description": "A smaller, portable form factor for pet sitters, boarding facilities, and owners who travel with their pets and want a quick-to-set-up camera."
       }
     ],
     "faq": [
       {
         "question": "What pet cameras does Adiance manufacture as OEM?",
-        "answer": "Adiance manufactures a complete range of smart home WiFi cameras for OEM/white-label partners including baby monitors with PTZ and cry detection, pet cameras with auto-tracking, indoor home security cameras, elder care monitoring cameras, and outdoor WiFi security cameras. All cameras come with a white-label mobile app, cloud storage platform, and complete ecosystem under your brand."
+        "answer": "Adiance manufactures auto-tracking pet cameras, treat-dispensing cameras, activity-zone and alert cameras, outdoor/backyard pet cameras, multi-pet monitoring cameras, and compact travel pet cameras — all as OEM/white-label products. Every model ships with a white-label mobile app, cloud storage platform, and complete ecosystem under your brand. (Adiance also manufactures baby monitors, indoor/outdoor security cameras, and elder-care cameras for brands that want to launch more than one category.)"
       },
       {
         "question": "Can I launch my own smart home camera brand with Adiance?",
@@ -6944,7 +6957,7 @@
       },
       {
         "question": "Are Adiance pet cameras non-Chinese manufactured?",
-        "answer": "Yes. Adiance cameras are designed and manufactured in India using non-restricted SoC chipsets. This makes them an ideal alternative for brands seeking to diversify away from Chinese supply chains, comply with NDAA regulations, or market their products as non-Chinese origin — a growing competitive advantage in the US, European, and Australian retail markets."
+        "answer": "Yes. Adiance pet cameras are designed and manufactured in India using non-restricted SoC chipsets. This makes them an ideal alternative for pet camera brands seeking to diversify away from Chinese supply chains, comply with NDAA regulations, or market their products as non-Chinese origin — a growing advantage in the US, European, and Australian pet-tech retail markets."
       },
       {
         "question": "Does Adiance provide a mobile app with the cameras?",
@@ -6964,25 +6977,12 @@
       }
     ],
     "productShowcase": {
-      "heading": "Pet Camera Categories for Your Brand",
+      "heading": "Pet Camera Models for Your Brand",
       "products": [
         {
           "badge": "BEST SELLER",
-          "title": "Baby Monitor Camera",
-          "description": "PTZ WiFi camera with cry detection, temperature monitoring, lullaby playback, and night vision. The fastest-growing category in pet cameras.",
-          "features": [
-            "360-degree PTZ coverage",
-            "AI cry detection alerts",
-            "Two-way audio with lullaby",
-            "Temperature & humidity sensor",
-            "Night vision (IR + starlight)",
-            "White-label app with baby mode"
-          ]
-        },
-        {
-          "badge": "HIGH DEMAND",
-          "title": "Pet Camera",
-          "description": "Auto-tracking WiFi camera designed for pet monitoring with treat dispenser integration, bark detection, and activity zone alerts.",
+          "title": "Auto-Tracking Pet Camera",
+          "description": "AI-powered pan-tilt camera that follows your pet around the room, with bark/meow detection and two-way audio. The most requested pet camera format among Adiance's retail partners.",
           "features": [
             "AI auto-tracking (follows pet)",
             "Bark & meow detection",
@@ -6993,55 +6993,68 @@
           ]
         },
         {
-          "badge": "CORE",
-          "title": "Indoor Security Camera",
-          "description": "Compact WiFi camera for home security with person detection, motion zones, and privacy mode. The essential smart home product.",
+          "badge": "HIGH DEMAND",
+          "title": "Treat-Dispensing Camera",
+          "description": "Live video combined with a remote treat dispenser, controlled entirely from your branded app — a strong differentiator for premium pet-brand product lines.",
           "features": [
-            "AI person detection",
-            "Customizable motion zones",
-            "Physical privacy shutter",
-            "Local SD card + cloud storage",
-            "Google Home / Alexa compatible",
-            "2MP / 3MP / 5MP options"
-          ]
-        },
-        {
-          "badge": "GROWING",
-          "title": "Elder Care Camera",
-          "description": "Activity monitoring camera for elderly care with fall detection, inactivity alerts, and emergency SOS button integration.",
-          "features": [
-            "AI fall detection",
-            "Inactivity alerts",
-            "SOS button integration",
-            "Two-way audio (amplified)",
-            "Family sharing (multi-user)",
-            "HIPAA-ready data handling"
+            "Remote treat dispensing",
+            "HD live video with zoom",
+            "Scheduled treat reminders",
+            "Two-way audio",
+            "Night vision",
+            "App-based portion control"
           ]
         },
         {
           "badge": "OUTDOOR",
-          "title": "Outdoor WiFi Camera",
-          "description": "Weather-resistant outdoor camera with spotlight, siren, color night vision, and solar panel option for wire-free installation.",
+          "title": "Outdoor & Backyard Pet Camera",
+          "description": "Weather-resistant camera built for yards and patios, with color night vision so owners can check on outdoor pets any time of day.",
           "features": [
             "IP66 weatherproof",
-            "Built-in spotlight + siren",
             "Color night vision",
+            "Motion & pet detection",
             "Solar panel compatible",
-            "Vehicle & person detection",
+            "Wide-angle yard coverage",
             "Battery or wired options"
           ]
         },
         {
-          "badge": "NICHE",
-          "title": "Nanny Camera",
-          "description": "Discreet indoor camera designed for childcare monitoring with compact form factor, wide-angle lens, and continuous recording.",
+          "badge": "MULTI-PET",
+          "title": "Multi-Pet Monitoring Camera",
+          "description": "Wide-angle coverage and multi-device app support built for households with more than one pet.",
+          "features": [
+            "140-degree wide angle",
+            "Multi-user app access",
+            "Individual pet activity logs",
+            "Cloud + local storage",
+            "Person & pet detection",
+            "Low-light performance"
+          ]
+        },
+        {
+          "badge": "COMPACT",
+          "title": "Travel Pet Camera",
+          "description": "A smaller, portable camera for pet sitters, boarding facilities, and owners on the move.",
           "features": [
             "Ultra-compact design",
-            "140-degree wide angle",
-            "Continuous recording mode",
-            "Person detection alerts",
-            "Magnetic mount",
-            "Discreet packaging option"
+            "Quick setup (under 2 minutes)",
+            "Portable battery pack option",
+            "Live view + alerts",
+            "Magnetic / clip mount",
+            "Travel case included"
+          ]
+        },
+        {
+          "badge": "CORE",
+          "title": "Indoor Pet Security Camera",
+          "description": "A dependable, entry-level indoor camera for brands that want a simpler, lower-cost pet camera SKU alongside their flagship model.",
+          "features": [
+            "AI pet & person detection",
+            "Customizable motion zones",
+            "Local SD card + cloud storage",
+            "Google Home / Alexa compatible",
+            "2MP / 3MP options",
+            "Budget-friendly BOM"
           ]
         }
       ]
@@ -7052,12 +7065,12 @@
         {
           "icon": "📱",
           "title": "White-Label Mobile App",
-          "description": "Fully branded iOS and Android app published under your developer account. Supports live view, two-way audio, motion alerts, cloud playback, device sharing, and push notifications. Your customers see only your brand — never Adiance."
+          "description": "Fully branded iOS and Android app published under your developer account, built for pet-camera features — auto-tracking, treat dispensing, bark/meow alerts, two-way audio, and cloud playback. Your customers see only your brand — never Adiance."
         },
         {
           "icon": "☁",
           "title": "Cloud Storage Platform",
-          "description": "White-label cloud storage with flexible subscription tiers you control. Offer free basic plans and premium paid plans to generate recurring monthly revenue. AWS-backed infrastructure with 99.9% uptime SLA."
+          "description": "White-label cloud storage built to handle continuous pet-activity footage, with flexible subscription tiers you control. Offer free basic plans and premium paid plans to generate recurring monthly revenue from your pet camera line."
         },
         {
           "icon": "📦",
@@ -7140,6 +7153,11 @@
           "description": "Private label sellers on Amazon, Walmart Marketplace, and Shopify looking to launch their own smart home camera brand with FBA-ready fulfillment and A+ content support."
         },
         {
+          "icon": "🐾",
+          "title": "Pet-Tech & Pet Product Brands",
+          "description": "Pet product companies (food, toys, accessories) adding a connected camera to their lineup to build a recurring app and subscription relationship with existing customers."
+        },
+        {
           "icon": "🌎",
           "title": "D2C Consumer Brands",
           "description": "Direct-to-consumer brands expanding into smart home products. Launch a camera line that integrates with your existing brand ecosystem and customer base."
@@ -7157,7 +7175,7 @@
         {
           "icon": "🌐",
           "title": "Telecom & ISP Providers",
-          "description": "Telecom operators and internet service providers bundling pet cameras with broadband plans. White-label cameras with your app and cloud infrastructure."
+          "description": "Telecom operators and internet service providers bundling pet cameras with broadband or smart-home plans. White-label cameras with your app and cloud infrastructure."
         },
         {
           "icon": "🔒",
@@ -7195,7 +7213,7 @@
       {
         "title": "Pet Camera OEM Guide",
         "url": "/blog/how-to-launch-smart-home-camera-brand-oem-guide",
-        "description": "Complete blog guide for retail brands"
+        "description": "Complete blog guide for pet camera brands"
       }
     ]
   }

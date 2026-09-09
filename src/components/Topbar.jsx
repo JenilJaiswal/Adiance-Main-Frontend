@@ -45,16 +45,23 @@ const Topbar = () => {
     handleMenuClose();
   };
 
+  // Kept in sync with the canonical NAP (Footer.jsx, ContactUs.jsx, and the
+  // Organization schema in app/layout.js) — Final Audit Checklist row 61
+  // flagged a phone/email inconsistency associated with the domain, and this
+  // component previously carried a different number/email (+91 9510222944,
+  // info@adiance.com) than everywhere else on the site. This component isn't
+  // currently imported anywhere, but it's fixed here too so it can't
+  // reintroduce the inconsistency if it's ever wired back in.
   const getContactInfo = (country) => {
     switch (country) {
       case "India":
-        return { phone: "+91 9510222944", email: "info@adiance.com" };
+        return { phone: "+91 9687779999", email: "sales@adiance.com" };
       case "USA":
-        return { phone: "(408) 359-8800", email: "info@adiance.com" };
+        return { phone: "+1-281-857-2584", email: "dev@adiance.com" };
       case "Asia":
-        return { phone: "+91 9510222944", email: "info@adiance.com" };
+        return { phone: "+91 9687779999", email: "sales@adiance.com" };
       default:
-        return { phone: "+91 9510222944", email: "info@adiance.com" };
+        return { phone: "+91 9687779999", email: "sales@adiance.com" };
     }
   };
 

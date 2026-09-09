@@ -56,9 +56,11 @@ const EventMidSection = () => {
       <section className="event-mid-intro-section">
         <div className="event-mid-container">
           <div className="event-mid-section-header">
-            <h1 className="event-mid-section-title">
+            {/* The hero banner above ("Events") is the page's <h1>; this
+                intro heading stays <h2> so the page has a single h1. */}
+            <h2 className="event-mid-section-title">
               Collaborating Better, Stronger and Across Industries
-            </h1>
+            </h2>
             <p className="event-mid-section-desc">
               We actively participate in major OEM/ODM, CCTV manufacturing, and security
               technology exhibitions to connect with brands, system integrators, distributors,
