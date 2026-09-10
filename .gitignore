@@ -31,3 +31,4 @@ yarn-error.log*
 /site-enable
 .vercel
 .claude/
+Claude outputs/
