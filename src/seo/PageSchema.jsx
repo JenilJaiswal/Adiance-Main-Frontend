@@ -15,41 +15,10 @@
 import { JsonLd } from "./JsonLd";
 import { CATALOG } from "./pageMetadata";
 import landingData from "../data/seoLandingData.json";
+import { buildBreadcrumbs } from "./breadcrumbUtils";
+import { Breadcrumbs } from "./Breadcrumbs";
 
 const SITE = "https://www.adiance.com";
-
-function prettifySegment(seg) {
-  return seg
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase())
-    .replace(/\bCctv\b/g, "CCTV")
-    .replace(/\bOem\b/g, "OEM")
-    .replace(/\bOdm\b/g, "ODM")
-    .replace(/\bJdm\b/g, "JDM")
-    .replace(/\bAi\b/g, "AI")
-    .replace(/\bNdaa\b/g, "NDAA")
-    .replace(/\bGdpr\b/g, "GDPR")
-    .replace(/\bAnpr\b/g, "ANPR")
-    .replace(/\bLpr\b/g, "LPR")
-    .replace(/\bPtz\b/g, "PTZ")
-    .replace(/\bUsa\b/g, "USA")
-    .replace(/\bUk\b/g, "UK")
-    .replace(/\bUae\b/g, "UAE")
-    .replace(/\bSoc\b/g, "SoC");
-}
-
-function buildBreadcrumbs(path) {
-  const items = [{ name: "Home", url: "/" }];
-  if (path === "/" || !path) return items;
-
-  const segments = path.split("/").filter(Boolean);
-  let url = "";
-  segments.forEach((seg) => {
-    url += "/" + seg;
-    items.push({ name: prettifySegment(seg), url });
-  });
-  return items;
-}
 
 function breadcrumbSchema(path) {
   const items = buildBreadcrumbs(path);
@@ -99,11 +68,16 @@ function faqSchemaFromLanding(slug) {
 }
 
 /**
- * Server component. Drops BreadcrumbList + WebPage JSON-LD into the page.
+ * Server component. Drops BreadcrumbList + WebPage JSON-LD into the page,
+ * AND (checklist row 59, 2026-09-10) renders the matching visible breadcrumb
+ * nav via <Breadcrumbs> — so every one of the ~150 existing call sites for
+ * <PageSchema> picks up the visible trail automatically, with no per-page
+ * changes needed. Pass hideBreadcrumbs to suppress the visible nav on a page
+ * that already has its own (e.g. if a future page builds a custom one).
  * If `landingSlug` is supplied and matches an entry in seoLandingData.json,
  * a FAQPage block is also emitted.
  */
-export function PageSchema({ path, title, description, landingSlug }) {
+export function PageSchema({ path, title, description, landingSlug, hideBreadcrumbs = false }) {
   if (!path) return null;
   const faq = landingSlug ? faqSchemaFromLanding(landingSlug) : null;
   return (
@@ -111,6 +85,7 @@ export function PageSchema({ path, title, description, landingSlug }) {
       <JsonLd data={webPageSchema(path, title, description)} />
       <JsonLd data={breadcrumbSchema(path)} />
       {faq ? <JsonLd data={faq} /> : null}
+      {!hideBreadcrumbs ? <Breadcrumbs path={path} /> : null}
     </>
   );
 }

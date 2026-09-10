@@ -34,7 +34,10 @@ const WarrantyService = () => {
       <Header />
       <NavHeader text={"Warranty Service"} />
       <div style={{ margin: "5% 10%" }}>
-        <Typography variant="h6" gutterBottom>
+        {/* Checklist heading-hierarchy audit (2026-09-10): was a bare <h6>
+            right after the page's <h1> — see NavHeader.jsx. Not a real content
+            heading, so now a <p>; real section titles below become <h2>. */}
+        <Typography variant="h6" component="p" gutterBottom>
           Last updated: January 25th, 2021
         </Typography>
         <Typography variant="body1" paragraph>
@@ -101,6 +104,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Compatibility
@@ -124,6 +128,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Reservations and Pre-Orders
@@ -175,6 +180,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Payment
@@ -203,6 +209,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Subscription Services
@@ -279,6 +286,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Availability and Pricing
@@ -307,6 +315,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Sales Tax
@@ -325,6 +334,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Resale and Title Transfer
@@ -347,6 +357,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Shipping and Delivery
@@ -378,6 +389,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Installation
@@ -404,6 +416,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Returns
@@ -443,6 +456,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Disputes and Arbitration
@@ -569,6 +583,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Warranties and Disclaimers
@@ -618,6 +633,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Limitation of Liability
@@ -654,6 +670,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Data Protection
@@ -680,6 +697,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Electronic Communications
@@ -704,6 +722,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Notifications
@@ -728,6 +747,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Force Majeure
@@ -754,6 +774,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Severability
@@ -775,6 +796,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Survivability
@@ -792,6 +814,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Waiver
@@ -811,6 +834,7 @@ const WarrantyService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Governing Law and Jurisdiction

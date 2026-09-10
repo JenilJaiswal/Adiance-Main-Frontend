@@ -36,7 +36,12 @@ const TermsOfService = () => {
       <Header />
       <NavHeader text={"Terms of service"} />
       <div style={{ margin: "5% 10%" }}>
-        <Typography variant="h6" gutterBottom>
+        {/* Checklist heading-hierarchy audit (2026-09-10): was variant="h6" with
+            no `component` override, so MUI rendered a real <h6> here — right
+            after the page's now-real <h1> (NavHeader), skipping h2-h5. This
+            line isn't a content heading anyway, so it's now a <p>, not a
+            heading at all; the real section titles below become <h2>. */}
+        <Typography variant="h6" component="p" gutterBottom>
           Last updated: January 25th, 2021
         </Typography>
         <Typography variant="body1" paragraph>
@@ -47,6 +52,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Your relationship with Adiance
@@ -72,6 +78,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Accepting the Terms
@@ -105,6 +112,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Language of the Terms
@@ -130,6 +138,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Provision of the Services by Adiance
@@ -159,6 +168,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Use of the Services by you
@@ -208,6 +218,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Privacy and your personal information
@@ -229,6 +240,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Content in the Services
@@ -313,6 +325,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Other content
@@ -346,6 +359,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Proprietary rights
@@ -406,6 +420,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               License from Adiance
@@ -445,6 +460,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Content license from you
@@ -463,6 +479,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Software updates
@@ -485,6 +502,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Ending your relationship with Adiance
@@ -547,6 +565,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               EXCLUSION OF WARRANTIES
@@ -619,6 +638,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               LIMITATION OF LIABILITY
@@ -695,6 +715,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Indemnification
@@ -729,6 +750,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Copyright and trade mark policies
@@ -749,6 +771,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Advertisement
@@ -780,6 +803,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Taxes, Raffles and Auctions.
@@ -823,6 +847,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Changes to the Terms
@@ -845,6 +870,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Dispute Resolution
@@ -925,6 +951,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Force Majeure
@@ -947,6 +974,7 @@ const TermsOfService = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Miscellaneous

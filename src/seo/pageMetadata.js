@@ -726,8 +726,24 @@ export function buildMetadata(path, override = {}) {
     description,
     alternates: {
       canonical,
+      // Checklist row 17 (2026-09-10): sitewide hreflang. Every locale points
+      // at the SAME canonical URL — Google's documented pattern for a single
+      // English-only URL that serves multiple regions/countries, rather than
+      // one URL per locale. Used because the Organization/LocalBusiness
+      // schema in app/layout.js declares areaServed "Global" (with US/CA/MX
+      // as the dedicated support region) and the ~40 /cctv-camera-manufacturer-*
+      // country pages already target those markets with English copy — there
+      // is no forked/translated content per locale to point to instead.
+      // (Same pattern used for arcisai.io; see src/data/hreflang.js there.)
       languages: {
         en: `${SITE}${canonical}`,
+        "en-IN": `${SITE}${canonical}`,
+        "en-US": `${SITE}${canonical}`,
+        "en-GB": `${SITE}${canonical}`,
+        "en-AE": `${SITE}${canonical}`,
+        "en-CA": `${SITE}${canonical}`,
+        "en-AU": `${SITE}${canonical}`,
+        "en-SG": `${SITE}${canonical}`,
         "x-default": `${SITE}${canonical}`,
       },
     },

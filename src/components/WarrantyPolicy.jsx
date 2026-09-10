@@ -32,15 +32,22 @@ const WarrantyPolicy = () => {
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <Header />
-      <NavHeader text={"Warranty Service"} />
+      {/* Checklist heading-hierarchy audit (2026-09-10): this was hardcoded to
+          "Warranty Service" — the same H1 text as the separate /warranty-service
+          page — so /warranty-policy had no distinct H1 of its own. */}
+      <NavHeader text={"Warranty Policy"} />
       <div style={{ margin: "5% 10%" }}>
-        <Typography variant="h6" gutterBottom>
+        {/* Checklist heading-hierarchy audit (2026-09-10): was a bare <h6>
+            right after the page's <h1> — see NavHeader.jsx. Not a real content
+            heading, so now a <p>; real section titles below become <h2>. */}
+        <Typography variant="h6" component="p" gutterBottom>
           Last updated: January 25th, 2021
         </Typography>
         <ol>
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Warranty Policy
@@ -65,6 +72,7 @@ const WarrantyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Replacement Guarantee
@@ -123,6 +131,7 @@ const WarrantyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               Replacement

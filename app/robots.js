@@ -45,10 +45,11 @@ export default function robots() {
       },
       ...AI_BOTS.map((ua) => ({ userAgent: ua, allow: "/" })),
     ],
-    // public/image-sitemap.xml is an empty stub (no <url> entries), so it is
-    // not advertised here — pointing Google at an empty sitemap only produces
-    // a Search Console error. Re-add once it is actually populated.
-    sitemap: [`${SITE}/sitemap.xml`],
+    // Checklist row 40 (2026-09-10): public/image-sitemap.xml was an empty
+    // stub (no <url> entries) — now populated with 91 real <image:image>
+    // entries (verified against public/images/ before writing), so it's safe
+    // to advertise here.
+    sitemap: [`${SITE}/sitemap.xml`, `${SITE}/image-sitemap.xml`],
     // NOTE: no `host` field — it emits a `Host:` directive, which is a
     // Yandex-only extension that Google flags as unsupported in GSC.
   };

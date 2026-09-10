@@ -36,7 +36,12 @@ const PrivacyPolicy = () => {
       <Header />
       <NavHeader text={"Privacy & Cookie Policy"} />
       <div style={{ margin: "5% 10%" }}>
-        <Typography variant="h6" gutterBottom>
+        {/* Checklist heading-hierarchy audit (2026-09-10): was variant="h6" with
+            no `component` override, so MUI rendered a real <h6> here — right
+            after the page's now-real <h1> (NavHeader), skipping h2-h5. This
+            line isn't a content heading anyway, so it's now a <p>, not a
+            heading at all; the real section titles below become <h2>. */}
+        <Typography variant="h6" component="p" gutterBottom>
           Last updated: January 25th, 2021
         </Typography>
         <Typography variant="body1" paragraph>
@@ -65,6 +70,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               THE INFORMATION WE COLLECT
@@ -165,6 +171,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               HOW WE USE THE INFORMATION WE COLLECT
@@ -260,6 +267,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               THE INFORMATION WE SHARE
@@ -344,6 +352,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               HOW WE PROTECT PERSONAL INFORMATION
@@ -391,6 +400,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               HOW TO UPDATE YOUR PERSONAL INFORMATION
@@ -419,6 +429,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               ABOUT COOKIES, TRACKING CHOICES, AND THIRD PARTY SERVICE PROVIDERS
@@ -500,6 +511,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               INTERNATIONAL TRANSFER OF YOUR PERSONAL INFOMRATION
@@ -522,6 +534,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               LINKS TO OTHER SITES
@@ -544,6 +557,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               DISPUTES
@@ -564,6 +578,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               CHILDREN’S PRIVACY
@@ -656,6 +671,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               YOUR PRIVACY RIGHTS
@@ -689,6 +705,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               GENERAL DATA PROTECTION REGULATION (GDPR)
@@ -710,6 +727,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               PRIVACY POLICY UPDATES
@@ -740,6 +758,7 @@ const PrivacyPolicy = () => {
           <li>
             <Typography
               variant="h6"
+              component="h2"
               style={{ marginTop: "2.5%", marginBottom: "1%" }}
             >
               HOW TO CONTACT US

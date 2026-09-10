@@ -10,36 +10,30 @@ const imageUrls = [
   // "/images/Adiance-Banner-003.webp",
 ];
 
-// Deterministic pick from `text` (a simple string hash) instead of
-// Math.random(): this component now renders on the server (see the
-// dynamic-import ssr fix across ClientPage.jsx files), and Math.random()
-// picking a different image on the server vs. the client on hydration was a
-// React hydration mismatch on every page that renders <NavHeader>.
+// Deterministic pick instead of Math.random(): a random image on every render
+// caused an SSR/client hydration mismatch (server picks one image, the client
+// re-render can pick another) and made the header image non-reproducible for
+// testing. Hashing the page's own title text keeps the pick stable across
+// server and client for a given page, while still varying page to page.
 const getImageUrlFor = (text) => {
-  const key = String(text || "");
+  if (!text) return imageUrls[0];
   let hash = 0;
-  for (let i = 0; i < key.length; i++) {
-    hash = (hash * 31 + key.charCodeAt(i)) | 0;
+  for (let i = 0; i < text.length; i++) {
+    hash = (hash * 31 + text.charCodeAt(i)) >>> 0;
   }
-  const index = Math.abs(hash) % imageUrls.length;
-  return imageUrls[index];
+  return imageUrls[hash % imageUrls.length];
 };
 
 const NavHeader = ({ text }) => {
-  const randomImageUrl = getImageUrlFor(text);
+  const imageUrl = getImageUrlFor(text);
 
   return (
     <div className="nav-header">
-      <img src={randomImageUrl} alt="Header" className="header-image" loading="eager" fetchpriority="high" decoding="async" width="1440" height="400" />
-      {/*
-        This banner is the visual page title on every page that uses it, but
-        was a plain <div> — so ~40 pages (product pages, industry pages,
-        legal pages, /about, /contact, /blog, /partners...) had no <h1> tag
-        at all in their HTML. NavHeader is used exactly once per page
-        (verified — no page renders it twice, and no page that uses it has
-        its own separate <h1> elsewhere), so making this an <h1> gives every
-        one of those pages a single, correct page-title heading at once.
-      */}
+      <img src={imageUrl} alt="Header" className="header-image" loading="eager" fetchpriority="high" decoding="async" width="1440" height="400" />
+      {/* Checklist heading-hierarchy audit (2026-09-10): this was a plain <div>,
+          meaning any page whose only visible title comes from <NavHeader> (Privacy
+          Policy, Terms of Service, Warranty pages, etc.) shipped with NO <h1> at
+          all. Now a real <h1>, same visual styling via .text-overlay. */}
       <h1 className="text-overlay">{text}</h1>
 
       <style jsx>{`
