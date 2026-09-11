@@ -173,6 +173,43 @@ const legacyRedirects = {
   // /wireless-ip-cctv-camera-manufacturer-supplier (also flagged by this
   // audit) already had redirects further up this file from earlier work —
   // left as-is rather than duplicated here.
+
+  // GSC "Not found (404)" — exact URL list pulled live from Search Console
+  // (2026-09-10, 22 URLs total). Cross-checked the other 18 against this file
+  // first: they already had redirects above from earlier sessions, just not
+  // deployed yet (same root cause as everything else in this list — nothing
+  // from this engagement is live). These 4 were the only genuine new gaps.
+  "/download-catalog": "/downloads",
+  // No single current page covers "Latin America" as a region (unlike Europe
+  // and the Middle East, which have dedicated /oem-camera-manufacturer-*
+  // pages) — the region is served by individual country pages instead
+  // (Brazil, Mexico, Argentina, Chile, Colombia, Peru, Venezuela). Sending to
+  // the page that indexes all of them rather than picking one country
+  // arbitrarily.
+  "/cctv-manufacturer-latin-america": "/global-presence",
+  // Literal test content, never real — send to the blog hub rather than
+  // leave it 404ing with no redirect at all.
+  "/blog/testing": "/blog",
+  // Retired blog post with no current equivalent slug (checked the full
+  // current /blog listing — nothing matches this topic closely enough to
+  // pick a specific replacement).
+  "/blog/how-ai-surveillance-improves-workplace-safety-and-compliance": "/blog",
+
+  // GSC "Soft 404" pull (2026-09-11, 44 URLs total). Cross-checked all 44
+  // against src/RedirectManager.js — a legacy react-router redirect map that
+  // is dead code (its only importer, src/App.js, imports plain
+  // "react-router-dom", which isn't even in package.json — it hasn't shipped
+  // since the Next.js migration). 34 of the 44 already had correct mappings
+  // sitting in that dead file (mirrored into legacyRedirects above already,
+  // e.g. /industries/*, /products/*, /oem-cctv-manufacturer-india, etc.) —
+  // same root cause as everything else here: correct, just never deployed.
+  // These 5 are legacy CMS ObjectId-style blog slugs (the same pattern as
+  // /blog/661921c42125c9f9e2d81608 above) with no current equivalent post.
+  "/blog/how-aipowered-cctv-cameras-reduce-theft-crime-a-complete-guide": "/blog",
+  "/blog/661f6f822125c9f9e2d81d13": "/blog",
+  "/blog/65fd2f53b1851c17f1b8f01e": "/blog",
+  "/blog/ultimate-guide-to-choosing-the-right-oem-cctv-camera": "/blog",
+  "/blog/the-future-of-ai-cctv-cameras-how-smart-surveillance-is-changing-security": "/blog",
 };
 
 const cspDirectives = [

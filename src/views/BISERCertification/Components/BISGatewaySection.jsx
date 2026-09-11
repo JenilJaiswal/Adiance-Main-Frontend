@@ -24,7 +24,7 @@ const BISGatewaySection = () => {
       {/* ── Bottom: camera bg image with overlaid content ── */}
       <div
         className="bis-gw-body"
-        style={{ backgroundImage: "url('/N_Images/GatewaytoMarketAccess_bg.png')" }}
+        style={{ backgroundImage: "url('/N_Images/GatewaytoMarketAccess_bg.webp')" }}
       >
         {/* BIS + STQC certification badge */}
         <div className="bis-gw-icon-wrap">

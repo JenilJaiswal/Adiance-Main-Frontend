@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const SEOLandingPage = dynamic(() => import("@/views/SEOPages/LandingPage/SEOLandingPage"), { ssr: false });
+const SEOLandingPage = dynamic(() => import("@/views/SEOPages/LandingPage/SEOLandingPage"));
 
 export default function ClientPage() {
   return <SEOLandingPage />;

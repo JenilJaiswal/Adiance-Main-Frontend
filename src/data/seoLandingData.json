@@ -1025,6 +1025,11 @@
         "title": "Non-Chinese CCTV Manufacturer",
         "url": "/non-chinese-cctv-camera-manufacturer",
         "description": "Full non-Chinese manufacturing overview"
+      },
+      {
+        "title": "NDAA Section 889 Compliance",
+        "url": "/ndaa-compliance",
+        "description": "Full NDAA Section 889 compliance guide, sectors covered, and official source citations"
       }
     ]
   },
@@ -1286,6 +1291,11 @@
         "title": "OEM CCTV Camera Manufacturer India",
         "url": "/cctv-camera-manufacturer-india",
         "description": ""
+      },
+      {
+        "title": "NDAA Section 889 Compliance",
+        "url": "/ndaa-compliance",
+        "description": "Who must comply with NDAA Section 889, and how Adiance's supply chain qualifies"
       }
     ],
     "applications": {
@@ -2586,6 +2596,11 @@
         "title": "Full Solution OEM Camera Manufacturer",
         "url": "/full-solution-oem-camera-manufacturer",
         "description": ""
+      },
+      {
+        "title": "NDAA Section 889 Compliance",
+        "url": "/ndaa-compliance",
+        "description": "Launch a white-label brand that's NDAA Section 889 compliant from day one"
       }
     ]
   },
@@ -2786,7 +2801,14 @@
           ]
         }
       ]
-    }
+    },
+    "relatedLinks": [
+      {
+        "title": "NDAA Section 889 Compliance Guide",
+        "url": "/ndaa-compliance",
+        "description": "The full compliance guide: who must comply, official citations, and Adiance's compliant supply chain"
+      }
+    ]
   },
   "gdpr-compliant-surveillance-manufacturer": {
     "slug": "gdpr-compliant-surveillance-manufacturer",
@@ -3697,7 +3719,14 @@
           "features": []
         }
       ]
-    }
+    },
+    "relatedLinks": [
+      {
+        "title": "NDAA Section 889 Compliance Guide",
+        "url": "/ndaa-compliance",
+        "description": "Federal, state, and federally-funded US buyers: verify NDAA Section 889 compliance here"
+      }
+    ]
   },
   "qualcomm-edge-ai-camera-manufacturer": {
     "slug": "qualcomm-edge-ai-camera-manufacturer",
@@ -4674,6 +4703,11 @@
         "title": "OEM Manufacturing Guide",
         "url": "/blog/oem-cctv-camera-manufacturing-complete-guide",
         "description": ""
+      },
+      {
+        "title": "NDAA Section 889 Compliance Guide",
+        "url": "/ndaa-compliance",
+        "description": "The regulation driving the switch away from Chinese cameras, explained in full"
       }
     ]
   },
@@ -4966,6 +5000,11 @@
         "title": "Full Product Portfolio",
         "url": "/product-portfolio",
         "description": ""
+      },
+      {
+        "title": "NDAA Section 889 Compliance Guide",
+        "url": "/ndaa-compliance",
+        "description": "Why Hikvision is banned under NDAA Section 889, and what compliant looks like"
       }
     ]
   },
@@ -5258,6 +5297,11 @@
         "title": "Full Product Portfolio",
         "url": "/product-portfolio",
         "description": ""
+      },
+      {
+        "title": "NDAA Section 889 Compliance Guide",
+        "url": "/ndaa-compliance",
+        "description": "Why Dahua is banned under NDAA Section 889, and what compliant looks like"
       }
     ]
   },
