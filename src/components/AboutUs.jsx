@@ -41,7 +41,7 @@ export default function AboutUs() {
           were being defined a second time here, client-side.
         */}
       </Helmet>
-      <Header />
+      <Header hideBreadcrumb />
       <Breadcrumb />
       <NavHeader text={"About Us"} />
       <AboutMidSection />

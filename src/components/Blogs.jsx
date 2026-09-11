@@ -131,7 +131,7 @@ const Blogs = () => {
         </script>
         {/* BreadcrumbList comes from <PageSchema> on /blog — not duplicated here. */}
       </Helmet>
-      <Header />
+      <Header hideBreadcrumb />
       <Breadcrumb />
       <NavHeader text={"Blogs"} />
       {/* Filters */}

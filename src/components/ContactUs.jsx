@@ -76,7 +76,7 @@ export default function ContactUs() {
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
         {/* BreadcrumbList comes from <PageSchema> on /contact — not duplicated here. */}
       </Helmet>
-      <Header />
+      <Header hideBreadcrumb />
       <Breadcrumb />
       <NavHeader text={"Contact Us"} />
 

@@ -1,10 +1,19 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { Link, NavLink } from "@/compat/react-router-dom";
+import { Breadcrumbs } from "@/seo/Breadcrumbs";
 import "./Header.css";
 
-const Header = () => {
+// The visible breadcrumb trail renders here, immediately after the header —
+// the position this codebase already established (Header -> Breadcrumb ->
+// NavHeader in AboutUs/ContactUs/Blogs/News). It used to be rendered by
+// <PageSchema>, which every page mounts AFTER <ClientPage>, so the trail
+// landed below the Footer. Pages that already render their own
+// <Breadcrumb /> pass hideBreadcrumb to avoid showing two trails.
+const Header = ({ hideBreadcrumb = false }) => {
+  const pathname = usePathname();
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedMobileMenu, setExpandedMobileMenu] = useState(null);
@@ -130,6 +139,7 @@ const Header = () => {
   ];
 
   return (
+    <>
     <header className="main-header" ref={headerRef}>
       <div className="header-container">
         <div className="logo-section">
@@ -261,6 +271,8 @@ const Header = () => {
         <div className="mobile-menu-overlay" onClick={closeMobileMenu}></div>
       )}
     </header>
+    {!hideBreadcrumb && <Breadcrumbs path={pathname} />}
+    </>
   );
 };
 
