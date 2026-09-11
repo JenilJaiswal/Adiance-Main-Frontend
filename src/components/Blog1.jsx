@@ -64,7 +64,7 @@ const Blog1 = () => {
   if (error || !blog) {
     return (
       <div>
-        <Header />
+        <Header hideBreadcrumb />
         <div style={{ padding: '120px 20px', textAlign: 'center', minHeight: '60vh' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '1rem', color: '#333' }}>404</h1>
           <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: '#666' }}>Blog Post Not Found</h2>
@@ -331,7 +331,7 @@ const Blog1 = () => {
             );
           })}
       </Helmet>
-      <Header />
+      <Header hideBreadcrumb />
       <Breadcrumb customTitle={blog.content?.metaTitle || blog.content?.title} />
       <Container maxWidth="xl">
         <Grid

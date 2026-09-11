@@ -116,7 +116,7 @@ const News = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@adiancetech" />
       </Helmet>
-      <Header />
+      <Header hideBreadcrumb />
       <Breadcrumb />
       <NavHeader text={"News & Press Releases"} />
 

@@ -64,7 +64,7 @@ const NewsDetail = () => {
   if (loading) {
     return (
       <div>
-        <Header />
+        <Header hideBreadcrumb />
         <Container maxWidth="md" sx={{ py: 8, textAlign: "center" }}>
           <Typography>Loading...</Typography>
         </Container>
@@ -76,7 +76,7 @@ const NewsDetail = () => {
   if (error || !item) {
     return (
       <div>
-        <Header />
+        <Header hideBreadcrumb />
         <Container maxWidth="md" sx={{ py: 8, textAlign: "center" }}>
           <Typography variant="h5" color="error" gutterBottom>
             {error || "News not found"}
@@ -118,7 +118,7 @@ const NewsDetail = () => {
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={ogImage} />
       </Helmet>
-      <Header />
+      <Header hideBreadcrumb />
       <Breadcrumb />
 
       <Container maxWidth="md" sx={{ py: { xs: 4, md: 6 } }}>

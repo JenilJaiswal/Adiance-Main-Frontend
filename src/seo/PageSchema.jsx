@@ -16,7 +16,6 @@ import { JsonLd } from "./JsonLd";
 import { CATALOG } from "./pageMetadata";
 import landingData from "../data/seoLandingData.json";
 import { buildBreadcrumbs } from "./breadcrumbUtils";
-import { Breadcrumbs } from "./Breadcrumbs";
 
 const SITE = "https://www.adiance.com";
 
@@ -68,16 +67,18 @@ function faqSchemaFromLanding(slug) {
 }
 
 /**
- * Server component. Drops BreadcrumbList + WebPage JSON-LD into the page,
- * AND (checklist row 59, 2026-09-10) renders the matching visible breadcrumb
- * nav via <Breadcrumbs> — so every one of the ~150 existing call sites for
- * <PageSchema> picks up the visible trail automatically, with no per-page
- * changes needed. Pass hideBreadcrumbs to suppress the visible nav on a page
- * that already has its own (e.g. if a future page builds a custom one).
+ * Server component. Drops BreadcrumbList + WebPage JSON-LD into the page.
  * If `landingSlug` is supplied and matches an entry in seoLandingData.json,
  * a FAQPage block is also emitted.
+ *
+ * The matching VISIBLE breadcrumb nav (checklist row 59, 2026-09-10) is
+ * rendered by <Header> instead of here. Every page mounts <PageSchema> after
+ * <ClientPage>, so rendering the visible trail here put it after the Footer;
+ * <Header> is the position this codebase already established for it. Both
+ * still read the same buildBreadcrumbs() below, so the schema and the visible
+ * trail cannot drift apart.
  */
-export function PageSchema({ path, title, description, landingSlug, hideBreadcrumbs = false }) {
+export function PageSchema({ path, title, description, landingSlug }) {
   if (!path) return null;
   const faq = landingSlug ? faqSchemaFromLanding(landingSlug) : null;
   return (
@@ -85,7 +86,6 @@ export function PageSchema({ path, title, description, landingSlug, hideBreadcru
       <JsonLd data={webPageSchema(path, title, description)} />
       <JsonLd data={breadcrumbSchema(path)} />
       {faq ? <JsonLd data={faq} /> : null}
-      {!hideBreadcrumbs ? <Breadcrumbs path={path} /> : null}
     </>
   );
 }
