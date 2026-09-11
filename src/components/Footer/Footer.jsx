@@ -161,7 +161,17 @@ const Footer = () => {
       </div>
       {/* Copyright */}
       <div className="footer-copyright">
-        <p>Copyright © 2026 Adiance technologies. All rights reserved.</p>
+        <p>
+          Copyright © 2026 Adiance technologies. All rights reserved.
+          {" · "}
+          <button
+            type="button"
+            className="cookie-preferences-link"
+            onClick={() => window.dispatchEvent(new Event("adiance:open-cookie-preferences"))}
+          >
+            Cookie Preferences
+          </button>
+        </p>
       </div>
     </footer>
   )

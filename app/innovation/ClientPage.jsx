@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const Innovation = dynamic(() => import("@/components/Innovation"), { ssr: false });
+const Innovation = dynamic(() => import("@/components/Innovation"));
 
 export default function ClientPage() {
   return <Innovation />;

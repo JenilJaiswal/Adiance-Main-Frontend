@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const NdaaCompliance = dynamic(() => import("@/views/NdaaCompliance/NdaaCompliance"), { ssr: false });
+const NdaaCompliance = dynamic(() => import("@/views/NdaaCompliance/NdaaCompliance"));
 
 export default function ClientPage() {
   return <NdaaCompliance />;

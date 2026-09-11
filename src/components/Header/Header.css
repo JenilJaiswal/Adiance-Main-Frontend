@@ -284,6 +284,15 @@
 
 /* ===== RESPONSIVE DESIGN ===== */
 
+/* Wraps the search icon + hamburger together on mobile/tablet, mirrors
+   .mobile-menu-button's own show/hide so it only appears where the
+   hamburger does. */
+.mobile-header-actions {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
 /* Mobile Menu Button (Hamburger) */
 .mobile-menu-button {
   display: none;
@@ -443,7 +452,11 @@
     display: none;
   }
   
-  /* Show mobile menu button */
+  /* Show mobile menu button (and the search icon beside it) */
+  .mobile-header-actions {
+    display: flex;
+  }
+
   .mobile-menu-button {
     display: flex;
   }

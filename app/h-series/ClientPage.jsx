@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const RSeries = dynamic(() => import("@/components/RSeries"), { ssr: false });
+const RSeries = dynamic(() => import("@/components/RSeries"));
 
 export default function ClientPage() {
   return <RSeries title="H Series" />;

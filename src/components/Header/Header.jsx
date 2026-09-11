@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Link, NavLink } from "@/compat/react-router-dom";
 import { Breadcrumbs } from "@/seo/Breadcrumbs";
+import SiteSearch from "@/components/SiteSearch/SiteSearch";
 import "./Header.css";
 
 // The visible breadcrumb trail renders here, immediately after the header —
@@ -198,20 +199,24 @@ const Header = ({ hideBreadcrumb = false }) => {
 
         {/* Desktop CTA Buttons */}
         <div className="cta-section desktop-cta">
+          <SiteSearch />
           <Link to="/partners" className="btn-partner">Partner with us</Link>
           <Link to="/contact" className="btn-connect">Connect with us</Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="mobile-menu-button"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-        >
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-        </button>
+        <div className="mobile-header-actions">
+          <SiteSearch />
+          <button
+            className="mobile-menu-button"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation Menu */}

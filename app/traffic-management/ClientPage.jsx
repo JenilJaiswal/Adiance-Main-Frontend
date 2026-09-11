@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const Trafic = dynamic(() => import("@/components/Trafic"), { ssr: false });
+const Trafic = dynamic(() => import("@/components/Trafic"));
 
 export default function ClientPage() {
   return <Trafic />;

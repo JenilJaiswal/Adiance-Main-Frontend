@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const WarrantyService = dynamic(() => import("@/components/WarrantyService"), { ssr: false });
+const WarrantyService = dynamic(() => import("@/components/WarrantyService"));
 
 export default function ClientPage() {
   return <WarrantyService />;

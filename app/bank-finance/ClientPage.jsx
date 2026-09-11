@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const BankFinance = dynamic(() => import("@/components/BankFinance"), { ssr: false });
+const BankFinance = dynamic(() => import("@/components/BankFinance"));
 
 export default function ClientPage() {
   return <BankFinance />;

@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const Compliance = dynamic(() => import("@/components/Compliance"), { ssr: false });
+const Compliance = dynamic(() => import("@/components/Compliance"));
 
 export default function ClientPage() {
   return <Compliance />;

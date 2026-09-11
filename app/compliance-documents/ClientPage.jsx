@@ -3,8 +3,8 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-const Header = dynamic(() => import("@/components/Header/Header"), { ssr: false });
-const Footer = dynamic(() => import("@/components/Footer/Footer"), { ssr: false });
+const Header = dynamic(() => import("@/components/Header/Header"));
+const Footer = dynamic(() => import("@/components/Footer/Footer"));
 
 // PLACEHOLDER PATHS — replace `/compliance/*.pdf` files in /public/compliance/
 // folder as the team uploads each certificate. Until file is present the row

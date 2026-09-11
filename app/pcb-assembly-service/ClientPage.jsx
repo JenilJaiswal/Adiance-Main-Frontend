@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const PCB = dynamic(() => import("@/views/Services/PCB/PCB"), { ssr: false });
+const PCB = dynamic(() => import("@/views/Services/PCB/PCB"));
 
 export default function ClientPage() {
   return <PCB />;

@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const ODM = dynamic(() => import("@/views/Services/ODM/ODM"), { ssr: false });
+const ODM = dynamic(() => import("@/views/Services/ODM/ODM"));
 
 export default function ClientPage() {
   return <ODM />;

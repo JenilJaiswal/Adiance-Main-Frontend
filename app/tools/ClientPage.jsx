@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const Tools = dynamic(() => import("@/components/Tools"), { ssr: false });
+const Tools = dynamic(() => import("@/components/Tools"));
 
 export default function ClientPage() {
   return <Tools />;

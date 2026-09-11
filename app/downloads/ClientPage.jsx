@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-const Downloads = dynamic(() => import("@/components/Downloads"), { ssr: false });
+const Downloads = dynamic(() => import("@/components/Downloads"));
 
 export default function ClientPage() {
   return <Downloads />;
