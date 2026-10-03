@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const Datasheet = dynamic(() => import("@/components/Datasheet"));
+import Datasheet from "@/components/Datasheet";
 
 export default function ClientPage() {
   return <Datasheet />;

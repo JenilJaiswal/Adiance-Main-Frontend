@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const HighTraffic = dynamic(() => import("@/components/HighTraffic"));
+import HighTraffic from "@/components/HighTraffic";
 
 export default function ClientPage() {
   return <HighTraffic />;

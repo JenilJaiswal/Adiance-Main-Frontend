@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const CyberSecurity = dynamic(() => import("@/components/CyberSecurity"));
+import CyberSecurity from "@/components/CyberSecurity";
 
 export default function ClientPage() {
   return <CyberSecurity />;

@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const Retail = dynamic(() => import("@/components/Retail"));
+import Retail from "@/components/Retail";
 
 export default function ClientPage() {
   return <Retail />;

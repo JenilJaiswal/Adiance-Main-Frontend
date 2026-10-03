@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const RSeries = dynamic(() => import("@/components/RSeries"));
+import RSeries from "@/components/RSeries";
 
 export default function ClientPage() {
   return <RSeries title="H Series" />;

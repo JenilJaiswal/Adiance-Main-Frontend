@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const WarrantyPolicy = dynamic(() => import("@/components/WarrantyPolicy"));
+import WarrantyPolicy from "@/components/WarrantyPolicy";
 
 export default function ClientPage() {
   return <WarrantyPolicy />;

@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const ThermalCamera = dynamic(() => import("@/components/ThermalCamera"));
+import ThermalCamera from "@/components/ThermalCamera";
 
 export default function ClientPage() {
   return <ThermalCamera />;

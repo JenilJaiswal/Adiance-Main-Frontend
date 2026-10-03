@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const Event = dynamic(() => import("@/views/Events/Event"));
+import Event from "@/views/Events/Event";
 
 export default function ClientPage() {
   return <Event />;

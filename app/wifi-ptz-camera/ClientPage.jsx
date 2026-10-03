@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const WifiCameraPdf = dynamic(() => import("@/components/WifiCameraPdf"));
+import WifiCameraPdf from "@/components/WifiCameraPdf";
 
 export default function ClientPage() {
   return <WifiCameraPdf />;

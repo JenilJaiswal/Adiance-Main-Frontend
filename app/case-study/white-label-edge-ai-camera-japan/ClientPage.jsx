@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const SEOBlogPage = dynamic(() => import("@/views/SEOPages/BlogPage/SEOBlogPage"));
+import SEOBlogPage from "@/views/SEOPages/BlogPage/SEOBlogPage";
 
 export default function ClientPage() {
   return <SEOBlogPage type="case-study" />;

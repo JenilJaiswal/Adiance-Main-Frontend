@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, Suspense } from "react";
 import { Link } from "@/compat/react-router-dom";
 import {
   TextField,
@@ -21,17 +21,40 @@ import { Helmet } from "react-helmet";
 import { getBlogs } from "../AdianceAdmin/api/blogs";
 import { useSearchParams } from "next/navigation";
 
+// Render-nothing leaf: isolates the only useSearchParams() calls in this
+// file so Blogs itself can stay outside a Suspense boundary and prerender.
+function BlogSearchParamSync({ onChange }) {
+  const searchParams = useSearchParams();
+  const q = searchParams.get("q") || "";
+  const hasQ = searchParams.has("q");
+  useEffect(() => {
+    onChange(q, hasQ);
+  }, [q, hasQ, onChange]);
+  return null;
+}
+
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const searchParams = useSearchParams();
-  // Initialise from the ?q= param so the WebSite SearchAction target
-  // (/blog?q={search_term_string}) actually searches on load instead of
-  // just showing the default list.
-  const [searchQuery, setSearchQuery] = useState(() => searchParams.get("q") || "");
+  // SEO fix (SSR-bailout guard, 2026-10-03): Blogs now server-renders (its
+  // ClientPage.jsx switched from next/dynamic to a static import, so the
+  // client-only bailout that used to mask this is gone). useSearchParams()
+  // opts a component out of static rendering unless it sits inside its own
+  // Suspense boundary, so both reads this file made from it (the ?q= value,
+  // and whether ?q= is present at all, for the noindex decision below) are
+  // moved into the BlogSearchParamSync leaf defined below, rendered inside
+  // <Suspense> further down -- only that leaf suspends, the real blog list
+  // still prerenders. Starts empty/false; the leaf fills these in on mount,
+  // same timing as before (Helmet only ever applied this client-side anyway).
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearchPage, setIsSearchPage] = useState(false);
+  const handleSearchParamChange = useCallback((q, hasQ) => {
+    setSearchQuery((prev) => (prev === q ? prev : q));
+    setIsSearchPage(hasQ);
+  }, []);
   const [sortOrder, setSortOrder] = useState("latest");
 
   const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
@@ -70,13 +93,6 @@ const Blogs = () => {
     fetchData();
   }, [fetchData]);
 
-  // Keep the search in sync with the ?q= param if it changes after load
-  // (e.g. a second sitelinks-searchbox query), and reset to page 1.
-  useEffect(() => {
-    const q = searchParams.get("q") || "";
-    setSearchQuery((prev) => (prev === q ? prev : q));
-  }, [searchParams]);
-
   const handleNextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
   };
@@ -93,10 +109,12 @@ const Blogs = () => {
     const date = new Date(dateString);
     return date.toDateString();
   };
-  const isSearchPage = searchParams.has("q");
 
   return (
     <div>
+      <Suspense fallback={null}>
+        <BlogSearchParamSync onChange={handleSearchParamChange} />
+      </Suspense>
       <Helmet>
         <title>Insights & Trends | Explore Our Security Blog - Adiance</title>
         <meta

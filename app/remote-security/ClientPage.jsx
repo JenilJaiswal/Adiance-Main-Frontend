@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const Remote = dynamic(() => import("@/components/Remote"));
+import Remote from "@/components/Remote";
 
 export default function ClientPage() {
   return <Remote />;

@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const PrivacyPolicy = dynamic(() => import("@/components/PrivacyPolicy"));
+import PrivacyPolicy from "@/components/PrivacyPolicy";
 
 export default function ClientPage() {
   return <PrivacyPolicy />;

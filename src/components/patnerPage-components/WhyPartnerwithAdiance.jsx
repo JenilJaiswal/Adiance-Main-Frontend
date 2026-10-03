@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Card,
@@ -17,6 +17,23 @@ import { Container } from "react-bootstrap";
 // Accept 'data' as a prop
 const WhyPartnerwithAdiance = ({ data }) => {
   const [index, setIndex] = useState(0);
+
+  // SEO fix (SSR-bailout guard, same pattern as Testimonials.jsx): reading
+  // window.innerWidth directly during render crashed the build once this
+  // component started server-rendering (next/dynamic conversion removed the
+  // client-only bailout that had been masking this). Starts at a fixed
+  // desktop default and applies the real viewport width in an effect, which
+  // only runs after mount.
+  const [width, setWidth] = useState(1280);
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Use the 'features' array from the 'data' prop
   const features = data.features;
@@ -42,7 +59,7 @@ const WhyPartnerwithAdiance = ({ data }) => {
   };
 
   // Get the current window width to decide how many testimonials to show
-  const visibleTestimonials = getVisibleTestimonials(window.innerWidth);
+  const visibleTestimonials = getVisibleTestimonials(width);
 
   return (
     <>

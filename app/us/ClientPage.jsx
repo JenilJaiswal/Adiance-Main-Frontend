@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const UsLanding = dynamic(() => import("@/views/UsLanding/UsLanding"));
+import UsLanding from "@/views/UsLanding/UsLanding";
 
 export default function ClientPage() {
   return <UsLanding />;

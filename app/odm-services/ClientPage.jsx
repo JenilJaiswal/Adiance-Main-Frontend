@@ -1,8 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const ODM = dynamic(() => import("@/views/Services/ODM/ODM"));
+import ODM from "@/views/Services/ODM/ODM";
 
 export default function ClientPage() {
   return <ODM />;
