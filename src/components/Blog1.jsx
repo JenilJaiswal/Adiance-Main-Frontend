@@ -141,7 +141,25 @@ const Blog1 = () => {
         return <br key={key} />;
       }
 
-      let el = <span style={style}>{leaf.text || ""}</span>;
+      // CONTENT-001: some CMS payloads have shipped this field as a rich
+      // object (e.g. { text: "..." }) or an array of such objects instead of
+      // a plain string. Rendering that directly used to fall through to JS's
+      // default toString() coercion, which prints literal "[object Object]"
+      // (or a comma-joined run of them for an array) straight onto the page.
+      // Extract the real string instead of trusting the shape.
+      const safeText = (() => {
+        const t = leaf.text;
+        if (typeof t === "string" || typeof t === "number") return t;
+        if (Array.isArray(t)) {
+          return t
+            .map((entry) => (entry && typeof entry === "object" ? entry.text ?? "" : entry ?? ""))
+            .join(" ");
+        }
+        if (t && typeof t === "object") return t.text ?? "";
+        return "";
+      })();
+
+      let el = <span style={style}>{safeText}</span>;
       if (leaf.code) el = <code key={`${key}-code`}>{el}</code>;
       if (leaf.bold) el = <strong key={`${key}-bold`}>{el}</strong>;
       if (leaf.italic) el = <em key={`${key}-italic`}>{el}</em>;

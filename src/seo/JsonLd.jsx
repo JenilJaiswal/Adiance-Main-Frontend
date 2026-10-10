@@ -85,7 +85,7 @@ export const HOMEPAGE_FAQ = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "Adiance serves global markets including the United States, Canada, Europe, Middle East, Southeast Asia, and India. Our cameras are deployed in 50+ countries through OEM and distribution partners.",
+          "Adiance serves global markets including the United States, Canada, Europe, Middle East, Southeast Asia, and India. Our cameras are deployed in many countries through OEM and distribution partners.",
       },
     },
   ],

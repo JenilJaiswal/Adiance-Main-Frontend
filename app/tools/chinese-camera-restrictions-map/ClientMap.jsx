@@ -1,11 +1,9 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import dynamic from "next/dynamic";
 import { RESTRICTIONS, REGIONS, STATUS_TYPES } from "./data";
-
-const Header = dynamic(() => import("@/components/Header/Header"), { ssr: false });
-const Footer = dynamic(() => import("@/components/Footer/Footer"), { ssr: false });
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const statusMeta = Object.fromEntries(STATUS_TYPES.filter(s => s.id !== "all").map(s => [s.id, s]));
 

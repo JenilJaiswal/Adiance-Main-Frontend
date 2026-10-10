@@ -3,7 +3,7 @@
 import React from "react";
 import "./HeroSection.css";
 
-const badges = ["33 SKUs", "3MP & 5MP", "Bullet • Dome • PTZ • Indoor", "Made in India"];
+const badges = ["3MP & 5MP", "Bullet • Dome • PTZ • Indoor", "Made in India"];
 
 function HeroSection() {
   return (
@@ -22,7 +22,7 @@ function HeroSection() {
         <span className="eco-hero-badge">ECO Series</span>
         <h1 className="eco-hero-title">ECO Series Cameras</h1>
         <p className="eco-hero-description">
-          Value-Engineered AI Surveillance — 33 SKUs Across Bullet, Dome, PTZ & Indoor
+          Value-Engineered AI Surveillance Across Bullet, Dome, PTZ & Indoor
         </p>
         <div className="eco-hero-badges">
           {badges.map((b, i) => (

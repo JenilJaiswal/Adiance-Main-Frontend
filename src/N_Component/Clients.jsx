@@ -1,3 +1,47 @@
+// SEO-006: these 33 logo files (/N_Images/client1.svg … client33.svg) shipped
+// with generic "Client N" alt text — no accessibility or image-search value.
+// Names below came from a visual identification pass (rendering every logo
+// and reading it directly, since the SVGs carry no text metadata) rather
+// than any CMS/data source, so confidence varies per logo. High-confidence
+// names are used as-is; the handful of medium/low-confidence identifications
+// are marked inline — please have someone who knows the client roster
+// confirm those specific ones before treating them as final copy.
+const CLIENT_NAMES = {
+  1: "Adani",
+  2: "State Bank of India (SBI)",
+  3: "Eicher",
+  4: "HDFC Bank",
+  5: "ICICI Bank",
+  6: "TEDx",
+  7: "Pfizer",
+  8: "L'Oréal",
+  9: "Arab Republic of Egypt (government client)",
+  10: "Reliance Jio",
+  11: "IIM Ahmedabad",
+  12: "Election Commission of India",
+  13: "Government of Nagaland",
+  14: "Chandigarh Administration",
+  15: "Government of West Bengal",
+  16: "Government of Kerala", // Medium confidence — emblem style match, please confirm
+  17: "Central Bureau of Investigation (CBI), India",
+  18: "Government of Punjab",
+  19: "Gujarat state government body", // Low confidence — Gujarati text on the logo, exact department unconfirmed
+  20: "IIM Ahmedabad", // Same logo as #11 — flagging as a likely duplicate, not a second confirmed client
+  21: "State government body", // Low confidence — emblem text not legible at render size
+  22: "Government of Jharkhand",
+  23: "Government of India",
+  24: "RAILTEL (Government of India enterprise)",
+  25: "NICSI — National Informatics Centre Services Incorporated",
+  26: "REIL — Rajasthan Electronics & Instruments Limited", // Medium confidence — logo style match, please confirm
+  27: "NIC — National Informatics Centre",
+  28: "BSNL — Bharat Sanchar Nigam Limited",
+  29: "NTPC — National Thermal Power Corporation",
+  30: "TCIL — Telecommunications Consultants India Limited",
+  31: "Government of Uttar Pradesh",
+  32: "Vadodara Municipal Corporation",
+  33: "Gujarat Tourism",
+};
+
 const Clients = ({ showTitle = true }) => {
   const clientLogos = Array.from({ length: 33 }, (_, i) => i + 1);
 
@@ -10,7 +54,7 @@ const Clients = ({ showTitle = true }) => {
             <div key={num} className="client-logo-wrapper">
               <img
                 src={`/N_Images/client${num}.svg`}
-                alt={`Client ${num}`}
+                alt={CLIENT_NAMES[num] ? `${CLIENT_NAMES[num]} logo` : `Client ${num}`}
                 className="client-logo"
                 loading="lazy"
                 decoding="async"

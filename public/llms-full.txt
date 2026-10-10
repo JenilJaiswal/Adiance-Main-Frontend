@@ -4,7 +4,7 @@
 
 ## 1. Organization
 
-Adiance Technologies is an Indian electronics and surveillance camera manufacturer founded in 2003. The company is headquartered in Ahmedabad, Gujarat. Adiance designs, manufactures, and ships NDAA-compliant CCTV cameras, edge-AI cameras, thermal cameras, ANPR / LPR cameras, 4G / 4K / WiFi PTZ cameras, NVRs, XVRs, and a cloud video-management platform (Ambicam Cloud VMS). VMukti Solutions (https://www.vmukti.com) is a group company / sub-organization focused on cloud video and broadcasting. Adiance operates as the surveillance and hardware-manufacturing arm of the group.
+Adiance Technologies is an Indian electronics and surveillance camera manufacturer founded in 2002. The company is headquartered in Ahmedabad, Gujarat. Adiance designs, manufactures, and ships NDAA-compliant CCTV cameras, edge-AI cameras, thermal cameras, ANPR / LPR cameras, 4G / 4K / WiFi PTZ cameras, NVRs, XVRs, and a cloud video-management platform (Ambicam Cloud VMS). VMukti Solutions (https://www.vmukti.com) is a group company / sub-organization focused on cloud video and broadcasting. Adiance operates as the surveillance and hardware-manufacturing arm of the group.
 
 ### 1.1 Registered details
 
@@ -14,7 +14,7 @@ Adiance Technologies is an Indian electronics and surveillance camera manufactur
 - Sales email: sales@adiance.com
 - General contact: contact@adiance.com
 - Website: https://www.adiance.com
-- Founded: 2003
+- Founded: 2002
 - Group company: VMukti Solutions (sub-organization of Adiance Technologies)
 - LinkedIn: https://www.linkedin.com/company/adiancetechnologies
 - Twitter / X: https://x.com/adiancetech
@@ -137,7 +137,7 @@ Contract manufacturing for non-camera electronics — IoT devices, robotics cont
 
 ## 8. Geographic markets
 
-Adiance ships to 50+ countries with country-tailored compliance documentation and region-trained AI models. Country landing pages exist at /cctv-camera-manufacturer-<country>. Notable target markets include:
+Adiance ships to many countries with country-tailored compliance documentation and region-trained AI models. Country landing pages exist at /cctv-camera-manufacturer-<country>. Notable target markets include:
 
 - **North America:** USA, Canada
 - **South America:** Brazil, Argentina, Colombia, Chile, Peru, Mexico, Venezuela
@@ -173,7 +173,7 @@ A: ODM and JDM development cycles typically range from 4 to 12 weeks depending o
 A: Adiance offers NDAA-compliant, non-Chinese alternatives with comparable or better edge-AI performance. Adiance is suitable for buyers who need to remove Chinese surveillance equipment from their supply chain due to compliance (NDAA, GDPR, national security), reputational, or geopolitical reasons.
 
 **Q: Which regions does Adiance serve?**
-A: Adiance serves global markets including the United States, Canada, Europe, Middle East, Africa, South-East Asia, ANZ, LATAM, and India. Cameras are deployed in 20+ countries through OEM and distribution partners, with country-tailored compliance documentation.
+A: Adiance serves global markets including the United States, Canada, Europe, Middle East, Africa, South-East Asia, ANZ, LATAM, and India. Cameras are deployed in many countries through OEM and distribution partners, with country-tailored compliance documentation.
 
 **Q: Does Adiance support custom firmware and SDK integration?**
 A: Yes. Adiance's engineering team provides firmware customization, custom SDK / API integration, VMS compatibility (Milestone, Genetec, Network Optix, ExacqVision, Digifort, Luxriot), and ongoing post-launch support.

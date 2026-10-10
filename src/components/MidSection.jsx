@@ -43,7 +43,7 @@ const MidSection = () => {
               Adiance is a leading and the best CCTV manufacturing service
               provider with ISO certified and one of the best outdoor and indoor
               wireless security and surveillance cameras with smart AI/ML
-              Technology, Started in the year 2007 Adiance has given the
+              Technology, Started in the year 2002 Adiance has given the
               absolute feeling of safety for its customers through its various
               security cameras manufacturing services with OEM of their brand.
               Being the largest leading and reliable wireless, WiFi, 4G, Cloud,

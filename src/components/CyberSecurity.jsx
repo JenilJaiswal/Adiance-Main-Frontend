@@ -765,7 +765,7 @@ const CyberSecurity = () => {
         </Grid>
 
         {/* <Grid>
-          <Typography variant="h5">
+          <Typography component="div" variant="h5">
             <strong>
               <center>
                 In a world where security is paramount, trust Adiance to lead

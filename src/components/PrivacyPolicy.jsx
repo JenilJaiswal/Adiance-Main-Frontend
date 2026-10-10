@@ -75,7 +75,7 @@ const PrivacyPolicy = () => {
             >
               THE INFORMATION WE COLLECT
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   We may obtain information about you from various sources,
@@ -176,7 +176,7 @@ const PrivacyPolicy = () => {
             >
               HOW WE USE THE INFORMATION WE COLLECT
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   We may use the information we obtain about you to:
@@ -272,7 +272,7 @@ const PrivacyPolicy = () => {
             >
               THE INFORMATION WE SHARE
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   When you create an account on the Sites, Adiance will collect
@@ -357,7 +357,7 @@ const PrivacyPolicy = () => {
             >
               HOW WE PROTECT PERSONAL INFORMATION
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Adiance maintains administrative, technical and physical
@@ -405,7 +405,7 @@ const PrivacyPolicy = () => {
             >
               HOW TO UPDATE YOUR PERSONAL INFORMATION
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   You may access, update and amend Personal Information included
@@ -434,7 +434,7 @@ const PrivacyPolicy = () => {
             >
               ABOUT COOKIES, TRACKING CHOICES, AND THIRD PARTY SERVICE PROVIDERS
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   A “cookie” is a text file that websites send to a visitor’s
@@ -516,7 +516,7 @@ const PrivacyPolicy = () => {
             >
               INTERNATIONAL TRANSFER OF YOUR PERSONAL INFOMRATION
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   The Sites are hosted in the United States and any personal
@@ -539,7 +539,7 @@ const PrivacyPolicy = () => {
             >
               LINKS TO OTHER SITES
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Content on our Sites may contain links to other sites that are
@@ -562,7 +562,7 @@ const PrivacyPolicy = () => {
             >
               DISPUTES
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   If you believe that we have not adhered to the Privacy Policy,
@@ -583,7 +583,7 @@ const PrivacyPolicy = () => {
             >
               CHILDREN’S PRIVACY
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Children under the age of 13 (or other age as required by
@@ -676,7 +676,7 @@ const PrivacyPolicy = () => {
             >
               YOUR PRIVACY RIGHTS
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Depending on your location, you may have the right to exercise
@@ -710,7 +710,7 @@ const PrivacyPolicy = () => {
             >
               GENERAL DATA PROTECTION REGULATION (GDPR)
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Adiance will comply with all applicable data protection and
@@ -732,7 +732,7 @@ const PrivacyPolicy = () => {
             >
               PRIVACY POLICY UPDATES
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   If we decide to make material changes to our Privacy Policy,
@@ -763,7 +763,7 @@ const PrivacyPolicy = () => {
             >
               HOW TO CONTACT US
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   If you have any questions or comments about this Privacy

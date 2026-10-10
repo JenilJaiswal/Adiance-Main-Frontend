@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const legacyRedirects = {
+  // TECH-007: /products has never had a matching route and 404s. No header,
+  // footer or page links to it, so this closes a dead entry point from
+  // external links/bookmarks/search. /product-portfolio is the product-range
+  // hub (H1 "Complete CCTV Camera Product Range for OEM Partners").
+  "/products": "/product-portfolio",
+  // /technology never had a route; /innovation is the technology hub (the
+  // breadcrumb map already labels /innovation "Technology", and the legacy
+  // /technology/innovation entry below already points there).
+  "/technology": "/innovation",
   "/netherlands-cctv-camera-manufacturer":
     "/cctv-camera-manufacturer-netherlands",
   "/cctv-manufacturer-europe": "/oem-camera-manufacturer-europe",
@@ -247,8 +256,22 @@ const securityHeaders = [
   },
 ];
 
+const path = require("path");
+
 const nextConfig = {
   output: "standalone",
+  // Metadata consistency: route every `import { Helmet } from "react-helmet"`
+  // through src/compat/react-helmet.jsx, which lets the server own title,
+  // description, canonical, robots, Open Graph and Twitter tags and passes
+  // JSON-LD and other head tags through unchanged. Exact-match alias ($) so the
+  // shim can still import react-helmet/lib/Helmet directly.
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "react-helmet$": path.resolve(__dirname, "src/compat/react-helmet.jsx"),
+    };
+    return config;
+  },
   reactStrictMode: true,
   trailingSlash: false,
   poweredByHeader: false,

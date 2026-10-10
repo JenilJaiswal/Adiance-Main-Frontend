@@ -177,7 +177,7 @@ const ThermalCamera = () => {
             {/* Display Active Tab Content */}
             {activeTab === "benefits" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Precision Security</li>
                     <li>Immersive Clarity</li>
@@ -189,7 +189,7 @@ const ThermalCamera = () => {
             )}
             {activeTab === "features" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Edge AI Technology</li>
                     <li>Facial Recognition</li>
@@ -202,7 +202,7 @@ const ThermalCamera = () => {
             )}
             {activeTab === "applications" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Access Control</li>
                     <li>Retail Analytics</li>
@@ -214,7 +214,7 @@ const ThermalCamera = () => {
             )}
             {activeTab === "specifications" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Resolution: 4K (3840×2160)</li>
                     <li> Frame Rate: 30 fps</li>

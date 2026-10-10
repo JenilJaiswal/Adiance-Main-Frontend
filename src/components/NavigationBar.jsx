@@ -92,7 +92,7 @@ const NavigationBar = () => {
               </SmartLink>
             </Typography>
 
-            <Typography variant="h6" className={classes.menuItem}>
+            <Typography component="div" variant="h6" className={classes.menuItem}>
               <SmartLink to="/innovation" className={classes.menuLink}>
                 Technology
               </SmartLink>
@@ -104,12 +104,12 @@ const NavigationBar = () => {
                 </Typography>
               </div>
             </Typography>
-            <Typography variant="h6" className={classes.menuItem}>
+            <Typography component="div" variant="h6" className={classes.menuItem}>
               <a href="#" className={classes.menuLink}>
                 Product
               </a>
               <div className={classes.subMenu}>
-                <Typography variant="body1" className={classes.subMenuItem}>
+                <Typography component="div" variant="body1" className={classes.subMenuItem}>
                   <SmartLink to="/thermal-camera" className={classes.menuLink}>
                     Thermal Camera
                   </SmartLink>
@@ -140,7 +140,7 @@ const NavigationBar = () => {
                     </Typography>
                   </div>
                 </Typography>
-                <Typography variant="body1" className={classes.subMenuItem}>
+                <Typography component="div" variant="body1" className={classes.subMenuItem}>
                   <SmartLink to="/cloudxvr" className={classes.menuLink}>
                     Cloud XVR
                   </SmartLink>
@@ -152,7 +152,7 @@ const NavigationBar = () => {
                     </Typography>
                   </div>
                 </Typography>
-                <Typography variant="body1" className={classes.subMenuItem}>
+                <Typography component="div" variant="body1" className={classes.subMenuItem}>
                   <SmartLink to="/anpr-camera" className={classes.menuLink}>
                     ANPR Camera
                   </SmartLink>
@@ -168,7 +168,7 @@ const NavigationBar = () => {
                   </div>
                 </Typography>
 
-                <Typography variant="body1" className={classes.subMenuItem}>
+                <Typography component="div" variant="body1" className={classes.subMenuItem}>
                   <SmartLink to="/4kcamera" className={classes.menuLink}>
                     4K Camera
                   </SmartLink>
@@ -200,7 +200,7 @@ const NavigationBar = () => {
                   </div>
                 </Typography>
 
-                <Typography variant="body1" className={classes.subMenuItem}>
+                <Typography component="div" variant="body1" className={classes.subMenuItem}>
                   <SmartLink to="/edgeaicamera" className={classes.menuLink}>
                     Edge-Ai Camera
                   </SmartLink>
@@ -231,7 +231,7 @@ const NavigationBar = () => {
                     </Typography>
                   </div>
                 </Typography>
-                <Typography variant="body1" className={classes.subMenuItem}>
+                <Typography component="div" variant="body1" className={classes.subMenuItem}>
                   <SmartLink to="/4gcamera" className={classes.menuLink}>
                     4G Camera
                   </SmartLink>
@@ -272,12 +272,12 @@ const NavigationBar = () => {
                 </Typography>
               </div>
             </Typography>
-            <Typography variant="h6" className={classes.menuItem}>
+            <Typography component="div" variant="h6" className={classes.menuItem}>
               <a href="#" className={classes.menuLink}>
                 Solutions
               </a>
               <div className={classes.subMenu}>
-                <Typography variant="body1" className={classes.subMenuItem}>
+                <Typography component="div" variant="body1" className={classes.subMenuItem}>
                   <SmartLink to="/thermal-camera" className={classes.menuLink}>
                     Scenario Based
                   </SmartLink>
@@ -324,7 +324,7 @@ const NavigationBar = () => {
                     </Typography>
                   </div>
                 </Typography>
-                <Typography variant="body1" className={classes.subMenuItem}>
+                <Typography component="div" variant="body1" className={classes.subMenuItem}>
                   <SmartLink to="/cloudxvr" className={classes.menuLink}>
                     Industry based
                   </SmartLink>
@@ -358,7 +358,7 @@ const NavigationBar = () => {
                 </Typography>
               </div>
             </Typography>
-            <Typography variant="h6" className={classes.menuItem}>
+            <Typography component="div" variant="h6" className={classes.menuItem}>
               <SmartLink to="/support" className={classes.menuLink}>
                 Support
               </SmartLink>

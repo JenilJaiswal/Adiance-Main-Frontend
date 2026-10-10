@@ -175,7 +175,7 @@ const ThermalCamera = () => {
             {/* Display Active Tab Content */}
             {activeTab === "benefits" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Active Response</li>
                     <li>Efficient Video Footage Retrieval</li>
@@ -186,7 +186,7 @@ const ThermalCamera = () => {
             )}
             {activeTab === "features" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>4K UHD Resolution</li>
                     <li>H.264/H.265 Compression</li>
@@ -197,7 +197,7 @@ const ThermalCamera = () => {
             )}
             {activeTab === "applications" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Security Surveillance</li>
                     <li>Traffic Monitoring</li>
@@ -208,7 +208,7 @@ const ThermalCamera = () => {
             )}
             {activeTab === "specifications" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Resolution: True 4K UHD</li>
                     <li> Compression: H.264/H.265</li>

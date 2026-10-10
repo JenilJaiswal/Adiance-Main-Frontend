@@ -11,7 +11,6 @@ import CTASection from "../../N_Component/CTASection";
 import "./EcoSeries.css";
 
 const stats = [
-  { value: "33 SKUs", label: "Products" },
   { value: "3MP & 5MP", label: "Resolutions" },
   { value: "4 Types", label: "Form Factors" },
   { value: "Made in India", label: "Manufacturing" },
@@ -39,10 +38,10 @@ const EcoSeries = () => {
       className="eco-series-page"
     >
       <Helmet>
-        <title>ECO Series CCTV Cameras | 33 SKUs | Adiance</title>
+        <title>ECO Series CCTV Cameras | Adiance</title>
         <meta
           name="description"
-          content="ECO Series CCTV cameras - 33 SKUs of value-engineered AI surveillance. Bullet, dome, PTZ & indoor models with 3MP/5MP resolution, WiFi, PoE, 4G & IP connectivity. Made in India."
+          content="ECO Series CCTV cameras - value-engineered AI surveillance. Bullet, dome, PTZ & indoor models with 3MP/5MP resolution, WiFi, PoE, 4G & IP connectivity. Made in India."
         />
         <meta
           name="keywords"
@@ -53,8 +52,8 @@ const EcoSeries = () => {
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph Tags */}
-        <meta property="og:title" content="ECO Series CCTV Cameras | 33 SKUs | Adiance" />
-        <meta property="og:description" content="ECO Series CCTV cameras - 33 SKUs of value-engineered AI surveillance. Bullet, dome, PTZ & indoor models with 3MP/5MP resolution, WiFi, PoE, 4G & IP connectivity. Made in India." />
+        <meta property="og:title" content="ECO Series CCTV Cameras | Adiance" />
+        <meta property="og:description" content="ECO Series CCTV cameras - value-engineered AI surveillance. Bullet, dome, PTZ & indoor models with 3MP/5MP resolution, WiFi, PoE, 4G & IP connectivity. Made in India." />
         <meta property="og:image" content="https://www.adiance.com/images/Eco-Series-Security-CCTV-Cameras.webp" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
@@ -64,8 +63,8 @@ const EcoSeries = () => {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@adiancetech" />
-        <meta name="twitter:title" content="ECO Series CCTV Cameras | 33 SKUs | Adiance" />
-        <meta name="twitter:description" content="ECO Series CCTV cameras - 33 SKUs of value-engineered AI surveillance. Bullet, dome, PTZ & indoor models with 3MP/5MP resolution, WiFi, PoE, 4G & IP connectivity. Made in India." />
+        <meta name="twitter:title" content="ECO Series CCTV Cameras | Adiance" />
+        <meta name="twitter:description" content="ECO Series CCTV cameras - value-engineered AI surveillance. Bullet, dome, PTZ & indoor models with 3MP/5MP resolution, WiFi, PoE, 4G & IP connectivity. Made in India." />
         <meta name="twitter:image" content="https://www.adiance.com/images/Eco-Series-Security-CCTV-Cameras.webp" />
         <meta name="twitter:url" content={canonicalUrl} />
 

@@ -498,7 +498,7 @@ const AboutMidSection = () => {
         }}
       >
         <Grid item xs={12} sm={12}>
-          <Typography
+          <Typography component="div"
             variant="h5"
             gutterBottom
             marginBottom="3%"
@@ -613,7 +613,7 @@ const AboutMidSection = () => {
         }}
       >
         <Grid item xs={12} sm={12}>
-          <Typography
+          <Typography component="div"
             variant="h5"
             gutterBottom
             marginBottom="3%"
@@ -645,7 +645,7 @@ const AboutMidSection = () => {
         }}
       >
         <Grid item xs={12} sm={12}>
-          <Typography
+          <Typography component="div"
             variant="h5"
             gutterBottom
             marginBottom="3%"
@@ -684,7 +684,7 @@ const AboutMidSection = () => {
         }}
       >
         <Grid item xs={12} sm={12}>
-          <Typography
+          <Typography component="div"
             variant="h5"
             gutterBottom
             marginBottom="3%"

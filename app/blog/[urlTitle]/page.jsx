@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { buildMetadata } from "@/seo/pageMetadata";
 import { JsonLd, BreadcrumbJsonLd } from "@/seo/JsonLd";
 import BlogSSRBody from "@/components/BlogSSRBody";
+import { articleParts, faqParts } from "@/seo/blogText";
 
 const SITE = "https://www.adiance.com";
 const BACKEND =
@@ -166,17 +167,26 @@ function ssrArticleBody(blog) {
       typeof c.brief === "string" ? c.brief.trim() : richText(c.brief);
     // The full article body lives in `headingsAndImages`:
     // [{ type: "p" | "h2" | "h3" | ..., content: { text } }].
-    const blocks = Array.isArray(c.headingsAndImages) ? c.headingsAndImages : [];
-    const rendered = blocks
-      .map((b, i) => {
-        const type = String(b?.type || "p").toLowerCase();
-        const text = b?.content?.text ? String(b.content.text).trim() : "";
-        if (!text) return null;
-        if (type === "h1" || type === "h2") return <h2 key={i}>{text}</h2>;
-        if (type === "h3" || type === "h4") return <h3 key={i}>{text}</h3>;
-        return <p key={i}>{text}</p>;
-      })
-      .filter(Boolean);
+    // Serialised by seo/blogText.js: block text can be a string or an array of
+    // rich-text nodes, and must never be stringified directly ("[object Object]").
+    const rendered = articleParts(c.headingsAndImages).map((part, i) => {
+      if (part.tag === "h2") return <h2 key={i}>{part.text}</h2>;
+      if (part.tag === "h3") return <h3 key={i}>{part.text}</h3>;
+      if (part.tag === "ul" || part.tag === "ol") {
+        const List = part.tag;
+        return (
+          <List key={i}>
+            {part.items.map((item, j) => (
+              <li key={j}>{item}</li>
+            ))}
+          </List>
+        );
+      }
+      return <p key={i}>{part.text}</p>;
+    });
+    // FAQs are already emitted as FAQPage JSON-LD; show them in the page too so
+    // the structured data describes visible content.
+    const faqs = faqParts(c.faqs?.items);
     if (!title && !briefText && rendered.length === 0) return null;
     const img = c.mainImage ? ogImageFor(c.mainImage) : null;
     return (
@@ -200,6 +210,28 @@ function ssrArticleBody(blog) {
           </p>
         ) : null}
         {rendered}
+        {faqs.length ? (
+          <section aria-label="Frequently asked questions">
+            <h2>{clean(c.faqs?.title) || "Frequently Asked Questions"}</h2>
+            {faqs.map((f, i) => (
+              <div key={i}>
+                <h3>{f.question}</h3>
+                <p>{f.answer}</p>
+              </div>
+            ))}
+          </section>
+        ) : null}
+        {/* Crawlable links in the first response; the client swap replaces this
+            fallback with the full page (header/footer included) after mount. */}
+        <nav aria-label="More from Adiance">
+          <p>
+            <a href="/blog">Adiance blog</a> ·{" "}
+            <a href="/oem-services">OEM services</a> ·{" "}
+            <a href="/odm-services">ODM services</a> ·{" "}
+            <a href="/white-label-cctv-camera-manufacturer">White-label CCTV cameras</a> ·{" "}
+            <a href="/contact">Contact Adiance</a>
+          </p>
+        </nav>
       </article>
     );
   } catch {

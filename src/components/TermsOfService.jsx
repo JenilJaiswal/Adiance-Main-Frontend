@@ -57,7 +57,7 @@ const TermsOfService = () => {
             >
               Your relationship with Adiance
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Your use of Adiance’s products, software, services and web
@@ -83,7 +83,7 @@ const TermsOfService = () => {
             >
               Accepting the Terms
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   In order to use the Services, you must first agree to the
@@ -117,7 +117,7 @@ const TermsOfService = () => {
             >
               Language of the Terms
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Where Adiance has provided you with a translation of the
@@ -143,7 +143,7 @@ const TermsOfService = () => {
             >
               Provision of the Services by Adiance
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Adiance is constantly innovating in order to provide the best
@@ -173,7 +173,7 @@ const TermsOfService = () => {
             >
               Use of the Services by you
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   You agree to use the Services only for purposes that are
@@ -223,7 +223,7 @@ const TermsOfService = () => {
             >
               Privacy and your personal information
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   For information about Adiance’s data protection practices,
@@ -245,7 +245,7 @@ const TermsOfService = () => {
             >
               Content in the Services
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   You understand that all information (such as data files,
@@ -330,7 +330,7 @@ const TermsOfService = () => {
             >
               Other content
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   The Services may include hyperlinks to other web sites or
@@ -364,7 +364,7 @@ const TermsOfService = () => {
             >
               Proprietary rights
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   You acknowledge and agree that Adiance owns all legal right,
@@ -425,7 +425,7 @@ const TermsOfService = () => {
             >
               License from Adiance
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Adiance gives you a personal, worldwide, royalty-free,
@@ -465,7 +465,7 @@ const TermsOfService = () => {
             >
               Content license from you
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   You retain copyright and any other rights you already hold in
@@ -484,7 +484,7 @@ const TermsOfService = () => {
             >
               Software updates
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   The Software which you use may automatically download and
@@ -507,7 +507,7 @@ const TermsOfService = () => {
             >
               Ending your relationship with Adiance
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   The Terms will continue to apply until terminated by either
@@ -570,7 +570,7 @@ const TermsOfService = () => {
             >
               EXCLUSION OF WARRANTIES
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   NOTHING IN THESE TERMS, INCLUDING SECTIONS 14 AND 15, SHALL
@@ -643,7 +643,7 @@ const TermsOfService = () => {
             >
               LIMITATION OF LIABILITY
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   SUBJECT TO OVERALL PROVISION IN PARAGRAPH 14.1 ABOVE, YOU
@@ -720,7 +720,7 @@ const TermsOfService = () => {
             >
               Indemnification
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   You agree to defend, indemnify, and hold us harmless,
@@ -755,7 +755,7 @@ const TermsOfService = () => {
             >
               Copyright and trade mark policies
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   It is Adiance’s policy to respond to notices of alleged
@@ -776,7 +776,7 @@ const TermsOfService = () => {
             >
               Advertisement
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Some of the Services are supported by advertising revenue and
@@ -808,7 +808,7 @@ const TermsOfService = () => {
             >
               Taxes, Raffles and Auctions.
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   If there are taxes, other governmental charges or any other
@@ -852,7 +852,7 @@ const TermsOfService = () => {
             >
               Changes to the Terms
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Adiance may make changes to the Terms from time to time.
@@ -875,7 +875,7 @@ const TermsOfService = () => {
             >
               Dispute Resolution
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Arbitration – If any dispute, claim or controversy (“Claims”)
@@ -956,7 +956,7 @@ const TermsOfService = () => {
             >
               Force Majeure
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Adiance will be excused from performance under this Agreement
@@ -979,7 +979,7 @@ const TermsOfService = () => {
             >
               Miscellaneous
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   These Terms of Use and any policies or operating rules posted

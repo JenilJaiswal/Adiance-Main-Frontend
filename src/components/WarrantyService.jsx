@@ -109,7 +109,7 @@ const WarrantyService = () => {
             >
               Compatibility
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   You acknowledge that you have verified the compatibility of
@@ -133,7 +133,7 @@ const WarrantyService = () => {
             >
               Reservations and Pre-Orders
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Products available for reservation and pre-order are not
@@ -185,7 +185,7 @@ const WarrantyService = () => {
             >
               Payment
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   By providing a credit card or other payment method accepted by
@@ -214,7 +214,7 @@ const WarrantyService = () => {
             >
               Subscription Services
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   We offer different subscription plans for our Subscription
@@ -291,7 +291,7 @@ const WarrantyService = () => {
             >
               Availability and Pricing
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   All Products offered on the Store are subject to availability,
@@ -320,7 +320,7 @@ const WarrantyService = () => {
             >
               Sales Tax
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Depending on the order, adiance calculates and charges sales
@@ -339,7 +339,7 @@ const WarrantyService = () => {
             >
               Resale and Title Transfer
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Purchases made on the Store are intended for end users only,
@@ -362,7 +362,7 @@ const WarrantyService = () => {
             >
               Shipping and Delivery
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Prices for the Products do not include shipping costs. Our
@@ -394,7 +394,7 @@ const WarrantyService = () => {
             >
               Installation
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   There may be laws in the jurisdiction that you install a
@@ -421,7 +421,7 @@ const WarrantyService = () => {
             >
               Returns
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   See our return policy at https://adiance.com/return-policy/If,
@@ -461,7 +461,7 @@ const WarrantyService = () => {
             >
               Disputes and Arbitration
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Contact Adiance First:
@@ -588,7 +588,7 @@ const WarrantyService = () => {
             >
               Warranties and Disclaimers
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   As far as permitted by applicable law, the Store, and all
@@ -638,7 +638,7 @@ const WarrantyService = () => {
             >
               Limitation of Liability
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Nothing in these Terms & Conditions and in particular within
@@ -675,7 +675,7 @@ const WarrantyService = () => {
             >
               Data Protection
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   By placing an order for Products and/or Subscription Services,
@@ -702,7 +702,7 @@ const WarrantyService = () => {
             >
               Electronic Communications
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   You are communicating with adiance electronically when you use
@@ -727,7 +727,7 @@ const WarrantyService = () => {
             >
               Notifications
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   adiance may provide notifications to you as required by law or
@@ -752,7 +752,7 @@ const WarrantyService = () => {
             >
               Force Majeure
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   We will not be liable or responsible for any failure to
@@ -779,7 +779,7 @@ const WarrantyService = () => {
             >
               Severability
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   If any part of these Terms & Conditions becomes illegal,
@@ -801,7 +801,7 @@ const WarrantyService = () => {
             >
               Survivability
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   The obligations in Sections 1 of the act will survive any
@@ -819,7 +819,7 @@ const WarrantyService = () => {
             >
               Waiver
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   Failure or delay by us to enforce any these Terms & Conditions
@@ -839,7 +839,7 @@ const WarrantyService = () => {
             >
               Governing Law and Jurisdiction
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   These Terms & Conditions are governed by the laws of Country

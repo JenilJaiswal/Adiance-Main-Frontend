@@ -13,7 +13,7 @@
     },
     "intro": {
       "title": "Precision ANPR Cameras Built for Scale",
-      "description": "Adiance designs and manufactures ANPR cameras with Qualcomm Edge AI chipsets, delivering 99%+ plate recognition accuracy at speeds up to 240 km/h. Our OEM/ODM ANPR cameras are deployed in smart city traffic management, parking automation, and border control across 30+ countries."
+      "description": "Adiance designs and manufactures ANPR cameras with Qualcomm Edge AI chipsets, delivering 99%+ plate recognition accuracy at speeds up to 240 km/h. Our OEM/ODM ANPR cameras are deployed in smart city traffic management, parking automation, and border control across many countries."
     },
     "features": [
       {
@@ -300,7 +300,7 @@
       {
         "title": "Full Camera Portfolio",
         "url": "/product-portfolio",
-        "description": "Explore 35+ camera models across all form factors"
+        "description": "Explore a wide range of camera models across all form factors"
       },
       {
         "title": "Edge AI Camera Manufacturer",
@@ -343,7 +343,7 @@
     },
     "intro": {
       "title": "Intelligence at the Edge — Your Brand, Our Technology",
-      "description": "Adiance manufactures Edge AI cameras with Qualcomm and Ambarella SoC enabling face recognition, object detection, crowd analysis, and behavioral analytics — all processed on-device. Our OEM/ODM cameras power leading surveillance brands across 30+ countries."
+      "description": "Adiance manufactures Edge AI cameras with Qualcomm and Ambarella SoC enabling face recognition, object detection, crowd analysis, and behavioral analytics — all processed on-device. Our OEM/ODM cameras power leading surveillance brands across many countries."
     },
     "features": [
       {
@@ -589,7 +589,7 @@
       {
         "title": "Full Camera Portfolio",
         "url": "/product-portfolio",
-        "description": "Explore 35+ camera models across all form factors"
+        "description": "Explore a wide range of camera models across all form factors"
       },
       {
         "title": "Complete Surveillance Solutions",
@@ -623,7 +623,7 @@
       {
         "icon": "📷",
         "title": "Full Camera Range",
-        "description": "50+ camera models — dome, bullet, PTZ, ANPR, thermal, and AI cameras for every application."
+        "description": "A wide range of camera models — dome, bullet, PTZ, ANPR, thermal, and AI cameras for every application."
       },
       {
         "icon": "💾",
@@ -652,10 +652,6 @@
       }
     ],
     "stats": [
-      {
-        "value": "35+",
-        "label": "Camera Models"
-      },
       {
         "value": "4",
         "label": "Integrated Software"
@@ -758,7 +754,7 @@
       "rows": [
         {
           "feature": "CCTV Camera Hardware",
-          "col1": "✓35+ models (Bullet, Dome, PTZ)",
+          "col1": "✓Wide model range (Bullet, Dome, PTZ)",
           "col2": "✓Hardware only"
         },
         {
@@ -854,7 +850,7 @@
       ]
     },
     "marketContext": {
-      "heading": "35+ Camera Models, Each with Integrated Software",
+      "heading": "A Wide Range of Camera Models, Each with Integrated Software",
       "paragraphs": [
         "Every camera in our portfolio — from 3MP Eco-Series to Edge AI S-Series — ships with the full ArcisAI software suite. Choose any form factor, any connectivity, and get the complete solution."
       ]
@@ -916,16 +912,8 @@
       {
         "value": "3",
         "label": "Approved SoC Platforms"
-      },
-      {
-        "value": "35+",
-        "label": "Camera Models"
-      },
-      {
-        "value": "50+",
-        "label": "Countries Served"
       }
-    ],
+      ],
     "faq": [
       {
         "question": "What SoC platforms does Adiance use?",
@@ -1085,14 +1073,6 @@
       {
         "value": "20+",
         "label": "Years Engineering Experience"
-      },
-      {
-        "value": "50+",
-        "label": "Countries Served"
-      },
-      {
-        "value": "35+",
-        "label": "Camera Models"
       },
       {
         "value": "100%",
@@ -1353,7 +1333,7 @@
     "features": [
       {
         "icon": "📷",
-        "title": "50+ White-Label Camera Models",
+        "title": "A Wide Range of White-Label Camera Models",
         "description": "Dome, bullet, PTZ, ANPR, thermal, fisheye — full range ready for your branding."
       },
       {
@@ -1384,22 +1364,14 @@
     ],
     "stats": [
       {
-        "value": "50+",
-        "label": "Camera Models"
-      },
-      {
         "value": "45",
         "label": "Days to Launch"
       },
       {
         "value": "500+",
         "label": "Brands Launched"
-      },
-      {
-        "value": "30+",
-        "label": "Countries"
       }
-    ],
+      ],
     "faq": [
       {
         "question": "How long does it take to launch a white-label CCTV brand with Adiance?",
@@ -1428,7 +1400,7 @@
         {
           "icon": "📷",
           "title": "Custom Camera Hardware",
-          "description": "Choose from S-Series (2MP-8MP, Edge AI, face recognition, ANPR) or ECO Series (33 SKUs, 3MP/5MP). Or design fully custom hardware to your specs."
+          "description": "Choose from S-Series (2MP-8MP, Edge AI, face recognition, ANPR) or ECO Series (3MP/5MP). Or design fully custom hardware to your specs."
         },
         {
           "icon": "📷",
@@ -1569,18 +1541,10 @@
         "label": "Solution Components"
       },
       {
-        "value": "35+",
-        "label": "Camera Models"
-      },
-      {
         "value": "90",
         "label": "Days to Market"
-      },
-      {
-        "value": "50+",
-        "label": "Countries Served"
       }
-    ],
+      ],
     "faq": [
       {
         "question": "Does Adiance provide the VMS software as well as cameras?",
@@ -1621,7 +1585,7 @@
         {
           "icon": "📷",
           "title": "AI Camera Hardware",
-          "description": "35+ models: bullet, dome, PTZ, fisheye, covert. Edge AI (Qualcomm), 4K, thermal, LPR. Full white-label with your logo, firmware, and packaging."
+          "description": "A wide range of models: bullet, dome, PTZ, fisheye, covert. Edge AI (Qualcomm), 4K, thermal, LPR. Full white-label with your logo, firmware, and packaging."
         },
         {
           "icon": "🖥️",
@@ -1739,10 +1703,6 @@
       {
         "value": "GDPR",
         "label": "Data Ready"
-      },
-      {
-        "value": "35+",
-        "label": "Camera Models"
       },
       {
         "value": "15+",
@@ -1909,10 +1869,6 @@
         "label": "Compliant"
       },
       {
-        "value": "35+",
-        "label": "Camera Models"
-      },
-      {
         "value": "6",
         "label": "GCC Countries"
       }
@@ -2075,16 +2031,8 @@
       {
         "value": "90",
         "label": "Days to Market"
-      },
-      {
-        "value": "35+",
-        "label": "Camera Models"
-      },
-      {
-        "value": "50+",
-        "label": "Countries Served"
       }
-    ],
+      ],
     "faq": [
       {
         "question": "What is the minimum order for private label cameras?",
@@ -2115,7 +2063,7 @@
       "heading": "What Private Label Means with Adiance",
       "paragraphs": [
         "Private label security cameras are the fastest-growing segment of the global surveillance market. Security distributors, telecom operators, IT resellers, and system integrators worldwide are launching their own branded camera lines — capturing higher margins, building customer loyalty, and differentiating from commodity products.",
-        "Adiance makes private labeling genuinely simple. We handle every aspect of the manufacturing and customization process: hardware selection from 35+ models, firmware branding with your company name and logo, custom packaging design and production, cloud VMS white-labeling, and mobile app publishing under your brand.",
+        "Adiance makes private labeling genuinely simple. We handle every aspect of the manufacturing and customization process: hardware selection from a wide range of models, firmware branding with your company name and logo, custom packaging design and production, cloud VMS white-labeling, and mobile app publishing under your brand.",
         "Our non-Chinese SoC platform (Qualcomm, Ambarella, Novatek) gives your private label brand a powerful differentiator: genuine NDAA compliance, supply chain transparency, and cybersecurity credibility that Chinese-sourced private label products cannot offer."
       ]
     },
@@ -2245,10 +2193,6 @@
         "label": "Months to Custom Product"
       },
       {
-        "value": "35+",
-        "label": "Base Models"
-      },
-      {
         "value": "100%",
         "label": "Your IP"
       }
@@ -2359,22 +2303,22 @@
     "slug": "white-label-cctv-camera-manufacturer",
     "seo": {
       "title": "White Label CCTV Camera Manufacturer | OEM Surveillance Solutions | Adiance",
-      "description": "Adiance is a leading white label CCTV camera manufacturer offering complete OEM/ODM surveillance solutions. Non-Chinese SoC, NDAA compliant, 35+ AI camera models. Build your own security camera brand.",
+      "description": "Adiance is a leading white label CCTV camera manufacturer offering complete OEM/ODM surveillance solutions. Non-Chinese SoC, NDAA compliant, a wide range of AI camera models. Build your own security camera brand.",
       "keywords": "white label CCTV camera manufacturer, white label security camera, OEM CCTV manufacturer, private label surveillance cameras, rebrand security cameras, NDAA compliant white label cameras"
     },
     "hero": {
       "title": "White Label CCTV Camera Manufacturer",
-      "subtitle": "Build your own security camera brand with Adiance. Complete white label OEM/ODM solutions — non-Chinese SoC, NDAA compliant, 35+ AI camera models with full ecosystem branding.",
+      "subtitle": "Build your own security camera brand with Adiance. Complete white label OEM/ODM solutions — non-Chinese SoC, NDAA compliant, a wide range of AI camera models with full ecosystem branding.",
       "ctaText": "Get White Label Quote"
     },
     "intro": {
       "title": "Your Brand. World-Class Manufacturing.",
-      "description": "Adiance is the world's preferred white-label CCTV manufacturer — trusted by 500+ security brands across 30 countries. We manufacture the cameras, you build the brand. Our white-label service covers every touchpoint your customer sees — hardware, firmware, app, packaging, and cloud."
+      "description": "Adiance is the world's preferred white-label CCTV manufacturer — trusted by 500+ security brands across many countries. We manufacture the cameras, you build the brand. Our white-label service covers every touchpoint your customer sees — hardware, firmware, app, packaging, and cloud."
     },
     "features": [
       {
         "icon": "📷",
-        "title": "50+ White-Label Models",
+        "title": "A Wide Range of White-Label Models",
         "description": "Full camera range — dome, bullet, PTZ, ANPR, thermal, fisheye — all available for white-labeling."
       },
       {
@@ -2409,14 +2353,6 @@
         "label": "Years Manufacturing"
       },
       {
-        "value": "35+",
-        "label": "Camera Models"
-      },
-      {
-        "value": "50+",
-        "label": "Countries Served"
-      },
-      {
         "value": "100%",
         "label": "Non-Chinese SoC"
       },
@@ -2449,7 +2385,7 @@
         {
           "badge": "",
           "title": "White Label Cameras",
-          "description": "35+ camera models including dome, bullet, PTZ, Edge AI, 4G SIM, ANPR, and smart home cameras. Custom packaging, labels, and firmware branding included.",
+          "description": "A wide range of camera models including dome, bullet, PTZ, Edge AI, 4G SIM, ANPR, and smart home cameras. Custom packaging, labels, and firmware branding included.",
           "features": []
         },
         {
@@ -2664,12 +2600,8 @@
       {
         "value": "100%",
         "label": "BOM Transparent"
-      },
-      {
-        "value": "50+",
-        "label": "Models Available"
       }
-    ],
+      ],
     "faq": [
       {
         "question": "What does NDAA compliance mean for CCTV cameras?",
@@ -3044,10 +2976,6 @@
         "label": "Years Engineering Experience"
       },
       {
-        "value": "35+",
-        "label": "Camera Models"
-      },
-      {
         "value": "100%",
         "label": "Made in India"
       },
@@ -3275,7 +3203,7 @@
     "slug": "global-presence",
     "seo": {
       "title": "Global Presence | Adiance CCTV Manufacturer",
-      "description": "Adiance serves OEM/ODM partners across 40+ countries. Explore our global CCTV camera manufacturing presence and local partnerships.",
+      "description": "Adiance serves OEM/ODM partners across many countries. Explore our global CCTV camera manufacturing presence and local partnerships.",
       "keywords": "global CCTV camera manufacturer, OEM CCTV camera worldwide, white label security camera global, surveillance camera manufacturer international, CCTV manufacturer for global partners, AI CCTV camera OEM global"
     },
     "hero": {
@@ -3285,7 +3213,7 @@
     },
     "intro": {
       "title": "World-Class Cameras. Worldwide Trust.",
-      "description": "Adiance surveillance cameras are deployed across 30+ countries on 5 continents — from US federal government to EU smart cities, from GCC infrastructure to Indian safe city missions. Our global presence is built on compliance, reliability, and engineering excellence."
+      "description": "Adiance surveillance cameras are deployed across many countries on 5 continents — from US federal government to EU smart cities, from GCC infrastructure to Indian safe city missions. Our global presence is built on compliance, reliability, and engineering excellence."
     },
     "features": [
       {
@@ -3316,18 +3244,10 @@
       {
         "icon": "🛳️",
         "title": "Global Logistics",
-        "description": "DDP shipping to 30+ countries — customs managed, duties included, door-to-door delivery."
+        "description": "DDP shipping to many countries — customs managed, duties included, door-to-door delivery."
       }
     ],
     "stats": [
-      {
-        "value": "35+",
-        "label": "Camera Models"
-      },
-      {
-        "value": "40+",
-        "label": "Countries Served"
-      },
       {
         "value": "20+",
         "label": "Years Experience"
@@ -3340,7 +3260,7 @@
     "faq": [
       {
         "question": "In how many countries are Adiance cameras deployed?",
-        "answer": "Adiance cameras are deployed in 30+ countries across North America, Europe, Middle East, Asia Pacific, and Africa."
+        "answer": "Adiance cameras are deployed in many countries across North America, Europe, Middle East, Asia Pacific, and Africa."
       },
       {
         "question": "Do you manage customs and import for all countries?",
@@ -3682,7 +3602,7 @@
         },
         {
           "feature": "Product Range",
-          "col1": "35+ camera models, S-Series Edge AI cameras, ArcisAI VMS (STQC certified). A diverse portfolio catering to various surveillance needs.",
+          "col1": "A wide range of camera models, S-Series Edge AI cameras, ArcisAI VMS (STQC certified). A diverse portfolio catering to various surveillance needs.",
           "col2": "Limited models, basic features, often lack integrated AI and certified VMS. May not offer specialized solutions for niche markets."
         },
         {
@@ -3692,7 +3612,7 @@
         },
         {
           "feature": "Global Reach",
-          "col1": "Serving 42+ countries, Ahmedabad India HQ, strong international logistics and support network. A truly global partner.",
+          "col1": "Serving many countries, Ahmedabad India HQ, strong international logistics and support network. A truly global partner.",
           "col2": "Primarily regional focus, less international experience, complex logistics and limited support outside their home market."
         }
       ]
@@ -4081,7 +4001,7 @@
       {
         "icon": "1️⃣",
         "title": "Choose Your Products",
-        "description": "Select from 50+ camera models. We recommend the right mix for your target market and price point."
+        "description": "Select from a wide range of camera models. We recommend the right mix for your target market and price point."
       },
       {
         "icon": "2️⃣",
@@ -4119,10 +4039,6 @@
         "label": "Days to Launch"
       },
       {
-        "value": "35+",
-        "label": "Camera Models"
-      },
-      {
         "value": "42+",
         "label": "Countries Certified"
       }
@@ -4130,7 +4046,7 @@
     "faq": [
       {
         "question": "How do I start my own CCTV camera brand?",
-        "answer": "Starting your own CCTV brand with Adiance is a 4-step process: 1) Choose your camera models from 35+ options, 2) Customize with your brand name and logo, 3) We manufacture and ship to you, 4) You sell under your brand. No R&D investment needed. Launch in 30 days."
+        "answer": "Starting your own CCTV brand with Adiance is a 4-step process: 1) Choose your camera models from a wide range of options, 2) Customize with your brand name and logo, 3) We manufacture and ship to you, 4) You sell under your brand. No R&D investment needed. Launch in 30 days."
       },
       {
         "question": "What is the minimum order quantity to start a CCTV brand?",
@@ -4150,7 +4066,7 @@
       },
       {
         "question": "What camera models are available for white-label branding?",
-        "answer": "Adiance offers 35+ camera models including dome cameras, bullet cameras, PTZ cameras, fisheye cameras, and specialty AI cameras in 3MP to 8MP resolution. All models support custom branding."
+        "answer": "Adiance offers a wide range of camera models including dome cameras, bullet cameras, PTZ cameras, fisheye cameras, and specialty AI cameras in 3MP to 8MP resolution. All models support custom branding."
       },
       {
         "question": "Can I get a branded mobile app for my CCTV brand?",
@@ -4158,7 +4074,7 @@
       },
       {
         "question": "What markets can I sell my CCTV brand in?",
-        "answer": "Adiance cameras are certified for 42+ countries including USA (FCC), EU (CE), India (BIS), and Middle East (ECAS). You can sell your brand globally with the appropriate certifications already in place."
+        "answer": "Adiance cameras are certified for many countries including USA (FCC), EU (CE), India (BIS), and Middle East (ECAS). You can sell your brand globally with the appropriate certifications already in place."
       }
     ],
     "whyCards": {
@@ -4167,7 +4083,7 @@
         {
           "icon": "📷",
           "title": "Choose Your Products",
-          "description": "Select from 35+ camera models — dome, bullet, PTZ, fisheye, and AI cameras in 3MP to 8MP. We help you choose the right models for your target market."
+          "description": "Select from a wide range of camera models — dome, bullet, PTZ, fisheye, and AI cameras in 3MP to 8MP. We help you choose the right models for your target market."
         },
         {
           "icon": "📷",
@@ -4194,7 +4110,7 @@
         "ArcisAI VMS deployed under your brand name. STQC certified, enterprise-grade, supports unlimited cameras. Your customers never see the Adiance name.",
         "iOS and Android app published under your brand on the App Store and Google Play. Your customers manage cameras through your branded app.",
         "User manuals, installation guides, data sheets, and marketing materials — all in your brand name. Ready to use from day one.",
-        "FCC, CE, BIS, ONVIF, and NDAA compliance certifications already in place. Sell in 42+ countries without additional certification costs.",
+        "FCC, CE, BIS, ONVIF, and NDAA compliance certifications already in place. Sell in many countries without additional certification costs.",
         "Dedicated technical support team, firmware updates, warranty management, and new product introductions. We grow with your brand."
       ]
     }
@@ -4255,10 +4171,6 @@
       {
         "value": "VSaaS",
         "label": "Platform"
-      },
-      {
-        "value": "50+",
-        "label": "Camera Models"
       },
       {
         "value": "API",
@@ -4613,7 +4525,7 @@
       ]
     },
     "regionGrid": {
-      "heading": "Serving Partners Across 40+ Countries",
+      "heading": "Serving Partners Across Many Countries",
       "regions": [
         {
           "icon": "📷",
@@ -5355,10 +5267,6 @@
     ],
     "stats": [
       {
-        "value": "35+",
-        "label": "Camera Models"
-      },
-      {
         "value": "Edge AI",
         "label": "On-Device Analytics"
       },
@@ -5665,10 +5573,6 @@
     ],
     "stats": [
       {
-        "value": "35+",
-        "label": "Camera Models"
-      },
-      {
         "value": "Edge AI",
         "label": "On-Device Analytics"
       },
@@ -5948,12 +5852,12 @@
     "slug": "product-portfolio",
     "seo": {
       "title": "OEM CCTV Camera Products | Adiance Portfolio",
-      "description": "Browse 35+ OEM CCTV camera models from Adiance. Edge AI, Eco-Series, PTZ, dome, bullet, and smart home cameras for white-label partners.",
+      "description": "Browse a wide range of OEM CCTV camera models from Adiance. Edge AI, Eco-Series, PTZ, dome, bullet, and smart home cameras for white-label partners.",
       "keywords": "OEM CCTV camera, white label CCTV, ODM camera manufacturer, bullet camera OEM, dome camera manufacturer, PTZ camera supplier, non-Chinese CCTV"
     },
     "hero": {
       "title": "Complete CCTV Camera Product Range for OEM Partners",
-      "subtitle": "35+ camera models across Bullet, Dome, and PTZ form factors — available for white-label, OEM, and ODM partnerships with full customization support.",
+      "subtitle": "A wide range of camera models across Bullet, Dome, and PTZ form factors — available for white-label, OEM, and ODM partnerships with full customization support.",
       "ctaText": "Request a Quote"
     },
     "intro": {
@@ -5994,10 +5898,6 @@
     ],
     "stats": [
       {
-        "value": "35+",
-        "label": "Camera Models"
-      },
-      {
         "value": "3",
         "label": "Form Factors"
       },
@@ -6013,11 +5913,11 @@
     "faq": [
       {
         "question": "How many camera models does Adiance offer?",
-        "answer": "50+ camera models across dome, bullet, PTZ, ANPR, thermal, fisheye, and Edge AI categories."
+        "answer": "A wide range of camera models across dome, bullet, PTZ, ANPR, thermal, fisheye, and Edge AI categories."
       },
       {
         "question": "Are all models available for OEM/ODM?",
-        "answer": "Yes. All 50+ models are available for full white-label OEM with your branding."
+        "answer": "Yes. All models are available for full white-label OEM with your branding."
       },
       {
         "question": "What is the highest resolution available?",
@@ -6025,7 +5925,7 @@
       },
       {
         "question": "Do you have product catalogs available?",
-        "answer": "Yes. Contact us for our full product catalog with technical specifications for all 50+ models."
+        "answer": "Yes. Contact us for our full product catalog with technical specifications for all models."
       },
       {
         "question": "Can I get sample units before placing a bulk order?",
@@ -6334,16 +6234,8 @@
       {
         "value": "500",
         "label": "MOQ Starting Units"
-      },
-      {
-        "value": "15+",
-        "label": "Camera Models"
-      },
-      {
-        "value": "40+",
-        "label": "Countries Served"
       }
-    ],
+      ],
     "intro": {
       "title": "Smart Home Camera Categories for Your Brand",
       "description": "From baby monitors to outdoor security, Adiance manufactures every category of smart home camera — all white-labeled with your branding, app, and cloud platform. Unlike generic OEM suppliers who only provide hardware, Adiance delivers a complete ecosystem — camera, app, cloud, and packaging — all white-labeled under your brand."
@@ -6670,16 +6562,8 @@
       {
         "value": "500",
         "label": "MOQ Starting Units"
-      },
-      {
-        "value": "15+",
-        "label": "Camera Models"
-      },
-      {
-        "value": "40+",
-        "label": "Countries Served"
       }
-    ],
+      ],
     "intro": {
       "title": "Baby Monitor Models Built for Your Brand",
       "description": "Adiance designs and manufactures a full line of smart baby monitors — from PTZ nursery cameras to audio-only and multi-room models — all white-labeled with your branding, app, and cloud platform. Unlike generic OEM suppliers who only provide hardware, Adiance delivers the complete baby-monitor ecosystem: camera, app, cloud, and packaging, under your brand."
@@ -6940,16 +6824,8 @@
       {
         "value": "500",
         "label": "MOQ Starting Units"
-      },
-      {
-        "value": "15+",
-        "label": "Camera Models"
-      },
-      {
-        "value": "40+",
-        "label": "Countries Served"
       }
-    ],
+      ],
     "intro": {
       "title": "Pet Camera Models Built for Your Brand",
       "description": "Adiance designs and manufactures a full line of WiFi pet cameras — from auto-tracking indoor cameras to treat-dispensing and outdoor-rated models — all white-labeled with your branding, app, and cloud platform. Unlike generic OEM suppliers who only provide hardware, Adiance delivers the complete pet-camera ecosystem: camera, app, cloud, and packaging, under your brand."

@@ -103,7 +103,7 @@ const Robotics = () => {
           <strong>Benefits of Robotic Surveillance</strong>
         </Typography>
 
-        <Typography variant="body1">
+        <Typography component="div" variant="body1">
           <br />
           The adoption of robotic surveillance offers numerous benefits that
           traditional surveillance methods cannot match. Here are some key

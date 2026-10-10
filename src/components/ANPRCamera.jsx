@@ -165,7 +165,7 @@ const ANPRCamera = () => {
             {/* Display Active Tab Content */}
             {activeTab === "benefits" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Enhanced Security</li>
                     <li>Increased Efficiency</li>
@@ -176,7 +176,7 @@ const ANPRCamera = () => {
             )}
             {activeTab === "features" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>ANPR Analytics</li>
                     <li>True WDR</li>
@@ -187,7 +187,7 @@ const ANPRCamera = () => {
             )}
             {activeTab === "applications" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Law Enforcement</li>
                     <li>Traffic Management</li>
@@ -198,7 +198,7 @@ const ANPRCamera = () => {
             )}
             {activeTab === "specifications" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Deep Learning Algorithm</li>
                     <li>High-Resolution Imaging</li>

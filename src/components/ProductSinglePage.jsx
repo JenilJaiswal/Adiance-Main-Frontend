@@ -138,7 +138,7 @@ const ProductSinglePage = ({ product, imgIdxSP }) => {
           {/* Display Active Tab Content */}
           {activeTab === "benefits" && (
             <Grid item xs={12}>
-              <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+              <Typography variant="body1" component="div" sx={{ fontSize: "1.2rem" }}>
                 <ul>
                   {product.benefits.map((benefit, index) => (
                     <li key={index}>{benefit}</li>
@@ -149,7 +149,7 @@ const ProductSinglePage = ({ product, imgIdxSP }) => {
           )}
           {activeTab === "features" && (
             <Grid item xs={12}>
-              <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+              <Typography variant="body1" component="div" sx={{ fontSize: "1.2rem" }}>
                 <ul>
                   {product.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
@@ -160,7 +160,7 @@ const ProductSinglePage = ({ product, imgIdxSP }) => {
           )}
           {activeTab === "applications" && (
             <Grid item xs={12}>
-              <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+              <Typography variant="body1" component="div" sx={{ fontSize: "1.2rem" }}>
                 <ul>
                   {product.applications.map((application, index) => (
                     <li key={index}>{application}</li>
@@ -171,7 +171,7 @@ const ProductSinglePage = ({ product, imgIdxSP }) => {
           )}
           {activeTab === "specifications" && (
             <Grid item xs={12}>
-              <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+              <Typography variant="body1" component="div" sx={{ fontSize: "1.2rem" }}>
                 <ul>
                   {product.specifications.map((specification, index) => (
                     <li key={index}>{specification}</li>
@@ -182,7 +182,7 @@ const ProductSinglePage = ({ product, imgIdxSP }) => {
           )}
           {activeTab === "setup" && (
             <Grid item xs={12}>
-              <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+              <Typography variant="body1" component="div" sx={{ fontSize: "1.2rem" }}>
                 {product.setup}
               </Typography>
             </Grid>

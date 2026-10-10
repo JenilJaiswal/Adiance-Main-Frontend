@@ -1,3 +1,23 @@
+// CONTENT-001: the legacy `raw.sections` shape below assumes `heading` and
+// `para` are plain strings. Some CMS payloads instead ship `heading` as a
+// rich object (e.g. { text: "..." }) or `para`/points as an array of such
+// objects. Left unguarded, that value gets embedded as-is into a Slate text
+// leaf and is later stringified by the renderer, printing literal
+// "[object Object]" (or a comma-joined run of them for an array) on the
+// page instead of the real copy. Extract the real string wherever possible.
+function extractText(value) {
+  if (value === undefined || value === null) return "";
+  if (typeof value === "string" || typeof value === "number") return String(value);
+  if (Array.isArray(value)) {
+    return value
+      .map((entry) => (entry && typeof entry === "object" ? entry.text ?? "" : entry ?? ""))
+      .filter(Boolean)
+      .join(" ");
+  }
+  if (typeof value === "object") return value.text ?? "";
+  return "";
+}
+
 export function normalizeBlog(raw) {
   if (!raw || typeof raw !== "object") return raw;
 
@@ -25,8 +45,10 @@ export function normalizeBlog(raw) {
     headingsAndImages: Array.isArray(raw.sections)
       ? raw.sections.flatMap((s, i) => {
           const arr = [];
-          if (s?.heading) arr.push({ id: `h-${i}`, type: "h2", content: { text: [{ type: "text", text: s.heading }] } });
-          if (s?.para) arr.push({ id: `p-${i}`, type: "p", content: { text: [{ type: "paragraph", children: [{ text: s.para }] }] } });
+          const headingText = extractText(s?.heading);
+          const paraText = extractText(s?.para ?? s?.points);
+          if (headingText) arr.push({ id: `h-${i}`, type: "h2", content: { text: [{ type: "text", text: headingText }] } });
+          if (paraText) arr.push({ id: `p-${i}`, type: "p", content: { text: [{ type: "paragraph", children: [{ text: paraText }] }] } });
           return arr;
         })
       : [],

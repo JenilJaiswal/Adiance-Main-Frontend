@@ -581,7 +581,7 @@ const Sustainability = () => {
           </Grid>
         </Grid>
         <Grid>
-          <Typography variant="h5">
+          <Typography component="div" variant="h5">
             <strong>
               <center>
                 Join us as we pioneer sustainability, one innovation at a time,

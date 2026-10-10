@@ -44,7 +44,7 @@ export default async function OG() {
             NDAA Compliant OEM Camera Manufacturer
           </div>
           <div style={{ fontSize: 30, opacity: 0.85, lineHeight: 1.3 }}>
-            White-label CCTV · Edge AI · Made in India · 50+ countries
+            White-label CCTV · Edge AI · Made in India · Global
           </div>
           <div
             style={{

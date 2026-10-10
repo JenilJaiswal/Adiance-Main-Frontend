@@ -16,25 +16,25 @@ export default function AboutUs() {
   return (
     <div>
       <Helmet>
-        <title>About Adiance - OEM Camera Manufacturer India | Since 2003</title>
+        <title>About Adiance - OEM Camera Manufacturer India | Since 2002</title>
         <meta
           name="description"
-          content="Learn about Adiance Technologies, India's leading NDAA compliant OEM camera manufacturer since 2003. Providing OEM, ODM & JDM services with in-house R&D, PCB assembly, and AI-powered surveillance solutions."
+          content="Learn about Adiance Technologies, India's leading NDAA compliant OEM camera manufacturer since 2002. Providing OEM, ODM & JDM services with in-house R&D, PCB assembly, and AI-powered surveillance solutions."
         />
         <meta
           name="keywords"
           content="Adiance Technologies, CCTV manufacturer India, surveillance camera company"
         />
-        <meta property="og:title" content="About Adiance - OEM Camera Manufacturer India | Since 2003" />
-        <meta property="og:description" content="Learn about Adiance Technologies, India's leading NDAA compliant OEM camera manufacturer since 2003. OEM, ODM & JDM services with in-house R&D." />
+        <meta property="og:title" content="About Adiance - OEM Camera Manufacturer India | Since 2002" />
+        <meta property="og:description" content="Learn about Adiance Technologies, India's leading NDAA compliant OEM camera manufacturer since 2002. OEM, ODM & JDM services with in-house R&D." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Adiance Technologies" />
         <meta property="og:image" content="https://www.adiance.com/images/Logo.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@adiancetech" />
-        <meta name="twitter:title" content="About Adiance - OEM Camera Manufacturer India | Since 2003" />
-        <meta name="twitter:description" content="Learn about Adiance Technologies, India's leading NDAA compliant OEM camera manufacturer since 2003." />
+        <meta name="twitter:title" content="About Adiance - OEM Camera Manufacturer India | Since 2002" />
+        <meta name="twitter:description" content="Learn about Adiance Technologies, India's leading NDAA compliant OEM camera manufacturer since 2002." />
         {/*
           Organization is emitted globally by app/layout.js and the canonical +
           BreadcrumbList by buildMetadata()/<PageSchema> on /about. All three

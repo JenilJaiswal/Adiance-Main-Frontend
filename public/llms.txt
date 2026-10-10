@@ -5,13 +5,13 @@
 ## About
 
 - **Name:** Adiance Technologies
-- **Founded:** 2003
+- **Founded:** 2002
 - **Headquarters:** 7 Arista@Eight Corporate House, Behind Rajpath Club, Bodakdev, Ahmedabad, Gujarat 380054, India
 - **Phone:** +91-9687779999
 - **Sales email:** sales@adiance.com
 - **Website:** https://www.adiance.com
 - **Group company:** VMukti Solutions (https://www.vmukti.com) — VMukti is a sub-organization of Adiance Technologies focused on cloud video, broadcasting, and AI VMS.
-- **Markets served:** USA, Canada, UK, EU, GCC / Middle East, Africa, South-East Asia, ANZ, LATAM, India — 50+ countries via OEM and channel partners.
+- **Markets served:** USA, Canada, UK, EU, GCC / Middle East, Africa, South-East Asia, ANZ, LATAM, India — many countries via OEM and channel partners.
 
 ## Why Adiance
 
@@ -80,7 +80,7 @@
 - [Saudi Arabia](https://www.adiance.com/cctv-camera-manufacturer-saudi-arabia)
 - [Japan](https://www.adiance.com/cctv-camera-manufacturer-japan)
 - [Singapore](https://www.adiance.com/cctv-camera-manufacturer-singapore)
-- (Full list of 50+ countries available at /global-presence)
+- (Full list of countries available at /global-presence)
 
 ## Resources
 

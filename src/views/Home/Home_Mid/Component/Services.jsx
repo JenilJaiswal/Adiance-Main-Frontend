@@ -32,7 +32,7 @@ const Services = () => {
       id: 4,
       title: "ODM CCTV Camera Manufacturing",
       description: (
-        <p>35+ models — dome, bullet, PTZ, 4K, thermal, ANPR, 4G, edge AI — manufactured on non-Chinese SoC platforms (Qualcomm, Ambarella, Novatek, Sigmastar). NDAA Section 889 compliant. BIS Reg. R-72003735. MOQ from 100 units. 8–12 weeks to branded production.</p>
+        <p>A wide range of models — dome, bullet, PTZ, 4K, thermal, ANPR, 4G, edge AI — manufactured on non-Chinese SoC platforms (Qualcomm, Ambarella, Novatek, Sigmastar). NDAA Section 889 compliant. BIS Reg. R-72003735. MOQ from 100 units. 8–12 weeks to branded production.</p>
       ),
       imageUrl: "/N_Images/ODM-CCTV-Camera-Manufacturing.webp",
     },

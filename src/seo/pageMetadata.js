@@ -102,9 +102,9 @@ const CATALOG = {
   },
   "/about": {
     title:
-      "About Adiance | NDAA Compliant Camera Manufacturer Since 2003",
+      "About Adiance | NDAA Compliant Camera Manufacturer Since 2002",
     description:
-      "Adiance Technologies has manufactured surveillance cameras since 2003. NDAA-compliant, non-Chinese SoC cameras with in-house AI VMS for global security markets.",
+      "Adiance Technologies has manufactured surveillance cameras since 2002. NDAA-compliant, non-Chinese SoC cameras with in-house AI VMS for global security markets.",
     keywords:
       "Adiance Technologies, CCTV manufacturer India, surveillance camera company",
   },
@@ -117,9 +117,9 @@ const CATALOG = {
       "AI surveillance innovation, edge AI camera technology, smart video analytics",
   },
   "/contact": {
-    title: "Contact Adiance | Get a Quote for CCTV Cameras & OEM Services",
+    title: "Contact Adiance | CCTV OEM & White-Label Quote",
     description:
-      "Contact Adiance for OEM/ODM CCTV camera quotes, white-label partnerships, or technical inquiries. Global manufacturer serving 30+ countries.",
+      "Request a quote for OEM, ODM or white-label CCTV cameras from Adiance, an Ahmedabad-based manufacturer. Tell us your volume, market and camera type.",
     keywords:
       "contact CCTV manufacturer, get a quote CCTV camera, OEM camera inquiry",
   },
@@ -339,9 +339,9 @@ const CATALOG = {
   },
 
   "/oem-services": {
-    title: "OEM Camera Manufacturing | White-Label CCTV | Adiance",
+    title: "OEM CCTV Camera Manufacturer | White-Label, India | Adiance",
     description:
-      "Adiance OEM CCTV camera manufacturing: custom branding, firmware customization, NDAA compliance, and global shipping.",
+      "OEM CCTV camera manufacturer in Ahmedabad, India: custom branding, firmware, NVRs and cloud VMS under your brand. BIS-ER registered. Request an OEM quote.",
     keywords: "OEM CCTV camera manufacturer, white label camera, OEM surveillance",
   },
   "/odm-services": {
@@ -362,7 +362,7 @@ const CATALOG = {
   "/ndaa-compliance": {
     title: "NDAA Section 889 Compliance | Non-Chinese CCTV Cameras | Adiance",
     description:
-      "Adiance cameras are NDAA Section 889 compliant — non-Chinese SoCs, US Federal eligible, and manufactured in India.",
+      "Adiance cameras are NDAA Section 889 compliant — built on non-Chinese SoC platforms and manufactured in India. Documents on request.",
     keywords: "NDAA compliance, NDAA Section 889, non-Chinese CCTV, federal CCTV",
   },
   "/us": {
@@ -442,10 +442,13 @@ const CATALOG = {
     description:
       "Adiance cybersecurity-first surveillance with encrypted streams, secure firmware, and hardened cloud VMS.",
   },
+  // The page body describes Adiance's own factory (PCB manufacturing, product
+  // assembly, prototyping and mold making), not plant-surveillance solutions,
+  // so the metadata now says that. Plant surveillance has no page of its own yet.
   "/manufacturing": {
-    title: "Manufacturing Plant Surveillance | Adiance",
+    title: "CCTV Manufacturing Facility | PCB & Assembly | Adiance",
     description:
-      "Adiance manufacturing-plant surveillance: floor monitoring, perimeter, PPE compliance, and ANPR vehicle-gate cameras.",
+      "See how Adiance builds its products: in-house PCB manufacturing, product assembly, prototyping and mold making at its facility in Ahmedabad, India.",
   },
   "/product-engineering": {
     title: "Product Engineering Services | CCTV & IoT | Adiance",
@@ -490,9 +493,9 @@ const CATALOG = {
       "Adiance manufactures cameras on non-Chinese SoCs — Qualcomm, Ambarella, and Novatek — for NDAA compliance.",
   },
   "/non-chinese-cctv-camera-manufacturer": {
-    title: "Non-Chinese CCTV Camera Manufacturer | India | Adiance",
+    title: "Non-Chinese CCTV Camera Manufacturer, India | Adiance",
     description:
-      "Adiance is a non-Chinese CCTV camera manufacturer based in India with NDAA-compliant, made-in-India surveillance.",
+      "Made in Ahmedabad, India and BIS-ER registered: OEM and white-label CCTV cameras, NVRs and VMS for buyers diversifying supply away from China.",
   },
   "/oem-white-label-platform": {
     title: "OEM White-Label CCTV Platform | Adiance",
@@ -515,9 +518,9 @@ const CATALOG = {
       "Adiance OEM CCTV manufacturer for the Middle East — NDAA-compliant cameras for UAE, Saudi Arabia, Qatar, and GCC.",
   },
   "/private-label-security-camera-supplier": {
-    title: "Private-Label Security Camera Supplier | Adiance",
+    title: "Private Label Security Cameras | OEM/ODM Supplier | Adiance",
     description:
-      "Adiance private-label security camera supplier with full white-label OEM/ODM and NDAA compliance.",
+      "Launch your own private label security camera brand: Adiance supplies cameras, NVRs, a branded mobile app and cloud VMS from India. Request a quote.",
   },
   "/custom-cctv-camera-manufacturer": {
     title: "Custom CCTV Camera Manufacturer | ODM/JDM | Adiance",
@@ -525,15 +528,15 @@ const CATALOG = {
       "Adiance designs custom CCTV cameras: bespoke hardware, lens, sensor, firmware, and form-factor for OEM/ODM/JDM customers.",
   },
   "/white-label-cctv-camera-manufacturer": {
-    title: "White-Label CCTV Camera Manufacturer | OEM/ODM India | Adiance",
+    title: "White Label CCTV Camera Manufacturer, India | Adiance",
     description:
-      "Adiance white-label CCTV camera manufacturer in India with full OEM/ODM, custom firmware, branding, and NDAA compliance.",
+      "White-label CCTV cameras and NVRs made in India. Your brand, custom firmware and app, BIS-ER registered (R-72003735). OEM and ODM programs. Get a quote.",
     keywords: "white label CCTV camera, white label surveillance, OEM camera manufacturer",
   },
   "/ndaa-compliant-cctv-camera-manufacturer": {
-    title: "NDAA-Compliant CCTV Camera Manufacturer | Adiance",
+    title: "NDAA Compliant CCTV Camera Manufacturer | Adiance",
     description:
-      "Adiance is an NDAA-compliant CCTV camera manufacturer with non-Chinese SoCs and US Federal eligibility.",
+      "NDAA Section 889 compliant CCTV camera manufacturer in India for OEM and white-label buyers, built on non-Chinese SoC platforms. Documents on request.",
     keywords:
       "NDAA compliant CCTV manufacturer, NDAA 889 camera, US federal CCTV",
   },
@@ -548,14 +551,14 @@ const CATALOG = {
       "Adiance STQC-tested CCTV cameras compliant with Indian government Essential Requirements for surveillance.",
   },
   "/global-presence": {
-    title: "Adiance Global Presence | 50+ Countries Served",
+    title: "Adiance Global Presence | Countries Served",
     description:
-      "Adiance Technologies serves 50+ countries with NDAA-compliant cameras, white-label OEM, and edge-AI surveillance.",
+      "Adiance Technologies serves many countries with NDAA-compliant cameras, white-label OEM, and edge-AI surveillance.",
   },
   "/oem-cctv-camera-manufacturer-usa": {
     title: "OEM CCTV Camera Manufacturer for USA | NDAA-Compliant | Adiance",
     description:
-      "Adiance OEM CCTV manufacturer for the USA — NDAA Section 889 compliant, non-Chinese SoC, US Federal eligible.",
+      "Adiance OEM CCTV manufacturer for US buyers — NDAA Section 889 compliant, non-Chinese SoC platforms, made in India.",
   },
   "/qualcomm-edge-ai-camera-manufacturer": {
     title: "Qualcomm Edge AI Camera Manufacturer | Adiance",
@@ -666,6 +669,18 @@ Object.entries(COUNTRY_PAGES).forEach(([slug, country]) => {
       `CCTV camera manufacturer ${country}, surveillance camera ${country}, OEM CCTV ${country}, NDAA compliant ${country}`,
   };
 });
+
+/**
+ * India: the generic country template leads with "NDAA Compliant", which is
+ * not what Indian buyers search for. Lead with the certifications they ask
+ * for (BIS-ER registration R-72003735 is verified) and the Ahmedabad base.
+ */
+CATALOG["/cctv-camera-manufacturer-india"] = {
+  ...CATALOG["/cctv-camera-manufacturer-india"],
+  title: "CCTV Camera Manufacturer in India | BIS-ER | Adiance",
+  description:
+    "India-based CCTV camera manufacturer in Ahmedabad. BIS-ER registered (R-72003735) cameras, NVRs and cloud VMS with OEM, ODM and white-label programs.",
+};
 
 /**
  * `-v2` pages are alternate copy variants targeting the same country and the

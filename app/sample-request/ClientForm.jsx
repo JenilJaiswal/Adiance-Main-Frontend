@@ -1,10 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import dynamic from "next/dynamic";
-
-const Header = dynamic(() => import("@/components/Header/Header"), { ssr: false });
-const Footer = dynamic(() => import("@/components/Footer/Footer"), { ssr: false });
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const CAMERA_OPTIONS = [
   "Edge AI Bullet (S-Series)",

@@ -52,7 +52,7 @@ const WarrantyPolicy = () => {
             >
               Warranty Policy
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   At ADIANCE TECHNOLOGIES PVT LTD. we understand how much you
@@ -77,7 +77,7 @@ const WarrantyPolicy = () => {
             >
               Replacement Guarantee
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   <div className="table-responsive">
@@ -136,7 +136,7 @@ const WarrantyPolicy = () => {
             >
               Replacement
             </Typography>
-            <Typography variant="body1">
+            <Typography component="div" variant="body1">
               <ul>
                 <li>
                   If you have received an item in a ‘Damaged’ or ‘Defective’

@@ -187,7 +187,7 @@ const ThermalCamera = () => {
             {/* Display Active Tab Content */}
             {activeTab === "benefits" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Enhanced Safety</li>
                     <li>Seamless Integration</li>
@@ -198,7 +198,7 @@ const ThermalCamera = () => {
             )}
             {activeTab === "features" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Body Temperature Detection</li>
                     <li>Mask Detection</li>
@@ -209,7 +209,7 @@ const ThermalCamera = () => {
             )}
             {activeTab === "applications" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>Public Spaces</li>
                     <li>Workplace Safety</li>
@@ -220,7 +220,7 @@ const ThermalCamera = () => {
             )}
             {activeTab === "specifications" && (
               <Grid item xs={12}>
-                <Typography variant="body1" sx={{ fontSize: "1.2rem" }}>
+                <Typography component="div" variant="body1" sx={{ fontSize: "1.2rem" }}>
                   <ul>
                     <li>High-Resolution</li>
                     <li>Thermal Imaging</li>

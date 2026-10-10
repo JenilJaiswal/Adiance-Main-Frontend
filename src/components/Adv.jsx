@@ -26,72 +26,72 @@ const Adv = () => {
               loading="lazy"
             />
           </center>
-          <p className="adv-text adv-text-bigger">
+          <div className="adv-text adv-text-bigger">
             <center>
             2500+
               <br /> Happy Clients <br />
             </center>
-          </p>
+          </div>
         </div>
         <div className="adv-item">
           <center>
             <img src="images/Security Partner in 15+ States.webp" alt="Research" className="adv-img" loading="lazy" />
           </center>
-          <p className="adv-text adv-text-bigger">
+          <div className="adv-text adv-text-bigger">
             <center>
             Security Partner <br />
             in 15+ States
             </center>
-          </p>
+          </div>
         </div>
         <div className="adv-item">
           <center>
             <img src="images/Trusted by Indian Government.webp" alt="Employee" className="adv-img" loading="lazy" />
           </center>
-          <p className="adv-text adv-text-bigger">
+          <div className="adv-text adv-text-bigger">
             <center>
               Trusted by <br /> Indian Government
             </center>
-          </p>
+          </div>
         </div>
         <div className="adv-item">
           <center>
             <img src="images/Patented Technology.webp" alt="Performance" className="adv-img" loading="lazy" />
           </center>
-          <p className="adv-text adv-text-bigger">
+          <div className="adv-text adv-text-bigger">
             <center>Patented Technology</center>
-          </p>
+          </div>
         </div>
         <div className="adv-item">
           <center>
             <img src="images/Menufecturing Facility in Gujarat.webp" alt="Certificate" className="adv-img" loading="lazy" />
           </center>
-          <p className="adv-text adv-text-bigger">
+          <div className="adv-text adv-text-bigger">
             <center>
             Menufecturing <br />Facility in Gujarat
             </center>
-          </p>
+          </div>
         </div>
         <div className="adv-item">
           <center>
             <img src="images/Made in India.webp" alt="Certificate" className="adv-img" loading="lazy" />
           </center>
-          <p className="adv-text adv-text-bigger">
+          <div className="adv-text adv-text-bigger">
             <center>
             Made in India
             </center>
-          </p>
+          </div>
         </div>
         <div className="adv-item">
           <center>
             <img src="images/20+ Years of Industry Experience.webp" alt="Certificate" className="adv-img" loading="lazy" />
           </center>
-          <p className="adv-text adv-text-bigger">
+          <div className="adv-text adv-text-bigger">
             <center>
             20+ Years of<br />
             Industry Experience
             </center>
-          </p>
+          </div>
         </div>
 
         <style jsx>{`

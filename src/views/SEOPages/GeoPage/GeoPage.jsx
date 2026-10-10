@@ -162,7 +162,7 @@ const GeoPage = () => {
       {/* CTA */}
       <CTASection
         title={`Ready to Launch Your CCTV Brand in ${country.country}?`}
-        description={`Join 500+ OEM partners across 30 countries. Get a custom quote for ${country.country} market cameras.`}
+        description={`Join 500+ OEM partners across many countries. Get a custom quote for ${country.country} market cameras.`}
         buttonText="Get a Free Quote"
         buttonLink="/contact"
       />
