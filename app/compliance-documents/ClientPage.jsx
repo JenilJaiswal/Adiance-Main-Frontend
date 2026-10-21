@@ -4,9 +4,15 @@ import React from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
-// PLACEHOLDER PATHS — replace `/compliance/*.pdf` files in /public/compliance/
-// folder as the team uploads each certificate. Until file is present the row
-// shows 'request via sales' instead of a download link.
+// PDF files are NOT in the repository yet (only public/compliance/README.txt
+// exists), so every `/compliance/*.pdf` link used to return 404. A row only
+// shows a download button when its file path is listed in AVAILABLE_FILES
+// below; otherwise it shows a "Request via sales" email link. When the
+// compliance owner supplies a verified PDF, drop it in /public/compliance/
+// under the exact filename and add that path to AVAILABLE_FILES.
+const AVAILABLE_FILES = new Set([
+  // "/compliance/adiance-bis-r-72003735.pdf",
+]);
 const DOCS = [
   { name: "BIS Registration Certificate", id: "R-72003735 — Adiance, ArcisAI brands",
     desc: "Bureau of Indian Standards CCTV camera registration. Covers IS 13252(P1):2010. Verifiable on crsbis.in.",
@@ -51,7 +57,7 @@ export default function ClientPage() {
           Compliance Documentation
         </h1>
         <p style={{ fontSize: 17, color: "#444", lineHeight: 1.6, marginBottom: 24 }}>
-          Direct downloads of every Adiance Technologies compliance document required for procurement, audit and tender response. Each document is current and signed; verifiable references included where the issuing body offers public lookup.
+          Compliance information is model-specific. Tell us the product model and destination market so we can confirm the applicable registration, declaration or attestation and provide the current document if available. Verify current registration on the issuing body&apos;s official portal.
         </p>
 
         <div style={{ background: "#FFF7F0", border: "1px solid #F5D5C0", borderRadius: 8, padding: "14px 16px", marginBottom: 28, fontSize: 14, color: "#5A3D1F" }}>
@@ -82,13 +88,23 @@ export default function ClientPage() {
                 )}
               </div>
               <div>
-                <a href={doc.file} download style={{
-                  background: "#BF0603", color: "#FFF", padding: "10px 18px",
-                  borderRadius: 6, textDecoration: "none", fontWeight: 600, fontSize: 14,
-                  whiteSpace: "nowrap", display: "inline-block",
-                }}>
-                  Download PDF
-                </a>
+                {AVAILABLE_FILES.has(doc.file) ? (
+                  <a href={doc.file} download style={{
+                    background: "#BF0603", color: "#FFF", padding: "10px 18px",
+                    borderRadius: 6, textDecoration: "none", fontWeight: 600, fontSize: 14,
+                    whiteSpace: "nowrap", display: "inline-block",
+                  }}>
+                    Download PDF
+                  </a>
+                ) : (
+                  <a href={`mailto:sales@adiance.com?subject=${encodeURIComponent("Request: " + doc.name)}`} style={{
+                    background: "#FFF", color: "#BF0603", border: "1px solid #BF0603", padding: "9px 18px",
+                    borderRadius: 6, textDecoration: "none", fontWeight: 600, fontSize: 14,
+                    whiteSpace: "nowrap", display: "inline-block",
+                  }}>
+                    Request via sales
+                  </a>
+                )}
               </div>
             </article>
           ))}
@@ -111,6 +127,9 @@ export default function ClientPage() {
           </ul>
           <p style={{ fontSize: 14, color: "#555", lineHeight: 1.7, marginBottom: 0 }}>
             Email <a href="mailto:sales@adiance.com" style={{ color: "#BF0603", fontWeight: 600 }}>sales@adiance.com</a> with the specific document you need and the procurement context.
+          </p>
+          <p style={{ fontSize: 14, color: "#555", lineHeight: 1.7, margin: "12px 0 0" }}>
+            Related: <a href="/compliance" style={{ color: "#BF0603", fontWeight: 600 }}>compliance overview</a>, <a href="/ndaa-compliance" style={{ color: "#BF0603", fontWeight: 600 }}>NDAA Section 889 guide</a> and <a href="/bis-er-certification" style={{ color: "#BF0603", fontWeight: 600 }}>BIS-ER registration</a>.
           </p>
         </section>
       </main>

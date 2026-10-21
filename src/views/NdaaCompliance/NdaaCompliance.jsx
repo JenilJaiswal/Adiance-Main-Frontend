@@ -32,7 +32,7 @@ const complianceSectors = [
 ];
 
 const whyAdiance = [
-  { title: "100% Compliant Supply Chain", desc: "Zero components from NDAA-banned entities. Every camera is manufactured with a fully traceable, compliant supply chain from chipset to final assembly." },
+  { title: "Traceable Supply Chain", desc: "Adiance designs its cameras to avoid components from the entities named in NDAA Section 889. Component origin is documented per model, so ask us for the details for the model you are considering." },
   { title: "Edge AI Technology", desc: "On-device AI analytics including face detection, intrusion alerts, people counting, and object classification — no cloud dependency required." },
   { title: "4G/LTE Connectivity", desc: "Deploy surveillance anywhere with built-in cellular connectivity. Ideal for remote government facilities, border security, and temporary installations." },
   { title: "Cloud VMS Platform", desc: "Centralized video management with Adiance CloudXVR — manage hundreds of cameras across multiple locations from a single dashboard." },
@@ -62,7 +62,7 @@ const comparisonRows = [
 
 const faqs = [
   { q: "What is NDAA Section 889 compliance?", a: "NDAA Section 889 of the National Defense Authorization Act prohibits U.S. federal agencies from procuring or using telecommunications and video surveillance equipment from specific Chinese manufacturers including Huawei, ZTE, Hytera, Hikvision, and Dahua, as well as their subsidiaries and affiliates." },
-  { q: "Are Adiance cameras NDAA compliant?", a: "Yes. Adiance cameras are designed and manufactured without any components from the banned entities listed under NDAA Section 889. Our entire product line is fully compliant and suitable for use in U.S. government facilities, education institutions, and federally-funded projects." },
+  { q: "Are Adiance cameras NDAA compliant?", a: "Adiance designs its cameras to avoid components from the entities named in NDAA Section 889. Compliance is confirmed model by model, so please request the Section 889 documentation for your specific model and project before you buy. Where a purchase has other rules, such as TAA, check those separately." },
   { q: "Who needs NDAA-compliant cameras?", a: "Any organization receiving U.S. federal funding or contracting with the federal government must use NDAA-compliant equipment. This includes government agencies, military installations, public schools and universities, healthcare facilities receiving federal funds, airports, and critical infrastructure." },
   { q: "How do Adiance cameras compare to Hikvision and Dahua alternatives?", a: "Adiance offers comparable or superior technology including Edge AI analytics, 4G/LTE connectivity, and cloud VMS at competitive pricing. Adiance cameras can be deployed in any government or federally-funded project without compliance risk." },
   { q: "Does Adiance offer OEM/ODM manufacturing for NDAA-compliant cameras?", a: "Yes. Adiance provides full OEM and ODM manufacturing services, allowing security integrators and distributors to offer NDAA-compliant cameras under their own brand with custom firmware, housing, and packaging options." },
@@ -207,7 +207,7 @@ const NdaaCompliance = () => {
       <section className="ndaa-section ndaa-products">
         <div className="ndaa-container">
           <h2 className="ndaa-section-title">NDAA-Compliant Product Lineup</h2>
-          <p className="ndaa-section-subtitle">Every Adiance camera is fully compliant with NDAA Section 889 and ready for deployment in government and federally-funded facilities.</p>
+          <p className="ndaa-section-subtitle">Adiance designs its cameras around NDAA Section 889. Ask for the documentation for your model and project to confirm it fits your requirements.</p>
           <div className="ndaa-products-grid">
             {productLineup.map((p, i) => (
               <Link key={i} to={p.link} className="ndaa-product-card">
@@ -280,7 +280,7 @@ const NdaaCompliance = () => {
       {/* Section 7 — CTA */}
       <CTASection
         title="Ready to Switch to NDAA-Compliant Cameras?"
-        description="Get a free consultation and product samples. Our team will help you transition from banned equipment to fully compliant Adiance solutions."
+        description="Get a free consultation and product samples. Our team will help you move away from banned equipment to Adiance cameras designed around Section 889."
         buttonText="Request a Quote"
         buttonLink="/contact"
       />

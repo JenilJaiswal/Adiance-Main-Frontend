@@ -1,6 +1,7 @@
 import { buildMetadata } from "@/seo/pageMetadata";
 import { JsonLd } from "@/seo/JsonLd";
 import ClientChecker from "./ClientChecker";
+import { FAQ_ITEMS } from "./faq";
 
 export const metadata = buildMetadata("/tools/ndaa-compliance-checker");
 
@@ -38,48 +39,11 @@ const HOWTO_SCHEMA = {
 const FAQ_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is NDAA Section 889?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Section 889 of the John S. McCain National Defense Authorization Act for Fiscal Year 2019 prohibits US federal agencies and their contractors from procuring or using certain telecommunications and video surveillance equipment from specific manufacturers named in the Act, due to national security concerns.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which manufacturers are named in NDAA Section 889?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The statute names five companies and their subsidiaries and affiliates: Huawei Technologies Company, ZTE Corporation, Hytera Communications Corporation, Hangzhou Hikvision Digital Technology Company and Dahua Technology Company.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What about cameras that use HiSilicon SoCs?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "HiSilicon is a subsidiary of Huawei. Cameras built on HiSilicon chipsets — even if sold under a different brand — are widely considered non-compliant with NDAA Section 889 and excluded from US federal and federally-funded procurement.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Who must comply with NDAA Section 889?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "US federal agencies, federal contractors, sub-contractors at any tier on federal contracts, organisations receiving federal grants, and entities operating in federally-funded facilities — including most public schools, hospitals, airports and critical infrastructure.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What if my current cameras are non-compliant?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Non-compliant cameras must typically be replaced before a federal contract can be performed or federal funds disbursed. Adiance manufactures NDAA-compliant cameras with documentation and model-mapping support for migration projects.",
-      },
-    },
-  ],
+  mainEntity: FAQ_ITEMS.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 export default function Page() {

@@ -1,6 +1,7 @@
 import { buildMetadata } from "@/seo/pageMetadata";
 import { JsonLd, HOMEPAGE_FAQ, HOMEPAGE_WEBPAGE } from "@/seo/JsonLd";
 import ClientPage from "./ClientPage";
+import HomeFaq from "@/components/HomeFaq";
 
 export const metadata = buildMetadata("/");
 
@@ -29,7 +30,7 @@ export default function Page() {
       />
       <JsonLd data={HOMEPAGE_WEBPAGE} />
       <JsonLd data={HOMEPAGE_FAQ} />
-      <ClientPage />
+      <ClientPage faq={<HomeFaq />} />
     </>
   );
 }

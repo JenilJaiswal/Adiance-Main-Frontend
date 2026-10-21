@@ -9,6 +9,7 @@
 // `document` only inside useEffect, which does not run during SSR.
 import Home from "@/views/Home/Home";
 
-export default function ClientPage() {
-  return <Home />;
+// `faq` is the server-rendered visible FAQ (see HomeFaq).
+export default function ClientPage({ faq = null }) {
+  return <Home faq={faq} />;
 }

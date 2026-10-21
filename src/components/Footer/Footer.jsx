@@ -63,6 +63,10 @@ const Footer = () => {
                 <li><a href="/white-label-cctv-camera-manufacturer">White Label Cameras</a></li>
                 <li><a href="/non-chinese-cctv-camera-manufacturer">Non-Chinese Cameras</a></li>
                 <li><a href="/private-label-security-camera-supplier">Private Label Cameras</a></li>
+                <li><a href="/qualcomm-edge-ai-camera-manufacturer">Qualcomm Edge AI Cameras</a></li>
+                <li><a href="/smart-home-oem-camera-manufacturer">Smart Home OEM Cameras</a></li>
+                <li><a href="/white-label-baby-monitor-manufacturer">White Label Baby Monitor</a></li>
+                <li><a href="/white-label-pet-camera-manufacturer">White Label Pet Camera</a></li>
               </ul>
             </div>
 
@@ -89,6 +93,10 @@ const Footer = () => {
                 <li><a href="/pcb-assembly-service">PCB Assembly Services</a></li>
                 <li><a href="/oem-cctv-camera-manufacturer-usa">OEM Camera USA</a></li>
                 <li><a href="/full-solution-oem-camera-manufacturer">OEM Camera India</a></li>
+                <li><a href="/product-engineering">Product Engineering</a></li>
+                <li><a href="/robotics">Robotics</a></li>
+                <li><a href="/cloud-application">Cloud VMS</a></li>
+                <li><a href="/cyber-security">Cyber Security</a></li>
               </ul>
             </div>
 
@@ -112,6 +120,10 @@ const Footer = () => {
                 <li><a href="/blog">Blogs</a></li>
                 <li><a href="/news">News</a></li>
                 <li><a href="/event">Events</a></li>
+                <li><a href="/datasheet">Datasheets</a></li>
+                <li><a href="/downloads">Downloads</a></li>
+                <li><a href="/sample-request">Request a Sample</a></li>
+                <li><a href="/case-study/white-label-edge-ai-camera-japan">Case Study: White-Label Camera, Japan</a></li>
               </ul>
             </div>
 
@@ -120,6 +132,8 @@ const Footer = () => {
               <h3>ABOUT US</h3>
               <ul>
                 <li><a href="/about">About Company</a></li>
+                <li><a href="/global-presence">Global Presence</a></li>
+                <li><a href="/innovation">Innovation</a></li>
                 <li><a href="/bis-er-certification">BIS-ER Certification</a></li>
                 <li><a href="/warranty-service">Warranty Service</a></li>
                 <li><a href="/privacy-policy">Privacy Policy</a></li>

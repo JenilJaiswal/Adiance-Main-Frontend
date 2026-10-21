@@ -31,7 +31,7 @@ const Globalnetwork = ({ data }) => {
         <img src="/images/Group.svg" alt="" aria-hidden="true" loading="lazy" />
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .gn-cta-section {
           position: relative;
           background-color: #BF0603;
@@ -133,7 +133,7 @@ const Globalnetwork = ({ data }) => {
           .gn-cta-title { font-size: 1.6rem; }
           .gn-cta-highlight { font-size: 1.9rem; }
         }
-      `}</style>
+      ` }} />
     </section>
   );
 };

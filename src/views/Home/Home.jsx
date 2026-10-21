@@ -10,7 +10,7 @@ import Home_Slider from './Home_Slider/Home_Slider';
 
 
 
-const Home = () => {
+const Home = ({ faq = null }) => {
 
     return (
         <div className="home-container">
@@ -18,6 +18,7 @@ const Home = () => {
             <Home_Slider />
             <WhatWeDo />
             <Home_mid />
+            {faq}
             <Footer />
             
             <style jsx>{`

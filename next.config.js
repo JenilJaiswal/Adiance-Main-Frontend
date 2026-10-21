@@ -96,6 +96,20 @@ const legacyRedirects = {
   "/seo/white-label-cctv-camera-manufacturer":
     "/white-label-cctv-camera-manufacturer",
   "/japan-cctv-camera-manufacturer": "/cctv-camera-manufacturer-japan",
+  // GSC-only 404s from the 2026-10 audit. Each old slug is the same topic as
+  // the live page it points to (word-order / short-form variants of the same
+  // page). Old URLs with no equivalent page (/adiance-services,
+  // /adiance-compliant-cctv-cameras, old image files, CMS blog slugs) are left
+  // as 404 on purpose.
+  "/singapore-cctv-camera-manufacturer": "/cctv-camera-manufacturer-singapore",
+  "/cctv-manufacturer-india": "/cctv-camera-manufacturer-india",
+  "/white-label-cctv-manufacturer": "/white-label-cctv-camera-manufacturer",
+  "/white-label-camera-manufacturer": "/white-label-cctv-camera-manufacturer",
+  "/white-label-cctv": "/white-label-cctv-camera-manufacturer",
+  "/white-label": "/white-label-cctv-camera-manufacturer",
+  "/adiance.com/white-label-cctv-camera-manufacturer":
+    "/white-label-cctv-camera-manufacturer",
+  "/oem-manufacturing": "/oem-services",
   "/h265-4g-dome-ptz-camera": "/4g-dome-ptz-camera",
   "/industries/smart-cities": "/smart-cities",
   "/products/arcis-bridge": "/",

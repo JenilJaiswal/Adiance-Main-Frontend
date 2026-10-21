@@ -24,26 +24,16 @@ const ITEMLIST_SCHEMA = {
   })),
 };
 
-const FAQ_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "Which countries have banned Chinese surveillance cameras?",
-      acceptedAnswer: { "@type": "Answer", text: "As of 2026, the United States, United Kingdom, Australia, Canada, Japan, New Zealand, Lithuania, Latvia and Estonia have all implemented federal-level restrictions on Chinese-manufactured surveillance cameras, with additional countries restricting Chinese cameras for specific sectors or government procurement." } },
-    { "@type": "Question", name: "What was the first country to ban Chinese surveillance cameras?",
-      acceptedAnswer: { "@type": "Answer", text: "Japan's METI began restricting Chinese surveillance equipment from government procurement in 2018. The United States NDAA Section 889 followed in 2019. Japan's action is widely considered the first formal Western restriction." } },
-    { "@type": "Question", name: "Are these restrictions expanding?",
-      acceptedAnswer: { "@type": "Answer", text: "Yes. The trend has accelerated since 2022 with the UK Cabinet Office guidance, Australia's federal sweep, and Baltic-state restrictions. The Netherlands, Germany, France and Italy have active debates underway. The trajectory is toward expansion, not retreat." } },
-    { "@type": "Question", name: "What does this mean for buyers?",
-      acceptedAnswer: { "@type": "Answer", text: "Buyers and resellers operating in any market trending toward restriction should already be transitioning to compliant supply chains. Adiance manufactures NDAA-compliant cameras on non-Chinese SoC platforms (Qualcomm, Ambarella, Novatek, Sigmastar) with BIS registration R-72003735 verifiable on crsbis.in." } },
-  ],
-};
+// The FAQPage JSON-LD that used to sit here described questions that are not
+// shown on this page, and its answers make dated legal statements about
+// specific countries. Structured data must match visible content, so it was
+// removed. Re-add it only together with a visible FAQ that a legal reviewer
+// has approved.
 
 export default function Page() {
   return (
     <>
       <JsonLd data={ITEMLIST_SCHEMA} />
-      <JsonLd data={FAQ_SCHEMA} />
       <ClientMap />
     </>
   );
