@@ -33,7 +33,7 @@ function BlogSearchParamSync({ onChange }) {
   return null;
 }
 
-const Blogs = () => {
+const Blogs = ({ archive = null }) => {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -249,6 +249,7 @@ const Blogs = () => {
           />
         </Box>
       )}
+      {archive}
       <Footer />
       <style jsx>{`
         .innovation-container {

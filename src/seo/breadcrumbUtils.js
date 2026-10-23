@@ -37,6 +37,10 @@ export function buildBreadcrumbs(path) {
   let url = "";
   segments.forEach((seg) => {
     url += "/" + seg;
+    // There is no /case-study index page (it returns 404), so do not offer it
+    // as a breadcrumb step or put it in the BreadcrumbList schema. The case
+    // study pages themselves (/case-study/<slug>) are real and keep their crumb.
+    if (url === "/case-study" && segments.length > 1) return;
     items.push({ name: prettifySegment(seg), url });
   });
   return items;

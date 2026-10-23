@@ -24,6 +24,7 @@ import Footer from '../../../components/Footer/Footer'
 import Clients from '../../../N_Component/Clients'
 import Services_GlobalPresence from '../../../N_Component/Services_GlobalPresence/Services_GlobalPresence'
 import globalPresenceData from '../../../N_Component/Services_GlobalPresence/globalPresenceData.json'
+import ServiceCrossLinks from '@/components/ServiceCrossLinks'
 
 const ODM = () => {
   useEffect(() => {
@@ -63,7 +64,8 @@ const ODM = () => {
         <CTASection title='Ready to Build Your Brand with White-Label Products?' />
         <Services_GlobalPresence {...globalPresenceData.odm} />
         <FAQ_Section faqsList={faqsData.odm} />
-        <Footer />
+        <ServiceCrossLinks current="odm" />
+      <Footer />
       </div>
     </>
   )

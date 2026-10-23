@@ -135,6 +135,16 @@ const CATALOG = {
     description:
       "Meet Adiance at global security trade shows including IFSEC, ISC West, Intersec, and Secutech. Discover NDAA-compliant cameras and edge-AI products.",
   },
+  "/event/ifsec-india-2025": {
+    title: "Adiance Technologies Unveils ArcisAI Innovation at IFSEC India 2025",
+    description:
+      "At IFSEC India 2025, Adiance Technologies showcased ArcisAI's AI CCTV ecosystem, Eco-Series cameras, NVRs, ABD device, and cloud-ready VMS innovations.",
+  },
+  "/case-study/white-label-edge-ai-camera-japan": {
+    title: "Case Study: White-Label Edge AI CCTV Camera Delivered to Japan | Adiance",
+    description:
+      "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance.",
+  },
   "/news": {
     title: "News & Press Releases | Adiance Technologies",
     description:
@@ -212,7 +222,7 @@ const CATALOG = {
   "/compliance-documents": {
     title: "Compliance Documents — BIS, NDAA, ONVIF, CE, FCC, ISO | Adiance",
     description:
-      "Download Adiance compliance documentation: BIS registration R-72003735 certificate, NDAA Section 889 attestation, ONVIF conformance, CE Declaration of Conformity, FCC certification, ISO 9001:2015 and STQC certification for ArcisAI VMS.",
+      "Compliance information is model-specific. Ask Adiance for BIS registration, NDAA Section 889, ONVIF, CE, FCC, ISO 9001:2015 and STQC documentation for your product model and destination market.",
     keywords:
       "Adiance compliance documents, BIS certificate download, NDAA Section 889 attestation, ONVIF Profile S G T conformance, CE Declaration of Conformity CCTV, FCC certification camera, ISO 9001 surveillance manufacturer",
   },
@@ -273,9 +283,9 @@ const CATALOG = {
     keywords: "S-Series CCTV camera, Qualcomm edge AI camera, AI surveillance",
   },
   "/eco-series": {
-    title: "Eco Series CCTV Cameras | Value-Tier Surveillance | Adiance",
+    title: "Eco Series CCTV Cameras for Entry-Level Projects | Adiance",
     description:
-      "Adiance Eco Series CCTV cameras — value-tier NDAA-compliant surveillance for entry-level deployments.",
+      "Adiance Eco Series CCTV cameras: value-tier surveillance for entry-level deployments, designed around NDAA Section 889. Ask for model-level documentation.",
   },
   "/r-series": {
     title: "R-Series Cameras | Mid-Tier IP Surveillance | Adiance",
@@ -403,9 +413,9 @@ const CATALOG = {
       "Adiance remote-security cameras for off-grid sites: solar-powered, 4G connectivity, edge AI for oil & gas, mining, and agriculture.",
   },
   "/education": {
-    title: "Education Campus Surveillance Solutions | Adiance",
+    title: "School and Campus CCTV Solutions | Face Recognition, Perimeter | Adiance",
     description:
-      "Adiance campus surveillance: perimeter security, attendance via face recognition, and classroom safety for schools and universities.",
+      "CCTV for schools and universities from Adiance: perimeter security, face-recognition attendance and classroom safety. See how the solution fits your campus.",
   },
   "/healthcare": {
     title: "Healthcare Surveillance Solutions | Hospitals & Pharmacies | Adiance",
@@ -610,9 +620,9 @@ const CATALOG = {
       "Adiance CCTV manufacturer for banking and finance — branch surveillance, ATM monitoring, and vault analytics.",
   },
   "/product-portfolio": {
-    title: "Adiance Product Portfolio | CCTV, NVR, VMS, Edge AI",
+    title: "CCTV Camera Product Range for OEM Partners | Adiance Portfolio",
     description:
-      "Browse the full Adiance product portfolio: edge-AI cameras, ANPR, thermal, 4G, 4K cameras, NVR, XVR, and Cloud VMS.",
+      "Browse the Adiance product portfolio for OEM and white-label partners: edge-AI, ANPR, thermal, 4G and 4K cameras, plus NVR, XVR and Cloud VMS.",
   },
   "/smart-home-oem-camera-manufacturer": {
     title: "Smart Home OEM Camera Manufacturer | White-Label | Adiance",

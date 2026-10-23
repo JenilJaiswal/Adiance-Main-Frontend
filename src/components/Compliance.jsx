@@ -427,7 +427,7 @@ const Compliance = () => {
           {/* Checklist heading-hierarchy audit (2026-09-10): this is closing
               marketing copy, not a section title — was rendering as a bare <h6>
               [sic h5] with no real content-heading meaning. Kept as body text. */}
-          <Typography variant="h5" component="p">
+          <Typography variant="h5" component="div">
             <strong>
               <center>
                 In a world where security is paramount, trust Adiance to lead

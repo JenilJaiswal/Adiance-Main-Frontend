@@ -57,7 +57,7 @@ const BISSlide = () => (
   <div className="bis-slide-wrapper">
     <div className="bis-slide-right">
       <h1 className="bis-slide-heading">
-        BIS-ER Certified by<br />STQC Certification
+        CCTV OEM/ODM Manufacturing<br />for Security Brands
       </h1>
       <p className="bis-slide-subheading">Ready for Your Brand</p>
       <p className="bis-slide-desc">

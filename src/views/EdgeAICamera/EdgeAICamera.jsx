@@ -14,7 +14,7 @@ const products = [
     title: "Edge AI Based PTZ ANPR Bullet Camera",
     imageUrl:
       "/images/P6-Edge-AI-Based-PTZ-ANPR-Bullet-Camera-VM-72BPTZ5AIVE-01.webp",
-    link: "/edge-ai-based-ptz-anpr-bullet-camera",
+    link: "/4k-bullet-anpr-ptz-camera",
   },
   {
     id: 2,

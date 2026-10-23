@@ -173,6 +173,12 @@ const Tools = () => {
         <p style={{ marginBottom: "24px", color: "#555" }}>
           Download the latest applications and corresponding release notes.
         </p>
+        <p style={{ marginBottom: "24px", color: "#555" }}>
+          Online tools for buyers:{" "}
+          <a href="/tools/ndaa-compliance-checker">NDAA compliance checker</a>
+          {" "}and{" "}
+          <a href="/tools/chinese-camera-restrictions-map">map of countries that restrict Chinese-made cameras</a>.
+        </p>
 
         <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 16 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "nowrap" }}>

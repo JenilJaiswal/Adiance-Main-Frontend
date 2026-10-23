@@ -24,6 +24,7 @@ import Clients from '../../../N_Component/Clients';
 import Services_Banner_Comp from '../../../N_Component/Services_Banner_Comp/Services_Banner_Comp';
 import bannerData from '../../../N_Component/Services_Banner_Comp/bannerData.json'
 import globalPresenceData from '../../../N_Component/Services_GlobalPresence/globalPresenceData.json'
+import ServiceCrossLinks from '@/components/ServiceCrossLinks'
 const OEM = () => {
   const containerStyle = {
     overflowX: 'hidden'
@@ -59,6 +60,7 @@ const OEM = () => {
       <CTASection title='Still Wondering How OEM Manufacturing Services Can Work For You?' />
       <Services_GlobalPresence {...globalPresenceData.oem} />
       <FAQ_Section faqsList={faqsData.oem} />
+      <ServiceCrossLinks current="oem" />
       <Footer />
     </div>
   )

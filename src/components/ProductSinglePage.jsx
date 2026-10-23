@@ -41,8 +41,7 @@ const ProductSinglePage = ({ product, imgIdxSP }) => {
             {/* Product Image */}
             <img
               src={imgUrl}
-              // alt={product.title}
-              alt={imgIdxSP}
+              alt={product.title}
               style={{
                 width: "100%",
                 maxWidth: "400px",

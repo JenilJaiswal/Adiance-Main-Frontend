@@ -1066,7 +1066,7 @@
       {
         "icon": "🔒",
         "title": "Cybersecurity Hardened",
-        "description": "No backdoors, secure boot, encrypted storage — certified for government-grade deployments."
+        "description": "Secure boot and encrypted storage support secure deployments. Ask for the security details of your model."
       }
     ],
     "stats": [
@@ -1075,8 +1075,8 @@
         "label": "Years Engineering Experience"
       },
       {
-        "value": "100%",
-        "label": "Made in India"
+        "value": "Ahmedabad",
+        "label": "Manufacturing base"
       }
     ],
     "faq": [
@@ -1135,7 +1135,7 @@
         {
           "icon": "📦",
           "title": "Supply Chain Transparency",
-          "description": "Enterprise buyers and government procurement teams now require full component-level transparency. Adiance provides complete SoC origin documentation for every camera model."
+          "description": "Enterprise buyers and government procurement teams now require component-level transparency. Ask Adiance for the SoC origin documentation for the model you are considering."
         },
         {
           "icon": "🏭",
@@ -2537,6 +2537,16 @@
         "title": "NDAA Section 889 Compliance",
         "url": "/ndaa-compliance",
         "description": "Launch a white-label brand that's NDAA Section 889 compliant from day one"
+      },
+      {
+        "title": "ODM Camera Manufacturing",
+        "url": "/odm-services",
+        "description": "Custom hardware design, firmware engineering and exclusive SKUs."
+      },
+      {
+        "title": "Manufacturing Facility",
+        "url": "/manufacturing",
+        "description": "In-house PCB manufacturing, product assembly, prototyping and mold making in Ahmedabad, India."
       }
     ]
   },
@@ -2549,12 +2559,12 @@
     },
     "hero": {
       "title": "Ensure Unwavering Security with NDAA Compliant AI CCTV Cameras from Adiance Technologies",
-      "subtitle": "As a leading Indian OEM/ODM, Adiance provides fully compliant, tariff-free, and high-performance surveillance solutions for discerning security integrators and government contractors.",
+      "subtitle": "As an Indian OEM/ODM, Adiance builds surveillance cameras designed around NDAA Section 889 for security integrators and government contractors. Compliance details are confirmed per model.",
       "ctaText": "Request OEM Quote"
     },
     "intro": {
       "title": "NDAA Compliance Built In — Not Bolted On",
-      "description": "Adiance designs NDAA compliance into every camera from the ground up. No HiSilicon, no Rockchip, no Hikvision, no Dahua — our cameras use Qualcomm and Ambarella SoC exclusively. Full NDAA Section 889 documentation, letters of compliance, and BOM transparency provided for every model."
+      "description": "Adiance designs its cameras around NDAA Section 889 from the start, using non-Chinese SoC platforms rather than HiSilicon or Rockchip chips. Ask for the Section 889 documentation, compliance letter and bill-of-materials details for your model and project."
     },
     "features": [
       {
@@ -2598,18 +2608,18 @@
         "label": "§889 Compliant"
       },
       {
-        "value": "100%",
-        "label": "BOM Transparent"
+        "value": "Per model",
+        "label": "BOM documentation on request"
       }
       ],
     "faq": [
       {
         "question": "What does NDAA compliance mean for CCTV cameras?",
-        "answer": "NDAA compliance, specifically Section 889 of the National Defense Authorization Act, prohibits federal agencies from procuring or using video surveillance equipment, telecommunications equipment, or services produced or provided by certain designated Chinese companies and their subsidiaries. For CCTV cameras, this means that the cameras and their critical components (like chipsets) must not originate from these banned entities. Adiance Technologies ensures its cameras are built with non-Chinese chipsets and components, making them fully compliant and suitable for government and critical infrastructure projects."
+        "answer": "NDAA compliance, specifically Section 889 of the National Defense Authorization Act, prohibits federal agencies from procuring or using video surveillance equipment, telecommunications equipment, or services produced or provided by certain designated Chinese companies and their subsidiaries. For CCTV cameras, this means that the cameras and their critical components (like chipsets) must not originate from these banned entities. Adiance builds its cameras with non-Chinese chipsets. Whether a specific model fits a government or critical-infrastructure project is confirmed per model, so request the documentation for your model."
       },
       {
         "question": "Why is Adiance Technologies considered NDAA compliant?",
-        "answer": "Adiance Technologies is an Indian OEM/ODM manufacturer. Our entire supply chain, from design to manufacturing, is based in India, utilizing non-Chinese chipsets (such as Ambarella and Sony) and components. This strict adherence to non-restricted origins ensures that all Adiance AI CCTV cameras meet the stringent requirements of NDAA Section 889, providing our partners with compliant and secure surveillance solutions."
+        "answer": "Adiance Technologies is an Indian OEM/ODM manufacturer. Our entire supply chain, from design to manufacturing, is based in India, utilizing non-Chinese chipsets (such as Ambarella and Sony) and components. Adiance designs its AI CCTV cameras around NDAA Section 889. Ask for the documentation for your model to confirm it meets your project requirements."
       },
       {
         "question": "Are Adiance cameras tariff-free for US imports?",
@@ -2617,7 +2627,7 @@
       },
       {
         "question": "What are the benefits of choosing an Indian OEM/ODM for NDAA compliant cameras?",
-        "answer": "Choosing an Indian OEM/ODM like Adiance Technologies offers several key benefits: guaranteed NDAA compliance due to non-Chinese origin, potential tariff exemptions leading to cost savings, high-quality manufacturing standards, a secure and transparent supply chain, and access to advanced Edge AI technology. Furthermore, Adiance offers extensive customization and white-labeling options, allowing partners to build their own brand with compliant products."
+        "answer": "Choosing an Indian OEM/ODM like Adiance Technologies offers several key benefits: cameras designed around NDAA Section 889 with non-Chinese chipsets, a different tariff position than China-made products (check current rules for your market), high-quality manufacturing standards, a secure and transparent supply chain, and access to advanced Edge AI technology. Furthermore, Adiance offers extensive customization and white-labeling options, allowing partners to build their own brand with compliant products."
       },
       {
         "question": "Does Adiance provide documentation to prove NDAA compliance?",
@@ -2642,7 +2652,7 @@
         {
           "icon": "📷",
           "title": "Full NDAA Section 889 Compliance",
-          "description": "Adiance Technologies is committed to upholding the highest standards of security and compliance. Our AI CCTV cameras are meticulously designed and manufactured to be fully compliant with Section 889 of the National Defense Authorization Act (NDAA). This ensures that our solutions are free from components or technologies that pose national security risks, making them ideal for government, defense, and critical infrastructure projects in the USA and allied nations. We provide complete transparency and documentation to verify the origin and compliance of our products, giving you peace of mind and a clear path to secure deployments."
+          "description": "Adiance Technologies is committed to upholding the highest standards of security and compliance. Our AI CCTV cameras are designed around Section 889 of the National Defense Authorization Act (NDAA). Adiance can share documentation on component origin for your specific model, so your team can check it against your project requirements."
         },
         {
           "icon": "📷",
@@ -2666,7 +2676,7 @@
       "rows": [
         {
           "feature": "NDAA Compliance",
-          "col1": "Fully compliant (Section 889)",
+          "col1": "Designed around Section 889 (documentation per model)",
           "col2": "Often non-compliant or require extensive verification"
         },
         {
@@ -2739,6 +2749,16 @@
         "title": "NDAA Section 889 Compliance Guide",
         "url": "/ndaa-compliance",
         "description": "The full compliance guide: who must comply, official citations, and Adiance's compliant supply chain"
+      },
+      {
+        "title": "Compliance Documents",
+        "url": "/compliance-documents",
+        "description": "Compliance information is model-specific. Ask for the document that fits your product model and market."
+      },
+      {
+        "title": "BIS-ER Registration",
+        "url": "/bis-er-certification",
+        "description": "How Adiance supports brands launching CCTV products under BIS-ER in India."
       }
     ]
   },
@@ -3284,39 +3304,232 @@
       "regions": [
         {
           "icon": "🌍",
-          "name": "Region 1",
+          "name": "Worldwide",
           "description": "From procurement-regulated markets in North America and Europe to rapidly growing surveillance markets in the Middle East and Asia-Pacific, Adiance delivers tailored OEM/ODM solutions for every region.",
           "countries": []
         },
         {
           "icon": "🌍",
-          "name": "Region 2",
-          "description": "Serving partners across North and South America with NDAA-compliant, independently sourced surveillance solutions built for regulated procurement environments.",
-          "countries": []
+          "name": "Americas",
+          "description": "Serving partners across North and South America with surveillance solutions designed around regulated procurement environments, including NDAA Section 889. Documentation is confirmed per model.",
+          "countries": [
+            {
+              "name": "USA",
+              "url": "/cctv-camera-manufacturer-usa"
+            },
+            {
+              "name": "Canada",
+              "url": "/cctv-camera-manufacturer-canada"
+            },
+            {
+              "name": "Mexico",
+              "url": "/cctv-camera-manufacturer-mexico"
+            },
+            {
+              "name": "Brazil",
+              "url": "/cctv-camera-manufacturer-brazil"
+            },
+            {
+              "name": "Argentina",
+              "url": "/cctv-camera-manufacturer-argentina"
+            },
+            {
+              "name": "Chile",
+              "url": "/cctv-camera-manufacturer-chile"
+            },
+            {
+              "name": "Colombia",
+              "url": "/cctv-camera-manufacturer-colombia"
+            },
+            {
+              "name": "Peru",
+              "url": "/cctv-camera-manufacturer-peru"
+            },
+            {
+              "name": "Venezuela",
+              "url": "/cctv-camera-manufacturer-venezuela"
+            }
+          ]
         },
         {
           "icon": "🌍",
-          "name": "Region 3",
-          "description": "Supporting European security brands with GDPR-aware, CE-certified surveillance hardware and software. Tailored for smart city, retail, and critical infrastructure deployments.",
-          "countries": []
+          "name": "Europe",
+          "description": "Supporting European security brands with surveillance hardware and software for smart city, retail, and critical infrastructure deployments. Certification scope is confirmed per model.",
+          "countries": [
+            {
+              "name": "United Kingdom",
+              "url": "/cctv-camera-manufacturer-uk"
+            },
+            {
+              "name": "Germany",
+              "url": "/cctv-camera-manufacturer-germany"
+            },
+            {
+              "name": "France",
+              "url": "/cctv-camera-manufacturer-france"
+            },
+            {
+              "name": "Italy",
+              "url": "/cctv-camera-manufacturer-italy"
+            },
+            {
+              "name": "Spain",
+              "url": "/cctv-camera-manufacturer-spain"
+            },
+            {
+              "name": "Netherlands",
+              "url": "/cctv-camera-manufacturer-netherlands"
+            },
+            {
+              "name": "Sweden",
+              "url": "/cctv-camera-manufacturer-sweden"
+            },
+            {
+              "name": "Poland",
+              "url": "/cctv-camera-manufacturer-poland"
+            },
+            {
+              "name": "Czech Republic",
+              "url": "/cctv-camera-manufacturer-czech-republic"
+            },
+            {
+              "name": "Ireland",
+              "url": "/cctv-camera-manufacturer-ireland"
+            },
+            {
+              "name": "OEM camera manufacturer for Europe",
+              "url": "/oem-camera-manufacturer-europe"
+            }
+          ]
         },
         {
           "icon": "🌍",
-          "name": "Region 4",
-          "description": "Powering the region's smart city and mega-project surveillance needs with extreme-temperature rated cameras, integrated VMS, and Arabic-ready interfaces.",
-          "countries": []
+          "name": "Middle East",
+          "description": "Supporting the region's smart city and large-project surveillance needs with integrated VMS and OEM/ODM camera programs.",
+          "countries": [
+            {
+              "name": "UAE",
+              "url": "/cctv-camera-manufacturer-uae"
+            },
+            {
+              "name": "Saudi Arabia",
+              "url": "/cctv-camera-manufacturer-saudi-arabia"
+            },
+            {
+              "name": "Qatar",
+              "url": "/cctv-camera-manufacturer-qatar"
+            },
+            {
+              "name": "Kuwait",
+              "url": "/cctv-camera-manufacturer-kuwait"
+            },
+            {
+              "name": "Oman",
+              "url": "/cctv-camera-manufacturer-oman"
+            },
+            {
+              "name": "Bahrain",
+              "url": "/cctv-camera-manufacturer-bahrain"
+            },
+            {
+              "name": "Israel",
+              "url": "/cctv-camera-manufacturer-israel"
+            },
+            {
+              "name": "Turkey",
+              "url": "/cctv-camera-manufacturer-turkey"
+            },
+            {
+              "name": "OEM camera manufacturer for the Middle East",
+              "url": "/oem-camera-manufacturer-middle-east"
+            }
+          ]
         },
         {
           "icon": "🌍",
-          "name": "Region 5",
+          "name": "Africa",
           "description": "Enabling Africa's growing security infrastructure with cost-effective, reliable surveillance solutions designed for urban safety, banking, and government projects.",
-          "countries": []
+          "countries": [
+            {
+              "name": "Nigeria",
+              "url": "/cctv-camera-manufacturer-nigeria"
+            },
+            {
+              "name": "Ghana",
+              "url": "/cctv-camera-manufacturer-ghana"
+            },
+            {
+              "name": "Kenya",
+              "url": "/cctv-camera-manufacturer-kenya"
+            },
+            {
+              "name": "South Africa",
+              "url": "/cctv-camera-manufacturer-south-africa"
+            },
+            {
+              "name": "Morocco",
+              "url": "/cctv-camera-manufacturer-morocco"
+            },
+            {
+              "name": "Egypt",
+              "url": "/cctv-camera-manufacturer-egypt"
+            }
+          ]
         },
         {
           "icon": "🌍",
-          "name": "Region 6",
+          "name": "Asia-Pacific",
           "description": "Partnering with distributors and system integrators across the fastest-growing surveillance markets in ASEAN, Oceania, and the broader Asia-Pacific region.",
-          "countries": []
+          "countries": [
+            {
+              "name": "India",
+              "url": "/cctv-camera-manufacturer-india"
+            },
+            {
+              "name": "Singapore",
+              "url": "/cctv-camera-manufacturer-singapore"
+            },
+            {
+              "name": "Japan",
+              "url": "/cctv-camera-manufacturer-japan"
+            },
+            {
+              "name": "South Korea",
+              "url": "/cctv-camera-manufacturer-south-korea"
+            },
+            {
+              "name": "Taiwan",
+              "url": "/cctv-camera-manufacturer-taiwan"
+            },
+            {
+              "name": "Thailand",
+              "url": "/cctv-camera-manufacturer-thailand"
+            },
+            {
+              "name": "Malaysia",
+              "url": "/cctv-camera-manufacturer-malaysia"
+            },
+            {
+              "name": "Indonesia",
+              "url": "/cctv-camera-manufacturer-indonesia"
+            },
+            {
+              "name": "Philippines",
+              "url": "/cctv-camera-manufacturer-philippines"
+            },
+            {
+              "name": "Vietnam",
+              "url": "/cctv-camera-manufacturer-vietnam"
+            },
+            {
+              "name": "Australia",
+              "url": "/cctv-camera-manufacturer-australia"
+            },
+            {
+              "name": "New Zealand",
+              "url": "/cctv-camera-manufacturer-new-zealand"
+            }
+          ]
         }
       ]
     },
@@ -5850,6 +6063,28 @@
   },
   "product-portfolio": {
     "slug": "product-portfolio",
+    "relatedLinks": [
+      {
+        "title": "Thermal Cameras",
+        "url": "/thermal-camera",
+        "description": "Cloud-based thermal cameras for industrial, perimeter and critical-infrastructure surveillance."
+      },
+      {
+        "title": "4K CCTV Cameras",
+        "url": "/4kcamera",
+        "description": "4K bullet, dome and PTZ cameras with ultra-HD resolution and edge AI."
+      },
+      {
+        "title": "4G CCTV Cameras",
+        "url": "/4gcamera",
+        "description": "4G cellular CCTV cameras for off-grid, remote and rural surveillance."
+      },
+      {
+        "title": "WiFi PTZ Camera",
+        "url": "/wifi-ptz-camera",
+        "description": "Wireless pan-tilt-zoom camera with two-way audio and cloud VMS."
+      }
+    ],
     "seo": {
       "title": "OEM CCTV Camera Products | Adiance Portfolio",
       "description": "Browse a wide range of OEM CCTV camera models from Adiance. Edge AI, Eco-Series, PTZ, dome, bullet, and smart home cameras for white-label partners.",

@@ -159,7 +159,7 @@ const NavigationBar = () => {
                   <div className={classes.superSubMenu}>
                     <Typography variant="body1">
                       <SmartLink
-                        to="/edge-ai-based-ptz-anpr-bullet-camera"
+                        to="/4k-bullet-anpr-ptz-camera"
                         className={classes.menuLink}
                       >
                         Edge Ai based PTZ ANPR Camera
@@ -207,7 +207,7 @@ const NavigationBar = () => {
                   <div className={classes.superSubMenu}>
                     <Typography variant="body1">
                       <SmartLink
-                        to="/edge-ai-based-ptz-anpr-bullet-camera-3"
+                        to="/4k-bullet-anpr-ptz-camera"
                         className={classes.menuLink}
                       >
                         Edge AI Based PTZ ANPR Bullet Camera
