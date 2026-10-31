@@ -1,0 +1,486 @@
+/* ------------------------------------------------------------------
+   IFSEC event popup (EventMainDash.jsx) — sized to always fit the
+   screen without scrolling.
+
+   - Phones & portrait tablets: one card, image on top, form below.
+     The image shrinks if needed so image + form fit the screen height.
+   - Laptops, desktops, landscape tablets/phones: image and form side
+     by side in one card.
+   ------------------------------------------------------------------ */
+
+.event-popup-overlay {
+  --event-popup-gap: 16px; /* space kept from the screen edges */
+  --event-popup-vh: 100vh;
+  --event-popup-close: 32px;
+  /* Height of the form under the image (stacked layout). Keep in sync
+     with the form styles below if fields are added/removed. */
+  --event-popup-form-h: 376px;
+  /* Square image: screen width, unless the screen is too short for
+     image + form — then it shrinks so both fit */
+  --event-popup-img: min(
+    560px,
+    calc(100vw - 2 * var(--event-popup-gap)),
+    calc(var(--event-popup-vh) - 2 * var(--event-popup-gap) - var(--event-popup-form-h))
+  );
+  /* Card never narrower than 300px so the form stays comfortable */
+  --event-popup-card-w: max(
+    var(--event-popup-img),
+    min(calc(100vw - 2 * var(--event-popup-gap)), 300px)
+  );
+
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  padding: max(var(--event-popup-gap), env(safe-area-inset-top))
+    max(var(--event-popup-gap), env(safe-area-inset-right))
+    max(var(--event-popup-gap), env(safe-area-inset-bottom))
+    max(var(--event-popup-gap), env(safe-area-inset-left));
+  background: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  animation: event-popup-fade 0.25s ease-out;
+}
+
+/* dvh tracks the visible height on mobile browsers whose toolbars collapse */
+@supports (height: 100dvh) {
+  .event-popup-overlay {
+    --event-popup-vh: 100dvh;
+  }
+}
+
+.event-popup-dialog {
+  position: relative;
+  flex: 0 0 auto;
+  margin: auto; /* centres, and stays reachable if ever taller than the screen */
+  width: var(--event-popup-card-w);
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  animation: event-popup-zoom 0.3s ease-out;
+}
+
+.event-popup-card {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(var(--event-popup-vh) - 2 * var(--event-popup-gap));
+  overflow-y: auto; /* safety net only — sizes above are set to fit */
+  overscroll-behavior: contain;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.event-popup-media {
+  flex: 0 0 auto;
+}
+
+.event-popup-image {
+  display: block;
+  width: var(--event-popup-img);
+  height: auto;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  user-select: none;
+}
+
+/* ---------- Close button ---------- */
+
+.event-popup-close {
+  position: absolute;
+  top: calc(var(--event-popup-close) / -3);
+  right: calc(var(--event-popup-close) / -3);
+  z-index: 2;
+  width: var(--event-popup-close);
+  height: var(--event-popup-close);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-size: calc(var(--event-popup-close) * 0.65);
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  transition: background 0.15s ease, color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.event-popup-close:hover {
+  background: #bf0603;
+  color: #ffffff;
+}
+
+.event-popup-close:focus-visible,
+.event-popup-submit:focus-visible {
+  outline: 2px solid #bf0603;
+  outline-offset: 2px;
+}
+
+/* ---------- Form ---------- */
+
+.event-popup-panel {
+  padding: 14px 18px 16px;
+  color: #1a1a1a;
+}
+
+.event-popup-panel .event-popup-title {
+  margin: 0 0 2px;
+  color: #111111;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.event-popup-panel .event-popup-subtitle {
+  margin: 0 0 12px;
+  color: #555555;
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+
+.event-popup-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px 10px;
+}
+
+.event-popup-panel .event-popup-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  min-width: 0;
+  color: #222222;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Visually hidden by default (placeholders carry the meaning), still read
+   by screen readers. Shown below where there is room. */
+.event-popup-panel .event-popup-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.event-popup-field--wide,
+.event-popup-submit,
+.event-popup-panel .event-popup-error {
+  grid-column: 1 / -1;
+}
+
+.event-popup-panel .event-popup-field input,
+.event-popup-panel .event-popup-field select {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #111111;
+  font-family: inherit;
+  font-size: 16px; /* 16px stops iOS zooming in on focus */
+  font-weight: 400;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.event-popup-panel .event-popup-field select {
+  padding-right: 6px;
+}
+
+/* Unselected dropdowns look like placeholders */
+.event-popup-panel .event-popup-field select:invalid {
+  color: #757575;
+}
+
+.event-popup-panel .event-popup-field select option {
+  color: #111111;
+}
+
+.event-popup-panel .event-popup-field input:focus,
+.event-popup-panel .event-popup-field select:focus {
+  border-color: #bf0603;
+  box-shadow: 0 0 0 3px rgba(191, 6, 3, 0.15);
+  outline: none;
+}
+
+.event-popup-panel .event-popup-error {
+  margin: 0;
+  color: #b00020;
+  font-size: 13px;
+}
+
+.event-popup-submit {
+  height: 42px;
+  margin-top: 2px;
+  border: none;
+  border-radius: 8px;
+  background: #bf0603;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.event-popup-submit:hover {
+  background: #a30502;
+}
+
+.event-popup-submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* Short phones: drop the subtitle (the image already says it) */
+@media (max-width: 575px) and (max-height: 700px) {
+  .event-popup-overlay {
+    --event-popup-form-h: 352px;
+  }
+  .event-popup-panel .event-popup-subtitle {
+    display: none;
+  }
+  .event-popup-panel .event-popup-title {
+    margin-bottom: 10px;
+  }
+}
+
+/* Very narrow phones: date and time stacked too */
+@media (max-width: 339px) {
+  .event-popup-panel .event-popup-field {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Tablets (portrait): image on top, 2-column form below ---------- */
+
+@media (min-width: 576px) {
+  .event-popup-overlay {
+    --event-popup-gap: 24px;
+    --event-popup-close: 36px;
+    --event-popup-form-h: 304px;
+  }
+  .event-popup-card {
+    border-radius: 16px;
+  }
+  .event-popup-panel {
+    padding: 20px 24px 24px;
+  }
+  .event-popup-panel .event-popup-title {
+    font-size: 22px;
+  }
+  .event-popup-panel .event-popup-subtitle {
+    margin-bottom: 14px;
+    font-size: 14px;
+  }
+  .event-popup-form {
+    gap: 10px 12px;
+  }
+  /* name | email, phone | who you are, date | time, submit */
+  .event-popup-field--wide {
+    grid-column: auto;
+  }
+}
+
+/* Tall tablets: room for visible labels */
+@media (min-width: 576px) and (min-height: 900px) {
+  .event-popup-overlay {
+    --event-popup-form-h: 366px;
+  }
+}
+
+/* ---------- Laptops, desktops, landscape tablets & phones: side by side ---------- */
+
+@media (min-width: 900px) and (min-height: 520px),
+  (orientation: landscape) and (min-width: 640px) and (max-height: 519px) {
+  .event-popup-overlay {
+    --event-popup-gap: 28px;
+    --event-popup-form-w: 360px;
+    /* Square image: as big as fits next to the form */
+    --event-popup-size: min(
+      580px,
+      calc(var(--event-popup-vh) - 2 * var(--event-popup-gap)),
+      calc(100vw - 2 * var(--event-popup-gap) - var(--event-popup-form-w))
+    );
+  }
+
+  .event-popup-dialog {
+    width: auto;
+  }
+
+  .event-popup-card {
+    display: grid;
+    grid-template-columns: var(--event-popup-size) var(--event-popup-form-w);
+    height: var(--event-popup-size);
+    max-height: none;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+  }
+
+  .event-popup-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .event-popup-panel {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* safety net only */
+    padding: 28px;
+  }
+
+  .event-popup-panel-inner {
+    margin-block: auto; /* centres the form vertically */
+  }
+
+  .event-popup-panel .event-popup-subtitle {
+    margin-bottom: 18px;
+  }
+
+  /* single-column form, date | time on one row */
+  .event-popup-form {
+    gap: 12px;
+  }
+  .event-popup-field--wide {
+    grid-column: 1 / -1;
+  }
+  .event-popup-submit {
+    height: 46px;
+    margin-top: 4px;
+  }
+  .event-popup-panel .event-popup-field input,
+  .event-popup-panel .event-popup-field select {
+    height: 42px;
+  }
+
+  .event-popup-close {
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    background: #f1f1f1;
+    color: #333333;
+    font-size: 22px;
+    box-shadow: none;
+  }
+}
+
+/* Visible labels wherever there is room for them */
+@media (min-width: 576px) and (min-height: 900px),
+  (min-width: 900px) and (min-height: 700px) {
+  .event-popup-panel .event-popup-label {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
+/* Phones / small tablets turned sideways: tighter so the form fits the height */
+@media (orientation: landscape) and (min-width: 640px) and (max-height: 519px) {
+  .event-popup-overlay {
+    --event-popup-gap: 12px;
+    /* Give the image the full height; the form takes what's left (260–300px) */
+    --event-popup-form-w: clamp(
+      260px,
+      calc(100vw - var(--event-popup-vh)),
+      300px
+    );
+  }
+  .event-popup-panel {
+    padding: 14px 18px;
+  }
+  .event-popup-panel .event-popup-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .event-popup-panel .event-popup-subtitle {
+    display: none;
+  }
+  .event-popup-form {
+    gap: 8px 10px;
+  }
+  .event-popup-panel .event-popup-field input,
+  .event-popup-panel .event-popup-field select {
+    height: 36px;
+  }
+  .event-popup-submit {
+    height: 40px;
+    margin-top: 2px;
+  }
+  .event-popup-close {
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+}
+
+/* ---------- Large monitors ---------- */
+
+@media (min-width: 1600px) and (min-height: 950px) {
+  .event-popup-overlay {
+    --event-popup-form-w: 400px;
+    --event-popup-size: min(
+      660px,
+      calc(var(--event-popup-vh) - 2 * var(--event-popup-gap)),
+      calc(100vw - 2 * var(--event-popup-gap) - var(--event-popup-form-w))
+    );
+  }
+  .event-popup-panel {
+    padding: 34px;
+  }
+  .event-popup-panel .event-popup-title {
+    font-size: 26px;
+  }
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes event-popup-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes event-popup-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-popup-overlay,
+  .event-popup-dialog {
+    animation: none;
+  }
+  .event-popup-close,
+  .event-popup-submit {
+    transition: none;
+  }
+}

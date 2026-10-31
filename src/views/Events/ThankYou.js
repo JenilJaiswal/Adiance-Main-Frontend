@@ -19,22 +19,22 @@ const ThankYou = ({ onClose }) => {
       height: '100%',
       color: '#333',
       textAlign: 'center',
-      padding: '20px'
+      padding: '8px 12px'
     }}>
       <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '5px' }}>Thanks for submitting!</h2>
-      <div style={{ width: '30px', height: '2px', backgroundColor: '#C00', marginBottom: '20px' }}></div>
-      
-      <div style={{ marginBottom: '20px' }}>
+      <div style={{ width: '30px', height: '2px', backgroundColor: '#C00', marginBottom: '14px' }}></div>
+
+      <div style={{ marginBottom: '12px' }}>
         {/* Simple Email Icon SVG */}
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
           <polyline points="22,6 12,13 2,6"></polyline>
         </svg>
       </div>
 
-      <p style={{ fontSize: '14px', marginBottom: '30px' }}>We'll Connect With You Soon</p>
+      <p style={{ fontSize: '14px', marginBottom: '18px' }}>We'll Connect With You Soon</p>
 
-      <div style={{ marginBottom: '20px' }}>
+      <div style={{ marginBottom: '16px' }}>
         <p style={{ fontSize: '10px', fontWeight: 'bold', marginBottom: '10px', textTransform: 'uppercase' }}>Let's Contact</p>
         <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', alignItems: 'center' }}>
            <a href="https://www.facebook.com/adiancetechnologies" target="_blank" rel="noopener noreferrer" style={{ color: 'black' }}>

@@ -1,6 +1,7 @@
 import Script from "next/script";
 import Providers from "./providers";
 import CookieConsent from "../src/components/CookieConsent/CookieConsent";
+import EventPopupLoader from "../src/views/Events/EventPopupLoader";
 import "./globals.css";
 import "../src/App.css";
 import "../src/N_Component/Style.css";
@@ -214,6 +215,8 @@ export default function RootLayout({ children }) {
       <body>
         <Providers>{children}</Providers>
         <CookieConsent />
+        {/* IFSEC India 2026 popup — opens on full page load/refresh only */}
+        <EventPopupLoader />
         {/*
           Cookie-consent gate: neither loader below fires at all until
           localStorage.adiance_cookie_consent === "granted" — set only by an
