@@ -17,7 +17,7 @@ const EVENT_IMAGE_SRCSET = [640, 828, 1080]
 // Rendered image width at each breakpoint in EventMainDash.css, so the
 // browser downloads only the size it needs
 const EVENT_IMAGE_SIZES =
-  "(min-width: 1600px) and (min-height: 950px) 660px, (min-width: 900px) and (min-height: 520px) 580px, (min-width: 576px) 560px, calc(100vw - 32px)";
+  "(min-width: 720px) 600px, (orientation: landscape) and (min-width: 560px) 50vw, calc(100vw - 32px)";
 const EVENT_ALT =
   "Adiance at IFSEC India 2026 — Booth E-10, Bharat Mandapam, New Delhi, 3–5 December 2026";
 const EVENT_DATES = ["3 Dec", "4 Dec", "5 Dec"];
@@ -73,7 +73,7 @@ const EventMainDash = () => {
     date: "",
     timeSlot: "",
   });
-  const closeButtonRef = useRef(null);
+  const dialogRef = useRef(null);
 
   // Open only once the image is downloaded and decoded, so the popup appears
   // fully drawn instead of painting in. If the image fails, don't show it.
@@ -99,7 +99,9 @@ const EventMainDash = () => {
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    closeButtonRef.current?.focus({ preventScroll: true });
+    // Focus the dialog itself (not the close button) so keyboard users land
+    // inside it without a focus ring showing on open
+    dialogRef.current?.focus({ preventScroll: true });
 
     const onKeyDown = (e) => {
       if (e.key === "Escape") setIsOpen(false);
@@ -154,6 +156,8 @@ const EventMainDash = () => {
   return (
     <div className="event-popup-overlay" onClick={handleClose}>
       <div
+        ref={dialogRef}
+        tabIndex={-1}
         className="event-popup-dialog"
         role="dialog"
         aria-modal="true"
@@ -161,7 +165,6 @@ const EventMainDash = () => {
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          ref={closeButtonRef}
           type="button"
           className="event-popup-close"
           aria-label="Close"

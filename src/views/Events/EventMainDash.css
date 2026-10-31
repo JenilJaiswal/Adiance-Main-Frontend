@@ -1,11 +1,13 @@
 /* ------------------------------------------------------------------
-   IFSEC event popup (EventMainDash.jsx) — sized to always fit the
-   screen without scrolling.
+   IFSEC event popup (EventMainDash.jsx) — always fits the screen
+   without scrolling.
 
-   - Phones & portrait tablets: one card, image on top, form below.
+   - Phones (portrait, < 720px wide): one card, image on top, form below.
      The image shrinks if needed so image + form fit the screen height.
-   - Laptops, desktops, landscape tablets/phones: image and form side
-     by side in one card.
+   - Tablets, laptops, desktops and anything in landscape: image and form
+     side by side. Form ≈ 40% of the width, image takes the rest, both
+     capped by the screen height. The form adapts to the height it gets
+     (container queries on .event-popup-panel).
    ------------------------------------------------------------------ */
 
 .event-popup-overlay {
@@ -55,6 +57,7 @@
   margin: auto; /* centres, and stays reachable if ever taller than the screen */
   width: var(--event-popup-card-w);
   font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  outline: none;
   animation: event-popup-zoom 0.3s ease-out;
 }
 
@@ -119,7 +122,7 @@
   outline-offset: 2px;
 }
 
-/* ---------- Form ---------- */
+/* ---------- Form (phone sizes by default) ---------- */
 
 .event-popup-panel {
   padding: 14px 18px 16px;
@@ -160,7 +163,7 @@
 }
 
 /* Visually hidden by default (placeholders carry the meaning), still read
-   by screen readers. Shown below where there is room. */
+   by screen readers. Shown where the panel is tall enough. */
 .event-popup-panel .event-popup-label {
   position: absolute;
   width: 1px;
@@ -173,6 +176,8 @@
   border: 0;
 }
 
+/* Name, email, phone, who you are and submit take a full row;
+   date | time share one */
 .event-popup-field--wide,
 .event-popup-submit,
 .event-popup-panel .event-popup-error {
@@ -246,7 +251,7 @@
 }
 
 /* Short phones: drop the subtitle (the image already says it) */
-@media (max-width: 575px) and (max-height: 700px) {
+@media (max-width: 719px) and (max-height: 700px) and (orientation: portrait) {
   .event-popup-overlay {
     --event-popup-form-h: 352px;
   }
@@ -265,56 +270,23 @@
   }
 }
 
-/* ---------- Tablets (portrait): image on top, 2-column form below ---------- */
+/* ---------- Tablets, laptops, desktops, landscape: side by side ---------- */
 
-@media (min-width: 576px) {
+@media (min-width: 720px), (orientation: landscape) and (min-width: 560px) {
   .event-popup-overlay {
-    --event-popup-gap: 24px;
-    --event-popup-close: 36px;
-    --event-popup-form-h: 304px;
-  }
-  .event-popup-card {
-    border-radius: 16px;
-  }
-  .event-popup-panel {
-    padding: 20px 24px 24px;
-  }
-  .event-popup-panel .event-popup-title {
-    font-size: 22px;
-  }
-  .event-popup-panel .event-popup-subtitle {
-    margin-bottom: 14px;
-    font-size: 14px;
-  }
-  .event-popup-form {
-    gap: 10px 12px;
-  }
-  /* name | email, phone | who you are, date | time, submit */
-  .event-popup-field--wide {
-    grid-column: auto;
-  }
-}
-
-/* Tall tablets: room for visible labels */
-@media (min-width: 576px) and (min-height: 900px) {
-  .event-popup-overlay {
-    --event-popup-form-h: 366px;
-  }
-}
-
-/* ---------- Laptops, desktops, landscape tablets & phones: side by side ---------- */
-
-@media (min-width: 900px) and (min-height: 520px),
-  (orientation: landscape) and (min-width: 640px) and (max-height: 519px) {
-  .event-popup-overlay {
-    --event-popup-gap: 28px;
-    --event-popup-form-w: 360px;
-    /* Square image: as big as fits next to the form */
+    --event-popup-gap: clamp(12px, 3vmin, 32px);
+    /* Space available inside the screen edges */
+    --event-popup-avail-w: calc(100vw - 2 * var(--event-popup-gap));
+    --event-popup-avail-h: calc(var(--event-popup-vh) - 2 * var(--event-popup-gap));
+    /* Form ≈ 40% of the width (270–400px); image is a square using the
+       rest, never taller than the screen */
+    --event-popup-form-w: clamp(270px, calc(var(--event-popup-avail-w) * 0.4), 400px);
     --event-popup-size: min(
-      580px,
-      calc(var(--event-popup-vh) - 2 * var(--event-popup-gap)),
-      calc(100vw - 2 * var(--event-popup-gap) - var(--event-popup-form-w))
+      660px,
+      var(--event-popup-avail-h),
+      calc(var(--event-popup-avail-w) - var(--event-popup-form-w))
     );
+    --event-popup-close: 34px;
   }
 
   .event-popup-dialog {
@@ -327,6 +299,7 @@
     height: var(--event-popup-size);
     max-height: none;
     overflow: hidden;
+    border-radius: 16px;
     box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
   }
 
@@ -336,41 +309,34 @@
   }
 
   .event-popup-panel {
+    /* The form below adapts to the height this panel gets */
+    container: event-popup-panel / size;
     display: flex;
     flex-direction: column;
     overflow-y: auto; /* safety net only */
-    padding: 28px;
+    padding: 24px;
   }
 
   .event-popup-panel-inner {
     margin-block: auto; /* centres the form vertically */
   }
 
-  .event-popup-panel .event-popup-subtitle {
-    margin-bottom: 18px;
+  .event-popup-panel .event-popup-title {
+    padding-right: 36px; /* clear of the close button */
+    font-size: 21px;
   }
 
-  /* single-column form, date | time on one row */
+  .event-popup-panel .event-popup-subtitle {
+    margin-bottom: 16px;
+  }
+
   .event-popup-form {
-    gap: 12px;
-  }
-  .event-popup-field--wide {
-    grid-column: 1 / -1;
-  }
-  .event-popup-submit {
-    height: 46px;
-    margin-top: 4px;
-  }
-  .event-popup-panel .event-popup-field input,
-  .event-popup-panel .event-popup-field select {
-    height: 42px;
+    gap: 10px;
   }
 
   .event-popup-close {
     top: 12px;
     right: 12px;
-    width: 34px;
-    height: 34px;
     background: #f1f1f1;
     color: #333333;
     font-size: 22px;
@@ -378,9 +344,8 @@
   }
 }
 
-/* Visible labels wherever there is room for them */
-@media (min-width: 576px) and (min-height: 900px),
-  (min-width: 900px) and (min-height: 700px) {
+/* Roomy panels (laptops/desktops): visible labels, larger fields */
+@container event-popup-panel (min-height: 510px) {
   .event-popup-panel .event-popup-label {
     position: static;
     width: auto;
@@ -390,22 +355,28 @@
     clip: auto;
     white-space: normal;
   }
+  .event-popup-panel .event-popup-title {
+    font-size: 24px;
+  }
+  .event-popup-panel .event-popup-subtitle {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .event-popup-form {
+    gap: 12px;
+  }
+  .event-popup-panel .event-popup-field input,
+  .event-popup-panel .event-popup-field select {
+    height: 42px;
+  }
+  .event-popup-submit {
+    height: 46px;
+    margin-top: 4px;
+  }
 }
 
-/* Phones / small tablets turned sideways: tighter so the form fits the height */
-@media (orientation: landscape) and (min-width: 640px) and (max-height: 519px) {
-  .event-popup-overlay {
-    --event-popup-gap: 12px;
-    /* Give the image the full height; the form takes what's left (260–300px) */
-    --event-popup-form-w: clamp(
-      260px,
-      calc(100vw - var(--event-popup-vh)),
-      300px
-    );
-  }
-  .event-popup-panel {
-    padding: 14px 18px;
-  }
+/* Short panels (phones in landscape): tighter */
+@container event-popup-panel (max-height: 400px) {
   .event-popup-panel .event-popup-title {
     margin-bottom: 10px;
     font-size: 18px;
@@ -414,7 +385,7 @@
     display: none;
   }
   .event-popup-form {
-    gap: 8px 10px;
+    gap: 8px;
   }
   .event-popup-panel .event-popup-field input,
   .event-popup-panel .event-popup-field select {
@@ -422,7 +393,13 @@
   }
   .event-popup-submit {
     height: 40px;
-    margin-top: 2px;
+  }
+}
+
+/* Side-by-side on short screens: less padding so the short form fits */
+@media (orientation: landscape) and (max-height: 520px) {
+  .event-popup-panel {
+    padding: 14px 16px;
   }
   .event-popup-close {
     top: 8px;
@@ -430,25 +407,6 @@
     width: 30px;
     height: 30px;
     font-size: 20px;
-  }
-}
-
-/* ---------- Large monitors ---------- */
-
-@media (min-width: 1600px) and (min-height: 950px) {
-  .event-popup-overlay {
-    --event-popup-form-w: 400px;
-    --event-popup-size: min(
-      660px,
-      calc(var(--event-popup-vh) - 2 * var(--event-popup-gap)),
-      calc(100vw - 2 * var(--event-popup-gap) - var(--event-popup-form-w))
-    );
-  }
-  .event-popup-panel {
-    padding: 34px;
-  }
-  .event-popup-panel .event-popup-title {
-    font-size: 26px;
   }
 }
 
