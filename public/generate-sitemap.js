@@ -214,6 +214,7 @@ const staticPages = [
 
   // Event pages
   { url: "/event", changefreq: "monthly", priority: 0.6 },
+  { url: "/ifsec-india-2026", changefreq: "weekly", priority: 0.9 },
   { url: "/event/ifsec-india-2025", changefreq: "monthly", priority: 0.6 },
 
   // Miscellaneous

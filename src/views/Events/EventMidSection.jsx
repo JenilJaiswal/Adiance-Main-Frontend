@@ -68,6 +68,16 @@ const EventMidSection = () => {
               manufacturing strength, showcase our OEM/ODM capabilities, and build long-term
               partnerships with businesses across industries.
             </p>
+            <p className="event-mid-section-desc">
+              <strong>Next event:</strong> meet Adiance at{" "}
+              <a
+                href="/ifsec-india-2026"
+                style={{ color: "#BF0603", fontWeight: 600 }}
+              >
+                IFSEC India 2026, Booth E10, Hall 5GF
+              </a>
+              , Bharat Mandapam, New Delhi, 3–5 December 2026.
+            </p>
           </div>
         </div>
       </section>
