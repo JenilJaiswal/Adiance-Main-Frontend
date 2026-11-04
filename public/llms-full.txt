@@ -185,7 +185,11 @@ A: Yes. Adiance's engineering team provides firmware customization, custom SDK /
 - Short LLM index: https://www.adiance.com/llms.txt
 - Robots policy: https://www.adiance.com/robots.txt
 
-## 11. Contact
+## 11. Events
+
+- Adiance at IFSEC India 2026: https://www.adiance.com/ifsec-india-2026 — Booth E10, Hall 5GF, Bharat Mandapam, New Delhi, 3–5 December 2026. Adiance is an exhibitor, not the organiser of IFSEC India (official site: https://www.ifsecindia.com/).
+
+## 12. Contact
 
 - Sales / quotes: sales@adiance.com — +91-9687779999
 - General: contact@adiance.com

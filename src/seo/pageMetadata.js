@@ -135,6 +135,14 @@ const CATALOG = {
     description:
       "Meet Adiance at global security trade shows including IFSEC, ISC West, Intersec, and Secutech. Discover NDAA-compliant cameras and edge-AI products.",
   },
+  "/ifsec-india-2026": {
+    title: "IFSEC India 2026 | Meet Adiance at Booth E10",
+    description:
+      "Meet Adiance at IFSEC India 2026, Booth E10, Hall 5GF, New Delhi. Explore CCTV OEM/ODM manufacturing, surveillance camera development, PCB design and electronics manufacturing.",
+    keywords:
+      "IFSEC India 2026, Adiance IFSEC 2026, Adiance booth E10, CCTV OEM manufacturer India, CCTV ODM manufacturer India, CCTV manufacturers at IFSEC India",
+    ogImage: `${SITE}/images/ifsec-india-2026-og.png`,
+  },
   "/event/ifsec-india-2025": {
     title: "Adiance Technologies Unveils ArcisAI Innovation at IFSEC India 2025",
     description:

@@ -92,9 +92,13 @@ const organizationSchema = {
   // accepts an array of types on one JSON-LD block, and every field below
   // (address, contactPoint, etc.) already satisfies LocalBusiness too.
   "@type": ["Organization", "LocalBusiness"],
+  // Shared entity id: landing pages (e.g. /ifsec-india-2026) reference this
+  // same id so Google sees ONE Adiance organization, not two.
+  "@id": "https://www.adiance.com/#organization",
   name: "Adiance Technologies",
   alternateName: "Adiance",
   url: "https://www.adiance.com",
+  email: "contact@adiance.com",
   logo: "https://www.adiance.com/images/Logo.webp",
   description:
     "Adiance Technologies is an NDAA compliant OEM camera manufacturer in India. We provide white-label CCTV cameras, AI-powered surveillance solutions, NVRs, cloud VMS, and custom OEM/ODM/JDM electronics manufacturing services for global markets.",

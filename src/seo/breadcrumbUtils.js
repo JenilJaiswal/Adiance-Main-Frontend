@@ -25,7 +25,8 @@ export function prettifySegment(seg) {
     .replace(/\bUsa\b/g, "USA")
     .replace(/\bUk\b/g, "UK")
     .replace(/\bUae\b/g, "UAE")
-    .replace(/\bSoc\b/g, "SoC");
+    .replace(/\bSoc\b/g, "SoC")
+    .replace(/\bIfsec\b/g, "IFSEC");
 }
 
 /** Returns [{name, url}] from Home down to the current page, url relative (e.g. "/about"). */
