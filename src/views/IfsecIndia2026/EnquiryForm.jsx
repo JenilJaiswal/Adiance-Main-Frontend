@@ -82,7 +82,14 @@ export default function EnquiryForm() {
           location: values.country.trim(),
           country: values.country.trim(),
           requirement: values.requirement,
-          message: values.message.trim(),
+          // The backend email template doesn't print `requirement`, so it is
+          // also included in the message text, which the email does show.
+          message: [
+            `Business Requirement: ${values.requirement}`,
+            values.message.trim(),
+          ]
+            .filter(Boolean)
+            .join("\n\n"),
           source: SOURCE,
           formType: "IFSEC India 2026 Meeting Request",
           booth: "Booth E10, Hall 5GF",
