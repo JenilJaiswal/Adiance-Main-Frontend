@@ -120,6 +120,32 @@ const CAPABILITIES = [
   },
 ];
 
+/* Real booth photos from IFSEC India 2025 (Bharat Mandapam, New Delhi), already
+   used on /event/ifsec-india-2025. Resized to 640w / 1200w WebP. Alt text only
+   describes what is visible; no names or claims are added. */
+const PHOTOS_2025 = [
+  {
+    file: "team-at-adiance-booth",
+    alt: "Group of Adiance booth visitors and team members posing together in front of the video management and AI-powered CCTV display at IFSEC India 2025",
+    caption: "At the Adiance booth, IFSEC India 2025",
+  },
+  {
+    file: "visitor-meeting-at-booth",
+    alt: "Two men shaking hands at the Adiance booth at IFSEC India 2025, with a video management system screen behind them",
+    caption: "Business meetings at the booth",
+  },
+  {
+    file: "booth-conversation-s-series",
+    alt: "Two women in conversation at the Adiance booth at IFSEC India 2025, in front of an S-Series CCTV camera display",
+    caption: "Camera and VMS discussions",
+  },
+  {
+    file: "team-group-at-booth",
+    alt: "Visitors and team gathered at the Adiance exhibition stand at IFSEC India 2025",
+    caption: "Meeting partners and visitors",
+  },
+];
+
 const AUDIENCES = [
   {
     title: "CCTV Brands and Manufacturers",
@@ -717,6 +743,50 @@ export default function IfsecIndia2026() {
                 </div>
               </dl>
             </div>
+          </div>
+        </section>
+
+        {/* ───────── 8b. PREVIOUS EVENT PHOTOS ───────── */}
+        <section
+          className="ifsec26-section ifsec26-section--rule"
+          aria-labelledby="ifsec26-photos"
+        >
+          <div className="ifsec26-wrap">
+            <div className="ifsec26-head">
+              <h2 id="ifsec26-photos">Adiance at IFSEC India 2025</h2>
+              <p className="ifsec26-lead">
+                Photos from our booth at IFSEC India 2025, held at Bharat
+                Mandapam, New Delhi. Read more in the{" "}
+                <a
+                  href="/event/ifsec-india-2025"
+                  data-track="ifsec26_service_page_click"
+                  data-location="photos-2025-recap"
+                  style={{ color: "#bf0603", fontWeight: 600 }}
+                >
+                  IFSEC India 2025 event recap
+                </a>
+                .
+              </p>
+            </div>
+            <ul className="ifsec26-photos">
+              {PHOTOS_2025.map((ph) => (
+                <li key={ph.file}>
+                  <figure>
+                    <img
+                      src={`/images/ifsec-india-2025-${ph.file}-640.webp`}
+                      srcSet={`/images/ifsec-india-2025-${ph.file}-640.webp 640w, /images/ifsec-india-2025-${ph.file}-1200.webp 1200w`}
+                      sizes="(max-width: 600px) 46vw, (max-width: 1024px) 45vw, 280px"
+                      alt={ph.alt}
+                      width="640"
+                      height="640"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption>{ph.caption}</figcaption>
+                  </figure>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

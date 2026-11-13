@@ -476,6 +476,41 @@
   color: var(--ifsec26-muted);
 }
 
+/* ---------- previous-event photos ---------- */
+.ifsec26-section--rule {
+  border-top: 1px solid var(--ifsec26-line);
+}
+
+.ifsec26-photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ifsec26-photos figure {
+  margin: 0;
+}
+
+.ifsec26-photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--ifsec26-radius);
+  border: 1px solid var(--ifsec26-line);
+  background: var(--ifsec26-soft);
+}
+
+.ifsec26-photos figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--ifsec26-muted);
+}
+
 /* ---------- FAQ ---------- */
 .ifsec26-faq {
   display: grid;
@@ -693,6 +728,9 @@
 
 /* ---------- responsive ---------- */
 @media (max-width: 1024px) {
+  .ifsec26-photos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .ifsec26-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
