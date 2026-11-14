@@ -126,13 +126,11 @@ const staticPages = [
   // These pages are ranking on Google page 1 and MUST be in the sitemap.
   { url: "/ndaa-compliant-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.95 },
   { url: "/white-label-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.95 },
-  { url: "/oem-cctv-camera-manufacturer-usa", changefreq: "weekly", priority: 0.95 },
   { url: "/non-chinese-cctv-camera-manufacturer", changefreq: "weekly", priority: 0.95 },
   { url: "/private-label-security-camera-supplier", changefreq: "weekly", priority: 0.95 },
   { url: "/non-chinese-soc-camera-manufacturer", changefreq: "monthly", priority: 0.85 },
   { url: "/full-solution-oem-camera-manufacturer", changefreq: "monthly", priority: 0.85 },
   { url: "/oem-camera-manufacturer-middle-east", changefreq: "monthly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-australia", changefreq: "monthly", priority: 0.8 },
   { url: "/cctv-camera-manufacturer-india", changefreq: "monthly", priority: 0.8 },
 
 
@@ -225,45 +223,10 @@ const staticPages = [
   // === GEO Country Pages (Added 2026-04-19) ===
   { url: "/cctv-camera-manufacturer-uae", changefreq: "weekly", priority: 0.85 },
   { url: "/cctv-camera-manufacturer-saudi-arabia", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-usa", changefreq: "weekly", priority: 0.85 },
   { url: "/cctv-camera-manufacturer-uk", changefreq: "weekly", priority: 0.85 },
   { url: "/cctv-camera-manufacturer-canada", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-germany", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-france", changefreq: "weekly", priority: 0.85 },
   { url: "/cctv-camera-manufacturer-japan", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-south-korea", changefreq: "weekly", priority: 0.85 },
   { url: "/cctv-camera-manufacturer-singapore", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-brazil", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-israel", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-netherlands", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-italy", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-spain", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-mexico", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-south-africa", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-turkey", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-qatar", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-kuwait", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-oman", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-bahrain", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-sweden", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-poland", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-malaysia", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-thailand", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-vietnam", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-indonesia", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-philippines", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-colombia", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-chile", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-nigeria", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-kenya", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-egypt", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-taiwan", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-morocco", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-ghana", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-czech-republic", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-new-zealand", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-ireland", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-argentina", changefreq: "weekly", priority: 0.85 },
   // === Alternative-To Pages ===
   { url: "/alternative-to-chinese-cameras", changefreq: "weekly", priority: 0.9 },
   // === Use-Case Landing Pages ===
@@ -290,8 +253,13 @@ const staticPages = [
   { url: "/tools/chinese-camera-restrictions-map", changefreq: "monthly", priority: 0.7 },
 
   // === Live indexable routes that were missing from the sitemap entirely ===
-  // Verified 200 on production. Deliberately NOT added: /edgeaicamera (removed
-  // on purpose in 7ead5f0) and /blog/qualcomm-soc-future-edge-ai-surveillance-
+  // ADI-013 (2026-11-14): only priority country pages are listed; the rest are
+  // "noindex, follow" (see INDEXED_COUNTRY_PAGES in src/seo/pageMetadata.js).
+  // ADI-005: /us replaces the two other USA pages (301s in next.config.js).
+  // ADI-006: /edgeaicamera (Edge AI Box Camera) is a separate product page,
+  // linked from the nav, US and NDAA pages, so it is listed again.
+  { url: "/edgeaicamera", changefreq: "weekly", priority: 0.8 },
+  // Verified 200 on production. Deliberately NOT added: /blog/qualcomm-soc-future-edge-ai-surveillance-
   // cameras (canonicalised to the landing page of the same name).
   { url: "/oem-services", changefreq: "weekly", priority: 0.8 },
   { url: "/odm-services", changefreq: "weekly", priority: 0.8 },
@@ -312,8 +280,6 @@ const staticPages = [
   { url: "/global-presence", changefreq: "weekly", priority: 0.8 },
   { url: "/us", changefreq: "weekly", priority: 0.8 },
   { url: "/news", changefreq: "weekly", priority: 0.8 },
-  { url: "/cctv-camera-manufacturer-peru", changefreq: "weekly", priority: 0.85 },
-  { url: "/cctv-camera-manufacturer-venezuela", changefreq: "weekly", priority: 0.85 },
   { url: "/case-study/white-label-edge-ai-camera-japan", changefreq: "monthly", priority: 0.7 },
   // Static (non-CMS) blog posts — these live in app/blog/<slug>/ and are never
   // returned by the CMS fetch below, so they have to be listed explicitly.

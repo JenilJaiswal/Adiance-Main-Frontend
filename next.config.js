@@ -61,10 +61,13 @@ const legacyRedirects = {
   "/adiance-": "/",
   "/edge-ai-based-face-recognition": "/4k-face-recognition-camera",
   "/wireless-ip-cctv-camera-manufacturer-supplier": "/wifi-ptz-camera",
-  "/5g-edge-ai-camera-s-series-surveillance": "/4gcamera",
+  // S-Series is the Edge AI range (/edge-ai-cctv-cameras), not the 4G range.
+  "/5g-edge-ai-camera-s-series-surveillance": "/edge-ai-cctv-cameras",
   "/adiance-leading-supplier-for-cctv-surveillance": "/about",
   "/dome-cctv-camera-manufacturer": "/4g-dome-ptz-camera",
-  "/4g-dome-camera": "/4g-dome-ptz-camera",
+  // VM-72AD4G210C (4G dome) has no page of its own; it is listed on /4gcamera.
+  // Sending it to /4g-dome-ptz-camera showed buyers a different model.
+  "/4g-dome-camera": "/4gcamera",
   "/edge-ai-based-object-face-detection-cameras-2":
     "/edge-ai-based-object-n-face-detection-cameras",
   "/smart-edge-ai-cloud-cctv-camera": "/cloud-application",
@@ -114,7 +117,7 @@ const legacyRedirects = {
   "/industries/smart-cities": "/smart-cities",
   "/products/arcis-bridge": "/",
   "/industries/education": "/education",
-  "/oem-cctv-manufacturer-india": "/oem-cctv-camera-manufacturer-usa",
+  "/oem-cctv-manufacturer-india": "/cctv-camera-manufacturer-india",
   "/industries/public-transport": "/public-transport",
   "/products/edge-ai-camera": "/edgeaicamera",
   "/products/robotic-arm": "/robotics",
@@ -147,7 +150,9 @@ const legacyRedirects = {
   "/ip-bullet-camera-and-dome-cctv-camera-manufacturer-supplier": "/oem-services",
   // Matches the fix already live in production (commit 913827f) — 14 dead
   // links across 13 published blog posts pointed at this old slug.
-  "/s-series-ai-cctv-cameras": "/4gcamera",
+  // 2026-11-14 (ADI-007): S-Series = Edge AI range. /4gcamera was the wrong
+  // destination — it showed the 4G page to people looking for S-Series.
+  "/s-series-ai-cctv-cameras": "/edge-ai-cctv-cameras",
   // Status-audit finding: this legacy blog post and the richer landing page
   // at the non-/blog/ path are the same article. src/seo/legacyBlogMeta.jsx
   // already pointed the blog copy's canonical at the landing page (a
@@ -166,7 +171,12 @@ const legacyRedirects = {
   "/cctv-camera-manufacturer-canada-v2": "/cctv-camera-manufacturer-canada",
   "/cctv-camera-manufacturer-germany-v2": "/cctv-camera-manufacturer-germany",
   "/cctv-camera-manufacturer-uk-v2": "/cctv-camera-manufacturer-uk",
-  "/cctv-camera-manufacturer-usa-v2": "/cctv-camera-manufacturer-usa",
+  "/cctv-camera-manufacturer-usa-v2": "/us",
+  // ADI-005 (2026-11-14, approved by Krish): three pages competed for the
+  // same US searches (GSC USA: 9,352 impressions, avg position 21). /us is
+  // now the single US page; the other two 301 to it.
+  "/oem-cctv-camera-manufacturer-usa": "/us",
+  "/cctv-camera-manufacturer-usa": "/us",
 
   // Final Audit Checklist (2026-09-07), row 108: GSC shows a live, indexed
   // URL with a literal backtick character in it (almost certainly a
@@ -233,6 +243,20 @@ const legacyRedirects = {
   "/blog/65fd2f53b1851c17f1b8f01e": "/blog",
   "/blog/ultimate-guide-to-choosing-the-right-oem-cctv-camera": "/blog",
   "/blog/the-future-of-ai-cctv-cameras-how-smart-surveillance-is-changing-security": "/blog",
+
+  // 2026-11-14 SEO monitoring (tracker ADI-008 / ADI-009 / ADI-021): GSC
+  // 404s with no redirect yet. Each points to the closest live page.
+  "/5-cctv-manufacturing-industry-trends":
+    "/blog/why-cctv-oem-odm-manufacturing-growing-india",
+  "/5-benefits-of-a-customized-anpr-camera-in-transport-surveillance-solution":
+    "/anpr-camera",
+  "/edge-ai-based": "/edge-ai-based-object-n-face-detection-cameras",
+  "/edge-ai-based-": "/edge-ai-based-object-n-face-detection-cameras",
+  // Broken CMS links written as "www.adiance.com" without https:// resolve
+  // relative to /blog/. Blog1.jsx now normalises these hrefs; this catches
+  // the copies Google already crawled.
+  "/blog/www.adiance.com": "/",
+  "/blog/www.adiance.com.": "/",
 };
 
 const cspDirectives = [
@@ -363,7 +387,7 @@ const nextConfig = {
       { source: "/anrpcamera", destination: "/anpr-camera", statusCode: 301 },
       {
         source: "/s-series",
-        destination: "/4gcamera",
+        destination: "/edge-ai-cctv-cameras",
         statusCode: 301,
       },
       // T4: legacy Joomla content URLs (/index.php?option=com_content&...) that

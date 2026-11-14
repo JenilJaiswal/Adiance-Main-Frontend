@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import { trackEvent } from "@/seo/trackEvent";
+import Honeypot, { isHoneypotFilled } from "@/components/Honeypot";
 
 const CAMERA_OPTIONS = [
   "Edge AI Bullet (S-Series)",
@@ -34,6 +36,11 @@ export default function ClientForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Spam bot filled the hidden field: show success, send and count nothing.
+    if (isHoneypotFilled(e)) {
+      setStatus({ phase: "success", msg: "" });
+      return;
+    }
     if (!form.name || !form.company || !form.email || !form.country) {
       setStatus({ phase: "error", msg: "Please fill in all required fields." });
       return;
@@ -60,6 +67,14 @@ export default function ClientForm() {
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error("Submission failed");
+      // ADI-002: this form shows its thank-you message on the same URL, so
+      // GTM can't detect it from a page view. Push explicit events instead.
+      trackEvent("sample_request_submit_success", {
+        form_name: "sample_request",
+        camera_interest: form.cameraInterest,
+        country: form.country,
+      });
+      trackEvent("generate_lead", { lead_source: "sample_request" });
       setStatus({ phase: "success", msg: "" });
     } catch (err) {
       setStatus({ phase: "error", msg: "Something went wrong. Email sales@adiance.com directly." });
@@ -106,7 +121,8 @@ export default function ClientForm() {
           <span>✓ 7-10 business days delivery</span>
         </div>
 
-        <form onSubmit={handleSubmit} style={{ background: "#FFF", border: "1px solid #E5E5E5", borderRadius: 12, padding: 28, boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
+        <form onSubmit={handleSubmit} style={{ position: "relative", background: "#FFF", border: "1px solid #E5E5E5", borderRadius: 12, padding: 28, boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
+          <Honeypot />
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
             <Field label="Your name *" name="name" value={form.name} onChange={handleChange} required />
             <Field label="Company *" name="company" value={form.company} onChange={handleChange} required />

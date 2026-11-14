@@ -219,17 +219,25 @@ export default function RootLayout({ children }) {
         <Providers>{children}</Providers>
         <CookieConsent />
         {/*
-          Cookie-consent gate: neither loader below fires at all until
-          localStorage.adiance_cookie_consent === "granted" — set only by an
-          explicit "Accept" click in src/components/CookieConsent/CookieConsent.jsx,
-          which also fires the "adiance:consent-granted" window event these
-          scripts listen for. A returning visitor who already accepted keeps
-          the original scroll/interaction/7s-timeout deferral (a perf
-          optimization, unrelated to consent); a visitor who hasn't decided
-          yet, or declined, loads neither script until/unless they accept.
+          Google Consent Mode v2 (ADI-001, 2026-11-14, approved by Krish).
+
+          GTM now loads for every visitor, but with all storage DENIED by
+          default: Google tags send cookieless pings only and set or read no
+          cookies. When the visitor clicks "Accept" in
+          src/components/CookieConsent/CookieConsent.jsx (event
+          "adiance:consent-granted") consent is updated to granted; "Decline"
+          (event "adiance:consent-denied") keeps or puts it back to denied.
+          A returning visitor who already accepted starts as granted.
+
+          Why: the old setup loaded GTM only after "Accept" (and then waited
+          for a scroll/click or 7s), so GA4 never saw most visitors.
+
+          Only Google tags understand Consent Mode. The Meta Pixel below is
+          still strictly opt-in. Any non-Google tag added in GTM must be set
+          to require ad_storage / analytics_storage consent in GTM.
         */}
         <Script id="gtm-loader" strategy="afterInteractive">{`
-(function(){function hasConsent(){try{return localStorage.getItem('adiance_cookie_consent')==='granted';}catch(e){return false;}}var gtmLoaded=false;function injectGTM(){if(gtmLoaded)return;gtmLoaded=true;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M7PMRCM');}function deferredLoad(){if(!hasConsent())return;['scroll','mousemove','keydown','touchstart','click'].forEach(function(e){window.removeEventListener(e,deferredLoad);});injectGTM();}if(hasConsent()){['scroll','mousemove','keydown','touchstart','click'].forEach(function(e){window.addEventListener(e,deferredLoad,{once:true,passive:true});});setTimeout(deferredLoad,7000);}else{window.addEventListener('adiance:consent-granted',injectGTM,{once:true});}})();
+(function(){var KEY='adiance_cookie_consent';function stored(){try{return localStorage.getItem(KEY);}catch(e){return null;}}window.dataLayer=window.dataLayer||[];function gtag(){window.dataLayer.push(arguments);}var g=stored()==='granted'?'granted':'denied';gtag('consent','default',{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,functionality_storage:'granted',security_storage:'granted',wait_for_update:500});gtag('set','ads_data_redaction',true);function setAll(v){gtag('consent','update',{ad_storage:v,ad_user_data:v,ad_personalization:v,analytics_storage:v});}window.addEventListener('adiance:consent-granted',function(){setAll('granted');});window.addEventListener('adiance:consent-denied',function(){setAll('denied');});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M7PMRCM');})();
 `}</Script>
         <Script id="fb-pixel-loader" strategy="afterInteractive">{`
 (function(){function hasConsent(){try{return localStorage.getItem('adiance_cookie_consent')==='granted';}catch(e){return false;}}function loadFBPixel(){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1453314838088467');fbq('track','PageView');}function deferredLoad(){if('requestIdleCallback' in window){requestIdleCallback(loadFBPixel,{timeout:5000});}else{window.addEventListener('load',function(){setTimeout(loadFBPixel,3000);});}}if(hasConsent()){deferredLoad();}else{window.addEventListener('adiance:consent-granted',deferredLoad,{once:true});}})();

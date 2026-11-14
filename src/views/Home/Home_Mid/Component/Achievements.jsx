@@ -4,8 +4,12 @@ import React, { useEffect, useState, useRef } from "react";
 
 // Custom hook for count-up animation with viewport detection
 const useCountUp = (target, duration = 1000) => {
-  const [count, setCount] = useState(0);
+  // ADI-019 (2026-11-14): start at the real value, not 0. The server HTML
+  // (what Google and AI crawlers read) used to say "0+ Years", "0x7", "0%".
+  // The count-up still plays the first time the card scrolls into view.
+  const [count, setCount] = useState(target);
   const [isVisible, setIsVisible] = useState(false);
+  const hasAnimated = useRef(false);
   const ref = useRef();
 
   useEffect(() => {
@@ -21,8 +25,10 @@ const useCountUp = (target, duration = 1000) => {
   }, []);
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible || hasAnimated.current) return;
+    hasAnimated.current = true;
     let start = 0;
+    setCount(0);
     const increment = target / (duration / 16);
     const interval = setInterval(() => {
       start += increment;
@@ -33,7 +39,11 @@ const useCountUp = (target, duration = 1000) => {
         setCount(Math.ceil(start));
       }
     }, 16);
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      // If the card leaves the screen mid-count, show the real value.
+      setCount(target);
+    };
   }, [isVisible, target, duration]);
 
   return { count, ref };

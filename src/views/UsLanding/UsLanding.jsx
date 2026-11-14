@@ -32,9 +32,9 @@ const markets = [
 ];
 
 const products = [
-  { name: "Edge AI Box Camera", ideal: "Federal buildings, military bases", link: "/edgeaicamera" },
+  { name: "Edge AI Camera Range", ideal: "Federal buildings, military bases", link: "/edgeaicamera" },
   { name: "4G Dome PTZ Camera", ideal: "Border security, remote facilities", link: "/4g-dome-ptz-camera" },
-  { name: "S-Series AI Cameras", ideal: "Schools, hospitals, campuses", link: "/s-series-ai-cctv-cameras" },
+  { name: "S-Series AI Cameras", ideal: "Schools, hospitals, campuses", link: "/edge-ai-cctv-cameras" },
   { name: "ANPR Camera", ideal: "Parking, law enforcement, toll roads", link: "/anpr-camera" },
   { name: "ECO Series Cameras", ideal: "Budget deployments, bulk orders", link: "/eco-series" },
   { name: "Cloud XVR", ideal: "Multi-site management platform", link: "/cloudxvr" },

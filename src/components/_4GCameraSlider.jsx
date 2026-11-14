@@ -22,13 +22,13 @@ const _4KCameraSlider = () => {
       id: 3,
       title: "AMBICAM 4G Dome Camera (VM-72AD4G210C)",
       imageUrl: ["/images/P9-AMBICAM-4g-dome-camera-VM-72AD4G210C-02.webp"],
-      link: "/4g-dome-camera",
+      link: "/4gcamera",
     },
     {
       id: 3,
       title: "AMBICAM H.265+ 4G Dome PTZ Camera (VM-72BPTZ410AC)",
       imageUrl: ["/images/P7-AMBICAM-4g-dome-ptz-camera-VM-72BPTZ410AC-02.webp"],
-      link: "/h265-4g-dome-ptz-camera",
+      link: "/4g-dome-ptz-camera",
     },
   ];
 

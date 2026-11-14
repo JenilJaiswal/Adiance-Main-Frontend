@@ -172,17 +172,31 @@ const Blog1 = () => {
       if (node.text !== undefined) return renderLeaf(node, `leaf-${idx}`);
       const align = node.align || node.textAlign || undefined;
       switch (node.type) {
-        case "link":
+        case "link": {
+          // ADI-009 (2026-11-14): some CMS links were saved as
+          // "www.adiance.com/..." with no scheme, so browsers resolved them
+          // relative to /blog/ (→ /blog/www.adiance.com, a 404 in GSC).
+          // Normalise the href, and keep links to our own site in the same
+          // tab (internal links should not open a new window).
+          const rawUrl = typeof node.url === "string" ? node.url.trim() : "";
+          let href = /^www\./i.test(rawUrl) ? `https://${rawUrl}` : rawUrl;
+          const internalMatch = href.match(
+            /^https?:\/\/(?:www\.)?adiance\.com(\/[^\s]*)?$/i
+          );
+          if (internalMatch) href = internalMatch[1] || "/";
+          const isInternal = href.startsWith("/") && !href.startsWith("//");
           return (
             <a
               key={`link-${idx}`}
-              href={node.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={href}
+              {...(isInternal
+                ? {}
+                : { target: "_blank", rel: "noopener noreferrer" })}
             >
               {renderChildren(node.children)}
             </a>
           );
+        }
         case "bulleted-list":
         case "unordered-list":
           return (
