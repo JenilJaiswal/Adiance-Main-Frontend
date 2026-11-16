@@ -347,18 +347,39 @@ const Blog1 = () => {
           CMS-injected per-post schemas below are unique and stay.
         */}
 
-        {/* CMS-injected schemas */}
+        {/* CMS-injected schemas.
+            ADI-016 (16 Nov 2026): editors sometimes paste the schema WITH its
+            own <script> tags, which produced invalid JSON-LD ("Unparsable
+            structured data" in GSC). Strip any wrapper tags, only output
+            valid JSON, and skip types the server already emits
+            (BlogPosting/Article/Breadcrumb always; FAQPage when the post has
+            a FAQ block) so Google never sees duplicates. */}
         {Array.isArray(blog.content?.schemas) &&
           blog.content.schemas.map((item, index) => {
             if (!item.content) return null;
-            const schemaStr =
+            const raw =
               typeof item.content === "string"
                 ? item.content
                 : item.content?.schemaData || "";
-            if (!schemaStr) return null;
+            const cleaned = String(raw)
+              .replace(/<\/?script[^>]*>/gi, "")
+              .trim();
+            if (!cleaned) return null;
+            let data;
+            try {
+              data = JSON.parse(cleaned);
+            } catch {
+              return null;
+            }
+            const types = []
+              .concat(data?.["@graph"] || data)
+              .flatMap((d) => [].concat(d?.["@type"] || []));
+            const serverTypes = ["BlogPosting", "Article", "NewsArticle", "BreadcrumbList"];
+            if (blog.content?.faqs?.items?.length) serverTypes.push("FAQPage");
+            if (types.length && types.every((t) => serverTypes.includes(t))) return null;
             return (
               <script key={index} type="application/ld+json">
-                {schemaStr}
+                {JSON.stringify(data)}
               </script>
             );
           })}
