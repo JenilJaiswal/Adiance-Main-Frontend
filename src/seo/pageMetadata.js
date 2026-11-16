@@ -731,7 +731,7 @@ Object.keys(GEO)
 /**
  * ADI-013 (2026-11-14, approved by Krish): the ~45 country pages are short
  * templates with a lot of shared wording, which risks Google treating them
- * as thin/doorway pages. Keep the priority markets indexed. The rest stay
+ * as thin/doorway pages. Keep the priority markets and the pages with real search traffic indexed. The rest stay
  * live for visitors and keep passing link value ("noindex, follow"), but are
  * removed from the sitemap. USA is now served by /us (see next.config.js).
  * To bring a market back: add it to INDEXED_COUNTRY_PAGES and the sitemap.
@@ -744,6 +744,20 @@ export const INDEXED_COUNTRY_PAGES = new Set([
   "/cctv-camera-manufacturer-canada",
   "/cctv-camera-manufacturer-japan",
   "/cctv-camera-manufacturer-singapore",
+  // 16 Nov 2026 (ADI-013 follow-up): GSC 18 Aug-13 Nov showed these pages
+  // earn real search traffic (>=5 clicks or >=300 impressions in 3 months),
+  // more than several of the original priority markets. Keep them indexed.
+  "/cctv-camera-manufacturer-vietnam",
+  "/cctv-camera-manufacturer-taiwan",
+  "/cctv-camera-manufacturer-germany",
+  "/cctv-camera-manufacturer-south-korea",
+  "/cctv-camera-manufacturer-thailand",
+  "/cctv-camera-manufacturer-turkey",
+  "/cctv-camera-manufacturer-malaysia",
+  "/cctv-camera-manufacturer-philippines",
+  "/cctv-camera-manufacturer-brazil",
+  "/cctv-camera-manufacturer-sweden",
+  "/cctv-camera-manufacturer-france",
 ]);
 Object.keys(CATALOG)
   .filter(
