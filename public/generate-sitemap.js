@@ -227,6 +227,17 @@ const staticPages = [
   { url: "/cctv-camera-manufacturer-canada", changefreq: "weekly", priority: 0.85 },
   { url: "/cctv-camera-manufacturer-japan", changefreq: "weekly", priority: 0.85 },
   { url: "/cctv-camera-manufacturer-singapore", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-vietnam", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-taiwan", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-germany", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-south-korea", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-thailand", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-turkey", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-malaysia", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-philippines", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-brazil", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-sweden", changefreq: "weekly", priority: 0.85 },
+  { url: "/cctv-camera-manufacturer-france", changefreq: "weekly", priority: 0.85 },
   // === Alternative-To Pages ===
   { url: "/alternative-to-chinese-cameras", changefreq: "weekly", priority: 0.9 },
   // === Use-Case Landing Pages ===
