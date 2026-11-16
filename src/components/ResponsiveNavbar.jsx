@@ -325,7 +325,7 @@ const ResponsiveNavbar = () => {
                           <ul>
                             <li>
                               <SmartLink
-                                to="/s-series-ai-cctv-cameras"
+                                to="/edge-ai-cctv-cameras"
                                 className="link h6"
                               // style={{ margin: "20%" }}
                               >

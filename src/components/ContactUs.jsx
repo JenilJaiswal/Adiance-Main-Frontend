@@ -25,7 +25,7 @@ const localBusinessSchema = {
     "streetAddress": "House No. 7, Arista Eight, Corporate House, Rajpath Rangoli Rd, behind Satyam House, Bodakdev",
     "addressLocality": "Ahmedabad",
     "addressRegion": "Gujarat",
-    "postalCode": "380059",
+    "postalCode": "380054",
     "addressCountry": "IN"
   },
   "geo": {

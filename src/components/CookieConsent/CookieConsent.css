@@ -3,7 +3,9 @@
   left: 16px;
   right: 16px;
   bottom: 16px;
-  z-index: 9999;
+  /* Above the IFSEC popup overlay (z-index 10000), which otherwise covered
+     the banner so visitors could not click Accept or Decline. */
+  z-index: 10001;
   max-width: 900px;
   margin: 0 auto;
   background: #1a1a1a;

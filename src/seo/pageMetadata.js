@@ -95,7 +95,7 @@ const CATALOG = {
     title:
       "NDAA Compliant OEM Camera Manufacturer | White Label CCTV | Adiance",
     description:
-      "Adiance is an NDAA-compliant OEM/ODM CCTV camera manufacturer in India. White-label cameras, edge-AI surveillance, NVRs, and cloud VMS for global security integrators.",
+      "NDAA-compliant OEM/ODM CCTV camera manufacturer in India. White-label cameras, edge-AI surveillance, NVRs and cloud VMS for global security integrators.",
     keywords:
       "NDAA compliant camera manufacturer, OEM CCTV camera, ODM surveillance camera, white label CCTV, AI surveillance camera, edge AI camera",
     ogImage: `${SITE}/images/SCameraPageOG.webp`,
@@ -138,20 +138,20 @@ const CATALOG = {
   "/ifsec-india-2026": {
     title: "IFSEC India 2026 | Meet Adiance at Booth E10",
     description:
-      "Meet Adiance at IFSEC India 2026, Booth E10, Hall 5GF, New Delhi. Explore CCTV OEM/ODM manufacturing, surveillance camera development, PCB design and electronics manufacturing.",
+      "Meet Adiance at IFSEC India 2026, Booth E10, Hall 5GF, New Delhi. See CCTV OEM/ODM manufacturing, camera development and PCB design.",
     keywords:
       "IFSEC India 2026, Adiance IFSEC 2026, Adiance booth E10, CCTV OEM manufacturer India, CCTV ODM manufacturer India, CCTV manufacturers at IFSEC India",
     ogImage: `${SITE}/images/ifsec-india-2026-og.png`,
   },
   "/event/ifsec-india-2025": {
-    title: "Adiance Technologies Unveils ArcisAI Innovation at IFSEC India 2025",
+    title: "Adiance at IFSEC India 2025: ArcisAI Showcase",
     description:
       "At IFSEC India 2025, Adiance Technologies showcased ArcisAI's AI CCTV ecosystem, Eco-Series cameras, NVRs, ABD device, and cloud-ready VMS innovations.",
   },
   "/case-study/white-label-edge-ai-camera-japan": {
-    title: "Case Study: White-Label Edge AI CCTV Camera Delivered to Japan | Adiance",
+    title: "White-Label Edge AI Camera for Japan: Case Study | Adiance",
     description:
-      "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance.",
+      "How Adiance delivered a white-label, non-Chinese SoC edge AI camera to an OEM partner in Japan, a market known for strict quality demands.",
   },
   "/news": {
     title: "News & Press Releases | Adiance Technologies",
@@ -223,28 +223,28 @@ const CATALOG = {
   "/sample-request": {
     title: "Request a Free Sample — NDAA Compliant CCTV Camera | Adiance",
     description:
-      "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment.",
+      "Get a free Adiance camera sample shipped in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No commitment.",
     keywords:
       "free CCTV camera sample, NDAA compliant camera sample request, OEM camera sample, white label CCTV sample, Adiance sample request",
   },
   "/compliance-documents": {
     title: "Compliance Documents — BIS, NDAA, ONVIF, CE, FCC, ISO | Adiance",
     description:
-      "Compliance information is model-specific. Ask Adiance for BIS registration, NDAA Section 889, ONVIF, CE, FCC, ISO 9001:2015 and STQC documentation for your product model and destination market.",
+      "Compliance is model-specific. Ask Adiance for BIS, NDAA Section 889, ONVIF, CE, FCC, ISO 9001:2015 and STQC documents for your model and market.",
     keywords:
       "Adiance compliance documents, BIS certificate download, NDAA Section 889 attestation, ONVIF Profile S G T conformance, CE Declaration of Conformity CCTV, FCC certification camera, ISO 9001 surveillance manufacturer",
   },
   "/tools/chinese-camera-restrictions-map": {
     title: "Where Chinese Cameras Are Restricted — 2026 Live Map | Adiance",
     description:
-      "Interactive 2026 map of every country with active restrictions on Chinese-manufactured surveillance cameras. Updated quarterly. Filter by region, regulation type, and effective date.",
+      "Interactive 2026 map of countries restricting Chinese-made surveillance cameras. Filter by region, regulation type and effective date.",
     keywords:
       "Chinese cameras banned countries, NDAA Section 889 countries, Hikvision banned list, Dahua restrictions 2026, non-Chinese surveillance manufacturing, UK CCTV restrictions, Australia camera ban, EU Chinese surveillance restrictions",
   },
   "/tools/ndaa-compliance-checker": {
     title: "NDAA Compliance Checker for CCTV Cameras (Free Tool) | Adiance",
     description:
-      "Free NDAA Section 889 compliance checker for surveillance cameras. Enter a brand or SoC and verify in 10 seconds whether your camera is approved for US federal and federally-funded deployments.",
+      "Free NDAA Section 889 checker for surveillance cameras. Enter a brand or SoC to see if it can be used in US federal and federally funded projects.",
     keywords:
       "NDAA compliance checker, is camera NDAA compliant, NDAA Section 889 checker, NDAA compliant SoC list, NDAA banned camera brands, surveillance compliance tool",
   },
@@ -279,13 +279,15 @@ const CATALOG = {
     keywords: "4G camera, cellular CCTV, 4G surveillance, SIM CCTV camera",
   },
   "/edgeaicamera": {
-    title: "Edge AI Cameras | On-Device AI Surveillance | Adiance",
+    // Distinct from /edge-ai-cctv-cameras (S-Series): this page is the
+    // ANPR / face-recognition / object-detection edge AI range.
+    title: "Edge AI Camera Range: ANPR, Face & Object Detection | Adiance",
     description:
-      "Adiance edge-AI cameras with on-device ANPR, face recognition, object detection, intrusion analytics, and people counting.",
+      "Adiance edge AI camera range: PTZ ANPR bullet, face recognition dome and object & face detection cameras with on-device analytics.",
     keywords: "edge AI camera, on-device AI surveillance, AI CCTV camera",
   },
   "/edge-ai-cctv-cameras": {
-    title: "Edge AI CCTV Cameras (S-Series) | Qualcomm AI Surveillance | Adiance",
+    title: "S-Series Edge AI CCTV Cameras on Qualcomm SoC | Adiance",
     description:
       "Adiance S-Series edge-AI CCTV cameras on Qualcomm SoC with on-device analytics and 4K imaging.",
     keywords: "S-Series CCTV camera, Qualcomm edge AI camera, AI surveillance",
@@ -384,9 +386,11 @@ const CATALOG = {
     keywords: "NDAA compliance, NDAA Section 889, non-Chinese CCTV, federal CCTV",
   },
   "/us": {
-    title: "Adiance USA | NDAA-Compliant CCTV Manufacturer for the US Market",
+    // ADI-005: /us now also absorbs the OEM-USA and CCTV-manufacturer-USA
+    // pages (301s in next.config.js), so it targets both intents.
+    title: "NDAA-Compliant OEM CCTV Camera Manufacturer for the USA | Adiance",
     description:
-      "Adiance offers NDAA-compliant, non-Chinese CCTV cameras for the US federal, state, and enterprise market.",
+      "NDAA Section 889 compliant, non-Chinese SoC CCTV cameras for US integrators, distributors and brands. OEM and white-label programs with a US sales contact.",
   },
 
   "/robotics": {
@@ -421,12 +425,12 @@ const CATALOG = {
       "Adiance remote-security cameras for off-grid sites: solar-powered, 4G connectivity, edge AI for oil & gas, mining, and agriculture.",
   },
   "/education": {
-    title: "School and Campus CCTV Solutions | Face Recognition, Perimeter | Adiance",
+    title: "School & Campus CCTV: Face Recognition, Perimeter | Adiance",
     description:
       "CCTV for schools and universities from Adiance: perimeter security, face-recognition attendance and classroom safety. See how the solution fits your campus.",
   },
   "/healthcare": {
-    title: "Healthcare Surveillance Solutions | Hospitals & Pharmacies | Adiance",
+    title: "Hospital & Pharmacy Surveillance Solutions | Adiance",
     description:
       "Adiance healthcare surveillance for hospitals, pharmacies, and restricted-access analytics with GDPR-ready privacy controls.",
   },
@@ -436,7 +440,7 @@ const CATALOG = {
       "Adiance public-transport surveillance for bus, rail, and metro stations with ANPR, crowd analytics, and vandalism detection.",
   },
   "/retail": {
-    title: "Retail Surveillance Solutions | People Counting & Heat Maps | Adiance",
+    title: "Retail Surveillance: People Counting & Heat Maps | Adiance",
     description:
       "Adiance retail surveillance: people counting, queue detection, heat maps, and loss-prevention analytics.",
   },
@@ -648,9 +652,9 @@ const CATALOG = {
       "Adiance white-label pet camera manufacturer: WiFi PTZ cameras with treat-dispenser API and a private-label mobile app.",
   },
   "/bis-er-certification": {
-    title: "BIS ER-01 Certified CCTV Camera Manufacturer | Reg. R-72003735 | Adiance",
+    title: "BIS ER-01 Registered CCTV Manufacturer (R-72003735) | Adiance",
     description:
-      "Adiance Technologies is a BIS ER-01 registered CCTV camera manufacturer (BIS registration R-72003735, brands Adiance & ArcisAI, verifiable on crsbis.in). ER-01 compliant cameras for government, enterprise, and OEM partners.",
+      "Adiance is a BIS ER-01 registered CCTV camera manufacturer (R-72003735, verifiable on crsbis.in) for government, enterprise and OEM projects.",
   },
   "/innovation/edge-ai": {
     title: "Edge AI Innovation | Adiance",
@@ -676,7 +680,12 @@ Object.entries(COUNTRY_PAGES).forEach(([slug, country]) => {
     // what these 45 pages already rank with, it is unique per country, and it
     // carries "NDAA Compliant" — the key differentiator the geo copy drops.
     // To switch to the geo titles instead, use `geo.title || ...` here.
-    title: `CCTV Camera Manufacturer in ${country} | NDAA Compliant | Adiance`,
+    // ADI-018: drop the middle part when it pushes the title past ~65
+    // characters (e.g. "United Kingdom", "Saudi Arabia") so it isn't cut off.
+    title:
+      `CCTV Camera Manufacturer in ${country} | NDAA Compliant | Adiance`.length > 65
+        ? `CCTV Camera Manufacturer in ${country} | Adiance`
+        : `CCTV Camera Manufacturer in ${country} | NDAA Compliant | Adiance`,
     // Description/keywords do come from geoPageData — hand-written per country
     // and more specific than the template, with the template as fallback.
     description:
@@ -719,6 +728,34 @@ Object.keys(GEO)
     };
   });
 
+/**
+ * ADI-013 (2026-11-14, approved by Krish): the ~45 country pages are short
+ * templates with a lot of shared wording, which risks Google treating them
+ * as thin/doorway pages. Keep the priority markets indexed. The rest stay
+ * live for visitors and keep passing link value ("noindex, follow"), but are
+ * removed from the sitemap. USA is now served by /us (see next.config.js).
+ * To bring a market back: add it to INDEXED_COUNTRY_PAGES and the sitemap.
+ */
+export const INDEXED_COUNTRY_PAGES = new Set([
+  "/cctv-camera-manufacturer-india",
+  "/cctv-camera-manufacturer-uk",
+  "/cctv-camera-manufacturer-uae",
+  "/cctv-camera-manufacturer-saudi-arabia",
+  "/cctv-camera-manufacturer-canada",
+  "/cctv-camera-manufacturer-japan",
+  "/cctv-camera-manufacturer-singapore",
+]);
+Object.keys(CATALOG)
+  .filter(
+    (p) =>
+      /^\/cctv-camera-manufacturer-[a-z-]+$/.test(p) &&
+      !p.endsWith("-v2") &&
+      !INDEXED_COUNTRY_PAGES.has(p)
+  )
+  .forEach((p) => {
+    CATALOG[p] = { ...CATALOG[p], noindex: true, follow: true };
+  });
+
 /** Resolve metadata for any path; falls back to a slug-derived title. */
 function lookup(rawPath) {
   if (!rawPath) return null;
@@ -743,6 +780,9 @@ export function buildMetadata(path, override = {}) {
   const ogImage = override.ogImage || cfg.ogImage || DEFAULT_OG;
   const canonical = override.canonical || cfg.canonical || path;
   const noindex = override.noindex ?? cfg.noindex ?? false;
+  // A noindexed page can still ask crawlers to follow its links
+  // ("noindex, follow") by setting follow: true. Default stays nofollow.
+  const follow = override.follow ?? cfg.follow ?? !noindex;
 
   // Index by default in any production build. This site is self-hosted
   // (`output: "standalone"`), so VERCEL_ENV is undefined in prod — gating on it
@@ -809,7 +849,7 @@ export function buildMetadata(path, override = {}) {
     },
     robots:
       noindex || !allowIndex
-        ? { index: false, follow: !noindex }
+        ? { index: false, follow: noindex ? follow : true }
         : {
             index: true,
             follow: true,

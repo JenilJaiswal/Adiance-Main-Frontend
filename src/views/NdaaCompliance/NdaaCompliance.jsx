@@ -41,10 +41,10 @@ const whyAdiance = [
 ];
 
 const productLineup = [
-  { name: "Edge AI Box Camera", desc: "AI-powered analytics with on-device processing", link: "/edgeaicamera" },
+  { name: "Edge AI Camera Range", desc: "AI-powered analytics with on-device processing", link: "/edgeaicamera" },
   { name: "4G Dome PTZ Camera", desc: "Remote monitoring over cellular networks", link: "/4g-dome-ptz-camera" },
   { name: "4G Mini Bullet Camera", desc: "Compact 4G LTE surveillance", link: "/4g-mini-bullet-camera" },
-  { name: "S-Series AI Cameras", desc: "Smart AI detection and alerts", link: "/s-series-ai-cctv-cameras" },
+  { name: "S-Series AI Cameras", desc: "Smart AI detection and alerts", link: "/edge-ai-cctv-cameras" },
   { name: "ANPR Camera", desc: "Automatic number plate recognition", link: "/anpr-camera" },
   { name: "Cloud XVR", desc: "Cloud-based video recording platform", link: "/cloudxvr" },
 ];

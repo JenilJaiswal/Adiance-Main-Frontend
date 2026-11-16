@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "@/compat/react-router-dom";
+import { trackEvent } from "@/seo/trackEvent";
+import Honeypot, { isHoneypotFilled } from "./Honeypot";
 
 // MUI Components
 import {
@@ -117,6 +119,13 @@ const ContactZoho = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // ADI-017: spam bot filled the hidden field. Show success, but send
+    // nothing and skip /thank-you (GA4 counts that page as a lead).
+    if (isHoneypotFilled(e)) {
+      setSnackbar({ open: true, message: "Thank you! We will contact you soon.", severity: "success" });
+      return;
+    }
+
     // Check for required fields
     if (
       !formData.name ||
@@ -190,14 +199,13 @@ const ContactZoho = () => {
       // "generate_lead" key event. Pushed to the existing GTM dataLayer (see
       // the gtm-loader script in app/layout.js) rather than calling gtag()
       // directly, since GTM is already the single source of truth for tags.
-      if (typeof window !== "undefined" && window.dataLayer) {
-        window.dataLayer.push({
-          event: "generate_lead",
-          lead_source: "contact_form",
-          company: formData.company,
-          customer_type: formData.customerType,
-        });
-      }
+      // trackEvent creates the dataLayer if GTM hasn't loaded yet, so the
+      // event is no longer dropped for visitors whose GTM is still pending.
+      trackEvent("generate_lead", {
+        lead_source: "contact_form",
+        company: formData.company,
+        customer_type: formData.customerType,
+      });
 
       setTimeout(() => navigate("/thank-you"), 1500);
     } catch (error) {
@@ -229,7 +237,8 @@ const ContactZoho = () => {
           >
             Share us your Requirements
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3, position: "relative" }}>
+            <Honeypot />
             <Grid container spacing={2}>
               {/* Row 1 */}
               <Grid item xs={12} sm={6}>

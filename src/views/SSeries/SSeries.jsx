@@ -88,19 +88,11 @@ const SSeries = () => {
         <meta name="twitter:description" content="Deploy EdgeAI S-Series AI CCTV cameras in minutes." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "S-Series EdgeAI CCTV Cameras",
-            "description": "India's most advanced Edge AI CCTV cameras with 3MP QHD, Wi-Fi/LAN/4G LTE connectivity, IP66 rated, smart IR up to 50m.",
-            "brand": { "@type": "Brand", "name": "Adiance" },
-            "manufacturer": { "@type": "Organization", "name": "Adiance Technologies", "url": "https://www.adiance.com" },
-            "url": canonicalUrl,
-            "image": "https://www.adiance.com/N_Images/S-Series-Edge-AI-CCTV-Cameras.webp",
-            "category": "Surveillance Cameras"
-          })}
-        </script>
+        {/* ADI-016 (2026-11-14): the Product JSON-LD that was here had no
+            offers, review or aggregateRating, so GSC flagged it as an invalid
+            Product snippet. We publish no prices or ratings, so it was
+            removed rather than filled with made-up data. WebPage and
+            BreadcrumbList still come from <PageSchema>. */}
         {/* BreadcrumbList comes from <PageSchema> — not duplicated here. */}
       </Helmet>
 

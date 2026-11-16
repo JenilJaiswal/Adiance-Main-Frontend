@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import ThankYou from "./ThankYou";
 import axios from "axios";
 import "./EventMainDash.css";
+import { trackEvent } from "@/seo/trackEvent";
 
 const API_URL = "https://backend.adiance.com:443/api";
 // const API_URL = "http://localhost:5000/api";
@@ -142,6 +143,13 @@ const EventMainDash = () => {
       };
 
       await axios.post(`${API_URL}/send-email-adiance`, payload);
+      // ADI-002: IFSEC slot bookings were not tracked in GA4.
+      trackEvent("ifsec_booking_submit_success", {
+        form_name: "ifsec_popup_booking",
+        customer_type: formData.customerType,
+        booking_date: formData.date,
+      });
+      trackEvent("generate_lead", { lead_source: "ifsec_popup_booking" });
       setIsSubmitted(true);
     } catch (error) {
       console.error("Error submitting form:", error);

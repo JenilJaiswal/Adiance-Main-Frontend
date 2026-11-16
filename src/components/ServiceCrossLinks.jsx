@@ -44,6 +44,15 @@ export default function ServiceCrossLinks({ current }) {
           </li>
         ))}
       </ul>
+      <p style={{ marginTop: 16 }}>
+        See how we build: <a href="/manufacturing">our manufacturing facility</a>
+        {" "}and{" "}
+        <a href="/case-study/white-label-edge-ai-camera-japan">
+          a white-label camera we delivered to Japan
+        </a>
+        . Want to test one first?{" "}
+        <a href="/sample-request">Request a free sample</a>.
+      </p>
     </section>
   );
 }

@@ -103,6 +103,39 @@ function descriptionFor(blog) {
   );
 }
 
+/**
+ * ADI-014 (2026-11-14): search-snippet overrides for CMS posts with many
+ * impressions but a low click-through rate (GSC, 14 Oct - 10 Nov 2026).
+ * These only replace the <title> and meta description Google shows; the
+ * post itself is unchanged. Better long-term: update the same text in the
+ * CMS and delete the entry here.
+ */
+const SNIPPET_OVERRIDES = {
+  // 4,380 impressions, 0.9% CTR, position 10.8. Old title said "2025".
+  "top-indian-cctv-camera-manufacturer": {
+    title: "Top 7 CCTV Camera Manufacturers in India: Brands Compared",
+    description:
+      "Compare 7 Indian CCTV camera manufacturers, including Adiance and CP Plus: what each brand makes, its strengths and who it suits.",
+  },
+  // 1,342 impressions, 1.9% CTR, position 10.4.
+  "ndaa-compliant-camera-list-2026": {
+    title: "NDAA Compliant Camera List 2026: Which Brands Qualify",
+    description:
+      "Which security camera brands meet NDAA Section 889 in 2026, what the rule means, and the non-Chinese options US buyers and integrators can use.",
+  },
+  // 1,799 impressions, 1.3% CTR. CMS description was ~175 characters.
+  "ndaa-compliant-cctv-cameras-complete-guide": {
+    description:
+      "Which CCTV brands are banned under NDAA Section 889, how to check a camera is compliant, and where to source NDAA-compliant cameras.",
+  },
+  // 1,381 impressions, 1.7% CTR. Searches: "cctv camera circuit board/diagram".
+  "ai-cctv-camera-pcb-diagram": {
+    title: "CCTV Camera PCB Diagram: Board Components & Design Explained",
+    description:
+      "A CCTV camera PCB diagram walkthrough: the main components on an AI camera board, how they work together, and what matters in the design.",
+  },
+};
+
 export async function generateMetadata({ params }) {
   const slug = params?.urlTitle || "";
   const blog = await fetchBlog(slug);
@@ -120,9 +153,10 @@ export async function generateMetadata({ params }) {
 
   // Build against the post's own path, not "/blog" — keying off the index
   // route made every post inherit the blog index description and keywords.
+  const snippet = SNIPPET_OVERRIDES[slug] || {};
   return buildMetadata(`/blog/${slug}`, {
-    title,
-    description: descriptionFor(blog),
+    title: snippet.title || title,
+    description: snippet.description || descriptionFor(blog),
     canonical: `/blog/${slug}`,
     ogImage: ogImageFor(blog?.content?.mainImage),
     keywords: tags.length ? tags.join(", ") : undefined,
@@ -229,6 +263,10 @@ function ssrArticleBody(blog) {
             <a href="/oem-services">OEM services</a> ·{" "}
             <a href="/odm-services">ODM services</a> ·{" "}
             <a href="/white-label-cctv-camera-manufacturer">White-label CCTV cameras</a> ·{" "}
+            <a href="/manufacturing">Manufacturing facility</a> ·{" "}
+            <a href="/product-portfolio">Product portfolio</a> ·{" "}
+            <a href="/case-study/white-label-edge-ai-camera-japan">Case study: white-label camera for Japan</a> ·{" "}
+            <a href="/sample-request">Request a free sample</a> ·{" "}
             <a href="/contact">Contact Adiance</a>
           </p>
         </nav>

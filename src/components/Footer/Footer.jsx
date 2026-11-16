@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
             <div className="contact-item address">
               <img src="/N_Images/location_icon.svg" alt="Location" className="contact-icon-img" loading="lazy" />
-              <span>House No. 7, Arista Eight, Corporate House, Rajpath Rangoli Rd, behind Satyam House, Bodakdev, Ahmedabad, Gujarat 380059</span>
+              <span>House No. 7, Arista Eight, Corporate House, Rajpath Rangoli Rd, behind Satyam House, Bodakdev, Ahmedabad, Gujarat 380054</span>
             </div>
           </div>
         </div>
@@ -67,6 +67,7 @@ const Footer = () => {
                 <li><a href="/smart-home-oem-camera-manufacturer">Smart Home OEM Cameras</a></li>
                 <li><a href="/white-label-baby-monitor-manufacturer">White Label Baby Monitor</a></li>
                 <li><a href="/white-label-pet-camera-manufacturer">White Label Pet Camera</a></li>
+                <li><a href="/product-portfolio">All Products</a></li>
               </ul>
             </div>
 
@@ -91,7 +92,9 @@ const Footer = () => {
                 <li><a href="/odm-services">ODM Services</a></li>
                 <li><a href="/jdm-services">JDM Services</a></li>
                 <li><a href="/pcb-assembly-service">PCB Assembly Services</a></li>
-                <li><a href="/oem-cctv-camera-manufacturer-usa">OEM Camera USA</a></li>
+                <li><a href="/manufacturing">Manufacturing Facility</a></li>
+                <li><a href="/custom-cctv-camera-manufacturer">Custom CCTV Cameras</a></li>
+                <li><a href="/us">OEM Camera USA</a></li>
                 <li><a href="/full-solution-oem-camera-manufacturer">OEM Camera India</a></li>
                 <li><a href="/product-engineering">Product Engineering</a></li>
                 <li><a href="/robotics">Robotics</a></li>
@@ -135,6 +138,7 @@ const Footer = () => {
                 <li><a href="/global-presence">Global Presence</a></li>
                 <li><a href="/innovation">Innovation</a></li>
                 <li><a href="/bis-er-certification">BIS-ER Certification</a></li>
+                <li><a href="/compliance">Compliance</a></li>
                 <li><a href="/warranty-service">Warranty Service</a></li>
                 <li><a href="/privacy-policy">Privacy Policy</a></li>
                 <li><a href="/warranty-policy">Warranty Policy</a></li>

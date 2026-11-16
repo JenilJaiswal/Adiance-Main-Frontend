@@ -637,4 +637,27 @@
       <image:title>CCTV Camera Manufacturer in Israel</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.adiance.com/ifsec-india-2026</loc>
+    <image:image>
+      <image:loc>https://www.adiance.com/images/ifsec-india-2026-og.png</image:loc>
+      <image:title>Meet Adiance at IFSEC India 2026, Booth E10, Hall 5GF</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.adiance.com/images/ifsec-india-2025-team-at-adiance-booth-1200.webp</image:loc>
+      <image:title>Adiance booth at IFSEC India 2025, New Delhi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.adiance.com/images/ifsec-india-2025-visitor-meeting-at-booth-1200.webp</image:loc>
+      <image:title>Business meeting at the Adiance booth, IFSEC India 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.adiance.com/images/ifsec-india-2025-booth-conversation-s-series-1200.webp</image:loc>
+      <image:title>Camera and VMS discussion at the Adiance booth, IFSEC India 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.adiance.com/images/ifsec-india-2025-team-group-at-booth-1200.webp</image:loc>
+      <image:title>Visitors and team at the Adiance stand, IFSEC India 2025</image:title>
+    </image:image>
+  </url>
 </urlset>

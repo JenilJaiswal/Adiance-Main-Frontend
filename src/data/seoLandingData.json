@@ -605,6 +605,38 @@
   },
   "complete-surveillance-solutions": {
     "slug": "complete-surveillance-solutions",
+    "relatedLinks": [
+      {
+        "title": "Product Portfolio",
+        "url": "/product-portfolio",
+        "description": "Browse the Adiance product portfolio for OEM and white-label partners: edge-AI, ANPR, thermal, 4G and 4K cameras, plus NVR, XVR and Cloud VMS."
+      },
+      {
+        "title": "Edge AI CCTV Cameras (S-Series)",
+        "url": "/edge-ai-cctv-cameras",
+        "description": "Adiance S-Series edge-AI CCTV cameras on Qualcomm SoC with on-device analytics and 4K imaging."
+      },
+      {
+        "title": "CloudXVR / NVR",
+        "url": "/cloudxvr",
+        "description": "Adiance Cloud XVR VM-72XVR816 — 8/16-channel hybrid recorder with cloud VMS, AI events, and remote streaming."
+      },
+      {
+        "title": "Cloud VMS",
+        "url": "/cloud-application",
+        "description": "Adiance cloud surveillance application with multi-site streaming, AI events, mobile app, and white-label deployment."
+      },
+      {
+        "title": "OEM Services",
+        "url": "/oem-services",
+        "description": "OEM CCTV camera manufacturer in Ahmedabad, India: custom branding, firmware, NVRs and cloud VMS under your brand. BIS-ER registered. Request an OEM quote."
+      },
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      }
+    ],
     "seo": {
       "title": "Complete OEM Surveillance Solutions | Adiance",
       "description": "Adiance offers complete OEM surveillance solutions: AI cameras, cloud VMS, mobile app, and NVR — all white-label ready for your brand.",
@@ -991,7 +1023,7 @@
       },
       {
         "title": "OEM Cameras for USA Market",
-        "url": "/oem-cctv-camera-manufacturer-usa",
+        "url": "/us",
         "description": "US market-specific OEM/ODM solutions"
       },
       {
@@ -1018,6 +1050,16 @@
         "title": "NDAA Section 889 Compliance",
         "url": "/ndaa-compliance",
         "description": "Full NDAA Section 889 compliance guide, sectors covered, and official source citations"
+      },
+      {
+        "title": "Compliance Overview",
+        "url": "/compliance",
+        "description": "Adiance compliance: NDAA Section 889, GDPR-ready, STQC, BIS-ER, CE, FCC, RoHS, and ONVIF profiles S/G/T."
+      },
+      {
+        "title": "Complete Surveillance Solutions",
+        "url": "/complete-surveillance-solutions",
+        "description": "Adiance complete surveillance solutions: cameras, NVR/XVR, cloud VMS, mobile app, and edge AI — one stack from one OEM."
       }
     ]
   },
@@ -1276,6 +1318,21 @@
         "title": "NDAA Section 889 Compliance",
         "url": "/ndaa-compliance",
         "description": "Who must comply with NDAA Section 889, and how Adiance's supply chain qualifies"
+      },
+      {
+        "title": "Compliance Overview",
+        "url": "/compliance",
+        "description": "Adiance compliance: NDAA Section 889, GDPR-ready, STQC, BIS-ER, CE, FCC, RoHS, and ONVIF profiles S/G/T."
+      },
+      {
+        "title": "Complete Surveillance Solutions",
+        "url": "/complete-surveillance-solutions",
+        "description": "Adiance complete surveillance solutions: cameras, NVR/XVR, cloud VMS, mobile app, and edge AI — one stack from one OEM."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
       }
     ],
     "applications": {
@@ -1316,6 +1373,33 @@
   },
   "oem-white-label-platform": {
     "slug": "oem-white-label-platform",
+    "relatedLinks": [
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Manufacturing Facility",
+        "url": "/manufacturing",
+        "description": "See how Adiance builds its products: in-house PCB manufacturing, product assembly, prototyping and mold making at its facility in Ahmedabad, India."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
+      },
+      {
+        "title": "Complete Surveillance Solutions",
+        "url": "/complete-surveillance-solutions",
+        "description": "Adiance complete surveillance solutions: cameras, NVR/XVR, cloud VMS, mobile app, and edge AI — one stack from one OEM."
+      },
+      {
+        "title": "OEM Services",
+        "url": "/oem-services",
+        "description": "OEM CCTV camera manufacturer in Ahmedabad, India: custom branding, firmware, NVRs and cloud VMS under your brand. BIS-ER registered. Request an OEM quote."
+      }
+    ],
     "seo": {
       "title": "OEM CCTV Camera Manufacturer India | White Label | Non-Chinese SoC | Adiance",
       "description": "Adiance is India OEM/ODM CCTV camera manufacturer with non-Chinese SoC, NDAA compliance, and ArcisAI cloud VMS. Launch your white-label camera brand in 90 days.",
@@ -1644,6 +1728,21 @@
         "title": "Custom Camera Design",
         "url": "/custom-cctv-camera-manufacturer",
         "description": "JDM/ODM custom hardware design"
+      },
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Manufacturing Facility",
+        "url": "/manufacturing",
+        "description": "See how Adiance builds its products: in-house PCB manufacturing, product assembly, prototyping and mold making at its facility in Ahmedabad, India."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
       }
     ]
   },
@@ -1808,6 +1907,21 @@
         "title": "Private Label Cameras",
         "url": "/private-label-security-camera-supplier",
         "description": "Launch your own security camera brand"
+      },
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Manufacturing Facility",
+        "url": "/manufacturing",
+        "description": "See how Adiance builds its products: in-house PCB manufacturing, product assembly, prototyping and mold making at its facility in Ahmedabad, India."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
       }
     ]
   },
@@ -1972,6 +2086,21 @@
         "title": "Full Solution OEM Partner",
         "url": "/full-solution-oem-camera-manufacturer",
         "description": "Camera + VMS + App + Cloud"
+      },
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Manufacturing Facility",
+        "url": "/manufacturing",
+        "description": "See how Adiance builds its products: in-house PCB manufacturing, product assembly, prototyping and mold making at its facility in Ahmedabad, India."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
       }
     ]
   },
@@ -2125,13 +2254,28 @@
       },
       {
         "title": "OEM Cameras for USA",
-        "url": "/oem-cctv-camera-manufacturer-usa",
+        "url": "/us",
         "description": "US market private label solutions"
       },
       {
         "title": "OEM Cameras for Europe",
         "url": "/oem-camera-manufacturer-europe",
         "description": "EU market private label solutions"
+      },
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Manufacturing Facility",
+        "url": "/manufacturing",
+        "description": "See how Adiance builds its products: in-house PCB manufacturing, product assembly, prototyping and mold making at its facility in Ahmedabad, India."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
       }
     ]
   },
@@ -2296,6 +2440,21 @@
         "title": "Start Your Own CCTV Brand",
         "url": "/start-your-own-cctv-brand",
         "description": "Complete brand launch guide"
+      },
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Manufacturing Facility",
+        "url": "/manufacturing",
+        "description": "See how Adiance builds its products: in-house PCB manufacturing, product assembly, prototyping and mold making at its facility in Ahmedabad, India."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
       }
     ]
   },
@@ -2547,6 +2706,16 @@
         "title": "Manufacturing Facility",
         "url": "/manufacturing",
         "description": "In-house PCB manufacturing, product assembly, prototyping and mold making in Ahmedabad, India."
+      },
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
       }
     ]
   },
@@ -2759,11 +2928,43 @@
         "title": "BIS-ER Registration",
         "url": "/bis-er-certification",
         "description": "How Adiance supports brands launching CCTV products under BIS-ER in India."
+      },
+      {
+        "title": "Compliance Overview",
+        "url": "/compliance",
+        "description": "Adiance compliance: NDAA Section 889, GDPR-ready, STQC, BIS-ER, CE, FCC, RoHS, and ONVIF profiles S/G/T."
+      },
+      {
+        "title": "Complete Surveillance Solutions",
+        "url": "/complete-surveillance-solutions",
+        "description": "Adiance complete surveillance solutions: cameras, NVR/XVR, cloud VMS, mobile app, and edge AI — one stack from one OEM."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
       }
     ]
   },
   "gdpr-compliant-surveillance-manufacturer": {
     "slug": "gdpr-compliant-surveillance-manufacturer",
+    "relatedLinks": [
+      {
+        "title": "Compliance Overview",
+        "url": "/compliance",
+        "description": "Adiance compliance: NDAA Section 889, GDPR-ready, STQC, BIS-ER, CE, FCC, RoHS, and ONVIF profiles S/G/T."
+      },
+      {
+        "title": "Complete Surveillance Solutions",
+        "url": "/complete-surveillance-solutions",
+        "description": "Adiance complete surveillance solutions: cameras, NVR/XVR, cloud VMS, mobile app, and edge AI — one stack from one OEM."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
+      }
+    ],
     "seo": {
       "title": "GDPR Compliant Surveillance Manufacturer | Made in India OEM | Adiance",
       "description": "Adiance is a GDPR-compliant surveillance camera manufacturer. Privacy-by-design Edge AI cameras with on-device processing, no cloud data leakage. OEM/ODM for European brands.",
@@ -2940,6 +3141,23 @@
   },
   "stqc-compliant-cctv-cameras": {
     "slug": "stqc-compliant-cctv-cameras",
+    "relatedLinks": [
+      {
+        "title": "Compliance Overview",
+        "url": "/compliance",
+        "description": "Adiance compliance: NDAA Section 889, GDPR-ready, STQC, BIS-ER, CE, FCC, RoHS, and ONVIF profiles S/G/T."
+      },
+      {
+        "title": "Complete Surveillance Solutions",
+        "url": "/complete-surveillance-solutions",
+        "description": "Adiance complete surveillance solutions: cameras, NVR/XVR, cloud VMS, mobile app, and edge AI — one stack from one OEM."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
+      }
+    ],
     "seo": {
       "title": "STQC Certified Surveillance Solutions | Adiance",
       "description": "Adiance offers STQC certified Cloud VMS and a complete surveillance ecosystem built for government and enterprise compliance. Trusted Made in India manufacturer.",
@@ -3315,7 +3533,7 @@
           "countries": [
             {
               "name": "USA",
-              "url": "/cctv-camera-manufacturer-usa"
+              "url": "/us"
             },
             {
               "name": "Canada",
@@ -3858,11 +4076,48 @@
         "title": "NDAA Section 889 Compliance Guide",
         "url": "/ndaa-compliance",
         "description": "Federal, state, and federally-funded US buyers: verify NDAA Section 889 compliance here"
+      },
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Manufacturing Facility",
+        "url": "/manufacturing",
+        "description": "See how Adiance builds its products: in-house PCB manufacturing, product assembly, prototyping and mold making at its facility in Ahmedabad, India."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
       }
     ]
   },
   "qualcomm-edge-ai-camera-manufacturer": {
     "slug": "qualcomm-edge-ai-camera-manufacturer",
+    "relatedLinks": [
+      {
+        "title": "Edge AI CCTV Cameras (S-Series)",
+        "url": "/edge-ai-cctv-cameras",
+        "description": "Adiance S-Series edge-AI CCTV cameras on Qualcomm SoC with on-device analytics and 4K imaging."
+      },
+      {
+        "title": "Non-Chinese SoC Cameras",
+        "url": "/non-chinese-soc-camera-manufacturer",
+        "description": "Adiance manufactures cameras on non-Chinese SoCs — Qualcomm, Ambarella, and Novatek — for NDAA compliance."
+      },
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
+      }
+    ],
     "seo": {
       "title": "Qualcomm Edge AI Camera Manufacturer | Adiance",
       "description": "Adiance manufactures Qualcomm-powered Edge AI cameras for OEM/ODM partners. Advanced on-device analytics with non-Chinese SoC technology.",
@@ -4196,6 +4451,33 @@
   },
   "start-your-own-cctv-brand": {
     "slug": "start-your-own-cctv-brand",
+    "relatedLinks": [
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Manufacturing Facility",
+        "url": "/manufacturing",
+        "description": "See how Adiance builds its products: in-house PCB manufacturing, product assembly, prototyping and mold making at its facility in Ahmedabad, India."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
+      },
+      {
+        "title": "OEM Services",
+        "url": "/oem-services",
+        "description": "OEM CCTV camera manufacturer in Ahmedabad, India: custom branding, firmware, NVRs and cloud VMS under your brand. BIS-ER registered. Request an OEM quote."
+      },
+      {
+        "title": "Custom CCTV Camera Design",
+        "url": "/custom-cctv-camera-manufacturer",
+        "description": "Adiance designs custom CCTV cameras: bespoke hardware, lens, sensor, firmware, and form-factor for OEM/ODM/JDM customers."
+      }
+    ],
     "seo": {
       "title": "Start Your Own CCTV Brand | White Label Camera OEM | Adiance",
       "description": "Launch your own CCTV camera brand in 30 days. Adiance provides white-label OEM cameras, branded VMS, mobile app, and full ecosystem. Low MOQ from 50 units. Made in India.",
@@ -4330,6 +4612,33 @@
   },
   "cctv-oem-for-telecom-isp": {
     "slug": "cctv-oem-for-telecom-isp",
+    "relatedLinks": [
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Manufacturing Facility",
+        "url": "/manufacturing",
+        "description": "See how Adiance builds its products: in-house PCB manufacturing, product assembly, prototyping and mold making at its facility in Ahmedabad, India."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
+      },
+      {
+        "title": "Complete Surveillance Solutions",
+        "url": "/complete-surveillance-solutions",
+        "description": "Adiance complete surveillance solutions: cameras, NVR/XVR, cloud VMS, mobile app, and edge AI — one stack from one OEM."
+      },
+      {
+        "title": "Cloud VMS",
+        "url": "/cloud-application",
+        "description": "Adiance cloud surveillance application with multi-site streaming, AI events, mobile app, and white-label deployment."
+      }
+    ],
     "seo": {
       "title": "OEM CCTV for Telecom and ISP | Adiance Technologies",
       "description": "Partner with Adiance Technologies for white-label CCTV solutions tailored for Telecom and ISP providers. Complete ecosystem, custom branding, API integration, and recurring revenue models.",
@@ -6083,6 +6392,26 @@
         "title": "WiFi PTZ Camera",
         "url": "/wifi-ptz-camera",
         "description": "Wireless pan-tilt-zoom camera with two-way audio and cloud VMS."
+      },
+      {
+        "title": "R-Series Cameras",
+        "url": "/r-series",
+        "description": "Adiance R-Series IP cameras — mid-tier NDAA-compliant surveillance with edge analytics and ONVIF compatibility."
+      },
+      {
+        "title": "H-Series Cameras",
+        "url": "/h-series",
+        "description": "Adiance H-Series IP cameras — high-end NDAA-compliant surveillance with 4K, low-light, and edge AI."
+      },
+      {
+        "title": "ANPR Camera Manufacturer",
+        "url": "/anpr-camera-manufacturer",
+        "description": "Adiance is an ANPR / LPR camera manufacturer with on-device edge AI, region-trained models, and NDAA compliance."
+      },
+      {
+        "title": "Complete Surveillance Solutions",
+        "url": "/complete-surveillance-solutions",
+        "description": "Adiance complete surveillance solutions: cameras, NVR/XVR, cloud VMS, mobile app, and edge AI — one stack from one OEM."
       }
     ],
     "seo": {
@@ -6774,6 +7103,21 @@
         "title": "Smart Home Camera OEM Guide",
         "url": "/blog/how-to-launch-smart-home-camera-brand-oem-guide",
         "description": "Complete blog guide for retail brands"
+      },
+      {
+        "title": "Case Study: White-Label Camera for Japan",
+        "url": "/case-study/white-label-edge-ai-camera-japan",
+        "description": "How Adiance delivered a white-label, non-Chinese SoC, Edge AI surveillance camera to an OEM partner in Japan, one of the most demanding markets for quality and compliance."
+      },
+      {
+        "title": "Manufacturing Facility",
+        "url": "/manufacturing",
+        "description": "See how Adiance builds its products: in-house PCB manufacturing, product assembly, prototyping and mold making at its facility in Ahmedabad, India."
+      },
+      {
+        "title": "Request a Free Sample",
+        "url": "/sample-request",
+        "description": "Request a free Adiance camera sample shipped to your address in 7-10 days. NDAA Section 889 compliant, BIS-registered (R-72003735), non-Chinese SoC. No purchase commitment."
       }
     ]
   },

@@ -66,7 +66,7 @@ const Header = ({ hideBreadcrumb = false }) => {
   const navItems = [
     {
       name: "Products",
-      path: "/s-series-ai-cctv-cameras",
+      path: "/product-portfolio",
       dropdownItems: [
         { name: "Edge AI Camera", path: "/edge-ai-cctv-cameras" },
         { name: "ECO Series", path: "/eco-series" },
@@ -98,7 +98,7 @@ const Header = ({ hideBreadcrumb = false }) => {
         { name: "ODM Services", path: "/odm-services" },
         { name: "JDM Services", path: "/jdm-services" },
         { name: "PCB Assembly Services", path: "/pcb-assembly-service" },
-        { name: "OEM Camera USA", path: "/oem-cctv-camera-manufacturer-usa" },
+        { name: "OEM Camera USA", path: "/us" },
         { name: "OEM Camera India", path: "/full-solution-oem-camera-manufacturer" },
       ]
     },

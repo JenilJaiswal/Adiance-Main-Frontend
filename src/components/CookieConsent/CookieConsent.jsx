@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 import "./CookieConsent.css";
 
 // Kept in sync with the two inline loader scripts in app/layout.js
-// (gtm-loader, fb-pixel-loader) — all three must use this exact key/value
-// pair or the gate silently stops working.
+// (gtm-loader = Google Consent Mode, fb-pixel-loader = opt-in gate) — all
+// three must use this exact key/value pair and event names.
 const CONSENT_KEY = "adiance_cookie_consent";
 const CONSENT_GRANTED_EVENT = "adiance:consent-granted";
+const CONSENT_DENIED_EVENT = "adiance:consent-denied";
 const OPEN_PREFERENCES_EVENT = "adiance:open-cookie-preferences";
 
 export default function CookieConsent() {
@@ -39,9 +40,10 @@ export default function CookieConsent() {
       // still applies for the rest of this page load via the event below.
     }
     setVisible(false);
-    if (value === "granted") {
-      window.dispatchEvent(new Event(CONSENT_GRANTED_EVENT));
-    }
+    // app/layout.js listens for these and updates Google Consent Mode.
+    window.dispatchEvent(
+      new Event(value === "granted" ? CONSENT_GRANTED_EVENT : CONSENT_DENIED_EVENT)
+    );
   };
 
   if (!visible) return null;
@@ -49,8 +51,9 @@ export default function CookieConsent() {
   return (
     <div className="cookie-consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
       <p className="cookie-consent-text">
-        We use cookies and similar technologies — including Google Tag Manager and the Meta (Facebook) Pixel — to
-        understand site traffic and improve your experience. These only load if you accept. See our{" "}
+        We use Google Analytics (through Google Tag Manager) to understand site traffic. Until you accept, it runs
+        without cookies and does not store anything on your device. Analytics and advertising cookies, and the Meta
+        (Facebook) Pixel, only turn on if you accept. See our{" "}
         <a href="/privacy-policy">Privacy Policy</a> for details.
       </p>
       <div className="cookie-consent-actions">
