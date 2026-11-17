@@ -233,7 +233,7 @@ const Home_Slider = () => {
             return (
               <Carousel.Item key={index} interval={5000}>
                 <picture className="bis-carousel-bg">
-                  <source media="(max-width: 768px)" srcSet="/N_Images/bis-mobile-bg.png" />
+                  <source media="(max-width: 768px)" srcSet="/N_Images/bis-mobile-bg.webp" type="image/webp" />
                   <img
                     src={slide.image}
                     alt="BIS-ER Certified by STQC Certification"

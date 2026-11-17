@@ -24,7 +24,8 @@ export default function Page() {
       <link
         rel="preload"
         as="image"
-        href="/N_Images/bis-mobile-bg.png"
+        href="/N_Images/bis-mobile-bg.webp"
+        type="image/webp"
         media="(max-width: 768px)"
         fetchPriority="high"
       />

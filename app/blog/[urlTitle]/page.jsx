@@ -104,6 +104,26 @@ function descriptionFor(blog) {
 }
 
 /**
+ * ADI-018 (16 Nov 2026): many CMS posts have titles over 65 characters and
+ * descriptions over 165, which Google cuts mid-word. Without inventing new
+ * wording: drop the brand suffix from long titles, and end long descriptions
+ * at the last full sentence (or word) before 160 characters.
+ */
+function fitTitle(title) {
+  if (!title || title.length <= 65) return title;
+  return title.replace(/\s*[|\-\u2013\u2014]\s*Adiance( Blog| Technologies)?\s*$/i, "").trim();
+}
+
+function fitDescription(text) {
+  if (!text || text.length <= 165) return text;
+  const head = text.slice(0, 160);
+  const sentenceEnd = Math.max(head.lastIndexOf(". "), head.lastIndexOf("? "), head.lastIndexOf("! "));
+  if (sentenceEnd >= 90) return head.slice(0, sentenceEnd + 1);
+  const space = head.lastIndexOf(" ");
+  return `${head.slice(0, space > 90 ? space : 157).replace(/[\s,;:.\-]+$/, "")}\u2026`;
+}
+
+/**
  * ADI-014 (2026-11-14): search-snippet overrides for CMS posts with many
  * impressions but a low click-through rate (GSC, 14 Oct - 10 Nov 2026).
  * These only replace the <title> and meta description Google shows; the
@@ -155,8 +175,8 @@ export async function generateMetadata({ params }) {
   // route made every post inherit the blog index description and keywords.
   const snippet = SNIPPET_OVERRIDES[slug] || {};
   return buildMetadata(`/blog/${slug}`, {
-    title: snippet.title || title,
-    description: snippet.description || descriptionFor(blog),
+    title: snippet.title || fitTitle(title),
+    description: snippet.description || fitDescription(descriptionFor(blog)),
     canonical: `/blog/${slug}`,
     ogImage: ogImageFor(blog?.content?.mainImage),
     keywords: tags.length ? tags.join(", ") : undefined,

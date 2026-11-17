@@ -7,7 +7,7 @@ const BISHeroSection = () => {
   return (
     <section className="bis-hero-section" style={{ position: 'relative', width: '100%', maxWidth: '1518px', margin: '0 auto', overflow: 'hidden' }}>
       <picture style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-        <source media="(max-width: 768px)" srcSet="/N_Images/bis-mobile-bg.png" />
+        <source media="(max-width: 768px)" srcSet="/N_Images/bis-mobile-bg.webp" type="image/webp" />
         <img
           src="/N_Images/BIS_ER_bg.jpg"
           alt="BIS-ER Certified ArcisAI Cameras"
