@@ -26,16 +26,16 @@ const ContactMidSection = () => {
         </Typography>
         <Typography variant="body2" color="textSecondary" sx={{ mb: 0.5 }}>
           <strong>India:</strong>{" "}
-          <a href="tel:+919687779999" style={{ color: "inherit", textDecoration: "none" }}>
+          <a href="tel:+919687779999" style={{ color: "inherit", textDecoration: "none", display: "inline-block", padding: "4px 0", minHeight: 24 }}>
             +91 96877 79999
           </a>
         </Typography>
         <Typography variant="body2" color="textSecondary">
           <strong>USA:</strong>{" "}
-          <a href="tel:+12818572584" style={{ color: "inherit", textDecoration: "none" }}>
+          <a href="tel:+12818572584" style={{ color: "inherit", textDecoration: "none", display: "inline-block", padding: "4px 0", minHeight: 24 }}>
             +1 (281) 857-2584
           </a>{" "}
-          <span style={{ opacity: 0.7 }}>— Dev Sanghvi</span><br /><a href="mailto:dev@adiance.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.9em", opacity: 0.85 }}>dev@adiance.com</a>
+          <span style={{ opacity: 0.9 }}>— Dev Sanghvi</span><br /><a href="mailto:dev@adiance.com" style={{ color: "inherit", textDecoration: "none", fontSize: "0.9em", opacity: 0.85 }}>dev@adiance.com</a>
         </Typography>
       </Grid>
 
