@@ -194,7 +194,7 @@
   text-align: right;
   margin: 0;
   font-size: 12px;
-  opacity: 0.8;
+  opacity: 1; /* ADI-028: 0.8 failed WCAG contrast (4.43:1) on the red footer */
 }
 
 .cookie-preferences-link {
@@ -207,7 +207,7 @@
   color: inherit;
   text-decoration: underline;
   cursor: pointer;
-  opacity: 0.9;
+  opacity: 1; /* ADI-028: contrast */
 }
 
 .cookie-preferences-link:hover {
@@ -521,7 +521,7 @@
   .footer-copyright p {
     font-size: 12px;
     line-height: 1.4;
-    opacity: 0.8;
+    opacity: 1;
   }
   
   .footer-links {
@@ -610,4 +610,4 @@
     width: 30px;
     height: 30px;
   }
-}
+}

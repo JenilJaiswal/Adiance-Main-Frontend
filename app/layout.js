@@ -1,6 +1,18 @@
 import Script from "next/script";
 import Providers from "./providers";
 import CookieConsent from "../src/components/CookieConsent/CookieConsent";
+// ADI-025 (18 Nov 2026): Bootstrap CSS and the Roboto / Inknut Antiqua fonts
+// were loaded from cdn.jsdelivr.net and fonts.googleapis.com as render-blocking
+// <link>s (PageSpeed: ~1.1 s of render-blocking requests on mobile). They are
+// now bundled and served from our own origin (same CSS, same font families).
+// Bootstrap is imported first so our own CSS still overrides it, as before.
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/600.css";
+import "@fontsource/roboto/700.css";
+import "@fontsource/inknut-antiqua/400.css";
 import "./globals.css";
 import "../src/App.css";
 import "../src/N_Component/Style.css";
@@ -174,30 +186,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          as="style"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        />
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-        />
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto:wght@300;400;500;600;700&display=swap"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Roboto:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
         {/*
           T2 (mobile LCP): image preloads must be page-specific, not global.
           Preloading the homepage slider + the innovation/product hero images on

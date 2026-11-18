@@ -30,15 +30,15 @@ const Footer = () => {
             <div className="contact-item">
               <img src="/N_Images/call_icon.svg" alt="Phone" className="contact-icon-img" loading="lazy" />
               <span>
-                <a href="tel:+919687779999" style={{ color: "inherit", textDecoration: "none" }}>
+                <a href="tel:+919687779999" style={{ color: "inherit", textDecoration: "none", display: "inline-block", padding: "4px 0", minHeight: 24 }}>
                   IN: (+91) 968 777 9999
                 </a>
                 <br />
-                <a href="tel:+12818572584" style={{ color: "inherit", textDecoration: "none" }}>
+                <a href="tel:+12818572584" style={{ color: "inherit", textDecoration: "none", display: "inline-block", padding: "4px 0", minHeight: 24 }}>
                   US: +1 (281) 857-2584
                 </a>
                 <br />
-                <span style={{ opacity: 0.7, fontSize: "0.85em" }}>Dev Sanghvi</span><br /><a href="mailto:dev@adiance.com" style={{ color: "inherit", textDecoration: "none", opacity: 0.85, fontSize: "0.9em" }}>dev@adiance.com</a>
+                <span style={{ opacity: 0.9, fontSize: "0.85em" }}>Dev Sanghvi</span><br /><a href="mailto:dev@adiance.com" style={{ color: "inherit", textDecoration: "none", opacity: 0.85, fontSize: "0.9em" }}>dev@adiance.com</a>
               </span>
             </div>
             <div className="contact-item address">
@@ -195,4 +195,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer
