@@ -110,7 +110,12 @@ function descriptionFor(blog) {
  * at the last full sentence (or word) before 160 characters.
  */
 function fitTitle(title) {
-  if (!title || title.length <= 65) return title;
+  if (!title) return title;
+  // ADI-018: some CMS titles contain the editor's note "... Meta title: <real title>".
+  // Keep only the intended meta title after the label.
+  const metaLabel = title.match(/\bMeta title:\s*(.+)$/i);
+  if (metaLabel && metaLabel[1].trim().length >= 20) title = metaLabel[1].trim();
+  if (title.length <= 65) return title;
   return title.replace(/\s*[|\-\u2013\u2014]\s*Adiance( Blog| Technologies)?\s*$/i, "").trim();
 }
 

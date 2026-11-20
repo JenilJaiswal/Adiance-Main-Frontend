@@ -127,7 +127,7 @@
     },
     "geopolitics-of-guts-why-non-chinese-soc-is-new-baseline": {
       "seo": {
-        "title": "The Geopolitics of Guts: Why Non-Chinese SoC is the New Baseline for Security Brands",
+        "title": "Geopolitics of Guts: Why Non-Chinese SoC Is the New Baseline",
         "description": "The SoC is the new battleground. Learn why non-Chinese SoC (Qualcomm, Ambarella) is now the minimum requirement for security brands in the US, EU, and India.",
         "keywords": "non-chinese soc, cctv supply chain, ndaa compliance, geopolitics of technology, security camera components, adiance blog"
       },
@@ -163,8 +163,8 @@
     },
     "comparing-qualcomm-ambarella-novatek-for-cctv": {
       "seo": {
-        "title": "A Deeper Dive: Comparing Qualcomm, Ambarella, and Novatek for CCTV Manufacturing",
-        "description": "A technical comparison of the leading non-Chinese SoC platforms for CCTV cameras: Qualcomm Snapdragon, Ambarella CVflow, and Novatek. See which is best for your OEM product line.",
+        "title": "Qualcomm vs Ambarella vs Novatek for CCTV Manufacturing",
+        "description": "A technical comparison of non-Chinese SoC platforms for CCTV cameras: Qualcomm Snapdragon, Ambarella CVflow and Novatek. See which fits your OEM product line.",
         "keywords": "qualcomm snapdragon cctv, ambarella cvflow, novatek cctv soc, cctv soc comparison, best soc for cctv, adiance blog"
       },
       "hero": {
@@ -199,8 +199,8 @@
     },
     "how-to-migrate-cctv-brand-from-chinese-soc": {
       "seo": {
-        "title": "How to Migrate Your CCTV Brand from Chinese to Non-Chinese SoC in 90 Days",
-        "description": "A practical 5-step guide for security brands to migrate their manufacturing from a Chinese OEM to a non-Chinese partner like Adiance. The process can take as little as 90 days.",
+        "title": "Move Your CCTV Brand to a Non-Chinese SoC in 90 Days",
+        "description": "A practical 5-step guide for security brands moving manufacturing from a Chinese OEM to a non-Chinese partner like Adiance, in as little as 90 days.",
         "keywords": "switch cctv manufacturer, non-chinese oem cctv, adiance oem, migrate cctv production, indian cctv manufacturer, adiance blog"
       },
       "hero": {
@@ -248,8 +248,8 @@
     },
     "why-surveillance-needs-built-in-vms-cloud": {
       "seo": {
-        "title": "Why Your Surveillance System Needs a Built-in VMS and Cloud | Adiance Blog",
-        "description": "Discover the limitations of hardware-only surveillance and why a built-in VMS and cloud solution is essential for modern security. Learn how Adiance offers a complete ecosystem.",
+        "title": "Why Your Surveillance System Needs a Built-in VMS and Cloud",
+        "description": "See the limits of hardware-only surveillance and why a built-in VMS and cloud matter for modern security. Learn how Adiance offers a complete ecosystem.",
         "keywords": "built-in VMS, cloud surveillance, ArcisAI VMS, integrated surveillance system, surveillance ecosystem"
       },
       "hero": {
@@ -446,8 +446,8 @@
     },
     "white-label-vs-private-label-cctv-cameras": {
       "seo": {
-        "title": "White Label vs. Private Label CCTV: What's the Difference? | Adiance Blog",
-        "description": "Explore the key differences between white label and private label CCTV cameras. Understand the pros, cons, and which model is right for your security business. Learn how Adiance can help.",
+        "title": "White Label vs. Private Label CCTV: What's the Difference?",
+        "description": "Key differences between white label and private label CCTV cameras: pros, cons, and which model suits your security business. Learn how Adiance can help.",
         "keywords": "white label CCTV, private label CCTV, OEM CCTV cameras, white label vs private label, CCTV branding"
       },
       "hero": {
@@ -594,8 +594,8 @@
     },
     "how-to-choose-oem-cctv-manufacturer-checklist": {
       "seo": {
-        "title": "How to Choose an OEM CCTV Camera Manufacturer: The Complete Checklist | Adiance Blog",
-        "description": "A practical, expert checklist for global brands evaluating OEM CCTV camera manufacturers. Covers SoC compliance, certifications, MOQ, white-label ecosystem, and supply chain transparency.",
+        "title": "How to Choose an OEM CCTV Camera Manufacturer: Complete Checklist",
+        "description": "An expert checklist for evaluating OEM CCTV camera makers: SoC compliance, certifications, MOQ, white-label ecosystem and supply chain transparency.",
         "keywords": "how to choose OEM CCTV manufacturer, OEM CCTV manufacturer checklist, evaluate CCTV OEM partner, NDAA compliant OEM, white label CCTV manufacturer guide"
       },
       "hero": {
@@ -752,8 +752,8 @@
     },
     "bis-er-01-certified-cctv-camera-companies-india": {
       "seo": {
-        "title": "BIS ER-01 Certified CCTV Camera Companies in India (2026) | Verified List",
-        "description": "The verified 2026 list of CCTV camera companies certified under MeitY's Essential Requirements ER-01 — via BIS registration and STQC IoTSCS — including Adiance (ArcisAI), CP Plus, Prama, Matrix, Sparsh, Honeywell and more.",
+        "title": "BIS ER-01 Certified CCTV Companies in India: 2026 Verified List",
+        "description": "2026 list of CCTV camera companies certified under MeitY's ER-01 via BIS and STQC, including Adiance (ArcisAI), CP Plus, Prama, Matrix, Sparsh and Honeywell.",
         "keywords": "BIS ER-01 certified CCTV companies, ER 01 certified camera brands India, STQC certified CCTV cameras, BIS ER certification CCTV, ArcisAI BIS ER, MeitY essential requirements CCTV, certified CCTV manufacturer India 2026"
       },
       "hero": {
@@ -886,4 +886,4 @@
       "ctaTitle": "Ready to Start Your OEM Project?"
     }
   }
-}
+}

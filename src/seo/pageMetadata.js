@@ -710,6 +710,29 @@ CATALOG["/cctv-camera-manufacturer-india"] = {
 };
 
 /**
+ * ADI-018 (19 Nov 2026): indexed country pages whose geoPageData description
+ * runs past ~165 characters and gets cut off in search results. Same wording,
+ * shortened. The on-page copy in geoPageData.json is unchanged.
+ */
+const SHORT_COUNTRY_DESCRIPTIONS = {
+  "cctv-camera-manufacturer-vietnam":
+    "Adiance is an OEM/ODM CCTV camera manufacturer for the Vietnam market. Partner with us for customizable, high-performance security cameras and systems.",
+  "cctv-camera-manufacturer-thailand":
+    "Adiance is an OEM/ODM CCTV camera manufacturer for Thailand, offering white-label surveillance with AI CCTV cameras, NVRs and cloud VMS solutions.",
+  "cctv-camera-manufacturer-malaysia":
+    "Adiance is an OEM/ODM CCTV camera manufacturer for Malaysia, offering white-label surveillance for smart cities, manufacturing, retail and transport.",
+  "cctv-camera-manufacturer-philippines":
+    "Adiance is an OEM/ODM CCTV camera manufacturer for the Philippines, offering white-label surveillance for smart cities, retail and public safety.",
+  "cctv-camera-manufacturer-brazil":
+    "OEM/ODM CCTV camera manufacturer for Brazil. AI-powered, non-Chinese, NDAA-compliant cameras and white-label solutions for partners across Brazil.",
+  "cctv-camera-manufacturer-sweden":
+    "Adiance is an OEM/ODM CCTV camera manufacturer for Sweden. Partner with us for robust, cold-weather rated and GDPR-compliant security cameras.",
+};
+Object.entries(SHORT_COUNTRY_DESCRIPTIONS).forEach(([slug, description]) => {
+  if (CATALOG["/" + slug]) CATALOG["/" + slug] = { ...CATALOG["/" + slug], description };
+});
+
+/**
  * `-v2` pages are alternate copy variants targeting the same country and the
  * same queries as their base page. Keep them reachable, but canonicalise them
  * to the base page so the pair stops cannibalising each other.
