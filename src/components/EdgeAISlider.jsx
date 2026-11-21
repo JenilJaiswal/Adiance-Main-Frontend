@@ -17,7 +17,7 @@ const ThermalCameraSlider = () => {
       id: 2,
       title: "Edge AI Based Face Recognition Dome Camera",
       imageUrl: "/images/P5-Edge-AI-Based-Face-Recognition-VM-72D5AIVE-02.webp",
-      link: "/edge-ai-based-recognition-camera",
+      link: "/4k-face-recognition-camera",
     },
     // Add more products as needed
     {

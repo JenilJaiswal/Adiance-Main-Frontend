@@ -27,6 +27,7 @@ import {
   ErrorOutline,
 } from "@mui/icons-material";
 import axios from "axios";
+import Honeypot, { isHoneypotFilled } from "../Honeypot";
 import { BiSolidCctv } from "react-icons/bi";
 
 const BuyBackHeroSection = () => {
@@ -54,6 +55,8 @@ const BuyBackHeroSection = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // ADI-017: spam bot filled the hidden field. Send and count nothing.
+    if (isHoneypotFilled(e)) return;
     setLoading(true);
     setPopupMessage("");
 
@@ -161,6 +164,7 @@ const BuyBackHeroSection = () => {
                 onSubmit={handleSubmit}
                 sx={{ display: "flex", flexDirection: "column", gap: 2 }}
               >
+                <Honeypot />
                 <TextField
                   name="fullName"
                   variant="outlined"

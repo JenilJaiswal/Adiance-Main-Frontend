@@ -12,6 +12,7 @@ import {
   CircularProgress
 } from '@mui/material';
 import { sendContactEmail } from '../AdianceAdmin/api/blogs';
+import Honeypot, { isHoneypotFilled } from './Honeypot';
 
 const EMS_API_URL = `${process.env.NEXT_PUBLIC_API_URL || "https://backend.adiance.com:443/api"}/crm-lead`;
 
@@ -58,6 +59,11 @@ const ContactForm = ({ redirectUrl = "/thank-you" }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // ADI-017: spam bot filled the hidden field. Send and count nothing.
+    if (isHoneypotFilled(e)) {
+      setSubmitStatus('success');
+      return;
+    }
     setIsSubmitting(true);
     setSubmitStatus(null);
 
@@ -152,6 +158,7 @@ const ContactForm = ({ redirectUrl = "/thank-you" }) => {
       )}
 
       <Box component="form" onSubmit={handleSubmit}>
+        <Honeypot />
         <TextField
           fullWidth
           name="fullName"
@@ -280,4 +287,4 @@ const ContactForm = ({ redirectUrl = "/thank-you" }) => {
   );
 };
 
-export default ContactForm;
+export default ContactForm;

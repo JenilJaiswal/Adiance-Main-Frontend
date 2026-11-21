@@ -93,7 +93,9 @@ const COUNTRY_PAGES = {
 const CATALOG = {
   "/": {
     title:
-      "NDAA Compliant OEM Camera Manufacturer | White Label CCTV | Adiance",
+      // ADI-018: was 67 chars (~670px) and got cut off. Google shows the
+      // "Adiance" site name above the result, so the brand suffix is dropped.
+      "NDAA Compliant OEM Camera Manufacturer | White Label CCTV",
     description:
       "NDAA-compliant OEM/ODM CCTV camera manufacturer in India. White-label cameras, edge-AI surveillance, NVRs and cloud VMS for global security integrators.",
     keywords:
