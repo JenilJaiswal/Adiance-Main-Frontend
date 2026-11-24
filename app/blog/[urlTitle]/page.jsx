@@ -159,6 +159,80 @@ const SNIPPET_OVERRIDES = {
     description:
       "A CCTV camera PCB diagram walkthrough: the main components on an AI camera board, how they work together, and what matters in the design.",
   },
+  // ADI-018 (20 Nov 2026): CMS meta titles over 65 characters get cut off in
+  // search results. Same wording, shortened; the post headline is unchanged.
+  "surveillance-market-opportunity-2026": {
+    title: "2026 Surveillance Market: Time to Build Your Camera Brand",
+  },
+  "secure-compliant-video-management-system-enterprises": {
+    title: "Why Enterprises Need a Secure, Compliant Video Management System",
+  },
+  "adiance-ifsec-india-2025": {
+    title: "Adiance at IFSEC India 2025: CCTV Cameras & AI Surveillance",
+  },
+  "china-plus-one-strategy-cctv-manufacturing-india": {
+    title: "China+1: Why Global Brands Move CCTV Manufacturing to India",
+  },
+  "ndaa-compliance-guide-global-cctv-brands": {
+    title: "NDAA Compliance Guide for Global CCTV Brands: Why It Matters",
+  },
+  "white-label-surveillance-complete-ecosystem-cameras-vms-app-cloud": {
+    title: "White-Label Surveillance: Why a Complete Ecosystem Wins",
+  },
+  "trusted-surveillance-technology-worldwide": {
+    title: "Trusted Surveillance: Why the World Is Moving Beyond Cheap CCTV",
+  },
+  "adiance-bis-er-certified-manufacturer": {
+    title: "BIS ER Certified CCTV Manufacturer in India | OEM & White Label",
+  },
+  "ultimate-guide-cctv-camera-chipsets-sigmastar": {
+    title: "CCTV Camera Chipsets Guide: SigmaStar vs. the Competition",
+  },
+  "ndaa-compliant-security-cameras-government-projects": {
+    title: "NDAA-Compliant Security Cameras for Government Projects",
+  },
+  "oem-camera-case-study-12-country-brand": {
+    title: "Case Study: A 12-Country Camera Brand Built in 18 Months",
+  },
+  "edge-ai-vs-cloud-ai-in-surveillance": {
+    title: "Edge AI vs Cloud AI in Surveillance: Which Is Right for You?",
+  },
+  "why-manufacturing-matters-in-surveillance": {
+    title: "BIS-ER & STQC Certified CCTV: Why Manufacturing Matters",
+  },
+  "from-footage-to-foresight-operational-intelligence": {
+    title: "From Footage to Foresight | STQC & BIS-ER Certified CCTV",
+  },
+  "india-vs-china-camera-manufacturing-2026": {
+    title: "5 Reasons to Choose India Over China for Camera Manufacturing",
+  },
+  "smart-surveillance-smarter-india-arcisais-role-in-aidriven-security": {
+    title: "ArcisAI Edge AI Surveillance: Smarter Security for India",
+  },
+  "what-apples-india-exports-mean-for-oem-odm": {
+    title: "iPhone Exports Signal India’s Rise as an OEM/ODM Hub",
+  },
+  "choose-right-cctv-manufacturer-in-uae": {
+    title: "How to Choose the Right CCTV Camera Manufacturer in UAE",
+  },
+  "taa-compliant-surveillance-cameras-government-guide": {
+    title: "TAA Compliant Surveillance Cameras: 2026 Contractor Guide",
+  },
+  "top-10-questions-oem-camera-manufacturer": {
+    title: "10 Questions to Ask Before Choosing an OEM Camera Manufacturer",
+  },
+  "edge-ai-cameras-oem-partners-on-device-intelligence": {
+    title: "Edge AI Cameras for OEM Partners: On-Device vs Cloud",
+  },
+  "launch-camera-line-12-weeks": {
+    title: "How to Launch Your Camera Line in 12 Weeks: Step-by-Step",
+  },
+  "how-to-launch-smart-home-camera-brand-oem-guide": {
+    title: "How to Launch a Smart Home Camera Brand: Complete OEM Guide",
+  },
+  "union-budget-2026-impact-on-adiance": {
+    title: "Union Budget 2026: OEM & ODM Electronics Manufacturing in India",
+  },
 };
 
 export async function generateMetadata({ params }) {

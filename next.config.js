@@ -60,6 +60,8 @@ const legacyRedirects = {
   "/video-surveillance-manufacturer-in-the-usa": "/about",
   "/adiance-": "/",
   "/edge-ai-based-face-recognition": "/4k-face-recognition-camera",
+  // Old menu/slider link (404 until 21 Nov 2026). Same dome camera.
+  "/edge-ai-based-recognition-camera": "/4k-face-recognition-camera",
   "/wireless-ip-cctv-camera-manufacturer-supplier": "/wifi-ptz-camera",
   // S-Series is the Edge AI range (/edge-ai-cctv-cameras), not the 4G range.
   "/5g-edge-ai-camera-s-series-surveillance": "/edge-ai-cctv-cameras",

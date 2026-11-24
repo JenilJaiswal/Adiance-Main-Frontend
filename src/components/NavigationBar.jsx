@@ -215,7 +215,7 @@ const NavigationBar = () => {
                     </Typography>
                     <Typography variant="body1">
                       <SmartLink
-                        to="/edge-ai-based-recognition-camera"
+                        to="/4k-face-recognition-camera"
                         className={classes.menuLink}
                       >
                         Edge AI Based Face Recognition Camera
