@@ -145,7 +145,7 @@ const Header = ({ hideBreadcrumb = false }) => {
       <div className="header-container">
         <div className="logo-section">
           <Link to="/">
-            <img src="/images/Logo.webp" alt="Adiance Logo" className="header-logo" loading="eager" fetchpriority="high" />
+            <img src="/images/Logo.webp" alt="Adiance Logo" className="header-logo" width={151} height={30} loading="eager" fetchpriority="high" />
           </Link>
         </div>
 

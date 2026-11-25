@@ -2,7 +2,7 @@
   "oem": {
     "heroTitle": "Businesses That Benefit from Our Custom OEM Services",
     "heroDescription": "We deliver custom OEM manufacturing services to businesses seeking for scalable production, innovation and a reliable EMS OEM service provider in India.",
-    "heroImage": "/N_Images/hand-shack.svg",
+    "heroImage": "/N_Images/hand-shack.webp",
     "heroImageAlt": "Business Partnership",
     "benefits": [
       {
@@ -50,7 +50,7 @@
   "odm": {
     "heroTitle": "Businesses That Benefit from Our Custom ODM Services",
     "heroDescription": "We deliver custom ODM manufacturing services to businesses seeking for scalable production, innovation and a reliable EMS ODM service provider in India.",
-    "heroImage": "/N_Images/hand-shack.svg",
+    "heroImage": "/N_Images/hand-shack.webp",
     "heroImageAlt": "Business Partnership",
     "benefits": [
       {
@@ -98,7 +98,7 @@
   "jdm": {
     "heroTitle": "Businesses That Benefit from JDM Co-Development",
     "heroDescription": "JDM (Joint Development Manufacturing) is ideal for companies that want to co-create products, share R&D expertise, and scale manufacturing without building their own factory. Below are the types of businesses that gain the most value from collaborative development with Adiance.",
-    "heroImage": "/N_Images/hand-shack.svg",
+    "heroImage": "/N_Images/hand-shack.webp",
     "heroImageAlt": "Business Partnership",
     "benefits": [
       {

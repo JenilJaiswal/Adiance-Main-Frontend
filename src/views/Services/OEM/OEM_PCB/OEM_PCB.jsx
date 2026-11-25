@@ -12,7 +12,7 @@ const OEM_PCB = () => {
           </div>
           <div className="oem-pcb-image">
             <img
-              src="/N_Images/OEM_PCB.svg"
+              src="/N_Images/OEM_PCB.webp"
               alt="OEM PCB Manufacturing Equipment"
               className="oem-pcb-main-image"
               loading="lazy"

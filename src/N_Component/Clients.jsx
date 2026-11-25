@@ -53,13 +53,15 @@ const Clients = ({ showTitle = true }) => {
           {clientLogos.map((num) => (
             <div key={num} className="client-logo-wrapper">
               <img
-                src={`/N_Images/client${num}.svg`}
+                // ADI-032: WebP copies of the logo SVGs. The SVGs embed large
+                // bitmaps (~6.5 MB for 33 logos); the WebP set is ~120 KB.
+                src={`/N_Images/client${num}.webp`}
                 alt={CLIENT_NAMES[num] ? `${CLIENT_NAMES[num]} logo` : `Client ${num}`}
                 className="client-logo"
                 loading="lazy"
                 decoding="async"
                 width={150}
-                // height={150}
+                height={150}
                 onLoad={(e) => e.currentTarget.classList.add('loaded')}
               />
             </div>

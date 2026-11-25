@@ -22,6 +22,7 @@
 
 .logo-section .header-logo {
   height: 30px;
+  width: auto; /* keep ratio now that the img has width/height attributes */
   display: block;
 }
 
