@@ -4,7 +4,7 @@ const OEM_Hero = () => {
   return (
     <section className="oem-hero">
       <img
-        src="/N_Images/OEM_Hero.svg"
+        src="/N_Images/OEM_Hero.webp"
         alt="OEM Background"
         className="oem-hero-bg-image"
         fetchpriority="high"
@@ -30,14 +30,14 @@ const OEM_Hero = () => {
           <div className="oem-hero-right">
             <div className="oem-hero-images">
               <img
-                src="/N_Images/OEM_Hero_Right_1.svg"
+                src="/N_Images/OEM_Hero_Right_1.webp"
                 alt="CCTV Camera"
                 className="oem-hero-image-1"
                 loading="lazy"
                 decoding="async"
               />
               <img
-                src="/N_Images/OEM_Hero_Right_2.svg"
+                src="/N_Images/OEM_Hero_Right_2.webp"
                 alt="Robotics Arm"
                 className="oem-hero-image-2"
                 loading="lazy"

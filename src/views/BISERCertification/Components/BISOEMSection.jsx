@@ -46,7 +46,7 @@ const BISOEMSection = () => {
 
         {/* Bottom camera — overlaps OEM banner */}
         <img
-          src="/N_Images/OEM_Hero_Right_2.svg"
+          src="/N_Images/OEM_Hero_Right_2.webp"
           alt="OEM Your Brand Camera"
           className="bisoem-cam bisoem-cam-bottom"
           loading="lazy"

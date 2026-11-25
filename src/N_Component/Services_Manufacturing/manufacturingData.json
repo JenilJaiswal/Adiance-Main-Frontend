@@ -26,7 +26,7 @@
       { "src": "/N_Images/Home_BIS.webp", "alt": "BIS" },
       { "src": "/N_Images/onvif.svg", "alt": "ONVIF" }
     ],
-    "backgroundImage": "/N_Images/ODM_Manufacturing_bg.svg"
+    "backgroundImage": "/N_Images/ODM_Manufacturing_bg.webp"
   },
   "odmRoboticArm": {
     "title": "ODM Robotic Arm Manufacturing",
@@ -50,8 +50,8 @@
       "Field-tested under simulated industrial conditions for reliability",
       "Used across: Electronics, FMCG, Automotive, Metalworks, and Assembly Lines"
     ],
-    "backgroundImage": "/N_Images/ODM_Robotic_Arm_bg.webp",
-    "rightImage": "/N_Images/OEM_Hero_Right_1.svg",
+    "backgroundImage": "/N_Images/ODM_Manufacturing_bg.webp",
+    "rightImage": "/N_Images/OEM_Hero_Right_1.webp",
     "rightImageAlt": "Robotic Arm"
   },
   "odmPCB": {
@@ -79,7 +79,7 @@
       "IPC-A-610 Class 2 & 3 compliant assembly",
       "Compliance-ready: RoHS, REACH, CE, UL"
     ],
-    "backgroundImage": "/N_Images/ODM_PCB_bg.webp",
+    "backgroundImage": "/N_Images/ODM_Manufacturing_bg.webp",
     "rightImages": [
       { "src": "/N_Images/ODM_pcb1.webp", "alt": "PCB Manufacturing Facility 1" },
       { "src": "/N_Images/ODM_pcb2.webp", "alt": "PCB Manufacturing Facility 2" },
@@ -110,7 +110,7 @@
       { "src": "/N_Images/Home_BIS.webp", "alt": "BIS" },
       { "src": "/N_Images/onvif.svg", "alt": "ONVIF" }
     ],
-    "backgroundImage": "/N_Images/ODM_Manufacturing_bg.svg"
+    "backgroundImage": "/N_Images/ODM_Manufacturing_bg.webp"
   },
   "jdmRoboticArm": {
     "title": "JDM for Robotic Arm Development",
