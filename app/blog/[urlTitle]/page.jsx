@@ -159,6 +159,18 @@ const SNIPPET_OVERRIDES = {
     description:
       "A CCTV camera PCB diagram walkthrough: the main components on an AI camera board, how they work together, and what matters in the design.",
   },
+  // ADI-036 (28 Nov 2026): 1,094 impressions, position 5.7, 0 clicks in 28
+  // days (GSC, "hikvision" queries). Name the 5 brands the post compares.
+  "hikvision-alternatives-ndaa-compliant-cameras-2026": {
+    title: "Hikvision Alternatives 2026: 5 NDAA-Compliant Brands Compared",
+    description:
+      "Compare 5 Hikvision alternatives for 2026 (Adiance, Axis, Hanwha Vision, Bosch and i-PRO) on NDAA compliance, chipsets, certifications and OEM options.",
+  },
+  // ADI-035 note (27 Nov 2026): CMS title still said "| 2025". Drop the
+  // out-of-date year; the rest of the title is unchanged.
+  "ndaa-compliance-surveillance-cameras-explained": {
+    title: "NDAA Compliance for Surveillance Cameras Explained",
+  },
   // ADI-018 (20 Nov 2026): CMS meta titles over 65 characters get cut off in
   // search results. Same wording, shortened; the post headline is unchanged.
   "surveillance-market-opportunity-2026": {

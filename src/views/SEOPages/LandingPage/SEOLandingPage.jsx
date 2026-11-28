@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from 'react';
+import { preload } from 'react-dom';
 import { useLocation } from '@/compat/react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from '../../../components/Header/Header';
@@ -12,6 +13,11 @@ import landingData from '../../../data/seoLandingData.json';
 import './SEOLandingPage.css';
 
 const SEOLandingPage = () => {
+  // ADI-038: the hero background is the LCP image on all landing pages.
+  // Tell the browser about it in the HTML head so it starts loading at once
+  // (a CSS background is only found after the CSS file is parsed).
+  preload('/images/slider1.webp', { as: 'image', fetchPriority: 'high' });
+
   const { pathname } = useLocation();
   const slug = pathname.replace('/', '').replace(/\/$/, '');
 

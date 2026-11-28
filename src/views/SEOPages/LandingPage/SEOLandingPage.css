@@ -17,7 +17,7 @@
   background-color: #111111;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.72)),
-    url('../../../../public/images/slider1.webp');
+    url('/images/slider1.webp') /* same URL as the preload in SEOLandingPage.jsx */;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
